@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/bloxyplaytv", "destination": "/api/bloxyplaytv.js" }
+  ]
+}
+
