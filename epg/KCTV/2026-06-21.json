@@ -1,0 +1,286 @@
+{
+    "channel": "KCTV",
+    "date": "2026-06-21",
+    "programs": [
+        {
+            "start": "00:00",
+            "end": "09:18",
+            "title": {
+                "en": "Order of the Day",
+                "ko": "괘일의 순서",
+                "zh": "每日顺序"
+            },
+            "category": "Opening"
+        },
+        {
+            "start": "09:18",
+            "end": "09:43",
+            "title": {
+                "en": "The Immortal Feats of the Workers' Party",
+                "ko": "로동당의 은덕일세",
+                "zh": "劳动党的恩德"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "09:43",
+            "end": "09:59",
+            "title": {
+                "en": "The Noble Rebirth of a Famous Mountain - Visiting the International Friendship Exhibition Hall (145)",
+                "ko": "위인정숭의 고귀한 재보 - 국제친선전람관을 찾아서 - (145)",
+                "zh": "伟人尊崇的高贵财宝 - 参观国际友谊展览馆 (145)"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "09:59",
+            "end": "10:14",
+            "title": {
+                "en": "Scientific Film: Northern Fruits That Can Be Eaten in Their Peels",
+                "ko": "과학영화: 껍질로 먹을수 있는 북승아품종들",
+                "zh": "科学电影：可以带皮吃的北方水果品种"
+            },
+            "category": "Science"
+        },
+        {
+            "start": "10:14",
+            "end": "10:35",
+            "title": {
+                "en": "Animal World of Africa: Animals Living in the Congo River Basin (2)",
+                "ko": "세계 여러 나라 동물들: 아프리카의 동물세계 - 콩고강류역에서 사는 동물들 - (2)",
+                "zh": "世界各国动物：非洲的动物世界 - 生活在刚果河流域的动物 (2)"
+            },
+            "category": "Nature"
+        },
+        {
+            "start": "10:35",
+            "end": "10:51",
+            "title": {
+                "en": "El Niño and Climate Crisis",
+                "ko": "엘니뇨와 기후위기",
+                "zh": "厄尔尼诺与气候危机"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "10:51",
+            "end": "11:13",
+            "title": {
+                "en": "Visiting Every Corner of Sunchon County",
+                "ko": "숙천군의 여러곳을 찾아서",
+                "zh": "走访顺川郡各地"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "11:13",
+            "end": "11:52",
+            "title": {
+                "en": "The Party's Affection Overflowing with the Blessing of the Revolution",
+                "ko": "혁명의 연대들에 울려퍼진 당에 대한 찬가",
+                "zh": "革命年代传颂的对党的赞歌"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "11:52",
+            "end": "13:39",
+            "title": {
+                "en": "Korean Art Film: Does the Human Face Know You?",
+                "ko": "조선예술영화: 인면이 너를 아는가",
+                "zh": "朝鲜艺术电影：人面是否认识你？"
+            },
+            "category": "Movie"
+        },
+        {
+            "start": "13:39",
+            "end": "13:48",
+            "title": {
+                "en": "Culinary Show: Stir-fried Chicken with Chives / Rolled Egg with Pollack",
+                "ko": "료리상식: 부추닭고기볶음 / 광소단지짐",
+                "zh": "烹饪常识：韭菜炒鸡肉 / 明太鱼卷蛋"
+            },
+            "category": "Cooking"
+        },
+        {
+            "start": "13:48",
+            "end": "14:16",
+            "title": {
+                "en": "The Party's Embrace: A Story Told by June",
+                "ko": "위민헌신의 열투달: 6월이 전하는 이야기",
+                "zh": "为民献身的热情之月：六月讲述的故事"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "14:16",
+            "end": "14:26",
+            "title": {
+                "en": "Health and Life: Skin Care Methods and More - Cell Activation and Skin Management",
+                "ko": "건강과 생활상식: 피부관리방법 몇가지 - 색소침착과 피부관리 -",
+                "zh": "健康与生活常识：几种皮肤护理方法 - 色素沉积与皮肤管理"
+            },
+            "category": "Health"
+        },
+        {
+            "start": "14:26",
+            "end": "15:04",
+            "title": {
+                "en": "TV Documentary Collection: Era and Friendship - 2. Following the Footsteps of Friendship Delegations",
+                "ko": "TV기록편집물: 시대와 우정 - 2. 우표전람회의 력사를 더듬어",
+                "zh": "电视记录剪辑：时代与友谊 - 2. 追溯邮票展览会的历史"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "15:04",
+            "end": "15:47",
+            "title": {
+                "en": "Health Performance Troupe: Sight Protection (2)",
+                "ko": "건강상식묘대: 시력보호 (2)",
+                "zh": "健康常识舞台：视力保护 (2)"
+            },
+            "category": "Health"
+        },
+        {
+            "start": "15:47",
+            "end": "17:00",
+            "title": {
+                "en": "2026 International Judo Federation Dushanbe Grand Slam - Men's Final Round",
+                "ko": "록화실황: 2026년 국제유술련맹 두샨베그랜드 슬램경기대회 - 남자 결승단계 -",
+                "zh": "录像实况：2026年国际柔道联合会杜尚别大满贯赛 - 男子决赛阶段"
+            },
+            "category": "Sports"
+        },
+        {
+            "start": "17:00",
+            "end": "17:19",
+            "title": {
+                "en": "News",
+                "ko": "볏도",
+                "zh": "报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:19",
+            "end": "17:32",
+            "title": {
+                "en": "News from Correspondents Across the Country",
+                "ko": "각 도특파기자들이 본내온 소식",
+                "zh": "各道特派记者发来的消息"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:32",
+            "end": "17:38",
+            "title": {
+                "en": "Today's Central News Agency",
+                "ko": "오늘호 중앙신문개관",
+                "zh": "今日中央报纸概览"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:38",
+            "end": "18:23",
+            "title": {
+                "en": "Children's Broadcasting Time: Russian Animated Film - Goguryeo Dream (Episode 17)",
+                "ko": "아동방송시간: 러시아만화영화 - 고주몽 제17부",
+                "zh": "儿童广播时间：俄罗斯动画电影 - 高朱蒙 第17部"
+            },
+            "category": "Children"
+        },
+        {
+            "start": "18:23",
+            "end": "18:35",
+            "title": {
+                "en": "Introduction Feature: A Story Told by a Veteran Artist - Worker O Jung Sim of the Joonggu District Car Service Station",
+                "ko": "소개편집물: 한 영예군인이 들려준 이야기 - 중구역가로등사업소 로동자 오정심 -",
+                "zh": "介绍剪辑：一位荣誉军人讲述的故事 - 中区路灯事业所工人吴贞心"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "18:35",
+            "end": "18:41",
+            "title": {
+                "en": "Q&A: Rice-field Eel with Great Potential - 1. Economic Effectiveness of Rice-field Eel",
+                "ko": "문답: 실리가 큰 논빈앙어 - 1. 논빈앙어의 경제적효과성",
+                "zh": "问答：潜力巨大的稻田鳗 - 1. 稻田鳗的经济效益"
+            },
+            "category": "Agriculture"
+        },
+        {
+            "start": "18:41",
+            "end": "18:56",
+            "title": {
+                "en": "Visit: Sunchon City's 'Flower and Plant Home' - Ri Jin Hyok's Home in Subok-dong, Sunchon City, South Pyongan Province",
+                "ko": "방문기: 순천시의 《화초가정》 - 평안남도 순천시 수복동 리진혁가정 -",
+                "zh": "访问记：顺川市的《花草家庭》 - 平安南道顺川市寿福洞李珍赫家庭"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "18:56",
+            "end": "20:00",
+            "title": {
+                "en": "TV Documentary Collection: Our Great Party and People Are Glorious - Part 3: A New Era of Local Development",
+                "ko": "TV기록편집물: 위대한 우리 당에 인민은 영광드린다 - 제3편: 지방전흥의 새시대",
+                "zh": "电视记录剪辑：伟大的我们党与人民光荣 - 第3篇：地方振兴的新时代"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "20:00",
+            "end": "20:29",
+            "title": {
+                "en": "News",
+                "ko": "볏도",
+                "zh": "报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "20:29",
+            "end": "20:43",
+            "title": {
+                "en": "Health and Life: Health Care for the Knee - Moisture Intake",
+                "ko": "건강과 생활상식: 묵덕휘뼈 건강관리 - 수분섭취 -",
+                "zh": "健康与生活常识：膝关节健康管理 - 水分摄取"
+            },
+            "category": "Health"
+        },
+        {
+            "start": "20:43",
+            "end": "21:52",
+            "title": {
+                "en": "Korean Feature Film: From the Great Liberation Hill - Part 6: Speechless Vow",
+                "ko": "조선예술영화: 대흥만핵엄비서 - 제6부 무지개언덕",
+                "zh": "朝鲜艺术电影：大興解放岭 - 第6部 彩虹岭"
+            },
+            "category": "Movie"
+        },
+        {
+            "start": "21:52",
+            "end": "23:00",
+            "title": {
+                "en": "In Today's Report",
+                "ko": "오늘의 볏도중에서",
+                "zh": "在今天的报道中"
+            },
+            "category": "News"
+        },
+        {
+            "start": "23:00",
+            "end": "23:59",
+            "title": {
+                "en": "Evening Scenery of Pyongyang",
+                "ko": "평양의 야경",
+                "zh": "平壤夜景"
+            },
+            "category": "Closing"
+        }
+    ]
+}
