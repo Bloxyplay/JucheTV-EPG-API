@@ -9,14 +9,14 @@ export default async function handler(req, res) {
   
   if (!ch || !date) {
     return res.status(400).json({ 
-      error: 'Missing parameters. Use: ?ch=KCTV&date=2026-06-21' 
+      error: 'Missing parameters. Use: ?ch=KCTV&date=2026-MM-DD' 
     });
   }
   
   // Only KCTV supported for now
   if (ch !== 'KCTV') {
     return res.status(404).json({ 
-      error: 'Channel not found. Only KCTV is available.' 
+      error: 'Channel not found.' 
     });
   }
   
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     
   } catch (error) {
     res.status(404).json({ 
-      error: 'EPG not found for this date', 
+      error: 'There is no EPG data here!', 
       channel: ch, 
       date: date 
     });
