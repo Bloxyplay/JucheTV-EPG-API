@@ -1,0 +1,306 @@
+{
+    "channel": "KCTV",
+    "date": "2026-06-21",
+    "programs": [
+        {
+            "start": "00:00",
+            "end": "09:13",
+            "title": {
+                "en": "Order of the Day",
+                "ko": "괘일의 순서",
+                "zh": "每日顺序"
+            },
+            "category": "Opening"
+        },
+        {
+            "start": "09:13",
+            "end": "09:35",
+            "title": {
+                "en": "The History of the Great Youth Movement Shining in the World - Visiting the Youth Movement History Museum",
+                "ko": "만대에 빛나리 위대한 청년울동의 력사 - 청년울동사적관을 찾아서 -",
+                "zh": "照耀万代的伟大青年运动史 - 参观青年运动史迹馆"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "09:35",
+            "end": "09:41",
+            "title": {
+                "en": "Special Report: The Respected Supreme Leader's Field Guidance Plan for the Construction of the Kumsusan Palace of the Sun",
+                "ko": "특별병도: 거듭 지도해주신 야영소개건설계안",
+                "zh": "特别报道：敬爱的最高领导人再次指导野营所建设方案"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "09:41",
+            "end": "09:48",
+            "title": {
+                "en": "The Noble Rebirth of a Famous Mountain - Visiting the International Friendship Exhibition Hall (137)",
+                "ko": "위인정숭의 고귀한 재보 - 국제친선전람관을 찾아서 - (137)",
+                "zh": "伟人尊崇的高贵财宝 - 参观国际友谊展览馆 (137)"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "09:48",
+            "end": "10:58",
+            "title": {
+                "en": "Special: Gunjari Spirit",
+                "ko": "특집: 군자리정신",
+                "zh": "特辑：君子里精神"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "10:58",
+            "end": "11:35",
+            "title": {
+                "en": "Q&A: The Comprehensive Development of Socialism and the Three-Revolution Red Flag Movement",
+                "ko": "문답: 사회주의전면적발전과 3대혁명붉은기울동",
+                "zh": "问答：社会主义全面发展与三大革命红旗运动"
+            },
+            "category": "Education"
+        },
+        {
+            "start": "11:35",
+            "end": "12:08",
+            "title": {
+                "en": "Serial Introduction Feature: A Story of Love Told by a Memorial Photo (24)",
+                "ko": "련속소개편집물: 기념사진이 전하는 사랑의 이야기 (24)",
+                "zh": "连续介绍剪辑：纪念照片讲述的爱情故事 (24)"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "12:08",
+            "end": "13:52",
+            "title": {
+                "en": "TV Stage: The Faith of the Great Party and the Miracle of Samjiyon - The Miraculous 2025, 365 Days of Samjiyon",
+                "ko": "TV묘대: 위대한 당중앙의 믿음과 상원의 기적 - 기적의 2025년, 상원의 365일 -",
+                "zh": "电视舞台：伟大党中央的信赖与三池渊的奇迹 - 奇迹的2025年，三池渊的365天"
+            },
+            "category": "Entertainment"
+        },
+        {
+            "start": "13:52",
+            "end": "13:58",
+            "title": {
+                "en": "Health and Life: Knee Health Management - Cold Compress",
+                "ko": "건강과 생활상식: 무릎위뼈 건강관리 - 생강섭취 -",
+                "zh": "健康与生活常识：膝关节健康管理 - 冷敷"
+            },
+            "category": "Health"
+        },
+        {
+            "start": "13:58",
+            "end": "14:33",
+            "title": {
+                "en": "Introduction Feature: A Mother from the North and Her Affection - Chairman Kim Dong Chol's Family of the South Hamgyong Provincial Youth League",
+                "ko": "소개편집물: 칠북의 어머니와 인해 - 송남청년련맹 김진청년돌격대 대장 김동철가정 -",
+                "zh": "介绍剪辑：七北的母亲与恩爱 - 咸镜南道青年联盟金进青年突击队队长金东哲家庭"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "14:33",
+            "end": "14:57",
+            "title": {
+                "en": "Introduction Feature: Mother's Love Found in the Educational Front Line",
+                "ko": "소개편집물: 교육자살림집에 깃든 어머니사랑",
+                "zh": "介绍剪辑：教育工作者家庭中蕴含的母爱"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "14:57",
+            "end": "15:32",
+            "title": {
+                "en": "Feature: Visiting Every Corner of Hoe Ryong City",
+                "ko": "기행: 회령시의 여러곳을 찾아서",
+                "zh": "纪行：走访会宁市各地"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "15:32",
+            "end": "15:43",
+            "title": {
+                "en": "Q&A: Law and the People - The Law on Early Childhood Education",
+                "ko": "문답: 법과 공민 - 어린이보육교양법 -",
+                "zh": "问答：法与公民 - 儿童保育教养法"
+            },
+            "category": "Education"
+        },
+        {
+            "start": "15:43",
+            "end": "15:59",
+            "title": {
+                "en": "Special: The Unchanging Path of the Won - Gunjari",
+                "ko": "특집: 변함없이 걷는 원군길",
+                "zh": "特辑：坚定不移走的援军路"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "15:59",
+            "end": "16:05",
+            "title": {
+                "en": "Serial Documentary: The High Platform of History Illuminating the Class Education Tradition - Visiting the Central Class Education Museum - The Practical Class Education",
+                "ko": "련속참관기: 계급투쟁의 혈리를 새겨주는 력사의 고발장 - 중앙계급교양관을 찾아서 - 일제의 세균전만행",
+                "zh": "连续参观记：铭刻阶级斗争血脉的历史讲台 - 参观中央阶级教育馆 - 日寇的细菌战暴行"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "16:05",
+            "end": "17:00",
+            "title": {
+                "en": "Recorded Footage: 2026 World Table Tennis Championships WTT Champions Macao - Men's Singles Semi-Final - China",
+                "ko": "록화실황: 2026년 세계탁구직업련맹 중정선수권보유자경기대회 - 남자단식 준준결승 - 도이챌란드: 중국",
+                "zh": "录像实况：2026年世界乒乓球职业联盟冠军赛澳门站 - 男子单打半决赛 - 对阵：中国"
+            },
+            "category": "Sports"
+        },
+        {
+            "start": "17:00",
+            "end": "17:19",
+            "title": {
+                "en": "News",
+                "ko": "볏도",
+                "zh": "报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:19",
+            "end": "17:29",
+            "title": {
+                "en": "Today's Central Newspaper Overview",
+                "ko": "오늘호 중앙신문개관",
+                "zh": "今日中央报纸概览"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:29",
+            "end": "18:10",
+            "title": {
+                "en": "Children's Broadcasting Time: Russian Animated Film - Goguryeo Dream (Episode 18)",
+                "ko": "아동방송시간: 러시아만화영화 - 고주몽 제18부",
+                "zh": "儿童广播时间：俄罗斯动画电影 - 高朱蒙 第18部"
+            },
+            "category": "Children"
+        },
+        {
+            "start": "18:10",
+            "end": "18:30",
+            "title": {
+                "en": "Special: The Respected Fatherly Marshal's Field Guidance at the Educational Book Printing Factory",
+                "ko": "특집: 교과서에 깃든 친어버이사랑 - 교육도서인쇄공장 -",
+                "zh": "特辑：教科书中蕴含的慈父般的爱 - 教育图书印刷厂"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "18:30",
+            "end": "18:37",
+            "title": {
+                "en": "Visit: Putting Heart into the Development of Natural Energy - Mokran Kwangmyong Technology Company",
+                "ko": "방문기: 자연에네르기지용에 힘을 넣어 - 목란광명기술사 -",
+                "zh": "访问记：致力于自然能源开发 - 木兰光明技术社"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "18:37",
+            "end": "18:47",
+            "title": {
+                "en": "Q&A: Rice-field Eel with Great Potential - 2. Technical Issues in Rice-field Eel Farming",
+                "ko": "문답: 실리가 큰 논빈앙어 - 2. 논빈앙어에서 나서는 기술적문제",
+                "zh": "问答：潜力巨大的稻田鳗 - 2. 稻田鳗养殖中出现的技术问题"
+            },
+            "category": "Agriculture"
+        },
+        {
+            "start": "18:47",
+            "end": "18:53",
+            "title": {
+                "en": "Comprehensive Feature: Let's Achieve a Bumper Harvest in the Autumn Harvest Season",
+                "ko": "종합편집: 앞그루밀, 보리가을을 다그친다",
+                "zh": "综合剪辑：抓紧秋粮、大麦秋收"
+            },
+            "category": "Agriculture"
+        },
+        {
+            "start": "18:53",
+            "end": "19:13",
+            "title": {
+                "en": "Introduction Feature: From the Front Line of the Revolutionary Tradition Education - Kim Jong Il's On-site Guidance at the Samjiyon County Revolutionary Historical Site",
+                "ko": "소개편집물: 혁명전통교양의 전초선에서 - 김정일훈장수호자 사회주의애국공로자 삼지연혁명사적관 관장 공훈사적강사 강정욱 -",
+                "zh": "介绍剪辑：在革命传统教育的最前线 - 金正日勋章获得者、社会主义爱国功劳者、三池渊革命史迹馆馆长、功勋史迹讲师姜正旭"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "19:13",
+            "end": "20:00",
+            "title": {
+                "en": "Broadcasters' TV Stage: Love and Affection",
+                "ko": "방송원들의 TV연단: 사랑과 정",
+                "zh": "广播员们的电视舞台：爱与情"
+            },
+            "category": "Entertainment"
+        },
+        {
+            "start": "20:00",
+            "end": "20:29",
+            "title": {
+                "en": "News",
+                "ko": "볏도",
+                "zh": "报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "20:29",
+            "end": "20:37",
+            "title": {
+                "en": "Health and Life: Foods That Promote Digestion",
+                "ko": "건강과 생활상식: 소화를 서연시키는 식품들",
+                "zh": "健康与生活常识：促进消化的食物"
+            },
+            "category": "Health"
+        },
+        {
+            "start": "20:37",
+            "end": "21:53",
+            "title": {
+                "en": "Korean Documentary Film: The Light of a Shining Life - 30 - Shining Life in Loyalty",
+                "ko": "조선기록영화: 빛나는 삶의 품 - 30 - 충정의 한길에 삶은 빛난다",
+                "zh": "朝鲜记录电影：闪耀人生的怀抱 - 30 - 在忠诚之路上闪耀的人生"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "21:53",
+            "end": "23:00",
+            "title": {
+                "en": "In Today's Report",
+                "ko": "오늘의 볏도중에서",
+                "zh": "在今天的报道中"
+            },
+            "category": "News"
+        },
+        {
+            "start": "23:00",
+            "end": "23:59",
+            "title": {
+                "en": "Evening Scenery of Pyongyang",
+                "ko": "평양의 야경",
+                "zh": "平壤夜景"
+            },
+            "category": "Closing"
+        }
+    ]
+        }
