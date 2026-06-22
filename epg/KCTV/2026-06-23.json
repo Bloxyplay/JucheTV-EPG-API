@@ -1,0 +1,256 @@
+{
+  "channel": "Korean Central Television (KCTV)",
+  "broadcast_date": "2026-06-21",
+  "broadcast_type": "Full Day Schedule",
+  "timezone": "Pyongyang Time (UTC+9)",
+  "programs": [
+    {
+      "start_time": "09:16",
+      "end_time": "09:45",
+      "category": "문헌기행 (Documentary Journey)",
+      "title_ko": "길에 전하라 평양대변영기의 새 력사를",
+      "title_en": "Pass It On: The New History of the Pyongyang Daebyeon-yeonggi",
+      "title_zh": "传递吧 平壤大纪念碑的新历史",
+      "episode": "1. 새 거리의 송가 (Song of the New Street)",
+      "description": "Documentary about the new history of the Pyongyang Daebyeon-yeonggi (Grand Monument)."
+    },
+    {
+      "start_time": "09:45",
+      "end_time": "09:52",
+      "category": "련속소개편집물 (Serial Feature Compilation)",
+      "title_ko": "기념사진이 전하는 사랑의 이야기",
+      "title_en": "The Story of Love Told by Commemorative Photos",
+      "title_zh": "纪念照片传达的爱的故事",
+      "episode": "(20)",
+      "description": "A serial compilation about stories of love conveyed through commemorative photographs."
+    },
+    {
+      "start_time": "09:52",
+      "end_time": "09:59",
+      "category": "련속참관기 (Serial Visit Report)",
+      "title_ko": "위인정숭의 고귀한 재보 - 국제친선전람관을 찾아서",
+      "title_en": "The Noble Treasure of Great Man's Esteem - Visiting the International Friendship Exhibition Hall",
+      "title_zh": "伟人崇敬的宝贵财富——走访国际友谊展览馆",
+      "episode": "(192)",
+      "description": "A serial report on the International Friendship Exhibition Hall, showcasing gifts received by North Korean leaders from foreign dignitaries."
+    },
+    {
+      "start_time": "09:59",
+      "end_time": "10:34",
+      "category": "련속소개편집집물 (Serial Feature Compilation)",
+      "title_ko": "영생하는 우리 당의 혁명전사들 - 항일혁명투사 김룡연",
+      "title_en": "Immortal Revolutionary Fighters of Our Party - Anti-Japanese Revolutionary Fighter Kim Ryong-yon",
+      "title_zh": "永生的我们党的革命战士——抗日革命斗士金龙渊",
+      "description": "A feature about Kim Ryong-yon, an anti-Japanese revolutionary fighter."
+    },
+    {
+      "start_time": "10:34",
+      "end_time": "10:53",
+      "category": "특집 (Special Feature)",
+      "title_ko": "때이른 열파로 기열리는 지구",
+      "title_en": "The Earth Heating Up with Early Heat Waves",
+      "title_zh": "因早来的热浪而升温的地球",
+      "description": "Special report on global warming and early heat waves affecting the planet."
+    },
+    {
+      "start_time": "10:53",
+      "end_time": "11:08",
+      "category": "문답 (Q&A)",
+      "title_ko": "바다가 양식에서 나서는 문제 - 양식대상에 따르는 양식장선정",
+      "title_en": "Issues Arising from Marine Aquaculture - Selection of Aquaculture Sites According to Cultivation Targets",
+      "title_zh": "海洋养殖中出现的问题——根据养殖对象选择养殖场",
+      "description": "Educational Q&A program about marine aquaculture and proper site selection."
+    },
+    {
+      "start_time": "11:08",
+      "end_time": "11:36",
+      "category": "특집 (Special Feature)",
+      "title_ko": "다 전하지 못한 친부들의 이야기",
+      "title_en": "Stories of Fathers That Could Not Be Fully Told",
+      "title_zh": "未能全部传达的父亲们的故事",
+      "description": "Special feature about fathers and their untold stories."
+    },
+    {
+      "start_time": "11:36",
+      "end_time": "12:00",
+      "category": "련속소개편집물 (Serial Feature Compilation)",
+      "title_ko": "취면현신의 자욱 새겨진 곳에서 - 화성김치공장",
+      "title_en": "Where the Footprints of the Great Leader Are Engraved - Hwaseong Kimchi Factory",
+      "title_zh": "镌刻伟大领袖足迹的地方——华城泡菜厂",
+      "description": "Feature about the Hwaseong Kimchi Factory, highlighting the legacy of the leader's guidance."
+    },
+    {
+      "start_time": "12:00",
+      "end_time": "12:51",
+      "category": "조선예술영화 (Korean Art Film)",
+      "title_ko": "그당혁임비서",
+      "title_en": "That Party Secretary",
+      "title_zh": "那位党书记",
+      "description": "Korean art film about a party secretary."
+    },
+    {
+      "start_time": "12:51",
+      "end_time": "13:22",
+      "category": "특집 (Special Feature)",
+      "title_ko": "혁명전통교양의 최전성기를 펼치시여",
+      "title_en": "Opening the Golden Age of Revolutionary Tradition Education",
+      "title_zh": "开创革命传统教育的全盛期",
+      "description": "Special feature on the importance and development of revolutionary tradition education."
+    },
+    {
+      "start_time": "13:22",
+      "end_time": "13:30",
+      "category": "건강과 생활상식 (Health and Life Common Sense)",
+      "title_ko": "남성들이 소홀히 하지 말아야 할 증상들",
+      "title_en": "Symptoms That Men Should Not Neglect",
+      "title_zh": "男性不可忽视的症状",
+      "description": "Health program about symptoms men should pay attention to."
+    },
+    {
+      "start_time": "13:30",
+      "end_time": "14:25",
+      "category": "특집 (Special Feature)",
+      "title_ko": "3대혁명의 기치를 높이 들고",
+      "title_en": "Holding High the Banner of the Three Revolutions",
+      "title_zh": "高举三大革命旗帜",
+      "description": "Special feature about the Three Revolutions (ideological, technical, and cultural)."
+    },
+    {
+      "start_time": "14:25",
+      "end_time": "14:45",
+      "category": "련속소개편집물 (Serial Feature Compilation)",
+      "title_ko": "취면현신의 자욱 새겨진 곳에서 - 만경대혁명사적지기념품공장",
+      "title_en": "Where the Footprints of the Great Leader Are Engraved - Mangyongdae Revolutionary Site Souvenir Factory",
+      "title_zh": "镌刻伟大领袖足迹的地方——万景台革命史迹地纪念品工厂",
+      "description": "Feature about the Mangyongdae Revolutionary Site Souvenir Factory."
+    },
+    {
+      "start_time": "14:45",
+      "end_time": "14:50",
+      "category": "종합편집 (Comprehensive Compilation)",
+      "title_ko": "앞그루빌, 보리가을을 가고린다",
+      "title_en": "The Front Group, Harvesting Barley in Autumn",
+      "title_zh": "先锋队，秋收大麦",
+      "description": "Compilation about agricultural harvest activities."
+    },
+    {
+      "start_time": "14:50",
+      "end_time": "14:59",
+      "category": "소개편집물 (Feature Compilation)",
+      "title_ko": "아버지의 당부 - 모란봉구역 민흥동 제98인민반 리근혁",
+      "title_en": "Father's Advice - Ri Gun-hyok, People's Unit 98, Minheung-dong, Moranbong District",
+      "title_zh": "父亲的嘱托——牡丹峰区民兴洞第98人民班李根赫",
+      "description": "Feature about a father's advice, featuring Ri Gun-hyok from People's Unit 98."
+    },
+    {
+      "start_time": "14:59",
+      "end_time": "15:59",
+      "category": "TV묵대 (TV Drama)",
+      "title_ko": "지대와 공민",
+      "title_en": "Land and People",
+      "title_zh": "土地与公民",
+      "description": "TV drama series."
+    },
+    {
+      "start_time": "15:59",
+      "end_time": "17:18",
+      "category": "볼도 (News)",
+      "title_ko": "볼도",
+      "title_en": "News",
+      "title_zh": "报道",
+      "description": "Evening news broadcast."
+    },
+    {
+      "start_time": "17:18",
+      "end_time": "17:30",
+      "category": "오늘호 중앙신문개관 (Today's Central Newspaper Overview)",
+      "title_ko": "오늘호 중앙신문개관",
+      "title_en": "Overview of Today's Central Newspaper",
+      "title_zh": "今日号中央新闻概览",
+      "description": "Review of the day's central newspaper headlines."
+    },
+    {
+      "start_time": "17:30",
+      "end_time": "18:14",
+      "category": "아동방송시간 력사만화영화 (Children's Broadcast Time - Historical Animation)",
+      "title_ko": "고주몽 제19부",
+      "title_en": "Jumong - Episode 19",
+      "title_zh": "高朱蒙 第19部",
+      "description": "Historical animated series about Jumong, the founder of Goguryeo. Episode 19."
+    },
+    {
+      "start_time": "18:14",
+      "end_time": "18:22",
+      "category": "수필 (Essay)",
+      "title_ko": "꿈을 낳는 거리",
+      "title_en": "The Street That Gives Birth to Dreams",
+      "title_zh": "孕育梦想的街道",
+      "description": "Literary essay program."
+    },
+    {
+      "start_time": "18:22",
+      "end_time": "18:56",
+      "category": "특집 (Special Feature)",
+      "title_ko": "영웅청년, 그 이름 빛나는것은 - 백두산영웅청년돌격대 지휘관, 대원들을 만나보고",
+      "title_en": "Heroic Youth, What Makes That Name Shine - Meeting the Commander and Members of the Baekdu Mountain Heroic Youth Shock Brigade",
+      "title_zh": "英雄青年，那名字之所以闪耀——会见白头山英雄青年突击队指挥官和队员",
+      "description": "Special feature about the Baekdu Mountain Heroic Youth Shock Brigade."
+    },
+    {
+      "start_time": "18:56",
+      "end_time": "20:00",
+      "category": "TV기록편집물 (TV Documentary Compilation)",
+      "title_ko": "위대한 우리 당에 인민은 영광드린다 제2편 세상에 부럼없는 집",
+      "title_en": "The People Bring Glory to Our Great Party - Part 2: A House Without Equal in the World",
+      "title_zh": "人民为我们伟大的党争光 第2篇 世上无与伦比的住宅",
+      "description": "Documentary about the party's achievements in housing and construction."
+    },
+    {
+      "start_time": "20:00",
+      "end_time": "20:27",
+      "category": "볼도 (News)",
+      "title_ko": "볼도",
+      "title_en": "News",
+      "title_zh": "报道",
+      "description": "Late night news broadcast."
+    },
+    {
+      "start_time": "20:27",
+      "end_time": "20:30",
+      "category": "건강과 생활상식 (Health and Life Common Sense)",
+      "title_ko": "묻더워때 어린이건강관리 - 운등놀이할 때",
+      "title_en": "Children's Health Management During Hot Weather - When Playing on Swings",
+      "title_zh": "炎热天气儿童健康管理——荡秋千时",
+      "description": "Health tips for children during hot weather, focusing on swing play safety."
+    },
+    {
+      "start_time": "20:30",
+      "end_time": "20:58",
+      "category": "련속기행 (Serial Journey)",
+      "title_ko": "신의주온실종합농장시구를 찾아서 (1)",
+      "title_en": "Visiting the Sinuiju Greenhouse Comprehensive Farm (1)",
+      "title_zh": "走访新义州温室综合农场市区 (1)",
+      "description": "First part of a serial journey to the Sinuiju Greenhouse Comprehensive Farm."
+    },
+    {
+      "start_time": "20:58",
+      "end_time": "21:53",
+      "category": "특집 (Special Feature)",
+      "title_ko": "영원한 승리의 기치",
+      "title_en": "The Eternal Banner of Victory",
+      "title_zh": "永恒的胜利旗帜",
+      "description": "Special feature celebrating victory and revolutionary achievements."
+    },
+    {
+      "start_time": "21:53",
+      "end_time": "22:00",
+      "category": "오늘의 볼도중에서 (From Today's News)",
+      "title_ko": "오늘의 볼도중에서",
+      "title_en": "From Today's News",
+      "title_zh": "从今日报道中",
+      "description": "News highlights and summaries from the day's broadcasts."
+    }
+  ],
+  "source": "JucheTV-Official",
+  "note": "Full day KCTV schedule for 21 June 2026. Intchoson server experiencing lag today."
+}
