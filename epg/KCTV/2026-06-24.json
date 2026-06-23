@@ -1,0 +1,266 @@
+{
+    "channel": "KCTV",
+    "date": "2026-06-24 (Sourced From Korean Central Television)",
+    "programs": [
+        {
+            "start": "09:18",
+            "end": "09:47",
+            "title": {
+                "en": "Report on the Enlarged Meeting of the 9th Central Committee of the Workers' Party of Korea, 2nd Plenary Session",
+                "ko": "조선로동당 중앙위원회 제9기 제2차전원회의 확대회의에 관한 볼도",
+                "zh": "关于朝鲜劳动党中央委员会第九届第二次全体会议扩大会议的报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "09:47",
+            "end": "10:14",
+            "title": {
+                "en": "Pass It On: The New History of the Pyongyang Daebyeon-yeonggi - 2. A New Civilization's Song Blooming on the Taedong Riverbank",
+                "ko": "길에 전하라 평양대변영기의 새 력사를 - 2. 대동강반에 비긴 새 문명의 송가",
+                "zh": "传递吧 平壤大纪念碑的新历史——2. 大同江畔绽放的新文明颂歌"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "10:14",
+            "end": "10:47",
+            "title": {
+                "en": "Feature Compilation: Bringing About a Magnificent Educational Environment",
+                "ko": "소개편집물: 훌륭한 교육환경을 마련해주시여",
+                "zh": "介绍剪辑：营造优良的教育环境"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "10:47",
+            "end": "11:03",
+            "title": {
+                "en": "Issues Arising from Marine Aquaculture - Artificial Feeding Methods Using Facilities",
+                "ko": "바다가 양식에서 나서는 문제 - 시설물에 의한 인공양식방법",
+                "zh": "海洋养殖中出现的问题——利用设施的人工养殖方法"
+            },
+            "category": "Education"
+        },
+        {
+            "start": "11:03",
+            "end": "11:13",
+            "title": {
+                "en": "Feature Compilation: At the Daily Necessities Factory",
+                "ko": "소개편집물: 용품학용품공장에서",
+                "zh": "介绍剪辑：日用品工厂"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "11:13",
+            "end": "11:34",
+            "title": {
+                "en": "Feature Compilation: A Day the Comrades of the Youth League Cannot Forget - Sunchon Jigu Youth League Combined Enterprise, Myongdae Youth Coal Mine, 8th Branch Party Secretary Ho Kyong-chol",
+                "ko": "소개편집물: 청년련맹복들이 잊지 못하는 한날의 일군 - 순천지구청년련맹련합기업소 명대청년탄광 8생 부문당비서였던 허경철",
+                "zh": "介绍剪辑：青年同盟同志们难忘的一天——顺川地区青年同盟联合企业所 明大青年煤矿 第8生产部门前党书记许京哲"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "11:34",
+            "end": "12:00",
+            "title": {
+                "en": "Special Feature: The Great Leader's Devotion - The Story Told by June",
+                "ko": "특집: 위민현신의 열투달 - 6월이 전하는 이야기",
+                "zh": "特辑：伟人民生之爱的热斗月——6月讲述的故事"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "12:00",
+            "end": "12:38",
+            "title": {
+                "en": "Report on the Enlarged Meeting of the 9th Central Committee of the Workers' Party of Korea, 2nd Plenary Session",
+                "ko": "조선로동당 중앙위원회 제9기 제2차전원회의 확대회의에 관한 볼도",
+                "zh": "关于朝鲜劳动党中央委员会第九届第二次全体会议扩大会议的报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "12:38",
+            "end": "13:40",
+            "title": {
+                "en": "TV Documentary Compilation: The People Bring Glory to Our Great Party - Part 1: The Strongest Socialist Fortress in the World",
+                "ko": "TV기록편집물: 위대한 우리 당에 인민은 영광드린다 - 제1편 세계최상의 사회주의성전랑",
+                "zh": "电视记录剪辑：人民为我们伟大的党争光——第1篇 世界上最强的社会主义堡垒"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "13:40",
+            "end": "13:49",
+            "title": {
+                "en": "Health and Life: Essential Elements for Immunity Enhancement",
+                "ko": "건강과 생활상식: 면역강화의 필수요소들",
+                "zh": "健康与生活常识：增强免疫力的必需要素"
+            },
+            "category": "Health"
+        },
+        {
+            "start": "13:49",
+            "end": "14:36",
+            "title": {
+                "en": "Serial Journey: Visiting the Revolutionary Battle Sites in the Mt. Paektu Area - No. 5 Animal Husbandry Revolutionary Battle Site, Chongbong Campsite",
+                "ko": "련속기행: 백두산지구 혁명전적지를 찾아서 - 5호물동혁명전적지, 청봉숙영지",
+                "zh": "连续纪行：走访白头山地区革命战迹地——5号牧洞革命战迹地、青峰宿营地"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "14:36",
+            "end": "14:48",
+            "title": {
+                "en": "Feature Compilation: The Viewers of the Flower Garden",
+                "ko": "소개편집물: 전화의 시청관들",
+                "zh": "介绍剪辑：花园的观众"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "14:48",
+            "end": "15:08",
+            "title": {
+                "en": "Special Feature: The Loving Care of the Respected Fatherly Marshal for the Health of the People",
+                "ko": "특집: 친성친년관장의 애국관부가정들",
+                "zh": "特辑：慈父元帅对人民健康的关爱"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "15:08",
+            "end": "15:17",
+            "title": {
+                "en": "TV Drama: Moments and Memories - The Motherland and I",
+                "ko": "TV연단: 순간과 추억 - 조국과 나",
+                "zh": "电视舞台：瞬间与回忆——祖国与我"
+            },
+            "category": "Drama"
+        },
+        {
+            "start": "15:17",
+            "end": "16:07",
+            "title": {
+                "en": "Special Feature: With the Noble Spirit of the New Generation",
+                "ko": "특집: 개척세대의 숭고한 정신으로",
+                "zh": "特辑：以开拓一代的崇高精神"
+            },
+            "category": "Special"
+        },
+        {
+            "start": "16:07",
+            "end": "16:15",
+            "title": {
+                "en": "Feature Compilation: Showing the Revolutionary Spirit of the Vanguard",
+                "ko": "소개편집물: 수선봉의 혁명영부를 보여",
+                "zh": "介绍剪辑：展现先锋的革命精神"
+            },
+            "category": "Feature"
+        },
+        {
+            "start": "16:15",
+            "end": "17:00",
+            "title": {
+                "en": "Recorded Footage: 2026 International Table Tennis Federation World Cup Men's and Women's Team Championships - Men's Team Semi-Final - China vs Brazil",
+                "ko": "록화실황: 2026년 국제탁구련맹 세계컵 남자단식 및 여자단식경기대회 - 남자단식 준결승 - 중국 : 브라질",
+                "zh": "录像实况：2026年国际乒乓球联盟世界杯男子单打及女子单打比赛——男子单打半决赛 中国：巴西"
+            },
+            "category": "Sports"
+        },
+        {
+            "start": "17:00",
+            "end": "17:46",
+            "title": {
+                "en": "Report on the Enlarged Meeting of the 9th Central Committee of the Workers' Party of Korea, 2nd Plenary Session",
+                "ko": "조선로동당 중앙위원회 제9기 제2차전원회의 확대회의에 관한 볼도",
+                "zh": "关于朝鲜劳动党中央委员会第九届第二次全体会议扩大会议的报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:46",
+            "end": "17:52",
+            "title": {
+                "en": "Today's Central Newspaper Overview",
+                "ko": "오늘호 중앙신문개관",
+                "zh": "今日中央报纸概览"
+            },
+            "category": "News"
+        },
+        {
+            "start": "17:52",
+            "end": "18:35",
+            "title": {
+                "en": "Children's Broadcasting Time: Russian Animated Film - Jumong - Episode 20",
+                "ko": "아동방송시간: 러시아만화영화 - 고주몽 - 제20부",
+                "zh": "儿童广播时间：俄罗斯动画电影——高朱蒙 第20部"
+            },
+            "category": "Children"
+        },
+        {
+            "start": "18:35",
+            "end": "18:48",
+            "title": {
+                "en": "Journey: Visiting the Raw Material Bases of the Sunchon County Local Industry Factory",
+                "ko": "기행: 숙천군 지방공업공장 원료기지들을 찾아서",
+                "zh": "纪行：走访顺川郡地方工业工厂原料基地"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "18:48",
+            "end": "19:00",
+            "title": {
+                "en": "TV Stage: Love for the Motherland",
+                "ko": "TV묘대: 애국찬가",
+                "zh": "电视舞台：爱国赞歌"
+            },
+            "category": "Entertainment"
+        },
+        {
+            "start": "19:00",
+            "end": "20:52",
+            "title": {
+                "en": "News",
+                "ko": "볼도",
+                "zh": "报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "20:52",
+            "end": "21:21",
+            "title": {
+                "en": "Report on the Enlarged Meeting of the 9th Central Committee of the Workers' Party of Korea, 2nd Plenary Session",
+                "ko": "조선로동당 중앙위원회 제9기 제2차전원회의 확대회의에 관한 볼도",
+                "zh": "关于朝鲜劳动党中央委员会第九届第二次全体会议扩大会议的报道"
+            },
+            "category": "News"
+        },
+        {
+            "start": "21:21",
+            "end": "21:57",
+            "title": {
+                "en": "Serial Journey: Visiting the Sinuiju Greenhouse Comprehensive Farm District (2)",
+                "ko": "련속기행: 신의주온실종합농장지구를 찾아서 (2)",
+                "zh": "连续纪行：走访新义州温室综合农场地区 (2)"
+            },
+            "category": "Documentary"
+        },
+        {
+            "start": "21:57",
+            "end": "22:00",
+            "title": {
+                "en": "From Today's News",
+                "ko": "오늘의 볼도중에서",
+                "zh": "在今天的报道中"
+            },
+            "category": "News"
+        }
+    ]
+}
