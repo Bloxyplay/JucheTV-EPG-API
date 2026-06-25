@@ -1,7 +1,7 @@
 {
   "channel": "KCTV",
   "date": "2026-06-25",
-  "source": "Korean Central Television",
+  "source": "Korean Central Television - On-screen broadcast schedule",
   "programs": [
     {
       "start": "09:14",
@@ -11,19 +11,17 @@
         "en": "Commissioning Ceremony of New Multi-Purpose Destroyer 'Choe Hyon' Held Grandly",
         "zh": "新型多用途驱逐舰'崔贤'号入列仪式隆重举行"
       },
-      "category": "News",
-      "notes": "Red screen announcement. Not in API schedule."
+      "category": "News"
     },
     {
       "start": "09:47",
       "end": "09:53",
       "title": {
         "ko": "괘일의 순서",
-        "en": "Order of the Day / Daily Schedule",
+        "en": "Order of the Day",
         "zh": "今日节目顺序"
       },
-      "category": "Interstitial",
-      "notes": "Opening bumper with KCTV logo"
+      "category": "Interstitial"
     },
     {
       "start": "09:53",
@@ -33,8 +31,7 @@
         "en": "Serial Visit: The Noble Treasure of Praising the Great Man - Visiting the International Friendship Exhibition Hall - (147)",
         "zh": "连续参观记：颂扬伟人的宝贵财富——走访国际友谊展览馆（147）"
       },
-      "category": "Documentary",
-      "notes": "API listed as 'Pass It On: The New History of the Pyongyang Daebyeon-yeonggi' - DIFFERENT from video"
+      "category": "Documentary"
     },
     {
       "start": "09:58",
@@ -44,8 +41,7 @@
         "en": "Korean Documentary Film: Leading the Great Fatherland Nuclear War to Victory",
         "zh": "朝鲜记录电影：引领伟大的祖国核战争走向胜利"
       },
-      "category": "Documentary",
-      "notes": "API listed as 'Feature Compilation: Bringing About a Magnificent Educational Environment' - DIFFERENT from video"
+      "category": "Documentary"
     },
     {
       "start": "11:00",
@@ -55,8 +51,7 @@
         "en": "Let Us Fight More Vigorously for the Prosperous Development of Our Great State and the Welfare of Our People / Report on the Enlarged Meeting of the 9th Central Committee of the Workers' Party of Korea, 2nd Plenary Session",
         "zh": "为了我们伟大国家的富强发展和人民的福利而更加有力地奋斗 / 关于朝鲜劳动党中央委员会第九届第二次全体会议扩大会议的报道"
       },
-      "category": "News",
-      "notes": "Matches API: Report on WPK 9th CC 2nd Plenary Session"
+      "category": "News"
     },
     {
       "start": "11:34",
@@ -66,8 +61,7 @@
         "en": "Special Feature: Only on the Road of Love",
         "zh": "特辑：唯有爱的道路"
       },
-      "category": "Special",
-      "notes": "API listed as 'Special Feature: The Great Leader's Devotion - The Story Told by June' - SLIGHTLY DIFFERENT"
+      "category": "Special"
     },
     {
       "start": "12:00",
@@ -77,8 +71,7 @@
         "en": "Commissioning Ceremony of New Multi-Purpose Destroyer 'Choe Hyon' Held Grandly",
         "zh": "新型多用途驱逐舰'崔贤'号入列仪式隆重举行"
       },
-      "category": "News",
-      "notes": "Repeat of 09:14 program. API listed as WPK Plenary Session report - DIFFERENT"
+      "category": "News"
     },
     {
       "start": "12:38",
@@ -88,8 +81,7 @@
         "en": "Korean Art Film: Warriors",
         "zh": "朝鲜艺术电影：战士们"
       },
-      "category": "Film",
-      "notes": "API listed as TV Documentary Compilation - DIFFERENT from video"
+      "category": "Film"
     },
     {
       "start": "12:41",
@@ -99,8 +91,7 @@
         "en": "Special Feature: The Military Units Shining with That Name (1)",
         "zh": "特辑：那些名字闪耀的军威部队（1）"
       },
-      "category": "Special",
-      "notes": "API listed as TV Documentary Compilation - DIFFERENT from video"
+      "category": "Special"
     },
     {
       "start": "13:59",
@@ -110,8 +101,7 @@
         "en": "Health and Life Common Sense: Managing Shoulder Health While Sitting - Use of Acupuncture Points -",
         "zh": "健康与生活常识：久坐时的肩膀健康管理——经穴按摩的使用——"
       },
-      "category": "Health",
-      "notes": "API listed as 'Health and Life: Essential Elements for Immunity Enhancement' - DIFFERENT"
+      "category": "Health"
     },
     {
       "start": "14:30",
@@ -121,8 +111,7 @@
         "en": "Feature Compilation: Actively Embracing Rice-Fish Farming",
         "zh": "综合剪辑：积极接受稻鱼养殖"
       },
-      "category": "Feature",
-      "notes": "API listed as 'Serial Journey: Visiting Revolutionary Battle Sites' - DIFFERENT"
+      "category": "Feature"
     },
     {
       "start": "14:34",
@@ -132,8 +121,7 @@
         "en": "Serial Feature Compilation: At the Place Where the Footprints of Devotion to the People Are Engraved - Raglang Glory Soldiers' Daily Necessities Factory -",
         "zh": "连续介绍剪辑：在铭刻着为民献身足迹的地方——乐浪荣誉军人日用品工厂——"
       },
-      "category": "Feature",
-      "notes": "API listed as 'Feature Compilation: The Viewers of the Flower Garden' - DIFFERENT"
+      "category": "Feature"
     },
     {
       "start": "14:45",
@@ -143,8 +131,7 @@
         "en": "TV Stage: Do Not Forget the Lesson of the Foreign Enemy",
         "zh": "电视舞台：不要忘记外敌的教训"
       },
-      "category": "Entertainment",
-      "notes": "API listed as 'Special Feature: The Loving Care of the Respected Fatherly Marshal' - DIFFERENT"
+      "category": "Entertainment"
     },
     {
       "start": "15:07",
@@ -154,8 +141,7 @@
         "en": "Children's Broadcasting Time: Russian Animated Film - Jumong - Episode 21",
         "zh": "儿童广播时间：俄罗斯动画电影——高朱蒙 第21部"
       },
-      "category": "Children",
-      "notes": "API listed as Episode 20 at 17:52 - VIDEO shows Episode 21 at 15:07. Timing and episode DIFFERENT"
+      "category": "Children"
     },
     {
       "start": "16:06",
@@ -165,8 +151,7 @@
         "en": "Feature Compilation: Heroes of the Telephone - The First Soldier Who Blocked the Telephone Line, Hero of the Republic Jang Tae-hwa",
         "zh": "介绍剪辑：电话的英雄传——首位阻断电话线的战士、共和国英雄张泰华"
       },
-      "category": "Feature",
-      "notes": "API listed as 'Recorded Footage: 2026 ITTF World Cup' - COMPLETELY DIFFERENT"
+      "category": "Feature"
     },
     {
       "start": "16:44",
@@ -176,8 +161,7 @@
         "en": "Commissioning Ceremony of New Multi-Purpose Destroyer 'Choe Hyon' Held Grandly",
         "zh": "新型多用途驱逐舰'崔贤'号入列仪式隆重举行"
       },
-      "category": "News",
-      "notes": "Repeat. API listed as WPK Plenary Session report - DIFFERENT"
+      "category": "News"
     },
     {
       "start": "17:00",
@@ -187,8 +171,7 @@
         "en": "Today's Central Newspaper Overview",
         "zh": "今日中央报纸概览"
       },
-      "category": "News",
-      "notes": "API listed as WPK Plenary Session report at 17:00 - DIFFERENT"
+      "category": "News"
     },
     {
       "start": "17:55",
@@ -198,8 +181,7 @@
         "en": "Let Us Fight More Vigorously for the Prosperous Development of Our Great State and the Welfare of Our People / Report on the Enlarged Meeting of the 9th Central Committee of the Workers' Party of Korea, 2nd Plenary Session",
         "zh": "为了我们伟大国家的富强发展和人民的福利而更加有力地奋斗 / 关于朝鲜劳动党中央委员会第九届第二次全体会议扩大会议的报道"
       },
-      "category": "News",
-      "notes": "API listed as 'Children's Broadcasting Time: Jumong Episode 20' at 17:52 - COMPLETELY DIFFERENT"
+      "category": "News"
     },
     {
       "start": "18:01",
@@ -209,8 +191,7 @@
         "en": "Special Feature: 100 Days and 100 Nights Run with Miracles and Innovation",
         "zh": "特辑：以奇迹和创新奔跑而来的100个白天、100个夜晚"
       },
-      "category": "Special",
-      "notes": "API listed as 'Journey: Visiting Raw Material Bases' at 18:35 - DIFFERENT"
+      "category": "Special"
     },
     {
       "start": "18:34",
@@ -220,30 +201,27 @@
         "en": "Serial Journey: Visiting the Revolutionary Battle Sites in the Sinhung District - Okryon Mountain Scenery",
         "zh": "连续纪行：走访新兴市区革命战迹地——玉莲山风景"
       },
-      "category": "Documentary",
-      "notes": "API listed as 'TV Stage: Love for the Motherland' at 18:48 - DIFFERENT"
+      "category": "Documentary"
     },
     {
       "start": "18:56",
       "end": "19:00",
       "title": {
         "ko": "괘일의 순서",
-        "en": "Order of the Day / Daily Schedule",
+        "en": "Order of the Day",
         "zh": "今日节目顺序"
       },
-      "category": "Interstitial",
-      "notes": "Closing bumper"
+      "category": "Interstitial"
     },
     {
       "start": "19:00",
       "end": "20:00",
       "title": {
-        "ko": "볼도 (News)",
+        "ko": "볼도",
         "en": "News",
         "zh": "报道"
       },
-      "category": "News",
-      "notes": "API listed as 19:00-20:52 - VIDEO shows 19:00-20:00 (1 hour). Timing DIFFERENT"
+      "category": "News"
     },
     {
       "start": "20:00",
@@ -253,8 +231,7 @@
         "en": "Commissioning Ceremony of New Multi-Purpose Destroyer 'Choe Hyon' Held Grandly",
         "zh": "新型多用途驱逐舰'崔贤'号入列仪式隆重举行"
       },
-      "category": "News",
-      "notes": "API listed as WPK Plenary Session report at 20:52 - DIFFERENT"
+      "category": "News"
     },
     {
       "start": "20:52",
@@ -264,8 +241,7 @@
         "en": "Special Feature: The Eternal Banner of Victory 2",
         "zh": "特辑：永恒胜利之旗帜 2"
       },
-      "category": "Special",
-      "notes": "API listed as 'Serial Journey: Sinuiju Greenhouse Farm' at 21:21 - DIFFERENT"
+      "category": "Special"
     },
     {
       "start": "21:05",
@@ -275,19 +251,17 @@
         "en": "From Today's News",
         "zh": "在今天的报道中"
       },
-      "category": "News",
-      "notes": "API listed as 'From Today's News' at 21:57 - VIDEO shows 21:05-21:58. Timing DIFFERENT"
+      "category": "News"
     },
     {
       "start": "21:58",
       "end": "22:00",
       "title": {
-        "ko": "평양 야경 / 방송 종료",
-        "en": "Pyongyang Night View / Broadcast End",
-        "zh": "平壤夜景 / 广播结束"
+        "ko": "평양 야경",
+        "en": "Pyongyang Night View",
+        "zh": "平壤夜景"
       },
-      "category": "Interstitial",
-      "notes": "Closing shot of Pyongyang at night with flag"
+      "category": "Interstitial"
     }
   ]
 }
