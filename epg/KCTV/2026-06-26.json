@@ -1,0 +1,307 @@
+{
+  "channel": "KCTV",
+  "date": "2026-06-26",
+  "source": "Korean Central Television.",
+  "programs": [
+    {
+      "start": "09:18",
+      "end": "09:43",
+      "title": {
+        "ko": "방문기 제122호양묘장을 찾아서",
+        "en": "Visit: Visiting the No. 122 Seedling Nursery",
+        "zh": "访问记：走访第122号苗圃"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "09:43",
+      "end": "09:48",
+      "title": {
+        "ko": "련속참관기 위인칭송의 고귀한 재보 - 국제친선전람관을 찾아서 - (152)",
+        "en": "Serial Visit: The Noble Treasure of Praising the Great Man - Visiting the International Friendship Exhibition Hall - (152)",
+        "zh": "连续参观记：颂扬伟人的宝贵财富——走访国际友谊展览馆（152）"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "09:48",
+      "end": "10:27",
+      "title": {
+        "ko": "련속소개편집물 영생하는 우리 당의 혁명전사들 - 항일혁명투사 김룡연 -",
+        "en": "Serial Feature Compilation: The Eternal Revolutionary Fighters of Our Party - Anti-Japanese Revolutionary Fighter Kim Ryong-yon -",
+        "zh": "连续介绍剪辑：我们党的永生革命战士——抗日革命战士金龙渊——"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "10:27",
+      "end": "10:36",
+      "title": {
+        "ko": "특집 극복되는 여러그룩재배방법",
+        "en": "Special Feature: Overcoming Various Cropping Methods",
+        "zh": "特辑：克服的多种作物栽培方法"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "10:36",
+      "end": "10:48",
+      "title": {
+        "ko": "세계 여러 나라 동물들 아프리카의 동물세계 - 꽁고강류역에서 사는 동물들 - (3)",
+        "en": "Animals of Various Countries of the World: The Animal World of Africa - Animals Living in the Congo Basin - (3)",
+        "zh": "世界各国的动物们：非洲的动物世界——生活在刚果盆地的动物们——（3）"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "10:48",
+      "end": "10:56",
+      "title": {
+        "ko": "방문기 대성산샘물기가 시작되는 곳에서 - 대성산샘물공장을 찾아서 -",
+        "en": "Visit: Where the Daesongsan Spring Water Begins - Visiting the Daesongsan Spring Water Factory -",
+        "zh": "访问记：大城山泉水开始的地方——走访大城山泉水工厂——"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "10:56",
+      "end": "11:11",
+      "title": {
+        "ko": "특집 기적과 혁신으로 달려온 100일낮, 100일밤",
+        "en": "Special Feature: 100 Days and 100 Nights Run with Miracles and Innovation",
+        "zh": "特辑：以奇迹和创新奔跑而来的100个白天、100个夜晚"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "11:11",
+      "end": "11:45",
+      "title": {
+        "ko": "특집 참된 청년동맹일군들",
+        "en": "Special Feature: True Youth League Cadres",
+        "zh": "特辑：真正的青年同盟干部们"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "11:45",
+      "end": "12:13",
+      "title": {
+        "ko": "소개편집물 의약품생산을 위해 바치신 어버이사랑 - 정성제약종합공장 -",
+        "en": "Feature Compilation: The Fatherly Love Devoted to Pharmaceutical Production - Jongsong Pharmaceutical General Factory -",
+        "zh": "介绍剪辑：为药品生产献身的慈父之爱——精诚制药综合工厂——"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "12:13",
+      "end": "12:29",
+      "title": {
+        "ko": "조선예술영화 통군기자의 수기",
+        "en": "Korean Art Film: Notes of a Correspondent at Tonggun",
+        "zh": "朝鲜艺术电影：统军记者的手记"
+      },
+      "category": "Film"
+    },
+    {
+      "start": "12:29",
+      "end": "13:59",
+      "title": {
+        "ko": "특집 그 이름 빛나는 군위부대들 (2)",
+        "en": "Special Feature: The Military Units Shining with That Name (2)",
+        "zh": "特辑：那些名字闪耀的军威部队（2）"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "13:59",
+      "end": "14:11",
+      "title": {
+        "ko": "건강과 생활상식 묵터되며 건강관리 - 광물질 섭취 -",
+        "en": "Health and Life Common Sense: Health Management While Sitting - Mineral Intake -",
+        "zh": "健康与生活常识：久坐时的健康管理——矿物质摄取——"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "14:11",
+      "end": "14:50",
+      "title": {
+        "ko": "련속기행 백두산지구 혁명전적지를 찾아서 전장속영지",
+        "en": "Serial Journey: Visiting the Revolutionary Battle Sites in the Mt. Paektu Area - Battlefield Scenery",
+        "zh": "连续纪行：走访白头山地区革命战迹地——战场雪景"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "14:50",
+      "end": "15:13",
+      "title": {
+        "ko": "소개편집물 《예봉산》 구두가 전하는 사랑의 이야기 - 원산구두공장 -",
+        "en": "Feature Compilation: The Story of Love Conveyed by 'Yebongsan' Shoes - Wonsan Shoe Factory -",
+        "zh": "介绍剪辑：《礼峰山》皮鞋传递的爱之故事——元山皮鞋工厂——"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:13",
+      "end": "15:28",
+      "title": {
+        "ko": "기행 통천군의 다수확농장들을 찾아서",
+        "en": "Journey: Visiting the High-Yield Farms of Tongchon County",
+        "zh": "纪行：走访通川郡的多收获农场"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "15:28",
+      "end": "15:36",
+      "title": {
+        "ko": "종합편집 앞그룩벌, 보리가을을 마감단계에서 나그린다",
+        "en": "Feature Compilation: The Front Cropland, Barley Autumn is Being Wrapped Up",
+        "zh": "综合剪辑：前茬田，大麦秋收即将结束"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:36",
+      "end": "15:48",
+      "title": {
+        "ko": "특집 엘니뇨와 기후위기",
+        "en": "Special Feature: El Niño and the Climate Crisis",
+        "zh": "特辑：厄尔尼诺与气候危机"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "15:48",
+      "end": "16:31",
+      "title": {
+        "ko": "아동방송시간 러시아만화영화 고주몽 제22부",
+        "en": "Children's Broadcasting Time: Russian Animated Film - Jumong - Episode 22",
+        "zh": "儿童广播时间：俄罗斯动画电影——高朱蒙 第22部"
+      },
+      "category": "Children"
+    },
+    {
+      "start": "16:31",
+      "end": "16:53",
+      "title": {
+        "ko": "특집 위대한 선대의 뼈아리 - 가요 《전쟁의 3년간》 -",
+        "en": "Special Feature: The Legacy of the Great Predecessors - Song 'Three Years of War' -",
+        "zh": "特辑：伟大先辈的遗风——歌谣《战争的三年》——"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "16:53",
+      "end": "17:18",
+      "title": {
+        "ko": "볼도",
+        "en": "News",
+        "zh": "报道"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:18",
+      "end": "17:30",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Overview",
+        "zh": "今日中央报纸概览"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:30",
+      "end": "17:36",
+      "title": {
+        "ko": "기행 숙천군 지방농업공장 원료기지들을 찾아서",
+        "en": "Journey: Visiting the Raw Material Bases of the Sunchon County Local Industry Factory",
+        "zh": "纪行：走访顺川郡地方工业工厂原料基地"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "17:36",
+      "end": "17:52",
+      "title": {
+        "ko": "탄부들의 TV연단 - 순천지구청년탄광련합기업소 령대청년탄광 소대장 안성철 -",
+        "en": "Miners' TV Stage - Sunchon District Youth Coal Mine Combined Enterprise Ryongdae Youth Coal Mine Squad Leader An Song-chol -",
+        "zh": "矿工们的电视舞台——顺川地区青年煤矿联合企业所 岭大青年煤矿 小队长 安成哲——"
+      },
+      "category": "Entertainment"
+    },
+    {
+      "start": "17:52",
+      "end": "18:41",
+      "title": {
+        "ko": "조선기록영화 인민을 위한 정도의 나날에 2",
+        "en": "Korean Documentary Film: Days of Devoted Service for the People 2",
+        "zh": "朝鲜记录电影：为民献身的日日夜夜 2"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "18:41",
+      "end": "18:52",
+      "title": {
+        "ko": "문답 수정온실에서의 양어방법",
+        "en": "Q&A: Fish Farming Methods in Hydroponic Greenhouses",
+        "zh": "问答：水培温室中的养鱼方法"
+      },
+      "category": "Education"
+    },
+    {
+      "start": "18:52",
+      "end": "19:00",
+      "title": {
+        "ko": "소개편집물 사방야계사업에 힘을 넣어 - 마전광산 -",
+        "en": "Feature Compilation: Putting Effort into Afforestation Projects - Majon Mining Area -",
+        "zh": "介绍剪辑：为植树造林事业注入力量——马田矿区——"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "19:00",
+      "end": "19:34",
+      "title": {
+        "ko": "특집 로동계급이 안겨가는 위대한 품",
+        "en": "Special Feature: The Great Embrace Bestowed by the Working Class",
+        "zh": "特辑：工人阶级赐予的伟大怀抱"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "19:34",
+      "end": "20:00",
+      "title": {
+        "ko": "볼도",
+        "en": "News",
+        "zh": "报道"
+      },
+      "category": "News"
+    },
+    {
+      "start": "20:00",
+      "end": "20:31",
+      "title": {
+        "ko": "TV기록편집물 제36음력기절대",
+        "en": "TV Documentary Compilation: The 36th Lunar Season",
+        "zh": "电视记录剪辑：第36个农历节气"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "20:31",
+      "end": "21:37",
+      "title": {
+        "ko": "오늘의 볼도중에서",
+        "en": "From Today's News",
+        "zh": "在今天的报道中"
+      },
+      "category": "News"
+    }
+  ]
+}
