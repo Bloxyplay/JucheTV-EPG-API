@@ -9,10 +9,11 @@ export default async function handler(req, res) {
   const allowedOrigins = [
     'https://juchetv.vercel.app',
     'https://juchetv.com',
+    'https://juche-tv-epg-api.vercel.app',
     'http://localhost:3000',
     'http://localhost:5500',
     'http://127.0.0.1:5500',
-    'null', // for file:// local testing
+    'null',
   ];
 
   const origin = req.headers.origin || '';
@@ -34,20 +35,13 @@ export default async function handler(req, res) {
   }
 
   // ─── PARSE CHANNEL FROM URL ───
-  // Supports ?ch=kctv&source=juchetv  OR  /api/stats/ch=kctv/juchetv
   let channel = 'kctv';
-  let source = 'juchetv';
 
   if (req.query.ch) {
     channel = req.query.ch;
-    source = req.query.source || source;
   } else if (req.url) {
-    // Path-based: /api/stats/ch=kctv/juchetv
-    const match = req.url.match(/ch=([^/&?]+)(?:\/([^/&?]+))?/);
-    if (match) {
-      channel = match[1];
-      if (match[2]) source = match[2];
-    }
+    const match = req.url.match(/ch=([^/&?]+)/);
+    if (match) channel = match[1];
   }
 
   // ─── BUILD UPSTREAM URL ───
@@ -74,18 +68,15 @@ export default async function handler(req, res) {
         statusText: apiRes.statusText,
         body: text.slice(0, 500),
         channel,
-        source,
       });
     }
 
     const data = await apiRes.json();
 
-    // Inject proxy metadata
+    // Inject proxy metadata (no source)
     data._proxy = {
       fetchedAt: new Date().toISOString(),
-      source: upstreamUrl,
       channel,
-      requestedBy: source,
       cached: false,
     };
 
@@ -97,7 +88,6 @@ export default async function handler(req, res) {
       error: 'Failed to fetch from upstream',
       message: error.message,
       channel,
-      source,
       fetchedAt: new Date().toISOString(),
     });
   }
