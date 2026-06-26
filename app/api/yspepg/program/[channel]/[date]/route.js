@@ -1,39 +1,28 @@
-// app/api/yspepg/program/[channel]/[date]/route.js
+// pages/api/yspepg/program/[channel]/[date].js
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-export async function GET(request, { params }) {
-  const { channel, date } = params;
+export default function handler(req, res) {
+  const { channel, date } = req.query;
 
-  // KCTV = fc06f469
+  // KCTV = fc06f469 (md5("KCTV")[:8])
   if (channel !== "fc06f469") {
-    return new Response(JSON.stringify({error: "Channel not found"}), {
-      status: 404, headers: { "Content-Type": "application/json" }
-    });
+    return res.status(404).json({ error: "Channel not found" });
   }
 
   if (!/^\d{8}$/.test(date)) {
-    return new Response(JSON.stringify({error: "Invalid date"}), {
-      status: 400, headers: { "Content-Type": "application/json" }
-    });
+    return res.status(400).json({ error: "Invalid date. Use YYYYMMDD" });
   }
 
   try {
-    // Read pre-generated .bin file from public folder
     const filePath = join(process.cwd(), 'public', 'epg', `kctv_${date}.bin`);
     const buffer = readFileSync(filePath);
 
-    return new Response(buffer, {
-      status: 200,
-      headers: {
-        "Content-Type": "application/x-protobuf",
-        "Content-Length": buffer.length.toString(),
-        "Cache-Control": "public, max-age=300"
-      }
-    });
+    res.setHeader('Content-Type', 'application/x-protobuf');
+    res.setHeader('Content-Length', buffer.length);
+    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.status(200).send(buffer);
   } catch (err) {
-    return new Response(JSON.stringify({error: "EPG not found for this date"}), {
-      status: 404, headers: { "Content-Type": "application/json" }
-    });
+    res.status(404).json({ error: "EPG not found for this date" });
   }
 }
