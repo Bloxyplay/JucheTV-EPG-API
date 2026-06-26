@@ -137,8 +137,8 @@
       "start": "14:13",
       "end": "14:16",
       "title": {
-        "ko": "건강과 생활섭생 묵더위때 건강관리 - 수분섭취 -",
-        "en": "Health & Life: Health Management During Sweltering Heat — Water Intake",
+        "ko": "건강과 생활섭생 물더위때 건강관리 - 수분섭취 -",
+        "en": "Health & Life: Health Management During Hot Weather — Water Intake",
         "zh": "健康生活常识：酷暑时节的健康管理——水分摄取"
       },
       "category": "Health"
@@ -247,7 +247,7 @@
       "start": "19:27",
       "end": "19:31",
       "title": {
-        "ko": "종합편집 재핵방지사업을 예견성있게",
+        "ko": "종합편집 재해방지사업을 예견성있게",
         "en": "Newsreel: Disaster Prevention Work with Foresight",
         "zh": "综合剪辑：有预见性地开展防灾工作"
       },
@@ -267,7 +267,7 @@
       "start": "20:00",
       "end": "20:24",
       "title": {
-        "ko": "볏도",
+        "ko": "보도",
         "en": "8PM News",
         "zh": "晚8点新闻"
       },
@@ -307,7 +307,7 @@
       "start": "21:58",
       "end": "22:00",
       "title": {
-        "ko": "오늘의 볏도중에서",
+        "ko": "오늘의 보도중에서",
         "en": "From Today's News Report",
         "zh": "今日新闻报道摘要"
       },
