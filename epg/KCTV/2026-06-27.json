@@ -1,186 +1,317 @@
 {
-  "date": "2026-06-27",
   "channel": "KCTV",
+  "date": "2026-06-27",
+  "source": "Korean Central Television",
   "programs": [
     {
-      "time": "09:16",
-      "category": "News",
-      "title_ko": "경애하는 김정은동지께서 원산갈마해안관광지구의 신설대상들을 현지지도하시였다",
-      "title_en": "Respected Comrade Kim Jong Un Gives On-site Guidance to New Facilities at Wonsan Kalma Coastal Tourist Area"
+      "start": "08:30",
+      "end": "08:59",
+      "title": {
+        "ko": "Korean Central Television Test card",
+        "en": "Korean Central Television Test Card",
+        "zh": "朝鲜中央电视台测试卡"
+      },
+      "category": "General"
     },
     {
-      "time": "09:22",
-      "category": "Travel",
-      "title_ko": "천지개벽된 검덕지구를 찾아서 (1)",
-      "title_en": "Visiting the Completely Transformed Komdok Area (1)"
+      "start": "09:16",
+      "end": "09:22",
+      "title": {
+        "ko": "경애하는 김정은동지께서 원산갈마해안관광지구의 신설대상들을 현지지도하시였다",
+        "en": "Respected Comrade Kim Jong Un Gives On-site Guidance to New Facilities at Wonsan Kalma Coastal Tourist Area",
+        "zh": "敬爱的金正恩同志对元山葛麻海岸旅游区新建项目进行现场指导"
+      },
+      "category": "News"
     },
     {
-      "time": "09:45",
-      "category": "Documentary",
-      "title_ko": "취면헌신의 자욱 새겨진 곳에서 - 해주애국돌가공공장",
-      "title_en": "Where the Footprints of Devoted Service Are Engraved - Haeju Patriotic Stone Processing Factory"
+      "start": "09:22",
+      "end": "09:45",
+      "title": {
+        "ko": "기행 천지개벽된 검덕지구를 찾아서 (1)",
+        "en": "Journey: Visiting the Completely Transformed Komdok Area (1)",
+        "zh": "纪行：探访焕然一新的检德地区（1）"
+      },
+      "category": "Travel"
     },
     {
-      "time": "10:00",
-      "category": "Special",
-      "title_ko": "근로하는 인민의 대표자들",
-      "title_en": "Representatives of the Working People"
+      "start": "09:45",
+      "end": "10:00",
+      "title": {
+        "ko": "련속소개편집물 취면헌신의 자욱 새겨진 곳에서 - 해주애국돌가공공장",
+        "en": "Serial Feature: Where the Footprints of Devoted Service Are Engraved — Haeju Patriotic Stone Processing Factory",
+        "zh": "系列专题剪辑：镌刻着献身服务足迹的地方——海州爱国石材加工厂"
+      },
+      "category": "Documentary"
     },
     {
-      "time": "10:40",
-      "category": "Q&A",
-      "title_ko": "바다가양식에서 나서는 문제 - 시설물에 의한 인공양식방법",
-      "title_en": "Issues in Mariculture - Artificial Culture Methods Using Facilities"
+      "start": "10:00",
+      "end": "10:40",
+      "title": {
+        "ko": "특집 근로하는 인민의 대표자들",
+        "en": "Special Feature: Representatives of the Working People",
+        "zh": "专题：劳动人民代表"
+      },
+      "category": "Special"
     },
     {
-      "time": "10:57",
-      "category": "Travel",
-      "title_ko": "희령시의 여러곳을 찾아서",
-      "title_en": "Visiting Various Places in Hae Ryong City"
+      "start": "10:40",
+      "end": "10:57",
+      "title": {
+        "ko": "문답 바다가양식에서 나서는 문제 - 시설물에 의한 인공양식방법",
+        "en": "Q&A: Issues in Mariculture — Artificial Culture Methods Using Facilities",
+        "zh": "问答：海水养殖中出现的问题——利用设施的人工养殖方法"
+      },
+      "category": "Education"
     },
     {
-      "time": "11:15",
-      "category": "Documentary",
-      "title_ko": "농관양어를 적극 받아들여",
-      "title_en": "Actively Adopting Agricultural Fish Farming"
+      "start": "10:57",
+      "end": "11:15",
+      "title": {
+        "ko": "기행 희령시의 여러곳을 찾아서",
+        "en": "Journey: Visiting Various Places in Hae Ryong City",
+        "zh": "纪行：探访熙岭市各地"
+      },
+      "category": "Travel"
     },
     {
-      "time": "11:20",
-      "category": "Special",
-      "title_ko": "추대들을 위하여 미래를 위하여",
-      "title_en": "For the Posterity, For the Future"
+      "start": "11:15",
+      "end": "11:20",
+      "title": {
+        "ko": "종합편집 농관양어를 적극 받아들여",
+        "en": "Newsreel: Actively Adopting Agricultural Fish Farming",
+        "zh": "综合剪辑：积极采用农管养鱼"
+      },
+      "category": "Documentary"
     },
     {
-      "time": "12:00",
-      "category": "News",
-      "title_ko": "경애하는 김정은동지께서 원산갈마해안관광지구의 신설대상들을 현지지도하시였다",
-      "title_en": "Respected Comrade Kim Jong Un Gives On-site Guidance to New Facilities at Wonsan Kalma Coastal Tourist Area"
+      "start": "11:20",
+      "end": "12:00",
+      "title": {
+        "ko": "특집 추대들을 위하여 미래를 위하여",
+        "en": "Special Feature: For the Posterity, For the Future",
+        "zh": "专题：为了后代 为了未来"
+      },
+      "category": "Special"
     },
     {
-      "time": "12:10",
-      "category": "Movie",
-      "title_ko": "조선예술영화 - 월미도",
-      "title_en": "Korean Art Film - Wolmi Island"
+      "start": "12:00",
+      "end": "12:10",
+      "title": {
+        "ko": "경애하는 김정은동지께서 원산갈마해안관광지구의 신설대상들을 현지지도하시였다",
+        "en": "Respected Comrade Kim Jong Un Gives On-site Guidance to New Facilities at Wonsan Kalma Coastal Tourist Area",
+        "zh": "敬爱的金正恩同志对元山葛麻海岸旅游区新建项目进行现场指导"
+      },
+      "category": "News"
     },
     {
-      "time": "13:43",
-      "category": "Documentary",
-      "title_ko": "취면헌신의 자욱 새겨진 곳에서 - 룡악산샘물공장",
-      "title_en": "Where the Footprints of Devoted Service Are Engraved - Ryongaksan Spring Water Factory"
+      "start": "12:10",
+      "end": "13:43",
+      "title": {
+        "ko": "조선예술영화 월미도",
+        "en": "Korean Art Film: Wolmi Island",
+        "zh": "朝鲜艺术电影：月尾岛"
+      },
+      "category": "Film"
     },
     {
-      "time": "14:00",
-      "category": "Science",
-      "title_ko": "치과위생용품에 어린 사랑의 손길 - 평양치과위생용품공장 지배인 리영숙",
-      "title_en": "Loving Care in Dental Hygiene Products - Ri Yong Suk, Manager of Pyongyang Dental Hygiene Products Factory"
+      "start": "13:43",
+      "end": "14:00",
+      "title": {
+        "ko": "련속소개편집물 취면헌신의 자욱 새겨진 곳에서 - 룡악산샘물공장",
+        "en": "Serial Feature: Where the Footprints of Devoted Service Are Engraved — Ryongaksan Spring Water Factory",
+        "zh": "系列专题剪辑：镌刻着献身服务足迹的地方——龙岳山泉水厂"
+      },
+      "category": "Documentary"
     },
     {
-      "time": "14:13",
-      "category": "Health",
-      "title_ko": "묻어되며 건강관리 - 수분섭취",
-      "title_en": "Health Management Through Moisture - Water Intake"
+      "start": "14:00",
+      "end": "14:13",
+      "title": {
+        "ko": "수기 치과위생용품에 어린 사랑의 손길 - 평양치과위생용품공장 지배인 리영숙",
+        "en": "Report: Loving Care in Dental Hygiene Products — Ri Yong Suk, Manager of Pyongyang Dental Hygiene Products Factory",
+        "zh": "手记：牙科卫生用品中饱含的爱心——平壤牙科卫生用品厂厂长李英淑"
+      },
+      "category": "Science"
     },
     {
-      "time": "14:16",
-      "category": "Travel",
-      "title_ko": "련속기행 - 백두산지구 혁명전적지를 찾아서 - 배계봉숙영지",
-      "title_en": "Serial Travel - Visiting Revolutionary Battle Sites in the Mt. Paektu Area - Paektu Secret Camp"
+      "start": "14:13",
+      "end": "14:16",
+      "title": {
+        "ko": "건강과 생활상식 묻어되며 건강관리 - 수분섭취",
+        "en": "Health & Life: Health Management Through Moisture — Water Intake",
+        "zh": "健康生活常识：融入日常的健康管理——水分摄取"
+      },
+      "category": "Health"
     },
     {
-      "time": "14:49",
-      "category": "Documentary",
-      "title_ko": "소재편집물 - 소작농의 아들을 군사지휘관으로 키워주시여 - 조선인민군 장령이였던 리종우",
-      "title_en": "Feature - Raising a Tenant Farmer's Son to Be a Military Commander - Ri Jong U, General of the Korean People's Army"
+      "start": "14:16",
+      "end": "14:49",
+      "title": {
+        "ko": "련속기행 백두산지구 혁명전적지를 찾아서 - 배계봉숙영지",
+        "en": "Serial Journey: Visiting Revolutionary Battle Sites in the Mt. Paektu Area — Paektu Secret Camp",
+        "zh": "系列纪行：探访白头山地区革命战迹地——白岩峰宿营地"
+      },
+      "category": "Travel"
     },
     {
-      "time": "15:42",
-      "category": "Documentary",
-      "title_ko": "련속참관기 - 신천땅을 고발한다 - 신천제금교양관을 찾아서 - 미래는 유망한 인감도십자",
-      "title_en": "Serial Visit Report - Exposing the Sinchon Atrocities - Visiting the Sinchon Museum of American War Atrocities - The Future Lies with Promising Young People"
+      "start": "14:49",
+      "end": "15:42",
+      "title": {
+        "ko": "소개편집물 소작농의 아들을 군사지휘관으로 키워주시여 - 조선인민군 장령이였던 리종우",
+        "en": "Feature Compilation: Raising a Tenant Farmer's Son to Be a Military Commander — Ri Jong U, General of the Korean People's Army",
+        "zh": "专题剪辑：将佃农之子培养为军事指挥官——朝鲜人民军将领李重佑"
+      },
+      "category": "Feature"
     },
     {
-      "time": "16:05",
-      "category": "Animation",
-      "title_ko": "아동방송시간 력사만화영화 - 고주몽 제23부",
-      "title_en": "Children's Broadcasting Time Historical Cartoon Film - Goguryeo's King Jumong Part 23"
+      "start": "15:42",
+      "end": "16:05",
+      "title": {
+        "ko": "련속참관기 신천땅을 고발한다 - 신천제금교양관을 찾아서 - 미래는 유망한 인감도십자",
+        "en": "Serial Visit Report: Exposing the Sinchon Atrocities — Visiting the Sinchon Museum of American War Atrocities — The Future Lies with Promising Young People",
+        "zh": "系列探访：控诉新川土地——探访新川阶级教育馆——未来属于有前途的年轻人"
+      },
+      "category": "Documentary"
     },
     {
-      "time": "16:45",
-      "category": "Music",
-      "title_ko": "수필 - 꿈을 낳는 거리",
-      "title_en": "Essay - The Street That Gives Birth to Dreams"
+      "start": "16:05",
+      "end": "16:45",
+      "title": {
+        "ko": "아동방송시간 력사만화영화 고주몽 제23부",
+        "en": "Children's Hour: Historical Cartoon Film — Goguryeo's King Jumong, Episode 23",
+        "zh": "少儿节目：历史卡通电影——高句丽朱蒙王 第23部"
+      },
+      "category": "Children"
     },
     {
-      "time": "17:00",
-      "category": "News",
-      "title_ko": "경애하는 김정은동지께서 원산갈마해안관광지구의 신설대상들을 현지지도하시였다",
-      "title_en": "Respected Comrade Kim Jong Un Gives On-site Guidance to New Facilities at Wonsan Kalma Coastal Tourist Area"
+      "start": "16:45",
+      "end": "17:00",
+      "title": {
+        "ko": "수필 꿈을 낳는 거리",
+        "en": "Essay: The Street That Gives Birth to Dreams",
+        "zh": "散文：孕育梦想的街道"
+      },
+      "category": "Music"
     },
     {
-      "time": "17:23",
-      "category": "News",
-      "title_ko": "오늘호 중앙신문개관",
-      "title_en": "Today's Central Newspaper Review"
+      "start": "17:00",
+      "end": "17:23",
+      "title": {
+        "ko": "경애하는 김정은동지께서 원산갈마해안관광지구의 신설대상들을 현지지도하시였다",
+        "en": "Respected Comrade Kim Jong Un Gives On-site Guidance to New Facilities at Wonsan Kalma Coastal Tourist Area",
+        "zh": "敬爱的金正恩同志对元山葛麻海岸旅游区新建项目进行现场指导"
+      },
+      "category": "News"
     },
     {
-      "time": "17:36",
-      "category": "Documentary",
-      "title_ko": "종합편집 - 밀, 보리농사결속을 다그친다",
-      "title_en": "Newsreel - Hastening Wheat and Barley Harvest"
+      "start": "17:23",
+      "end": "17:36",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览"
+      },
+      "category": "News"
     },
     {
-      "time": "18:00",
-      "category": "Movie",
-      "title_ko": "조선기록영화 - 인민을 위한 령도의 나날에 2",
-      "title_en": "Korean Documentary Film - Days of Leadership for the People Part 2"
+      "start": "17:36",
+      "end": "18:00",
+      "title": {
+        "ko": "종합편집 밀, 보리농사결속을 다그친다",
+        "en": "Newsreel: Hastening Wheat and Barley Harvest",
+        "zh": "综合剪辑：加紧小麦大麦收割"
+      },
+      "category": "Feature"
     },
     {
-      "time": "19:04",
-      "category": "Documentary",
-      "title_ko": "소개편집물 - 장연군식료공장에 깃든 어머니사랑",
-      "title_en": "Feature - Mother's Love Embodied at Jangyon County Foodstuff Factory"
+      "start": "18:00",
+      "end": "19:04",
+      "title": {
+        "ko": "조선기록영화 인민을 위한 령도의 나날에 2",
+        "en": "Korean Documentary Film: Days of Leadership for the People, Part 2",
+        "zh": "朝鲜纪录片：为人民领导的日子（2）"
+      },
+      "category": "Documentary"
     },
     {
-      "time": "19:27",
-      "category": "Documentary",
-      "title_ko": "종합편집 - 재핵방지사업을 예견성있게",
-      "title_en": "Newsreel - Disaster Prevention Work with Foresight"
+      "start": "19:04",
+      "end": "19:27",
+      "title": {
+        "ko": "소개편집물 장연군식료공장에 깃든 어머니사랑",
+        "en": "Feature Compilation: Mother's Love Embodied at Jangyon County Foodstuff Factory",
+        "zh": "专题剪辑：长渊郡食品厂蕴含的母爱"
+      },
+      "category": "Feature"
     },
     {
-      "time": "19:31",
-      "category": "Special",
-      "title_ko": "영웅청년, 그 이름 빛나는것은 - 백두산영웅청년돌격대 지휘관, 대원들을 만나보고",
-      "title_en": "Heroic Youth, How That Name Shines - Meeting the Commander and Members of the Mt. Paektu Heroic Youth Shock Brigade"
+      "start": "19:27",
+      "end": "19:31",
+      "title": {
+        "ko": "종합편집 재핵방지사업을 예견성있게",
+        "en": "Newsreel: Disaster Prevention Work with Foresight",
+        "zh": "综合剪辑：有预见性地开展防灾工作"
+      },
+      "category": "Documentary"
     },
     {
-      "time": "20:00",
-      "category": "News",
-      "title_ko": "볏도",
-      "title_en": "News Report"
+      "start": "19:31",
+      "end": "20:00",
+      "title": {
+        "ko": "특집 영웅청년, 그 이름 빛나는것은 - 백두산영웅청년돌격대 지휘관, 대원들을 만나보고",
+        "en": "Special Feature: Heroic Youth, How That Name Shines — Meeting the Commander and Members of the Mt. Paektu Heroic Youth Shock Brigade",
+        "zh": "专题：英雄青年，那名字如何闪耀——会见白头山英雄青年突击队指挥员和队员"
+      },
+      "category": "Special"
     },
     {
-      "time": "20:24",
-      "category": "Health",
-      "title_ko": "건강과 생활상식 - 고혈압과 그 대책",
-      "title_en": "Health and Life Common Sense - High Blood Pressure and Its Countermeasures"
+      "start": "20:00",
+      "end": "20:24",
+      "title": {
+        "ko": "볏도",
+        "en": "8PM News",
+        "zh": "晚8点新闻"
+      },
+      "category": "News"
     },
     {
-      "time": "20:32",
-      "category": "Special",
-      "title_ko": "여러 밀가공기지들을 찾아서",
-      "title_en": "Visiting Various Flour Processing Bases"
+      "start": "20:24",
+      "end": "20:32",
+      "title": {
+        "ko": "건강과 생활상식 고혈압과 그 대책",
+        "en": "Health & Life: High Blood Pressure and Its Countermeasures",
+        "zh": "健康生活常识：高血压及其对策"
+      },
+      "category": "Health"
     },
     {
-      "time": "20:52",
-      "category": "Documentary",
-      "title_ko": "TV기록편집물 - 제36습격기련대",
-      "title_en": "TV Documentary - The 36th Assault Aircraft Regiment"
+      "start": "20:32",
+      "end": "20:52",
+      "title": {
+        "ko": "특집 여러 밀가공기지들을 찾아서",
+        "en": "Special Feature: Visiting Various Flour Processing Bases",
+        "zh": "专题：探访多个面粉加工基地"
+      },
+      "category": "Special"
     },
     {
-      "time": "21:58",
-      "category": "News",
-      "title_ko": "오늘의 볏도중에서",
-      "title_en": "From Today's News Report"
+      "start": "20:52",
+      "end": "21:58",
+      "title": {
+        "ko": "TV기록편집물 제36습격기련대",
+        "en": "TV Documentary Compilation: The 36th Assault Aircraft Regiment",
+        "zh": "电视纪录片剪辑：第36攻击机联队"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "21:58",
+      "end": "22:00",
+      "title": {
+        "ko": "오늘의 볏도중에서",
+        "en": "From Today's News Report",
+        "zh": "今日新闻报道摘要"
+      },
+      "category": "News"
     }
   ]
 }
