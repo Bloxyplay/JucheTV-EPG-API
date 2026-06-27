@@ -1,0 +1,317 @@
+{
+  "channel": "KCTV",
+  "date": "2026-06-28",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "08:30",
+      "end": "09:14",
+      "title": {
+        "ko": "Korean Central Television Test card",
+        "en": "Korean Central Television Test Card",
+        "zh": "朝鲜中央电视台测试卡"
+      },
+      "category": "General"
+    },
+    {
+      "start": "09:14",
+      "end": "09:40",
+      "title": {
+        "ko": "기행 천지개벽된 검덕지구를 찾아서 (2)",
+        "en": "Journey: Visiting the Completely Transformed Komdok Area (2)",
+        "zh": "纪行：探访焕然一新的检德地区（2）"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "09:40",
+      "end": "10:05",
+      "title": {
+        "ko": "련속참관기 위인칭송의 고귀한 재보 - 국제친선전람관을 찾아서 - (155)",
+        "en": "Serial Visit Report: Noble Treasures in Praise of Great Men — Visiting the International Friendship Exhibition — (155)",
+        "zh": "系列探访：称颂伟人的高贵珍宝——探访国际友谊展览馆——（155）"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "10:05",
+      "end": "10:33",
+      "title": {
+        "ko": "과학영화 혈액뇌관문과 뇌수보호",
+        "en": "Science Film: The Blood-Brain Barrier and Brain Protection",
+        "zh": "科学电影：血脑屏障与脑保护"
+      },
+      "category": "Science"
+    },
+    {
+      "start": "10:33",
+      "end": "10:52",
+      "title": {
+        "ko": "세계 여러 나라 동물들 동토대의 《사냥군》들",
+        "en": "Animals of Various Countries of the World: \"Hunters\" of the Tundra",
+        "zh": "世界各国动物：冻土带的“猎人”们"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "10:52",
+      "end": "11:30",
+      "title": {
+        "ko": "방문기 순천시의 《화초가정》 - 평안남도 순천시 수북동 리진혁가정 -",
+        "en": "Visit Report: \"Flower Family\" of Sunchon City — Family of Ri Jin Hyok in Subuk-dong, Sunchon City, South Phyongan Province",
+        "zh": "访问记：顺川市的“花草家庭”——平安南道顺川市水北洞李镇赫家庭"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "11:30",
+      "end": "12:07",
+      "title": {
+        "ko": "특집 그 이름 빛나는 근위부대들 (2)",
+        "en": "Special Feature: Guards Units Whose Names Shine (2)",
+        "zh": "专题：名字闪耀的近卫部队（2）"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "12:07",
+      "end": "13:21",
+      "title": {
+        "ko": "조선예술영화 명령-027호",
+        "en": "Korean Art Film: Order No. 027",
+        "zh": "朝鲜艺术电影：命令-027号"
+      },
+      "category": "Film"
+    },
+    {
+      "start": "13:21",
+      "end": "13:25",
+      "title": {
+        "ko": "료리상식 - 민족음료 수정과 - 호박전",
+        "en": "Culinary Knowledge — National Drink Sujonggwa — Hobakjon (Pan-fried Battered Pumpkin)",
+        "zh": "烹饪常识——民族饮料水正果——西葫芦煎饼"
+      },
+      "category": "Culture"
+    },
+    {
+      "start": "13:25",
+      "end": "13:53",
+      "title": {
+        "ko": "련속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 갈마식료공장 -",
+        "en": "Serial Feature: Where the Footprints of Devoted Service to the People Are Engraved — Kalma Foodstuff Factory",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——葛麻食品厂"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "13:53",
+      "end": "14:04",
+      "title": {
+        "ko": "건강과 생활섭생 부모들의 잘못된 인식 (1)",
+        "en": "Health & Life: Parents' Misconceptions (1)",
+        "zh": "健康生活常识：父母们的错误认识（1）"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "14:04",
+      "end": "15:02",
+      "title": {
+        "ko": "TV무대 우리 가정 이야기 (2)",
+        "en": "TV Stage: The Story of Our Family (2)",
+        "zh": "电视舞台：我们家庭的故事（2）"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:02",
+      "end": "15:22",
+      "title": {
+        "ko": "련속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 화성김치공장 -",
+        "en": "Serial Feature: Where the Footprints of Devoted Service to the People Are Engraved — Hwasong Kimchi Factory",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——和盛泡菜厂"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "15:22",
+      "end": "15:35",
+      "title": {
+        "ko": "소개편집물 혁명전통교양의 전초선에서 - 김정일훈장수훈자 사회주의애국공로자 삼지연혁명사적관 관장 공훈사적강사 강정옥 -",
+        "en": "Feature Compilation: At the Outpost of Revolutionary Tradition Education — Kang Jong Ok, Merited Historic Site Lecturer, Director of Samjiyon Revolutionary Historic Site, Order of Kim Jong Il Recipient, and Socialist Patriotic Person of Merit",
+        "zh": "专题剪辑：在革命传统教育的前沿——金正日勋章获得者、社会主义爱国功劳者、三池渊革命事迹馆馆长、功勋事迹讲师姜正玉"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:35",
+      "end": "15:54",
+      "title": {
+        "ko": "소개편집물 사방야계공사에 힘을 넣어 - 마전광산 -",
+        "en": "Feature Compilation: Putting Effort into Erosion Control Works — Majon Mine",
+        "zh": "专题剪辑：致力于防沙治水工程——马田矿山"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:54",
+      "end": "16:03",
+      "title": {
+        "ko": "소개편집물 살림방꾸리기와 가구",
+        "en": "Feature Compilation: Decorating the Living Room and Furniture",
+        "zh": "专题剪辑：居室布置与家具"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "16:03",
+      "end": "16:13",
+      "title": {
+        "ko": "특집 2025년의 기후재난",
+        "en": "Special Feature: Climate Disasters of 2025",
+        "zh": "专题：2025年的气候灾难"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "16:13",
+      "end": "17:00",
+      "title": {
+        "ko": "록화실황 2026년 프로정구선수협회 마드리드강자경기대회 - 단식 결승 - 이딸리아 : 도이췰란드",
+        "en": "Recorded Broadcast: 2026 ATP Madrid Open — Men's Singles Final — Italy vs. Germany",
+        "zh": "录像实况：2026年ATP马德里大师赛——单打决赛——意大利队 对 德国队"
+      },
+      "category": "Sports"
+    },
+    {
+      "start": "17:00",
+      "end": "17:21",
+      "title": {
+        "ko": "보도",
+        "en": "5PM News",
+        "zh": "下午5点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:21",
+      "end": "17:29",
+      "title": {
+        "ko": "각 도특파기자들이 보내온 소식",
+        "en": "News from Provincial Correspondents",
+        "zh": "各道特派记者发来的消息"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:29",
+      "end": "17:42",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:42",
+      "end": "18:27",
+      "title": {
+        "ko": "아동방송시간 력사만화영화 고주몽 제 24부",
+        "en": "Children's Broadcast Time: Historical Animated Film — Ko Jumong, Part 24",
+        "zh": "少儿节目：历史动画片——高朱蒙 第24部"
+      },
+      "category": "Children"
+    },
+    {
+      "start": "18:27",
+      "end": "18:36",
+      "title": {
+        "ko": "소개편집물 민족음악교육에 바쳐가는 마음",
+        "en": "Feature Compilation: A Heart Devoted to National Music Education",
+        "zh": "专题剪辑：致力于民族音乐教育的心"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "18:36",
+      "end": "18:59",
+      "title": {
+        "ko": "특집 위민헌신의 열두달 6월이 전하는 이야기",
+        "en": "Special Feature: Twelve Months of Devotion to the People — The Story of June",
+        "zh": "专题：为民献身的十二个月——6月讲述的故事"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "18:59",
+      "end": "19:29",
+      "title": {
+        "ko": "수필 내 조국의 밤에 대한 생각",
+        "en": "Essay: Thoughts on the Night of My Motherland",
+        "zh": "散文：对祖国之夜的思绪"
+      },
+      "category": "Music"
+    },
+    {
+      "start": "19:29",
+      "end": "20:00",
+      "title": {
+        "ko": "기행 상징건물들에 깃든 인민사랑의 이야기",
+        "en": "Journey: Stories of Love for the People Embodied in Symbolic Buildings",
+        "zh": "纪行：标志性建筑中蕴含的人民之爱故事"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "20:00",
+      "end": "20:29",
+      "title": {
+        "ko": "보도",
+        "en": "8PM News",
+        "zh": "晚8点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "20:29",
+      "end": "20:33",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 심장부담을 줄이려면 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — To Reduce the Burden on the Heart",
+        "zh": "健康生活常识：酷暑时节的健康管理——为了减轻心脏负担"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "20:33",
+      "end": "21:38",
+      "title": {
+        "ko": "TV기록편집물 위대한 우리 당에 인민은 영광드린다 제5편 인민을 위하여",
+        "en": "TV Documentary Compilation: The People Give Glory to Our Great Party, Part 5 — For the People",
+        "zh": "电视纪录片剪辑：人民向伟大的党致敬 第5篇 为了人民"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "21:38",
+      "end": "21:53",
+      "title": {
+        "ko": "특집 천성청년탄광의 애국탄부가정들",
+        "en": "Special Feature: Patriotic Coal Miner Families of Chonsong Youth Coal Mine",
+        "zh": "专题：天圣青年煤矿的爱国煤矿工家庭"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "21:53",
+      "end": "22:00",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report",
+        "zh": "今日新闻报道摘要"
+      },
+      "category": "News"
+    }
+  ]
+}
