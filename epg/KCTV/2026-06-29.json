@@ -1,0 +1,327 @@
+{
+  "channel": "KCTV",
+  "date": "2026-06-29",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "08:30",
+      "end": "09:20",
+      "title": {
+        "ko": "Korean Central Television Test Card And Startup Anthem + Today's Order.",
+        "en": "Korean Central Television Test Card And Startup Anthem + Today's Order.",
+        "zh": "朝鲜中央电视台测试卡和创业队歌 + 今日订单。"
+      },
+      "category": "General"
+    },
+    {
+      "start": "09:20",
+      "end": "09:50",
+      "title": {
+        "ko": "특집 모든것을 인민을 위하여",
+        "en": "Special Feature: Everything for the People",
+        "zh": "专题：一切为了人民"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "09:50",
+      "end": "10:05",
+      "title": {
+        "ko": "련속참관기 위인칭송의 고귀한 재보 - 국제친선전람관을 찾아서 - (151)",
+        "en": "Serial Visit Report: Noble Treasures in Praise of Great Men — Visiting the International Friendship Exhibition — (151)",
+        "zh": "系列探访：称颂伟人的高贵珍宝——探访国际友谊展览馆——（151）"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "10:05",
+      "end": "10:08",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 심장부담을 줄이려면 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — To Reduce the Burden on the Heart",
+        "zh": "健康生活常识：酷暑时节的健康管理——为了减轻心脏负担"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "10:08",
+      "end": "10:33",
+      "title": {
+        "ko": "기행 묘향산을 찾아서 (2)",
+        "en": "Journey: Visiting Mount Myohyang (2)",
+        "zh": "纪行：探访妙香山（2）"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "10:33",
+      "end": "10:40",
+      "title": {
+        "ko": "문답 심각한 기후변화에 대처하여",
+        "en": "Q&A: Coping with Severe Climate Change",
+        "zh": "问答：应对严峻的气候变化"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "10:40",
+      "end": "11:17",
+      "title": {
+        "ko": "련속기행 백두산지구 혁명전적지를 찾아서 - 무포숙영지 -",
+        "en": "Serial Travelogue: Visiting Revolutionary Battle Sites in Mount Paektu Area — Mupo Camping Site",
+        "zh": "系列纪行：探访白头山地区革命战迹地——无浦宿营地"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "11:17",
+      "end": "11:25",
+      "title": {
+        "ko": "소개편집물 《백두산》권총에 깃든 사연",
+        "en": "Feature Compilation: The Story Behind the \"Paektusan\" Pistol",
+        "zh": "专题剪辑：“白头山”手枪蕴含的故事"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "11:25",
+      "end": "12:03",
+      "title": {
+        "ko": "특집 불멸의 진로",
+        "en": "Special Feature: Immortal Path",
+        "zh": "专题：不灭的进路"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "12:03",
+      "end": "12:57",
+      "title": {
+        "ko": "조선예술영화 최전연의 작은 집",
+        "en": "Korean Art Film: A Small House on the Frontline",
+        "zh": "朝鲜艺术电影：前沿的小屋"
+      },
+      "category": "Film"
+    },
+    {
+      "start": "12:57",
+      "end": "13:31",
+      "title": {
+        "ko": "특집 그 이름 빛나는 근위부대들 (3)",
+        "en": "Special Feature: Guards Units Whose Names Shine (3)",
+        "zh": "专题：名字闪耀的近卫部队（3）"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "13:31",
+      "end": "13:40",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 고혈압환자들 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — Hypertension Patients",
+        "zh": "健康生活常识：酷暑时节的健康管理——高血压患者"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "13:40",
+      "end": "14:17",
+      "title": {
+        "ko": "특집 개척세대의 숭고한 정신으로",
+        "en": "Special Feature: With the Noble Spirit of the Pioneer Generation",
+        "zh": "专题：以开拓一代的崇高精神"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "14:17",
+      "end": "14:23",
+      "title": {
+        "ko": "소개편집물 우리가 만난 북창의 전력생산자들",
+        "en": "Feature Compilation: Power Producers of Pukchang We Met",
+        "zh": "专题剪辑：我们见到的北仓电力生产者们"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "14:23",
+      "end": "14:33",
+      "title": {
+        "ko": "TV연탄 순간과 추억 - 조국과 나 - (김정일청년영예상수상자 함영호)",
+        "en": "TV Poem: Moments and Memories — The Motherland and I — (Kim Jong Il Youth Honor Prize Recipient Ham Yong Ho)",
+        "zh": "电视诗：瞬间与回忆——祖国与我——（金正日青年荣誉奖获得者 咸英浩）"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "14:33",
+      "end": "14:52",
+      "title": {
+        "ko": "련속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 보성버섯공장 -",
+        "en": "Serial Feature: Where the Footprints of Devoted Service to the People Are Engraved — Posong Mushroom Factory",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——宝盛蘑菇厂"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "14:52",
+      "end": "15:05",
+      "title": {
+        "ko": "기행 룡천군의 다수확농장들을 찾아서",
+        "en": "Journey: Visiting High-Yield Farms in Ryongchon County",
+        "zh": "纪行：探访龙川郡的高产农场"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "15:05",
+      "end": "15:09",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 어린이건강관리 - 운동놀이할 때 -",
+        "en": "Health & Life: Children's Health Management During Sweltering Heat — When Exercising and Playing",
+        "zh": "健康生活常识：酷暑时节的儿童健康管理——体育游戏时"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "15:09",
+      "end": "15:37",
+      "title": {
+        "ko": "특집 붉은 당원증",
+        "en": "Special Feature: Red Party Membership Card",
+        "zh": "专题：红色的党员证"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "15:37",
+      "end": "16:01",
+      "title": {
+        "ko": "련속참관기 신천땅은 고발한다 - 신천박물관을 찾아서 - 천인공노할 미제의 대량학살만행",
+        "en": "Serial Visit Report: Sinchon Land Accuses — Visiting the Sinchon Museum — The Outrageous Mass Slaughter Atrocities of the US Imperialists",
+        "zh": "系列探访：信川土地在控诉——探访信川博物馆——令人发指的美帝大屠杀暴行"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "16:01",
+      "end": "17:00",
+      "title": {
+        "ko": "록화실황 2026년 세계탁구지협회 싱가포르스매쉬경기대회 - 여자단식 16강자전, 준준결승 -",
+        "en": "Recorded Broadcast: 2026 WTT Singapore Smash — Women's Singles Round of 16, Quarterfinals",
+        "zh": "录像实况：2026年WTT新加坡大满贯——女子单打16强赛、四分之一决赛"
+      },
+      "category": "Sports"
+    },
+    {
+      "start": "17:00",
+      "end": "17:17",
+      "title": {
+        "ko": "보도",
+        "en": "5PM News",
+        "zh": "下午5点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:17",
+      "end": "17:28",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:28",
+      "end": "18:09",
+      "title": {
+        "ko": "아동방송시간 력사만화영화 고주몽 제 25부",
+        "en": "Children's Broadcast Time: Historical Animated Film — Ko Jumong, Part 25",
+        "zh": "少儿节目：历史动画片——高朱蒙 第25部"
+      },
+      "category": "Children"
+    },
+    {
+      "start": "18:09",
+      "end": "18:16",
+      "title": {
+        "ko": "문답 제품의 질제고와 규격화사업",
+        "en": "Q&A: Product Quality Improvement and Standardization Work",
+        "zh": "问答：提高产品质量与标准化工作"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "18:16",
+      "end": "18:57",
+      "title": {
+        "ko": "특집 위대한 년대의 메아리 - 가요 《전쟁의 3년간》 -",
+        "en": "Special Feature: Echoes of a Great Era — Song \"The Three Years of War\"",
+        "zh": "专题：伟大年代的回响——歌曲《战争的三年》"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "18:57",
+      "end": "19:10",
+      "title": {
+        "ko": "종합편집물 3대혁명의 선구자들",
+        "en": "Comprehensive Compilation: Pioneers of the Three Revolutions",
+        "zh": "综合剪辑：三大革命的先驱者们"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "19:10",
+      "end": "19:12",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 일사병과 열사병을 막으려면 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — To Prevent Sunstroke and Heatstroke",
+        "zh": "健康生活常识：酷暑时节的健康管理——为了预防中暑和热射病"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "19:12",
+      "end": "20:00",
+      "title": {
+        "ko": "련속기행 신의주온실종합농장지구를 찾아서 (1)",
+        "en": "Serial Travelogue: Visiting Sinuiju Greenhouse Farm District (1)",
+        "zh": "系列纪行：探访新义州温室综合农场地区（1）"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "20:00",
+      "end": "20:26",
+      "title": {
+        "ko": "보도",
+        "en": "8PM News",
+        "zh": "晚8点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "20:26",
+      "end": "22:10",
+      "title": {
+        "ko": "조선기록영화 위대한 년대, 불멸의 려정 1 우리 당을 혁명하는 당, 투쟁하는 당, 인민의 당으로",
+        "en": "Korean Documentary Film: Great Era, Immortal Journey 1 — Making Our Party a Revolutionary Party, a Struggling Party, the People's Party",
+        "zh": "朝鲜纪录电影：伟大的年代，不灭的历程 1——把我党建设成革命的党、斗争的党、人民的党"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "22:10",
+      "end": "22:30",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report",
+        "zh": "今日新闻报道摘要"
+      },
+      "category": "News"
+    }
+  ]
+}
