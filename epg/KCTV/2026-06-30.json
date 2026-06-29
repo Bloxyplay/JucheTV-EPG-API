@@ -1,0 +1,327 @@
+{
+  "channel": "KCTV",
+  "date": "2026-06-30",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "08:30",
+      "end": "09:15",
+      "title": {
+        "ko": "Korean Central Television Test Card And Startup Anthem + Today's Order.",
+        "en": "Korean Central Television Test Card And Startup Anthem + Today's Order.",
+        "zh": "朝鲜中央电视台测试卡和创业队歌 + 今日订单。"
+      },
+      "category": "General"
+    },
+    {
+      "start": "09:15",
+      "end": "09:42",
+      "title": {
+        "ko": "특집 위민헌신의 열두달 - 6월이 전하는 이야기 -",
+        "en": "Special Feature: Twelve Months of Devotion to the People — The Story Told by June —",
+        "zh": "专题：为民献身的十二个月——六月讲述的故事"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "09:42",
+      "end": "10:05",
+      "title": {
+        "ko": "련속참관기 위대한 역사 빛나는 전통 - 조선혁명박물관을 찾아서 - 조선혁명의 진로 제시",
+        "en": "Serial Visit Report: Great History, Shining Tradition — Visiting the Korean Revolution Museum — Presenting the Path of the Korean Revolution",
+        "zh": "系列探访：伟大的历史 闪耀的传统——探访朝鲜革命博物馆——阐明朝鲜革命的进路"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "10:05",
+      "end": "10:16",
+      "title": {
+        "ko": "특집 엘니뇨와 기후위기",
+        "en": "Special Feature: El Niño and Climate Crisis",
+        "zh": "专题：厄尔尼诺与气候危机"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "10:16",
+      "end": "10:20",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 생강섭취 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — Ginger Intake",
+        "zh": "健康生活常识：酷暑时节的健康管理——生姜摄取"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "10:20",
+      "end": "10:31",
+      "title": {
+        "ko": "기행 묘향산을 찾아서 (3)",
+        "en": "Journey: Visiting Mount Myohyang (3)",
+        "zh": "纪行：探访妙香山（3）"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "10:31",
+      "end": "10:52",
+      "title": {
+        "ko": "특집 변함없이 걷는 원군길",
+        "en": "Special Feature: The Unchanging Path of Supporting the Army",
+        "zh": "专题：始终如一的拥军之路"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "10:52",
+      "end": "11:13",
+      "title": {
+        "ko": "소개편집물 한 명예군인이 들려준 이야기 - 중구역가로등사업소 노동자 오정심 -",
+        "en": "Feature Compilation: The Story Told by an Honored Disabled Soldier — Worker Oh Jung Sim of the Jung District Streetlight Station",
+        "zh": "专题剪辑：一位荣誉军人讲述的故事——中区域路灯事务所工人 吴贞淑"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "11:13",
+      "end": "11:30",
+      "title": {
+        "ko": "기행 숙천군 지방공업공장 원료기지들을 찾아서",
+        "en": "Journey: Visiting the Raw Material Bases of Local Industrial Factories in Sukchon County",
+        "zh": "纪行：探访肃川郡地方工业工厂原料基地"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "11:30",
+      "end": "12:04",
+      "title": {
+        "ko": "특집 3대혁명의 기치를 높이 들고",
+        "en": "Special Feature: Holding High the Banner of the Three Revolutions",
+        "zh": "专题：高举三大革命旗帜"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "12:04",
+      "end": "13:34",
+      "title": {
+        "ko": "조선예술영화 오늘의 10명당원",
+        "en": "Korean Art Film: Today's 10 Party Members",
+        "zh": "朝鲜艺术电影：今日的十名党员"
+      },
+      "category": "Film"
+    },
+    {
+      "start": "13:34",
+      "end": "13:55",
+      "title": {
+        "ko": "련속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 평양가방공장 -",
+        "en": "Serial Feature Compilation: Where the Footprints of Devoted Service to the People Are Engraved — Pyongyang Bag Factory",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——平壤箱包厂"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "13:55",
+      "end": "14:01",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 수분섭취 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — Water Intake",
+        "zh": "健康生活常识：酷暑时节的健康管理——水分摄取"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "14:01",
+      "end": "14:33",
+      "title": {
+        "ko": "탄부들의 TV연단 - 개천지구탄광련합기업소 봉천탄광 자광수청년돌격대 대장 박춘길 -",
+        "en": "Miners' TV Forum — Park Chun Gil, Leader of the Jakwangsu Youth Shock Brigade at Bongchon Coal Mine, Kaechon Area Coal Mining Complex",
+        "zh": "矿工的电视讲坛——价川地区煤矿联合企业所奉川煤矿自广水青年突击队队长 朴春吉"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "14:33",
+      "end": "14:38",
+      "title": {
+        "ko": "종합편집물 재해방지사업을 예견성있게",
+        "en": "Comprehensive Compilation: Disasters Prevention Work with Foresight",
+        "zh": "综合剪辑：未雨绸缪地开展防灾工作"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "14:38",
+      "end": "15:02",
+      "title": {
+        "ko": "소개편집물 전민과학기술인재화와 과학기술전당",
+        "en": "Feature Compilation: Making All People Well-Versed in Science and Technology and the Science and Technology Complex",
+        "zh": "专题剪辑：全民科学技术人才化与科学技术殿堂"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:02",
+      "end": "15:36",
+      "title": {
+        "ko": "특집 화선악기",
+        "en": "Special Feature: Frontline Musical Instruments",
+        "zh": "专题：火线乐器"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "15:36",
+      "end": "16:01",
+      "title": {
+        "ko": "련속참관기 신천땅은 고발한다 - 신천계급교양관을 찾아서 - 야수들의 야만의 무리",
+        "en": "Serial Visit Report: Sinchon Land Accuses — Visiting the Sinchon Class Education Hall — The Savage Herd of Beasts",
+        "zh": "系列探访：信川土地在控诉——探访信川阶级教育馆——野兽们的野蛮群体"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "16:01",
+      "end": "17:00",
+      "title": {
+        "ko": "TV무대 취재길에서 만난 사람들 (6)",
+        "en": "TV Stage: People Met on the Reporting Path (6)",
+        "zh": "电视舞台：在采访途中遇到的人们（6）"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "17:00",
+      "end": "17:19",
+      "title": {
+        "ko": "보도",
+        "en": "5PM News",
+        "zh": "下午5点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:19",
+      "end": "17:30",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:30",
+      "end": "18:15",
+      "title": {
+        "ko": "아동방송시간 력사만화영화 고주몽 제 26부",
+        "en": "Children's Broadcast Time: Historical Animated Film — Ko Jumong, Part 26",
+        "zh": "少儿节目：历史动画片——高朱蒙 第26部"
+      },
+      "category": "Children"
+    },
+    {
+      "start": "18:15",
+      "end": "18:34",
+      "title": {
+        "ko": "련속소개편집물 기념사진이 전하는 사랑의 이야기 (24)",
+        "en": "Serial Feature Compilation: The Story of Love Told by a Commemorative Photo (24)",
+        "zh": "系列专题剪辑：纪念照片传颂的爱的故事（24）"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "18:34",
+      "end": "19:04",
+      "title": {
+        "ko": "특집 한 병기일군이 간직한 신념 - 조국해방전쟁참전지 민병훈 -",
+        "en": "Special Feature: The Faith Kept by an Ordnance Official — Fatherland Liberation War Veteran Min Byung Hoon",
+        "zh": "专题：一位兵器人员铭记的信念——祖国解放战争参战者 闵炳勋"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "19:04",
+      "end": "19:08",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 어린이건강관리 - 경구수액의 사용 -",
+        "en": "Health & Life: Children's Health Management During Sweltering Heat — Use of Oral Rehydration Solution",
+        "zh": "健康生活常识：酷暑时节的儿童健康管理——口服补液盐的使用"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "19:08",
+      "end": "19:26",
+      "title": {
+        "ko": "소개편집물 천성청년탄광의 애국탄부들",
+        "en": "Feature Compilation: Patriotic Miners of the Chonsong Youth Coal Mine",
+        "zh": "专题剪辑：天圣青年煤矿的爱国矿工们"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "19:26",
+      "end": "20:00",
+      "title": {
+        "ko": "련속기행 신의주온실종합농장지구를 찾아서 (2)",
+        "en": "Serial Travelogue: Visiting Sinuiju Greenhouse Farm District (2)",
+        "zh": "系列纪行：探访新义州温室综合农场地区（2）"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "20:00",
+      "end": "20:27",
+      "title": {
+        "ko": "보도",
+        "en": "8PM News",
+        "zh": "晚8点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "20:27",
+      "end": "20:40",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 일사병과 열사병을 막자면 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — To Prevent Sunstroke and Heatstroke",
+        "zh": "健康生活常识：酷暑时节的健康管理——为了预防中暑和热射病"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "20:40",
+      "end": "21:25",
+      "title": {
+        "ko": "련속기행 신흥지구 혁명전적지를 찾아서 - 옥련산밀영 -",
+        "en": "Serial Travelogue: Visiting Revolutionary Battle Sites in Sinhung Area — Ongryonsan Secret Camp",
+        "zh": "系列纪行：探访新兴地区革命战迹地——玉莲山密营"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "21:25",
+      "end": "21:55",
+      "title": {
+        "ko": "특집 《민들레》 제품에 바쳐가는 마음들",
+        "en": "Special Feature: Hearts Dedicated to \"Mindulle\" (Dandelion) Products",
+        "zh": "专题：奉献给“蒲公英”产品的心意"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "21:55",
+      "end": "22:22",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report",
+        "zh": "今日新闻报道摘要"
+      },
+      "category": "News"
+    }
+  ]
+}
