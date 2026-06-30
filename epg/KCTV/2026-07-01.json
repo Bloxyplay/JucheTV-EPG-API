@@ -1,0 +1,297 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-01",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "09:17",
+      "end": "09:40",
+      "title": {
+        "ko": "련속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 중앙버섯연구소 -",
+        "en": "Serial Feature Compilation: Where the Footprints of Devotion to the People Are Imprinted — Central Mushroom Research Institute —",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——中央蘑菇研究所"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "09:40",
+      "end": "09:55",
+      "title": {
+        "ko": "련속소개편집물 기념사진이 전하는 사랑의 이야기 (23)",
+        "en": "Serial Feature Compilation: The Story of Love Told by a Commemorative Photo (23)",
+        "zh": "系列专题剪辑：纪念照片传颂的爱的故事（23）"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "09:55",
+      "end": "10:31",
+      "title": {
+        "ko": "특집 농업과학자들의 자애로운 스승이 되시여",
+        "en": "Special Feature: Becoming a Benevolent Teacher to Agricultural Scientists",
+        "zh": "专题：成为农业科学家们的慈祥导师"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "10:31",
+      "end": "10:41",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 어린이건강관리 - 운동놀이할 때 -",
+        "en": "Health & Life: Children's Health Management During Sweltering Heat — When Playing Sports —",
+        "zh": "健康生活常识：酷暑时节的儿童健康管理——体育运动时"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "10:41",
+      "end": "11:15",
+      "title": {
+        "ko": "방문기 대성산샘물공장이 시작되는 곳에서 - 대성산샘물공장을 찾아서 -",
+        "en": "Visit Report: Where Daesongsan Spring Water Factory Begins — Visiting Daesongsan Spring Water Factory —",
+        "zh": "访问记：大圣山泉水厂开始的地方——探访大圣山泉水厂"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "11:15",
+      "end": "11:22",
+      "title": {
+        "ko": "문답 실리가 큰 논판양어 1. 논판양어의 경제적효과성",
+        "en": "Q&A: Highly Profitable Paddy Field Fish Farming — 1. Economic Effectiveness of Paddy Field Fish Farming",
+        "zh": "问答：效益巨大的稻田养鱼——1. 稻田养鱼的经济有效性"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "11:22",
+      "end": "11:45",
+      "title": {
+        "ko": "특집 전승세대가 지녔던 고결한 충성 《오직 위대한 수령님을 위하여!》",
+        "en": "Special Feature: The Noble Loyalty of the War-Winning Generation \"Only for the Great Leader!\"",
+        "zh": "专题：战胜一代所具有的高洁忠诚——《唯独为了伟大的领袖！》"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "11:45",
+      "end": "12:05",
+      "title": {
+        "ko": "련속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 은하과학자거리 -",
+        "en": "Serial Feature Compilation: Where the Footprints of Devotion to the People Are Imprinted — Unha Scientists Street —",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——银河科学家街"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "12:05",
+      "end": "13:34",
+      "title": {
+        "ko": "조선예술영화 우리 새세대",
+        "en": "Korean Art Film: Our New Generation",
+        "zh": "朝鲜艺术电影：我们新一代"
+      },
+      "category": "Film"
+    },
+    {
+      "start": "13:34",
+      "end": "13:53",
+      "title": {
+        "ko": "소개편집물 장연군식료공장에 깃든 어버이사랑",
+        "en": "Feature Compilation: The Parental Love Indwelling Changyon County Food Factory",
+        "zh": "专题剪辑：长渊郡食品厂凝聚的慈父之爱"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "13:53",
+      "end": "13:57",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 심장부담을 줄이려면 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — To Reduce the Strain on the Heart —",
+        "zh": "健康生活常识：酷暑时节的健康管理——为了减轻心脏负担"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "13:57",
+      "end": "14:41",
+      "title": {
+        "ko": "련속기행 백두산지구 혁명전적지를 찾아서 - 대홍단혁명전적지 (1) -",
+        "en": "Serial Travelogue: Visiting the Revolutionary Battle Sites in the Mt. Paektu Area — Taehongdan Revolutionary Battle Site (1) —",
+        "zh": "系列纪行：探访白头山地区革命战迹地——大红丹革命战迹地（1）"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "14:41",
+      "end": "14:53",
+      "title": {
+        "ko": "소개편집물 천리마시대 회상기학습열풍",
+        "en": "Feature Compilation: The Craze for Studying Memoirs of the Chollima Era",
+        "zh": "专题剪辑：千里马时代回忆录学习热潮"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "14:53",
+      "end": "15:14",
+      "title": {
+        "ko": "수필 육아법의 조항들을 새겨보며",
+        "en": "Essay: Engraving the Clauses of the Childcare Law",
+        "zh": "随笔：铭记育儿法的条款"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:14",
+      "end": "15:36",
+      "title": {
+        "ko": "종합편집물 논판양어를 적극 받아들여",
+        "en": "Comprehensive Compilation: Actively Adopting Paddy Field Fish Farming",
+        "zh": "综合剪辑：积极推广稻田养鱼"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "15:36",
+      "end": "15:57",
+      "title": {
+        "ko": "련속참관기 신천땅은 고발한다 - 신천계급교양관을 찾아서 - 오늘도 들려오는 신천의 메아리",
+        "en": "Serial Visit Report: Sinchon Land Accuses — Visiting the Sinchon Class Education Hall — The Echo of Sinchon Still Heard Today",
+        "zh": "系列探访：信川土地在控诉——探访信川阶级教育馆——今天仍在回响的信川回音"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "15:57",
+      "end": "17:00",
+      "title": {
+        "ko": "녹화실황 2026년 프로정구선수협회 마드리드강자경기대회 - 단식 준결승 - 이딸리아 : 프랑스",
+        "en": "Recorded Broadcast: 2026 Professional Tennis Players Association Madrid Masters — Men's Singles Semifinals — Italy vs France",
+        "zh": "实况录像：2026年职业网球选手协会马德里强者比赛大会——单打半决赛——意大利 : 法国"
+      },
+      "category": "Sports"
+    },
+    {
+      "start": "17:00",
+      "end": "17:19",
+      "title": {
+        "ko": "보도",
+        "en": "5PM News",
+        "zh": "下午5点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:19",
+      "end": "17:29",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:29",
+      "end": "18:10",
+      "title": {
+        "ko": "아동방송시간 력사만화영화 고주몽 제 27부",
+        "en": "Children's Broadcast Time: Historical Animated Film — Ko Jumong, Part 27",
+        "zh": "少儿节目：历史动画片——高朱蒙 第27部"
+      },
+      "category": "Children"
+    },
+    {
+      "start": "18:10",
+      "end": "18:19",
+      "title": {
+        "ko": "소개편집물 후대교육사업에 한생을 바쳐가는 여성교육자들",
+        "en": "Feature Compilation: Female Educators Devoting Their Entire Lives to the Education of Future Generations",
+        "zh": "专题剪辑：将一生奉献给后代教育事业的女教育家们"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "18:19",
+      "end": "18:35",
+      "title": {
+        "ko": "련속소개편집물 우리 수령님의 애국실록을 펼치며 - 흑연광물표본이 전하는 사연 -",
+        "en": "Serial Feature Compilation: Unfolding the Patriotic Records of Our Leader — The Story Told by the Graphite Mineral Specimen —",
+        "zh": "系列专题剪辑：翻开我们领袖的爱国实录——石墨矿物标本讲述的故事"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "18:35",
+      "end": "18:58",
+      "title": {
+        "ko": "기행 회령시의 여러곳을 찾아서",
+        "en": "Journey: Visiting Various Places in Hoeryong City",
+        "zh": "纪行：探访会宁市多地"
+      },
+      "category": "Travel"
+    },
+    {
+      "start": "18:58",
+      "end": "20:00",
+      "title": {
+        "ko": "TV기록편집물 위대한 우리 당에 인민은 영광드린다 제4편: 평양번영의 새시대",
+        "en": "TV Documentary Compilation: The People Give Glory to Our Great Party Part 4: A New Era of Pyongyang's Prosperity",
+        "zh": "电视纪录剪辑：人民向我们伟大的党献上光荣 第4部：平壤繁荣的新时代"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "20:00",
+      "end": "20:29",
+      "title": {
+        "ko": "보도",
+        "en": "8PM News",
+        "zh": "晚8点新闻"
+      },
+      "category": "News"
+    },
+    {
+      "start": "20:29",
+      "end": "20:35",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 고혈압환자들 -",
+        "en": "Health & Life: Health Management During Sweltering Heat — Hypertension Patients —",
+        "zh": "健康生活常识：酷暑时节的健康管理——高血压患者"
+      },
+      "category": "Health"
+    },
+    {
+      "start": "20:35",
+      "end": "21:17",
+      "title": {
+        "ko": "특집 애국청년의 대부대를 키워주시여",
+        "en": "Special Feature: Nurturing a Large Unit of Patriotic Youth",
+        "zh": "专题：培养爱国青年的大部队"
+      },
+      "category": "Special"
+    },
+    {
+      "start": "21:17",
+      "end": "21:59",
+      "title": {
+        "ko": "TV무대 어머니조국에 남아있으리 (2)",
+        "en": "TV Stage: I Will Remain in the Mother Homeland (2)",
+        "zh": "电视舞台：我将留在大地母亲祖国（2）"
+      },
+      "category": "Feature"
+    },
+    {
+      "start": "21:59",
+      "end": "22:15",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report",
+        "zh": "今日新闻报道摘要"
+      },
+      "category": "News"
+    }
+  ]
+}
