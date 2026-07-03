@@ -1,0 +1,471 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-04",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "09:13",
+      "end": "09:40",
+      "title": {
+        "ko": "연속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 백두산건축연구원 -",
+        "en": "Serial Introduction Compilation: In the Places Etched with Devotion to the People — Paektusan Architectural Research Institute —",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——白头山建筑研究院——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံမှု အရှိန်အဝါများ လွှမ်းခြုံထားရာနေရာ - ပေဒူဆန်း ဗိသုကာသုတေသနအင်စတီကျု -",
+        "ru": "Серия тематических сюжетов: Там, где запечатлены следы самоотверженного служения народу — Архитектурный научно-исследовательский институт Пэктусан —",
+        "ja": "連続紹介編集物：人民献身の足跡が刻まれた場所で — 白頭山建築研究院 —",
+        "es": "Recopilación de reportajes en serie: En los lugares grabados con devoción al pueblo — Instituto de Investigación Arquitectónica Paektusan —",
+        "fr": "Compilation de reportages en série : Dans les lieux empreints de dévouement envers le peuple — Institut de recherche architecturale Paektusan —",
+        "de": "Zusammensetzung von Berichten: An den Orten, die von der Aufopferung für das Volk geprägt sind — Paektusan Architekturforschungsinstitut —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "09:40",
+      "end": "09:45",
+      "title": {
+        "ko": "연속소개편집물 기념사진이 전하는 사랑의 이야기 (4)",
+        "en": "Serial Introduction Compilation: Stories of Love Told by Commemorative Photographs (Part 4)",
+        "zh": "系列专题剪辑：纪念照讲述的关爱故事（4）",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- အမှတ်တရဓာတ်ပုံများမှ ပြောပြသော မေတ္တာတော်ဇာတ်လမ်းများ (အပိုင်း ၄)",
+        "ru": "Серия тематических сюжетов: Истории любви, рассказанные памятными фотографиями (Часть 4)",
+        "ja": "連続紹介編集物：記念写真が伝える愛の物語（4）",
+        "es": "Recopilación de reportajes en serie: Historias de amor contadas por fotografías conmemorativas (Parte 4)",
+        "fr": "Compilation de reportages en série : Histoires d'amour racontées par des photographies commémoratives (Partie 4)",
+        "de": "Zusammensetzung von Berichten: Liebesgeschichten, erzählt durch Erinnerungsfotos (Teil 4)"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "09:45",
+      "end": "09:51",
+      "title": {
+        "ko": "연속참관기 위인칭송의 고귀한 제보 - 국제친선전람관을 찾아서 - (216)",
+        "en": "Serial Visit Report: Noble Testimonies Praising the Great Man — Visiting the International Friendship Exhibition — (Part 216)",
+        "zh": "系列探访：颂扬伟人的珍贵展品——探访国际友谊展览馆——（第216部）",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကျွန်ုပ်တို့၏ခေါင်းဆောင်ကြီး၏ မျိုးချစ်စိတ်ဓာတ်ဆိုင်ရာ သမိုင်းမှတ်တမ်းများအား ပြန်လည်ဆန်းစစ်ခြင်း - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း - (အပိုင်း ၂၁၆)",
+        "ru": "Серия репортажей о посещении: Драгоценные дары великому человеку — Посещение Выставки международной дружбы — (Часть 216)",
+        "ja": "連続参観記：偉人称賛の気高い品々 — 国際親善展覧館を訪ねて —（第216部）",
+        "es": "Informe de visita en serie: Tributos preciosos a las grandes personas — Visitando la Exposición de la Amistad Internacional — (Parte 216)",
+        "fr": "Rapport de visite en série : Précieux hommages aux grands hommes — Visite de l'Exposition de l'amitié internationale — (Partie 216)",
+        "de": "Berichtsreihe: Kostbare Hommagen an die großen Persönlichkeiten — Zu Besuch in der Internationalen Freundschaftsausstellung — (Teil 216)"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "09:51",
+      "end": "10:25",
+      "title": {
+        "ko": "연속기행 백두산지구 혁명전적지를 찾아서 - 보천보의 불길 (2) -",
+        "en": "Serial Travelogue: Visiting the Revolutionary Battle Sites in the Mt. Paektu Area — The Flames of Pochonbo (Part 2) —",
+        "zh": "系列纪行：探访白头山地区革命战迹地——普天堡的火焰（2）——",
+        "my": "အစဉ်တစိုက်ခရီးသွားမှတ်တမ်း- ပေဒူဆန်းဒေသရှိ တော်လှန်ရေးစစ်မြေပြင်ဟောင်းများသို့ သွားရောက်လေ့လာခြင်း - ဖိုချွန်းဘို၏ မီးလျှံများ (အပိုင်း ၂) -",
+        "ru": "Серия путевых заметок: По революционным боевым местам в районе горы Пэкту — Пламя Почхонбо (Часть 2) —",
+        "ja": "連続紀行：白頭山地区の革命戦跡地を訪ねて — 普天堡の炎（2） —",
+        "es": "Crónica de viaje en serie: Visitando los sitios de batalla revolucionaria en el área del monte Paektu — Las llamas de Pochonbo (Parte 2) —",
+        "fr": "Carnet de voyage en série : Visite des sites de batailles révolutionnaires dans la région du mont Paektu — Les flammes de Pochonbo (Partie 2) —",
+        "de": "Reisebericht-Reihe: Zu den revolutionären Kampfstätten in der Region des Berges Paektu — Die Flammen von Pochonbo (Teil 2) —"
+      },
+      "category": "Travelogue & Exploration"
+    },
+    {
+      "start": "10:25",
+      "end": "10:33",
+      "title": {
+        "ko": "특집 파괴적인 재앙 태풍",
+        "en": "Special Feature: Destructive Disaster, Typhoon",
+        "zh": "专题：毁灭性灾难 台风",
+        "my": "အထူးအစီအစဉ်- ပျက်စီးဆုံးရှုံးစေသော သဘာဝဘေးအန္တရာယ်၊ တိုင်ဖွန်းမုန်တိုင်း",
+        "ru": "Специальный репортаж: Разрушительное бедствие, тайфун",
+        "ja": "特集：破壊的な災い 台風",
+        "es": "Reportaje especial: Desastre destructivo, tifón",
+        "fr": "Reportage spécial : Catastrophe destructrice, typhon",
+        "de": "Sondersendung: Zerstörerische Katastrophe, Taifun"
+      },
+      "category": "Special Science & Environment"
+    },
+    {
+      "start": "10:33",
+      "end": "11:05",
+      "title": {
+        "ko": "방문기 동신군의 여러곳을 찾아서",
+        "en": "Visit Report: Visiting Various Places in Tongsin County",
+        "zh": "访问记：探访东新郡各地",
+        "my": "အလည်အပတ်မှတ်တမ်း- ထုန်ရှင်းခရိုင်၏ ဒေသအသီးသီးသို့ သွားရောက်လေ့လာခြင်း",
+        "ru": "Репортаж: По различным местам уезда Тонсин",
+        "ja": "訪問記：東新郡の各地を訪ねて",
+        "es": "Informe de visita: Visitando varios lugares en el condado de Tongsin",
+        "fr": "Rapport de visite : Visite de divers endroits du comté de Tongsin",
+        "de": "Besuchsbericht: Zu Besuch an verschiedenen Orten im Kreis Tongsin"
+      },
+      "category": "Travelogue & Exploration"
+    },
+    {
+      "start": "11:05",
+      "end": "11:13",
+      "title": {
+        "ko": "문답 법과 공민 - 발명법 - (2)",
+        "en": "Q&A Forum: Law and Citizens — Invention Law — (Part 2)",
+        "zh": "问答：法律与公民——发明法（2）",
+        "my": "အမေးအဖြေကဏ္ဍ- ဥပဒေနှင့် နိုင်ငံသား - တီထွင်မှုမူပိုင်ခွင့်ဥပဒေ - (အပိုင်း ၂)",
+        "ru": "Вопросы и ответы: Закон и граждане — Закон об изобретениях — (Часть 2)",
+        "ja": "問答：法律と公民 — 発明法 —（2）",
+        "es": "Foro de preguntas y respuestas: La ley y los ciudadanos — Ley de invenciones — (Parte 2)",
+        "fr": "Forum Q&R : La loi et les citoyens — Loi sur les inventions — (Partie 2)",
+        "de": "Fragen & Antworten: Das Gesetz und die Bürger — Erfindungsgesetz — (Teil 2)"
+      },
+      "category": "Educational & Legal Q&A"
+    },
+    {
+      "start": "11:13",
+      "end": "11:38",
+      "title": {
+        "ko": "소개편집물 탄부의 어머니와 안해 - 송남청년탄광 김진청년돌격대 대장 김동철가정 -",
+        "en": "Feature Compilation: The Miner's Mother and Wife — Family of Kim Dong-chol, Captain of the Kim Jin Youth Shock Brigade at Songnam Youth Coal Mine —",
+        "zh": "专题剪辑：矿工的母亲和妻子——松南青年煤矿金镇青年突击队队长金东哲家庭——",
+        "my": "မိတ်ဆက်တင်ပြချက်- သတ္တုတွင်းလုပ်သား၏ မိခင်နှင့် ဇနီး - ဆုန်းနမ် လူငယ်ကျောက်မီးသွေးတွင်း ကင်မ်ဂျင် လူငယ်တပ်ဖွဲ့ခေါင်းဆောင် ကင်မ်ဒုံချောလ်၏ မိသားစု -",
+        "ru": "Тематический сюжет: Мать и жена шахтера — Семья Ким Дон Чхоля, командира молодежной ударной бригады имени Ким Джина молодежной угольной шахты Соннам —",
+        "ja": "紹介編集物：炭鉱夫の母と妻 — 松南青年炭鉱の金鎮青年突撃隊隊長、金東哲の家庭 —",
+        "es": "Recopilación de reportajes: La madre y la esposa del minero — Familia de Kim Dong-chol, Capitán de la Brigada de Choque Juvenil Kim Jin de la Mina de Carbón Juvenil Songnam —",
+        "fr": "Compilation de reportages : La mère et l'épouse du mineur — Famille de Kim Dong-chol, capitaine de la brigade de choc de la jeunesse Kim Jin de la mine de charbon de la jeunesse de Songnam —",
+        "de": "Zusammenstellung von Berichten: Mutter und Ehefrau des Bergarbeiters — Familie von Kim Dong-chol, Kapitän der Kim-Jin-Jugendstoßbrigade im Songnam-Jugendkohlebergwerk —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "11:38",
+      "end": "12:03",
+      "title": {
+        "ko": "방문기 제122호양묘장을 찾아서",
+        "en": "Visit Report: Visiting Tree Nursery No. 122",
+        "zh": "访问记：探访第122号苗圃",
+        "my": "အလည်အပတ်မှတ်တမ်း- အမှတ် ၁၂၂ သစ်ပင်ပျိုးခင်းသို့ သွားရောက်လေ့လာခြင်း",
+        "ru": "Репортаж: Посещение древесного питомника № 122",
+        "ja": "訪問記：第122号苗圃を訪ねて",
+        "es": "Informe de visita: Visitando el vivero forestal No. 122",
+        "fr": "Rapport de visite : Visite de la pépinière n° 122",
+        "de": "Besuchsbericht: Zu Besuch in der Baumschule Nr. 122"
+      },
+      "category": "Nature & Agricultural Feature"
+    },
+    {
+      "start": "12:03",
+      "end": "13:54",
+      "title": {
+        "ko": "조선예술영화 조선의 별 - 제3부 -",
+        "en": "North Korean Art Film: The Star of Korea — Part 3 —",
+        "zh": "朝鲜艺术电影：朝鲜之星——第3部——",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် - တတိယပိုင်း -",
+        "ru": "Северокорейский художественный фильм: Звезда Кореи — Часть 3 —",
+        "ja": "朝鮮芸術映画：朝鮮の星 — 第3部 —",
+        "es": "Película de arte norcoreana: La estrella de Corea — Parte 3 —",
+        "fr": "Film d'art nord-coréen : L'Étoile de Corée — Partie 3 —",
+        "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teil 3 —"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "13:54",
+      "end": "14:24",
+      "title": {
+        "ko": "특집 로동계급이 안겨사는 위대한 품",
+        "en": "Special Feature: The Great Bosom Embracing the Working Class",
+        "zh": "专题：工人阶级依偎的伟大怀抱",
+        "my": "အထူးအစီအစဉ်- အလုပ်သမားလူတန်းစားအား ဖက်တွယ်ထားသော ကြီးမြတ်သည့် ရင်ခွင်",
+        "ru": "Специальный репортаж: Великие объятия, в которых живет рабочий класс",
+        "ja": "特集：労働階級が抱かれて生きる偉大な懐",
+        "es": "Reportaje especial: El gran seno que abraza a la clase trabajadora",
+        "fr": "Reportage spécial : Le grand sein embrassant la classe ouvrière",
+        "de": "Sondersendung: Der große Schoß, der die Arbeiterklasse umarmt"
+      },
+      "category": "Special Patriotic Feature"
+    },
+    {
+      "start": "14:24",
+      "end": "14:34",
+      "title": {
+        "ko": "건강과 생활상식 무더위때 건강관리 - 고혈압환자들 -",
+        "en": "Health & Life: Healthcare During Scorching Heat — Hypertensive Patients",
+        "zh": "健康生活常识：酷暑时节的健康管理——高血压患者",
+        "my": "ကျန်းမာရေးနှင့် နေ့စဉ်ဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်ကြား ကျန်းမာရေးစောင့်ရှောက်မှု - သွေးတိုးရောဂါလူနာများ -",
+        "ru": "Здоровье и быт: Забота о здоровье в сильную жару — Гипертоники",
+        "ja": "健康と生活習慣：酷暑期の健康管理 — 高血圧患者 —",
+        "es": "Salud y vida: Gestión de la salud durante el calor sofocante — Pacientes hipertensos",
+        "fr": "Santé & Vie : Gestion de la santé en pleine canicule — Patients hypertendus",
+        "de": "Gesundheit & Leben: Gesundheitsmanagement bei drückender Hitze — Bluthochdruckpatienten"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "14:34",
+      "end": "15:20",
+      "title": {
+        "ko": "TV무대 로동당원의 삶 - 두 영예군인당원에 대한 이야기 -",
+        "en": "TV Stage: Life of a Workers' Party Member — Stories of Two Honored Disabled Soldier Party Members —",
+        "zh": "电视舞台：劳动党员的生活——关于两名荣军党员的故事——",
+        "my": "ရုပ်မြင်သံကြားစင်မြင့်- အလုပ်သမားပါတီဝင်တစ်ဦး၏ ဘဝ - ဂုဏ်ပြုခံမသန်စွမ်းစစ်မှုထမ်းပါတီဝင်နှစ်ဦး၏ ဇာတ်လမ်းများ -",
+        "ru": "Телевизионная сцена: Жизнь члена Трудовой партии — История двух почетных раненых солдат-партийцев —",
+        "ja": "TV舞台：労働党員の生活 — 2人の傷痍軍人党員の物語 —",
+        "es": "Escenario de TV: Vida de un miembro del Partido de los Trabajadores — Historias de dos miembros del partido, soldados discapacitados honrados —",
+        "fr": "Scène TV : La vie d'un membre du Parti des travailleurs — Histoires de deux membres du parti, soldats invalides honorés —",
+        "de": "TV-Bühne: Das Leben eines Mitglieds der Arbeiterpartei — Geschichten von zwei ehrenhaft verwundeten Soldaten-Parteimitgliedern —"
+      },
+      "category": "Special Patriotic Feature"
+    },
+    {
+      "start": "15:20",
+      "end": "15:26",
+      "title": {
+        "ko": "종합편집 증산의 불길이 세차게 타오른다 - 인민경제 여러 부문 공장, 기업소들에서 -",
+        "en": "Comprehensive Compilation: The Flames of Increased Production Burn Fiercely — At Factories and Enterprises in Various Sectors of the National Economy —",
+        "zh": "综合剪辑：增产的火焰猛烈燃烧——在国民经济各部门的工厂、企业中——",
+        "my": "ဘက်စုံစုစည်းတင်ပြချက်- တိုးမြှင့်ထုတ်လုပ်မှု၏ မီးတောက်များ ပြင်းထန်စွာတောက်လောင်လျက်ရှိ - အမျိုးသားစီးပွားရေးကဏ္ဍအသီးသီးရှိ စက်ရုံများနှင့် လုပ်ငန်းများတွင် -",
+        "ru": "Обзорная программа: Пламя увеличения производства горит яростно — На заводах и предприятиях различных отраслей народного хозяйства —",
+        "ja": "総合編集：増産の炎が激しく燃え上がる — 人民経済の各部門の工場、企業所で —",
+        "es": "Recopilación exhaustiva: Las llamas del aumento de la producción arden ferozmente — En fábricas y empresas de diversos sectores de la economía nacional —",
+        "fr": "Compilation complète : Les flammes de l'augmentation de la production brûlent intensément — Dans les usines et les entreprises de divers secteurs de l'économie nationale —",
+        "de": "Umfassende Zusammenstellung: Die Flammen der gesteigerten Produktion brennen heftig — In Fabriken und Betrieben verschiedener Sektoren der Volkswirtschaft —"
+      },
+      "category": "Comprehensive Documentary Overview"
+    },
+    {
+      "start": "15:26",
+      "end": "15:44",
+      "title": {
+        "ko": "소개편집물 어머니가 남긴 한장의 사진",
+        "en": "Feature Compilation: A Photograph Left by Mother",
+        "zh": "专题剪辑：母亲留下的一张照片",
+        "my": "မိတ်ဆက်တင်ပြချက်- မိခင်ချန်ထားရစ်ခဲ့သော ဓာတ်ပုံတစ်ပုံ",
+        "ru": "Тематический сюжет: Фотография, оставленная матерью",
+        "ja": "紹介編集物：母が残した一枚の写真",
+        "es": "Recopilación de reportajes: Una fotografía dejada por la madre",
+        "fr": "Compilation de reportages : Une photographie laissée par la mère",
+        "de": "Zusammenstellung von Berichten: Ein von der Mutter hinterlassenes Foto"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "15:44",
+      "end": "17:00",
+      "title": {
+        "ko": "록화실황 2026년 국제탁구련맹 세계컵남자단식 및 녀자단식경기대회 - 녀자단식 준준결승 중국 : 에짚트 -",
+        "en": "Recorded Broadcast: 2026 ITTF Men's and Women's World Cup — Women's Singles Quarterfinals (China vs. Egypt) —",
+        "zh": "实况录像：2026年国际乒联男女单打世界杯——女单四分之一决赛（中国对埃及）——",
+        "my": "မှတ်တမ်းတင်ထုတ်လွှင့်မှု- ၂၀၂၆ ခုနှစ် နိုင်ငံတကာ စားပွဲတင်တင်းနစ်အဖွဲ့ချုပ် အမျိုးသားနှင့် အမျိုးသမီး ကမ္ဘာ့ဖလားပြိုင်ပွဲ - အမျိုးသမီး တစ်ဦးချင်း ကွာတားဖိုင်နယ်ပွဲစဉ် (တရုတ်နှင့် အီဂျစ်) -",
+        "ru": "Запись трансляции: Кубок мира ITTF среди мужчин и женщин 2026 — Женщины, одиночный разряд, четвертьфинал (Китай против Египта) —",
+        "ja": "録画実況：2026年国際卓球連盟ワールドカップ男女シングルス — 女子シングルス準々決勝 中国対エジプト —",
+        "es": "Transmisión grabada: Copa Mundial Masculina y Femenina de la ITTF 2026 — Cuartos de final de individuales femeninos (China vs. Egipto) —",
+        "fr": "Diffusion enregistrée : Coupe du Monde masculine et féminine de l'ITTF 2026 — Quarts de finale simple dames (Chine vs. Égypte) —",
+        "de": "Aufzeichnung: ITTF World Cup der Herren und Damen 2026 — Viertelfinale im Dameneinzel (China vs. Ägypten) —"
+      },
+      "category": "Recorded Sports Broadcast"
+    },
+    {
+      "start": "17:00",
+      "end": "17:19",
+      "title": {
+        "ko": "보도",
+        "en": "5PM Afternoon News Broadcast",
+        "zh": "下午5点新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Вечерний 17-часовой выпуск новостей",
+        "ja": "報道（5PMニュース）",
+        "es": "Noticiero de la tarde de las 5 PM",
+        "fr": "Journal d'information de 17h",
+        "de": "Nachrichten um 17 Uhr"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:19",
+      "end": "17:29",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览",
+        "my": "ယနေ့ထုတ် ဗဟိုသတင်းစာများ ကောက်နုတ်ချက်သုံးသပ်ချက်",
+        "ru": "Обзор сегодняшней центральной прессы",
+        "ja": "今日号の中央新聞概観",
+        "es": "Revisión de los principales periódicos centrales de hoy",
+        "fr": "Revue de la presse centrale d'aujourd'hui",
+        "de": "Heutige Übersicht der zentralen Zeitungen"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:29",
+      "end": "18:12",
+      "title": {
+        "ko": "아동방송시간 력사만화영화 고주몽 - 제30부 -",
+        "en": "Children's Program: Historical Animated Series — Ko Ju-mong, Part 30",
+        "zh": "少儿节目：历史动画片——高朱蒙 第30部",
+        "my": "ကလေးသူငယ်များအတွက် အစီအစဉ် - သမိုင်းဝင်ကာတွန်းရုပ်ရှင်- ကိုဂျူမုန် - အပိုင်း ၃၀ -",
+        "ru": "Передача для детей: Исторический мультсериал — Ко Джу Монг, Часть 30",
+        "ja": "児童放送時間：歴史漫画映画 — 高朱蒙 第30部 —",
+        "es": "Programa infantil: Serie animada histórica — Ko Ju-mong, Parte 30",
+        "fr": "Programme pour enfants : Série d'animation historique — Ko Ju-mong, partie 30",
+        "de": "Kinderprogramm: Historische Zeichentrickserie — Ko Ju-mong, Teil 30"
+      },
+      "category": "Children's Animated Program"
+    },
+    {
+      "start": "18:12",
+      "end": "18:29",
+      "title": {
+        "ko": "소개편집물 일터에 대한 긍지를 새겨주시며",
+        "en": "Feature Compilation: Instilling Pride in the Workplace",
+        "zh": "专题剪辑：将对工作岗位的自豪感铭刻于心",
+        "my": "မိတ်ဆက်တင်ပြချက်- လုပ်ငန်းခွင်အပေါ် ဂုဏ်ယူဝင့်ကြွားမှုရှိစေခြင်း",
+        "ru": "Тематический сюжет: Вселяя гордость за рабочее место",
+        "ja": "紹介編集物：職場に対する誇りを刻んでくださり",
+        "es": "Recopilación de reportajes: Inculcando orgullo en el lugar de trabajo",
+        "fr": "Compilation de reportages : Instaurer la fierté sur le lieu de travail",
+        "de": "Zusammenstellung von Berichten: Den Stolz auf den Arbeitsplatz wecken"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "18:29",
+      "end": "18:34",
+      "title": {
+        "ko": "건강과 생활상식 무더위때 건강관리 - 영양관리 -",
+        "en": "Health & Life: Healthcare During Scorching Heat — Nutrition Management",
+        "zh": "健康生活常识：酷暑时节的健康管理——营养管理",
+        "my": "ကျန်းမာရေးနှင့် နေ့စဉ်ဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်ကြား ကျန်းမာရေးစောင့်ရှောက်မှု - အာဟာရဓာတ်စီမံခန့်ခွဲမှု -",
+        "ru": "Здоровье и быт: Забота о здоровье в сильную жару — Управление питанием",
+        "ja": "健康と生活習慣：酷暑期の健康管理 — 栄養管理 —",
+        "es": "Salud y vida: Gestión de la salud durante el calor sofocante — Manejo de la nutrición",
+        "fr": "Santé & Vie : Gestion de la santé en pleine canicule — Gestion de la nutrition",
+        "de": "Gesundheit & Leben: Gesundheitsmanagement bei drückender Hitze — Ernährungsmanagement"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "18:34",
+      "end": "18:41",
+      "title": {
+        "ko": "소개편집물 사방야계공사에 힘을 넣어 - 마전광산 -",
+        "en": "Feature Compilation: Putting Effort into Erosion Control Projects — Majon Mine —",
+        "zh": "专题剪辑：加大防沙治水工程力度——马田矿山——",
+        "my": "မိတ်ဆက်တင်ပြချက်- မြေပြိုမှုကာကွယ်ရေး စီမံကိန်းများတွင် အားထုတ်ကြိုးပမ်းခြင်း - မာဂျွန်း သတ္တုတွင်း -",
+        "ru": "Тематический сюжет: Вкладывая силы в работы по борьбе с эрозией — Шахта Маджон —",
+        "ja": "紹介編集物：砂防野渓工事に力を入れて — 馬田鉱山 —",
+        "es": "Recopilación de reportajes: Poniendo esfuerzo en proyectos de control de erosión — Mina Majon —",
+        "fr": "Compilation de reportages : Mettre l'effort dans les projets de contrôle de l'érosion — Mine de Majon —",
+        "de": "Zusammenstellung von Berichten: Anstrengungen in Erosionsschutzprojekte stecken — Mine Majon —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "18:41",
+      "end": "19:06",
+      "title": {
+        "ko": "특집 중등학원졸업생들의 이야기 2. 번영의 초석이 되라",
+        "en": "Special Feature: Stories of Secondary School Graduates — 2. Be the Foundation of Prosperity",
+        "zh": "专题：中学学院毕业生的故事 2. 成为繁荣的基石",
+        "my": "အထူးအစီအစဉ်- အလယ်တန်းကျောင်းဆင်းများ၏ စကားသံများ (၂။ သာယာဝပြောရေး၏ အခြေခံအုတ်မြစ်ဖြစ်ပါစေ)",
+        "ru": "Специальный репортаж: Истории выпускников средних школ — 2. Станьте фундаментом процветания",
+        "ja": "特集：中等学院卒業生たちの物語 2. 繁栄の礎となれ",
+        "es": "Reportaje especial: Historias de graduados de secundaria — 2. Sé la base de la prosperidad",
+        "fr": "Reportage spécial : Histoires de diplômés du secondaire — 2. Soyez le fondement de la prospérité",
+        "de": "Sondersendung: Geschichten von Realschulabsolventen — 2. Seid das Fundament des Wohlstands"
+      },
+      "category": "Special Documentary Feature"
+    },
+    {
+      "start": "19:06",
+      "end": "19:21",
+      "title": {
+        "ko": "탄부들의 TV연단 - 순천지구청년탄광련합기업소 령대청년탄광 소대장 안성철 -",
+        "en": "Miners' TV Forum: An Song-chol, Platoon Leader of the Ryongdae Youth Coal Mine, Sunchon Area Youth Coal Mine Complex",
+        "zh": "矿工的电视讲坛——顺川地区青年煤矿联合企业龙台青年煤矿排长安全哲——",
+        "my": "သတ္တုတွင်းလုပ်သားများ၏ ရုပ်မြင်သံကြားစကားဝိုင်း- စွန်းချွန်းဒေသ လူငယ်ကျောက်မီးသွေးတွင်း လုပ်ငန်းစု ရုံဒဲလူငယ်ကျောက်မီးသွေးတွင်း တပ်စုမှူး အန်းဆောင်းချောလ်",
+        "ru": "Телевизионная трибуна шахтеров: Ан Сон Чхоль, командир взвода молодежной угольной шахты Рёндэ объединения молодежных угольных шахт района Сунчхон",
+        "ja": "炭鉱夫のTV演壇：順川地区青年炭鉱連合企業所竜台青年炭鉱小隊長 安成哲",
+        "es": "Foro de TV para mineros: An Song-chol, líder de pelotón de la mina de carbón juvenil Ryongdae, complejo de minas de carbón juvenil del área de Sunchon",
+        "fr": "Tribune télévisée des mineurs : An Song-chol, chef de peloton de la mine de charbon pour la jeunesse de Ryongdae, complexe de mines de charbon pour la jeunesse de la région de Sunchon",
+        "de": "TV-Forum für Bergleute: An Song-chol, Zugführer des Ryongdae-Jugendkohlebergwerks, Jugendkohlebergwerkskomplex im Gebiet Sunchon"
+      },
+      "category": "Broadcasters' Panel Forum"
+    },
+    {
+      "start": "19:21",
+      "end": "20:00",
+      "title": {
+        "ko": "문답 사회주의전면적발전과 3대혁명소조운동",
+        "en": "Q&A Forum: Comprehensive Development of Socialism and the Three-Revolution Team Movement",
+        "zh": "问答：社会主义全面发展与三大革命小组运动",
+        "my": "အမေးအဖြေကဏ္ဍ- ဆိုရှယ်လစ်စနစ် ဘက်စုံဖွံ့ဖြိုးတိုးတက်ရေးနှင့် တော်လှန်ရေး ၃ ရပ်အဖွဲ့ လှုပ်ရှားမှု",
+        "ru": "Вопросы и ответы: Всестороннее развитие социализма и Движение бригад трех революций",
+        "ja": "問答：社会主義の全面的発展と三大革命小組運動",
+        "es": "Foro de preguntas y respuestas: Desarrollo integral del socialismo y el Movimiento de Equipos de las Tres Revoluciones",
+        "fr": "Forum Q&R : Développement global du socialisme et Mouvement des équipes des trois révolutions",
+        "de": "Fragen & Antworten: Umfassende Entwicklung des Sozialismus und die Bewegung der Drei-Revolutionen-Teams"
+      },
+      "category": "Educational & Legal Q&A"
+    },
+    {
+      "start": "20:00",
+      "end": "20:27",
+      "title": {
+        "ko": "보도",
+        "en": "8PM Main Evening News Broadcast",
+        "zh": "晚8点中央新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Главный вечерний 20-часовой выпуск новостей",
+        "ja": "報道（8PMメインニュース）",
+        "es": "Noticiero principal de la noche de las 8 PM",
+        "fr": "Journal télévisé principal de 20h",
+        "de": "Hauptnachrichtensendung um 20 Uhr"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:27",
+      "end": "20:36",
+      "title": {
+        "ko": "건강과 생활상식 무더위때 건강관리 - 음료마시기 -",
+        "en": "Health & Life: Healthcare During Scorching Heat — Drinking Beverages",
+        "zh": "健康生活常识：酷暑时节的健康管理——饮用饮料",
+        "my": "ကျန်းမာရေးနှင့် နေ့စဉ်ဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်ကြား ကျန်းမာရေးစောင့်ရှောက်မှု - အချိုရည်သောက်သုံးခြင်း -",
+        "ru": "Здоровье и быт: Забота о здоровье в сильную жару — Питьевой режим",
+        "ja": "健康と生活習慣：酷暑期の健康管理 — 飲料を飲むこと —",
+        "es": "Salud y vida: Gestión de la salud durante el calor sofocante — Consumo de bebidas",
+        "fr": "Santé & Vie : Gestion de la santé en pleine canicule — Consommation de boissons",
+        "de": "Gesundheit & Leben: Gesundheitsmanagement bei drückender Hitze — Trinken von Getränken"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "20:36",
+      "end": "21:58",
+      "title": {
+        "ko": "TV무대 취재길에서 만난 자강도사람들 (3)",
+        "en": "TV Stage: People of Jagang Province Met on the Reporting Trail — (Part 3)",
+        "zh": "电视舞台：采访途中遇到的慈江道人们（3）",
+        "my": "ရုပ်မြင်သံကြားစင်မြင့်- သတင်းရယူစဉ် ခရီးတစ်လျှောက် ဆုံတွေ့ခဲ့ရသော ဂျာဂန်းပြည်နယ်သားများ - (အပိုင်း ၃)",
+        "ru": "Театральная сцена: Жители провинции Чаган, встреченные на пути репортера — (Часть 3)",
+        "ja": "TV舞台：取材の道で出会った慈江道の人々（3）",
+        "es": "Escenario de TV: Personas de la provincia de Jagang encontradas en la ruta de reportajes — (Parte 3)",
+        "fr": "Scène TV : Les habitants de la province de Jagang rencontrés sur le chemin du reportage — (Partie 3)",
+        "de": "TV-Bühne: Menschen aus der Provinz Jagang, denen man auf dem Weg der Berichterstattung begegnete — (Teil 3)"
+      },
+      "category": "Arts & Performance Program"
+    },
+    {
+      "start": "21:58",
+      "end": "22:15",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道摘要",
+        "my": "ယနေ့ထုတ်လွှင့်ခဲ့သော သတင်းထူးများအတွင်းမှ ကောက်နုတ်ချက်",
+        "ru": "Главное из сегодняшних выпусков новостей",
+        "ja": "今日の報道から（ニュースハイライト）",
+        "es": "De los momentos destacados del informe de noticias de hoy",
+        "fr": "Parmi les faits marquants des rapports d'actualité d'aujourd'hui",
+        "de": "Highlights aus den heutigen Nachrichtensendungen"
+      },
+      "category": "Daily News Bulletin"
+    }
+  ]
+}
