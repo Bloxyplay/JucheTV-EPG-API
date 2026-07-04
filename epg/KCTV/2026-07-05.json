@@ -1,0 +1,427 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-05",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "09:20",
+      "title": {
+        "ko": "연속참관기 만대에 빛나리 위대한 청년운동의 역사 - 청년운동사적관을 찾아서 - 세상에 부럼없어라",
+        "en": "Serial Visit Report: The History of the Great Youth Movement Will Shine for Generations — Visiting the Museum of Youth Movement History — We Have Nothing to Envy in the World",
+        "zh": "系列探访：万代放光芒的伟大青年运动历史——探访青年运动史迹馆——世上无所羡慕",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- မျိုးဆက်ပေါင်းများစွာ တောက်ပနေမည့် ကြီးမြတ်သော လူငယ်လှုပ်ရှားမှုသမိုင်း - လူငယ်လှုပ်ရှားမှုသမိုင်းပြတိုက်သို့ သွားရောက်လေ့လာခြင်း - ကမ္ဘာပေါ်တွင် အားကျစရာ ဘာမျှမရှိ",
+        "ru": "Серия репортажей о посещении: Сияющая в веках история великого молодежного движения — Посещение Исторического музея молодежного движения — Нам нечему завидовать в мире",
+        "ja": "連続参観記：万代に輝け偉大な青年運動の歴史 — 青年運動事績館を訪ねて — 世に羨むものはない",
+        "es": "Informe de visita en serie: Brillantemente para las generaciones venideras, la historia del gran movimiento juvenil — Visitando el Museo de la Historia del Movimiento Juvenil — No tenemos nada que envidiar en el mundo",
+        "fr": "Rapport de visite en série : L'histoire du grand mouvement de la jeunesse brillera pour les générations à venir — Visite du Musée de l'histoire du mouvement de la jeunesse — Nous n'avons rien à envier au monde",
+        "de": "Berichtsreihe: Die Geschichte der großen Jugendbewegung wird über Generationen hinweg strahlen — Zu Besuch im Historischen Museum der Jugendbewegung — Wir haben nichts zu beneiden auf der Welt"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "09:49",
+      "title": {
+        "ko": "연속참관기 위인칭송의 고귀한 제보 - 국제친선전람관을 찾아서 - (163)",
+        "en": "Serial Visit Report: Noble Testimonies Praising the Great Man — Visiting the International Friendship Exhibition — (Part 163)",
+        "zh": "系列探访：颂扬伟人的珍贵展品——探访国际友谊展览馆——（第163部）",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကျွန်ုပ်တို့၏ခေါင်းဆောင်ကြီး၏ မျိုးချစ်စိတ်ဓာတ်ဆိုင်ရာ သမိုင်းမှတ်တမ်းများအား ပြန်လည်ဆန်းစစ်ခြင်း - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း - (အပိုင်း ၁၆၃)",
+        "ru": "Серия репортажей о посещении: Драгоценные дары великому человеку — Посещение Выставки международной дружбы — (Часть 163)",
+        "ja": "連続参観記：偉人称賛の気高い品々 — 国際親善展覧館を訪ねて —（第163部）",
+        "es": "Informe de visita en serie: Tributos preciosos a las grandes personas — Visitando la Exposición de la Amistad Internacional — (Parte 163)",
+        "fr": "Rapport de visite en série : Précieux hommages aux grands hommes — Visite de l'Exposition de l'amitié internationale — (Partie 163)",
+        "de": "Berichtsreihe: Kostbare Hommagen an die großen Persönlichkeiten — Zu Besuch in der Internationalen Freundschaftsausstellung — (Teil 163)"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "09:56",
+      "title": {
+        "ko": "연속소개편집물 우리 수령님의 애국실록을 펼치며 - 희망초표본이 전하는 사연 -",
+        "en": "Serial Introduction Compilation: Unfolding the Chronicles of Our Leader's Patriotism — The Story Told by the Tree Sprout Specimen —",
+        "zh": "系列专题剪辑：翻开我们首领的爱国实录——希望草标本讲述的故事——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကျွန်ုပ်တို့၏ခေါင်းဆောင်ကြီး၏ မျိုးချစ်စိတ်ဓာတ်ဆိုင်ရာ သမိုင်းမှတ်တမ်းများအား ပြန်လည်ဆန်းစစ်ခြင်း - မျှော်လင့်ချက်ပျိုးပင်နမူနာမှ ပြောပြသော ဇာတ်လမ်း -",
+        "ru": "Серия тематических сюжетов: Разворачивая летопись патриотизма нашего Вождя — История, рассказанная образцом ростка надежды —",
+        "ja": "連続紹介編集物：わが首領様の愛国実録を広げて — 希望草標本が伝える話 —",
+        "es": "Recopilación de reportajes en serie: Desplegando las crónicas del patriotismo de nuestro Líder — La historia contada por el espécimen del brote de la esperanza —",
+        "fr": "Compilation de reportages en série : Déployer les chroniques du patriotisme de notre Leader — L'histoire racontée par le spécimen de pousse de l'espoir —",
+        "de": "Zusammensetzung von Berichten: Die Chroniken des Patriotismus unseres Führers entfalten — Die Geschichte, erzählt von der Probe des Hoffnungssprosses —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "10:22",
+      "title": {
+        "ko": "과학영화 생당쑥정유와 간표적화제제",
+        "en": "Science Film: Live Mugwort Essential Oil and Liver-Targeting Agents",
+        "zh": "科学电影：生茵陈蒿精油与肝靶向制剂",
+        "my": "သိပ္ပံရုပ်ရှင်- လတ်ဆတ်သော မုန်းညင်းဆီနှင့် အသည်းဆဲလ်ပစ်မှတ်ထား ဆေးဝါးများ",
+        "ru": "Научный фильм: Эфирное масло полыни и гепатопротекторные таргетные препараты",
+        "ja": "科学映画：生大葉茵陳精油と肝標的化製剤",
+        "es": "Película científica: Aceite esencial de artemisa viva y agentes dirigidos al hígado",
+        "fr": "Film scientifique : Huile essentielle d'armoise fraîche et agents ciblant le foie",
+        "de": "Wissenschaftsfilm: Ätherisches Öl aus frischem Beifuß und zielgerichtete Lebermedikamente"
+      },
+      "category": "Special Science & Environment"
+    },
+    {
+      "start": "10:39",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 어린이건강관리 - 경구수액의 사용 -",
+        "en": "Health & Life: Children's Healthcare During Scorching Heat — Use of Oral Rehydration Solutions —",
+        "zh": "健康生活常识：酷暑时节的儿童健康管理——口服補液鹽的使用——",
+        "my": "ကျန်းမာရေးနှင့် နေ့စဉ်ဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်ကြား ကလေးသူငယ် ကျန်းမာရေးစောင့်ရှောက်မှု - ဓာတ်ဆားရည်အသုံးပြုခြင်း -",
+        "ru": "Здоровье и быт: Забота о здоровье детей в сильную жару — Использование растворов для пероральной регидратации —",
+        "ja": "健康と生活習慣：酷暑期の子供の健康管理 — 経口補水液の使用 —",
+        "es": "Salud y vida: Gestión de la salud infantil durante el calor sofocante — Uso de soluciones de rehidratación oral —",
+        "fr": "Santé & Vie : Gestion de la santé des enfants en pleine canicule — Utilisation de solutions de réhydratation orale —",
+        "de": "Gesundheit & Leben: Kindergesundheit bei drückender Hitze — Verwendung von oralen Rehydrationslösungen —"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "10:43",
+      "title": {
+        "ko": "특집 전례없는 열파, 기록적인 고온",
+        "en": "Special Feature: Unprecedented Heatwave, Record-Breaking High Temperatures",
+        "zh": "专题：史无前例的 heatwave，创纪录的高温",
+        "my": "အထူးအစီအစဉ်- မကြုံစဖူး ပြင်းထန်သောအပူလှိုင်းနှင့် စံချိန်တင် မြင့်မားသောအပူချိန်",
+        "ru": "Специальный репортаж: Беспрецедентная жара, рекордно высокие температуры",
+        "ja": "特集：前例のない熱波、記録的な高温",
+        "es": "Reportaje especial: Ola de calor sin precedentes, temperaturas altas récord",
+        "fr": "Reportage spécial : Vague de chaleur sans précédent, températures record",
+        "de": "Sondersendung: Präzedenzlose Hitzewelle, rekordverdächtige Höchstemperaturen"
+      },
+      "category": "Special Science & Environment"
+    },
+    {
+      "start": "10:49",
+      "title": {
+        "ko": "세계 여러 나라 동물들 아프리카의 초원에서 사는 동물들 - 하마와 악어 - (2)",
+        "en": "Animals of the World: Animals Living on the African Savanna — Hippopotamus and Crocodile — (Part 2)",
+        "zh": "世界各地动物：生活在大非草原的动物——河马与鳄鱼——（2）",
+        "my": "ကမ္ဘာ့တိရစ္ဆာန်များ- အာဖရိကဆာဗားနားမြက်ခင်းပြင်ရှိ တိရစ္ဆာန်များ - ရေမြင်းနှင့် မိကျောင်း - (အပိုင်း ၂)",
+        "ru": "Животные мира: Животные, обитающие в африканской саванне — Бегемот и крокодил — (Часть 2)",
+        "ja": "世界各地の動物たち：アフリカの草原に生きる動物たち — カバとワニ —（2）",
+        "es": "Animales del mundo: Animales que viven en la sabana africana — Hipopótamo y cocodrilo — (Parte 2)",
+        "fr": "Animaux du monde : Animaux vivant dans la savane africaine — Hippopotame et crocodile — (Partie 2)",
+        "de": "Tiere der Welt: Tiere der afrikanischen Savanne — Nilpferd und Krokodil — (Teil 2)"
+      },
+      "category": "Nature & Agricultural Feature"
+    },
+    {
+      "start": "11:11",
+      "title": {
+        "ko": "탄부들의 TV연단 - 덕천지구탄광련합기업소 제남탄광 중대장 노력영웅 강병남 -",
+        "en": "Miners' TV Forum: Kang Byong-nam, Labor Hero and Platoon Leader of Jenam Coal Mine under the Tokchon Area Coal Mining Complex",
+        "zh": "矿工的电视讲坛——德川地区煤矿联合企业济南煤矿连长 劳动英雄姜炳南——",
+        "my": "သတ္တုတွင်းလုပ်သားများ၏ ရုပ်မြင်သံကြားစကားဝိုင်း- တုချွန်းဒေသ ကျောက်မီးသွေးတွင်း လုပ်ငန်းစု ဂျေနမ်ကျောက်မီးသွေးတွင်းမှ အလုပ်သမားသူရဲကောင်းနှင့် တပ်ခွဲမှူး ကန်ဗြောင်နမ်",
+        "ru": "Телевизионная трибуна шахтеров: Кан Бён Нам, Герой Труда и командир роты шахты Ченам Токчхонского районного угольного объединения",
+        "ja": "炭鉱夫のTV演壇：徳川地区炭鉱連合企業所済南炭鉱中隊長 努力英雄 姜炳南",
+        "es": "Foro de TV para mineros: Kang Byong-nam, Héroe del Trabajo y Líder de Compañía de la Mina de Carbón Jenam bajo el Complejo Minero de Carbón del Área de Tokchon",
+        "fr": "Tribune télévisée des mineurs : Kang Byong-nam, héros du travail et chef de compagnie de la mine de charbon de Jenam du complexe minier de charbon de la région de Tokchon",
+        "de": "TV-Forum für Bergleute: Kang Byong-nam, Held der Arbeit und Kompaniechef der Jenam-Kohlemine des Kohlebergwerkskomplexes im Gebiet Tokchon"
+      },
+      "category": "Broadcasters' Panel Forum"
+    },
+    {
+      "start": "11:30",
+      "title": {
+        "ko": "연속소개편집물 위민헌신의 자욱 새겨진 곳에서 - 화성김치공장 -",
+        "en": "Serial Introduction Compilation: In the Places Etched with Devotion to the People — Hwasong Kimchi Factory —",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——和盛泡菜厂——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံမှု အရှိန်အဝါများ လွှမ်းခြုံထားရာနေရာ - ဟွာဆုန်း ကင်မ်ချီစက်ရုံ -",
+        "ru": "Серия тематических сюжетов: Там, где запечатлены следы самоотверженного служения народу — Пхеньянский завод кимчи Хвасон —",
+        "ja": "連続紹介編集物：人民献身の足跡が刻まれた場所で — 和盛キムチ工場 —",
+        "es": "Recopilación de reportajes en serie: En los lugares grabados con devoción al pueblo — Fábrica de Kimchi de Hwasong —",
+        "fr": "Compilation de reportages en série : Dans les lieux empreints de dévouement envers le peuple — Usine de Kimchi de Hwasong —",
+        "de": "Zusammensetzung von Berichten: An den Orten, die von der Aufopferung für das Volk geprägt sind — Hwasong Kimchi-Fabrik —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "11:40",
+      "title": {
+        "ko": "혁명일화 정답게 불러주신 《보배공장》",
+        "en": "Revolutionary Anecdote: The 'Treasure Factory' Affectionately Named by the Leader",
+        "zh": "革命轶事：亲切称呼的《宝物工厂》",
+        "my": "တော်လှန်ရေး ဖြစ်ရပ်မှန်ဇာတ်လမ်း- ခေါင်းဆောင်ကြီးမှ ချစ်စနိုးအမည်ပေးခဲ့သော 'ရတနာစက်ရုံ'",
+        "ru": "Революционный эпизод: «Фабрика сокровищ», ласково названная Вождем",
+        "ja": "革命逸話：親しく呼んでくださった『宝物工場』",
+        "es": "Anécdota revolucionaria: La 'Fábrica de Tesoros' cariñosamente nombrada por el Líder",
+        "fr": "Anecdote révolutionnaire : La « Fabrique de trésors » affectueusement nommée par le Leader",
+        "de": "Revolutionäre Anekdote: Die vom Führer liebevoll benannte „Schatzfabrik“"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "11:56",
+      "title": {
+        "ko": "조선예술영화 조선의 별 - 제4, 5부 -",
+        "en": "North Korean Art Film: The Star of Korea — Parts 4 & 5 —",
+        "zh": "朝鲜艺术电影：朝鲜之星——第4、5部——",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် - အပိုင်း ၄ နှင့် ၅ -",
+        "ru": "Северокорейский художественный фильм: Звезда Кореи — Части 4 и 5 —",
+        "ja": "朝鮮芸術映画：朝鮮의 星 — 第4、5部 —",
+        "es": "Película de arte norcoreana: La estrella de Corea — Partes 4 y 5 —",
+        "fr": "Film d'art nord-coréen : L'Étoile de Corée — Parties 4 & 5 —",
+        "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teile 4 & 5 —"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "14:17",
+      "title": {
+        "ko": "료리상식 문어회, 가지랭국",
+        "en": "Culinary Knowledge: Octopus Sashimi and Chilled Eggplant Soup",
+        "zh": "料理常识：生拌章鱼、凉拌茄子汤",
+        "my": "ချက်ပြုတ်နည်းဗဟုသုတ- ရေဘဝဲအစိမ်းသုပ်နှင့် ခရမ်းသီးချဉ်ရည်ဟင်း",
+        "ru": "Кулинарные советы: Хве из осьминога и холодный суп из баклажанов",
+        "ja": "料理常識：タコのお刺身、ナスの冷汁",
+        "es": "Conocimiento culinario: Sashimi de pulpo y sopa fría de berenjena",
+        "fr": "Connaissances culinaires : Sashimi de poulpe et soupe froide d'aubergines",
+        "de": "Kulinarisches Wissen: Oktopus-Sashimi und kalte Auberginensuppe"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "14:21",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 건강관리 - 일사병과 열사병을 막자면 -",
+        "en": "Health & Life: Healthcare During Scorching Heat — Preventing Sunstroke and Heatstroke —",
+        "zh": "健康生活常识：酷暑时节的健康管理——防范日射病与热射病——",
+        "my": "ကျန်းမာရေးနှင့် နေ့စဉ်ဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်ကြား ကျန်းမာရေးစောင့်ရှောက်မှု - နေပူရှိန်ကြောင့် သတိလစ်ခြင်းနှင့် အပူလျှပ်ခြင်းကို ကာကွယ်ရန် -",
+        "ru": "Здоровье и быт: Забота о здоровье в сильную жару — Профилактика солнечного и теплового удара —",
+        "ja": "健康と生活習慣：酷暑期の健康管理 — 日射病と熱中症を防ぐには —",
+        "es": "Salud y vida: Gestión de la salud durante el calor sofocante — Prevención de la insolación y el golpe de calor —",
+        "fr": "Santé & Vie : Gestion de la santé en pleine canicule — Prévenir l'insolation et le coup de chaleur —",
+        "de": "Gesundheit & Leben: Gesundheitsmanagement bei drückender Hitze — Vorbeugung von Sonnenstich und Hitzschlag —"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "14:25",
+      "title": {
+        "ko": "연속기행 신의주온실종합농장지구를 찾아서 (1)",
+        "en": "Serial Travelogue: Visiting the Sinuiju Greenhouse Farm District (Part 1)",
+        "zh": "系列纪行：探访新义州温室综合农场地区（1）",
+        "my": "အစဉ်တစိုက်ခရီးသွားမှတ်တမ်း- ဆီနူအီဂျူ ဖန်လုံအိမ်စိုက်ပျိုးရေးဇုန်သို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၁)",
+        "ru": "Серия путевых заметок: Посещение Синиджуского тепличного совхозного округа (Часть 1)",
+        "ja": "連続紀行：新義州温室総合農場地区を訪ねて（1）",
+        "es": "Crónica de viaje en serie: Visitando el distrito de la granja de invernaderos de Sinuiju (Parte 1)",
+        "fr": "Carnet de voyage en série : Visite de la zone agricole de serres de Sinuiju (Partie 1)",
+        "de": "Reisebericht-Reihe: Zu Besuch im Gewächshaus-Farmbezirk Sinuiju (Teil 1)"
+      },
+      "category": "Travelogue & Exploration"
+    },
+    {
+      "start": "15:00",
+      "title": {
+        "ko": "TV무대 어머니조국에 남아있으리 (2)",
+        "en": "TV Stage: I Will Remain in the Mother Homeland (Part 2)",
+        "zh": "电视舞台：愿留在大地母亲的心怀（2）",
+        "my": "ရုပ်မြင်သံကြားစင်မြင့်- မိခင်မိခင်ကမ္ဘာမြေတွင် ကျွန်ုပ်ကျန်ရစ်ပါမည် (အပိုင်း ၂)",
+        "ru": "Театральная сцена: Я останусь на родине-матери (Часть 2)",
+        "ja": "TV舞台：母なる祖国に残らん（2）",
+        "es": "Escenario de TV: Permaneceré en la patria madre (Parte 2)",
+        "fr": "Scène TV : Je resterai dans la mère patrie (Partie 2)",
+        "de": "TV-Bühne: Ich werde im Mutter-Heimatland bleiben (Teil 2)"
+      },
+      "category": "Arts & Performance Program"
+    },
+    {
+      "start": "16:06",
+      "title": {
+        "ko": "소개편집물 어린이영양공급기준표에 깃든 이야기",
+        "en": "Feature Compilation: The Story Embodied in the Children's Nutritional Supply Standard Chart",
+        "zh": "专题剪辑：儿童营养供应标准表背后的故事",
+        "my": "မိတ်ဆက်တင်ပြချက်- ကလေးသူငယ် အာဟာရဓာတ်ဖြည့်ဆည်းမှု စံနှုန်းဇယားနောက်ကွယ်မှ ဇာတ်လမ်း",
+        "ru": "Тематический сюжет: История, заложенная в нормативной таблице детского питания",
+        "ja": "紹介編集物：子供の栄養供給基準表に宿る物語",
+        "es": "Recopilación de reportajes: La historia plasmada en la tabla estándar de suministro nutricional infantil",
+        "fr": "Compilation de reportages : L'histoire incarnée dans le tableau standard d'apport nutritionnel des enfants",
+        "de": "Zusammenstellung von Berichten: Die Geschichte hinter der Normtabelle für die Ernährung von Kindern"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "16:23",
+      "title": {
+        "ko": "문답 법과 공민 - 환경보호법 -",
+        "en": "Q&A Forum: Law and Citizens — Environmental Protection Law —",
+        "zh": "问答：法律与公民——环境保护法——",
+        "my": "အမေးအဖြေကဏ္ဍ- ဥပဒေနှင့် နိုင်ငံသား - ပတ်ဝန်းကျင်ထိန်းသိမ်းရေးဥပဒေ -",
+        "ru": "Вопросы и ответы: Закон и граждане — Закон об охране окружающей среды —",
+        "ja": "問答：法律と公民 — 環境保護法 —",
+        "es": "Foro de preguntas y respuestas: La ley y los ciudadanos — Ley de Protección Ambiental —",
+        "fr": "Forum Q&R : La loi et les citoyens — Loi sur la protection de l'environnement —",
+        "de": "Fragen & Antworten: Das Gesetz und die Bürger — Umweltschutzgesetz —"
+      },
+      "category": "Educational & Legal Q&A"
+    },
+    {
+      "start": "16:33",
+      "title": {
+        "ko": "특집 파괴적인 재앙 태풍",
+        "en": "Special Feature: Destructive Disaster, Typhoon",
+        "zh": "专题：毁灭性灾难 台风",
+        "my": "အထူးအစီအစဉ်- ပျက်စီးဆုံးရှုံးစေသော သဘာဝဘေးအန္တရာယ်၊ တိုင်ဖွန်းမုန်တိုင်း",
+        "ru": "Специальный репортаж: Разрушительное бедствие, тайфун",
+        "ja": "特集：破壊的な災い 台风",
+        "es": "Reportaje especial: Desastre destructivo, tifón",
+        "fr": "Reportage spécial : Catastrophe destructrice, typhon",
+        "de": "Sondersendung: Zerstörerische Katastrophe, Taifun"
+      },
+      "category": "Special Science & Environment"
+    },
+    {
+      "start": "17:00",
+      "title": {
+        "ko": "보도",
+        "en": "5PM Afternoon News Broadcast",
+        "zh": "下午5点新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Вечерний 17-часовой выпуск новостей",
+        "ja": "報道（5PMニュース）",
+        "es": "Noticiero de la tarde de las 5 PM",
+        "fr": "Journal d'information de 17h",
+        "de": "Nachrichten um 17 Uhr"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:18",
+      "title": {
+        "ko": "각 도특파기자들이 보내온 소식",
+        "en": "News Sent by Correspondents in Each Province",
+        "zh": "各道特派记者发来的报道",
+        "my": "ပြည်နယ်အသီးသီးရှိ သတင်းထောက်များထံမှ ပေးပို့သောသတင်းများ",
+        "ru": "Новости, присланные специальными корреспондентами из провинций",
+        "ja": "各道特派員が送ってきたニュース",
+        "es": "Noticias enviadas por los corresponsales de cada provincia",
+        "fr": "Nouvelles envoyées par les correspondants de chaque province",
+        "de": "Nachrichten von den Sonderkorrespondenten aus den Provinzen"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:27",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览",
+        "my": "ယနေ့ထုတ် ဗဟိုသတင်းစာများ ကောက်နုတ်ချက်သုံးသပ်ချက်",
+        "ru": "Обзор сегодняшней центральной прессы",
+        "ja": "今日号の中央新聞概観",
+        "es": "Revisión de los principales periódicos centrales de hoy",
+        "fr": "Revue de la presse centrale d'aujourd'hui",
+        "de": "Heutige Übersicht der zentralen Zeitungen"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:33",
+      "title": {
+        "ko": "아동방송시간 만화영화 영리한 너구리 (90) 열쇠",
+        "en": "Children's Program: Animated Series — Clever Raccoon (Part 90) The Key",
+        "zh": "少儿节目：动画片—— 聪明的 너구리（90）钥匙",
+        "my": "ကလေးသူငယ်များအတွက် အစီအစဉ် - ကာတွန်းရုပ်ရှင်- ပါးနပ်သော ဖျံကလေး (အပိုင်း ၉၀) သော့ချက်",
+        "ru": "Передача для детей: Мультсериал — Умный енот (Часть 90) Ключ",
+        "ja": "児童放送時間：漫画映画 — かしこいタヌキ（90）鍵",
+        "es": "Programa infantil: Serie animada — El mapache astuto (Parte 90) La llave",
+        "fr": "Programme pour enfants : Série d'animation — Le raton laveur rusé (Partie 90) La clé",
+        "de": "Kinderprogramm: Zeichentrickserie — Der schlaue Waschbär (Teil 90) Der Schlüssel"
+      },
+      "category": "Children's Animated Program"
+    },
+    {
+      "start": "18:00",
+      "title": {
+        "ko": "소개편집물 소년통신원들이 보내온 소식 (5)",
+        "en": "Feature Compilation: News Sent by Boy Correspondents (Part 5)",
+        "zh": "专题剪辑：少年通讯员发来的报道（5）",
+        "my": "မိတ်ဆက်တင်ပြချက်- လူငယ်သတင်းထောက်များထံမှ ပေးပို့သောသတင်းများ (အပိုင်း ၅)",
+        "ru": "Тематический сюжет: Вести от юных корреспондентов (Часть 5)",
+        "ja": "紹介編集物：少年通信員たちが送ってきたニュース（5）",
+        "es": "Recopilación de reportajes: Noticias enviadas por los jóvenes corresponsales (Parte 5)",
+        "fr": "Compilation de reportages : Nouvelles envoyées par les jeunes correspondants (Partie 5)",
+        "de": "Zusammenstellung von Berichten: Nachrichten von den jungen Korrespondenten (Teil 5)"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "18:06",
+      "title": {
+        "ko": "건강과 생활섭생 무더위때 어린이건강관리 - 운동놀이할 때 -",
+        "en": "Health & Life: Children's Healthcare During Scorching Heat — During Physical Exercise and Play —",
+        "zh": "健康生活常识：酷暑时节的儿童健康管理——进行体育游戏时——",
+        "my": "ကျန်းမာရေးနှင့် နေ့စဉ်ဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်ကြား ကလေးသူငယ် ကျန်းမာရေးစောင့်ရှောက်မှု - ကိုယ်လက်လှုပ်ရှားမှုနှင့် ကစားချိန်များတွင် -",
+        "ru": "Здоровье и быт: Забота о здоровье детей в сильную жару — Во время подвижных игр и спорта —",
+        "ja": "健康と生活習慣：酷暑期の子供의 健康管理 — 運動遊びをするとき —",
+        "es": "Salud y vida: Gestión de la salud infantil durante el calor sofocante — Al realizar juegos y ejercicios físicos —",
+        "fr": "Santé & Vie : Gestion de la santé des enfants en pleine canicule — Pendant les jeux physiques et l'exercice —",
+        "de": "Gesundheit & Leben: Kindergesundheit bei drückender Hitze — Bei Sport und Spiel —"
+      },
+      "category": "Health & Lifestyle Advice"
+    },
+    {
+      "start": "18:13",
+      "title": {
+        "ko": "TV무대 농촌진흥의 새 시대와 《백학벌의 새봄》",
+        "en": "TV Stage: A New Era of Rural Development and 'New Spring of Baekhak Plain'",
+        "zh": "电视舞台：农村振兴的新时代与《白鹤原的新春》",
+        "my": "ရုပ်မြင်သံကြားစင်မြင့်- ကျေးလက်ဒေသဖွံ့ဖြိုးတိုးတက်ရေးခေတ်သစ်နှင့် 'ဘတ်ဟတ်လွင်ပြင်၏ နွေဦးသစ်'",
+        "ru": "Театральная сцена: Новая эра возрождения деревни и «Новая весна на равнине Пэкхак»",
+        "ja": "TV舞台：農村振興の新時代と『白鶴原の新春』",
+        "es": "Escenario de TV: Una nueva era de desarrollo rural y 'Nueva primavera de la llanura de Baekhak'",
+        "fr": "Scène TV : Une nouvelle ère de développement rural et « Nouveau printemps de la plaine de Baekhak »",
+        "de": "TV-Bühne: Eine neue Ära der ländlichen Entwicklung und „Neuer Frühling der Baekhak-Ebene“"
+      },
+      "category": "Arts & Performance Program"
+    },
+    {
+      "start": "20:00",
+      "title": {
+        "ko": "보도",
+        "en": "8PM Main Evening News Broadcast",
+        "zh": "晚8点中央新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Главный вечерний 20-часовой выпуск новостей",
+        "ja": "報道（8PMメインニュース）",
+        "es": "Noticiero principal de la noche de las 8 PM",
+        "fr": "Journal télévisé principal de 20h",
+        "de": "Hauptnachrichtensendung um 20 Uhr"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:27",
+      "title": {
+        "ko": "조선기록영화 인민의 어버이",
+        "en": "North Korean Documentary Film: Parent of the People",
+        "zh": "朝鲜纪录电影：人民的父母",
+        "my": "ကိုရီးယားမှတ်တမ်းတင်ရုပ်ရှင်- ပြည်သူတို့၏မိဘ",
+        "ru": "Северокорейский документальный фильм: Отец народа",
+        "ja": "朝鮮記録映画：人民の父",
+        "es": "Película documental norcoreana: Padre del pueblo",
+        "fr": "Film documentaire nord-coréen : Parent du peuple",
+        "de": "Nordkoreanischer Dokumentarfilm: Vater des Volkes"
+      },
+      "category": "Comprehensive Documentary Overview"
+    },
+    {
+      "start": "22:11",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道摘要",
+        "my": "ယနေ့ထုတ်လွှင့်ခဲ့သော သတင်းထူးများအတွင်းမှ ကောက်နုတ်ချက်",
+        "ru": "Главное из сегодняшних выпусков новостей",
+        "ja": "今日の報道から（ニュースハイライト）",
+        "es": "De los momentos destacados del informe de noticias de hoy",
+        "fr": "Parmi les faits marquants des rapports d'actualité d'aujourd'hui",
+        "de": "Highlights aus den heutigen Nachrichtensendungen"
+      },
+      "category": "Daily News Bulletin"
+    }
+  ]
+}
