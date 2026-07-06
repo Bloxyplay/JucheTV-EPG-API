@@ -1,0 +1,277 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-06",
+  "source": "Korean Central Television",
+  "programs": [
+    {
+      "start": "08:25",
+      "end": "09:18",
+      "title": {
+        "en": "KCTV Startup",
+        "ko": "조선중앙텔레비죤 방송 개시"
+      },
+      "category": "General"
+    },
+    {
+      "start": "09:18",
+      "end": "09:33",
+      "title": {
+        "en": "Kim Jong-Un Conducts on-Site Inspection of the Local Development Policy Construction Project in Rakwon County ◉ Performance Evaluation Tests of Ship Armament Systems Conducted on the Destroyer 'Kanggeon'",
+        "ko": "김정은, 락원군 지방발전정책대상건설사업 현지지도 ◉ 구축함《강건》호에서 함무장체계들의 성능평가시험 진행"
+      },
+      "category": "News"
+    },
+    {
+      "start": "09:33",
+      "end": "10:28",
+      "title": {
+        "en": "Parent Leader, Be With Intellectuals",
+        "ko": "어버이수령님 지식인들과 함께 계시여 (2009.9.20. 방영)"
+      },
+      "category": "Korean Documentary Film"
+    },
+    {
+      "start": "10:28",
+      "end": "11:14",
+      "title": {
+        "en": "With the Noble Spirit of the Pioneering Generation,",
+        "ko": "개척세대의 숭고한 정신으로"
+      },
+      "category": "Special Feature"
+    },
+    {
+      "start": "11:14",
+      "end": "11:34",
+      "title": {
+        "en": "At the Forefront of Revolutionary Traditional Culture - Kim Jong-Il Order Recipient, Socialist Patriotic Contributor, Director of Samjiyon Revolutionary History Hall, Meritorious Historical Lecturer Kang Jeong-Ok",
+        "ko": "혁명전통교양의 전초선에서 - 김정일훈장수훈자 사회주의애국공로자 삼지연혁명사적관 관장 공훈사적강사 강정옥"
+      },
+      "category": "Feature Segment"
+    },
+    {
+      "start": "11:34",
+      "end": "12:00",
+      "title": {
+        "en": "A Day Dedicated to Future Generations",
+        "ko": "후대들을 위해 바치신 하루"
+      },
+      "category": "Special Feature"
+    },
+    {
+      "start": "12:00",
+      "end": "12:19",
+      "title": {
+        "en": "Kim Jong-Un Conducts on-Site Inspection of the Local Development Policy Construction Project in Rakwon County ◉ Performance Evaluation Tests of Ship Armament Systems Conducted on the Destroyer 'Kanggeon'",
+        "ko": "김정은, 락원군 지방발전정책대상건설사업 현지지도 ◉ 구축함《강건》호에서 함무장체계들의 성능평가시험 진행"
+      },
+      "category": "News"
+    },
+    {
+      "start": "12:19",
+      "end": "13:28",
+      "title": {
+        "en": "Star of Joseon (Part 6) - Burning Spring",
+        "ko": "조선의 별(제6부) - 불타는 봄 - (2007.4.21. 방영)"
+      },
+      "category": "Korean Feature Film"
+    },
+    {
+      "start": "13:28",
+      "end": "14:01",
+      "title": {
+        "en": "Searching for the Sinuiju Greenhouse Complex Farm District (1)",
+        "ko": "신의주온실종합농장지구를 찾아서(1)"
+      },
+      "category": "Travel Documentary Series"
+    },
+    {
+      "start": "14:01",
+      "end": "14:13",
+      "title": {
+        "en": "Low Pressure and Blood Pressure Management",
+        "ko": "저기압과 혈압관리"
+      },
+      "category": "Weather and Human Life"
+    },
+    {
+      "start": "14:13",
+      "end": "14:58",
+      "title": {
+        "en": "Searching for Revolutionary Sites in Sinheung District - Okryeonsan Secret Camp",
+        "ko": "신흥지구 혁명전적지를 찾아서 - 옥련산밀영"
+      },
+      "category": "Travel Documentary Series"
+    },
+    {
+      "start": "14:58",
+      "end": "15:21",
+      "title": {
+        "en": "The Eternal Revolutionary Fighters of Our Party - Han Ik-Soo, Anti-Japanese Revolutionary Fighter",
+        "ko": "영생하는 우리 당의 혁명전사들 - 항일혁명투사 한익수"
+      },
+      "category": "Feature Segment"
+    },
+    {
+      "start": "15:21",
+      "end": "15:52",
+      "title": {
+        "en": "With the Great Power of Patriotism",
+        "ko": "애국의 위대한 힘으로"
+      },
+      "category": "Special Feature"
+    },
+    {
+      "start": "15:52",
+      "end": "16:09",
+      "title": {
+        "en": "Coal Laborers' TV Lecture - Instructor at Yongdeung Coal Mine at Gujang District Coal Mine Complex Jeon Jong-Hwan, Socialist Patriot Merit",
+        "ko": "탄부들의 TV연단 - 구장지구탄광련합기업소 룡등탄광 교관 사회주의애국공로자 공훈탄부 전종환"
+      },
+      "category": "TV Podium"
+    },
+    {
+      "start": "16:09",
+      "end": "16:11",
+      "title": {
+        "en": "Health Management During the Heat - Mineral Intake",
+        "ko": "무더위때 건강관리 - 광물질섭취"
+      },
+      "category": "Health and Living"
+    },
+    {
+      "start": "16:11",
+      "end": "16:20",
+      "title": {
+        "en": "Climate Disasters in 2025",
+        "ko": "2025년의 기후재난"
+      },
+      "category": "Special Feature"
+    },
+    {
+      "start": "16:20",
+      "end": "16:39",
+      "title": {
+        "en": "The Grudge Lingering in Sakchang-Ri, Seongcheon-Gun - Richunseon, Jangjin 2-Dong, Yeokpo District",
+        "ko": "성천군 삭창리에 서린 원한 - 력포구역 장진2동 리춘선"
+      },
+      "category": "True Story"
+    },
+    {
+      "start": "16:39",
+      "end": "17:00",
+      "title": {
+        "en": "Issues in Forest Creation - Mixed Forest Creation",
+        "ko": "산림조성에서 나서는 문제 - 혼성림조성"
+      },
+      "category": "Q&A"
+    },
+    {
+      "start": "17:00",
+      "end": "17:15",
+      "title": {
+        "en": "Kim Jong-Un Conducts on-Site Inspection of the Local Development Policy Construction Project in Rakwon County ◉ Performance Evaluation Tests of Ship Armament Systems Conducted on the Destroyer 'Kanggeon'",
+        "ko": "김정은, 락원군 지방발전정책대상건설사업 현지지도 ◉ 구축함《강건》호에서 함무장체계들의 성능평가시험 진행"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:15",
+      "end": "17:34",
+      "title": {
+        "en": "News",
+        "ko": "보 도"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:34",
+      "end": "17:39",
+      "title": {
+        "en": "Central Newspaper Overview",
+        "ko": "오늘호 중앙신문개관"
+      },
+      "category": "News"
+    },
+    {
+      "start": "17:39",
+      "end": "18:24",
+      "title": {
+        "en": "Go Jumong (Part 31)",
+        "ko": "력사만화영화: 고주몽(제31부)"
+      },
+      "category": "Historical Animated Film"
+    },
+    {
+      "start": "18:24",
+      "end": "18:56",
+      "title": {
+        "en": "Our Leader and Changdeok School",
+        "ko": "우리 수령님과 창덕학교"
+      },
+      "category": "Special Feature"
+    },
+    {
+      "start": "18:56",
+      "end": "19:13",
+      "title": {
+        "en": "Transformation of Science and Technology Talent for All People and the Science and Technology Center",
+        "ko": "전민과학기술인재화와 과학기술전당"
+      },
+      "category": "Feature Segment"
+    },
+    {
+      "start": "19:13",
+      "end": "19:23",
+      "title": {
+        "en": "Continuing to Innovate With Momentum - Longgang Stone Processing Plant",
+        "ko": "충천한 기세로 계속 혁신한다 - 룡강석재가공공장"
+      },
+      "category": "Feature Segment"
+    },
+    {
+      "start": "19:23",
+      "end": "20:00",
+      "title": {
+        "en": "One for the Whole. the Whole is for One! (2)",
+        "ko": "하나는 전체를 위하여. 전체는 하나를 위하여!(2)"
+      },
+      "category": "Special Feature"
+    },
+    {
+      "start": "20:00",
+      "end": "20:29",
+      "title": {
+        "en": "8PM News",
+        "ko": "보도"
+      },
+      "category": "News"
+    },
+    {
+      "start": "20:29",
+      "end": "20:33",
+      "title": {
+        "en": "Some Misconceptions - Views of Pulmonology Experts",
+        "ko": "잘못된 인식 몇가지 - 호흡기내과전문가들의 견해"
+      },
+      "category": "Health and Living"
+    },
+    {
+      "start": "20:33",
+      "end": "21:54",
+      "title": {
+        "en": "The People Honor Our Great Party (Part 3) - a New Era of Local Development",
+        "ko": "위대한 우리 당에 인민은 영광드린다(제3편) - 지방진흥의 새시대"
+      },
+      "category": "TV Documentary Compilation"
+    },
+    {
+      "start": "21:54",
+      "end": "22:00",
+      "title": {
+        "en": "From Today's News",
+        "ko": "오늘의 보도중에서"
+      },
+      "category": "News"
+    }
+  ]
+}
