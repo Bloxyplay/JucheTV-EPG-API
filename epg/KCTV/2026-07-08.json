@@ -1,0 +1,406 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-08",
+  "source": "Korean Central Television (Juche TV)",
+  "programs": [
+    {
+      "start": "08:12",
+      "end": "08:46",
+      "title": {
+        "ko": "특집: 력사의 집들이 전하는 이야기",
+        "en": "Special: The Story Told by the Houses of History",
+        "zh": "专题：历史之屋讲述的故事",
+        "my": "အထူးအစီအစဉ်- သမိုင်းဝင်အိမ်များမှ ပြောပြသော ဇာတ်လမ်း",
+        "ru": "Специальный репортаж: История, которую рассказывают дома истории",
+        "ja": "特集：歴史의 家들이 전하는 이야기",
+        "es": "Reportaje especial: La historia que cuentan las casas de la historia",
+        "fr": "Reportage spécial : L'histoire racontée par les maisons de l'histoire",
+        "de": "Sondersendung: Die Geschichte, die die Häuser der Geschichte erzählen",
+        "kk": "Арнайы шығарылым: Тарих үйлері сыр шертеді",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། ལོ་རྒྱུས་ཀྱི་ཁང་ပས་བཤད་པའི་གཏམ་རྒྱུད།",
+        "mn": "Тусгай нэвтрүүлэг: Түүхт гэрүүдийн хүүрнэх түүх"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "08:46",
+      "end": "09:01",
+      "title": {
+        "ko": "련속참관기: 위인칭송의 만년재보 — 국제친선전람관을 찾아서 (35)",
+        "en": "Serial Documentary: Eternal Treasures Praising Great People — Visiting the International Friendship Exhibition - Part 35",
+        "zh": "系列探访：颂扬伟人的万年珍宝——探访国际友谊展览馆（35）",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကြီးမြတ်သူအား ချီးမွမ်းခြင်းဆိုင်ရာ ထာဝရရတနာများ - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၃၅)",
+        "ru": "Серия репортажей: Ветхозаветные сокровища восхваления великих людей — Посещение Выставки международной дружбы (Часть 35)",
+        "ja": "連続参観记：偉인称赞의 万年財宝 — 国際親善展覧館을 찾아서（35）",
+        "es": "Informe de visita en serie: Tesoros eternos que loan a las grandes personas — Visitando la Exposición de la Amistad Internacional (Parte 35)",
+        "fr": "Rapport de visite en série : Trésors éternels louant les grands hommes — Visite de l'Exposition de l'amitié internationale (Partie 35)",
+        "de": "Berichtsreihe: Ewige Schätze zur Ehrung großer Persönlichkeiten — Zu Besuch in der Internationalen Freundschaftsausstellung (Teil 35)",
+        "kk": "Хроникалық шолу: Ұлы тұлғаларды ұлықтаған мәңгілік қазына — Халықаралық достық көрмесіне саяхат (35-бөлім)",
+        "bo": "བསྟུད་མར་གཟིགས་སྐོར་ཞུས་པའི་ཟིན་ཐོ། སྐྱེས་བུ་ཆེན་པོར་བསྟོད་པའི་གཏན་གྱི་နۆར་བུ། — རྒྱལ་སྤྱིའི་མཛའ་མཐུན་འགྲེམས་སྟོན་ཁང་ལ་གཟིགས་སྐོར་ཞུས་པ། (སོ་ལྔ་པ།)",
+        "mn": "Цуврал сурвалжилга: Сүрлэг хүмүүсийг магтан алдаршуулах түмэн жилийн эрдэнэс — Олон улсын найрамдалт үзэсгэлэнгийн ордноор зорчсон тэмдэглэл (35)"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "09:01",
+      "end": "10:00",
+      "title": {
+        "ko": "련속기행: 백두산지구 혁명전적지를 찾아서 — 삼지연대기념비 (2) —",
+        "en": "Serial Travelogue: Visiting Revolutionary Battle Sites in Mount Paektu Area — Samjiyon Grand Monument - Part 2 —",
+        "zh": "系列纪行：探访白头山地区革命战迹地——三池渊大纪念碑（2）——",
+        "my": "အစဉ်တစိုက်ခရီးသွားမှတ်တမ်း- ပေဒူဆန်းဒေသရှိ တော်လှန်ရေးစစ်မြေပြင်ဟောင်းများသို့ သွားရောက်လေ့လာခြင်း - ဆမ်ဂျီယွန်း အထိမ်းအမှတ်ကျောက်တိုင်ကြီး (အပိုင်း ၂) -",
+        "ru": "Серия путевых заметок: По революционным боевым местам в районе горы Пэкту — Самжиёнский грандиозный монумент (Часть 2) —",
+        "ja": "連続기행：白頭山地区의 革命戦跡地를 찾아서 — 三池淵大記念碑（2） —",
+        "es": "Crónica de viaje en serie: Visitando los sitios de batalla revolucionaria en el área del monte Paektu — Gran Monumento de Samjiyon - Parte 2 —",
+        "fr": "Carnet de voyage en série : Visite des sites de batailles révolutionnaires dans la région du mont Paektu — Grand monument de Samjiyon - Partie 2 —",
+        "de": "Reisebericht-Reihe: Zu den revolutionären Kampfstätten in der Region des Berges Paektu — Das Samjiyon-Großmonument (Teil 2) —",
+        "kk": "Жолжазба күнделігі: Пэкту тауы аймағындағы революциялықสมру майдандарына саяхат — Самжиён үлкен монументі (2-бөлім) —",
+        "bo": "བསྟུད་མར་བསྐྱོད་པའི་ལམ་ཡིག བྷག་དྷུ་རི་བོའི་ས་ཁུལ་གྱི་أགལ་བ་གནས་གཏན་ལ་བསྐྱོད་པ། — སམ་ཇི་ཡོན་དྲན་རྟенརྡོ་རིང་ཆེན་མོ། (གཉིས་པ།) —",
+        "mn": "Цуврал аяллын тэмдэглэл: Пэкту уулын бүсийн хувьсгалт тэмцлийн газруудаар зорчсон нь — Самжиёны их хөшөө (2) —"
+      },
+      "category": "Travelogue & Exploration"
+    },
+    {
+      "start": "10:00",
+      "end": "11:15",
+      "title": {
+        "ko": "조선기록영화: 만민이 우러러 칭송하는 우리 수령님",
+        "en": "North Korean Documentary Film: Our Leader Whom All People Revere and Praise",
+        "zh": "朝鲜纪录电影：万民仰望颂扬 division 我国领袖",
+        "my": "ကိုရီးယားမှတ်ตမ်းရုပ်ရှင်- လူအပေါင်းတို့ ကြည်ညိုချီးမွမ်းကြသော ကျွန်ုပ်တို့၏ခေါင်းဆောင်ကြီး",
+        "ru": "Северокорейский документальный фильм: Наш Вождь, которого все люди почитают и восхваляют",
+        "ja": "朝鮮記録映画：万民이 우러러 称赞하는 우리 首領様",
+        "es": "Película documental norcoreana: Nuestro Líder a quien todo el pueblo reverencia y loa",
+        "fr": "Film documentaire nord-coréen : Notre Leader que tous les peuples révèrent et louent",
+        "de": "Nordkoreanischer Dokumentarfilm: Unser Führer, den alle Völker verehren und preisen",
+        "kk": "Деректі фильм: Күллі халық ұлықтаған ұлы Көшбасшымыз",
+        "bo": "བྱང་ཀྲོའུ་ཡི་ལོ་རྒྱུས་དངོས་བཤེར་གློག་བརྙན། སྐྱེ་โบ་ཀུན་གྱིས་བཀུར་ཞིང་བསྟོད་པའི་ང་ཚོའི་གཙོ་အཛིན།",
+        "mn": "Солонгосын баримтат кино: Түмэн олноороо бишрэн магтсан манай удирдагч"
+      },
+      "category": "Documentary Feature Film"
+    },
+    {
+      "start": "11:15",
+      "end": "12:04",
+      "title": {
+        "ko": "특집: 위민헌신의 나날",
+        "en": "Special: Days of Devotion to the People",
+        "zh": "专题：为民献身的岁月",
+        "my": "အထူးအစီအစဉ်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံခဲ့သော နေ့ရက်များ",
+        "ru": "Специальный репортаж: Дни самоотверженного служения народу",
+        "ja": "特集：人民献身의 나날",
+        "es": "Reportaje especial: Días de devoción al pueblo",
+        "fr": "Reportage spécial : Jours de dévouement envers le peuple",
+        "de": "Sondersendung: Tage der Aufopferung für das Volk",
+        "kk": "Арнайы шығарылым: Халыққа қызмет етумен өткен күндер",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བསམ་བཅངས་པའི་ཉིན་མོ་རྣམས།",
+        "mn": "Тусгай сэдэв: Ард түмний төлөө зүтгэсэн өдрүүд"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "12:04",
+      "end": "13:48",
+      "title": {
+        "ko": "조선예술영화: 조선의 별 (제8부: 저물어가는 1932년)",
+        "en": "North Korean Art Film: Star of Korea — Part 8: The Waning Year of 1932",
+        "zh": "朝鲜艺术电影：朝鲜之星（第八部：走向暮年的1932年）",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် (အပိုင်း ၈- ကုန်ဆုံးတော့မည့် ၁၉၃၂ ခုနှစ်)",
+        "ru": "Северокорейский художественный фильм: Звезда Кореи (Часть 8: Уходящий 1932 год)",
+        "ja": "朝鮮芸術映画：朝鮮의 별（第8部：조물어가는 1932년）",
+        "es": "Película de arte norcoreana: Estrella de Corea — Parte 8: El año agonizante de 1932",
+        "fr": "Film d'art nord-coréen : L'Étoile de Corée — Partie 8 : L'année finissante de 1932",
+        "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teil 8: Das zu Ende gehende Jahr 1932",
+        "kk": "Солтүстік Корея көркем фильмі: Корея жұлдызы (8-бөлім: Сұрқай тартқан 1932 жыл)",
+        "bo": "ཀྲུང་གོ་བྱང་མའི་སྒྱུ་རྩལ་གློག་བརྙན། བྱང་ཀྲོའུ་ཡི་སྐར་མ། (ལེའུ་བརྒྱད་པ། རྫོགས་ལ་နེ་བའི་༡𝟡༣༢ལོ།)",
+        "mn": "Солонгосын уран сайхны кино: Солонгосын од (Наймдугаар анги: Төгсгөл үеийн 1932 он)"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "13:48",
+      "end": "14:15",
+      "title": {
+        "ko": "기행: 상징건물들에 깃든 인민사랑의 이야기",
+        "en": "Travelogue: The Story of Love for the People Enshrined in Symbolic Buildings",
+        "zh": "纪行：象征性建筑中蕴含的爱民故事",
+        "my": "ခရီးသွားမှတ်တမ်း- အထိမ်းအမှတ်အဆောက်အအုံများတွင် ကိန်းအောင်းနေသော ပြည်သူ့မေတ္တာတော်ဆိုင်ရာ ဇာတ်လမ်း",
+        "ru": "Путевые заметки: История любви к народу, запечатленная в символических зданиях",
+        "ja": "기행：象徴建物들에 깃든 人民사랑의 이야기",
+        "es": "Crónica de viaje: La historia de amor por el pueblo consagrada en edificios simbólicos",
+        "fr": "Carnet de voyage : L'histoire d'amour pour le peuple incarnée dans les bâtiments symboliques",
+        "de": "Reisebericht: Die Geschichte der Liebe zum Volk, die in symbolischen Gebäuden verankert ist",
+        "kk": "Жолжазба: Зәулім ғимараттардағы халыққа деген махаббат хикаясы",
+        "bo": "ལམ་ཡིག མཚོན་རྟགས་རང་བཞིན་གྱི་བཟོ་སྐྲུན་དུ་བཅངས་པའི་མི་དམངས་ལ་བརྩེ་བའི་གཏམ་རྒྱུད།",
+        "mn": "Аяллын тэмдэглэл: Бэлэг тэмдэг болсон барилгуудад шингэсэн ард түмнээ хайрлах түүх"
+      },
+      "category": "Travelogue & Exploration"
+    },
+    {
+      "start": "14:15",
+      "end": "15:00",
+      "title": {
+        "ko": "특집: 중등학원 졸업생들의 이야기 (1. 성장)",
+        "en": "Special: Stories of Secondary School Graduates (Part 1: Growth)",
+        "zh": "专题：中学 graduates 的故事（1. 成长）",
+        "my": "အထူးအစီအစဉ်- အလယ်တန်းကျောင်းဆင်းများ၏ ဇာတ်လမ်းများ (အပိုင်း ၁- ကြီးပြင်းလာခြင်း)",
+        "ru": "Специальный репортаж: Истории выпускников средних школ (Часть 1: Рост)",
+        "ja": "特集：中等学院 卒業生들의 이야기（1. 成長）",
+        "es": "Reportaje especial: Historias de graduados de secundaria (Parte 1: Crecimiento)",
+        "fr": "Reportage spécial : Histoires de diplômés du secondaire (Partie 1 : Croissance)",
+        "de": "Sondersendung: Geschichten von Sekundarschulabsolventen (Teil 1: Wachstum)",
+        "kk": "Арнайы репортаж: Орта мектеп түлектерінің хикаялары (1-бөлім: Ержету)",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། འབྲིང་རིམ་སློབ་གྲྭ་ཐོན་པའི་སློབ་མའི་གཏམ་རྒྱུད། (དང་པོ། འཚроང༌ལོང༌།)",
+        "mn": "Тусгай сэдэв: Дунд сургууль төгсөгчдийн түүх (1. Өсөлт хөгжилт)"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "15:00",
+      "end": "15:56",
+      "title": {
+        "ko": "조선기록영화: 어버이수령님 농업근로자들과 함께 계시어",
+        "en": "North Korean Documentary Film: Father Leader Being with Agricultural Workers",
+        "zh": "朝鲜纪录电影：慈父领袖与农业劳动者在一起",
+        "my": "ကိုရီးယားမှတ်တမ်းရုပ်ရှင်- စိုက်ပျိုးရေးလုပ်သားများနှင့်အတူ ရှိနေပေးခဲ့သော ဖခင်သဖွယ်ခေါင်းဆောင်ကြီး",
+        "ru": "Северокорейский документальный фильм: Отец-Вождь вместе с тружениками сельского хозяйства",
+        "ja": "朝鮮記録映画：어버이首領様 農民근로자들과 함께 계시어",
+        "es": "Película documental norcoreana: El Padre Líder estando junto a los trabajadores agrícolas",
+        "fr": "Film documentaire nord-coréen : Le Père Leader aux côtés des travailleurs agricoles",
+        "de": "Nordkoreanischer Dokumentarfilm: Der väterliche Führer im Kreise der Landwirtschaftswerktätigen",
+        "kk": "Деректі фильм: Қамқор Көшбасшымыз ауыл шаруашылығы еңбеккерлерімен бірге",
+        "bo": "བྱང་ཀྲོའུ་ཡི་ལོ་རྒྱུས་དངོས་བཤེར་གློག་བརྙན། ཕ་མ་ལྟ་བུའི་གཙོ་འཛིན་ཞིང་ལས་ངལ་རྩོལ་པ་དང་ལྷན་དུ་བཞུགས་པ།",
+        "mn": "Солонгосын баримтат кино: Эцэг удирдагч хөдөө аж ахуйн ажилчидтай хамт байсан нь"
+      },
+      "category": "Documentary Feature Film"
+    },
+    {
+      "start": "15:56",
+      "end": "16:13",
+      "title": {
+        "ko": "소개편집물: 장연군식료공장에 깃든 어버이사랑",
+        "en": "Introduction Program: Fatherly Love Enshrined in Changyon County Foodstuff Factory",
+        "zh": "专题剪辑：长渊郡食品厂蕴含 division 慈父之爱",
+        "my": "မိတ်ဆက်တင်ပြချက်- ချန်ယွန်းခရိုင် စားသောက်ကုန်စက်ရုံတွင် ကိန်းအောင်းနေသော ဖခင်သဖွယ်မေတ္တာတော်",
+        "ru": "Тематический сюжет: Отцовская любовь, запечатленная на Чанёнской уездной пищевой фабрике",
+        "ja": "紹介편집물：長淵郡食料工場에 깃든 어버이사랑",
+        "es": "Recopilación de reportajes: El amor paternal consagrado en la Fábrica de Alimentos del Condado de Changyon",
+        "fr": "Compilation de reportages : L'amour paternel incarné dans l'usine de produits alimentaires du comté de Changyon",
+        "de": "Zusammenstellung von Berichten: Väterliche Liebe, verankert in der Lebensmittelindustrie des Landkreises Changyon",
+        "kk": "Ақпараттық бағдарлама: Чанён аудандық тамақ комбинатындағы әкелік мейірім",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ཅང་ཡོན་རྫོང་ཟས་རིགས་བཟོ་གྲྭར་བཅངས་པའི་ཕ་མའི་བརྩེ་བ།",
+        "mn": "Танилцуулга нэвтрүүлэг: Чанён хошууны хүнсний үйлдвэрт шингэсэн эцэг хүний хайр"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "16:13",
+      "end": "16:29",
+      "title": {
+        "ko": "련속소개편집물: 기념사진이 전하는 사랑의 이야기 (23)",
+        "en": "Serial Introduction Program: The Story of Love Told by Commemorative Photos - Part 23",
+        "zh": "系列专题剪辑：纪念 photo 讲述的爱的故事（23）",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- အမှတ်တရဓာတ်ပုံများမှ ပြောပြသော မေတ္တာတော်ဆိုင်ရာ ဇာတ်လမ်း (အပိုင်း ၂၃)",
+        "ru": "Серия тематических сюжетов: История любви, которую рассказывают памятные фотографии (Часть 23)",
+        "ja": "連続紹介편집물：記念写真이 전하는 사랑의 이야기（23）",
+        "es": "Recopilación de reportajes en serie: La historia de amor que cuentan las fotos conmemorativas (Parte 23)",
+        "fr": "Compilation de reportages en série : L'histoire d'amour racontée par les photos commémoratives (Partie 23)",
+        "de": "Zusammensetzung von Berichten: Die Geschichte der Liebe, die Erinnerungsfotos erzählen (Teil 23)",
+        "kk": "Деректі жинақ: Естелік суреттер сыр шертеді (23-бөлім)",
+        "bo": "བསྟུད་མར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། དྲན་རྟེན་འདྲ་པར་གྱིས་བཤད་པའི་བརྩེ་བའི་གཏམ་རྒྱུད། (ཉེར་གསུམ་པ།)",
+        "mn": "Цуврал танилцуулга: Дурсгалын зурагны хүүрнэх хайр ивээлийн түүх (23)"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "16:29",
+      "end": "16:35",
+      "title": {
+        "ko": "종합편집물: 증산의 불길이 세차게 타오른다 — 인민경제 여러 부문 공장, 기업소들에서 —",
+        "en": "Comprehensive Program: The Flames of Increased Production Burn Fiercely — In Factories and Enterprises of Various Sectors of the People's Economy —",
+        "zh": "综合剪辑：增产的 flame 熊熊 burning——在人民经济各部门的工厂、enterprise 中——",
+        "my": "ဘက်စုံစုစည်းတင်ပြချက်- တိုးမြှင့်ထုတ်လုပ်ရေး မီးတောက်များ ပြင်းပြင်းထန်ထန် တောက်လောင်နေသည် - ပြည်သူ့စီးပွားရေးကဏ္ဍအသီးသီးမှ စက်ရုံများနှင့် လုပ်ငန်းများတွင် -",
+        "ru": "Комплексный сюжет: Пламя увеличения производства ярко горит — На заводах и предприятиях различных секторов народного хозяйства —",
+        "ja": "総合편집물：増産의 火の粉이 거세게 타오른다 — 人民経済 여러 部門 工場・企業所들에서 —",
+        "es": "Programa integral: Las llamas del aumento de producción arden con fuerza — En fábricas y empresas de varios sectores de la economía popular —",
+        "fr": "Programme global : Les flammes de l'augmentation de la production brûlent ardemment — Dans les usines et entreprises de divers secteurs de l'économie populaire —",
+        "de": "Umfassender Bericht: Die Flammen der Produktionssteigerung brennen heftig — In Fabriken und Betrieben verschiedener Sektoren der Volkswirtschaft —",
+        "kk": "Қорытынды сюжет: Өндіріс оты жалындайды — Халық шаруашылығының түрлі салаларындағы зауыт-фабрикалардан —",
+        "bo": "ཕྱོགས་བསྡུས་ལེ་ཚན། ཐོན་སྐྱེད་འཕར་བའི་མེ་ལྕེ་དྲག་ཏུ་འབར་བ། — མི་དམངས་དཔལ་འབྱོར་གྱི་ལས་རིགས་ཁག་གི་བཟོ་གྲྭ་དང་ཐོན་སྐྱེད་ཁང་དུ། —",
+        "mn": "Нэгдсэн тойм: Үйлдвэрлэлийг нэмэгдүүлэх гал дөл дүрэлзэн байна — Ард түмний аж ахуйн салбар бүрийн үйлдвэр, аж ахуйн нэгжүүдэд —"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "16:35",
+      "end": "17:00",
+      "title": {
+        "ko": "소개편집물: 그날의 영광을 되새기며 — 2중영예의 붉은기 만경대구역 만경대고급중학교 —",
+        "en": "Introduction Program: Reflecting on the Glory of That Day — Double Honor Red Banner Mangyongdae Senior Middle School, Mangyongdae District —",
+        "zh": "专题剪辑：重温那天的荣光——双重荣誉红旗 万景台区域万景台高级中学——",
+        "my": "မိတ်ဆက်တင်ပြချက်- ထိုနေ့၏ဂုဏ်သိက္ခာကို ပြန်လည်အောက်မေ့ခြင်း - နှစ်ထပ်ဂုဏ်ထူးဆောင် အောင်လံနီ မန်ဂယွန်းဒေခရိုင် မန်ဂယွန်းဒေ အထက်တန်းကျောင်း -",
+        "ru": "Тематический сюжет: Вспоминая славу того дня — Мангёндэская старшая средняя школа дважды почетного Красного знамени, Мангёндэский район —",
+        "ja": "紹介편집물：그날의 栄光을 되새기며 — 2重栄誉의 붉은기 万景台区域 万景台高級中学校 —",
+        "es": "Recopilación de reportajes: Recordando la gloria de aquel día — Escuela Secundaria Superior de la Doble Bandera Roja de Honor de Mangyongdae, Distrito de Mangyongdae —",
+        "fr": "Compilation de reportages : Retour sur la gloire de ce jour-là — École secondaire supérieure Mangyongdae de la Double Bannière Rouge d'Honneur, district de Mangyongdae —",
+        "de": "Zusammenstellung von Berichten: Nachdenken über den Ruhm jenes Tages — Die mit dem doppelten Ehrenbanner des Roten Banners ausgezeichnete Mangyongdae-Oberschule im Bezirk Mangyongdae —",
+        "kk": "Ақпараттық сюжет: Сол бір даңқты күнді еске алғанда — Мангёндэ ауданы, қос қызыл тулы Мангёндэ жоғары орта мектебі —",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། དེ་རིང་གི་གཟི་བརྗིད་ལ་ཕྱིར་མིག་ལྟ་བ། — གཟི་བརྗིད་ལྡབ་数のདམར་ཤོག་མང་གཡུང་དེ་ས་ཁུལ་མང་གཡུང་དེ་མཐོ་རིམ་འབྲིང་རིམ་སློབ་གྲྭ། —",
+        "mn": "Танилцуулга нэвтрүүлэг: Тэрхүү өдрийн алдар хүндэд эргэн тунгаахуй — Хоёр дахин хүндэт Улаан тугт Мангёндэ дүүргийн Мангёндэ ахлах дунд сургууль —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "17:00",
+      "end": "17:17",
+      "title": {
+        "ko": "보도",
+        "en": "5PM Afternoon News Broadcast",
+        "zh": "下午5点新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Вечерний 17-часовой выпуск новостей",
+        "ja": "報道（5PMニュース）",
+        "es": "Noticiero de la tarde de las 5 PM",
+        "fr": "Journal d'information de 17h",
+        "de": "Nachrichten um 17 Uhr",
+        "kk": "Жаңалықтар: Сағат 17:00-дегі кешкі шығарылым",
+        "bo": "གསར་အགྱུར། (ཕྱི་དྲོ་ཆུ་ཚོད་༥པའི་གསར་အགྱུར།)",
+        "mn": "Мэдээ (Үдээс хойшхи 17 цагийн мэдээ)"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:17",
+      "end": "17:30",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览",
+        "my": "ယနေ့ထုတ် ဗဟိုသတင်းစာများ ကောက်နုတ်ချက်သုံးသပ်ချက်",
+        "ru": "Обзор сегодняшней центральной прессы",
+        "ja": "今日号의 中央新聞概観",
+        "es": "Revisión de los principales periódicos centrales de hoy",
+        "fr": "Revue de la presse centrale d'aujourd'hui",
+        "de": "Heutige Übersicht der zentralen Zeitungen",
+        "kk": "Орталық баспасөзге шолу: Бүгінгі газеттер не дейді?",
+        "bo": "དེ་རིང་གི་དབུས་གཞུང་ཚགས་པར་གནད་བสྡུས།",
+        "mn": "Өнөөдрийн төв сонинуудын тойм"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:30",
+      "end": "19:20",
+      "title": {
+        "ko": "조선기록영화: 자력으로 승리떨쳐온 빛나는 력사",
+        "en": "North Korean Documentary Film: A Glorious History of Achieving Victory with One's Own Strength",
+        "zh": "朝鲜纪录电影：靠自力夺取胜利 division 辉煌历史",
+        "my": "ကိုရီးယားမှတ်တမ်းရုပ်ရှင်- ကိုယ့်အားကိုယ်ကိုးမှုဖြင့် အောင်ပွဲဆင်ခဲ့သော တောက်ပြောင်သည့် သမိုင်းကြောင်း",
+        "ru": "Северокорейский документальный фильм: Славная история достижения победы собственными силами",
+        "ja": "朝鮮記録映画：自力으로 勝利펼쳐온 빛나는 歴史",
+        "es": "Película documental norcoreana: Una historia gloriosa de alcanzar la victoria сon las propias fuerzas",
+        "fr": "Film documentaire nord-coréen : Une histoire glorieuse de victoire remportée par ses propres forces",
+        "de": "Nordkoreanischer Dokumentarfilm: Eine glorreiche Geschichte des Sieges aus eigener Kraft",
+        "kk": "Деректі фильм: Өз күшімен жеңіске жеткен даңқты тарих",
+        "bo": "བྱང་ཀྲོའུ་ཡི་ལོ་རྒྱུས་དངོས་བཤེར་གློག་བརྙན། རང་སྟོབས་ཀྱིས་རྒྱལ་ཁ་བླངས་པའི་འོད་སྟོང་འབར་བའི་ལོ་རྒྱུས།",
+        "mn": "Солонгосын баримтат кино: Өөрийн хүчээр ялалтад хүрсэн гэрэлт түүх"
+      },
+      "category": "Documentary Feature Film"
+    },
+    {
+      "start": "19:20",
+      "end": "19:35",
+      "title": {
+        "ko": "수기: 다 전하지 못한 이야기 — 조선혁명박물관 공훈시작강사 부교수 허청순 —",
+        "en": "Memoir: The Story That Couldn't Be Fully Told — Heo Cheong-sun, Meritorious Lecturer and Associate Professor at the Korean Revolution Museum —",
+        "zh": "手记：未能全传的故事——朝鲜革命博物馆功勋讲师、副教授 许清顺——",
+        "my": "ကိုယ်တိုင်ရေးအတ္ထုပ္ပတ္တိ- အပြည့်အစုံမပြောပြနိုင်ခဲ့သော ဇာတ်လမ်း - ဟောချောင်ဆွန်း၊ ကိုရီးယားတော်လှန်ရေးပြတိုက်မှ ဂုဏ်ထူးဆောင်ကထိကနှင့် တွဲဖက်ပါမောက္ခ -",
+        "ru": "Мемуары: История, которую не удалось рассказать полностью — Хо Чхон Сун, заслуженный лектор и доцент Музея корейской революции —",
+        "ja": "手記：다 전하지 못한 이야기 — 朝鮮革命博物館 功勲始作講師 副教授 許清順 —",
+        "es": "Memorias: La historia que no se pudo contar por completo — Heo Cheong-sun, profesora meritoria y profesora asociada del Museo de la Revolución Coreana —",
+        "fr": "Mémoire : L'histoire qui n'a pas pu être entièrement racontée — Heo Cheong-sun, conférencière émérite et professeure associée au Musée de la Révolution coréenne —",
+        "de": "Memoiren: Die Geschichte, die nicht vollständig erzählt werden konnte — Heo Cheong-sun, verdiente Dozentin und außerordentliche Professorin am Koreanischen Revolutionsmuseum —",
+        "kk": "Естелік: Түгел айтылмаған сыр — Корея революциясы музейінің еңбек сіңірген лекторы, доцент Хе Чон Сун —",
+        "bo": "ཟིན་བྲིས། ཡོངས་སུ་བཤད་མ་ཐུབ་པའི་གཏམ་རྒྱུད། — བྱང་ཀྲོའུ་འགལ་བ་དྲན་རྟེན་ཁང་གི་བྱས་རྗེས་ཅན་གྱི་གཏམ་བཤད་པ་དགེ་རྒན་ཆེན་མོ་གཞོན་པ་ཧོ་ཆོངསུན། —",
+        "mn": "Дуртгал тэмдэглэл: Бүрэн хүүрнэж амжаагүй түүх — Солонгосын хувьсгалын музейн гавьяат багш, дэд профессор Хө Чөн Сүн —"
+      },
+      "category": "Literary & Cultural Arts"
+    },
+    {
+      "start": "19:35",
+      "end": "20:00",
+      "title": {
+        "ko": "특집: 혁명전통교양의 최전성기를 펼치어",
+        "en": "Special: Unfolding the Golden Age of Revolutionary Tradition Education",
+        "zh": "专题： map 展革命传统教育的全盛时期",
+        "my": "အထူးအစီအစဉ်- တော်လှန်ရေးရိုးရာပညာရေး၏ အထွတ်အထိပ်ခေတ်ကို ဆန်းသစ်ဖော်ဆောင်ခြင်း",
+        "ru": "Специальный репортаж: Раскрывая золотой век воспитания на революционных традициях",
+        "ja": "特集：革命伝統教養의 最全盛期를 펼치어",
+        "es": "Reportaje especial: Desplegando la edad de oro de la educación en las tradiciones revolucionarias",
+        "fr": "Reportage spécial : Déployer l'âge d'or de l'éducation aux traditions révolutionnaires",
+        "de": "Sondersendung: Die Entfaltung der Blütezeit der Erziehung zu den revolutionären Traditionen",
+        "kk": "Арнайы шығарылым: Революциялық дәстүрлі тәрбиенің алтын дәуірі",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། འགལ་བའི་སྲོལ་རྒྱུན་སློབ་གསོའི་དུས་རབས་開ཕྱེ་བ།",
+        "mn": "Тусгай сэдэв: Хувьсгалт уламжлалын хүмүүжлийн оргил үеийг нээх нь"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "20:00",
+      "end": "20:31",
+      "title": {
+        "ko": "보도",
+        "en": "8PM Main Evening News Broadcast",
+        "zh": "晚8点中央新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Главный вечерний 20-часовой выпуск новостей",
+        "ja": "報道（8PMメインニュース）",
+        "es": "Noticiero principal de la noche de las 8 PM",
+        "fr": "Journal télévisé principal de 20h",
+        "de": "Hauptnachrichtensendung um 20 Uhr",
+        "kk": "Ақпараттық бағдарлама: Сағат 20:00-дегі негізгі жаңалықтар",
+        "bo": "གསར་အགྱུར། (མཚན་མོ་ཆུ་ཚོད་༨པའི་གཙོ་གནད་གསར་အགྱུར།)",
+        "mn": "Үндсэн мэдээ (Оройн 20 цагийн гол мэдээ)"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:31",
+      "end": "21:54",
+      "title": {
+        "ko": "조선예술영화: 조선의 별 (제9부: 로흑산의 전설)",
+        "en": "North Korean Art Film: Star of Korea — Part 9: The Legend of Laoheishan",
+        "zh": "朝鲜艺术电影：朝鲜之星（第九部：老黑山的传说）",
+        "my": "코ရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် (အပိုင်း ၉- လာအိုဟေရှန်၏ ဒဏ္ဍာရီ)",
+        "ru": "Северокорейский художественный фильм: Звезда Кореи (Часть 9: Легенда Лаохэйшаня)",
+        "ja": "朝鮮芸術映画：朝鮮의 별（第9部：로흑산의 伝説）",
+        "es": "Película de arte norcoreana: Estrella de Corea — Parte 9: La leyenda de Laoheishan",
+        "fr": "Film d'art nord-coréen : L'Étoile de Corée — Partie 9 : La légende de Laoheishan",
+        "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teil 9: Die Legende von Laoheishan",
+        "kk": "Солтүстік Корея көркем фильмі: Корея жұлдызы (9-бөлім: Лаохэйшань аңызы)",
+        "bo": "ཀྲུང་གོ་བྱང་མའི་སྒྱུ་རྩལ་གློག་བརྙན། བྱང་ཀྲོའུ་ཡི་སྐར་མ། (ལེའུ་དགུ་པ། ལའོ་ཧེ་ཧྲན་གྱི་གཏམ་རྒྱུད།)",
+        "mn": "Солонгосын уран сайхны кино: Солонгосын од (Есдүгээр анги: Лохөх уулын домог)"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "21:54",
+      "end": "22:15",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道摘要",
+        "my": "ယနေ့ထုတ်လွှင့်ခဲ့သော သတင်းထူးများအတွင်းမှ ကောက်နုတ်ချက်",
+        "ru": "Главное из сегодняшней выпусков новостей",
+        "ja": "오늘의 報道중에서（뉴스하이라이트）",
+        "es": "De los momentos destacados del informe de noticias de hoy",
+        "fr": "Parmi les faits marquants des rapports d'actualité d'aujourd'hui",
+        "de": "Highlights aus den heutigen Nachrichtensendungen",
+        "kk": "Жаңалықтар топтамасы: Бүгінгі басты оқиғаларға шолу",
+        "bo": "དེ་རིང་གི་གསར་အགྱུར་གནད་བསྡུས།",
+        "mn": "Өнөөдрийн мэдээний тоймоос"
+      },
+      "category": "Daily News Bulletin"
+    }
+  ]
+}
