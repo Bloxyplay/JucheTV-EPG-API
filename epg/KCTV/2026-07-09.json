@@ -12,7 +12,7 @@
         "zh": "特别节目：永远胜利的旗帜（2）",
         "my": "အထူးအစီအစဉ်- ထာဝရအောင်ပွဲ၏ အလံတော် (အပိုင်း ၂)",
         "ru": "Специальный репортаж: Знамя вечной победы (Часть 2)",
-        "ja": "特集：永遠の勝利の旗印（2）",
+        "ja": "特集：永遠の勝利의 旗印（2）",
         "es": "Reportaje especial: Estandarte de la victoria eterna (Parte 2)",
         "fr": "Reportage spécial : La bannière de la victoire éternelle (Partie 2)",
         "de": "Sonderbericht: Banner des ewigen Sieges (Teil 2)",
@@ -29,14 +29,14 @@
         "ko": "연속참관기: 위인칭송의 고귀한 제보 — 국제친선전람관을 찾아서 (159) —",
         "en": "Serial Visit Report: Noble Testimonies Praising the Great Man — Visiting the International Friendship Exhibition - Part 159 —",
         "zh": "系列探访：颂扬伟人的珍贵展品——探访国际友谊展览馆（159）——",
-        "my": "အစဉ်တစိုက်参觀မှတ်တမ်း- ကြီးမြတ်သောလူသားအား ချီးမွမ်းခြင်းဆိုင်ရာ မြင့်မြတ်သောအလှူပစ္စည်းများ - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၁၅၉) -",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကြီးမြတ်သောလူသားအား ချီးမွမ်းခြင်းဆိုင်ရာ မြင့်မြတ်သောအလှူပစ္စည်းများ - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၁၅၉) -",
         "ru": "Серия репортажей о посещении: Драгоценные дары великому человеку — Посещение Выставки международной дружбы (Часть 159) —",
         "ja": "連続参観記：偉인称赞의 気高い品々 — 国際親善展覧館을 찾아서（159）—",
         "es": "Informe de visita en serie: Tributos preciosos a las grandes personas — Visitando la Exposición de la Amistad Internacional (Parte 159) —",
         "fr": "Rapport de visite en série : Hommages précieux aux grands hommes — En visitant l'Exposition de l'amitié internationale (Partie 159) —",
         "de": "Zusammensetzung von Berichten: Kostbare Tribute an die großen Persönlichkeiten — Zu Besuch in der Internationalen Freundschaftsausstellung (Teil 159) —",
         "kk": "Хроникалық шолу: Ұлы тұлғаға тарту етілген бағалы сыйлықтар — Халықаралық достық көрмесіне саяхат (159-бөлім) —",
-        "bo": "བསྟུད་မར་གཟིགས་སྐоར་ཞུས་པའི་ཟིན་ཐོ། སྐྱེས་བུ་ཆེན་པོར་བསྟོད་པའི་རྩ་ཆེའི་དངོས་པོ། — རྒྱལ་សྤјིའི་མཛའ་མཐུན་အགྲེམས་སྟོན་ཁང་ལ་གཟིགས་སྐོར་ཞུས་པ། (བརྒྱ་ငོ་དགུ་པ།) —",
+        "bo": "བསྟུད་မར་གཟིགས་སྐོར་ཞུས་པའི་ཟིན་ཐོ། སྐྱེས་བུ་ཆེན་པོར་བསྟོད་པའི་རྩাཆེའི་དངོས་པོ། — རྒྱལ་སྤྱིའི་མཛའ་མಥུན་အགྲེམས་སྟོན་ཁང་ལ་གཟིགས་སྐོར་ཞུས་པ། (བརྒྱ་ငོ་དགུ་པ།) —",
         "mn": "Цуврал сурвалжилга: Сүрлэг хүмүүсийг магтан алдаршуулах эрхэм нандин олдворууд — Олон улсын найрамдалт үзэсгэлэнгийн ордноор зорчсон тэмдэглэл (159)"
       },
       "category": "Cultural Visit Series"
@@ -54,8 +54,8 @@
         "es": "Recopilación de reportajes en serie: Soldados revolucionarios inmortales de nuestro Partido — Kim Kwang Jin, ex primer viceministro del Ministerio de las Fuerzas Armadas del Pueblo —",
         "fr": "Compilation de reportages en série : Les soldats révolutionnaires immortels de notre Parti — Kim Kwang Jin, ancien premier vice-minister du Ministère des forces armées populaires —",
         "de": "Zusammensetzung von Berichten: Unsterbliche revolutionäre Soldaten unserer Partei — Kim Kwang Jin, ehemaliger erster Vize-Minister des Ministeriums der Volksstreitkräfte —",
-        "kk": "Деректі жинақ: Партиямыздың мәңгілік революциялық жауынгерлері — Халық қарулы күштері министрінің бұрынғы бірінші орынбасары Ким Кван Жин —",
-        "bo": "བསྟུད་མར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། གཏན་དུ་གསོན་པའི་ང་ཚོའི་ཏང་གི་འགལ་བའི་དཔའ་བོ། — མི་དམངས་དྲག་པོའི་དཔུང་སྡེའི་པུའུ་ཡི་པུའུ་ཀྲང་གཞོན་པ་ প্ৰཐམ་པ་ཟུར་པ་ཀིམ་ཀྭང་ཅིན། —",
+        "kk": "Деректі жинақ: Партиямыздың мәңгілікBox революциялық жауынгерлері — Халық қарулы күштері министрінің бұрынғы бірінші орынбасары Ким Кван Жин —",
+        "bo": "བསྟུད་မར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། གཏན་དུ་གསོན་པའི་ང་ཚоའི་ཏང་གི་အགལ་བའི་དཔའ་བོ། — མི་དམངས་དྲག་པོའི་དཔུང་សྡེའི་པུའུ་ཡི་པུའུ་ཀྲང་གཞོན་པ་ প্ৰཐམ་པ་ཟُར་པ་ཀིམ་ཀྭང་ཅིན། —",
         "mn": "Цуврал танилцуулга: Манай намын мөнхөд орших хувьсгалт дайчид — Ардын зэвсэгт хүчний яамны нэгдүгээр дэд сайд асан Ким Кван Жин —"
       },
       "category": "Biographical Documentary Compilation"
@@ -109,10 +109,10 @@
         "ru": "Серия тематических сюжетов: Там, где запечатлены следы самоотверженного служения народу — Рангранский завод полимерных изделий повседневного спроса для инвалидов войны —",
         "ja": "連続紹介편집물：人民献身의 足跡이 새겨진 곳에서 — 楽浪栄誉軍人樹脂日用品工場 —",
         "es": "Recopilación de reportajes en serie: En los lugares grabados con devoción al pueblo — Fábrica de artículos diarios de resina para soldados discapacitados de Rangrang —",
-        "fr": "Compilation de reportages en série : Dans les lieux empreints de dévouement envers le peuple — Usine d'articles quotidiens en résine pour soldats handicapés de Rangrang —",
+        "fr": "Compilation de reportages en serie : Dans les lieux empreints de dévouement envers le peuple — Usine d'articles quotidiens en résine pour soldats handicapés de Rangrang —",
         "de": "Zusammensetzung von Berichten: An den Orten, die von der Aufopferung für das Volk geprägt sind — Rangrang Harz-Alltagsbedarfsfabrik für behinderte Soldaten —",
         "kk": "Деректі жинақ: Халыққа қызмет етудің ізі қалған жерде — Рангран соғыс мүгедектеріне арналған шайырлы тұрмыстық бұйымдар зауыты —",
-        "bo": "བསྟུད་မར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བསམ་བཅངས་པའི་ཞབས་རྗེས་འཁོད་པའི་སར། — ལུའོ་ལང་ལ་ལ་རྒྱ་ཅན་གྱི་དམག་ཞབས་ཟུར་པའི་ཉེར་སྤྱོད་དངོས་པོའི་བཟོ་གྲྭ། —",
+        "bo": "བསྟུད་မར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བสམ་བཅངས་པའི་ཞབས་རྗེས་အཁོད་པའི་སར། — ལུأོ་ལང་ལ་ལ་རྒྱاཅན་གྱི་དམག་ཞབས་ཟུར་པའི་ཉེར་སྤྱོད་དངོས་པོའི་བཟོ་གྲྭ། —",
         "mn": "Цуврал танилцуулга: Ард түмний төлөө зүтгэсэн мөр үлдсэн газарт — Рангран хөгжлийн бэрхшээлтэй дайчдын давирхайн өдөр тутмын хэрэгцээний үйлдвэр —"
       },
       "category": "Socialist Documentary Compilation"
@@ -143,14 +143,14 @@
         "ko": "조선예술영화: 조선의 별 (제10부: 불타는 근거지 — 전, 후편 —)",
         "en": "North Korean Art Film: Star of Korea — Part 10: Burning Base (Parts 1 & 2)",
         "zh": "朝鲜艺术电影：朝鲜之星（第十部：燃烧的根据地 —— 前、后篇 ——）",
-        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် (အပိုင်း ၁၀- တောက်လောင်နေသော အခြေစိုက်စခန်း — ပထမပိုင်း နှင့် ဒုတိယပိုင်း —)",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် (အပိုင်း ၁၀- တောက်လောင်နေသော အခြေစိုက်စခန်း — ปထမပိုင်း နှင့် ဒုတိယပိုင်း —)",
         "ru": "Северокорейский художественный фильм: Звезда Кореи (Часть 10: Пылающая база — Части 1 и 2 —)",
         "ja": "朝鮮芸術映画：朝鮮의 별（第10部：燃える根拠地 — 前・後編 —）",
         "es": "Película de arte norcoreana: Estrella de Corea — Parte 10: Base en llamas (Partes 1 y 2)",
         "fr": "Film d'art nord-coréen : L'Étoile de Corée — Partie 10 : La base en flammes (Parties 1 & 2)",
         "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teil 10: Brennende Basis (Teile 1 & 2)",
         "kk": "Солтүстік Корея көркем фильмі: Корея жұлдызы (10-бөлім: Лаулаған бекініс — 1 және 2-бөлімдер —)",
-        "bo": "བྱང་ཀྲۆའུ་ཡི་སྒྱུ་རྩལ་གློག་བརྙན། བྱང་ཀྲۆའུ་ཡི་སྐར་མ། (ལེའུ་བཅུ་པ། འབར་བཞིན་པའི་གཞི་རྟེན། — སྟོད་སྨད་ཆ་གཉིས། —)",
+        "bo": "བྱང་ཀྲۆའུ་ཡི་སྒྱུ་རྩལ་གློག་བרྙན། བྱང་ཀྲۆའུ་ཡི་སྐར་མ། (ལེའུ་བཅུ་པ། འབར་བཞིན་པའི་གཞི་རྟེན། — སྟོད་སྨད་ཆاགཉིས། —)",
         "mn": "Солонгосын уран сайхны кино: Солонгосын од (Аравдугаар анги: Дөл улалзсан бааз — 1, 2-р анги —)"
       },
       "category": "Cinematic Feature Film"
@@ -164,12 +164,12 @@
         "zh": "专题：将其打造为青年教育的有力阵地",
         "my": "အထူးအစီအစဉ်- လူငယ်မျိုးဆက်သစ်ပညာရေးအတွက် အားကောင်းသော အခြေခံစခန်းတစ်ခု တည်ဆောက်ခြင်း",
         "ru": "Специальный репортаж: Создание мощной базы для воспитания молодежи",
-        "ja": "特集：青年教養의 威力있는 拠点에 築いてくださり",
+        "ja": "特集：青年教養의 威力있는 拠点에 築いてくださ리",
         "es": "Reportaje especial: Construyendo una base poderosa para la educación de la juventud",
         "fr": "Reportage spécial : Construire une base puissante pour l'éducation de la jeunesse",
         "de": "Sondersendung: Aufbau einer starken Basis für die Jugenderziehung",
         "kk": "Арнайы шығарылым: Жастар тәрбиесінің қуатты орталығын құру",
-        "bo": "དམིགས་བསལ་ལེ་ཚན། གཞོན་ནུའི་སློབ་གསོའི་སྟོབས་ལྡན་གཞི་རྟེན་བསྐྲུན་པ།",
+        "bo": "དམིགས་བสལ་ལེ་ཚན། གཞོན་ནུའི་སླۆབ་གསོའི་སྟོབས་ལྡན་གཞི་རྟེན་བསྐྲུན་པ།",
         "mn": "Тусгай сэдэв: Залуучуудын хүмүүжлийн хүчирхэг баазыг байгуулсан нь"
       },
       "category": "Special Political Feature"
@@ -188,7 +188,7 @@
         "fr": "Santé et mode de vie : Gestion de la santé pendant les fortes chaleurs — Apport en eau —",
         "de": "Gesundheit und Lebensweise: Gesundheitsmanagement bei glühender Hitze — Wasseraufnahme —",
         "kk": "Денсаулық пен тұрмыс: Аптап ыстықтағы күтім — Су ішу режимі —",
-        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — ཆུ་འཐུང་བ། —",
+        "bo": "འཕྲོད་བསྟེན་དང་အཚོ་བ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — ཆུ་འཐུང་བ། —",
         "mn": "Эрүүл мэнд ба амьдралын хэв маяг: Хэт халууны үеийн эрүүл мэндийн менежмент — Ус уух горим —"
       },
       "category": "Educational & Science Program"
@@ -230,6 +230,253 @@
         "mn": "Танилцуулга нэвтрүүлэг: Ялагдашгүй үеийнхний номын цуврал"
       },
       "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "15:40",
+      "end": "16:15",
+      "title": {
+        "ko": "아동방송무대: 우리는 혁명의 계승자",
+        "en": "Children's Broadcast Stage: We Are the Successors of the Revolution",
+        "zh": "儿童广播舞台：我们是革命的继承人",
+        "my": "ကလေးသူငယ်များဆိုင်ရာ ထုတ်လွှင့်မှုကဏ္ဍ- ကျွန်ုပ်တို့သည် တော်လှန်ရေး၏ ဆက်ခံသူများဖြစ်ကြသည်",
+        "ru": "Детская радиовещательная сцена: Мы — преемники революции",
+        "ja": "児童放送舞台：私たちは革命의 継承者",
+        "es": "Escenario de transmisión infantil: Somos los sucesores de la revolución",
+        "fr": "Scène de diffusion pour enfants : Nous sommes les successeurs de la révolution",
+        "de": "Kinder-Rundfunkbühne: Wir sind die Nachfolger der Revolution",
+        "kk": "Балаларға арналған бағдарлама: Біз — революцияның мұрагерлеріміз",
+        "bo": "བྱིས་པའི་ཟློས་གར་སྟེགས་བུ། ང་ཚོ་ནི་འགལ་བའི་ میرའཛིན་པ་ཡིན།",
+        "mn": "Хүүхдийн нэвтрүүлгийн тайз: Бид бол хувьсгалын халаа халаагчид"
+      },
+      "category": "Children's Programming"
+    },
+    {
+      "start": "16:15",
+      "end": "16:40",
+      "title": {
+        "ko": "체육기록영화: 제14차 아시아화학무술선수권대회 중에서",
+        "en": "Sports Documentary Film: From the 14th Asian Martial Arts Championship Highlights",
+        "zh": "体育纪录电影：第14届亚洲武术锦标赛花絮",
+        "my": "အားကစားမှတ်တမ်းရုပ်ရှင်- ၁၄ ကြိမ်မြောက် အာရှကိုယ်ခံပညာသိုင်းပေါင်းစုံ ချန်ပီယံရှစ်ပြိုင်ပွဲအတွင်းမှ ကောက်နုတ်ချက်",
+        "ru": "Спортивный документальный фильм: Из основных моментов 14-го чемпионата Азии по боевым искусствам",
+        "ja": "体育記録映画：第14回アジア武道選手権大会の中から",
+        "es": "Película documental deportiva: De los momentos más destacados del 14.º Campeonato Asiático de Artes Marciales",
+        "fr": "Film documentaire sportif : Extraits du 14ème Championnat d'Asie des arts martiaux",
+        "de": "Sportdokumentation: Highlights der 14. Asiatischen Kampfsportmeisterschaft",
+        "kk": "Спорттық деректі фильм: Жекпе-жектен өткен 14-ші Азия чемпионатының басты сәттері",
+        "bo": "ལུས་རྩལ་ལོ་རྒྱུས་དངོས་བཤེར་གློག་བརྙན། སྐབས་བཅུ་བཞི་པའི་ཡ་གླིང་རྩལ་ལག་འགྲན་བསྡུར་ཆེན་མོའི་ནང་ནས།",
+        "mn": "Спортын баримтат кино: Азийн тулааны урлагийн 14 дэх удаагийн аварга шалгаруулах тэмцээний тоймоос"
+      },
+      "category": "Sports & Fitness"
+    },
+    {
+      "start": "16:40",
+      "end": "17:00",
+      "title": {
+        "ko": "종합편집물: 인민의 복리증진을 위하여 — 평양시안의 가방공장, 신발공장들에서 —",
+        "en": "Comprehensive Program: For the Promotion of the People's Well-being — At Bag and Shoe Factories in Pyongyang City —",
+        "zh": "综合剪辑：为了增进人民的福利——在平壤市内的皮包厂、鞋厂中——",
+        "my": "ဘက်စုံစုစည်းတင်ပြချက်- ပြည်သူလူထု၏ လူနေမှုဘဝ မြှင့်တင်ရေးအတွက် - ပျံယန်းမြို့အတွင်းရှိ အိတ်နှင့် ဖိနပ်စက်ရုံများတွင် -",
+        "ru": "Комплексный сюжет: Ради повышения благосостояния народа — На сумочных и обувных фабриках Пхеньяна —",
+        "ja": "総合편집물：人民의 福利増進のために — 平壌市内の 가방工場・靴工場들에서 —",
+        "es": "Programa integral: Para la promoción del bienestar del pueblo — En las fábricas de bolsos y zapatos de la ciudad de Pionyang —",
+        "fr": "Programme global : Pour la promotion du bien-être du peuple — Dans les usines de sacs et de chaussures de la ville de Pyongyang —",
+        "de": "Umfassender Bericht: Zur Förderung des Wohlergehens des Volkes — In Taschen- und Schuhfabriken in der Stadt Pjöngjang —",
+        "kk": "Қорытынды сюжет: Халықтың әл-ауқатын арттыру жолында — Пхеньян қаласындағы сөмке және аяқ киім фабрикаларынан —",
+        "bo": "ཕྱོགས་བสྡུས་ལེ་ཚན། མི་དམངས་ཀྱི་བདེ་སྐྱིད་སྤེལ་བའི་ཆེད་དུ། — པྱང་ཡང་གྲོང་ཁྱེར་གྱི་ཁུག་མ་དང་ལྷམ་གྱི་བཟོ་གྲྭར། —",
+        "mn": "Нэгдсэн тойм: Ард түмний аж амьдралыг дээшлүүлэхийн төлөө — Пхеньян хотын цүнх, гутлын үйлдвэрүүдэд —"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "17:00",
+      "end": "17:15",
+      "title": {
+        "ko": "보도",
+        "en": "5PM Afternoon News Broadcast",
+        "zh": "下午5点新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Вечерний 17-часовой выпуск новостей",
+        "ja": "報道（5PMニュース）",
+        "es": "Noticiero de la tarde de las 5 PM",
+        "fr": "Journal d'information de 17h",
+        "de": "Nachrichten um 17 Uhr",
+        "kk": "Жаңалықтар: Сағат 17:00-дегі кешкі шығарылым",
+        "bo": "གསར་အགྱུར། (ཕྱི་དྲོ་ཆུ་ཚོད་༥པའི་གសར་အགྱུར།)",
+        "mn": "Мэдээ (Үдээс хойшхи 17 цагийн мэдээ)"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:15",
+      "end": "17:25",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览",
+        "my": "ယနေ့ထုတ် ဗဟိုသတင်းစာများ ကောက်နုတ်ချက်သုံးသပ်ချက်",
+        "ru": "Обзор сегодняшней центральной прессы",
+        "ja": "今日号의 中央新聞概観",
+        "es": "Revisión de los principales periódicos centrales de hoy",
+        "fr": "Revue de la presse centrale d'aujourd'hui",
+        "de": "Heutige Übersicht der zentralen Zeitungen",
+        "kk": "Орталық баспасөзге шолу: Бүгінгі газеттер не дейді?",
+        "bo": "དེ་རིང་གི་དབུས་གཞུང་ཚགས་པར་གནད་བསྡུས།",
+        "mn": "Өнөөдрийн төв сонинуудын тойм"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:25",
+      "end": "18:13",
+      "title": {
+        "ko": "조선기록영화: 조국청사에 길이 빛날 불멸의 업적 (5)",
+        "en": "North Korean Documentary Film: Immortal Achievements Shining Forever in the History of the Fatherland (Part 5)",
+        "zh": "朝鲜纪录电影：在祖国青史上永放光芒的功绩（5）",
+        "my": "ကိုရီးယားမှတ်တမ်းရုပ်ရှင်- မွေးရပ်မြေသမိုင်းကြောင်းတွင် ထာဝရတောက်ပြောင်နေမည့် မသေဆုံးနိုင်သော အောင်မြင်မှုများ (အပိုင်း ၅)",
+        "ru": "Северокорейский документальный фильм: Бессмертные достижения, вечно сияющие в истории Отечества (Часть 5)",
+        "ja": "朝鮮記録映画：祖国青史に永く輝く不滅の業績（5）",
+        "es": "Película documental norcoreana: Logros inmortales que brillan para siempre en la historia de la patria (Parte 5)",
+        "fr": "Film documentaire nord-coréen : Des réalisations immortelles qui brillent à jamais dans l'histoire de la patrie (Partie 5)",
+        "de": "Nordkoreanischer Dokumentarfilm: Unsterbliche Errungenschaften, die ewig in der Geschichte des Vaterlandes strahlen (Teil 5)",
+        "kk": "Деректі фильм: Отан тарихында мәңгі өшпес ұлы жетістіктер (5-бөлім)",
+        "bo": "བྱང་ཀྲۆأུ་ཡི་ལོ་རྒྱུས་དངོས་བཤེར་གློག་བརྙན། ཕ་ཡུལ་གྱི་ལོ་རྒྱུས་དེབ་ཐེར་དུ་གཏན་དུ་འཚེར་བའི་འཆི་མེད་མཛད་རྗེས། (ལྔ་པ།)",
+        "mn": "Солонгосын баримтат кино: Эх орны түүхэнд мөнхөд гялалзах өшпес гавьяа (5)"
+      },
+      "category": "Documentary Feature Film"
+    },
+    {
+      "start": "18:13",
+      "end": "18:35",
+      "title": {
+        "ko": "가사: 내 고향의 봄과 더불어",
+        "en": "Lyrics & Song: Along with the Spring of My Hometown",
+        "zh": "歌词与歌曲：伴着我故乡的春天",
+        "my": "ကဗျာလင်္ကာနှင့် တေးသီချင်း- ကျွန်ုပ်၏မွေးရပ်မြေ နွေဦးရာသီနှင့်အတူ",
+        "ru": "Лирика и песня: Вместе с весной моей родины",
+        "ja": "歌詞・歌：我が故郷の春とともに",
+        "es": "Letra y canción: Junto con la primavera de mi ciudad natal",
+        "fr": "Paroles & chanson : Aux côtés du printemps de mon pays natal",
+        "de": "Liedtext & Gesang: Zusammen mit dem Frühling meiner Heimat",
+        "kk": "Поэзия және ән: Туған жердің көктемімен бірге",
+        "bo": "གཞས་ཚིག་དང་གླུ་གཞས། ངའི་ཕ་ཡུལ་གྱི་དཔྱིད་ཀ་དང་ལྷན་དུ།",
+        "mn": "Дууны үг ба аялгуу: Төрсөн нутгийн минь хавартай хамт"
+      },
+      "category": "Literary & Cultural Arts"
+    },
+    {
+      "start": "18:35",
+      "end": "19:15",
+      "title": {
+        "ko": "소개편집물: 대동강강반에 솟아오른 문명한 새 거리",
+        "en": "Introduction Program: A New Civilized Street Rising on the Banks of the Taedong River",
+        "zh": "专题剪辑：大同江畔崛起的新文明街道",
+        "my": "မိတ်ဆက်တင်ပြချက်- ဒေဒုံမြစ်ကမ်းနားတွင် ပေါ်ထွန်းလာသော ယဉ်ကျေးမှုထွန်းကားရာ လမ်းမသစ်ကြီး",
+        "ru": "Тематический сюжет: Новая цивилизованная улица, выросшая на берегах реки Тэдонган",
+        "ja": "紹介편집물：大同江のほとりに聳え立つ文明的な新街路",
+        "es": "Recopilación de reportajes: Una nueva calle civilizada que se eleva a las orillas del río Taedong",
+        "fr": "Compilation de reportages : Une nouvelle rue civilisée s'élevant sur les rives de la rivière Taedong",
+        "de": "Zusammenstellung von Berichten: Eine neue zivilisierte Straße, die sich an den Ufern des Flusses Taedong erhebt",
+        "kk": "Ақпараттық сюжет: Тэдонган өзенінің жағалауында бой көтерген жаңа заманауи даңғыл",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ཏཱ་ཏུང་གཙང་པོའི་འགྲམ་དུ་བསྐྲུན་པའི་དཔལ་ཡོན་གྱི་ལམ་ཆེན་གསར་པ།",
+        "mn": "Танилцуулга нэвтрүүлэг: Тэдон голын эрэг дээр сүндерлэсэн соёлт шинэ гудамж"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "19:15",
+      "end": "20:00",
+      "title": {
+        "ko": "특집: 인민은 영원히 잊지 않으리",
+        "en": "Special: The People Will Never Forget",
+        "zh": "专题：人民将永远不会忘记",
+        "my": "အထူးအစီအစဉ်- ပြည်သူလူထုသည် ထာဝရမေ့လျော့မည်မဟုတ်ပါ",
+        "ru": "Специальный репортаж: Народ никогда не забудет",
+        "ja": "特集：人民は永遠に忘れないだろう",
+        "es": "Reportaje especial: El pueblo nunca olvidará",
+        "fr": "Reportage spécial : Le peuple n'oubliera jamais",
+        "de": "Sondersendung: Das Volk wird es niemals vergessen",
+        "kk": "Арнайы шығарылым: Халық сізді мәңгі ұмытпайды",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། མི་དམངས་ཀྱིས་གཏན་དུ་བརྗེད་མི་སྲིད།",
+        "mn": "Тусгай сэдэв: Ард түмэн хэзээ ч мартахгүй"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "20:00",
+      "end": "20:30",
+      "title": {
+        "ko": "보도",
+        "en": "8PM Main Evening News Broadcast",
+        "zh": "晚8点中央新闻报道",
+        "my": "သတင်းဦးရီကဏ္ဍ",
+        "ru": "Главный вечерний 20-часовой выпуск новостей",
+        "ja": "報道（8PMメインニュース）",
+        "es": "Noticiero principal de la noche de las 8 PM",
+        "fr": "Journal télévisé principal de 20h",
+        "de": "Hauptnachrichtensendung um 20 Uhr",
+        "kk": "Ақпараттық бағдарлама: Сағат 20:00-дегі негізгі жаңалықтар",
+        "bo": "གସར་အགྱུར། (མཚན་མོ་ཆུ་ཚོད་༨པའི་གཙོ་གནད་གସར་အགྱུར།)",
+        "mn": "Үндсэн мэдээ (Оройн 20 цагийн гол мэдээ)"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:30",
+      "end": "20:45",
+      "title": {
+        "ko": "날씨",
+        "en": "Weather Forecast",
+        "zh": "天气预报",
+        "my": "မိုးလေဝသခန့်မှန်းချက်",
+        "ru": "Прогноз погоды",
+        "ja": "天気予報",
+        "es": "Pronóstico del tiempo",
+        "fr": "Prévisions météorologiques",
+        "de": "Wettervorhersage",
+        "kk": "Ауа райы болжамы",
+        "bo": "གནམ་གཤིས་སྔོན་བརྡ།",
+        "mn": "Цаг агаарын урьдчилсан мэдээ"
+      },
+      "category": "Weather Report"
+    },
+    {
+      "start": "20:45",
+      "end": "22:10",
+      "title": {
+        "ko": "조선예술영화: 조선의 별 (제11부: 대지의 새벽)",
+        "en": "North Korean Art Film: Star of Korea — Part 11: Dawn of the Earth",
+        "zh": "朝鲜艺术电影：朝鲜之星（第十一部：大地的黎明）",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် (အပိုင်း ၁၁- ကမ္ဘာမြေ၏ အာရုဏ်ဦး)",
+        "ru": "Северокорейский художественный фильм: Звезда Кореи (Часть 11: Рассвет земли)",
+        "ja": "朝鮮芸術映画：朝鮮의 별（第11部：大地の夜明け）",
+        "es": "Película de arte norcoreana: Estrella de Corea — Parte 11: El amanecer de la tierra",
+        "fr": "Film d'art nord-coréen : L'Étoile de Corée — Partie 11 : L'aube de la terre",
+        "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teil 11: Morgendämmerung der Erde",
+        "kk": "Солтүстік Корея көркем фильмі: Корея жұлдызы (11-бөлім: Жер бесігінің оянуы)",
+        "bo": "ཀྲུང་གོ་བྱང་མའི་སྒྱུ་རྩལ་གློག་བརྙན། བྱང་ཀྲۆའུ་ཡི་སྐར་མ། (ལེའུ་བཅུ་གཅིག་པ། ས་གཞིའི་ཐོ་རེངས།)",
+        "mn": "Солонгосын уран сайхны кино: Солонгосын од (Арван нэгдүгээр анги: Дэлхийн үүр цайлт)"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "22:10",
+      "end": "22:30",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道摘要",
+        "my": "ယနေ့ထုတ်လွှင့်ခဲ့သော သတင်းထူးများအတွင်းမှ ကောက်နုတ်ချက်",
+        "ru": "Главное из сегодняшней выпусков новостей",
+        "ja": "오늘의 報道중에서（뉴스하이라이트）",
+        "es": "De los momentos destacados del informe de noticias de hoy",
+        "fr": "Parmi les faits marquants des rapports d'actualité d'aujourd'hui",
+        "de": "Highlights aus den heutigen Nachrichtensendungen",
+        "kk": "Жаңалықтар топтамасы: Бүгінгі басты оқиғаларға шолу",
+        "bo": "དེ་རིང་གི་གསར་အགྱུར་གནད་བསྡུས།",
+        "mn": "Өнөөдрийн мэдээний тоймоос"
+      },
+      "category": "Daily News Bulletin"
     }
   ]
 }
