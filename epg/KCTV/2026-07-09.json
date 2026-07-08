@@ -1,0 +1,235 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-09",
+  "source": "Korean Central Television (Juche TV)",
+  "programs": [
+    {
+      "start": "09:15",
+      "end": "10:10",
+      "title": {
+        "ko": "특집: 영원한 승리의 기치 (2)",
+        "en": "Special Feature: Banner of Eternal Victory (Part 2)",
+        "zh": "特别节目：永远胜利的旗帜（2）",
+        "my": "အထူးအစီအစဉ်- ထာဝရအောင်ပွဲ၏ အလံတော် (အပိုင်း ၂)",
+        "ru": "Специальный репортаж: Знамя вечной победы (Часть 2)",
+        "ja": "特集：永遠の勝利の旗印（2）",
+        "es": "Reportaje especial: Estandarte de la victoria eterna (Parte 2)",
+        "fr": "Reportage spécial : La bannière de la victoire éternelle (Partie 2)",
+        "de": "Sonderbericht: Banner des ewigen Sieges (Teil 2)",
+        "kk": "Арнайы шығарылым: Мәңгілік жеңіс туы (2-бөлім)",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། གཏན་དུ་རྒྱལ་བའི་དར་ཆ། (གཉིས་པ།)",
+        "mn": "Тусгай нэвтрүүлэг: Мөнхийн ялалтын туг (2)"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "10:10",
+      "end": "10:14",
+      "title": {
+        "ko": "연속참관기: 위인칭송의 고귀한 제보 — 국제친선전람관을 찾아서 (159) —",
+        "en": "Serial Visit Report: Noble Testimonies Praising the Great Man — Visiting the International Friendship Exhibition - Part 159 —",
+        "zh": "系列探访：颂扬伟人的珍贵展品——探访国际友谊展览馆（159）——",
+        "my": "အစဉ်တစိုက်参觀မှတ်တမ်း- ကြီးမြတ်သောလူသားအား ချီးမွမ်းခြင်းဆိုင်ရာ မြင့်မြတ်သောအလှူပစ္စည်းများ - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၁၅၉) -",
+        "ru": "Серия репортажей о посещении: Драгоценные дары великому человеку — Посещение Выставки международной дружбы (Часть 159) —",
+        "ja": "連続参観記：偉인称赞의 気高い品々 — 国際親善展覧館을 찾아서（159）—",
+        "es": "Informe de visita en serie: Tributos preciosos a las grandes personas — Visitando la Exposición de la Amistad Internacional (Parte 159) —",
+        "fr": "Rapport de visite en série : Hommages précieux aux grands hommes — En visitant l'Exposition de l'amitié internationale (Partie 159) —",
+        "de": "Zusammensetzung von Berichten: Kostbare Tribute an die großen Persönlichkeiten — Zu Besuch in der Internationalen Freundschaftsausstellung (Teil 159) —",
+        "kk": "Хроникалық шолу: Ұлы тұлғаға тарту етілген бағалы сыйлықтар — Халықаралық достық көрмесіне саяхат (159-бөлім) —",
+        "bo": "བསྟུད་မར་གཟིགས་སྐоར་ཞུས་པའི་ཟིན་ཐོ། སྐྱེས་བུ་ཆེན་པོར་བསྟོད་པའི་རྩ་ཆེའི་དངོས་པོ། — རྒྱལ་សྤјིའི་མཛའ་མཐུན་အགྲེམས་སྟོན་ཁང་ལ་གཟིགས་སྐོར་ཞུས་པ། (བརྒྱ་ငོ་དགུ་པ།) —",
+        "mn": "Цуврал сурвалжилга: Сүрлэг хүмүүсийг магтан алдаршуулах эрхэм нандин олдворууд — Олон улсын найрамдалт үзэсгэлэнгийн ордноор зорчсон тэмдэглэл (159)"
+      },
+      "category": "Cultural Visit Series"
+    },
+    {
+      "start": "10:14",
+      "end": "10:47",
+      "title": {
+        "ko": "연속소개편집물: 영생하는 우리 당의 혁명전사들 — 인민무력부 제1부부장이였던 김광진 —",
+        "en": "Serial Introduction Compilation: Immortal Revolutionary Soldiers of Our Party — Kim Kwang Jin, Former First Vice-Minister of the Ministry of People's Armed Forces —",
+        "zh": "系列专题剪辑：永生我党的革命战士——原人民武力部第一副部长金光镇——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကျွန်ုပ်တို့ပါတီ၏ ထာဝရရှင်သန်နေသော တော်လှန်ရေးရဲဘော်များ - ပြည်သူ့လက်နက်ကိုင်အင်အားစုဝန်ကြီးဌာန၏ ဒုတိယဝန်ကြီးချုပ်ဟောင်း ကင်ဂွမ်ဂျင်း -",
+        "ru": "Серия тематических сюжетов: Бессмертные революционные воины нашей Партии — Ким Кван Джин, бывший первый заместитель министра Народных Вооруженных Сил —",
+        "ja": "連続紹介編集물：永生하는 我が党의 革命戦士들 — 元人民武力部第一副部長 金光鎮 —",
+        "es": "Recopilación de reportajes en serie: Soldados revolucionarios inmortales de nuestro Partido — Kim Kwang Jin, ex primer viceministro del Ministerio de las Fuerzas Armadas del Pueblo —",
+        "fr": "Compilation de reportages en série : Les soldats révolutionnaires immortels de notre Parti — Kim Kwang Jin, ancien premier vice-minister du Ministère des forces armées populaires —",
+        "de": "Zusammensetzung von Berichten: Unsterbliche revolutionäre Soldaten unserer Partei — Kim Kwang Jin, ehemaliger erster Vize-Minister des Ministeriums der Volksstreitkräfte —",
+        "kk": "Деректі жинақ: Партиямыздың мәңгілік революциялық жауынгерлері — Халық қарулы күштері министрінің бұрынғы бірінші орынбасары Ким Кван Жин —",
+        "bo": "བསྟུད་མར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། གཏན་དུ་གསོན་པའི་ང་ཚོའི་ཏང་གི་འགལ་བའི་དཔའ་བོ། — མི་དམངས་དྲག་པོའི་དཔུང་སྡེའི་པུའུ་ཡི་པུའུ་ཀྲང་གཞོན་པ་ প্ৰཐམ་པ་ཟུར་པ་ཀིམ་ཀྭང་ཅིན། —",
+        "mn": "Цуврал танилцуулга: Манай намын мөнхөд орших хувьсгалт дайчид — Ардын зэвсэгт хүчний яамны нэгдүгээр дэд сайд асан Ким Кван Жин —"
+      },
+      "category": "Biographical Documentary Compilation"
+    },
+    {
+      "start": "10:47",
+      "end": "11:04",
+      "title": {
+        "ko": "문답: 수경온실에서의 양어방법",
+        "en": "Q&A: Methods of Fish Farming in Hydroponic Greenhouses",
+        "zh": "问答：水耕温室的养鱼方法",
+        "my": "အမေးအဖြေ- ဟိုက်ဒရိုပိုးနစ်ဖန်လုံအိမ်အတွင်း ငါးမွေးမြူနည်းစနစ်များ",
+        "ru": "Вопросы и ответы: Методы рыбоводства в гидропонных теплицах",
+        "ja": "问答：水耕温室での養魚方法",
+        "es": "Preguntas y respuestas: Métodos de piscicultura en invernaderos hidropónicos",
+        "fr": "Questions et réponses : Méthodes de pisciculture dans les serres hydroponiques",
+        "de": "Fragen und Antworten: Methoden der Fischzucht in Gewächshäusern für Hydrokultur",
+        "kk": "Сұрақ-жауап: Гидропоникалық жылыжайларда балық өсіру әдістері",
+        "bo": "དྲི་བ་དྲིས་ལན། ཆུ་གསོ་དྲོད་ཁང་དུ་ཉ་གསོ་བའི་ཐབས་ལམ།",
+        "mn": "Асуулт хариулт: Гидропоник хүлэмжинд загас үржүүлэх арга техник"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "11:04",
+      "end": "11:34",
+      "title": {
+        "ko": "소개편집물: 한 청년돌격대원의 수첩을 보며",
+        "en": "Introduction Compilation: Looking into a Youth Shock Brigade Member's Notebook",
+        "zh": "专题剪辑：看着一名青年突击队队员的笔记本",
+        "my": "မိတ်ဆက်တင်ပြချက်- လူငယ်သူရဲကောင်းတပ်ဖွဲ့ဝင်တစ်ဦး၏ မှတ်စုစာအုပ်ငယ်ကို ပြန်လည်ကြည့်ရှုခြင်း",
+        "ru": "Тематический сюжет: Заглядывая в блокнот бойца молодежной ударной бригады",
+        "ja": "紹介편집물：ある青年突撃隊員의 小冊子를 보고",
+        "es": "Recopilación de reportajes: Mirando la libreta de un miembro de la brigada de choque juvenil",
+        "fr": "Compilation de reportages : En regardant le carnet d'un membre de la brigade de choc des jeunes",
+        "de": "Zusammensetzung von Berichten: Ein Blick in das Notizbuch eines Mitglieds der Jugendstoßbrigade",
+        "kk": "Ақпараттық сюжет: Жастар соққы бригадасы сарбазының қойын дәптеріне көз салғанда",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། གཞོན་ནུ་གདོང་ལེན་རུ་ཁག་གི་རུ་མི་ཞིག་གི་ཉིན་ཐོར་ལྟ་བ།",
+        "mn": "Танилцуулга нэвтрүүлэг: Залуучуудын цохилтын бригадын гишүүний тэмдэглэлийн дэвтрийг сөхвөл"
+      },
+      "category": "Socialist Youth Documentary"
+    },
+    {
+      "start": "11:34",
+      "end": "11:48",
+      "title": {
+        "ko": "연속소개편집물: 위민헌신의 자욱 새겨진 곳에서 — 락랑영예군인지수일용품공장 —",
+        "en": "Serial Introduction Compilation: In the Places Etched with Devotion to the People — Rangrang Disabled Soldiers' Resin Daily Necessities Factory —",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——乐浪荣誉军人树脂日用品厂——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံမှု အရှိန်အဝါများ လွှမ်းခြုံထားရာနေရာ - ရန်ရန်း မသန်စွမ်းစစ်မှုထမ်းဟောင်းများ၏ ပလတ်စတစ်လူသုံးကုန်ပစ္စည်းစက်ရုံ -",
+        "ru": "Серия тематических сюжетов: Там, где запечатлены следы самоотверженного служения народу — Рангранский завод полимерных изделий повседневного спроса для инвалидов войны —",
+        "ja": "連続紹介편집물：人民献身의 足跡이 새겨진 곳에서 — 楽浪栄誉軍人樹脂日用品工場 —",
+        "es": "Recopilación de reportajes en serie: En los lugares grabados con devoción al pueblo — Fábrica de artículos diarios de resina para soldados discapacitados de Rangrang —",
+        "fr": "Compilation de reportages en série : Dans les lieux empreints de dévouement envers le peuple — Usine d'articles quotidiens en résine pour soldats handicapés de Rangrang —",
+        "de": "Zusammensetzung von Berichten: An den Orten, die von der Aufopferung für das Volk geprägt sind — Rangrang Harz-Alltagsbedarfsfabrik für behinderte Soldaten —",
+        "kk": "Деректі жинақ: Халыққа қызмет етудің ізі қалған жерде — Рангран соғыс мүгедектеріне арналған шайырлы тұрмыстық бұйымдар зауыты —",
+        "bo": "བསྟུད་မར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བསམ་བཅངས་པའི་ཞབས་རྗེས་འཁོད་པའི་སར། — ལུའོ་ལང་ལ་ལ་རྒྱ་ཅན་གྱི་དམག་ཞབས་ཟུར་པའི་ཉེར་སྤྱོད་དངོས་པོའི་བཟོ་གྲྭ། —",
+        "mn": "Цуврал танилцуулга: Ард түмний төлөө зүтгэсэн мөр үлдсэн газарт — Рангран хөгжлийн бэрхшээлтэй дайчдын давирхайн өдөр тутмын хэрэгцээний үйлдвэр —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "11:48",
+      "end": "12:04",
+      "title": {
+        "ko": "혁명일화: 젓갈품의 가격에도",
+        "en": "Revolutionary Anecdote: Even in the Price of Salted Fish",
+        "zh": "革命轶事：甚至在鱼酱的价格中",
+        "my": "တော်လှန်ရေးပုံပြင်တို- ငါးပိငါးခြောက်တို့၏ ဈေးနှုန်းများအတွင်း၌ပင်",
+        "ru": "Революционный анекдот: Даже в цене на соленую рыбу",
+        "ja": "革命逸話：塩辛類의 価格에도",
+        "es": "Anécdota revolucionaria: Incluso en el precio del pescado salado",
+        "fr": "Anecdote révolutionnaire : Même dans le prix du poisson salé",
+        "de": "Revolutionäre Anekdote: Sogar im Preis von gesalzenem Fisch",
+        "kk": "Революциялық тәмсіл: Тұздалған балықтың бағасында да",
+        "bo": "འགལ་བའི་གཏམ་རྒྱུད་ཐུང་ངུ། ཉ་ཤའི་ཚྭ་སྦྱོར་གྱི་གོང་ཚད་ལའང་།",
+        "mn": "Хувьсгалт дуртгал: Хатаасан загасны үнэнд хүртэл"
+      },
+      "category": "Historical & Leadership Anecdotes"
+    },
+    {
+      "start": "12:04",
+      "end": "14:16",
+      "title": {
+        "ko": "조선예술영화: 조선의 별 (제10부: 불타는 근거지 — 전, 후편 —)",
+        "en": "North Korean Art Film: Star of Korea — Part 10: Burning Base (Parts 1 & 2)",
+        "zh": "朝鲜艺术电影：朝鲜之星（第十部：燃烧的根据地 —— 前、后篇 ——）",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကိုရီးယား၏ကြယ်ပွင့် (အပိုင်း ၁၀- တောက်လောင်နေသော အခြေစိုက်စခန်း — ပထမပိုင်း နှင့် ဒုတိယပိုင်း —)",
+        "ru": "Северокорейский художественный фильм: Звезда Кореи (Часть 10: Пылающая база — Части 1 и 2 —)",
+        "ja": "朝鮮芸術映画：朝鮮의 별（第10部：燃える根拠地 — 前・後編 —）",
+        "es": "Película de arte norcoreana: Estrella de Corea — Parte 10: Base en llamas (Partes 1 y 2)",
+        "fr": "Film d'art nord-coréen : L'Étoile de Corée — Partie 10 : La base en flammes (Parties 1 & 2)",
+        "de": "Nordkoreanischer Spielfilm: Der Stern von Korea — Teil 10: Brennende Basis (Teile 1 & 2)",
+        "kk": "Солтүстік Корея көркем фильмі: Корея жұлдызы (10-бөлім: Лаулаған бекініс — 1 және 2-бөлімдер —)",
+        "bo": "བྱང་ཀྲۆའུ་ཡི་སྒྱུ་རྩལ་གློག་བརྙན། བྱང་ཀྲۆའུ་ཡི་སྐར་མ། (ལེའུ་བཅུ་པ། འབར་བཞིན་པའི་གཞི་རྟེན། — སྟོད་སྨད་ཆ་གཉིས། —)",
+        "mn": "Солонгосын уран сайхны кино: Солонгосын од (Аравдугаар анги: Дөл улалзсан бааз — 1, 2-р анги —)"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "14:16",
+      "end": "14:52",
+      "title": {
+        "ko": "특집: 청년교양의 위력한 거점으로 꾸려주시여",
+        "en": "Special: Building a Powerful Base for Youth Education",
+        "zh": "专题：将其打造为青年教育的有力阵地",
+        "my": "အထူးအစီအစဉ်- လူငယ်မျိုးဆက်သစ်ပညာရေးအတွက် အားကောင်းသော အခြေခံစခန်းတစ်ခု တည်ဆောက်ခြင်း",
+        "ru": "Специальный репортаж: Создание мощной базы для воспитания молодежи",
+        "ja": "特集：青年教養의 威力있는 拠点에 築いてくださり",
+        "es": "Reportaje especial: Construyendo una base poderosa para la educación de la juventud",
+        "fr": "Reportage spécial : Construire une base puissante pour l'éducation de la jeunesse",
+        "de": "Sondersendung: Aufbau einer starken Basis für die Jugenderziehung",
+        "kk": "Арнайы шығарылым: Жастар тәрбиесінің қуатты орталығын құру",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། གཞོན་ནུའི་སློབ་གསོའི་སྟོབས་ལྡན་གཞི་རྟེན་བསྐྲུན་པ།",
+        "mn": "Тусгай сэдэв: Залуучуудын хүмүүжлийн хүчирхэг баазыг байгуулсан нь"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "14:52",
+      "end": "14:58",
+      "title": {
+        "ko": "건강과 생활섭생: 무더위때 건강관리 — 수분섭취 —",
+        "en": "Health and Lifestyle: Health Management during Sweltering Heat — Water Intake —",
+        "zh": "健康与生活：酷暑时期的健康管理——水分摄取——",
+        "my": "ကျန်းမာရေးနှင့် နေထိုင်မှုပုံစံ- ပြင်းထန်သော အပူဒဏ်အတွင်း ကျန်းမာရေးစောင့်ရှောက်မှု - ရေဓာတ်ဖြည့်တင်းခြင်း -",
+        "ru": "Здоровье и образ жизни: Забота о здоровье в сильную жару — Потребление воды —",
+        "ja": "健康と生活習慣：猛暑時의 健康管理 — 水分摂取 —",
+        "es": "Salud y estilo de vida: Cuidado de la salud durante el calor sofocante — Ingesta de agua —",
+        "fr": "Santé et mode de vie : Gestion de la santé pendant les fortes chaleurs — Apport en eau —",
+        "de": "Gesundheit und Lebensweise: Gesundheitsmanagement bei glühender Hitze — Wasseraufnahme —",
+        "kk": "Денсаулық пен тұрмыс: Аптап ыстықтағы күтім — Су ішу режимі —",
+        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — ཆུ་འཐུང་བ། —",
+        "mn": "Эрүүл мэнд ба амьдралын хэв маяг: Хэт халууны үеийн эрүүл мэндийн менежмент — Ус уух горим —"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "14:58",
+      "end": "15:25",
+      "title": {
+        "ko": "특집: 피끓는 맹세문들 (1. 당과 수령을 위하여)",
+        "en": "Special: Blood-Boiling Oaths (Part 1: For the Party and the Leader)",
+        "zh": "专题：热血沸腾的誓言（1. 为了党和领袖）",
+        "my": "အထူးအစီအစဉ်- သွေးကြွစေသော သစ္စာအဓိဋ္ဌာန်များ (အပိုင်း ၁- ပါတီနှင့် ခေါင်းဆောင်ကြီးအတွက်)",
+        "ru": "Специальный репортаж: Кипящие кровью клятвы (Часть 1: За Партию и Вождя)",
+        "ja": "特集：血沸く誓書たち（1. 党と首領のために）",
+        "es": "Reportaje especial: Juramentos con sangre hirviendo (Parte 1: Por el Partido y el Líder)",
+        "fr": "Reportage spécial : Des serments au sang bouillant (Partie 1 : Pour le Parti et le Leader)",
+        "de": "Sondersendung: Blutkochende Eide (Teil 1: Für die Partei und den Führer)",
+        "kk": "Арнайы репортаж: Жалынды ант (1-бөлім: Партия мен Көшбасшы үшін)",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། ཁྲག་བསྐོལ་བའི་དམ་བཅའ། (དང་པོ། ཏང་དང་གཙོ་འཛིན་གྱི་ཆེད་དུ།)",
+        "mn": "Тусгай сэдэв: Зүрх догдлуулам тангараг (1. Нам ба удирдагчийн төлөө)"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "15:25",
+      "end": "15:40",
+      "title": {
+        "ko": "소개편집물: 필승세대의 총서",
+        "en": "Introduction Program: Collection of the Victorious Generation",
+        "zh": "专题剪辑：必胜世代的丛书",
+        "my": "မိတ်ဆက်တင်ပြချက်- မုချအောင်ပွဲရမည့် မျိုးဆက်သစ်တို့၏ စာစဉ်စုစု",
+        "ru": "Тематический сюжет: Собрание сочинений победоносного поколения",
+        "ja": "紹介편집물：必勝世代의 叢書",
+        "es": "Recopilación de reportajes: Colección de la generación victoriosa",
+        "fr": "Compilation de reportages : Collection de la génération victorieuse",
+        "de": "Zusammenstellung von Berichten: Sammlung der siegreichen Generation",
+        "kk": "Ақпараттық бағдарлама: Жеңімпаз ұрпақтың жинағы",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ངེས་པར་རྒྱལ་བའི་རབས་ཀྱི་གསུང་རྩོམ་ཕྱོགས་བསྡུས།",
+        "mn": "Танилцуулга нэвтрүүлэг: Ялагдашгүй үеийнхний номын цуврал"
+      },
+      "category": "Socialist Documentary Compilation"
+    }
+  ]
+}
