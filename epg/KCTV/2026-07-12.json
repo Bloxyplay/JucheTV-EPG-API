@@ -262,47 +262,82 @@
         "zh": "电视舞台：采访途中结识的慈江道人们（二）"
       },
       "category": "Arts & Performance"
+    },
+    {
+      "start": "20:00",
+      "end": "20:32",
+      "title": {
+        "ko": "보도",
+        "en": "News Broadcast",
+        "zh": "新闻报道",
+        "my": "သတင်းထုတ်လွှင့်ချက်",
+        "ru": "Выпуск новостей",
+        "ja": "報道",
+        "es": "Noticiero",
+        "fr": "Journal d'information",
+        "de": "Nachrichten",
+        "kk": "Жаңалықтар",
+        "bo": "གសར་အགྱur།",
+        "mn": "Мэдээ"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:32",
+      "end": "21:39",
+      "title": {
+        "ko": "조선기록영화: 인민을 위한 영도의 나날에 3",
+        "en": "North Korean Documentary Film: In the Days of Leadership for the People - Part 3",
+        "zh": "朝鲜纪录电影：在为了人民的领导岁月里 3",
+        "my": "ကိုရီးယားမှတ်တမ်းရုပ်ရှင်- ပြည်သူလူထုအတွက် ဦးဆောင်ခဲ့သော နေ့ရက်များတွင် ၃",
+        "ru": "Северокорейский документальный фильм: В дни руководства во благо народа (Часть 3)",
+        "ja": "朝鲜記録映画：人民のための领导の日々に 3",
+        "es": "Película documental norcoreana: En los días de liderazgo para el pueblo (Parte 3)",
+        "fr": "Film documentaire nord-coréen : Aux jours de direction pour le peuple (Partie 3)",
+        "de": "Nordkoreanischer Dokumentarfilm: In den Tagen der Führung für das Volk (Teil 3)",
+        "kk": "Солтүстік Корея деректі фильмі: Халық игілігі жолындағы басшылық күндері (3-бөлім)",
+        "bo": "བྱང་ཀྲۆའུ་ཡི་ལོ་རྒྱуས་དེབ་ཐེར་གློག་བرྙན། མི་དมངས་ཀྱི་ཆེད་དུ་དབུ་ཁྲིད་གནང་བའི་ཉིན་မོ་ལ། ༣",
+        "mn": "Солонгосын баримтат кино: Ард түмний төлөөх удирдлагын он жилүүдэд 3"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "21:39",
+      "end": "21:55",
+      "title": {
+        "ko": "특집: 발전소에서 만난 공로자, 노력혁신자들",
+        "en": "Special Feature: Meritorious Persons and Labor Innovators Met at the Power Plant",
+        "zh": "特别节目：在发电厂结识的功臣与劳动革新者们",
+        "my": "အထူးအစီအစဉ်- လျှပ်စစ်ဓာတ်အားပေးစက်ရုံတွင် တွေ့ဆုံခဲ့သော ဂုဏ်ထူးဆောင်ပုဂ္ဂိုလ်များနှင့် လုပ်ငန်းခွင်တီထွင်ဆန်းသစ်သူများ",
+        "ru": "Специальный репортаж: Заслуженные деятели и новаторы труда, встреченные на электростанции",
+        "ja": "特集：发电所で出会った功労者、努力革新者たち",
+        "es": "Reportaje especial: Personas meritorias e innovadores laborales conocidos en la planta de energía",
+        "fr": "Reportage especial : Personnes méritantes et innovateurs du travail rencontrés à la centrale électrique",
+        "de": "Sonderbericht: Verdiente Persönlichkeiten und Arbeitsinnovatoren, die in der Kraftanlage getroffen wurden",
+        "kk": "Арнайы шығарылым: Электр станциясында кездескен еңбек сіңірген қайраткерлер мен өндіріс жаңашылдары",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། གློག་ཁང་དུ་အཕྲད་པའི་བྱས་རྗེས་ཅན་성과ངལ་རྩོལ་གសར་གཏོད་པ།",
+        "mn": "Тусгай нэвтрүүлэг: Цахилгаан станцад тааралдсан гавьяатнууд болон хөдөлмөрийн шинийг санаачлагчид"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "21:55",
+      "end": "22:15",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道摘要",
+        "my": "ယနေ့ထုတ်လွှင့်ခဲ့သော သတင်းထူးသတင်းဦး ကောက်နုတ်ချက်များ",
+        "ru": "Из сегодняшних главных новостей",
+        "ja": "今日の報道の中から",
+        "es": "De los reportajes de noticias destacados de hoy",
+        "fr": "Parmi les faits marquants du journal d'information d'aujourd'hui",
+        "de": "Aus den heutigen Nachrichtenhauptmeldungen",
+        "kk": "Бүгінгі жаңалықтардың маңызды тұстары",
+        "bo": "དེ་རིང་གི་གសར་အགྱུར་གནད་བསྡུས་ལས་།",
+        "mn": "Өнөөдрийн мэдээний тоймоос"
+      },
+      "category": "Daily News Bulletin"
     }
   ]
-},
-[
-  {
-    "start": "20:00",
-    "end": "20:29",
-    "title": {
-      "ko": "보도 (20시)",
-      "en": "News Broadcast (20:00)",
-      "zh": "新闻报道 (20点)"
-    },
-    "category": "Main News Bulletin"
-  },
-  {
-    "start": "20:29",
-    "end": "20:35",
-    "title": {
-      "ko": "건강과 생활섭생: 무더위때 건강관리 - 음료마시기 -",
-      "en": "Health and Daily Regime: Health Management during Sweltering Heat - Drinking Beverages -",
-      "zh": "健康与生活常识：酷暑时节的健康管理——饮水"
-    },
-    "category": "Health & Lifestyle"
-  },
-  {
-    "start": "20:35",
-    "end": "21:53",
-    "title": {
-      "ko": "조선예술영화: 어머니의 행복",
-      "en": "Korean Art Film: Mother's Happiness",
-      "zh": "朝鲜艺术电影：母亲的幸福"
-    },
-    "category": "Drama Movie"
-  },
-  {
-    "start": "21:53",
-    "end": "22:15",
-    "title": {
-      "ko": "오늘의 보도중에서",
-      "en": "From Today's News (News Highlights)",
-      "zh": "今日报道摘编"
-    },
-    "category": "News Highlights"
-  },
+}
