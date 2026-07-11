@@ -31,32 +31,50 @@ export default async function handler(req, res) {
     res.status(200).json(json);
     
   } catch (error) {
-    // FALLBACK: If file doesn't exist, generate the default EPG
+    // FALLBACK: If file doesn't exist, generate an hour-by-hour EPG
+    const defaultTitle = {
+      ko: "조선중앙텔레비죤",
+      en: "Wonderful Program",
+      zh: "精彩节目",
+      my: "အံ့သြဖွယ်အစီအစဉ်",
+      ru: "Замечательная программа",
+      ja: "素晴らしい番組",
+      es: "Programa Maravilloso",
+      fr: "Programme Merveilleux",
+      de: "Wunderbares Programm",
+      kk: "Керемет бағдарлама",
+      bo: "ལེ་ཚན་ངོ་མཚར་ཅན།",
+      mn: "Гайхамшигт хөтөлбөр"
+    };
+
+    const generatedPrograms = [];
+
+    // Loop to create hour-by-hour programs from 09:00 to 22:00
+    for (let i = 9; i < 22; i++) {
+      const startHour = i.toString().padStart(2, '0');
+      const endHour = (i + 1).toString().padStart(2, '0');
+      
+      generatedPrograms.push({
+        start: `${startHour}:00`,
+        end: `${endHour}:00`,
+        title: defaultTitle,
+        category: "General"
+      });
+    }
+
+    // Add the final block from 22:00 to 22:15
+    generatedPrograms.push({
+      start: "22:00",
+      end: "22:15",
+      title: defaultTitle,
+      category: "General"
+    });
+
     const fallbackEPG = {
       channel: ch,
       date: date,
       source: "Korean Central Television (Juche TV)",
-      programs: [
-        {
-          start: "09:00",
-          end: "22:15",
-          title: {
-            ko: "조선중앙텔레비죤", // Updated here
-            en: "Wonderful Program",
-            zh: "精彩节目",
-            my: "အံ့သြဖွယ်အစီအစဉ်",
-            ru: "Замечательная программа",
-            ja: "素晴らしい番組",
-            es: "Programa Maravilloso",
-            fr: "Programme Merveilleux",
-            de: "Wunderbares Programm",
-            kk: "Керемет бағдарлама",
-            bo: "ལེ་ཚན་ངོ་མཚར་ཅན།",
-            mn: "Гайхамшигт хөтөлбөр"
-          },
-          category: "General"
-        }
-      ]
+      programs: generatedPrograms
     };
 
     res.setHeader('Content-Type', 'application/json');
