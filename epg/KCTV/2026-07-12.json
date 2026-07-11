@@ -1,0 +1,308 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-11",
+  "source": "Korean Central Television (Juche TV)",
+  "programs": [
+    {
+      "start": "09:14",
+      "end": "09:47",
+      "title": {
+        "ko": "연속기행: 신의주온실종합농장지구를 찾아서 (2)",
+        "en": "Continuous Travelogue: Visiting Sinuiju Greenhouse Comprehensive Farm District (2)",
+        "zh": "系列游记：走访新义州温室综合农场区（二）"
+      },
+      "category": "Travelogue"
+    },
+    {
+      "start": "09:47",
+      "end": "09:52",
+      "title": {
+        "ko": "연속참관기: 위인칭송의 고귀한 재보 - 국제친선전람관을 찾아서 - (169)",
+        "en": "Continuous Visits: Noble Treasures of Praise for the Great Men - Visiting the International Friendship Exhibition - (169)",
+        "zh": "系列参观记：赞颂伟人的高贵财富——走访国际友谊展览馆（169）"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "09:52",
+      "end": "10:17",
+      "title": {
+        "ko": "특집: 공화국기발 - 애국의 기치",
+        "en": "Special Feature: Republic Flag - The Banner of Patriotism",
+        "zh": "专题片：共和国国旗——爱国的旗帜"
+      },
+      "category": "Special Report"
+    },
+    {
+      "start": "10:17",
+      "end": "10:25",
+      "title": {
+        "ko": "건강과 생활섭생: 무더위때 건강관리 - 고혈압환자들 -",
+        "en": "Health and Daily Regime: Health Management during Sweltering Heat - Hypertension Patients -",
+        "zh": "健康与生活常识：酷暑时节的健康管理——高血压患者"
+      },
+      "category": "Health & Lifestyle"
+    },
+    {
+      "start": "10:25",
+      "end": "10:45",
+      "title": {
+        "ko": "과학영화: 뼈대사와 칼슘",
+        "en": "Science Film: Bone Metabolism and Calcium",
+        "zh": "科学片：骨代谢与钙"
+      },
+      "category": "Science & Education"
+    },
+    {
+      "start": "10:45",
+      "end": "11:08",
+      "title": {
+        "ko": "세계 여러 나라 동물들: 아프리카의 동물세계 - 남부아프리카에서 사는 동물들 - (2)",
+        "en": "Animals of Various Countries: Africa's Animal World - Animals Living in Southern Africa - (2)",
+        "zh": "世界各国的动物：非洲的动物世界——生活在南部非洲的动物（二）"
+      },
+      "category": "Nature & Wildlife"
+    },
+    {
+      "start": "11:08",
+      "end": "11:35",
+      "title": {
+        "ko": "종합편집: 재해성이상기후에 대처하여",
+        "en": "Comprehensive Editing: Coping with Disastrous Abnormal Weather",
+        "zh": "综合编辑：应对灾害性异常气候"
+      },
+      "category": "Public Service"
+    },
+    {
+      "start": "11:35",
+      "end": "12:10",
+      "title": {
+        "ko": "특집: 《민들레》제품에 바쳐가는 마음들",
+        "en": "Special Feature: Hearts Dedicated to 'Mindulle' (Dandelion) Products",
+        "zh": "专题片：奉献给“蒲公英”产品的心灵"
+      },
+      "category": "Special Report"
+    },
+    {
+      "start": "12:10",
+      "end": "13:16",
+      "title": {
+        "ko": "조선예술영화: 사랑의 물소리",
+        "en": "Korean Art Film: Sound of Water of Love",
+        "zh": "朝鲜艺术电影：爱的水声"
+      },
+      "category": "Drama Movie"
+    },
+    {
+      "start": "13:16",
+      "end": "13:20",
+      "title": {
+        "ko": "료리상식: 청포채, 닭고기버섯볶음",
+        "en": "Cooking Common Sense: Mung Bean Jelly Salad, Stir-fried Chicken and Mushroom",
+        "zh": "烹饪常识：绿豆凉粉、小炒鸡肉香菇"
+      },
+      "category": "Culinary"
+    },
+    {
+      "start": "13:20",
+      "end": "13:47",
+      "title": {
+        "ko": "기행: 천지개벽된 검덕지구를 찾아서 (1)",
+        "en": "Travelogue: Visiting Kumdok District, Transformed Beyond Recognition (1)",
+        "zh": "游记：走访沧桑巨变的检德地区（一）"
+      },
+      "category": "Travelogue"
+    },
+    {
+      "start": "13:47",
+      "end": "13:56",
+      "title": {
+        "ko": "건강과 생활섭생: 땀띠의 원인과 치료대책",
+        "en": "Health and Daily Regime: Causes and Treatment Measures for Heat Rash",
+        "zh": "健康与生活常识：痱子的成因与防治对策"
+      },
+      "category": "Health & Lifestyle"
+    },
+    {
+      "start": "13:56",
+      "end": "14:48",
+      "title": {
+        "ko": "TV기록편집물: 시대와 우표 - 1. 조선우표의 80년력사를 더듬어",
+        "en": "TV Documentary: Era and Stamps - 1. Tracing the 80-Year History of Korean Stamps",
+        "zh": "电视纪录片：时代与邮票——1. 追溯朝鲜邮票的80年历史"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "14:48",
+      "end": "15:05",
+      "title": {
+        "ko": "소개편집물: 민족음악교육에 바쳐가는 마음",
+        "en": "Introduction Compilation: Hearts Dedicated to National Music Education",
+        "zh": "介绍短片：奉献给民族音乐教育的心灵"
+      },
+      "category": "Educational"
+    },
+    {
+      "start": "15:05",
+      "end": "15:10",
+      "title": {
+        "ko": "혁명일화: 새로 생긴 륜환식통로",
+        "en": "Revolutionary Anecdote: Newly Created Circular Pathway",
+        "zh": "革命轶事：新修建的环形通道"
+      },
+      "category": "Historical"
+    },
+    {
+      "start": "15:10",
+      "end": "15:26",
+      "title": {
+        "ko": "수기: 치과의생용품에 어린 사랑의 손길 - 평양치과의생용품공장 지배인 리영숙 -",
+        "en": "Memoirs: The Hand of Love Embodied in Dental Hygiene Products - Ri Yong Suk, Manager of Pyongyang Dental Hygiene Products Factory -",
+        "zh": "随笔：凝聚在牙科卫生用品中的关爱之手——平壤牙科卫生用品厂厂长李英淑"
+      },
+      "category": "Documentary"
+    },
+    {
+      "start": "15:26",
+      "end": "15:42",
+      "title": {
+        "ko": "TV연단: 훌륭한 가정은 훌륭한 교정 - 1. 부모의 모범은 가장 훌륭한 교양",
+        "en": "TV Podium: A Great Family is a Great School - 1. Parents' Example is the Finest Education",
+        "zh": "电视讲坛：优秀的家庭是优秀的学校——1. 父母的榜样是最好的教养"
+      },
+      "category": "Educational"
+    },
+    {
+      "start": "15:42",
+      "end": "16:01",
+      "title": {
+        "ko": "소개편집물: 그날의 영광을 되새기며 - 만경대구역 만경대고급중학교 -",
+        "en": "Introduction Compilation: Recalling the Glory of That Day - Mangyongdae Senior Middle School, Mangyongdae District -",
+        "zh": "介绍短片：重温那天的荣耀——万景台区万景台高级中学"
+      },
+      "category": "Educational"
+    },
+    {
+      "start": "16:01",
+      "end": "17:00",
+      "title": {
+        "ko": "TV무대: 우리는 꽃봉오리 - 제1회 -",
+        "en": "TV Stage: We Are Flower Buds - Episode 1 -",
+        "zh": "电视舞台：我们是花蕾——第一回"
+      },
+      "category": "Arts & Performance"
+    },
+    {
+      "start": "17:00",
+      "end": "17:20",
+      "title": {
+        "ko": "보도",
+        "en": "News Broadcast",
+        "zh": "新闻报道"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:20",
+      "end": "17:27",
+      "title": {
+        "ko": "각 도특파기자들이 보내온 소식",
+        "en": "News Sent by Special Correspondents in Each Province",
+        "zh": "各道特派记者发来的报道"
+      },
+      "category": "Local News"
+    },
+    {
+      "start": "17:27",
+      "end": "17:33",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Review of Today's Central Newspapers",
+        "zh": "今日中央报纸摘要"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:33",
+      "end": "18:25",
+      "title": {
+        "ko": "아동방송시간 력사만화영화: 고주몽 - 제35부 -",
+        "en": "Children's Broadcasting Hour - Historical Animated Film: Ko Jumong - Episode 35 -",
+        "zh": "少儿节目 时间历史动画片：高朱蒙——第35集"
+      },
+      "category": "Children's Animation"
+    },
+    {
+      "start": "18:25",
+      "end": "18:32",
+      "title": {
+        "ko": "소개편집물: 소년통신원들이 보내온 소식 (5)",
+        "en": "Introduction Compilation: News Sent by Youth Correspondents (5)",
+        "zh": "介绍短片：少年通讯员发来的消息（五）"
+      },
+      "category": "Youth Broadcast"
+    },
+    {
+      "start": "18:32",
+      "end": "18:45",
+      "title": {
+        "ko": "소개편집물: 어린이영양공급기준표에 깃든 이야기",
+        "en": "Introduction Compilation: The Story Embedded in the Children's Nutritional Supply Standard Table",
+        "zh": "介绍短片：儿童营养供应标准表背后的故事"
+      },
+      "category": "Educational"
+    },
+    {
+      "start": "18:45",
+      "end": "19:15",
+      "title": {
+        "ko": "TV무대: 취재길에서 만난 자강도사람들 (2)",
+        "en": "TV Stage: Chagang Province People Met on the Reporting Road (2)",
+        "zh": "电视舞台：采访途中结识的慈江道人们（二）"
+      },
+      "category": "Arts & Performance"
+    }
+  ]
+},
+[
+  {
+    "start": "20:00",
+    "end": "20:29",
+    "title": {
+      "ko": "보도 (20시)",
+      "en": "News Broadcast (20:00)",
+      "zh": "新闻报道 (20点)"
+    },
+    "category": "Main News Bulletin"
+  },
+  {
+    "start": "20:29",
+    "end": "20:35",
+    "title": {
+      "ko": "건강과 생활섭생: 무더위때 건강관리 - 음료마시기 -",
+      "en": "Health and Daily Regime: Health Management during Sweltering Heat - Drinking Beverages -",
+      "zh": "健康与生活常识：酷暑时节的健康管理——饮水"
+    },
+    "category": "Health & Lifestyle"
+  },
+  {
+    "start": "20:35",
+    "end": "21:53",
+    "title": {
+      "ko": "조선예술영화: 어머니의 행복",
+      "en": "Korean Art Film: Mother's Happiness",
+      "zh": "朝鲜艺术电影：母亲的幸福"
+    },
+    "category": "Drama Movie"
+  },
+  {
+    "start": "21:53",
+    "end": "22:15",
+    "title": {
+      "ko": "오늘의 보도중에서",
+      "en": "From Today's News (News Highlights)",
+      "zh": "今日报道摘编"
+    },
+    "category": "News Highlights"
+  },
