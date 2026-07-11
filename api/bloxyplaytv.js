@@ -23,6 +23,7 @@ export default async function handler(req, res) {
   const filePath = join(process.cwd(), 'epg', ch, `${date}.json`);
   
   try {
+    // Attempt to read the actual EPG file
     const data = readFileSync(filePath, 'utf8');
     const json = JSON.parse(data);
     
@@ -30,10 +31,35 @@ export default async function handler(req, res) {
     res.status(200).json(json);
     
   } catch (error) {
-    res.status(404).json({ 
-      error: 'There is no EPG data here!', 
-      channel: ch, 
-      date: date 
-    });
+    // FALLBACK: If file doesn't exist, generate the default EPG
+    const fallbackEPG = {
+      channel: ch,
+      date: date,
+      source: "Korean Central Television (Juche TV)",
+      programs: [
+        {
+          start: "09:00",
+          end: "22:15",
+          title: {
+            ko: "조선중앙텔레비죤", // Updated here
+            en: "Wonderful Program",
+            zh: "精彩节目",
+            my: "အံ့သြဖွယ်အစီအစဉ်",
+            ru: "Замечательная программа",
+            ja: "素晴らしい番組",
+            es: "Programa Maravilloso",
+            fr: "Programme Merveilleux",
+            de: "Wunderbares Programm",
+            kk: "Керемет бағдарлама",
+            bo: "ལེ་ཚན་ངོ་མཚར་ཅན།",
+            mn: "Гайхамшигт хөтөлбөр"
+          },
+          category: "General"
+        }
+      ]
+    };
+
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(fallbackEPG);
   }
 }
