@@ -1,0 +1,558 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-13",
+  "source": "Korean Central Television (Juche TV)",
+  "programs": [
+    {
+      "start": "09:18",
+      "end": "10:20",
+      "title": {
+        "ko": "TV기록편집물: 위대한 우리 당에 인민은 영광드린다 제2편 세상에 부럼없는 집",
+        "en": "TV Documentary: The People Bring Glory to Our Great Party, Part 2: A House with Nothing to Envy in the World",
+        "zh": "电视纪录片：人民向我们伟大的党致敬 第2部 世上无所羡慕的家",
+        "my": "တီဗီမှတ်တမ်းရုပ်ရှင်- ပြည်သူလူထုမှ ကျွန်ုပ်တို့၏ ကြီးမြတ်သောပါတီအား ဂုဏ်ပြုခြင်း အပိုင်း ၂- ကမ္ဘာပေါ်တွင် အားကျစရာမလိုသော အိမ်",
+        "ru": "Телевизионный документальный фильм: Народ воздает славу нашей великой партии, Часть 2: Дом, которому не завидуют в мире",
+        "ja": "TV記録編集物：偉大な我が党に人民は栄光を捧げる 第2編 この世に羨むものはない家",
+        "es": "Documental de TV: El pueblo da gloria a nuestro Gran Partido, Parte 2: Una casa sin nada que envidiar en el mundo",
+        "fr": "Documentaire télévisé : Le peuple rend gloire à notre Grand Parti, Partie 2 : Une maison sans rien à envier au monde",
+        "de": "TV-Dokumentarfilm: Das Volk bringt unserer Großartigen Partei Ruhm, Teil 2: Ein Haus, das nichts auf der Welt zu beneiden hat",
+        "kk": "Телевизиялық деректі фильм: Халық біздің Ұлы Партиямызға даңқ әкеледі, 2-бөлім: Әлемде қызығатын ештеңесі жоқ үй",
+        "bo": "བརྙན་འཕྲིན་ལོ་རྒྱུས་དེབ་ཐེར། མི་དམངས་ཀྱིས་ང་ཚོའི་རླབས་ཆེན་ཏང་ལ་གཟི་བརྗིད་ཕུལ་བ། ལེའུ་གཉིས་པ། འཛམ་གླིང་ཐོག་སྨོན་စရာམེད་པའི་ཁྱིམ།",
+        "mn": "ТВ-ийн баримтат кино: Ард түмэн манай аугаа их намд алдар нэрийг авчирдаг, 2-р хэсэг: Дэлхий дээр атаархах зүйлгүй байшин"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "10:20",
+      "end": "10:38",
+      "title": {
+        "ko": "연속참관기: 위인칭송의 고귀한 제보 - 국제친선전람관을 찾아서 - (166)",
+        "en": "Serial Visit Report: Noble Testimonies Praising the Great Man — Visiting the International Friendship Exhibition - Part 166 —",
+        "zh": "系列探访：颂扬伟人的珍贵展品——探访国际友谊展览馆（166）——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကြီးမြတ်သောလူသားအား ချီးမွမ်းခြင်းဆိုင်ရာ မြင့်မြတ်သောအလှူပစ္စည်းများ - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၁၆၆) -",
+        "ru": "Серия репортажей о посещении: Драгоценные дары великому человеку — Посещение Выставки международной дружбы (Часть 166) —",
+        "ja": "連続参観記：偉人称賛の気高い品々 — 国際親善展覧館を訪ねて（166）—",
+        "es": "Informe de visita en serie: Tributos preciosos a las grandes personas — Visitando la Exposición de la Amistad Internacional (Parte 166) —",
+        "fr": "Rapport de visite en série : Hommages précieux aux grands hommes — En visitant l'Exposition de l'amitié internationale (Partie 166) —",
+        "de": "Zusammensetzung von Berichten: Kostbare Tribute an die großen Persönlichkeiten — Zu Besuch in der Internationalen Freundschaftsausstellung (Teil 166) —",
+        "kk": "Хроникалық шолу: Ұлы тұлғаға тарту етілген бағалы сыйлықтар — Халықаралық достық көрмесіне саяхат (166-бөлім) —",
+        "bo": "བསྟུད་མར་གཟིགས་སྐོར་ཞུས་པའི་ཟིན་ཐོ། སྐྱེས་བུ་ཆེན་པོར་བསྟོད་པའི་རྩ་ཆེའི་དངོས་པོ། — རྒྱལ་སྤྱིའི་མཛའ་མཐུན་འགྲེམས་སྟོན་ཁང་ལ་གཟིགས་སྐོར་ཞུས་པ། (བརྒྱ་རེ་དྲུག་པ།) —",
+        "mn": "Цуврал сурвалжилга: Сүрлэг хүмүүсийг магтан алдаршуулах эрхэм нандин олдворууд — Олон улсын найрамдалт үзэсгэлэнгийн ордноор зорчсон тэмдэглэл (166)"
+      },
+      "category": "Cultural Visit Series"
+    },
+    {
+      "start": "10:38",
+      "end": "10:49",
+      "title": {
+        "ko": "특집: 재해성이상기후에 철저히 대처하자",
+        "en": "Special Feature: Let's Thoroughly Cope with Disastrous Abnormal Weather",
+        "zh": "特别节目：彻底应对灾害性异常气候",
+        "my": "အထူးအစီအစဉ်- ဘေးအန္တရာယ်ဖြစ်စေသော ပုံမှန်မဟုတ်သည့် ရာသီဥတုကို သေချာစွာ ရင်ဆိုင်ဖြေရှင်းကြစို့",
+        "ru": "Специальный репортаж: Давайте полностью подготовимся к стихийным аномальным погодным условиям",
+        "ja": "特集：災害性異常気候に徹底的に対処しよう",
+        "es": "Reportaje especial: Hagamos frente a las condiciones climáticas anormales y desastrosas minuciosamente",
+        "fr": "Reportage spécial : Faisons face aux conditions climatiques anormales et désastreuses de manière approfondie",
+        "de": "Sonderbericht: Lasst uns den katastrophalen anomalen Wetterbedingungen gründlich begegnen",
+        "kk": "Арнайы шығарылым: Апатты ауа райы құбылыстарына толықтай дайын болайық",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། གནོད་འཚེའི་རང་བཞིན་གྱི་གནམ་གཤིས་ལ་གདོང་ལེན་མཐའ་གཅིག་ཏུ་བྱེད།",
+        "mn": "Тусгай нэвтрүүлэг: Гамшигт уур амьсгалын өөрчлөлтөөс бүрэн сэргийлье"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "10:49",
+      "end": "11:09",
+      "title": {
+        "ko": "종합편집: 올해 목표점령에로 힘차게 내달린다 - 여러 공장, 기업소들에서 -",
+        "en": "General Compilation: Vigorously Dashing Toward Capturing This Year's Goals - At Various Factories and Enterprises -",
+        "zh": "综合剪辑：向着占领今年目标奋勇奔跑——在各工厂、企业所——",
+        "my": "ပေါင်းစပ်တင်ပြချက်- ယခုနှစ်ရည်မှန်းချက်များအောင်မြင်ရန် အင်တိုက်အားတိုက် ချီတက်ခြင်း - အလုပ်ရုံများနှင့် စက်ရုံများတွင် -",
+        "ru": "Общий обзор: Энергично устремляясь к достижению целей этого года - На различных заводах и предприятиях -",
+        "ja": "総合編集：今年の目標占領へと力強く走り出す - 各工場、企業所で -",
+        "es": "Recopilación general: Avanzando vigorosamente hacia la consecución de los objetivos de este año - En varias fábricas y empresas -",
+        "fr": "Compilation générale : S'élancer vigoureusement vers la réalisation des objectifs de cette année - Dans diverses usines et entreprises -",
+        "de": "Gesamtübersicht: Energisch auf das Erreichen der diesjährigen Ziele zusteuern - In verschiedenen Fabriken und Unternehmen -",
+        "kk": "Жалпы шолу: Биылғы мақсаттарға жетуге жігерлі ұмтылу - Түрлі зауыттар мен кәсіпорындарда -",
+        "bo": "ཕྱོགས་བསྡུས་རྩོམ་སྒྲིག འདི་ལོའི་དམིགས་ཚད་མངོན་འགྱུར་ཡོང་ཆེད་ཧུར་ཐག་བྱེད་པ། - བཟོ་གྲྭ་དང་ཁེ་ལས་ཁག་ཏུ། -",
+        "mn": "Нэгдсэн тойм: Энэ оны зорилтуудыг хэрэгжүүлэхийн төлөө эрчимтэй тэмүүлэх нь - Төрөл бүрийн үйлдвэр, аж ахуйн нэгжүүдэд -"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "11:09",
+      "end": "11:33",
+      "title": {
+        "ko": "특집: 생의 자욱은 어디에 남는가 - 강원도 원산시 덕골동 문명실녀성이 남긴 생의 자욱을 더듬어 -",
+        "en": "Special Feature: Where Are the Traces of Life Left? - Following the Traces of Life Left by Mun Myong Sil in Dokgol-dong, Wonsan City, Kangwon Province -",
+        "zh": "特别节目：生命的足迹留在何处——追寻江原道元山市德谷洞的文明实女性留下的生命足迹——",
+        "my": "အထူးအစီအစဉ်- ဘဝ၏ခြေရာများ မည်သည့်နေရာတွင် ကျန်ရစ်သနည်း - ကန်ဝန်ပြည်နယ်၊ ဝူဆန်မြို့၊ ဒိုဂိုဒုံမှ မွန်မြောင်ဆီလ် ချန်ထားရစ်သော ဘဝ၏ခြေရာများကို လိုက်လံရှာဖွေခြင်း -",
+        "ru": "Специальный репортаж: Где остаются следы жизни? - По следам жизни Мун Мён Силь из Тонголь-дон, город Вонсан, провинция Канвондо -",
+        "ja": "特集：生の足跡はどこに残るのか - 江原道元山市徳谷洞の文明星女性が残した生の足跡をたどって -",
+        "es": "Reportaje especial: ¿Dónde quedan las huellas de la vida? - Siguiendo las huellas de vida dejadas por Mun Myong Sil en Dokgol-dong, ciudad de Wonsan, provincia de Kangwon -",
+        "fr": "Reportage spécial : Où sont laissées les traces de la vie ? - Sur les traces de vie laissées par Mun Myong Sil à Dokgol-dong, ville de Wonsan, province de Kangwon -",
+        "de": "Sonderbericht: Wo bleiben die Spuren des Lebens? - Auf den Spuren des Lebens von Mun Myong Sil in Dokgol-dong, Stadt Wonsan, Provinz Kangwon -",
+        "kk": "Арнайы шығарылым: Өмір іздері қайда қалады? - Канвондо провинциясы, Вонсан қаласы, Токголь-доннан шыққан Мун Мён Силь қалдырған өмір іздерімен -",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། མི་ཚེའི་ཤུལ་རྗེས་གང་དུ་ལུས་ཡོད། - ཀང་ཝོན་ཞིང་ཆེན་ཝོན་སན་གྲོང་ཁྱེར་ཏོག་གོལ་ཏུང་གི་མུན་མྱོང་སིལ་གྱིས་བཞག་པའི་མི་ཚེའི་ཤུལ་རྗེས་ལ་རྗེས་འདེད་བྱེད་པ། -",
+        "mn": "Тусгай нэвтрүүлэг: Амьдралын мөр хаана үлддэг вэ? - Канвон мужийн Вонсан хотын Докгол-дон дахь Мун Мён Силийн үлдээсэн амьдралын мөрөөр -"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "11:33",
+      "end": "12:06",
+      "title": {
+        "ko": "특집: 영광의 단상에 어머니들을 내세워주시여",
+        "en": "Special Feature: Placing Mothers on the Podium of Glory",
+        "zh": "特别节目：将母亲们推上光荣的领奖台",
+        "my": "အထူးအစီအစဉ်- မိခင်များကို ဂုဏ်ကျက်သရေရှိသော စင်မြင့်ထက်တွင် နေရာပေးခြင်း",
+        "ru": "Специальный репортаж: Ставя матерей на пьедестал славы",
+        "ja": "特集：栄光の壇上に母たちを立たせてくださり",
+        "es": "Reportaje especial: Colocando a las madres en el podio de la gloria",
+        "fr": "Reportage spécial : Placer les mères sur le podium de la gloire",
+        "de": "Sonderbericht: Mütter auf das Podium des Ruhms stellen",
+        "kk": "Арнайы шығарылым: Аналарды даңқ тұғырына көтеру",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། ཨ་མ་རྣམས་གཟི་བརྗིད་ཀྱི་སྡིངས་ཆའི་ཐོག་ཏུ་འཇོག་པ།",
+        "mn": "Тусгай нэвтрүүлэг: Ээжүүдийг алдар хүндийн индэрт залсан нь"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "12:06",
+      "end": "13:36",
+      "title": {
+        "ko": "조선예술영화: 저 하늘의 연",
+        "en": "North Korean Art Film: The Kite in That Sky",
+        "zh": "朝鲜艺术电影：那天空的风筝",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ထိုကောင်းကင်ယံမှ စွန်",
+        "ru": "Северокорейский художественный фильм: Бумажный змей в том небе",
+        "ja": "朝鮮芸術映画：あの空の凧",
+        "es": "Película de arte norcoreana: La cometa en ese cielo",
+        "fr": "Film d'art nord-coréen : Le cerf-volant dans ce ciel",
+        "de": "Nordkoreanischer Spielfilm: Der Drachen an jenem Himmel",
+        "kk": "Солтүстік Корея көркем фильмі: Сол аспандағы батпауық",
+        "bo": "བྱང་ཀྲོའུ་ཡི་སྒྱུ་རྩལ་གློག་བརྙན། ནམ་མཁའ་དེ་རུ་ཡོད་པའི་ཤོག་བྱ།",
+        "mn": "Солонгосын уран сайхны кино: Тэр тэнгэр дэх цаасан шувуу"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "13:36",
+      "end": "13:44",
+      "title": {
+        "ko": "건강과 생활상식: 무더위때 건강관리 - 심장부담을 줄이려면 -",
+        "en": "Health and Lifestyle Knowledge: Health Management during Sweltering Heat - To Reduce Heart Strain -",
+        "zh": "健康与生活常识：酷暑时期的健康管理——为了减少心脏负担——",
+        "my": "ကျန်းမာရေးနှင့် နေထိုင်မှုဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်အတွင်း ကျန်းမာရေးစောင့်ရှောက်မှု - နှလုံးဝန်ပိမှုကို လျှော့ချရန် -",
+        "ru": "Здоровье и житейские знания: Забота о здоровье в сильную жару — Чтобы снизить нагрузку на сердце —",
+        "ja": "健康と生活常識：猛暑時の健康管理 — 心臓の負担を減らすには —",
+        "es": "Conocimientos de salud y estilo de vida: Cuidado de la salud durante el calor sofocante — Para reducir la tensión cardíaca —",
+        "fr": "Santé et connaissances pratiques : Gestion de la santé pendant les fortes chaleurs — Pour réduire la pression cardiaque —",
+        "de": "Gesundheits- und Lebenswissen: Gesundheitsmanagement bei glühender Hitze — Zur Verringerung der Herzbelastung —",
+        "kk": "Денсаулық пен тұрмыс: Аптап ыстықтағы күтім — Жүрекке түсетін салмақты азайту үшін —",
+        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བའི་ཤེས་བྱ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — སྙིང་གི་ཁུར་པོ་ཡང་དུ་གཏོང་ཆེད། —",
+        "mn": "Эрүүл мэнд ба амьдралын ухаан: Хэт халууны үеийн эрүүл мэндийн менежмент — Зүрхний ачааллыг бууруулахын тулд —"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "13:44",
+      "end": "14:07",
+      "title": {
+        "ko": "기행: 천지개벽된 검덕지구를 찾아서 (2)",
+        "en": "Travelogue: Visiting the Transformed Komdok Area (Part 2)",
+        "zh": "纪行：探访翻天覆地的检德地区 (2)",
+        "my": "ခရီးသွားမှတ်တမ်း- အသွင်ပြောင်းသွားသော ကွမ်ဒေါ့ခ်ဒေသသို့ သွားရောက်လေ့လာခြင်း (အပိုင်း ၂)",
+        "ru": "Путевые заметки: Посещение преобразившегося района Комдок (Часть 2)",
+        "ja": "紀行：天地開闢した検徳地区を訪ねて（2）",
+        "es": "Crónica de viaje: Visitando la transformada área de Komdok (Parte 2)",
+        "fr": "Carnet de voyage : En visitant la région transformée de Komdok (Partie 2)",
+        "de": "Reisebericht: Besuch im umgewandelten Gebiet Komdok (Teil 2)",
+        "kk": "Саяхат: Жаңарған Комдок аймағына сапар (2-бөлім)",
+        "bo": "བསྐྱོད་པའི་ཟིན་ཐོ། རྣམ་པ་ཡོངས་སུ་འགྱུར་བའི་ཀོམ་ཏོག་ས་ཁུལ་ལ་བསྐྱོད་པ། (གཉིས་པ།)",
+        "mn": "Аяллын тэмдэглэл: Шинэчлэгдсэн Комдок бүсээр зорчсон нь (2)"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "14:07",
+      "end": "14:47",
+      "title": {
+        "ko": "수필: 어머니들의 소원",
+        "en": "Essay: Mothers' Wishes",
+        "zh": "随笔：母亲们的心愿",
+        "my": "အက်ဆေး- မိခင်များ၏ ဆန္ဒများ",
+        "ru": "Эссе: Желания матерей",
+        "ja": "随筆：母たちの願い",
+        "es": "Ensayo: Los deseos de las madres",
+        "fr": "Essai : Les souhaits des mères",
+        "de": "Essay: Die Wünsche der Mütter",
+        "kk": "Эссе: Аналардың тілегі",
+        "bo": "ལྷུག་རྩོམ། ཨ་མ་རྣམས་ཀྱི་རེ་འདུན།",
+        "mn": "Эссе: Ээжүүдийн хүсэл"
+      },
+      "category": "Literary & Cultural Arts"
+    },
+    {
+      "start": "14:47",
+      "end": "14:57",
+      "title": {
+        "ko": "문답: 실리가 큰 논판양어 2. 논판양어에서 나서는 기술적문제",
+        "en": "Q&A: Highly Profitable Rice-Fish Farming (Part 2: Technical Problems Arising in Rice-Field Fish Culture)",
+        "zh": "问答：实用收益大的稻田養鱼（2. 稻田养鱼中出现的技术问题）",
+        "my": "အမေးအဖြေ- များစွာအကျိုးအမြတ်ဖြစ်ထွန်းသော လယ်ကွင်းငါးမွေးမြူရေး (အပိုင်း ၂- လယ်ကွင်းငါးမွေးမြူရေးတွင် ပေါ်ပေါက်လာသော နည်းပညာဆိုင်ရာပြဿနာများ)",
+        "ru": "Вопросы и ответы: Высокодоходное разведение рыбы на рисовых чеках (Часть 2: Технические проблемы, возникающие при рисово-рыбном хозяйстве)",
+        "ja": "问答：実利が大きい水田養魚（2. 水田養魚で生じる技術的問題）",
+        "es": "Preguntas y respuestas: Piscicultura en arrozales altamente rentable (Parte 2: Problemas técnicos que surgen en el cultivo de peces en campos de arroz)",
+        "fr": "Questions et réponses : Rizipisciculture hautement rentable (Partie 2 : Problèmes techniques survenant dans la pisciculture en rizière)",
+        "de": "Fragen und Antworten: Rentable Fischzucht in Reisfeldern (Teil 2: Technische Probleme in der Reisfeld-Fischzucht)",
+        "kk": "Сұрақ-жауап: Тиімділігі жоғары күріш танабындағы балық өсіру (2-бөлім: Күріш танабында балық өсіру кезінде туындайтын техникалық мәселелер)",
+        "bo": "དྲི་བ་དྲིས་ལན། ཕན་ཐོགས་ཆེ་བའི་ཆུ་ཞིང་ཉ་གསོལ། (གཉིས་པ། ཆུ་ཞིང་ཉ་གསོལ་ཁྲོད་འབྱུང་བའི་ལག་རྩལ་གྱི་གནད་དོན།)",
+        "mn": "Асуулт хариулт: Ашиг ихтэй тутаргын талбайн загас үржүүлэг (2. Тутаргын талбайн загас үржүүлэгт гарч буй техникийн асуудлууд)"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "14:57",
+      "end": "15:34",
+      "title": {
+        "ko": "특집: 전승세대가 지녔던 고결한 충성 《오직 위대한 수령님을 위하여!》",
+        "en": "Special Feature: Noble Loyalty Held by the Victorious Wartime Generation \"Only for the Great Leader!\"",
+        "zh": "特别节目：战胜一代所拥有的高洁忠诚《只为了伟大的首领！》",
+        "my": "အထူးအစီအစဉ်- အောင်ပွဲခံစစ်တွင်းမျိုးဆက်များ၏ မွန်မြတ်သော သစ္စာရှိမှု \"ကြီးမြတ်သော ခေါင်းဆောင်အတွက်သာလျှင်\"",
+        "ru": "Специальный репортаж: Благородная преданность победоносного военного поколения «Только ради великого вождя!»",
+        "ja": "特集：戦勝世代が持っていた高潔な忠誠《ただ偉大な首領様のために！》",
+        "es": "Reportaje especial: Noble lealtad de la generación victoriosa de la guerra \"¡Solo para el Gran Líder!\"",
+        "fr": "Reportage spécial : Noble loyauté de la génération victorieuse de la guerre « Seulement pour le Grand Leader ! »",
+        "de": "Sonderbericht: Edle Loyalität der siegreichen Kriegsgeneration \"Nur für den Großen Führer!\"",
+        "kk": "Арнайы шығарылым: Жеңімпаз соғыс буынының ұлы адалдығы «Тек Ұлы Көшбасшы үшін!»",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། དམག་འཁྲུག་ལས་རྒྱལ་བའི་མི་རབས་ཀྱིས་བཅངས་པའི་བླ་ན་མེད་པའི་ལྷག་བསམ། 《རླབས་ཆེན་གྱི་གཙོ་འཛིན་ཁོ་ནའི་ཆེད་དུ།》",
+        "mn": "Тусгай нэвтрүүлэг: Дайнд ялсан үеийнхний эрхэм дээд үнэнч байдал \"Зөвхөн агуу удирдагчийн төлөө!\""
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "15:34",
+      "end": "15:44",
+      "title": {
+        "ko": "연속소개편집물: 위민헌신의 자욱 새겨진 곳에서 - 화성김치공장 -",
+        "en": "Serial Introduction Compilation: In the Places Etched with Devotion to the People — Hwasong Kimchi Factory —",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——和盛泡菜厂——",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံမှု အရှိန်အဝါများ လွှမ်းခြုံထားရာနေရာ - ဟွာဆောင်း ကင်မ်ချီစက်ရုံ -",
+        "ru": "Серия тематических сюжетов: Там, где запечатлены следы самоотверженного служения народу — Завод кимчи Хвасон —",
+        "ja": "連続紹介編集物：人民献身の足跡が刻まれた所で — 和盛キムチ工場 —",
+        "es": "Recopilación de reportajes en serie: En los lugares grabados con devoción al pueblo — Fábrica de Kimchi de Hwasong —",
+        "fr": "Compilation de reportages en série : Dans les lieux empreints de dévouement envers le peuple — Usine de Kimchi de Hwasong —",
+        "de": "Zusammensetzung von Berichten: An den Orten, die von der Aufopferung für das Volk geprägt sind — Hwasong Kimchi-Fabrik —",
+        "kk": "Деректі жинақ: Халыққа қызмет етудің ізі қалған жерде — Хвасон кимчи зауыты —",
+        "bo": "བསྟུད་མར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བསམ་བཅངས་པའི་ཞབས་རྗེས་အཁོད་པའི་སར། — ཧྭ་སོང་ཀིམ་ཆི་བཟོ་གྲྭ། —",
+        "mn": "Цуврал танилцуулга: Ард түмний төлөө зүтгэсэн мөр үлдсэн газарт — Хвасон кимчиний үйлдвэр —"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "15:44",
+      "end": "15:59",
+      "title": {
+        "ko": "혁명일화: 몸소 선정해주신 건설대상",
+        "en": "Revolutionary Anecdote: The Construction Target He Personally Selected",
+        "zh": "革命轶事：亲自选定的建设对象",
+        "my": "တော်လှန်ရေးရာဇဝင်- ကိုယ်တိုင်ရွေးချယ်ပေးခဲ့သော ဆောက်လုပ်ရေးပစ်မှတ်",
+        "ru": "Революционный анекдот: Объект строительства, который он выбрал лично",
+        "ja": "革命逸話：自ら選定してくださった建設対象",
+        "es": "Anécdota revolucionaria: El objetivo de construcción que seleccionó personalmente",
+        "fr": "Anecdote révolutionnaire : L'objectif de construction qu'il a personnellement sélectionné",
+        "de": "Revolutionäre Anekdote: Das Bauziel, das er persönlich ausgewählt hat",
+        "kk": "Революциялық анекдот: Ол өзі таңдаған құрылыс нысаны",
+        "bo": "གསར་བརྗེའི་ལོ་རྒྱུས། སྐུ་ངོ་མས་བདམས་གནང་བའི་འཛུགས་སྐྲུན་དམིགས་ཚད།",
+        "mn": "Хувьсгалт түүх: Түүний биечлэн сонгосон барилгын төсөл"
+      },
+      "category": "Historical & Leadership Anecdotes"
+    },
+    {
+      "start": "15:59",
+      "end": "16:15",
+      "title": {
+        "ko": "TV연단: 훌륭한 가정은 훌륭한 교정 2. 부모의 진짜 재부-참된 인생관",
+        "en": "TV Rostrum: A Good Family is a Good School (Part 2: Parents' True Wealth - True View of Life)",
+        "zh": "电视讲坛：好家庭就是好学校（2. 父母真正的财富——正确的人生观）",
+        "my": "တီဗီစင်မြင့်- မိသားစုကောင်းတစ်ရပ်သည် ကျောင်းကောင်းတစ်ကျောင်းဖြစ်သည် (အပိုင်း ၂- မိဘများ၏ စစ်မှန်သောကြွယ်ဝမှု - စစ်မှန်သောဘဝအမြင်)",
+        "ru": "Телевизионная трибуна: Хорошая семья — это хорошая школа (Часть 2: Истинное богатство родителей - правильный взгляд на жизнь)",
+        "ja": "TV演壇：立派な家庭は立派な学校（2. 親の本当の財産-真の人生観）",
+        "es": "Tribuna de TV: Una buena familia es una buena escuela (Parte 2: La verdadera riqueza de los padres - Verdadera visión de la vida)",
+        "fr": "Tribune télévisée : Une bonne famille est une bonne école (Partie 2 : La vraie richesse des parents - Vraie vision de la vie)",
+        "de": "TV-Tribüne: Eine gute Familie ist eine gute Schule (Teil 2: Der wahre Reichtum der Eltern - Wahre Lebensanschauung)",
+        "kk": "Теле-мінбер: Жақсы отбасы — жақсы мектеп (2-бөлім: Ата-ананың нағыз байлығы — өмірге деген дұрыс көзқарас)",
+        "bo": "བརྙན་འཕྲིན་གཏམ་བཤད། ཁྱིམ་ཚང་བཟང་པོ་ནི་སློབ་གྲྭ་བཟང་པོ་ཡིན། (གཉིས་པ། ཕ་མའི་རྒྱུ་ནོར་ངོ་མ། - མི་ཚེའི་ལྟ་བ་ཡང་དག)",
+        "mn": "ТВ индэр: Сайн гэр бүл бол сайн сургууль (2. Эцэг эхийн жинхэнэ баялаг - Амьдралын үнэн зөв үзэл)"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "16:15",
+      "end": "17:00",
+      "title": {
+        "ko": "TV무대: 우리는 꽃봉오리 제2회",
+        "en": "TV Stage: We Are Flower Buds, Part 2",
+        "zh": "电视舞台：我们是花蕾 第2期",
+        "my": "တီဗီစင်မြင့်- ကျွန်ုပ်တို့သည် ပန်းဖူးများဖြစ်သည်၊ အပိုင်း ၂",
+        "ru": "Телевизионная сцена: Мы — цветочные бутоны, Часть 2",
+        "ja": "TV舞台：私たちは花のつぼみ 第2回",
+        "es": "Escenario de TV: Somos capullos de flores, Parte 2",
+        "fr": "Scène télévisée : Nous sommes des boutons de fleurs, Partie 2",
+        "de": "TV-Bühne: Wir sind Blütenknospen, Teil 2",
+        "kk": "Теле-сахна: Біз гүл шанақтарымыз, 2-бөлім",
+        "bo": "བརྙན་འཕྲིན་སྟེགས་བུ། ང་ཚོ་ནི་མེ་ཏོག་གི་ཐུམ་བུ་ཡིན། ལེའུ་གཉིས་པ།",
+        "mn": "ТВ тайз: Бид бол цэцгийн дэлбээ, 2-р хэсэг"
+      },
+      "category": "Arts & Performance Program"
+    },
+    {
+      "start": "17:00",
+      "end": "17:19",
+      "title": {
+        "ko": "보도",
+        "en": "News Broadcast",
+        "zh": "新闻报道",
+        "my": "သတင်းထုတ်လွှင့်ချက်",
+        "ru": "Выпуск новостей",
+        "ja": "報道",
+        "es": "Noticiero",
+        "fr": "Journal d'information",
+        "de": "Nachrichten",
+        "kk": "Жаңалықтар",
+        "bo": "གསར་འགྱུར།",
+        "mn": "Мэдээ"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:19",
+      "end": "17:29",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览",
+        "my": "ယနေ့ထုတ် ဗဟိုသတင်းစာများ ကောက်နုတ်ချက်သုံးသပ်ချက်",
+        "ru": "Обзор сегодняшней центральной прессы",
+        "ja": "今日号の中央新聞概観",
+        "es": "Revisión de los principales periódicos centrales de hoy",
+        "fr": "Revue de la presse centrale d'aujourd'hui",
+        "de": "Heutige Übersicht der zentralen Zeitungen",
+        "kk": "Орталық баспасөзге шолу: Бүгінгі газеттер не дейді?",
+        "bo": "དེ་རིང་གི་དབུས་གཞུང་ཚགས་པར་གནད་བསྡུས།",
+        "mn": "Өнөөдрийн төв сонинуудын тойм"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:29",
+      "end": "18:13",
+      "title": {
+        "ko": "아동방송시간 역사만화영화: 고주몽 제36부",
+        "en": "Children's Broadcast - Historical Animated Cartoon: Go Jumong (Part 36)",
+        "zh": "儿童广播时间 历史动画电影：高朱蒙（第36部）",
+        "my": "ကလေးသူငယ်များဆိုင်ရာ ထုတ်လွှင့်မှုကဏ္ဍ - သမိုင်းဝင် အန်နီမေးရှင်း ကာတွန်းဇာတ်လမ်း- ဂိုဂျူမုံ (အပိုင်း ၃၆)",
+        "ru": "Детское вещание - Исторический мультипликационный фильм: Го Джумонг (Часть 36)",
+        "ja": "児童放送時間  歴史漫画映画：高朱蒙（第36部）",
+        "es": "Transmisión infantil - Película de animación histórica: Go Jumong (Parte 36)",
+        "fr": "Émission pour enfants - Dessin animé historique : Go Jumong (Partie 36)",
+        "de": "Kinder-Rundfunk - Historischer Animationsfilm: Go Jumong (Teil 36)",
+        "kk": "Балаларға арналған бағдарлама - Тарихи анимациялық фильм: Го Джумонг (36-бөлім)",
+        "bo": "བྱིས་པའི་དུས་ཚོད། ལོ་རྒྱུས་བརྙན་རིས་གློག་བརྙན། ཀོ་ཅུ་མོང། (ལེའུ་སོ་དྲུག་པ།)",
+        "mn": "Хүүхдийн цаг - Түүхэн хүүхэлдэйн кино: Го Жумон (36-р анги)"
+      },
+      "category": "Children's Programming"
+    },
+    {
+      "start": "18:13",
+      "end": "18:25",
+      "title": {
+        "ko": "소개편집물: 훌륭한 교육환경을 마련해주시려",
+        "en": "Introduction Program: To Provide a Wonderful Educational Environment",
+        "zh": "专题剪辑：为了提供优良的教育环境",
+        "my": "မိတ်ဆက်တင်ပြချက်- အလွန်ကောင်းမွန်သော ပညာရေးပတ်ဝန်းကျင်ကို ထောက်ပံ့ပေးရန်",
+        "ru": "Тематический сюжет: Чтобы обеспечить прекрасную образовательную среду",
+        "ja": "紹介編集物：立派な教育環境を整えてくださるため",
+        "es": "Programa de presentación: Para proporcionar un entorno educativo maravilloso",
+        "fr": "Programme d'introduction : Pour offrir un environnement éducatif merveilleux",
+        "de": "Zusammenstellung von Berichten: Um ein wunderbares Bildungsumfeld zu schaffen",
+        "kk": "Ақпараттық сюжет: Тамаша білім беру ортасын құру үшін",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ཕུལ་བྱུང་གི་སློབ་གསོའི་ཁོར་ཡུག་བསྐྲུན་ཆེད།",
+        "mn": "Танилцуулга нэвтрүүлэг: Маш сайн боловсролын орчныг бүрдүүлэхийн тулд"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "18:25",
+      "end": "18:33",
+      "title": {
+        "ko": "수필: 꿈을 낳는 거리",
+        "en": "Essay: The Street That Gives Birth to Dreams",
+        "zh": "随笔：孕育梦想的街道",
+        "my": "အက်ဆေး- အိပ်မက်များကို မွေးဖွားပေးသော လမ်းမ",
+        "ru": "Эссе: Улица, рождающая мечты",
+        "ja": "随筆：夢を産む街",
+        "es": "Ensayo: La calle que da a luz a los sueños",
+        "fr": "Essai : La rue qui donne naissance aux rêves",
+        "de": "Essay: Die Straße, die Träume hervorbringt",
+        "kk": "Эссе: Армандар туындайтын көше",
+        "bo": "ལྷུག་རྩོམ། ཕུགས་འདུན་སྐྲུན་པའི་ཁྲོམ་ལམ།",
+        "mn": "Эссе: Мөрөөдөл төрүүлдэг гудамж"
+      },
+      "category": "Literary & Cultural Arts"
+    },
+    {
+      "start": "18:33",
+      "end": "18:48",
+      "title": {
+        "ko": "소개편집물: 평양의학대학의 교육자가정",
+        "en": "Introduction Program: An Educator's Family at Pyongyang Medical College",
+        "zh": "专题剪辑：平壤医科大学的教育者家庭",
+        "my": "မိတ်ဆက်တင်ပြချက်- ပြုံယမ်းဆေးတက္ကသိုလ်မှ ပညာရေးဝန်ထမ်းမိသားစု",
+        "ru": "Тематический сюжет: Семья педагога из Пхеньянского медицинского колледжа",
+        "ja": "紹介編集物：平壌医学大学の教育者家庭",
+        "es": "Programa de presentación: La familia de un educador en la Facultad de Medicina de Pyongyang",
+        "fr": "Programme d'introduction : La famille d'un éducateur au Collège de médecine de Pyongyang",
+        "de": "Zusammenstellung von Berichten: Die Familie eines Pädagogen an der Medizinischen Hochschule Pjöngjang",
+        "kk": "Ақпараттық сюжет: Пхеньян медициналық колледжіндегі педагогтар отбасы",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ཕྱོང་ཡང་གསོ་རིག་སློབ་ཆེན་གྱི་སློབ་གསོ་མཁས་ཅན་གྱི་ཁྱིམ་ཚང་།",
+        "mn": "Танилцуулга нэвтрүүлэг: Пхеньяны анагаах ухааны коллежийн багшийн гэр бүл"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "18:48",
+      "end": "18:55",
+      "title": {
+        "ko": "종합편집: 보답의 일념으로 들끓는 탄전",
+        "en": "General Compilation: Coal Field Seething with the Single Mind of Repayment",
+        "zh": "综合剪辑：以报答的一念沸腾的煤田",
+        "my": "ပေါင်းစပ်တင်ပြချက်- ကျေးဇူးဆပ်ရန်ဟူသော စိတ်တစ်ခုတည်းဖြင့် ပွက်ပွက်ဆူနေသော ကျောက်မီးသွေးတွင်း",
+        "ru": "Общий обзор: Угольный бассейн, кипящий единым стремлением отплатить",
+        "ja": "総合編集：報答の一念で沸き返る炭田",
+        "es": "Recopilación general: Yacimiento de carbón hirviendo con la única idea de retribuir",
+        "fr": "Compilation générale : Gisement de charbon bouillonnant avec la seule pensée de rendre la pareille",
+        "de": "Gesamtübersicht: Kohlefeld kocht mit dem einzigen Gedanken der Rückzahlung",
+        "kk": "Жалпы шолу: Алғыс айту мақсатында қайнаған көмір алабы",
+        "bo": "ཕྱོགས་བསྡུས་རྩོམ་སྒྲིག དྲིན་ལན་འཇལ་བའི་བསམ་པ་འབའ་ཞིག་གིས་ཁེངས་པའི་རྡོ་སོལ་གཏེར་ཁུལ།",
+        "mn": "Нэгдсэн тойм: Ачийг хариулах гэсэн ганцхан хүслээр буцалж буй нүүрсний уурхай"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "18:55",
+      "end": "19:21",
+      "title": {
+        "ko": "수기: 수령님과 장군님의 념원을 풀어드리시려 - 고산농장 경리 로력영웅 사회주의애국공로자 손금월 -",
+        "en": "Memoir: To Fulfill the Desires of the Leader and the General - Son Kum Wol, Socialist Patriotic Person of Merit and Labor Hero, Manager of Kosan Farm -",
+        "zh": "手记：为了解开首领和将军的心愿——高山农场经理、劳动英雄、社会主义爱国功臣孙金月——",
+        "my": "ကိုယ်ရေးအတ္ထုပ္ပတ္တိ- ခေါင်းဆောင်နှင့် ဗိုလ်ချုပ်တို့၏ ဆန္ဒများကို ဖြည့်ဆည်းပေးရန် - ကိုဆန်လယ်ယာမန်နေဂျာ၊ ဆိုရှယ်လစ် မျိုးချစ်ဂုဏ်ထူးဆောင်နှင့် အလုပ်သမားသူရဲကောင်း ဆွန်ကွမ်းဝေါလ် -",
+        "ru": "Мемуары: Чтобы исполнить чаяния Вождя и Полководца - Сон Гым Воль, Социалистический патриотический заслуженный деятель и Герой труда, управляющая фермой Косан -",
+        "ja": "手記：首領様と将軍様の念願を解いて差し上げようと - 高山農場経理 労力英雄 社会主義愛国功労者 孫錦月 -",
+        "es": "Memorias: Para cumplir los deseos del Líder y del General - Son Kum Wol, Persona de Mérito Patriótico Socialista y Héroe del Trabajo, Gerente de la Granja Kosan -",
+        "fr": "Mémoires : Pour réaliser les désirs du Leader et du Général - Son Kum Wol, Personne de mérite patriotique socialiste et Héros du travail, Directrice de la ferme de Kosan -",
+        "de": "Memoiren: Um die Wünsche des Führers und des Generals zu erfüllen - Son Kum Wol, Sozialistische patriotische verdiente Persönlichkeit und Held der Arbeit, Leiterin der Kosan-Farm -",
+        "kk": "Мемуар: Көшбасшы мен Генералдың армандарын орындау үшін - Косан фермасының менеджері, Социалистік патриоттық еңбек сіңірген қайраткері және Еңбек ері Сон Гым Воль -",
+        "bo": "རང་རྣམ། གཙོ་འཛིན་དང་ཅང་ཅུན་གྱི་ཐུགས་འདུན་སྐོང་ཆེད། - ཀོ་སན་ཞིང་རའི་སྤྱི་གཉེར་བ། སྤྱི་ཚོགས་རིང་ལུགས་ཀྱི་རྒྱལ་གཅེས་བྱས་རྗེས་ཅན་དང་ངལ་རྩོལ་དཔའ་བོ་སོན་ཀུམ་ཝོལ། -",
+        "mn": "Дурсамж: Удирдагч болон Генералын хүслийг биелүүлэхийн тулд - Косан фермийн менежер, Социалист эх оронч гавьяат зүтгэлтэн, Хөдөлмөрийн баатар Сон Гүм Вол -"
+      },
+      "category": "Historical & Leadership Anecdotes"
+    },
+    {
+      "start": "19:21",
+      "end": "20:00",
+      "title": {
+        "ko": "특집: 애국의 힘, 단결의 힘으로",
+        "en": "Special Feature: With the Power of Patriotism, the Power of Unity",
+        "zh": "特别节目：以爱国的力量，团结的力量",
+        "my": "အထူးအစီအစဉ်- မျိုးချစ်စိတ်ဓာတ်၏ စွမ်းအား၊ ညီညွတ်ခြင်း၏ စွမ်းအားဖြင့်",
+        "ru": "Специальный репортаж: Силой патриотизма, силой единства",
+        "ja": "特集：愛国の力、団結の力で",
+        "es": "Reportaje especial: Con el poder del patriotismo, el poder de la unidad",
+        "fr": "Reportage spécial : Avec le pouvoir du patriotisme, le pouvoir de l'unité",
+        "de": "Sonderbericht: Mit der Kraft des Patriotismus, der Kraft der Einheit",
+        "kk": "Арнайы шығарылым: Патриотизмнің күшімен, бірліктің күшімен",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། རྒྱལ་གཅེས་ཀྱི་སྟོབས་ཤུགས་དང་། མཐུན་སྒྲིལ་གྱི་སྟོབས་ཤུགས་ཀྱིས།",
+        "mn": "Тусгай нэвтрүүлэг: Эх оронч үзлийн хүч, эв нэгдлийн хүчээр"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "20:00",
+      "end": "20:29",
+      "title": {
+        "ko": "보도",
+        "en": "News Broadcast",
+        "zh": "新闻报道",
+        "my": "သတင်းထုတ်လွှင့်ချက်",
+        "ru": "Выпуск новостей",
+        "ja": "報道",
+        "es": "Noticiero",
+        "fr": "Journal d'information",
+        "de": "Nachrichten",
+        "kk": "Жаңалықтар",
+        "bo": "གསར་འགྱུར།",
+        "mn": "Мэдээ"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:29",
+      "end": "20:51",
+      "title": {
+        "ko": "건강과 생활상식: 무더위때 건강관리 - 생활습관 -",
+        "en": "Health and Lifestyle Knowledge: Health Management during Sweltering Heat - Lifestyle Habits -",
+        "zh": "健康与生活常识：酷暑时期的健康管理——生活习惯——",
+        "my": "ကျန်းမာရေးနှင့် နေထိုင်မှုဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်အတွင်း ကျန်းမာရေးစောင့်ရှောက်မှု - နေထိုင်မှုအလေ့အထများ -",
+        "ru": "Здоровье и житейские знания: Забота о здоровье в сильную жару — Образ жизни —",
+        "ja": "健康と生活常識：猛暑時の健康管理 — 生活習慣 —",
+        "es": "Conocimientos de salud y estilo de vida: Cuidado de la salud durante el calor sofocante — Hábitos de vida —",
+        "fr": "Santé et connaissances pratiques : Gestion de la santé pendant les fortes chaleurs — Habitudes de vie —",
+        "de": "Gesundheits- und Lebenswissen: Gesundheitsmanagement bei glühender Hitze — Lebensgewohnheiten —",
+        "kk": "Денсаулық пен тұрмыс: Аптап ыстықтағы күтім — Өмір сүру дағдылары —",
+        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བའི་ཤེས་བྱ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — འཚོ་བའི་གོམས་གཤིས། —",
+        "mn": "Эрүүл мэнд ба амьдралын ухаан: Хэт халууны үеийн эрүүл мэндийн менежмент — Амьдралын хэв маяг —"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "20:51",
+      "end": "21:55",
+      "title": {
+        "ko": "TV무대: 취재길에서 만난 자강도사람들 (3)",
+        "en": "TV Stage: People of Jagang Province Met on the Reporting Path (Part 3)",
+        "zh": "电视舞台：在采访途中结识的慈江道人们 (3)",
+        "my": "တီဗီစင်မြင့်- သတင်းယူရာလမ်းခရီးတွင် တွေ့ဆုံခဲ့သော ဂျာဂန်းပြည်နယ်သူ ပြည်နယ်သားများ (အပိုင်း ၃)",
+        "ru": "Телевизионная сцена: Люди провинции Чагандо, встреченные на пути репортажа (Часть 3)",
+        "ja": "TV舞台：取材の道で出会った慈江道の人々（3）",
+        "es": "Escenario de TV: Personas de la provincia de Jagang conocidas en la ruta del reportaje (Parte 3)",
+        "fr": "Scène télévisée : Les habitants de la province de Jagang rencontrés sur le chemin du reportage (Partie 3)",
+        "de": "TV-Bühne: Menschen aus der Provinz Jagang, die ich auf dem Weg der Berichterstattung getroffen habe (Teil 3)",
+        "kk": "Теле-сахна: Баспасөз сапарында кездескен Чаган провинциясының тұрғындары (3-бөлім)",
+        "bo": "བརྙན་འཕྲིན་སྟེགས་བུ། གསར་འགྱུར་འགོད་ལམ་དུ་འཕྲད་པའི་ཚི་ཀང་ཞིང་ཆེན་གྱི་མི། (གསུམ་པ།)",
+        "mn": "ТВ тайз: Сурвалжилгын замд тааралдсан Жаган мужийн ард иргэд (3)"
+      },
+      "category": "Literary & Cultural Arts"
+    },
+    {
+      "start": "21:55",
+      "end": "22:15",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道摘要",
+        "my": "ယနေ့ထုတ်လွှင့်ခဲ့သော သတင်းထူးသတင်းဦး ကောက်နုတ်ချက်များ",
+        "ru": "Из сегодняшних главных новостей",
+        "ja": "今日の報道の中から",
+        "es": "De los reportajes de noticias destacados de hoy",
+        "fr": "Parmi les faits marquants du journal d'information d'aujourd'hui",
+        "de": "Aus den heutigen Nachrichtenhauptmeldungen",
+        "kk": "Бүгінгі жаңалықтардың маңызды тұстары",
+        "bo": "དེ་རིང་གི་གསར་འགྱུར་གནད་བསྡུས་ལས་།",
+        "mn": "Өнөөдрийн мэдээний тоймоос"
+      },
+      "category": "Daily News Bulletin"
+    }
+  ]
+}
