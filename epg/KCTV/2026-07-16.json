@@ -1,0 +1,615 @@
+{
+  "channel": "KCTV",
+  "date": "2026-07-16",
+  "source": "Korean Central Television (Juche TV)",
+  "programs": [
+    {
+      "start": "09:17",
+      "end": "09:40",
+      "title": {
+        "ko": "특집: 혁명전통교양의 최전성기를 펼치시여",
+        "en": "Special Feature: Unfolding the Golden Age of Revolutionary Tradition Education",
+        "zh": "特别节目：开创革命传统教育的最全盛期",
+        "my": "အထူးအစီအစဉ်- တော်လှန်ရေးရိုးရာစဉ်လာ ပညာပေးလုပ်ငန်း၏ ရွှေခေတ်ကို ဖွင့်လှစ်ခြင်း",
+        "ru": "Специальный репортаж: Открывая золотой век воспитания на революционных традициях",
+        "ja": "特集：革命伝統教養の最全盛期を繰り広げられて",
+        "es": "Reportaje especial: Desplegando la edad de oro de la educación en las tradiciones revolucionarias",
+        "fr": "Reportage spécial : Déployer l'âge d'or de l'éducation aux traditions révolutionnaires",
+        "de": "Sonderbericht: Die Entfaltung des Goldenen Zeitalters der Erziehung in revolutionären Traditionen",
+        "kk": "Арнайы шығарылым: Революциялық дәстүрлер тәрбиесінің алтын ғасырын ашу",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། གསར་བརྗེའི་སྲོལ་རྒྱུན་སློབ་གསོའི་གསེར་གྱི་དུས་རབས་མངོན་པར་མཛད་པ།",
+        "mn": "Тусгай нэвтрүүлэг: Хувьсгалт уламжлалын хүмүүжлийн алтан үеийг цогцлоосон нь"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "09:40",
+      "end": "09:48",
+      "title": {
+        "ko": "소개편집물: 《천아포》가 전하는 사랑의 이야기",
+        "en": "Introduction Program: The Story of Love Conveyed by \"Chonapo\"",
+        "zh": "专题剪辑：“天鹅浦”讲述的爱之故事",
+        "my": "မိတ်ဆက်တင်ပြချက်- \"ချွန်အာပို\" မှ ပြောပြသော မေတ္တာဖွဲ့ပုံပြင်",
+        "ru": "Тематический сюжет: История любви, которую передает «Чхонапхо»",
+        "ja": "紹介編集物：「天鵝浦」が伝える愛の物語",
+        "es": "Programa de presentación: La historia de amor que transmite \"Chonapo\"",
+        "fr": "Programme d'introduction : L'histoire d'amour racontée par \"Chonapo\"",
+        "de": "Zusammenstellung von Berichten: Die Liebesgeschichte, die von \"Chonapo\" vermittelt wird",
+        "kk": "Ақпараттық сюжет: «Чхонапхо» жеткізген махаббат тарихы",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ༼ཆོན་ཨ་ཕོ༽ཡིས་བཤད་པའི་བརྩེ་བའི་གཏམ་རྒྱུད།",
+        "mn": "Танилцуулга нэвтрүүлэг: \"Чонапо\"-гийн өгүүлэх хайрын түүх"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "09:48",
+      "end": "10:02",
+      "title": {
+        "ko": "연속참관기: 위인칭송의 고귀한 제보 - 국제친선전람관을 찾아서 (196)",
+        "en": "Serial Visit Report: Noble Testimonies Praising the Great Man - Visiting the International Friendship Exhibition (196)",
+        "zh": "系列探访：颂扬伟人的珍贵展品——探访国际友谊展览馆（196）",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ကြီးမြတ်သောလူသားအား ချီးမွမ်းခြင်းဆိုင်ရာ မြင့်မြတ်သောအလှူပစ္စည်းများ - နိုင်ငံတကာချစ်ကြည်ရေးပြတိုက်သို့ သွားရောက်လေ့လာခြင်း (၁၉၆)",
+        "ru": "Серия репортажей о посещении: Драгоценные дары великому человеку — Посещение Выставки международной дружбы (196)",
+        "ja": "連続参観記：偉人称賛の気高い品々 — 国際親善展覧館を訪ねて（196）",
+        "es": "Informe de visita en serie: Tributos preciosos a las grandes personas — Visitando la Exposición de la Amistad Internacional (196)",
+        "fr": "Rapport de visite en série : Hommages précieux aux grands hommes — En visitant l'Exposition de l'amitié internationale (196)",
+        "de": "Serie von Besuchsberichten: Kostbare Tribute an den großen Mann — Zu Besuch in der Internationalen Freundschaftsausstellung (196)",
+        "kk": "Хроникалық шолу: Ұлы тұлғаға тарту етілген бағалы сыйлықтар — Халықаралық достық көрмесіне саяхат (196)",
+        "bo": "བསྟུད་མར་གཟིགས་སྐོར་ཞུས་པའི་ཟིན་ཐོ། སྐྱེས་བུ་ཆེན་པོར་བསྟོད་པའི་རྩ་ཆེའི་དངོས་པོ། — རྒྱལ་སྤྱིའི་མཛའ་མཐུན་འགྲེམས་སྟོན་ཁང་ལ་གཟིགས་སྐོར་ཞུས་པ། (༡༩༦)",
+        "mn": "Цуврал сурвалжилга: Сүрлэг хүмүүсийг магтан алдаршуулах эрхэм нандин олдворууд — Олон улсын найрамдалт үзэсгэлэнгийн ордноор зорчсон тэмдэглэл (196)"
+      },
+      "category": "Cultural Visit Series"
+    },
+    {
+      "start": "10:02",
+      "end": "10:23",
+      "title": {
+        "ko": "소개편집물: 유능한 군사지휘관으로 키워주시여 - 항일혁명투사 박우섭",
+        "en": "Introduction Program: Nurturing into a Capable Military Commander - Anti-Japanese Revolutionary Fighter Pak U Sop",
+        "zh": "专题剪辑：将他培养成能干的军事指挥官——抗日革命斗士朴禹燮",
+        "my": "မိတ်ဆက်တင်ပြချက်- ထူးချွန်သော စစ်ရေးခေါင်းဆောင်တစ်ဦးအဖြစ် ပြုစုပျိုးထောင်ပေးခြင်း - ဂျပန်ဆန့်ကျင်ရေး တော်လှန်ရေးတိုက်ခိုက်ရေးသမား ပတ်အူဆော့",
+        "ru": "Тематический сюжет: Воспитание умелого военного командира — Антияпонский революционный борец Пак У Соп",
+        "ja": "紹介編集物：有能な軍事指揮官に育ててくださり — 抗日革命闘士 朴禹燮",
+        "es": "Programa de presentación: Formación como un comandante militar capaz — Combatiente revolucionario antijaponés Pak U Sop",
+        "fr": "Programme d'introduction : Éducation pour devenir un commandant militaire compétent — Combattant révolutionnaire anti-japonais Pak U Sop",
+        "de": "Zusammenstellung von Berichten: Ausbildung zu einem fähigen Militärkommandanten — Antijapanischer revolutionärer Kämpfer Pak U Sop",
+        "kk": "Ақпараттық сюжет: Қабілетті әскери қолбасшы ретінде тәрбиелеу — Жапонға қарсы революциялық күрескер Пак У Соп",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། འཇོན་ཐང་ཅན་གྱི་དམག་དོན་བཀོད་འདོམས་པར་སྐྱེད་སྲིང་གནང་བ། — རི་པིན་ལ་ངོ་རྒོལ་བྱེད་པའི་གསར་བརྗེའི་འཐབ་མོ་བ་ཕུའུ་ཝུའུ་ཞུ།",
+        "mn": "Танилцуулга нэвтрүүлэг: Чадварлаг цэргийн командлагч болгон хүмүүжүүлсэн нь — Японы эсрэг хувьсгалт тэмцэгч Пак У Соб"
+      },
+      "category": "Historical & Leadership Anecdotes"
+    },
+    {
+      "start": "10:23",
+      "end": "10:25",
+      "title": {
+        "ko": "건강과 생활상식: 무더위때 건강관리 - 일사병과 열사병을 막자편",
+        "en": "Health and Lifestyle Knowledge: Health Management during Sweltering Heat - Preventing Sunstroke and Heatstroke",
+        "zh": "健康与生活常识：酷暑时期的健康管理——预防日射病与重症中暑",
+        "my": "ကျန်းမာရေးနှင့် နေထိုင်မှုဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်အတွင်း ကျန်းမာရေးစောင့်ရှောက်မှု - နေပူရှပ်ခြင်းနှင့် အပူလျှပ်ခြင်းကို ကာကွယ်ခြင်း",
+        "ru": "Здоровье и житейские знания: Забота о здоровье в сильную жару — Профилактика солнечного и теплового удара",
+        "ja": "健康と生活常識：猛暑時の健康管理 — 日射病と熱射病を防ごう編",
+        "es": "Conocimientos de salud y estilo de vida: Cuidado de la salud durante el calor sofocante — Prevención de la insolación y el golpe de calor",
+        "fr": "Santé et connaissances pratiques : Gestion de la santé pendant les fortes chaleurs — Prévention de l'insolation et du coup de chaleur",
+        "de": "Gesundheits- und Lebenswissen: Gesundheitsmanagement bei glühender Hitze — Vorbeugung von Sonnenstich und Hitzschlag",
+        "kk": "Денсаулық пен тұрмыс: Аптап ыстықтағы күтім — Күн өту мен ыстық өтудің алдын алу",
+        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བའི་ཤེས་བྱ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — ཉི་འཁྱགས་དང་ཚ་འཁྱགས་སྔོན་འགོག་བྱེད་པ།",
+        "mn": "Эрүүл мэнд ба амьдралын ухаан: Хэт халууны үеийн эрүүл мэндийн менежмент — Нарших болон халуунд цохиулахаас сэргийлэх нь"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "10:25",
+      "end": "10:33",
+      "title": {
+        "ko": "국제생활: 문화유적을 보존하기 위한 노력",
+        "en": "International Life: Efforts to Preserve Cultural Heritage Sites",
+        "zh": "国际生活：保护文化遗址的努力",
+        "my": "နိုင်ငံတကာလူနေမှုဘဝ- ယဉ်ကျေးမှုအမွေအနှစ်များကို ထိန်းသိမ်းစောင့်ရှောက်ရန် ကြိုးပမ်းမှုများ",
+        "ru": "Международная жизнь: Усилия по сохранению объектов культурного наследия",
+        "ja": "国際生活：文化遺跡を保存するための努力",
+        "es": "Vida internacional: Esfuerzos para preservar los sitios de patrimonio cultural",
+        "fr": "Vie internationale : Efforts pour préserver les sites du patrimoine culturel",
+        "de": "Internationales Leben: Bemühungen zur Erhaltung von Kulturerbestätten",
+        "kk": "Халықаралық шолу: Мәдени мұраны сақтау жолындағы күш-жігер",
+        "bo": "རྒྱལ་སྤྱིའི་འཚོ་བ། རིག་གནས་ཤུལ་བཞག་སྲུང་སྐྱོབ་བྱེད་པའི་འབད་བརྩོན།",
+        "mn": "Олон улсын амьдрал: Соёлын өвийг хамгаалах хүчин чармайлт"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "10:33",
+      "end": "10:46",
+      "title": {
+        "ko": "문답: 습지 1. 습지의 유익성",
+        "en": "Q&A: Wetland Part 1. Benefits of Wetlands",
+        "zh": "问答：湿地 1. 湿地的益处",
+        "my": "အမေးအဖြေ- ရေဝပ်ဒေသများ အပိုင်း ၁။ ရေဝပ်ဒေသများ၏ အကျိုးကျေးဇူးများ",
+        "ru": "Вопросы и ответы: Водно-болотные угодья Часть 1. Польза водно-болотных угодий",
+        "ja": "問答：湿地 1. 湿地の有益性",
+        "es": "Preguntas y respuestas: Humedales 1. Beneficios de los humedales",
+        "fr": "Questions et réponses : Les zones humides 1. Les avantages des zones humides",
+        "de": "Fragen und Antworten: Feuchtgebiete 1. Vorteile von Feuchtgebieten",
+        "kk": "Сұрақ-жауап: Сулы-батпақты алқаптар 1. Сулы-батпақты алқаптардың пайдасы",
+        "bo": "དྲི་བ་དྲིས་ལན། འདམ་ར། ༡. འདམ་རའི་ཕན་ཡོན།",
+        "mn": "Асуулт хариулт: Намгархаг газар 1. Намгархаг газрын ач холбогдол"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "10:46",
+      "end": "11:11",
+      "title": {
+        "ko": "특집: 발전소에서 만난 공로자, 노력혁신자들",
+        "en": "Special Feature: Meritorious Persons and Labor Innovators Met at the Power Plant",
+        "zh": "特别节目：在发电厂结识的功臣与劳动革新者们",
+        "my": "အထူးအစီအစဉ်- လျှပ်စစ်ဓာတ်အားပေးစက်ရုံတွင် တွေ့ဆုံခဲ့သော ဂုဏ်ထူးဆောင်ပုဂ္ဂိုလ်များနှင့် လုပ်ငန်းခွင်တီထွင်ဆန်းသစ်သူများ",
+        "ru": "Специальный репортаж: Заслуженные деятели и новаторы труда, встреченные на электростанции",
+        "ja": "特集：発電所で出会った功労者、努力革新者たち",
+        "es": "Reportaje especial: Personas meritorias e innovadores laborales conocidos en la planta de energía",
+        "fr": "Reportage spécial : Personnes méritantes et innovateurs du travail rencontrés à la centrale électrique",
+        "de": "Sonderbericht: Verdiente Persönlichkeiten und Arbeitsinnovatoren, die in der Kraftanlage getroffen wurden",
+        "kk": "Арнайы шығарылым: Электр станциясында кездескен еңбек сіңірген қайраткерлер мен өндіріс жаңашылдары",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། གློག་ཁང་དུ་འཕྲད་པའི་བྱས་རྗེས་ཅན་དང་ངལ་རྩོལ་གསར་གཏོད་པ།",
+        "mn": "Тусгай нэвтрүүлэг: Цахилгаан станцад тааралдсан гавьяатнууд болон хөдөлмөрийн шинийг санаачлагчид"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "11:11",
+      "end": "11:23",
+      "title": {
+        "ko": "탄부들의 TV연단 - 개천지구탄광련합기업소 봉천탄광 차광수청년돌격대 대장 박춘길",
+        "en": "Coal Miners' TV Podium: Pak Chun Gil, Commander of the Cha Kwang Su Youth Shock Brigade at Pongchon Coal Mine of the Kaechon Area Coal Mining Complex",
+        "zh": "煤矿工人的电视讲坛——价川地区煤矿联合企业所凤天煤矿车光秀青年突击队队长朴春吉",
+        "my": "ကျောက်မီးသွေးတူးဖော်သူများ၏ တီဗီစင်မြင့်- ကယ်ချွန်းဒေသ ကျောက်မီးသွေးလုပ်ငန်းစု၊ ဖုံချွန်းကျောက်မီးသွေးတွင်းမှ ချာဂွမ်ဆု လူငယ်တပ်ဦးခေါင်းဆောင် ပတ်ချွန်ဂေး",
+        "ru": "Телевизионная трибуна шахтеров: Командир молодежной ударной бригады имени Ча Гван Су шахты Пончхон Кэчхонского угольного комплекса Пак Чхун Гиль",
+        "ja": "炭鉱夫のTV演壇 - 价川地区炭鉱連合企業所 鳳天炭鉱 車光秀青年突撃隊 隊長 朴春吉",
+        "es": "Tribuna de televisión de los mineros del carbón: Pak Chun Gil, comandante de la Brigada de Choque Juvenil Cha Kwang Su en la mina de carbón de Pongchon del complejo minero de carbón del área de Kaechon",
+        "fr": "Tribune télévisée des mineurs de charbon : Pak Chun Gil, commandant de la Brigade de choc de la jeunesse Cha Kwang Su à la mine de charbon de Pongchon du complexe minier de charbon de la région de Kaechon",
+        "de": "TV-Tribüne der Bergleute: Pak Chun Gil, Kommandeur der Cha Kwang Su Jugend-Stoßbrigade in der Kohlemine Pongchon des Kohlebergbaukomplexes Kaechon",
+        "kk": "Кеншілердің теледидар мінбері: Кэчхон көмір өндіру кешенінің Пончхон шахтасы Ча Гван Су атындағы жастар екпінді бригадасының командирі Пак Чхун Гиль",
+        "bo": "རྡོ་སོལ་བཟོ་པའི་བརྙན་འཕྲིན་སྟེགས་བུ། ཀེ་ཁྲོན་ས་ཁུལ་གཏེར་ཁ་མཉམ་འབྲེལ་ལས་ཁུངས་ཕུང་ཁྲོན་རྡོ་སོལ་གཏེར་ཁའི་ཁྲ་ཀོང་སུའུ་གཞོན་ནུ་འགག་སྒྲོལ་རུ་ཁག་གི་རུ་དཔོན་ཕུའུ་ཁྲུན་ཅིལ།",
+        "mn": "Нүүрсчдийн ТВ индэр: Кэчон бүсийн нүүрсний уурхайн нэгдлийн Пончон уурхайн Ча Гван Сү-гийн нэрэмжит залуучуудын ударник бригадын дарга Пак Чүн Гил"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "11:23",
+      "end": "11:38",
+      "title": {
+        "ko": "연속소개편집물: 위민헌신의 자욱 새겨진 곳에서 - 중앙버섯연구소",
+        "en": "Serial Introduction Compilation: In the Places Etched with Devotion to the People - Central Mushroom Research Institute",
+        "zh": "系列专题剪辑：镌刻着为民献身足迹的地方——中央蘑菇研究所",
+        "my": "အစဉ်တစိုက်မိတ်ဆက်တင်ပြချက်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံမှု အရှိန်အဝါများ လွှမ်းခြုံထားရာနေရာ - ဗဟိုမှိုသုတေသနဌာန",
+        "ru": "Серия тематических сюжетов: Там, где запечатлены следы самоотверженного служения народу — Центральный научно-исследовательский институт грибоводства",
+        "ja": "連続紹介編集物：人民献身の足跡が刻まれた場所で — 中央キノコ研究所",
+        "es": "Recopilación de reportajes en serie: En los lugares grabados con devoción al pueblo — Instituto Central de Investigación de Hongos",
+        "fr": "Compilation de reportages en série : Dans les lieux empreints de dévouement envers le peuple — Institut central de recherche sur les champignons",
+        "de": "Zusammensetzung von Berichten: An den Orten, die von der Aufopferung für das Volk geprägt sind — Zentrales Pilzforschungsinstitut",
+        "kk": "Деректі жинақ: Халыққа қызмет етудің ізі қалған жерде — Орталық саңырауқұлақ ғылыми-зерттеу институты",
+        "bo": "བསྟུད་མར་ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བསམ་བཅངས་པའི་ཞབས་རྗེས་འཁོད་པའི་སར། — དབུས་ཤ་མོ་ཞིབ་འཇུག་ཁང་།",
+        "mn": "Цуврал танилцуулга: Ард түмний төлөө зүтгэсэн мөр үлдсэн газарт — Төв мөөгний эрдэм шинжилгээний хүрээлэн"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "11:38",
+      "end": "11:59",
+      "title": {
+        "ko": "소개편집물: 과학자숙소에 깃든 사랑의 이야기",
+        "en": "Introduction Program: The Story of Love Dwelling in the Scientists' Lodgings",
+        "zh": "专题剪辑：科学家宿舍中蕴含的爱之故事",
+        "my": "မိတ်ဆက်တင်ပြချက်- သိပ္ပံပညာရှင်များ၏ နေအိမ်များတွင် ကိန်းအောင်းနေသော မေတ္တာဖွဲ့ပုံပြင်",
+        "ru": "Тематический сюжет: История любви, живущая в общежитии ученых",
+        "ja": "紹介編集物：科学者宿舎に宿る愛の物語",
+        "es": "Programa de presentación: La historia de amor que habita en los alojamientos de los científicos",
+        "fr": "Programme d'introduction : L'histoire d'amour qui habite les logements des scientifiques",
+        "de": "Zusammenstellung von Berichten: Die Liebesgeschichte, die in den Unterkünften der Wissenschaftler wohnt",
+        "kk": "Ақпараттық сюжет: Ғалымдар жатақханасындағы махаббат тарихы",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། ཚན་རིག་པའི་མགྲོན་ཁང་དུ་གནས་པའི་བརྩེ་བའི་གཏམ་རྒྱུད།",
+        "mn": "Танилцуулга нэвтрүүлэг: Эрдэмтдийн байранд шингэсэн хайрын түүх"
+      },
+      "category": "Socialist Documentary Compilation"
+    },
+    {
+      "start": "11:59",
+      "end": "13:05",
+      "title": {
+        "ko": "조선예술영화: 금강의 세동서",
+        "en": "North Korean Art Film: Three Brothers-in-Law of Kumgang",
+        "zh": "朝鲜艺术电影：金刚山的三连襟",
+        "my": "ကိုရီးယားအနုပညာရုပ်ရှင်- ကွမ်းဂန်းမှ ခဲအိုသုံးဦး",
+        "ru": "Северокорейский художественный фильм: Три свояка из Кымгана",
+        "ja": "朝鮮芸術映画：金剛の三相婿",
+        "es": "Película de arte norcoreana: Los tres concuñados de Kumgang",
+        "fr": "Film d'art nord-coréen : Les trois beaux-frères de Kumgang",
+        "de": "Nordkoreanischer Spielfilm: Drei Schwäger aus Kumgang",
+        "kk": "Солтүстік Корея көркем фильмі: Құмғаңның үш бажасы",
+        "bo": "བྱང་ཀྲའོ་ཞན་གྱི་སྒྱུ་རྩལ་གློག་བརྙན། ཀུམ་ཀང་གི་སྐྱེས་དམན་སྤུན་ཟླའི་ཁྱོ་ག་གསུམ།",
+        "mn": "Солонгосын уран сайхны кино: Кумган уулын гурван хүргэн ах"
+      },
+      "category": "Cinematic Feature Film"
+    },
+    {
+      "start": "13:05",
+      "end": "13:27",
+      "title": {
+        "ko": "특집: 승리전통교양의 대전당으로 꾸려주시여 (4)",
+        "en": "Special Feature: Building the Grand Temple of Victory Tradition Education (Part 4)",
+        "zh": "特别节目：建设胜利传统教育的大殿堂 (4)",
+        "my": "အထူးအစီအစဉ်- အောင်ပွဲရိုးရာစဉ်လာ ပညာပေးလုပ်ငန်း၏ ကြီးကျယ်ခမ်းနားသော ဗိမာန်တော်ကြီးကို တည်ဆောက်ခြင်း (အပိုင်း ၄)",
+        "ru": "Специальный репортаж: Создавая величественный дворец воспитания на победоносных традициях (Часть 4)",
+        "ja": "特集：勝利伝統教養の大殿堂に整えてくださり (4)",
+        "es": "Reportaje especial: Construyendo el gran templo de la educación en la tradición de la victoria (Parte 4)",
+        "fr": "Reportage spécial : Construire le grand temple de l'éducation à la tradition de la victoire (Partie 4)",
+        "de": "Sonderbericht: Errichtung des großen Tempels der Erziehung in der Tradition des Sieges (Teil 4)",
+        "kk": "Арнайы шығарылым: Жеңіс дәстүрлерін дәріптейтін ұлы сарай құру (4-бөлім)",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། རྒྱལ་ཁའི་སྲོལ་རྒྱུན་སློབ་གསོའི་ལྷ་ཁང་ཆེན་མོ་བསྐྲུན་པ། (བཞི་པ།)",
+        "mn": "Тусгай нэвтрүүлэг: Ялалтын уламжлалын хүмүүжлийн их өргөөг байгуулсан нь (4)"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "13:27",
+      "end": "13:54",
+      "title": {
+        "ko": "소개편집물: 한 정찰병의 추억 - 조국해방전쟁참전자 고경찬",
+        "en": "Introduction Program: Memories of a Reconnaissance Soldier - Fatherland Liberation War Veteran Ko Kyong Chan",
+        "zh": "专题剪辑：一名侦察兵的回忆——祖国解放战争参战者高景灿",
+        "my": "မိတ်ဆက်တင်ပြချက်- ကင်းထောက်စစ်သားတစ်ဦး၏ အမှတ်တရများ - မျိုးချစ်လွတ်မြောက်ရေးစစ်ပွဲ စစ်ပြန် ကိုကျောင်းချန်း",
+        "ru": "Тематический сюжет: Воспоминания разведчика — Ветеран Отечественной освободительной войны Ко Гён Чхан",
+        "ja": "紹介編集物：ある偵察兵の追憶 — 祖国解放戦争参戦者 髙景燦",
+        "es": "Programa de presentación: Recuerdos de un soldado de reconocimiento — Veterano de la Guerra de Liberación de la Patria Ko Kyong Chan",
+        "fr": "Programme d'introduction : Souvenirs d'un soldat de reconnaissance — Vétéran de la guerre de libération de la patrie Ko Kyong Chan",
+        "de": "Zusammenstellung von Berichten: Erinnerungen eines Aufklärungssoldaten — Veteran des Vaterländischen Befreiungskrieges Ko Kyong Chan",
+        "kk": "Ақпараттық сюжет: Барлаушының естеліктері — Отан азаттығы соғысының ардагері Ко Гён Чхан",
+        "bo": "ངོ་སྤྲོད་བྱས་པའི་ལེ་ཚན། མྱུལ་ཞིབ་དམག་མི་ཞིག་གི་དྲན་རྟེན། — མེས་རྒྱལ་བཅིངས་འགྲོལ་དམག་འཁྲུག་ལ་ཞུགས་མཁན་ཀའོ་ཅིང་ཚན།",
+        "mn": "Танилцуулга нэвтрүүлэг: Нэгэн тагнуулчийн дурсамж — Эх орноо чөлөөлөх дайнд оролцогч Ко Гён Чан"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "13:54",
+      "end": "14:02",
+      "title": {
+        "ko": "건강과 생활상식: 무더위때 건강관리 - 고혈압환자들",
+        "en": "Health and Lifestyle Knowledge: Health Management during Sweltering Heat - For Hypertension Patients",
+        "zh": "健康与生活常识：酷暑时期的健康管理——高血压患者",
+        "my": "ကျန်းမာရေးနှင့် နေထိုင်မှုဗဟုသုတ- ပြင်းထန်သော အပူဒဏ်အတွင်း ကျန်းမာရေးစောင့်ရှောက်မှု - သွေးတိုးရောဂါဝေဒနာရှင်များအတွက်",
+        "ru": "Здоровье и житейские знания: Забота о здоровье в сильную жару — Для гипертоников",
+        "ja": "健康と生活常識：猛暑時の健康管理 — 高血圧患者たち",
+        "es": "Conocimientos de salud y estilo de vida: Cuidado de la salud durante el calor sofocante — Para pacientes con hipertensión",
+        "fr": "Santé et connaissances pratiques : Gestion de la santé pendant les fortes chaleurs — Pour les patients hypertendus",
+        "de": "Gesundheits- und Lebenswissen: Gesundheitsmanagement bei glühender Hitze — Für Bluthochdruckpatienten",
+        "kk": "Денсаулық пен тұрмыс: Аптап ыстықтағы күтім — Гипертониямен ауыратындарға",
+        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བའི་ཤེས་བྱ། ཚད་པ་ཆེ་བའི་སྐབས་ཀྱི་ལུས་ཟུངས་གསོ་ཐབས། — ཁྲག་ཤེད་མཐོ་བའི་ནད་པ།",
+        "mn": "Эрүүл мэнд ба амьдралын ухаан: Хэт халууны үеийн эрүүл мэндийн менежмент — Цусны даралт ихсэх өвчтэй хүмүүст"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "14:02",
+      "end": "14:40",
+      "title": {
+        "ko": "문답: 사회주의건설의 전면적발전과 3대혁명소조운동",
+        "en": "Q&A: All-Round Development of Socialist Construction and the Three-Revolution Team Movement",
+        "zh": "问答：社会主义建设的全面发展与三大革命小组运动",
+        "my": "အမေးအဖြေ- ဆိုရှယ်လစ်တည်ဆောက်ရေး ဘက်စုံဖွံ့ဖြိုးတိုးတက်မှုနှင့် တော်လှန်ရေးသုံးရပ် အဖွဲ့လှုပ်ရှားမှု",
+        "ru": "Вопросы и ответы: Всестороннее развитие социалистического строительства и Движение бригад трех революций",
+        "ja": "問答：社会主義建設の全面的発展と三大革命小組運動",
+        "es": "Preguntas y respuestas: Desarrollo integral de la construcción socialista y el Movimiento del Equipo de las Tres Revoluciones",
+        "fr": "Questions et réponses : Développement global de la construction socialiste et Mouvement des équipes des trois révolutions",
+        "de": "Fragen und Antworten: Allseitige Entwicklung des sozialistischen Aufbaus und die Bewegung der Teams der Drei Revolutionen",
+        "kk": "Сұрақ-жауап: Социалистік құрылыстың жан-жақты дамуы және Үш революциялық топ қозғалысы",
+        "bo": "དྲི་བ་དྲིས་ལན། སྤྱི་ཚོགས་རིང་ལུགས་འཛུགས་སྐྲུན་གྱི་ཕྱོགས་ཡོངས་འཕེལ་རྒྱས་དང་གསར་བརྗེ་ཆེན་པོ་གསུམ་གྱི་ཚོགས་ཆུང་ལས་འགུལ།",
+        "mn": "Асуулт хариулт: Социалист бүтээн байгуулалтын бүх талын хөгжил ба Гурван хувьсгалт багийн хөдөлгөөн"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "14:40",
+      "end": "14:57",
+      "title": {
+        "ko": "종합편집: 3대혁명의 선구자들",
+        "en": "General Compilation: Pioneers of the Three Revolutions",
+        "zh": "综合剪辑：三大革命的先驱者们",
+        "my": "ပေါင်းစပ်တင်ပြချက်- တော်လှန်ရေးသုံးရပ်၏ ရှေ့ဆောင်လမ်းပြများ",
+        "ru": "Общий обзор: Пионеры трех революций",
+        "ja": "総合編集：三大革命の先駆者たち",
+        "es": "Recopilación general: Pioneros de las Tres Revoluciones",
+        "fr": "Compilation générale : Pionniers des trois révolutions",
+        "de": "Gesamtübersicht: Pioniere der drei Revolutionen",
+        "kk": "Жалпы шолу: Үш революцияның ізашарлары",
+        "bo": "ཕྱོགས་བསྡུས་རྩོམ་སྒྲིག གསར་བརྗེ་ཆེན་པོ་གསུམ་གྱི་སྔོན་སྐྱོད་པ།",
+        "mn": "Нэгдсэн тойм: Гурван хувьсгалын анхдагчид"
+      },
+      "category": "General Compilation"
+    },
+    {
+      "start": "14:57",
+      "end": "15:55",
+      "title": {
+        "ko": "특집: 위민헌신의 리념",
+        "en": "Special Feature: Ideal of Devotion to the People",
+        "zh": "特别节目：为民献身的理念",
+        "my": "အထူးအစီအစဉ်- ပြည်သူလူထုအတွက် ကိုယ်ကျိုးစွန့်အနစ်နာခံမှု၏ စံပြအယူအဆ",
+        "ru": "Специальный репортаж: Идеал самоотверженного служения народу",
+        "ja": "特集：為民献身の理念",
+        "es": "Reportaje especial: Ideal de devoción al pueblo",
+        "fr": "Reportage spécial : Idéal de dévouement au peuple",
+        "de": "Sonderbericht: Ideal der Aufopferung für das Volk",
+        "kk": "Арнайы шығарылым: Халыққа қызмет ету мұраты",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། མི་དམངས་ལ་ལྷག་བསམ་བཅངས་པའི་ཕུགས་བསམ།",
+        "mn": "Тусгай нэвтрүүлэг: Ард түмний төлөө зүтгэх үзэл санаа"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "15:55",
+      "end": "16:03",
+      "title": {
+        "ko": "문답: 법과 공민 - 도로교통법 - (2)",
+        "en": "Q&A: Law and Citizens - Road Traffic Act - (2)",
+        "zh": "问答：法律与公民——道路交通法——(2)",
+        "my": "အမေးအဖြေ- ဥပဒေနှင့် နိုင်ငံသား - လမ်းပန်းဆက်သွယ်ရေးဥပဒေ - (အပိုင်း ၂)",
+        "ru": "Вопросы и ответы: Закон и граждане — Закон о дорожном движении — (Часть 2)",
+        "ja": "問答：法と公民 — 道路交通法 — (2)",
+        "es": "Preguntas y respuestas: La ley y los ciudadanos — Ley de tránsito — (2)",
+        "fr": "Questions et réponses : La loi et les citoyens — Loi sur la circulation routière — (2)",
+        "de": "Fragen und Antworten: Gesetz und Bürger — Straßenverkehrsgesetz — (2)",
+        "kk": "Сұрақ-жауап: Заң және азамат — Жол жүрісі қағидалары — (2-бөлім)",
+        "bo": "དྲི་བ་དྲིས་ལན། བཅའ་ཁྲིམས་དང་སྤྱི་དམངས། — འགྲིམ་འགྲུལ་བཅའ་ཁྲིམས། — (གཉིས་པ།)",
+        "mn": "Асуулт хариулт: Хууль ба иргэн — Замын хөдөлгөөний тухай хууль — (2)"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "16:03",
+      "end": "16:28",
+      "title": {
+        "ko": "특집: 공화국기발 - 피젖은 공화국기의 기수들",
+        "en": "Special Feature: Flag of the Republic - Flagbearers of the Blood-stained Republic Flag",
+        "zh": "特别节目：共和国国旗——染血的共和国国旗的旗手们",
+        "my": "အထူးအစီအစဉ်- သမ္မတနိုင်ငံတော်အလံ - သွေးစွန်းနေသော သမ္မတနိုင်ငံတော်အလံကို ကိုင်ဆောင်သူများ",
+        "ru": "Специальный репортаж: Флаг Республики — Знаменосцы окровавленного флага Республики",
+        "ja": "特集：共和国旗 — 血に染まった共和国旗の旗手たち",
+        "es": "Reportaje especial: Bandera de la República — Abanderados de la bandera de la República manchada de sangre",
+        "fr": "Reportage spécial : Drapeau de la République — Porte-drapeaux du drapeau de la République taché de sang",
+        "de": "Sonderbericht: Flagge der Republik — Fahnenträger der blutbefleckten Flagge der Republik",
+        "kk": "Арнайы шығарылым: Республика туы — Қанға боялған Республика туын көтерушілер",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། སྤྱི་མཐུན་རྒྱལ་ཁབ་ཀྱི་དར་ཆ། — ཁྲག་གིས་སྦགས་པའི་སྤྱི་མཐུན་རྒྱལ་ཁབ་ཀྱི་དར་ཆ་འཛིན་མཁན།",
+        "mn": "Тусгай нэвтрүүлэг: Бүгд Найрамдах Улсын туг — Цусанд будагдсан Бүгд Найрамдах Улсын туг баригчид"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "16:28",
+      "end": "17:00",
+      "title": {
+        "ko": "특집: 잊지 말아야 할 피의 교훈",
+        "en": "Special Feature: Blood Lesson We Must Never Forget",
+        "zh": "特别节目：切记不要忘记的血的教训",
+        "my": "အထူးအစီအစဉ်- ဘယ်သောအခါမှ မမေ့အပ်သော သွေးဖြင့်ရင်းခဲ့ရသည့် သင်ခန်းစာ",
+        "ru": "Специальный репортаж: Кровавый урок, который мы не должны забывать",
+        "ja": "特集：忘れてはならない血の教訓",
+        "es": "Reportaje especial: Lección de sangre que nunca debemos olvidar",
+        "fr": "Reportage spécial : Une leçon de sang que nous ne devons jamais oublier",
+        "de": "Sonderbericht: Eine blutige Lektion, die wir nie vergessen dürfen",
+        "kk": "Арнайы шығарылым: Ешқашан ұмытылмас қанды сабақ",
+        "bo": "དམིགས་བསལ་ལེ་ཚན། ནམ་ཡང་བརྗེད་མི་རུང་བའི་ཁྲག་གི་བསླབ་བྱ།",
+        "mn": "Тусгай нэвтрүүлэг: Хэзээ ч мартаж болохгүй цусны сургамж"
+      },
+      "category": "Special Political Feature"
+    },
+    {
+      "start": "17:00",
+      "end": "17:20",
+      "title": {
+        "ko": "보도",
+        "en": "News Broadcast",
+        "zh": "新闻报道",
+        "my": "သတင်းထုတ်လွှင့်ချက်",
+        "ru": "Выпуск новостей",
+        "ja": "報道",
+        "es": "Noticiero",
+        "fr": "Journal d'information",
+        "de": "Nachrichten",
+        "kk": "Жаңалықтар",
+        "bo": "གསར་འགྱུར།",
+        "mn": "Мэдээ"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "17:20",
+      "end": "17:26",
+      "title": {
+        "ko": "오늘호 중앙신문개관",
+        "en": "Today's Central Newspaper Review",
+        "zh": "今日中央报纸概览",
+        "my": "ယနေ့ထုတ် ဗဟိုသတင်းစာများ ကောက်နုတ်ချက်သုံးသပ်ချက်",
+        "ru": "Обзор сегодняшней центральной прессы",
+        "ja": "今日号の中央新聞概観",
+        "es": "Revisión de los principales periódicos centrales de hoy",
+        "fr": "Revue de la presse centrale d'aujourd'hui",
+        "de": "Heutige Übersicht der zentralen Zeitungen",
+        "kk": "Орталық баспасөзге шолу: Бүгінгі газеттер не дейді?",
+        "bo": "དེ་རིང་གི་དབུས་གཞུང་ཚགས་པར་གནད་བསྡུས།",
+        "mn": "Өнөөдрийн төв сонинуудын тойм"
+      },
+      "category": "Press Review"
+    },
+    {
+      "start": "17:26",
+      "end": "18:27",
+      "title": {
+        "ko": "아동방송시간 역사만화영화: 고주몽 제39부",
+        "en": "Children's Broadcast - Historical Animated Cartoon: Go Jumong (Part 39)",
+        "zh": "儿童广播时间 历史动画电影：高朱蒙（第39部）",
+        "my": "ကလေးသူငယ်များဆိုင်ရာ ထုတ်လွှင့်မှုကဏ္ဍ - သမိုင်းဝင် အန်နီမေးရှင်း ကာတွန်းဇာတ်လမ်း- ဂိုဂျူမုံ (အပိုင်း ၃၉)",
+        "ru": "Детское вещание - Исторический мультипликационный фильм: Го Джумонг (Часть 39)",
+        "ja": "児童放送時間 歴史漫画映画：高朱蒙（第39部）",
+        "es": "Transmisión infantil - Película de animación histórica: Go Jumong (Parte 39)",
+        "fr": "Émission pour enfants - Dessin animé historique : Go Jumong (Partie 39)",
+        "de": "Kinder-Rundfunk - Historischer Animationsfilm: Go Jumong (Teil 39)",
+        "kk": "Балаларға арналған бағдарлама - Тарихи анимациялық фильм: Го Джумонг (39-бөлім)",
+        "bo": "བྱིས་པའི་དུས་ཚོད། ལོ་རྒྱུས་བརྙན་རིས་གློག་བརྙན། ཀོ་ཅུ་མོང། (ལེའུ་སོ་དགུ་པ།)",
+        "mn": "Хүүхдийн цаг - Түүхэн хүүхэлдэйн кино: Го Жумон (39-р анги)"
+      },
+      "category": "Children's Programming"
+    },
+    {
+      "start": "18:27",
+      "end": "18:31",
+      "title": {
+        "ko": "건강과 생활상식: 땀띠의 원인과 치료대책",
+        "en": "Health and Lifestyle Knowledge: Causes of Heat Rash and Treatment Measures",
+        "zh": "健康与生活常识：痱子的起因与治疗对策",
+        "my": "ကျန်းမာရေးနှင့် နေထိုင်မှုဗဟုသုတ- မိတ်ထွက်ခြင်း၏ အကြောင်းရင်းများနှင့် ကုသရေးအစီအမံများ",
+        "ru": "Здоровье и житейские знания: Причины потницы и меры лечения",
+        "ja": "健康と生活常識：あせもの原因と治療対策",
+        "es": "Conocimientos de salud y estilo de vida: Causas del sarpullido por calor y medidas de tratamiento",
+        "fr": "Santé et connaissances pratiques : Causes de l'éruption miliaire et mesures de traitement",
+        "de": "Gesundheits- und Lebenswissen: Ursachen von Hitzepickeln und Behandlungsmaßnahmen",
+        "kk": "Денсаулық пен тұрмыс: Бөртпенің себептері және емдеу шаралары",
+        "bo": "འཕྲོད་བསྟེན་དང་འཚོ་བའི་ཤེས་བྱ། དྲོད་ཐོར་གྱི་རྒྱུ་རྐྱེན་དང་བཅོས་ཐབས།",
+        "mn": "Эрүүл мэнд ба амьдралын ухаан: Хөлсний тууралт гарах шалтгаан ба эмчлэх арга хэмжээ"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "18:31",
+      "end": "18:45",
+      "title": {
+        "ko": "수필: 우리 시대 과학자들의 모습",
+        "en": "Essay: The Image of Scientists of Our Era",
+        "zh": "散文：我们时代科学家的面貌",
+        "my": "စာစီစာကုံး- ကျွန်ုပ်တို့ခေတ် သိပ္ပံပညာရှင်များ၏ ပုံရိပ်",
+        "ru": "Эссе: Образ ученых нашей эпохи",
+        "ja": "随筆：我が時代の科学者たちの姿",
+        "es": "Ensayo: La imagen de los científicos de nuestra era",
+        "fr": "Essai : L'image des scientifiques de notre ère",
+        "de": "Essay: Das Bild der Wissenschaftler unserer Epoche",
+        "kk": "Эссе: Біздің дәуір ғалымдарының бейнесі",
+        "bo": "ལྷུག་རྩོམ། ང་ཚོའི་དུས་རབས་ཀྱི་ཚན་རིག་པའི་སྣང་བརྙན།",
+        "mn": "Эссе: Бидний үеийн эрдэмтдийн дүр төрх"
+      },
+      "category": "Literary & Cultural Arts"
+    },
+    {
+      "start": "18:45",
+      "end": "18:55",
+      "title": {
+        "ko": "종합편집: 올해 목표점령으로 힘차게 달린다",
+        "en": "General Compilation: Running Vigorously to Occupy This Year's Goals",
+        "zh": "综合剪辑：为攻克今年目标而奋力奔跑",
+        "my": "ပေါင်းစပ်တင်ပြချက်- ယခုနှစ်၏ ရည်မှန်းချက်များကို သိမ်းပိုက်ရန် တက်ကြွစွာ ချီတက်ခြင်း",
+        "ru": "Общий обзор: Энергично продвигаемся к достижению целей этого года",
+        "ja": "総合編集：今年の目標占領へ力強く走る",
+        "es": "Recopilación general: Corriendo vigorosamente para ocupar las metas de este año",
+        "fr": "Compilation générale : Courir vigoureusement pour atteindre les objectifs de cette année",
+        "de": "Gesamtübersicht: Energisches Laufen zur Erreichung der diesjährigen Ziele",
+        "kk": "Жалпы шолу: Биылғы мақсаттарға жету үшін қарқынды ұмтылыс",
+        "bo": "ཕྱོགས་བསྡུས་རྩོམ་སྒྲིག འདི་ལོའི་དམིགས་ཚད་མངོན་འགྱུར་ཡོང་ཆེད་འབད་འབུངས་བྱེད་པ།",
+        "mn": "Нэгдсэн тойм: Энэ оны зорилтыг биелүүлэхийн төлөө эрч хүчтэйгээр урагшлах нь"
+      },
+      "category": "Socialist Construction Update"
+    },
+    {
+      "start": "18:55",
+      "end": "20:00",
+      "title": {
+        "ko": "텔레비죤기록편집물: 위대한 위업의 인민적영도 제5편 인민을 위하여",
+        "en": "Television Documentary Compilation: Popular Leadership of the Great Cause - Part 5: For the People",
+        "zh": "电视纪录剪辑：伟大事业的人民性领导 第五篇 为了人民",
+        "my": "ရုပ်မြင်သံကြား မှတ်တမ်းရုပ်ရှင် စုစည်းမှု- ကြီးမြတ်သောအရေးကိစ္စ၏ လူထုဦးဆောင်မှု - အပိုင်း ၅- ပြည်သူလူထုအတွက်",
+        "ru": "Телевизионный документальный фильм: Народное руководство великим делом — Часть 5: Ради народа",
+        "ja": "テレビ記録編集物：偉大な偉業の人民的領導 第5編 人民のために",
+        "es": "Recopilación de documentales de televisión: Liderazgo popular de la gran causa - Parte 5: Por el pueblo",
+        "fr": "Compilation de documentaires télévisés : Leadership populaire de la grande cause - Partie 5 : Pour le peuple",
+        "de": "Fernseh-Dokumentarfilm-Zusammenstellung: Populäre Führung der großen Sache - Teil 5: Für das Volk",
+        "kk": "Теледидарлық деректі фильмдер жинағы: Ұлы істің халықтық басшылығы - 5-бөлім: Халық үшін",
+        "bo": "བརྙན་འཕྲིན་ཟིན་ཐོའི་རྩོམ་སྒྲིག རླབས་ཆེན་བྱ་གཞག་གི་མི་དམངས་ཀྱི་དབུ་ཁྲིད། — ལེའུ་ལྔ་པ། མི་དམངས་ཀྱི་ཆེད་དུ།",
+        "mn": "Телевизийн баримтат киноны түүвэр: Агуу үйлсийн ардын удирдлага - 5-р анги: Ард түмний төлөө"
+      },
+      "category": "Historical Documentary Series"
+    },
+    {
+      "start": "20:00",
+      "end": "20:27",
+      "title": {
+        "ko": "보도",
+        "en": "News Broadcast",
+        "zh": "新闻报道",
+        "my": "သတင်းထုတ်လွှင့်ချက်",
+        "ru": "Выпуск новостей",
+        "ja": "報道",
+        "es": "Noticiero",
+        "fr": "Journal d'information",
+        "de": "Nachrichten",
+        "kk": "Жаңалықтар",
+        "bo": "གསར་འགྱུར།",
+        "mn": "Мэдээ"
+      },
+      "category": "Daily News Bulletin"
+    },
+    {
+      "start": "20:27",
+      "end": "20:32",
+      "title": {
+        "ko": "요리상식: 과일가공제품, 가지대접",
+        "en": "Culinary Knowledge: Fruit Processed Products, Serving Eggplant",
+        "zh": "烹饪常识：水果加工产品、凉拌茄子",
+        "my": "အချက်အပြုတ်ဗဟုသုတ- သစ်သီးဝလံ ပြုပြင်ထုတ်လုပ်သည့် ထုတ်ကုန်များ၊ ခရမ်းသီးဧည့်ခံပြင်ဆင်ခြင်း",
+        "ru": "Кулинарные знания: Продукты переработки фруктов, подача баклажанов",
+        "ja": "料理常識：果物加工製品、ナスの接待",
+        "es": "Conocimientos culinarios: Productos procesados de frutas, sirviendo berenjena",
+        "fr": "Connaissances culinaires : Produits transformés à base de fruits, servir l'aubergine",
+        "de": "Kulinarisches Wissen: Verarbeitete Obstprodukte, Servieren von Auberginen",
+        "kk": "Аспаздық білім: Жемісті қайта өңдеу өнімдері, баялды ұсыну",
+        "bo": "ཟས་སྦྱོར་ཤེས་བྱ། ཤིང་ཏོག་ལས་སྣོན་ཐོན་རྫས། ཆེ་ཙི་སྣེ་ལེན་བྱེད་པ།",
+        "mn": "Хоол хийх мэдлэг: Жимс боловсруулах бүтээгдэхүүн, хаш ногооор үйлчлэх"
+      },
+      "category": "Educational & Science Program"
+    },
+    {
+      "start": "20:32",
+      "end": "22:02",
+      "title": {
+        "ko": "텔레비죤연속극: 한 검사의 고백 제1부와 2부",
+        "en": "Television Serial Drama: Confession of a Prosecutor - Part 1 and 2",
+        "zh": "电视连续剧：一名检察官的告白（第一、二部）",
+        "my": "ရုပ်မြင်သံကြား ဇာတ်လမ်းတွဲ- အစိုးရရှေ့နေတစ်ဦး၏ ဝန်ခံချက် - အပိုင်း ၁ နှင့် ၂",
+        "ru": "Телевизионный сериал: Исповедь прокурора — Части 1 и 2",
+        "ja": "テレビ連続劇：ある検事の告白 第1部と2部",
+        "es": "Drama en serie de televisión: Confesión de un fiscal - Parte 1 y 2",
+        "fr": "Série télévisée : Confession d'un procureur - Parties 1 et 2",
+        "de": "Fernsehserie: Geständnis eines Staatsanwalts - Teil 1 und 2",
+        "kk": "Теледидарлық сериал: Прокурордың мойындауы - 1 және 2-бөлімдер",
+        "bo": "བརྙན་འཕྲིན་ཟློས་གར། ཞིབ་དཔྱོད་པ་ཞིག་གི་མངོན་བརྗོད། — ལེའུ་དང་པོ་དང་གཉིས་པ།",
+        "mn": "Телевизийн олон ангит кино: Нэгэн прокурорын өчил - 1 болон 2-р анги"
+      },
+      "category": "Television Drama"
+    },
+    {
+      "start": "22:02",
+      "end": "22:15",
+      "title": {
+        "ko": "오늘의 보도중에서",
+        "en": "From Today's News Report Highlights",
+        "zh": "今日新闻报道集锦",
+        "my": "ယနေ့သတင်းထုတ်လွှင့်ချက်မှ အထူးကောက်နုတ်ချက်များ",
+        "ru": "Из сегодняшних новостных сводок",
+        "ja": "今日の報道の中から",
+        "es": "De los aspectos más destacados del informe de noticias de hoy",
+        "fr": "Parmi les faits saillants du journal télévisé d'aujourd'hui",
+        "de": "Aus den heutigen Nachrichten-Highlights",
+        "kk": "Бүгінгі жаңалықтар топтамасынан",
+        "bo": "དེ་རིང་གི་གསར་འགྱུར་གནད་བསྡུས་ལས།",
+        "mn": "Өнөөдрийн мэдээний онцлох үйл явдлуудаас"
+      },
+      "category": "News Recap"
+    }
+  ]
+}
