@@ -3,7 +3,9 @@ import { join } from 'path';
 import { createHash } from 'crypto';
 
 const SECRET = process.env.TOKEN_SECRET;
+const ALLOWED_DOMAINS = ['koryofront.org', 'juche-tv.vercel.app'];
 
+// Best-effort in-memory rate limiter (per instance — not shared across regions/cold starts)
 const hits = new Map();
 const WINDOW_MS = 60 * 1000;
 const MAX_PER_WINDOW = 20;
@@ -40,12 +42,15 @@ function getRequestDomain(req) {
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
+  res.setHeader('Cache-Control', 'no-store');
 
+  // 1. Rate limit
   const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket.remoteAddress;
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Rate limit exceeded. Try again shortly.' });
   }
 
+  // 2. Header auth — domain-aware
   const koryoHeader = req.headers['x-koryo-tv'];
   const jucheHeader = req.headers['x-juche-tv'];
   const validKoryo = koryoHeader && koryoHeader === process.env.KORYO_HEADER_SECRET;
@@ -55,17 +60,18 @@ export default async function handler(req, res) {
 
   let authorized;
   if (domain === 'koryofront.org') {
-    authorized = validJuche;
+    authorized = validJuche;                   // KoryoFront: X-JUCHE-TV alone is enough
   } else if (domain === 'juche-tv.vercel.app') {
-    authorized = validKoryo;
+    authorized = validKoryo;                    // your own site: X-KORYO-TV alone is enough
   } else {
-    authorized = validJuche && validKoryo;
+    authorized = validJuche && validKoryo;      // everyone else: needs both
   }
 
   if (!authorized) {
     return res.status(401).json({ error: 'Unauthorized: missing or invalid header(s) for this domain.' });
   }
 
+  // 3. Token auth
   const { ch, date, token, exp } = req.query;
 
   if (!ch || !date) {
@@ -80,6 +86,7 @@ export default async function handler(req, res) {
     return res.status(404).json({ error: 'Channel not found.' });
   }
 
+  // 4. Serve the data
   const filePath = join(process.cwd(), 'epg', ch, `${date}.json`);
 
   try {
