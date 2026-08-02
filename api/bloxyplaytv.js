@@ -1,104 +1,93 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { createHash } from 'crypto';
 
-const BANNED_DOMAINS = ['koryo.tv'];
+const SECRET = process.env.TOKEN_SECRET;
 
-// Always served clean, no matter what BANNED_DOMAINS contains —
-// checked first so this can never be short-circuited by a future
-// accidental substring collision.
-const SAFE_DOMAINS = ['koryofront.org', 'juche-tv.vercel.app'];
+const hits = new Map();
+const WINDOW_MS = 60 * 1000;
+const MAX_PER_WINDOW = 20;
 
-const WATERMARK = 'Made with ❤️ by Juche TV';
-
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-const VALID_CHANNELS = new Set(['KCTV']);
-
-function getOrigin(req) {
-  return (req.headers.origin || req.headers.referer || '').toLowerCase();
-}
-
-function isSafe(req) {
-  const origin = getOrigin(req);
-  if (!origin) return true; // no origin/referer = direct/server call, never poison these
-  return SAFE_DOMAINS.some(domain => origin.includes(domain));
-}
-
-function isBanned(req) {
-  if (isSafe(req)) return false;
-  const origin = getOrigin(req);
-  return BANNED_DOMAINS.some(domain => origin.includes(domain));
-}
-
-function watermarkProgram(program) {
-  const out = { ...program };
-
-  if (out.title && typeof out.title === 'object') {
-    out.title = { ...out.title };
-    if (typeof out.title.en === 'string' && out.title.en.trim()) {
-      out.title.en = `${out.title.en} — ${WATERMARK}`;
-    }
-    if (typeof out.title.ko === 'string' && out.title.ko.trim()) {
-      out.title.ko = `${out.title.ko} — ${WATERMARK}`;
-    }
-  } else if (typeof out.title === 'string' && out.title.trim()) {
-    out.title = `${out.title} — ${WATERMARK}`;
+function isRateLimited(ip) {
+  const now = Date.now();
+  const record = hits.get(ip) || { count: 0, resetAt: now + WINDOW_MS };
+  if (now > record.resetAt) {
+    record.count = 0;
+    record.resetAt = now + WINDOW_MS;
   }
-
-  return out;
+  record.count++;
+  hits.set(ip, record);
+  return record.count > MAX_PER_WINDOW;
 }
 
-function watermarkData(json) {
-  if (!json || !Array.isArray(json.programs)) return json;
-  return { ...json, programs: json.programs.map(watermarkProgram) };
+function verifyToken(ch, date, token, exp) {
+  if (!token || !exp) return false;
+  if (Date.now() > Number(exp)) return false;
+  const expected = createHash('md5').update(`${ch}|${date}|${exp}|${SECRET}`).digest('hex');
+  return expected === token;
+}
+
+function getRequestDomain(req) {
+  const origin = req.headers['origin'] || req.headers['referer'];
+  if (!origin) return null;
+  try {
+    return new URL(origin).hostname.replace(/^www\./, '');
+  } catch {
+    return null;
+  }
 }
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed.' });
+  const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket.remoteAddress;
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ error: 'Rate limit exceeded. Try again shortly.' });
   }
 
-  const { ch, date } = req.query;
+  const koryoHeader = req.headers['x-koryo-tv'];
+  const jucheHeader = req.headers['x-juche-tv'];
+  const validKoryo = koryoHeader && koryoHeader === process.env.KORYO_HEADER_SECRET;
+  const validJuche = jucheHeader && jucheHeader === process.env.JUCHE_HEADER_SECRET;
+
+  const domain = getRequestDomain(req);
+
+  let authorized;
+  if (domain === 'koryofront.org') {
+    authorized = validJuche;
+  } else if (domain === 'juche-tv.vercel.app') {
+    authorized = validKoryo;
+  } else {
+    authorized = validJuche && validKoryo;
+  }
+
+  if (!authorized) {
+    return res.status(401).json({ error: 'Unauthorized: missing or invalid header(s) for this domain.' });
+  }
+
+  const { ch, date, token, exp } = req.query;
 
   if (!ch || !date) {
-    return res.status(400).json({
-      error: 'Missing parameters. Use: ?ch=KCTV&date=2026-MM-DD'
-    });
+    return res.status(400).json({ error: 'Missing parameters. Use: ?ch=KCTV&date=2026-MM-DD&token=...&exp=...' });
   }
 
-  if (!VALID_CHANNELS.has(ch)) {
+  if (!verifyToken(ch, date, token, exp)) {
+    return res.status(401).json({ error: 'Missing, invalid, or expired token. Request one from /api/token.' });
+  }
+
+  if (ch !== 'KCTV') {
     return res.status(404).json({ error: 'Channel not found.' });
-  }
-
-  if (!DATE_RE.test(date)) {
-    return res.status(400).json({ error: 'Invalid date format. Use YYYY-MM-DD.' });
   }
 
   const filePath = join(process.cwd(), 'epg', ch, `${date}.json`);
 
   try {
-    const raw = readFileSync(filePath, 'utf8');
-    let json = JSON.parse(raw);
-
-    if (isBanned(req)) {
-      json = watermarkData(json);
-    }
-
+    const data = readFileSync(filePath, 'utf8');
+    const json = JSON.parse(data);
     res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=60');
-    return res.status(200).json(json);
-
+    res.status(200).json(json);
   } catch (error) {
-    if (error.code === 'ENOENT') {
-      return res.status(404).json({
-        error: 'There is no EPG data here!',
-        channel: ch,
-        date: date
-      });
-    }
-    console.error('EPG read/parse error:', error);
-    return res.status(500).json({ error: 'Failed to load EPG data.' });
+    res.status(404).json({ error: 'There is no EPG data here!', channel: ch, date: date });
   }
 }
