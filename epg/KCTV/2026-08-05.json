@@ -665,7 +665,6 @@
     {
       "start": "17:00",
       "end": "17:20",
-      "kim-jong-un-activities": true,
       "title": {
         "ko": "보도",
         "en": "News",
@@ -920,7 +919,6 @@
     {
       "start": "20:00",
       "end": "20:29",
-      "kim-jong-un-activities": true,
       "title": {
         "ko": "보도",
         "en": "News",
