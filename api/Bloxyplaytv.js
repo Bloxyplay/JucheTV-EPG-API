@@ -5,7 +5,7 @@ import { join } from 'path';
 const programTranslations = {
   offAirTitle: {
     ko: "방송 종료",
-    en: "Off Air",
+    en: "Off Air.",
     zh: "停播",
     my: "ထုတ်လွှင့်မှုရပ်နားခြင်း",
     ru: "Конец эфира",
