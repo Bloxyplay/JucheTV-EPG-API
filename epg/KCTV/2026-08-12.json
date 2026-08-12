@@ -661,40 +661,13 @@
         "mn": "Мэдээний хөтөлбөр"
       }
     },
-    {
       "start": "17:10",
       "end": "17:28",
       "title": {
-        "ko": "아동방송시간: 오늘도 두번째는 대답할수 없어",
-        "en": "Children's Broadcast Time: Today Again, I Can't Answer the Second Time",
-        "zh": "儿童节目时间：今天第二次我也无法回答",
-        "my": "ကလေးများအစီအစဉ်ချိန်- ဒီနေ့လည်း ဒုတိယအကြိမ် မဖြေကြားနိုင်ပါ",
-        "ru": "Время детских передач: И сегодня во второй раз я не могу ответить",
-        "ja": "児童放送時間：今日も二度目は答えられない",
-        "es": "Horario infantil: Hoy de nuevo, no puedo responder por segunda vez",
-        "fr": "Heure des enfants : Aujourd'hui encore, je ne peux pas répondre la deuxième fois",
-        "de": "Kinderstunde: Auch heute kann ich beim zweiten Mal nicht antworten",
-        "kk": "Балдырғандар уақыты: Бүгін де екінші рет жауап бере алмаймын",
-        "bo": "བྱིས་པའི་བརྙན་འཕྲིན་དུས་ཚོད། དེ་རིང་ཡང་ཐེངས་གཉིས་པར་ལན་འဒེབས་མི་ཐུབ།",
-        "kham": "བྱིས་པའི་བརྙན་འཕྲིན་དུས་ཚོད། དེ་རིང་ཡང་ཐེངས་གཉིས་པར་ལན་འདེབས་མི་ཐུབ།",
-        "amdo": "བྱིས་པའི་བརྙན་འཕྲིན་དུས་ཚོད། དེ་རིང་ཡང་ཐེངས་གཉིས་པར་ལན་འདེབས་མི་ཐུབ།",
-        "mn": "Хүүхдийн нэвтрүүлгийн цаг: Өнөөдөр ч гэсэн хоёр дахь удаагаа хариулж чадахгүй"
-      },
+        "en": "Today's Central Newspaper Overview",
+    },
       "category": {
-        "ko": "아동 방송",
-        "en": "Children's Program",
-        "zh": "儿童程序",
-        "my": "ကလေးများအစီအစဉ်",
-        "ru": "Детская программа",
-        "ja": "児童番組",
-        "es": "Programa infantil",
-        "fr": "Programme pour enfants",
-        "de": "Kinderprogramm",
-        "kk": "Балалар бағдарламасы",
-        "bo": "བྱིས་པའི་བརྙན་འཕྲིན།",
-        "kham": "བྱིས་པའི་བརྙན་འཕྲིན།",
-        "amdo": "བྱིས་པའི་བརྙན་འཕྲིན།",
-        "mn": "Хүүхдийн нэвтрүүлэг"
+        "en": "News",
       }
     },
     {
