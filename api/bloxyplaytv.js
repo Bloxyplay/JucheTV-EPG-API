@@ -104,22 +104,6 @@ const computeDuration = (startISO, endISO) => {
 };
 
 export default async function handler(req, res) {
-  // === DOMAIN GATE ===
-  const rawHost = req.headers.host || '';
-  const host = rawHost.split(':')[0].toLowerCase();
-  const allowedHosts = ['juche-tv.vercel.app', 'koryofront.org'];
-
-  if (!allowedHosts.includes(host)) {
-    try {
-      const html = readFileSync(join(process.cwd(), '403.html'), 'utf8');
-      res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('X-Robots-Tag', 'noindex');
-      return res.status(403).send(html);
-    } catch (err) {
-      return res.status(403).json({ error: 'Forbidden' });
-    }
-  }
-
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
