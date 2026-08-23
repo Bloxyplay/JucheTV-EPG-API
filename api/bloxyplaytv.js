@@ -120,7 +120,8 @@ export default async function handler(req, res) {
     });
   }
 
-  if (ch !== 'KCTV') {
+  // ALLOW MRTV IN ADDITION TO KCTV
+  if (ch !== 'KCTV' && ch !== 'MRTV') {
     return res.status(404).json({
       error: 'Channel not found.'
     });
@@ -144,8 +145,8 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Unrecognized EPG structure' });
     }
 
-    // CRITICAL FIX: Skip injection if auto-blocks already exist in the file
-    if (!hasAutoBlocks(json.programs, isOldStructure)) {
+    // ONLY INJECT AUTO-BLOCKS FOR KCTV
+    if (ch === 'KCTV' && !hasAutoBlocks(json.programs, isOldStructure)) {
       if (isOldStructure) {
         // ========== OLD STRUCTURE ==========
         const firstProgramStart = json.programs.length > 0 ? json.programs[0].start : '09:30';
