@@ -120,8 +120,8 @@ export default async function handler(req, res) {
     });
   }
 
-  // ALLOW MRTV IN ADDITION TO KCTV
-  if (ch !== 'KCTV' && ch !== 'MRTV') {
+  // ALLOW MRTV AND SPORTS-TV IN ADDITION TO KCTV
+  if (ch !== 'KCTV' && ch !== 'MRTV' && ch !== 'sports-tv') {
     return res.status(404).json({
       error: 'Channel not found.'
     });
