@@ -1,0 +1,170 @@
+{
+  "epg": {
+    "channel": {
+      "id": "SPORTS TV",
+      "name": {
+        "ko": "체육 텔레비죤",
+        "en": "Sports Television"
+      }
+    },
+    "date": "2026-08-31",
+    "programs": [
+      {
+        "id": "prog_01",
+        "start": "2026-08-31T18:08:00+09:00",
+        "end": "2026-08-31T18:14:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "청년맞이 나게 지어주신 명칭",
+          "en": "The Name Given to Welcome the Youth"
+        }
+      },
+      {
+        "id": "prog_02",
+        "start": "2026-08-31T18:14:00+09:00",
+        "end": "2026-08-31T18:20:00+09:00",
+        "category": {
+          "ko": "종합편집",
+          "en": "Comprehensive Compilation"
+        },
+        "title": {
+          "ko": "사상대의 높이이자 조국의 높이이다 (2)",
+          "en": "The Height of the Ideological Pole is the Height of the Motherland (2)"
+        }
+      },
+      {
+        "id": "prog_03",
+        "start": "2026-08-31T18:20:00+09:00",
+        "end": "2026-08-31T18:27:00+09:00",
+        "category": {
+          "ko": "문답",
+          "en": "Q&A"
+        },
+        "title": {
+          "ko": "해양체육활동을 잘해나가자면",
+          "en": "To Do Well in Marine Sports Activities"
+        }
+      },
+      {
+        "id": "prog_04",
+        "start": "2026-08-31T18:27:00+09:00",
+        "end": "2026-08-31T18:30:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "달라진 체육경기규칙들 -수영-",
+          "en": "Changed Sports Rules - Swimming"
+        }
+      },
+      {
+        "id": "prog_05",
+        "start": "2026-08-31T18:30:00+09:00",
+        "end": "2026-08-31T19:20:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "성, 중앙기관일군 수영경기 -결승-",
+          "en": "Ministry and Central Organ Officials Swimming Competition - Finals"
+        }
+      },
+      {
+        "id": "prog_06",
+        "start": "2026-08-31T19:20:00+09:00",
+        "end": "2026-08-31T19:30:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "방학기간의 류다른 일과 -중구역의 붉은기 영성고급중학교 부속 정성소학교-",
+          "en": "A Different Routine During the Vacation - Red Flag Ryongsong Senior Middle School Annex Jungsung Primary School in Central District"
+        }
+      },
+      {
+        "id": "prog_07",
+        "start": "2026-08-31T19:30:00+09:00",
+        "end": "2026-08-31T19:31:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "기계체조경기규칙 -경기장-",
+          "en": "Artistic Gymnastics Rules - Stadium"
+        }
+      },
+      {
+        "id": "prog_08",
+        "start": "2026-08-31T19:31:00+09:00",
+        "end": "2026-08-31T20:00:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "제6차 아시아해변가경기대회 - 테크볼 혼성복식 결승 - 조선 : 타이",
+          "en": "6th Asian Beach Games - Teqball Mixed Doubles Finals - DPRK vs. Thailand"
+        }
+      },
+      {
+        "id": "prog_09",
+        "start": "2026-08-31T20:00:00+09:00",
+        "end": "2026-08-31T20:32:00+09:00",
+        "category": {
+          "ko": "보도",
+          "en": "News"
+        },
+        "title": {
+          "ko": "보도",
+          "en": "News"
+        }
+      },
+      {
+        "id": "prog_10",
+        "start": "2026-08-31T20:32:00+09:00",
+        "end": "2026-08-31T20:36:00+09:00",
+        "category": {
+          "ko": "혁명일화",
+          "en": "Revolutionary Anecdote"
+        },
+        "title": {
+          "ko": "체육공원건설의 불씨",
+          "en": "The Spark of Sports Park Construction"
+        }
+      },
+      {
+        "id": "prog_11",
+        "start": "2026-08-31T20:36:00+09:00",
+        "end": "2026-08-31T20:43:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "재미나는 바둑수풀이 (45)",
+          "en": "Fun Baduk Problem Solving (45)"
+        }
+      },
+      {
+        "id": "prog_12",
+        "start": "2026-08-31T20:43:00+09:00",
+        "end": "2026-08-31T22:30:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "국제축구련맹 2026년 월드컵경기대회 - 조별련맹전 - 스웨리예 : 뜌니지",
+          "en": "FIFA 2026 World Cup - Group Stage - Sweden vs. Tunisia"
+        }
+      }
+    ]
+  }
+}
