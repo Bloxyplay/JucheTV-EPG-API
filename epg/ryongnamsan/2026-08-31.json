@@ -1,0 +1,270 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-08-31",
+  "programs": [
+    {
+      "id": "ryongnamsan-0901-1",
+      "startTime": "2026-09-01T18:14:00+09:00",
+      "endTime": "2026-09-01T18:16:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Structure of a Flower",
+        "ko": "꽃의 구조"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-2",
+      "startTime": "2026-09-01T18:16:00+09:00",
+      "endTime": "2026-09-01T18:23:00+09:00",
+      "category": {
+        "en": "Korean Class",
+        "ko": "국어수업"
+      },
+      "title": {
+        "en": "Learning Batchim Characters",
+        "ko": "받침글자 배우기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-3",
+      "startTime": "2026-09-01T18:23:00+09:00",
+      "endTime": "2026-09-01T18:30:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Actively Utilizing New Teaching Materials",
+        "ko": "새로운 교열물을 적극 이용하여"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-4",
+      "startTime": "2026-09-01T18:30:00+09:00",
+      "endTime": "2026-09-01T18:35:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Properties of Waves",
+        "ko": "파동의 속성"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-5",
+      "startTime": "2026-09-01T18:35:00+09:00",
+      "endTime": "2026-09-01T18:38:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Opposing \"Talents\" of Substances",
+        "ko": "물질들의 상반되는 《재간》"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-6",
+      "startTime": "2026-09-01T18:38:00+09:00",
+      "endTime": "2026-09-01T18:42:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Rebuilt Projector",
+        "ko": "다시 만든 투영기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-7",
+      "startTime": "2026-09-01T18:42:00+09:00",
+      "endTime": "2026-09-01T18:53:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Class: The Human Life Cycle (1)",
+        "ko": "영어수업 인간의 생활 과정 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-8",
+      "startTime": "2026-09-01T18:53:00+09:00",
+      "endTime": "2026-09-01T19:03:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Learning Film: Luca (12)",
+        "ko": "영어학습편집물 《루까》 (12)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-9",
+      "startTime": "2026-09-01T19:03:00+09:00",
+      "endTime": "2026-09-01T19:20:00+09:00",
+      "category": {
+        "en": "Science & Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Riddles of the Earth",
+        "ko": "지구의 수수께끼"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-10",
+      "startTime": "2026-09-01T19:20:00+09:00",
+      "endTime": "2026-09-01T19:24:00+09:00",
+      "category": {
+        "en": "Science & Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Wave Energy Development",
+        "ko": "파도에너지개발"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-11",
+      "startTime": "2026-09-01T19:24:00+09:00",
+      "endTime": "2026-09-01T19:32:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "Nuclear Fusion Reaction",
+        "ko": "핵융합반응"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-12",
+      "startTime": "2026-09-01T19:32:00+09:00",
+      "endTime": "2026-09-01T19:38:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Standardization and Our Life",
+        "ko": "규격화와 우리 생활"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-13",
+      "startTime": "2026-09-01T19:38:00+09:00",
+      "endTime": "2026-09-01T19:47:00+09:00",
+      "category": {
+        "en": "Serial Documentary",
+        "ko": "연속소개편집물"
+      },
+      "title": {
+        "en": "Our Food Culture Reflected in Proverbs - Kimchi -",
+        "ko": "속담에 비낀 우리의 음식문화 - 김치 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-14",
+      "startTime": "2026-09-01T19:47:00+09:00",
+      "endTime": "2026-09-01T20:00:00+09:00",
+      "category": {
+        "en": "Memoir",
+        "ko": "수기"
+      },
+      "title": {
+        "en": "On the Day Remembering the Great Father's Noble Title",
+        "ko": "위대한 어버이의 숭고한 추대관을 새겨안던 날에"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-15",
+      "startTime": "2026-09-01T20:00:00+09:00",
+      "endTime": "2026-09-01T20:41:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-16",
+      "startTime": "2026-09-01T20:41:00+09:00",
+      "endTime": "2026-09-01T21:10:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "The Great Embrace That Nurtured Patriotic Scientists",
+        "ko": "애국과학자들로 키워주신 위대한 품"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-17",
+      "startTime": "2026-09-01T21:10:00+09:00",
+      "endTime": "2026-09-01T21:19:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Respected Veteran Educators",
+        "ko": "존경받는 로교육자들"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-18",
+      "startTime": "2026-09-01T21:19:00+09:00",
+      "endTime": "2026-09-01T21:31:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Spirometry / Esophageal Stent Placement",
+        "ko": "폐활량검사 / 식도의 스텐트삽입술"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-19",
+      "startTime": "2026-09-01T21:31:00+09:00",
+      "endTime": "2026-09-01T21:48:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Learning Film: In the Footsteps of Dinosaurs Part 4 Giants of the Sky (4)",
+        "ko": "영어학습편집물 《공룡의 자취를 따라서》 제4편 하늘의 거물 (4)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-20",
+      "startTime": "2026-09-01T21:48:00+09:00",
+      "endTime": "2026-09-01T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Chinese Learning Film: A Bite of China Part 1 (5)",
+        "ko": "중국어학습편집물 《혀끝으로 본 중국》 제1편 (5)"
+      }
+    }
+  ]
+}
