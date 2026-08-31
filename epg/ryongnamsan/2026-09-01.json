@@ -1,0 +1,309 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-01",
+  "programs": [
+    {
+      "id": "ryongnamsan-0901-1",
+      "startTime": "2026-09-01T18:14:00+09:00",
+      "endTime": "2026-09-01T18:17:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Differences Between Seals and Sea Lions",
+        "ko": "물개와 물범의 차이점"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-2",
+      "startTime": "2026-09-01T18:17:00+09:00",
+      "endTime": "2026-09-01T18:20:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Why Does the Fire Go Out?",
+        "ko": "불이 왜 꺼질가요"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-3",
+      "startTime": "2026-09-01T18:20:00+09:00",
+      "endTime": "2026-09-01T18:24:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Self-Introduction in Various Situations",
+        "ko": "여러가지 정황에서의 자기소개"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-4",
+      "startTime": "2026-09-01T18:24:00+09:00",
+      "endTime": "2026-09-01T18:30:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Continuous Addition",
+        "ko": "련이어 더하기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-5",
+      "startTime": "2026-09-01T18:30:00+09:00",
+      "endTime": "2026-09-01T18:32:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Friction and Ice",
+        "ko": "마찰과 얼음"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-6",
+      "startTime": "2026-09-01T18:32:00+09:00",
+      "endTime": "2026-09-01T18:38:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Making a Periscope Model",
+        "ko": "잠망경모형 만들기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-7",
+      "startTime": "2026-09-01T18:38:00+09:00",
+      "endTime": "2026-09-01T18:44:00+09:00",
+      "category": {
+        "en": "Physics Class",
+        "ko": "물리수업"
+      },
+      "title": {
+        "en": "Which One Rotates Longer?",
+        "ko": "어느것이 더 오래 회전하는가"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-8",
+      "startTime": "2026-09-01T18:44:00+09:00",
+      "endTime": "2026-09-01T18:53:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Operating Extracurricular Groups Substantially",
+        "ko": "과외소조를 실속있게 운영하여"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-9",
+      "startTime": "2026-09-01T18:53:00+09:00",
+      "endTime": "2026-09-01T19:06:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Masha and the Bear - Countermeasures - Bon Appetit -",
+        "ko": "마샤와 곰 - 대책 - 맛있게 드세요 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-10",
+      "startTime": "2026-09-01T19:06:00+09:00",
+      "endTime": "2026-09-01T19:11:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Modern Football Stadium",
+        "ko": "현대적인 축구경기장"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-11",
+      "startTime": "2026-09-01T19:11:00+09:00",
+      "endTime": "2026-09-01T19:17:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "- Modernized Dairy Farm - Quail Factory",
+        "ko": "-현대화된 젖소목장 -메추리공장"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-12",
+      "startTime": "2026-09-01T19:17:00+09:00",
+      "endTime": "2026-09-01T19:36:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Discovery of Elements (1)",
+        "ko": "원소의 발견 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-13",
+      "startTime": "2026-09-01T19:36:00+09:00",
+      "endTime": "2026-09-01T19:40:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Landscape and Landscape Design - Function and Design -",
+        "ko": "경관과 경관설계 - 기능과 설계 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-14",
+      "startTime": "2026-09-01T19:40:00+09:00",
+      "endTime": "2026-09-01T20:00:00+09:00",
+      "category": {
+        "en": "Continuous Observation Record",
+        "ko": "련속참관기"
+      },
+      "title": {
+        "en": "The Immortal Achievements, Ryongnamsan Will Pass Down Forever - Visiting Kim Il Sung University History Museum - Oath of Ryongnamsan",
+        "ko": "불멸의 그 업적 룡남산은 길이 전하리 -김일성종합대학 력사관을 찾아서- 룡남산의 맹세"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-15",
+      "startTime": "2026-09-01T20:00:00+09:00",
+      "endTime": "2026-09-01T20:29:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-16",
+      "startTime": "2026-09-01T20:29:00+09:00",
+      "endTime": "2026-09-01T21:03:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Noble Belief, Highly Valued Title",
+        "ko": "숭고한 믿음 값높은 칭호"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-17",
+      "startTime": "2026-09-01T21:03:00+09:00",
+      "endTime": "2026-09-01T21:11:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "At the Forefront of Implementing the Party's Health Policy - Pyongyang Medical University Clinical Medicine Faculty 1 Gastroenterology Course -",
+        "ko": "당의 보건정책관철의 앞장에서 -평양의학대학 림상제1의학부 소화기내과강좌-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-18",
+      "startTime": "2026-09-01T21:11:00+09:00",
+      "endTime": "2026-09-01T21:21:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Depression and Its Treatment",
+        "ko": "우울증과 그 치료"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-19",
+      "startTime": "2026-09-01T21:21:00+09:00",
+      "endTime": "2026-09-01T21:26:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Wheat Processing Process",
+        "ko": "밀가공공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-20",
+      "startTime": "2026-09-01T21:26:00+09:00",
+      "endTime": "2026-09-01T21:31:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Intelligent Production System Maintenance Technology",
+        "ko": "지능생산체계보양기술"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-21",
+      "startTime": "2026-09-01T21:31:00+09:00",
+      "endTime": "2026-09-01T21:48:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "The Woman Whose Face Changed, Part 8 (2)",
+        "ko": "얼굴이 바뀐 녀자 제8부 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-22",
+      "startTime": "2026-09-01T21:48:00+09:00",
+      "endTime": "2026-09-01T21:52:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Learning German in English - Sentences -",
+        "ko": "영어로 배우는 도이취어 -문장-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0901-23",
+      "startTime": "2026-09-01T21:52:00+09:00",
+      "endTime": "2026-09-01T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Earth (6)",
+        "ko": "지구 (6)"
+      }
+    }
+  ]
+}
