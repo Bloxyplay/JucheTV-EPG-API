@@ -97,7 +97,7 @@ function isAutoBlock(prog, structureType) {
       (prog.program_id || '').includes('testcard') ||
       (prog.program_id || '').includes('anthem')
     );
-  } else if (structureType === 'epgWrapper') {
+  } else if (structureType === 'epgWrapper' || structureType === 'camelISO') {
     const t = prog.title || {};
     return (
       t.ko === '방송 종료' ||
@@ -128,8 +128,9 @@ export default async function handler(req, res) {
     });
   }
 
-  // ALLOW KCTV, MRTV, and SPORTS-TV
-  if (ch !== 'KCTV' && ch !== 'MRTV' && ch !== 'sports-tv' && ch !== 'Sports TV') {
+  // ALLOWED CHANNELS
+  const allowedChannels = ['KCTV', 'MRTV', 'sports-tv', 'Sports TV', 'ryongnamsan', 'Ryongnamsan'];
+  if (!allowedChannels.includes(ch)) {
     return res.status(404).json({
       error: 'Channel not found.'
     });
@@ -144,17 +145,22 @@ export default async function handler(req, res) {
     let structureType = 'unknown';
     let programsArray = [];
 
-    // Detect structure format: epgWrapper, old flat, or new lean
+    // Detect structure format
     if (json.epg && Array.isArray(json.epg.programs)) {
       structureType = 'epgWrapper';
       programsArray = json.epg.programs;
     } else if (json.programs && Array.isArray(json.programs)) {
+      programsArray = json.programs;
       if (typeof json.channel === 'string') {
         structureType = 'old';
       } else if (typeof json.channel === 'object' && json.channel !== null) {
-        structureType = 'lean';
+        const sampleProg = json.programs[0] || {};
+        if (sampleProg.startTime || sampleProg.endTime) {
+          structureType = 'camelISO';
+        } else {
+          structureType = 'lean';
+        }
       }
-      programsArray = json.programs;
     }
 
     if (structureType === 'unknown') {
@@ -224,7 +230,7 @@ export default async function handler(req, res) {
         );
 
       } else if (structureType === 'epgWrapper') {
-        // ========== WRAPPER STRUCTURE (With ISO Timestamps) ==========
+        // ========== WRAPPER STRUCTURE ==========
         const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start : fmtISO(currDay, '09:30');
         const lastProgram = programsArray[programsArray.length - 1];
         const dynamicEndStartISO = lastProgram ? lastProgram.end : fmtISO(currDay, '22:00');
@@ -235,6 +241,19 @@ export default async function handler(req, res) {
           { id: 'auto_anthem', start: fmtISO(currDay, '09:00'), end: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
         );
         programsArray.push({ id: 'auto_offair_end', start: dynamicEndStartISO, end: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+
+      } else if (structureType === 'camelISO') {
+        // ========== CAMELCASE ISO STRUCTURE ==========
+        const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].startTime : fmtISO(currDay, '09:30');
+        const lastProgram = programsArray[programsArray.length - 1];
+        const dynamicEndStartISO = lastProgram ? lastProgram.endTime : fmtISO(currDay, '22:00');
+
+        programsArray.unshift(
+          { id: 'auto_offair_start', startTime: fmtISO(prevDay, '23:00'), endTime: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
+          { id: 'auto_testcard', startTime: fmtISO(currDay, '08:25'), endTime: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
+          { id: 'auto_anthem', startTime: fmtISO(currDay, '09:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
+        );
+        programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
       }
     }
 
