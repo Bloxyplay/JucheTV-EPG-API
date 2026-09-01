@@ -1,0 +1,322 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-02",
+  "programs": [
+    {
+      "id": "ryongnamsan-0902-1",
+      "startTime": "2026-09-02T18:15:00+09:00",
+      "endTime": "2026-09-02T18:17:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Let's Find the Axis of Symmetry",
+        "ko": "대칭축을 찾아보자요"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-2",
+      "startTime": "2026-09-02T18:17:00+09:00",
+      "endTime": "2026-09-02T18:20:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Quarter",
+        "ko": "분기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-3",
+      "startTime": "2026-09-02T18:20:00+09:00",
+      "endTime": "2026-09-02T18:31:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English Class)",
+        "ko": "외국어학습시간 영어수업"
+      },
+      "title": {
+        "en": "Who Bent My Straw?",
+        "ko": "누가 나의 빨대를 꺾어놓았을가"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-4",
+      "startTime": "2026-09-02T18:31:00+09:00",
+      "endTime": "2026-09-02T18:34:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Several Issues in Improving Writing Skills",
+        "ko": "글쓰기능력을 높이는데서 나서는 몇가지 문제"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-5",
+      "startTime": "2026-09-02T18:34:00+09:00",
+      "endTime": "2026-09-02T18:38:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Mean and Median",
+        "ko": "평균값과 중앙값"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-6",
+      "startTime": "2026-09-02T18:38:00+09:00",
+      "endTime": "2026-09-02T18:49:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Actively Accepting the Selective Curriculum (1) - Scientific Execution -",
+        "ko": "선택교육과정을 적극 받아들여 (1) -과학적인 집행-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-7",
+      "startTime": "2026-09-02T18:49:00+09:00",
+      "endTime": "2026-09-02T18:52:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Chinese)",
+        "ko": "외국어학습시간 중국어학습편집물"
+      },
+      "title": {
+        "en": "Easy-to-Learn Chinese Characters - Animals - (1)",
+        "ko": "쉽게 배우는 중국어글자 -동물- (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-8",
+      "startTime": "2026-09-02T18:52:00+09:00",
+      "endTime": "2026-09-02T19:05:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Chinese)",
+        "ko": "외국어학습시간 중국어학습편집물"
+      },
+      "title": {
+        "en": "The Ugly Duckling",
+        "ko": "못생긴 새끼오리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-9",
+      "startTime": "2026-09-02T19:05:00+09:00",
+      "endTime": "2026-09-02T19:12:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Level Sensor",
+        "ko": "준위수감부"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-10",
+      "startTime": "2026-09-02T19:12:00+09:00",
+      "endTime": "2026-09-02T19:20:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "How to Make Porcelain Products",
+        "ko": "사기제품제작방법"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-11",
+      "startTime": "2026-09-02T19:20:00+09:00",
+      "endTime": "2026-09-02T19:25:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "- Railway Laying - Switch",
+        "ko": "-철길부설 -전철기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-12",
+      "startTime": "2026-09-02T19:25:00+09:00",
+      "endTime": "2026-09-02T19:46:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Discovery of Elements (2)",
+        "ko": "원소의 발견 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-13",
+      "startTime": "2026-09-02T19:46:00+09:00",
+      "endTime": "2026-09-02T19:49:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Notarization - Notarization -",
+        "ko": "공증 -공증-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-14",
+      "startTime": "2026-09-02T19:49:00+09:00",
+      "endTime": "2026-09-02T20:00:00+09:00",
+      "category": {
+        "en": "Memoir",
+        "ko": "수기"
+      },
+      "title": {
+        "en": "Carving the True Meaning of Localization - Kim Il Sung University Teacher Professor Doctor Song Jong Gu -",
+        "ko": "국산화의 참뜻을 새겨주시며 -김일성종합대학 교원 교수 박사 송정구-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-15",
+      "startTime": "2026-09-02T20:00:00+09:00",
+      "endTime": "2026-09-02T20:31:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-16",
+      "startTime": "2026-09-02T20:31:00+09:00",
+      "endTime": "2026-09-02T20:45:00+09:00",
+      "category": {
+        "en": "Continuous Observation Record",
+        "ko": "련속참관기"
+      },
+      "title": {
+        "en": "Immortal Leadership Shining Together with the Highest Hall of Science and Technology Talent Training - Visiting the Kim Chaek University of Technology Revolution Museum - Pouring the Love of a Real Parent",
+        "ko": "과학기술인재양성의 최고전당과 더불어 빛나는 불멸의 령도 -김책공업종합대학 혁명사적관을 찾아서- 친어버이의 사랑을 부어주시며"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-17",
+      "startTime": "2026-09-02T20:45:00+09:00",
+      "endTime": "2026-09-02T20:51:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Combining Major Lectures and Foreign Language Education - Pyongyang Teachers College -",
+        "ko": "전공강의와 외국어교육을 결합하여 -평양교원대학-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-18",
+      "startTime": "2026-09-02T20:51:00+09:00",
+      "endTime": "2026-09-02T20:57:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "The \"Parents\" the Campus Boasts Of - Ministry of Chemical Industry -",
+        "ko": "교정이 자랑하는 《학부형들》 -화학공업성-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-19",
+      "startTime": "2026-09-02T20:57:00+09:00",
+      "endTime": "2026-09-02T21:08:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Exercise Therapy for Shoulder Impingement Syndrome",
+        "ko": "어깨충격증후군의 운동치료"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-20",
+      "startTime": "2026-09-02T21:08:00+09:00",
+      "endTime": "2026-09-02T21:14:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Extraction of Natural Uranium and Ore Liquid Production Process",
+        "ko": "천연우라니움의 채취 및 광액생산공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-21",
+      "startTime": "2026-09-02T21:14:00+09:00",
+      "endTime": "2026-09-02T21:23:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Research for Intelligent Materials",
+        "ko": "재료의 지능화를 위한 연구"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-22",
+      "startTime": "2026-09-02T21:23:00+09:00",
+      "endTime": "2026-09-02T21:30:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Learning English through Television (1)",
+        "ko": "텔레비죤으로 배우는 영어 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-23",
+      "startTime": "2026-09-02T21:30:00+09:00",
+      "endTime": "2026-09-02T21:44:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Following the Tracks of Dinosaurs Part 5 Monsters of the Ice Forest (1)",
+        "ko": "공룡의 자취를 따라서 제5편 얼음숲의 괴물들 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0902-24",
+      "startTime": "2026-09-02T21:44:00+09:00",
+      "endTime": "2026-09-02T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Chinese)",
+        "ko": "외국어학습시간 중국어학습편집물"
+      },
+      "title": {
+        "en": "Farewell Part 10 (3)",
+        "ko": "결별 제10부 (3)"
+      }
+    }
+  ]
+}
