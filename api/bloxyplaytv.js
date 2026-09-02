@@ -50,6 +50,50 @@ const programTranslations = {
     my: "ထုတ်လွှင့်မှုစတင်ခြင်း",
     ru: "Начало вещания",
     ja: "放送開始"
+  },
+  closingCategory: {
+    ko: "방송마감",
+    en: "Closing Broadcast",
+    zh: "收台",
+    my: "ထုတ်လွှင့်မှုပိတ်သိမ်းခြင်း",
+    ru: "Конец вещания",
+    ja: "放送終了"
+  }
+};
+
+// Specialized translations for Ryongnamsan TV
+const ryongTranslations = {
+  testCardTitle: {
+    ko: "룡남산텔레비죤 시험화면",
+    en: "Ryongnamsan Television Test Card",
+    zh: "龙南山电视台测试卡",
+    my: "ရယုံနမ်ဆန် ရုပ်မြင်သံကြား စမ်းသပ်ကတ်",
+    ru: "Испытательная таблица телевидения Рённамсан",
+    ja: "竜南山テレビ テストカード"
+  },
+  anthemTitle: {
+    ko: "룡남산텔레비죤 애국가 및 오늘의 방송순서",
+    en: "Ryongnamsan TV Startup National Anthem & Today's Programs",
+    zh: "龙南山电视台开台国歌与今日节目单",
+    my: "ရယုံနမ်ဆန် ရုပ်မြင်သံကြား နိုင်ငံတော်သီချင်းနှင့် ယနေ့အစီအစဉ်",
+    ru: "Гимн открытия телевидения Рённамсан и программа передач на сегодня",
+    ja: "竜南山テレビ 開始国歌および今日の放送順序"
+  },
+  tomorrowTitle: {
+    ko: "룡남산텔레비죤 래일의 방송순서",
+    en: "Ryongnamsan Television Tomorrow's Order",
+    zh: "龙南山电视台明日节目单",
+    my: "ရယုံနမ်ဆန် ရုပ်မြင်သံကြား မနက်ဖြန်အစီအစဉ်",
+    ru: "Программа передач телевидения Рённамсан на завтра",
+    ja: "竜南山テレビ 明日の放送順序"
+  },
+  closingTitle: {
+    ko: "방송 마감",
+    en: "Ryongnamsan Television Closing",
+    zh: "收台",
+    my: "ရယုံနမ်ဆန် ရုပ်မြင်သံကြား ပိတ်သိမ်းခြင်း",
+    ru: "Закрытие эфира телевидения Рённамсан",
+    ja: "竜南山テレビ 放送終了"
   }
 };
 
@@ -73,6 +117,27 @@ const computeDuration = (startISO, endISO) => {
   return { duration: dur, minutes };
 };
 
+// Helper for adding minutes to ISO strings
+const addMinutesISO = (isoStr, mins) => {
+  if (!isoStr) return isoStr;
+  const d = new Date(isoStr);
+  d.setMinutes(d.getMinutes() + mins);
+  const h = String(d.getHours()).padStart(2, '0');
+  const m = String(d.getMinutes()).padStart(2, '0');
+  return `${fmtDate(d)}T${h}:${m}:00+09:00`;
+};
+
+// Helper for adding minutes to HH:MM format strings
+const addMinutesHHMM = (timeStr, mins) => {
+  if (!timeStr) return timeStr;
+  let [h, m] = timeStr.split(':').map(Number);
+  m += mins;
+  h += Math.floor(m / 60);
+  m = m % 60;
+  h = h % 24;
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+};
+
 // Detect if a program is an auto-injected block depending on the JSON structure
 function isAutoBlock(prog, structureType) {
   if (structureType === 'old') {
@@ -81,9 +146,15 @@ function isAutoBlock(prog, structureType) {
       prog.start === '23:00' ||
       prog.start === '08:25' ||
       prog.start === '09:00' ||
+      prog.start === '17:25' ||
+      prog.start === '18:00' ||
       t.ko === '방송 종료' ||
       t.ko === '조선중앙텔레비죤 시험화면' ||
-      t.ko === '조선중앙텔레비죤 애국가 및 오늘의 방송순서'
+      t.ko === '조선중앙텔레비죤 애국가 및 오늘의 방송순서' ||
+      t.ko === ryongTranslations.testCardTitle.ko ||
+      t.ko === ryongTranslations.anthemTitle.ko ||
+      t.ko === ryongTranslations.tomorrowTitle.ko ||
+      t.ko === ryongTranslations.closingTitle.ko
     );
   } else if (structureType === 'lean') {
     return (
@@ -95,14 +166,21 @@ function isAutoBlock(prog, structureType) {
       prog.genre === 'weather' ||
       (prog.program_id || '').includes('offair') ||
       (prog.program_id || '').includes('testcard') ||
-      (prog.program_id || '').includes('anthem')
+      (prog.program_id || '').includes('anthem') ||
+      (prog.program_id || '').includes('tomorrow') ||
+      (prog.program_id || '').includes('closing')
     );
   } else if (structureType === 'epgWrapper' || structureType === 'camelISO') {
     const t = prog.title || {};
     return (
       t.ko === '방송 종료' ||
       t.ko === '조선중앙텔레비죤 시험화면' ||
-      t.ko === '조선중앙텔레비죤 애국가 및 오늘의 방송순서'
+      t.ko === '조선중앙텔레비죤 애국가 및 오늘의 방송순서' ||
+      t.ko === ryongTranslations.testCardTitle.ko ||
+      t.ko === ryongTranslations.anthemTitle.ko ||
+      t.ko === ryongTranslations.tomorrowTitle.ko ||
+      t.ko === ryongTranslations.closingTitle.ko ||
+      (prog.id || '').includes('auto_')
     );
   }
   return false;
@@ -137,6 +215,7 @@ export default async function handler(req, res) {
   }
 
   const filePath = join(process.cwd(), 'epg', ch, `${date}.json`);
+  const chLower = ch.toLowerCase();
 
   try {
     const data = readFileSync(filePath, 'utf8');
@@ -167,93 +246,176 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Unrecognized or invalid EPG data structure' });
     }
 
-    // ONLY INJECT AUTO-BLOCKS FOR KCTV
-    if (ch === 'KCTV' && !hasAutoBlocks(programsArray, structureType)) {
+    // Helper for lean format assembly 
+    const buildLeanEntry = (idSuffix, startISO, endISO, titleKo, titleEn, ptypeKo, ptypeEn, genre, descKo, descEn, extra = {}) => {
+      const dateSlug = date.replace(/-/g, '');
+      return {
+        program_id: `${chLower}-${dateSlug}-${idSuffix}`,
+        start_time: startISO,
+        end_time: endISO,
+        title_ko: titleKo,
+        title_en: titleEn,
+        title_zh: extra.title_zh || titleEn,
+        title_ja: extra.title_ja || titleEn,
+        title_ru: extra.title_ru || titleEn,
+        title_my: extra.title_my || titleEn,
+        program_type_ko: ptypeKo,
+        program_type_en: ptypeEn,
+        genre,
+        description_ko: descKo,
+        description_en: descEn,
+        is_live: extra.is_live ?? false,
+        is_rerun: extra.is_rerun ?? false,
+        original_broadcast_date: extra.original_broadcast_date ?? '',
+        off_air: extra.off_air ?? false,
+        kim_jong_un_featured: extra.kim_jong_un_featured ?? false,
+        foreign_origin: extra.foreign_origin ?? false,
+        origin_country: extra.origin_country ?? ''
+      };
+    };
+
+    const [year, month, day] = date.split('-').map(Number);
+    const prevDay = new Date(year, month - 1, day - 1);
+    const currDay = new Date(year, month - 1, day);
+    const nextDay = new Date(year, month - 1, day + 1);
+
+    // ONLY INJECT AUTO-BLOCKS IF KCTV OR RYONGNAMSAN HAS NOT YET BEEN MODIFIED
+    if (!hasAutoBlocks(programsArray, structureType)) {
       
-      const [year, month, day] = date.split('-').map(Number);
-      const prevDay = new Date(year, month - 1, day - 1);
-      const currDay = new Date(year, month - 1, day);
-      
-      if (structureType === 'old') {
-        // ========== OLD STRUCTURE ==========
-        const firstProgramStart = programsArray.length > 0 ? programsArray[0].start : '09:30';
-        const lastProgram = programsArray[programsArray.length - 1];
-        const dynamicEndStart = lastProgram ? lastProgram.end : '22:00';
+      // =========================== KCTV INJECTION LOGIC ===========================
+      if (ch === 'KCTV') {
+        if (structureType === 'old') {
+          const firstProgramStart = programsArray.length > 0 ? programsArray[0].start : '09:30';
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStart = lastProgram ? lastProgram.end : '22:00';
 
-        programsArray.unshift(
-          { start: '23:00', end: '08:25', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory },
-          { start: '08:25', end: '09:00', title: programTranslations.testCardTitle, category: programTranslations.testCardCategory },
-          { start: '09:00', end: firstProgramStart, title: programTranslations.anthemTitle, category: programTranslations.anthemCategory }
-        );
-        programsArray.push({ start: dynamicEndStart, end: '23:00', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory });
+          programsArray.unshift(
+            { start: '23:00', end: '08:25', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory },
+            { start: '08:25', end: '09:00', title: programTranslations.testCardTitle, category: programTranslations.testCardCategory },
+            { start: '09:00', end: firstProgramStart, title: programTranslations.anthemTitle, category: programTranslations.anthemCategory }
+          );
+          programsArray.push({ start: dynamicEndStart, end: '23:00', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory });
 
-      } else if (structureType === 'lean') {
-        // ========== NEW LEAN STRUCTURE ==========
-        const dateSlug = date.replace(/-/g, '');
-        const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start_time : fmtISO(currDay, '09:30');
-        const lastProgram = programsArray[programsArray.length - 1];
-        const dynamicEndStartISO = lastProgram ? lastProgram.end_time : fmtISO(currDay, '22:00');
+        } else if (structureType === 'lean') {
+          const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start_time : fmtISO(currDay, '09:30');
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStartISO = lastProgram ? lastProgram.end_time : fmtISO(currDay, '22:00');
 
-        const buildLeanEntry = (idSuffix, startISO, endISO, titleKo, titleEn, ptypeKo, ptypeEn, genre, descKo, descEn, extra = {}) => {
-          return {
-            program_id: `kctv-${dateSlug}-${idSuffix}`,
-            start_time: startISO,
-            end_time: endISO,
-            title_ko: titleKo,
-            title_en: titleEn,
-            title_zh: extra.title_zh || titleEn,
-            title_ja: extra.title_ja || titleEn,
-            title_ru: extra.title_ru || titleEn,
-            title_my: extra.title_my || titleEn,
-            program_type_ko: ptypeKo,
-            program_type_en: ptypeEn,
-            genre,
-            description_ko: descKo,
-            description_en: descEn,
-            is_live: extra.is_live ?? false,
-            is_rerun: extra.is_rerun ?? false,
-            original_broadcast_date: extra.original_broadcast_date ?? '',
-            off_air: extra.off_air ?? false,
-            kim_jong_un_featured: extra.kim_jong_un_featured ?? false,
-            foreign_origin: extra.foreign_origin ?? false,
-            origin_country: extra.origin_country ?? ''
-          };
-        };
+          programsArray.unshift(
+            buildLeanEntry('offair-start', fmtISO(prevDay, '23:00'), fmtISO(currDay, '08:25'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my }),
+            buildLeanEntry('testcard', fmtISO(currDay, '08:25'), fmtISO(currDay, '09:00'), programTranslations.testCardTitle.ko, programTranslations.testCardTitle.en, programTranslations.testCardCategory.ko, programTranslations.testCardCategory.en, 'test_pattern', '시험화면.', 'Test card.', { title_zh: programTranslations.testCardTitle.zh, title_ja: programTranslations.testCardTitle.ja, title_ru: programTranslations.testCardTitle.ru, title_my: programTranslations.testCardTitle.my }),
+            buildLeanEntry('anthem', fmtISO(currDay, '09:00'), firstProgramStartISO, programTranslations.anthemTitle.ko, programTranslations.anthemTitle.en, programTranslations.anthemCategory.ko, programTranslations.anthemCategory.en, 'sign_on', '애국가.', 'National anthem.', { title_zh: programTranslations.anthemTitle.zh, title_ja: programTranslations.anthemTitle.ja, title_ru: programTranslations.anthemTitle.ru, title_my: programTranslations.anthemTitle.my })
+          );
+          programsArray.push(
+            buildLeanEntry('offair-end', dynamicEndStartISO, fmtISO(currDay, '23:00'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my })
+          );
 
-        programsArray.unshift(
-          buildLeanEntry('offair-start', fmtISO(prevDay, '23:00'), fmtISO(currDay, '08:25'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my }),
-          buildLeanEntry('testcard', fmtISO(currDay, '08:25'), fmtISO(currDay, '09:00'), programTranslations.testCardTitle.ko, programTranslations.testCardTitle.en, programTranslations.testCardCategory.ko, programTranslations.testCardCategory.en, 'test_pattern', '시험화면.', 'Test card.', { title_zh: programTranslations.testCardTitle.zh, title_ja: programTranslations.testCardTitle.ja, title_ru: programTranslations.testCardTitle.ru, title_my: programTranslations.testCardTitle.my }),
-          buildLeanEntry('anthem', fmtISO(currDay, '09:00'), firstProgramStartISO, programTranslations.anthemTitle.ko, programTranslations.anthemTitle.en, programTranslations.anthemCategory.ko, programTranslations.anthemCategory.en, 'sign_on', '애국가.', 'National anthem.', { title_zh: programTranslations.anthemTitle.zh, title_ja: programTranslations.anthemTitle.ja, title_ru: programTranslations.anthemTitle.ru, title_my: programTranslations.anthemTitle.my })
-        );
-        programsArray.push(
-          buildLeanEntry('offair-end', dynamicEndStartISO, fmtISO(currDay, '23:00'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my })
-        );
+        } else if (structureType === 'epgWrapper') {
+          const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start : fmtISO(currDay, '09:30');
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStartISO = lastProgram ? lastProgram.end : fmtISO(currDay, '22:00');
 
-      } else if (structureType === 'epgWrapper') {
-        // ========== WRAPPER STRUCTURE ==========
-        const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start : fmtISO(currDay, '09:30');
-        const lastProgram = programsArray[programsArray.length - 1];
-        const dynamicEndStartISO = lastProgram ? lastProgram.end : fmtISO(currDay, '22:00');
+          programsArray.unshift(
+            { id: 'auto_offair_start', start: fmtISO(prevDay, '23:00'), end: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
+            { id: 'auto_testcard', start: fmtISO(currDay, '08:25'), end: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
+            { id: 'auto_anthem', start: fmtISO(currDay, '09:00'), end: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
+          );
+          programsArray.push({ id: 'auto_offair_end', start: dynamicEndStartISO, end: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
 
-        programsArray.unshift(
-          { id: 'auto_offair_start', start: fmtISO(prevDay, '23:00'), end: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
-          { id: 'auto_testcard', start: fmtISO(currDay, '08:25'), end: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
-          { id: 'auto_anthem', start: fmtISO(currDay, '09:00'), end: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
-        );
-        programsArray.push({ id: 'auto_offair_end', start: dynamicEndStartISO, end: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+        } else if (structureType === 'camelISO') {
+          const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].startTime : fmtISO(currDay, '09:30');
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStartISO = lastProgram ? lastProgram.endTime : fmtISO(currDay, '22:00');
 
-      } else if (structureType === 'camelISO') {
-        // ========== CAMELCASE ISO STRUCTURE ==========
-        const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].startTime : fmtISO(currDay, '09:30');
-        const lastProgram = programsArray[programsArray.length - 1];
-        const dynamicEndStartISO = lastProgram ? lastProgram.endTime : fmtISO(currDay, '22:00');
+          programsArray.unshift(
+            { id: 'auto_offair_start', startTime: fmtISO(prevDay, '23:00'), endTime: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
+            { id: 'auto_testcard', startTime: fmtISO(currDay, '08:25'), endTime: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
+            { id: 'auto_anthem', startTime: fmtISO(currDay, '09:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
+          );
+          programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+        }
 
-        programsArray.unshift(
-          { id: 'auto_offair_start', startTime: fmtISO(prevDay, '23:00'), endTime: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
-          { id: 'auto_testcard', startTime: fmtISO(currDay, '08:25'), endTime: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
-          { id: 'auto_anthem', startTime: fmtISO(currDay, '09:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
-        );
-        programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+      // ======================= RYONGNAMSAN TV INJECTION LOGIC =======================
+      } else if (chLower === 'ryongnamsan') {
+        if (structureType === 'old') {
+          const firstProgramStart = programsArray.length > 0 ? programsArray[0].start : '18:08';
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStart = lastProgram ? lastProgram.end : '22:00';
+          
+          const tomorrowEnd = addMinutesHHMM(dynamicEndStart, 8);
+          const closingEnd = addMinutesHHMM(tomorrowEnd, 1);
+
+          programsArray.unshift(
+            { start: '23:00', end: '17:25', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory },
+            { start: '17:25', end: '18:00', title: ryongTranslations.testCardTitle, category: programTranslations.testCardCategory },
+            { start: '18:00', end: firstProgramStart, title: ryongTranslations.anthemTitle, category: programTranslations.anthemCategory }
+          );
+          programsArray.push(
+            { start: dynamicEndStart, end: tomorrowEnd, title: ryongTranslations.tomorrowTitle, category: programTranslations.closingCategory },
+            { start: tomorrowEnd, end: closingEnd, title: ryongTranslations.closingTitle, category: programTranslations.closingCategory },
+            { start: closingEnd, end: '17:25', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory }
+          );
+
+        } else if (structureType === 'lean') {
+          const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start_time : fmtISO(currDay, '18:08');
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStartISO = lastProgram ? lastProgram.end_time : fmtISO(currDay, '22:00');
+
+          const tomorrowEndISO = addMinutesISO(dynamicEndStartISO, 8);
+          const closingEndISO = addMinutesISO(tomorrowEndISO, 1);
+          const nextOffAirEndISO = fmtISO(nextDay, '17:25');
+
+          programsArray.unshift(
+            buildLeanEntry('offair-start', fmtISO(prevDay, '23:00'), fmtISO(currDay, '17:25'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my }),
+            buildLeanEntry('testcard', fmtISO(currDay, '17:25'), fmtISO(currDay, '18:00'), ryongTranslations.testCardTitle.ko, ryongTranslations.testCardTitle.en, programTranslations.testCardCategory.ko, programTranslations.testCardCategory.en, 'test_pattern', '시험화면.', 'Test card.', { title_zh: ryongTranslations.testCardTitle.zh, title_ja: ryongTranslations.testCardTitle.ja, title_ru: ryongTranslations.testCardTitle.ru, title_my: ryongTranslations.testCardTitle.my }),
+            buildLeanEntry('anthem', fmtISO(currDay, '18:00'), firstProgramStartISO, ryongTranslations.anthemTitle.ko, ryongTranslations.anthemTitle.en, programTranslations.anthemCategory.ko, programTranslations.anthemCategory.en, 'sign_on', '애국가.', 'National anthem.', { title_zh: ryongTranslations.anthemTitle.zh, title_ja: ryongTranslations.anthemTitle.ja, title_ru: ryongTranslations.anthemTitle.ru, title_my: ryongTranslations.anthemTitle.my })
+          );
+          programsArray.push(
+            buildLeanEntry('tomorrow', dynamicEndStartISO, tomorrowEndISO, ryongTranslations.tomorrowTitle.ko, ryongTranslations.tomorrowTitle.en, programTranslations.closingCategory.ko, programTranslations.closingCategory.en, 'sign_off', '래일의 방송순서.', "Tomorrow's order.", { title_zh: ryongTranslations.tomorrowTitle.zh, title_ja: ryongTranslations.tomorrowTitle.ja, title_ru: ryongTranslations.tomorrowTitle.ru, title_my: ryongTranslations.tomorrowTitle.my }),
+            buildLeanEntry('closing', tomorrowEndISO, closingEndISO, ryongTranslations.closingTitle.ko, ryongTranslations.closingTitle.en, programTranslations.closingCategory.ko, programTranslations.closingCategory.en, 'sign_off', '방송 마감.', 'Closing.', { title_zh: ryongTranslations.closingTitle.zh, title_ja: ryongTranslations.closingTitle.ja, title_ru: ryongTranslations.closingTitle.ru, title_my: ryongTranslations.closingTitle.my }),
+            buildLeanEntry('offair-end', closingEndISO, nextOffAirEndISO, programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my })
+          );
+
+        } else if (structureType === 'epgWrapper') {
+          const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].start : fmtISO(currDay, '18:08');
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStartISO = lastProgram ? lastProgram.end : fmtISO(currDay, '22:00');
+
+          const tomorrowEndISO = addMinutesISO(dynamicEndStartISO, 8);
+          const closingEndISO = addMinutesISO(tomorrowEndISO, 1);
+          const nextOffAirEndISO = fmtISO(nextDay, '17:25');
+
+          programsArray.unshift(
+            { id: 'auto_offair_start', start: fmtISO(prevDay, '23:00'), end: fmtISO(currDay, '17:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
+            { id: 'auto_testcard', start: fmtISO(currDay, '17:25'), end: fmtISO(currDay, '18:00'), category: programTranslations.testCardCategory, title: ryongTranslations.testCardTitle },
+            { id: 'auto_anthem', start: fmtISO(currDay, '18:00'), end: firstProgramStartISO, category: programTranslations.anthemCategory, title: ryongTranslations.anthemTitle }
+          );
+          programsArray.push(
+            { id: 'auto_tomorrow', start: dynamicEndStartISO, end: tomorrowEndISO, category: programTranslations.closingCategory, title: ryongTranslations.tomorrowTitle },
+            { id: 'auto_closing', start: tomorrowEndISO, end: closingEndISO, category: programTranslations.closingCategory, title: ryongTranslations.closingTitle },
+            { id: 'auto_offair_end', start: closingEndISO, end: nextOffAirEndISO, category: programTranslations.offAirCategory, title: programTranslations.offAirTitle }
+          );
+
+        } else if (structureType === 'camelISO') {
+          const firstProgramStartISO = programsArray.length > 0 ? programsArray[0].startTime : fmtISO(currDay, '18:08');
+          const lastProgram = programsArray[programsArray.length - 1];
+          const dynamicEndStartISO = lastProgram ? lastProgram.endTime : fmtISO(currDay, '22:00');
+
+          const tomorrowEndISO = addMinutesISO(dynamicEndStartISO, 8);
+          const closingEndISO = addMinutesISO(tomorrowEndISO, 1);
+          const nextOffAirEndISO = fmtISO(nextDay, '17:25');
+
+          programsArray.unshift(
+            { id: 'auto_offair_start', startTime: fmtISO(prevDay, '23:00'), endTime: fmtISO(currDay, '17:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
+            { id: 'auto_testcard', startTime: fmtISO(currDay, '17:25'), endTime: fmtISO(currDay, '18:00'), category: programTranslations.testCardCategory, title: ryongTranslations.testCardTitle },
+            { id: 'auto_anthem', startTime: fmtISO(currDay, '18:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: ryongTranslations.anthemTitle }
+          );
+          programsArray.push(
+            { id: 'auto_tomorrow', startTime: dynamicEndStartISO, endTime: tomorrowEndISO, category: programTranslations.closingCategory, title: ryongTranslations.tomorrowTitle },
+            { id: 'auto_closing', startTime: tomorrowEndISO, endTime: closingEndISO, category: programTranslations.closingCategory, title: ryongTranslations.closingTitle },
+            { id: 'auto_offair_end', startTime: closingEndISO, endTime: nextOffAirEndISO, category: programTranslations.offAirCategory, title: programTranslations.offAirTitle }
+          );
+        }
       }
     }
 
