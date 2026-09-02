@@ -117,6 +117,75 @@ const computeDuration = (startISO, endISO) => {
   return { duration: dur, minutes };
 };
 
+// Parse an ISO datetime string with +09:00 offset into components
+function parsePyongyangISO(isoStr) {
+  const match = isoStr.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\+09:00$/);
+  if (!match) return null;
+  return {
+    year: parseInt(match[1], 10),
+    month: parseInt(match[2], 10),
+    day: parseInt(match[3], 10),
+    hour: parseInt(match[4], 10),
+    minute: parseInt(match[5], 10),
+    second: parseInt(match[6], 10)
+  };
+}
+
+// Build an ISO datetime string in +09:00 from components
+function buildPyongyangISO(year, month, day, hour, minute, second = 0) {
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(minute)}:${pad(second)}+09:00`;
+}
+
+// Add minutes to an ISO datetime string (always in +09:00 timezone)
+function addMinutesISO(isoStr, minutes) {
+  const parsed = parsePyongyangISO(isoStr);
+  if (!parsed) {
+    // Fallback: try to parse with Date and convert (shouldn't happen with our data)
+    const d = new Date(isoStr);
+    d.setMinutes(d.getMinutes() + minutes);
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}T${pad(d.getUTCHours() + 9)}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}+09:00`;
+  }
+
+  // Convert to total minutes since epoch (in +09:00)
+  // Create a Date object from the components, treating them as +09:00
+  const d = new Date(Date.UTC(parsed.year, parsed.month - 1, parsed.day, parsed.hour - 9, parsed.minute, parsed.second));
+  d.setUTCMinutes(d.getUTCMinutes() + minutes);
+
+  // Extract UTC components and add 9 hours back to get +09:00 time
+  const pad = (n) => String(n).padStart(2, '0');
+  const y = d.getUTCFullYear();
+  const mo = d.getUTCMonth() + 1;
+  const da = d.getUTCDate();
+  const h = d.getUTCHours() + 9;
+  const mi = d.getUTCMinutes();
+  const s = d.getUTCSeconds();
+
+  // Handle hour overflow (e.g., 25 hours → next day 01:00)
+  let finalHour = h;
+  let finalDay = da;
+  let finalMonth = mo;
+  let finalYear = y;
+
+  if (finalHour >= 24) {
+    finalHour -= 24;
+    finalDay += 1;
+    // Handle month/year overflow (simplified - works for our use case)
+    const daysInMonth = new Date(finalYear, finalMonth, 0).getDate();
+    if (finalDay > daysInMonth) {
+      finalDay = 1;
+      finalMonth += 1;
+      if (finalMonth > 12) {
+        finalMonth = 1;
+        finalYear += 1;
+      }
+    }
+  }
+
+  return buildPyongyangISO(finalYear, finalMonth, finalDay, finalHour, mi, s);
+}
+
 // Detect if a program is an auto-injected block depending on the JSON structure
 function isAutoBlock(prog, structureType) {
   if (structureType === 'old') {
@@ -163,15 +232,6 @@ function hasAutoBlocks(programs, structureType) {
   const first = programs[0];
   const last = programs[programs.length - 1];
   return isAutoBlock(first, structureType) && isAutoBlock(last, structureType);
-}
-
-// Add minutes to an ISO datetime string (Pyongyang time +09:00)
-function addMinutesISO(isoStr, minutes) {
-  const d = new Date(isoStr);
-  d.setMinutes(d.getMinutes() + minutes);
-  // Format as ISO with +09:00 offset
-  const pad = (n) => String(n).padStart(2, '0');
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}+09:00`;
 }
 
 export default async function handler(req, res) {
