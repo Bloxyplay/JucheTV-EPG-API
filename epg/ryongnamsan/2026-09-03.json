@@ -4,64 +4,64 @@
     "name": "Ryongnamsan Television",
     "nameKo": "룡남산텔레비죤"
   },
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "programs": [
     {
-      "id": "ryongnamsan-0902-1",
-      "startTime": "2026-09-02T18:15:00+09:00",
-      "endTime": "2026-09-02T18:17:00+09:00",
+      "id": "ryongnamsan-0903-1",
+      "startTime": "2026-09-03T18:15:00+09:00",
+      "endTime": "2026-09-03T18:17:00+09:00",
       "category": {
         "en": "Common Sense",
         "ko": "상식"
       },
       "title": {
-        "en": "Finless Porpoise with High Intelligence",
+        "en": "Dolphins with Superior Intelligence",
         "ko": "뛰어난 지능을 가진 곱등어"
       }
     },
     {
-      "id": "ryongnamsan-0902-2",
-      "startTime": "2026-09-02T18:17:00+09:00",
-      "endTime": "2026-09-02T18:19:00+09:00",
+      "id": "ryongnamsan-0903-2",
+      "startTime": "2026-09-03T18:17:00+09:00",
+      "endTime": "2026-09-03T18:19:00+09:00",
       "category": {
         "en": "Common Sense",
         "ko": "상식"
       },
       "title": {
-        "en": "Units of Measurement Expressed by Parts of the Human Body",
+        "en": "Units of Size Represented by Human Body Parts",
         "ko": "사람몸의 부분으로 나타내는 크기단위"
       }
     },
     {
-      "id": "ryongnamsan-0902-3",
-      "startTime": "2026-09-02T18:19:00+09:00",
-      "endTime": "2026-09-02T18:21:00+09:00",
+      "id": "ryongnamsan-0903-3",
+      "startTime": "2026-09-03T18:19:00+09:00",
+      "endTime": "2026-09-03T18:21:00+09:00",
       "category": {
         "en": "Extracurricular Study",
         "ko": "과외학습"
       },
       "title": {
-        "en": "Distributive Law of Multiplication and Division",
+        "en": "Distributive Property of Multiplication and Division",
         "ko": "곱하기와 나누기의 분배법칙"
       }
     },
     {
-      "id": "ryongnamsan-0902-4",
-      "startTime": "2026-09-02T18:21:00+09:00",
-      "endTime": "2026-09-02T18:28:00+09:00",
+      "id": "ryongnamsan-0903-4",
+      "startTime": "2026-09-03T18:21:00+09:00",
+      "endTime": "2026-09-03T18:28:00+09:00",
       "category": {
         "en": "Math Class",
         "ko": "수학수업"
       },
       "title": {
-        "en": "Looking at the Calendar - Teacher Chae Ok-jeong, Chunhwa Primary School, Jung-gu -",
-        "ko": "달력보기 -중구역 전화소학교 교원 채옥정-"
+        "en": "Looking at the Calendar - Teacher Tae Uk-jeong, Chonhwa Elementary School, Jung District -",
+        "ko": "달력보기 -중구역 전화초등학교 교원 태욱정-"
       }
     },
     {
-      "id": "ryongnamsan-0902-5",
-      "startTime": "2026-09-02T18:28:00+09:00",
-      "endTime": "2026-09-02T18:33:00+09:00",
+      "id": "ryongnamsan-0903-5",
+      "startTime": "2026-09-03T18:28:00+09:00",
+      "endTime": "2026-09-03T18:33:00+09:00",
       "category": {
         "en": "Common Sense",
         "ko": "상식"
@@ -72,87 +72,87 @@
       }
     },
     {
-      "id": "ryongnamsan-0902-6",
-      "startTime": "2026-09-02T18:33:00+09:00",
-      "endTime": "2026-09-02T18:39:00+09:00",
+      "id": "ryongnamsan-0903-6",
+      "startTime": "2026-09-03T18:33:00+09:00",
+      "endTime": "2026-09-03T18:39:00+09:00",
       "category": {
         "en": "Extracurricular Study",
         "ko": "과외학습"
       },
       "title": {
-        "en": "Euler's Polyhedron Formula",
+        "en": "Euler's Polyhedron Theorem",
         "ko": "오일레르다면체정리"
       }
     },
     {
-      "id": "ryongnamsan-0902-7",
-      "startTime": "2026-09-02T18:39:00+09:00",
-      "endTime": "2026-09-02T18:51:00+09:00",
+      "id": "ryongnamsan-0903-7",
+      "startTime": "2026-09-03T18:39:00+09:00",
+      "endTime": "2026-09-03T18:51:00+09:00",
       "category": {
         "en": "Documentary",
         "ko": "소개편집물"
       },
       "title": {
-        "en": "Actively Adopting the Elective Curriculum (2) - Strengthening Teacher Competency -",
+        "en": "Actively Accepting the Elective Curriculum (2) - Strengthening Teacher Competency -",
         "ko": "선택교육과정을 적극 받아들여 (2) -교원력량의 강화-"
       }
     },
     {
-      "id": "ryongnamsan-0902-8",
-      "startTime": "2026-09-02T18:51:00+09:00",
-      "endTime": "2026-09-02T19:04:00+09:00",
+      "id": "ryongnamsan-0903-8",
+      "startTime": "2026-09-03T18:51:00+09:00",
+      "endTime": "2026-09-03T19:04:00+09:00",
       "category": {
         "en": "Foreign Language Study Time (Russian)",
         "ko": "외국어학습시간 로어학습편집물"
       },
       "title": {
-        "en": "Masha and the Bear - Sweet Life - 9x12 Size Photo -",
+        "en": "Masha and the Bear - Sweet Life - 9x12 Format Photo -",
         "ko": "마샤와 곰 -달콤한 생활- -9x12규격 사진-"
       }
     },
     {
-      "id": "ryongnamsan-0902-9",
-      "startTime": "2026-09-02T19:04:00+09:00",
-      "endTime": "2026-09-02T19:14:00+09:00",
+      "id": "ryongnamsan-0903-9",
+      "startTime": "2026-09-03T19:04:00+09:00",
+      "endTime": "2026-09-03T19:14:00+09:00",
       "category": {
         "en": "Science and Technology Common Sense",
         "ko": "과학기술상식"
       },
       "title": {
-        "en": "Alumina Anodizing Technology",
-        "ko": "알루미니움산화막질열기술"
+        "en": "Aluminum Oxide Powder Technology",
+        "ko": "알루미늄산화물분말 연기술"
       }
     },
     {
-      "id": "ryongnamsan-0902-10",
-      "startTime": "2026-09-02T19:14:00+09:00",
-      "endTime": "2026-09-02T19:20:00+09:00",
+      "id": "ryongnamsan-0903-10",
+      "startTime": "2026-09-03T19:14:00+09:00",
+      "endTime": "2026-09-03T19:20:00+09:00",
       "category": {
         "en": "Agricultural Technology",
         "ko": "농업기술"
       },
       "title": {
-        "en": "- Electric Tractor - Pesticide Sprayer - Pesticide Spraying Drone",
-        "ko": "-전기뜨락또르 -농약뿌리는기계 -농약살포무인기"
+        "en": "- Electric Tractor - Pesticide Sprayer Machine - Pesticide Spraying Drone",
+        "ko": "-전기 뜨락또르 -농약뿌리는기계 -농약살포무인기"
       }
     },
     {
-      "id": "ryongnamsan-0902-11",
-      "startTime": "2026-09-02T19:20:00+09:00",
-      "endTime": "2026-09-02T19:27:00+09:00",
+      "id": "ryongnamsan-0903-11",
+      "startTime": "2026-09-03T19:20:00+09:00",
+      "endTime": "2026-09-03T19:27:00+09:00",
       "category": {
         "en": "Common Sense",
         "ko": "상식"
       },
       "title": {
-        "en": "Cauchy, Authority on Differential and Integral Calculus",
+        "en": "Cauchy, Authority on Differential Calculus",
         "ko": "미적분학의 권위자 꼬쉬"
       }
     },
     {
-      "id": "ryongnamsan-0902-12",
-      "startTime": "2026-09-02T19:27:00+09:00",
-      "endTime": "2026-09-02T19:38:00+09:00",
+      "id": "ryongnamsan-0903-12",
+      "startTime": "2026-09-03T19:27:00+09:00",
+      "endTime": "2026-09-03T19:38:00+09:00",
       "category": {
         "en": "Special Feature",
         "ko": "특집"
@@ -163,35 +163,35 @@
       }
     },
     {
-      "id": "ryongnamsan-0902-13",
-      "startTime": "2026-09-02T19:38:00+09:00",
-      "endTime": "2026-09-02T19:51:00+09:00",
+      "id": "ryongnamsan-0903-13",
+      "startTime": "2026-09-03T19:38:00+09:00",
+      "endTime": "2026-09-03T19:51:00+09:00",
       "category": {
-        "en": "Continuous Documentary",
+        "en": "Continuous Introduction Feature",
         "ko": "련속소개편집물"
       },
       "title": {
-        "en": "Living Customs of Our People Seen Through Proverbs - Roof -",
+        "en": "Our People's Living Habits Seen Through Proverbs - Roof -",
         "ko": "속담을 통해 본 우리 인민의 살림집풍습 -지붕-"
       }
     },
     {
-      "id": "ryongnamsan-0902-14",
-      "startTime": "2026-09-02T19:51:00+09:00",
-      "endTime": "2026-09-02T20:00:00+09:00",
+      "id": "ryongnamsan-0903-14",
+      "startTime": "2026-09-03T19:51:00+09:00",
+      "endTime": "2026-09-03T20:00:00+09:00",
       "category": {
         "en": "Documentary",
         "ko": "소개편집물"
       },
       "title": {
-        "en": "Various Pride Imbued in Building No. 3 - Kim Il Sung University -",
+        "en": "Pride Instilled in Building No. 3 - Kim Il Sung University -",
         "ko": "3호교사에 깃든 여러가지자랑 -김일성종합대학-"
       }
     },
     {
-      "id": "ryongnamsan-0902-15",
-      "startTime": "2026-09-02T20:00:00+09:00",
-      "endTime": "2026-09-02T20:33:00+09:00",
+      "id": "ryongnamsan-0903-15",
+      "startTime": "2026-09-03T20:00:00+09:00",
+      "endTime": "2026-09-03T20:33:00+09:00",
       "category": {
         "en": "News",
         "ko": "보도"
@@ -202,50 +202,50 @@
       }
     },
     {
-      "id": "ryongnamsan-0902-16",
-      "startTime": "2026-09-02T20:33:00+09:00",
-      "endTime": "2026-09-02T20:44:00+09:00",
+      "id": "ryongnamsan-0903-16",
+      "startTime": "2026-09-03T20:33:00+09:00",
+      "endTime": "2026-09-03T20:44:00+09:00",
       "category": {
         "en": "Continuous Observation Record",
         "ko": "련속참관기"
       },
       "title": {
-        "en": "Bestowed to Build a Model University for Teacher Training - Visiting Pyongyang Teachers' Training College Revolutionary History Room - Providing Modern Educational Conditions and Environment",
+        "en": "Bestowed to Build Model University for Teacher Training - Visiting the Revolutionary History Hall of Pyongyang Teachers College - Providing Cutting-Edge Educational Conditions and Environment",
         "ko": "교육자양성의 본보기대학으로 꾸려주시여 -평양교원대학 혁명사적교양실을 찾아서- 현대적인 교육조건과 환경을 마련해주시여"
       }
     },
     {
-      "id": "ryongnamsan-0902-17",
-      "startTime": "2026-09-02T20:44:00+09:00",
-      "endTime": "2026-09-02T20:49:00+09:00",
+      "id": "ryongnamsan-0903-17",
+      "startTime": "2026-09-03T20:44:00+09:00",
+      "endTime": "2026-09-03T20:49:00+09:00",
       "category": {
         "en": "Documentary",
         "ko": "소개편집물"
       },
       "title": {
-        "en": "Image of an Immortal Fighter - Film 'Victory of the Revolution is in Sight' -",
-        "ko": "영생하는 투사의 모습 -영화 《혁명의 승리가 보인다》-"
+        "en": "The Image of an Immortal Fighter - Fine Art 'Victory of the Revolution is in Sight' -",
+        "ko": "영생하는 투사의 모습 -관화 《혁명의 승리가 보인다》-"
       }
     },
     {
-      "id": "ryongnamsan-0902-18",
-      "startTime": "2026-09-02T20:49:00+09:00",
-      "endTime": "2026-09-02T20:56:00+09:00",
+      "id": "ryongnamsan-0903-18",
+      "startTime": "2026-09-03T20:49:00+09:00",
+      "endTime": "2026-09-03T20:56:00+09:00",
       "category": {
         "en": "Documentary",
         "ko": "소개편집물"
       },
       "title": {
-        "en": "Praiseworthy Pioneers of Our Style Shallow-Sea Aquaculture Development - Faculty and Researchers of Wonsan Fisheries University -",
+        "en": "Pioneers of Our Style Sea Aquaculture Development - Faculty and Researchers of Wonsan Fisheries University -",
         "ko": "우리 식 바다가양식업발전의 미더운 선구자들 -원산수산대학 교원, 연구사들-"
       }
     },
     {
-      "id": "ryongnamsan-0902-19",
-      "startTime": "2026-09-02T20:56:00+09:00",
-      "endTime": "2026-09-02T21:11:00+09:00",
+      "id": "ryongnamsan-0903-19",
+      "startTime": "2026-09-03T20:56:00+09:00",
+      "endTime": "2026-09-03T21:11:00+09:00",
       "category": {
-        "en": "Medical Science Common Sense",
+        "en": "Medical and Scientific Common Sense",
         "ko": "의학과학상식"
       },
       "title": {
@@ -254,22 +254,22 @@
       }
     },
     {
-      "id": "ryongnamsan-0902-20",
-      "startTime": "2026-09-02T21:11:00+09:00",
-      "endTime": "2026-09-02T21:23:00+09:00",
+      "id": "ryongnamsan-0903-20",
+      "startTime": "2026-09-03T21:11:00+09:00",
+      "endTime": "2026-09-03T21:23:00+09:00",
       "category": {
         "en": "Special Feature",
         "ko": "특집"
       },
       "title": {
-        "en": "Amundsen, Who Dedicated His Whole Life to the Path of Adventurous Exploration (2)",
+        "en": "Amundsen Who Devoted His Life to Adventurous Exploration (2)",
         "ko": "모험적인 탐험의 길에 한생을 바친 아문쎈 (2)"
       }
     },
     {
-      "id": "ryongnamsan-0902-21",
-      "startTime": "2026-09-02T21:23:00+09:00",
-      "endTime": "2026-09-02T21:28:00+09:00",
+      "id": "ryongnamsan-0903-21",
+      "startTime": "2026-09-03T21:23:00+09:00",
+      "endTime": "2026-09-03T21:28:00+09:00",
       "category": {
         "en": "Science and Technology Common Sense",
         "ko": "과학기술상식"
@@ -280,9 +280,9 @@
       }
     },
     {
-      "id": "ryongnamsan-0902-22",
-      "startTime": "2026-09-02T21:28:00+09:00",
-      "endTime": "2026-09-02T21:34:00+09:00",
+      "id": "ryongnamsan-0903-22",
+      "startTime": "2026-09-03T21:28:00+09:00",
+      "endTime": "2026-09-03T21:34:00+09:00",
       "category": {
         "en": "Science and Technology Common Sense",
         "ko": "과학기술상식"
@@ -293,42 +293,42 @@
       }
     },
     {
-      "id": "ryongnamsan-0902-23",
-      "startTime": "2026-09-02T21:34:00+09:00",
-      "endTime": "2026-09-02T21:49:00+09:00",
+      "id": "ryongnamsan-0903-23",
+      "startTime": "2026-09-03T21:34:00+09:00",
+      "endTime": "2026-09-03T21:49:00+09:00",
       "category": {
         "en": "Foreign Language Study Time (Russian)",
         "ko": "외국어학습시간 로어학습편집물"
       },
       "title": {
         "en": "From Pole to Pole (3)",
-        "ko": "국에서 국으로 (3)"
+        "ko": "극에서 극으로 (3)"
       }
     },
     {
-      "id": "ryongnamsan-0902-24",
-      "startTime": "2026-09-02T21:49:00+09:00",
-      "endTime": "2026-09-02T21:54:00+09:00",
+      "id": "ryongnamsan-0903-24",
+      "startTime": "2026-09-03T21:49:00+09:00",
+      "endTime": "2026-09-03T21:54:00+09:00",
       "category": {
         "en": "Foreign Language Study Time (German)",
         "ko": "외국어학습시간 도이취어학습편집물"
       },
       "title": {
-        "en": "Learning German in English - When Parting -",
+        "en": "Learning German in English - Parting Words -",
         "ko": "영어로 배우는 도이취어 -헤어질 때-"
       }
     },
     {
-      "id": "ryongnamsan-0902-25",
-      "startTime": "2026-09-02T21:54:00+09:00",
-      "endTime": "2026-09-02T22:00:00+09:00",
+      "id": "ryongnamsan-0903-25",
+      "startTime": "2026-09-03T21:54:00+09:00",
+      "endTime": "2026-09-03T22:00:00+09:00",
       "category": {
         "en": "Foreign Language Study Time (German)",
         "ko": "외국어학습시간 도이취어학습편집물"
       },
       "title": {
-        "en": "Young Doctors - Away From the Group (1)",
-        "ko": "젊은 의사들 -집단과 떨어져 (1)-"
+        "en": "In Aller Freundschaft - Separated from Group (1)",
+        "ko": "젊은 의사들 집단과 떨어져 (1)"
       }
     }
   ]
