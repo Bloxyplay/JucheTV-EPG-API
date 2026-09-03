@@ -1,0 +1,309 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-04",
+  "programs": [
+    {
+      "id": "ryongnamsan-0904-1",
+      "startTime": "2026-09-04T18:14:00+09:00",
+      "endTime": "2026-09-04T18:16:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Structure of Flowers",
+        "ko": "꽃의 구조"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-2",
+      "startTime": "2026-09-04T18:16:00+09:00",
+      "endTime": "2026-09-04T18:21:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Five Sensory Organs",
+        "ko": "5가지 감각기관"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-3",
+      "startTime": "2026-09-04T18:21:00+09:00",
+      "endTime": "2026-09-04T18:25:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Information and Information Activities",
+        "ko": "정보와 정보활동"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-4",
+      "startTime": "2026-09-04T18:25:00+09:00",
+      "endTime": "2026-09-04T18:29:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Volume of a Sphere",
+        "ko": "구의 체적"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-5",
+      "startTime": "2026-09-04T18:29:00+09:00",
+      "endTime": "2026-09-04T18:41:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Putting Effort into Experimental Classes - Changdoc School -",
+        "ko": "실험수업에 힘을 넣어 -창덕학교-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-6",
+      "startTime": "2026-09-04T18:41:00+09:00",
+      "endTime": "2026-09-04T18:53:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Lesson - Human Life Cycle Process (2)",
+        "ko": "영어수업 - 인간의 생활과정 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-7",
+      "startTime": "2026-09-04T18:53:00+09:00",
+      "endTime": "2026-09-04T19:04:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Learning Compilation - Luca (13)",
+        "ko": "영어학습편집물 - 루까 (13)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-8",
+      "startTime": "2026-09-04T19:04:00+09:00",
+      "endTime": "2026-09-04T19:10:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Seabed Mining Equipment",
+        "ko": "해저채취설비"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-9",
+      "startTime": "2026-09-04T19:10:00+09:00",
+      "endTime": "2026-09-04T19:15:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Rotor Sail Ship with Low Fuel Consumption",
+        "ko": "연료소비가 낮은 회전돛배"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-10",
+      "startTime": "2026-09-04T19:15:00+09:00",
+      "endTime": "2026-09-04T19:20:00+09:00",
+      "category": {
+        "en": "Light Industry Technology",
+        "ko": "경공업기술"
+      },
+      "title": {
+        "en": "Eco-friendly Production Process",
+        "ko": "환경생산공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-11",
+      "startTime": "2026-09-04T19:20:00+09:00",
+      "endTime": "2026-09-04T19:32:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Discovery of Elements (4)",
+        "ko": "원소의 발견 (4)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-12",
+      "startTime": "2026-09-04T19:32:00+09:00",
+      "endTime": "2026-09-04T19:39:00+09:00",
+      "category": {
+        "en": "Talk on Request",
+        "ko": "요청회담"
+      },
+      "title": {
+        "en": "Horizontal Scrap Preheating Electric Arc Furnace",
+        "ko": "수평 파철 예열식전기로"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-13",
+      "startTime": "2026-09-04T19:39:00+09:00",
+      "endTime": "2026-09-04T19:45:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Standardization and Our Life - Essence of Standardization -",
+        "ko": "규격화와 우리 생활 - 규격의 본질 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-14",
+      "startTime": "2026-09-04T19:45:00+09:00",
+      "endTime": "2026-09-04T20:00:00+09:00",
+      "category": {
+        "en": "Memoirs",
+        "ko": "수기"
+      },
+      "title": {
+        "en": "In the Embrace of a Great Teacher - Kim Ji-chon, Director, Doctor, and Associate Professor at Kim Il Sung University -",
+        "ko": "위대한 스승의 품속에서 -김일성종합대학 소장 박사 부교수 김지천-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-15",
+      "startTime": "2026-09-04T20:00:00+09:00",
+      "endTime": "2026-09-04T20:35:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-16",
+      "startTime": "2026-09-04T20:35:00+09:00",
+      "endTime": "2026-09-04T20:51:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Immortal Achievements Brought Forward as the Advance Guard of the Educational Revolution - Seo Wol-hyok, Head Teacher, Doctor, and Associate Professor at Pyongyang Teachers College No. 1 -",
+        "ko": "교육혁명의 전초병으로 내세워주신 불멸의 업적 -평양제1사범대학 교원 박사 부교수 서월혁-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-17",
+      "startTime": "2026-09-04T20:51:00+09:00",
+      "endTime": "2026-09-04T21:03:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Immortal Image of a Fighter - Movie 'Is the Victory of the Revolution in Sight' -",
+        "ko": "영생하는 투사의 모습 -광화 《혁명의 승리가 보이는가》-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-18",
+      "startTime": "2026-09-04T21:03:00+09:00",
+      "endTime": "2026-09-04T21:16:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Young Doctors in Their 20s",
+        "ko": "20대청년 박사들"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-19",
+      "startTime": "2026-09-04T21:16:00+09:00",
+      "endTime": "2026-09-04T21:20:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Effects of Iron on the Human Body",
+        "ko": "철이 인체에 미치는 영향"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-20",
+      "startTime": "2026-09-04T21:20:00+09:00",
+      "endTime": "2026-09-04T21:25:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Utilization of Artificial Intelligence Technology",
+        "ko": "인공지능기술의 이용"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-21",
+      "startTime": "2026-09-04T21:25:00+09:00",
+      "endTime": "2026-09-04T21:32:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Automated Shoe Processing System - Braking Principle of Trains",
+        "ko": "-자동화된 신발가공체계 -열차의 제동원리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-22",
+      "startTime": "2026-09-04T21:32:00+09:00",
+      "endTime": "2026-09-04T21:48:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Learning Compilation - Following the Traces of Dinosaurs, Part 5: Monsters of the Ice Forest (2)",
+        "ko": "영어학습편집물 - 공룡의 자취를 따라서 제5편 얼음숲의 괴물들 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0904-23",
+      "startTime": "2026-09-04T21:48:00+09:00",
+      "endTime": "2026-09-04T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Russian Learning Compilation - 'Informant' Alex, Part 4 (5)",
+        "ko": "로어학습편집물 - 《고청치》 알렉스 제4부 (5)"
+      }
+    }
+  ]
+}
