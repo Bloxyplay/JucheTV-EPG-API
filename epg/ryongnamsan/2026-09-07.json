@@ -1,0 +1,309 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-07",
+  "programs": [
+    {
+      "id": "ryongnamsan-0907-1",
+      "startTime": "2026-09-07T18:13:00+09:00",
+      "endTime": "2026-09-07T18:16:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Differences Between Seals and Sea Lions",
+        "ko": "물개와 물범의 차이점"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-2",
+      "startTime": "2026-09-07T18:16:00+09:00",
+      "endTime": "2026-09-07T18:22:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Unfolded View of a Cylinder",
+        "ko": "원기둥의 펼친그림"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-3",
+      "startTime": "2026-09-07T18:22:00+09:00",
+      "endTime": "2026-09-07T18:30:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "Several Issues in Developing Reading Habits - Primary School Period -",
+        "ko": "책읽기습관형성에서 나서는 몇가지 문제 - 소학교시기 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-4",
+      "startTime": "2026-09-07T18:30:00+09:00",
+      "endTime": "2026-09-07T18:32:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Can Sand Catch Fire?",
+        "ko": "모래에서 불이 붙을수 있을가"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-5",
+      "startTime": "2026-09-07T18:32:00+09:00",
+      "endTime": "2026-09-07T18:40:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Solubility of Gases",
+        "ko": "기체의 용해도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-6",
+      "startTime": "2026-09-07T18:40:00+09:00",
+      "endTime": "2026-09-07T18:46:00+09:00",
+      "category": {
+        "en": "Physics Class",
+        "ko": "물리수업"
+      },
+      "title": {
+        "en": "Eyes and Glasses",
+        "ko": "눈과 안경"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-7",
+      "startTime": "2026-09-07T18:46:00+09:00",
+      "endTime": "2026-09-07T18:53:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Lesson: Plant Organs (5)",
+        "ko": "영어수업 식물기관 (5)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-8",
+      "startTime": "2026-09-07T18:53:00+09:00",
+      "endTime": "2026-09-07T19:02:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Learning Compilation: Luca (14)",
+        "ko": "영어학습편집물 루까 (14)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-9",
+      "startTime": "2026-09-07T19:02:00+09:00",
+      "endTime": "2026-09-07T19:11:00+09:00",
+      "category": {
+        "en": "Science & Tech Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Aircraft Engine and Its Operating Principle",
+        "ko": "비행기발동기와 그 동작원리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-10",
+      "startTime": "2026-09-07T19:11:00+09:00",
+      "endTime": "2026-09-07T19:17:00+09:00",
+      "category": {
+        "en": "Science & Tech Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Operating Process of Centrifugal Compressors",
+        "ko": "원심압축기의 동작과정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-11",
+      "startTime": "2026-09-07T19:17:00+09:00",
+      "endTime": "2026-09-07T19:25:00+09:00",
+      "category": {
+        "en": "Science & Tech Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Research for Solving Dietary Life Issues",
+        "ko": "식생활문제해결을 위한 연구"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-12",
+      "startTime": "2026-09-07T19:25:00+09:00",
+      "endTime": "2026-09-07T19:34:00+09:00",
+      "category": {
+        "en": "Industrial Tech",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "Automated Zipper Production Process / Sock Production Process",
+        "ko": "자동화된 쟈크생산공정 / 양말생산공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-13",
+      "startTime": "2026-09-07T19:34:00+09:00",
+      "endTime": "2026-09-07T19:44:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Important Discoveries That Contributed to the Development of Science (1)",
+        "ko": "과학발전에 기여한 중요한 발견들 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-14",
+      "startTime": "2026-09-07T19:44:00+09:00",
+      "endTime": "2026-09-07T19:49:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Mount Paektu Geopark",
+        "ko": "백두산지질공원"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-15",
+      "startTime": "2026-09-07T19:49:00+09:00",
+      "endTime": "2026-09-07T20:00:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Noble National Love Embodied in the Korean Dictionary",
+        "ko": "조선말사전에 깃든 숭고한 민족애"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-16",
+      "startTime": "2026-09-07T20:00:00+09:00",
+      "endTime": "2026-09-07T20:36:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-17",
+      "startTime": "2026-09-07T20:36:00+09:00",
+      "endTime": "2026-09-07T20:50:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Immortal Achievements That Will Shine Forever in the History of Juche Law Construction",
+        "ko": "주체적법건설사에 길이 빛날 불멸의 업적"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-18",
+      "startTime": "2026-09-07T20:50:00+09:00",
+      "endTime": "2026-09-07T20:58:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "A Story Told by an Educator",
+        "ko": "한 교육자가 들려준 이야기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-19",
+      "startTime": "2026-09-07T20:58:00+09:00",
+      "endTime": "2026-09-07T21:10:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "5 Key Links in Livestock Industry Development",
+        "ko": "축산업발전의 5대고리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-20",
+      "startTime": "2026-09-07T21:10:00+09:00",
+      "endTime": "2026-09-07T21:22:00+09:00",
+      "category": {
+        "en": "Medical & Scientific Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Portable Medical Devices",
+        "ko": "휴대용의료기구들"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-21",
+      "startTime": "2026-09-07T21:22:00+09:00",
+      "endTime": "2026-09-07T21:30:00+09:00",
+      "category": {
+        "en": "Science & Tech Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "History of Living Things (5)",
+        "ko": "생물의 력사 (5)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-22",
+      "startTime": "2026-09-07T21:30:00+09:00",
+      "endTime": "2026-09-07T21:45:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Learning Compilation: Following the Traces of Dinosaurs - Episode 5: Monsters of the Ice Forest (3)",
+        "ko": "영어학습편집물 공룡의 자취를 따라서 제5편 얼음숲의 괴물들 (3)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0907-23",
+      "startTime": "2026-09-07T21:45:00+09:00",
+      "endTime": "2026-09-07T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Chinese Learning Compilation: A Bite of China - Part 1 (6)",
+        "ko": "중국어학습편집물 혀끝으로 본 중국 제1편 (6)"
+      }
+    }
+  ]
+}
