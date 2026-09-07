@@ -1,0 +1,270 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-08",
+  "programs": [
+    {
+      "id": "ryongnamsan-0908-1",
+      "startTime": "2026-09-08T18:14:00+09:00",
+      "endTime": "2026-09-08T18:17:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Use of Wind",
+        "ko": "바람의 리용"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-2",
+      "startTime": "2026-09-08T18:17:00+09:00",
+      "endTime": "2026-09-08T18:20:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Why Is There a Hole at the Bottom of the Flowerpot?",
+        "ko": "화분밑에 왜 구멍이 나있을가"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-3",
+      "startTime": "2026-09-08T18:20:00+09:00",
+      "endTime": "2026-09-08T18:24:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Drawing with One Stroke",
+        "ko": "단번그리기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-4",
+      "startTime": "2026-09-08T18:24:00+09:00",
+      "endTime": "2026-09-08T18:30:00+09:00",
+      "category": {
+        "en": "Information Technology Class",
+        "ko": "정보기술수업"
+      },
+      "title": {
+        "en": "The Robot I Drew",
+        "ko": "내가 그린 로보트"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-5",
+      "startTime": "2026-09-08T18:30:00+09:00",
+      "endTime": "2026-09-08T18:34:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Interesting Reaction of Two Substances",
+        "ko": "두 물질의 흥미있는 반응"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-6",
+      "startTime": "2026-09-08T18:34:00+09:00",
+      "endTime": "2026-09-08T18:36:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Properties of Electromagnets",
+        "ko": "전자석의 성질"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-7",
+      "startTime": "2026-09-08T18:36:00+09:00",
+      "endTime": "2026-09-08T18:41:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Mathematics and Cryptography",
+        "ko": "수학과 암호"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-8",
+      "startTime": "2026-09-08T18:41:00+09:00",
+      "endTime": "2026-09-08T18:52:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "Some Problems in Forming Reading Habits - Middle School Period -",
+        "ko": "책읽기습관형성에서 나서는 몇가지 문제 -중학교시기-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-9",
+      "startTime": "2026-09-08T18:52:00+09:00",
+      "endTime": "2026-09-08T18:57:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian Conversation)",
+        "ko": "외국어학습시간 로어회화"
+      },
+      "title": {
+        "en": "Campus Conversation - During Break -",
+        "ko": "교내회화 - 휴식시간에 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-10",
+      "startTime": "2026-09-08T18:57:00+09:00",
+      "endTime": "2026-09-08T19:11:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Masha and the Bear - Children Have It Hard - Everything is Upside Down Today -",
+        "ko": "마샤와 곰 -어린이는 힘들어요- -모든것이 거꾸로 된 오늘-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-11",
+      "startTime": "2026-09-08T19:11:00+09:00",
+      "endTime": "2026-09-08T19:19:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Laser Cleaning Technology - Agricultural Unmanned Helicopter",
+        "ko": "- 레이자세척기술 - 농업용무인직승기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-12",
+      "startTime": "2026-09-08T19:19:00+09:00",
+      "endTime": "2026-09-08T19:25:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "How to Make Silage",
+        "ko": "풀절임만드는 방법"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-13",
+      "startTime": "2026-09-08T19:25:00+09:00",
+      "endTime": "2026-09-08T19:39:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Important Discoveries That Contributed to the Development of Science (2)",
+        "ko": "과학발전에 기여한 중요한 발견들 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-14",
+      "startTime": "2026-09-08T19:39:00+09:00",
+      "endTime": "2026-09-08T19:46:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Improvement of Product Quality and Reduction of Cost",
+        "ko": "제품의 질제고와 원가저하"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-15",
+      "startTime": "2026-09-08T19:46:00+09:00",
+      "endTime": "2026-09-08T20:00:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Until the Kim Il Sung Scholarship System Was Established",
+        "ko": "김일성장학금제도가 나오기까지"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-16",
+      "startTime": "2026-09-08T20:00:00+09:00",
+      "endTime": "2026-09-08T21:28:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Commissioning Ceremony of Destroyer \"Kang Gon\"",
+        "ko": "구축함 《강건》호 취역기념식"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-17",
+      "startTime": "2026-09-08T21:28:00+09:00",
+      "endTime": "2026-09-08T21:43:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "The Immortal Achievements That Opened a New History of Marine Aquaculture",
+        "ko": "바다가양식업의 새 력사를 펼쳐주신 불멸의 업적"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-18",
+      "startTime": "2026-09-08T21:43:00+09:00",
+      "endTime": "2026-09-08T21:49:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "- Hybrid Operating Room - Several Fruits Good for Health",
+        "ko": "- 하이브리드수술장 - 건강에 좋은 과일 몇가지"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-19",
+      "startTime": "2026-09-08T21:49:00+09:00",
+      "endTime": "2026-09-08T21:54:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Geothermal Energy",
+        "ko": "지열에네르기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0908-20",
+      "startTime": "2026-09-08T21:54:00+09:00",
+      "endTime": "2026-09-08T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Earth (7)",
+        "ko": "지구 (7)"
+      }
+    }
+  ]
+}
