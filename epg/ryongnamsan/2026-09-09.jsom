@@ -1,0 +1,335 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-09",
+  "programs": [
+    {
+      "id": "ryongnamsan-0909-1",
+      "startTime": "2026-09-09T18:14:00+09:00",
+      "endTime": "2026-09-09T18:16:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Swollen Table Tennis Ball",
+        "ko": "불어난 탁구공"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-2",
+      "startTime": "2026-09-09T18:16:00+09:00",
+      "endTime": "2026-09-09T18:18:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Let's Find the Axis of Symmetry",
+        "ko": "대칭축을 찾아보자요"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-3",
+      "startTime": "2026-09-09T18:18:00+09:00",
+      "endTime": "2026-09-09T18:23:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Thermal Expansion of Water",
+        "ko": "물의 열불음"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-4",
+      "startTime": "2026-09-09T18:23:00+09:00",
+      "endTime": "2026-09-09T18:30:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Looking at the Calendar",
+        "ko": "달력보기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-5",
+      "startTime": "2026-09-09T18:30:00+09:00",
+      "endTime": "2026-09-09T18:32:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "History of Automobile Development",
+        "ko": "자동차의 발전력사"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-6",
+      "startTime": "2026-09-09T18:32:00+09:00",
+      "endTime": "2026-09-09T18:36:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Conflicting \"Talents\" of Substances",
+        "ko": "물질들의 상반되는 《재간》"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-7",
+      "startTime": "2026-09-09T18:36:00+09:00",
+      "endTime": "2026-09-09T18:42:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Euler's Polyhedron Theorem",
+        "ko": "오일레르다면체정리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-8",
+      "startTime": "2026-09-09T18:42:00+09:00",
+      "endTime": "2026-09-09T18:48:00+09:00",
+      "category": {
+        "en": "Physics Class",
+        "ko": "물리수업"
+      },
+      "title": {
+        "en": "Which One Rotates Longer?",
+        "ko": "어느것이 더 오래 회전하는가"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-9",
+      "startTime": "2026-09-09T18:48:00+09:00",
+      "endTime": "2026-09-09T18:56:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Operating Extracurricular Groups Substantially",
+        "ko": "과외소조를 실속있게 운영하여"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-10",
+      "startTime": "2026-09-09T18:56:00+09:00",
+      "endTime": "2026-09-09T18:59:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Chinese Study Material: Easily Learned Chinese Characters - Single Letters - (2)",
+        "ko": "중국어학습편집물 쉽게 배우는 중국어글자 - 낱자 - (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-11",
+      "startTime": "2026-09-09T18:59:00+09:00",
+      "endTime": "2026-09-09T19:09:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Chinese Study Material: Three Little Pigs",
+        "ko": "중국어학습편집물 꿀꿀이 삼형제"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-12",
+      "startTime": "2026-09-09T19:09:00+09:00",
+      "endTime": "2026-09-09T19:14:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Baektusan Area Revolutionary Battle Site -Sajabong Secret Camp-",
+        "ko": "백두산지구 혁명전적지 -사자봉밀영-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-13",
+      "startTime": "2026-09-09T19:14:00+09:00",
+      "endTime": "2026-09-09T19:27:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Instilling Optimism for the Victory of the Revolution",
+        "ko": "혁명승리에 대한 락관을 심어주시며"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-14",
+      "startTime": "2026-09-09T19:27:00+09:00",
+      "endTime": "2026-09-09T19:39:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "Legal Requirements in Educational Sponsorship Fund Business",
+        "ko": "교육후원기금사업에서 나서는 법적요구"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-15",
+      "startTime": "2026-09-09T19:39:00+09:00",
+      "endTime": "2026-09-09T19:46:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "10 Ways to Improve School Education",
+        "ko": "학교교육개선을 위한 10가지 방도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-16",
+      "startTime": "2026-09-09T19:46:00+09:00",
+      "endTime": "2026-09-09T20:00:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "The Noble World of Love for the People Reflected in a Song",
+        "ko": "한편의 가요에 비낀 인민사랑의 숭고한 세계"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-17",
+      "startTime": "2026-09-09T20:00:00+09:00",
+      "endTime": "2026-09-09T20:32:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-18",
+      "startTime": "2026-09-09T20:32:00+09:00",
+      "endTime": "2026-09-09T20:41:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Respected Comrade Kim Jong Un's Immortal Classical Masterpiece \"On the Tasks Facing the Republic Government at the Current Stage of Socialist Construction\"",
+        "ko": "경애하는 김정은동지의 불후의 고전적로작 《사회주의건설의 현 단계에서 공화국정부앞에 나서는 과업에 대하여》"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-19",
+      "startTime": "2026-09-09T20:41:00+09:00",
+      "endTime": "2026-09-09T20:49:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "The Noble Meaning of Patriotism Reflected in the National Emblem",
+        "ko": "국장에 비낀 숭고한 애국의 뜻"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-20",
+      "startTime": "2026-09-09T20:49:00+09:00",
+      "endTime": "2026-09-09T20:58:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Respected Old Educators -Jang Chol Gu Pyongyang University of Commerce-",
+        "ko": "존경받는 로교육자들 -장철구평양상업대학-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-21",
+      "startTime": "2026-09-09T20:58:00+09:00",
+      "endTime": "2026-09-09T21:08:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Several Vegetables Good for Health",
+        "ko": "건강에 좋은 몇가지 남새"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-22",
+      "startTime": "2026-09-09T21:08:00+09:00",
+      "endTime": "2026-09-09T21:13:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Mountain Tourism",
+        "ko": "산악관광"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-23",
+      "startTime": "2026-09-09T21:13:00+09:00",
+      "endTime": "2026-09-09T21:18:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Sea Urchin Aquaculture and Processing",
+        "ko": "성계양식과 가공"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-24",
+      "startTime": "2026-09-09T21:18:00+09:00",
+      "endTime": "2026-09-09T21:20:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Chinese Material: Eternal Stars",
+        "ko": "중국어편집물 영생하는 별들"
+      }
+    },
+    {
+      "id": "ryongnamsan-0909-25",
+      "startTime": "2026-09-09T21:20:00+09:00",
+      "endTime": "2026-09-09T22:00:00+09:00",
+      "category": {
+        "en": "Recorded Broadcast",
+        "ko": "록화실황"
+      },
+      "title": {
+        "en": "2026 National Sports University Swimming Competition (1)",
+        "ko": "2026년 전국체육대학 수영경기 (1)"
+      }
+    }
+  ]
+}
