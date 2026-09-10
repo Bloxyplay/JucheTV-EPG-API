@@ -1,0 +1,283 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-10",
+  "programs": [
+    {
+      "id": "ryongnamsan-0910-1",
+      "startTime": "2026-09-10T18:14:00+09:00",
+      "endTime": "2026-09-10T18:21:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Interesting Ecological Aspects of Fish (1)",
+        "ko": "흥미있는 물고기의 생태일면 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-2",
+      "startTime": "2026-09-10T18:21:00+09:00",
+      "endTime": "2026-09-10T18:27:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Writing Essays Connected with Flowers",
+        "ko": "꽃과 결부한 착상글짓기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-3",
+      "startTime": "2026-09-10T18:27:00+09:00",
+      "endTime": "2026-09-10T18:33:00+09:00",
+      "category": {
+        "en": "Art and Craft Class",
+        "ko": "도화공작수업"
+      },
+      "title": {
+        "en": "Drawing Vegetables",
+        "ko": "남새 그리기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-4",
+      "startTime": "2026-09-10T18:33:00+09:00",
+      "endTime": "2026-09-10T18:35:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "The Origin of Our Country's Novels and the First Work",
+        "ko": "우리 나라 소설의 발생과 첫 작품"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-5",
+      "startTime": "2026-09-10T18:35:00+09:00",
+      "endTime": "2026-09-10T18:40:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Remade Loupe",
+        "ko": "다시 만든 루빠"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-6",
+      "startTime": "2026-09-10T18:40:00+09:00",
+      "endTime": "2026-09-10T18:49:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Two Sisters the School is Proud of",
+        "ko": "학교가 자랑하는 두 자매"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-7",
+      "startTime": "2026-09-10T18:49:00+09:00",
+      "endTime": "2026-09-10T19:02:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Masha and the Bear",
+        "ko": "마샤와 곰"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-8",
+      "startTime": "2026-09-10T19:02:00+09:00",
+      "endTime": "2026-09-10T19:16:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Shape Memory Alloy Nitinol -Tunnel Construction- - Operating Principle of Detachable Cableway -",
+        "ko": "-형태기억합금 니티놀 -갱도 시공- -분리식 삭도의 동작원리-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-9",
+      "startTime": "2026-09-10T19:16:00+09:00",
+      "endTime": "2026-09-10T19:22:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "Duck Rearing and Processing",
+        "ko": "오리사양과 가공"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-10",
+      "startTime": "2026-09-10T19:22:00+09:00",
+      "endTime": "2026-09-10T19:29:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Space-saving Furniture",
+        "ko": "공간절약형 가구들"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-11",
+      "startTime": "2026-09-10T19:29:00+09:00",
+      "endTime": "2026-09-10T19:44:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Amundsen, Who Devoted His Life to Adventurous Exploration (1)",
+        "ko": "모험적인 탐험의 길에 한생을 바친 아문쎈 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-12",
+      "startTime": "2026-09-10T19:44:00+09:00",
+      "endTime": "2026-09-10T19:49:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Standardization and Our Life - Role of Standardization -",
+        "ko": "규격화와 우리 생활 - 규격화의 역할 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-13",
+      "startTime": "2026-09-10T19:49:00+09:00",
+      "endTime": "2026-09-10T20:00:00+09:00",
+      "category": {
+        "en": "Memoir",
+        "ko": "수기"
+      },
+      "title": {
+        "en": "Engraving the True Meaning of Localization -Kim Il Sung University Teacher, Professor, Doctor Song Jong Gu-",
+        "ko": "국산화의 참뜻을 새겨주시며 -김일성종합대학 교원 교수 박사 송정구-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-14",
+      "startTime": "2026-09-10T20:00:00+09:00",
+      "endTime": "2026-09-10T20:32:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-15",
+      "startTime": "2026-09-10T20:32:00+09:00",
+      "endTime": "2026-09-10T20:56:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Immortal Achievements in Unfolding a New High Tide of Independent Economic Development -Kim Chaek University of Technology Department Head, Doctor, Associate Professor Kim Kyong Hui-",
+        "ko": "자립경제발전의 새로운 고조국면을 펼쳐주신 불멸의 업적 -김책공업종합대학 강좌장 박사 부교수 김경희-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-16",
+      "startTime": "2026-09-10T20:56:00+09:00",
+      "endTime": "2026-09-10T21:05:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "At the Forefront of Implementing the Party's Health Policy - Pyongyang Medical University Clinical Medicine Faculty 1 Gastroenterology Course -",
+        "ko": "당의 보건정책관철의 앞장에서 -평양의학대학 림상제1의학부 소화기내과강좌-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-17",
+      "startTime": "2026-09-10T21:05:00+09:00",
+      "endTime": "2026-09-10T21:16:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Rectal Cancer Resection",
+        "ko": "직장암절제술"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-18",
+      "startTime": "2026-09-10T21:16:00+09:00",
+      "endTime": "2026-09-10T21:26:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "History of Living Things (6)",
+        "ko": "생물의 력사 (6)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-19",
+      "startTime": "2026-09-10T21:26:00+09:00",
+      "endTime": "2026-09-10T21:33:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Learning German in English - Verb Conjugation (1) -",
+        "ko": "영어로 배우는 도이취어 -동사일치변화 (1)-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-20",
+      "startTime": "2026-09-10T21:33:00+09:00",
+      "endTime": "2026-09-10T21:43:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Young Doctors Away from the Group (2)",
+        "ko": "젊은 의사들 집단과 떨어져 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0910-21",
+      "startTime": "2026-09-10T21:43:00+09:00",
+      "endTime": "2026-09-10T22:00:00+09:00",
+      "category": {
+        "en": "Recorded Broadcast",
+        "ko": "록화실황"
+      },
+      "title": {
+        "en": "2026 National Sports University Swimming Competition (2)",
+        "ko": "2026년 전국체육대학 수영경기 (2)"
+      }
+    }
+  ]
+}
