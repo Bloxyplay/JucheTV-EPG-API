@@ -1,0 +1,170 @@
+{
+  "epg": {
+    "channel": {
+      "id": "SPORTS TV",
+      "name": {
+        "ko": "체육 텔레비죤",
+        "en": "Sports Television"
+      }
+    },
+    "date": "2026-09-13",
+    "programs": [
+      {
+        "id": "prog_01",
+        "start": "2026-09-13T18:00:00+09:00",
+        "end": "2026-09-13T18:07:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "체육발전에 남기신 령도자취",
+          "en": "Traces of Leadership Left in the Development of Sports"
+        }
+      },
+      {
+        "id": "prog_02",
+        "start": "2026-09-13T18:07:00+09:00",
+        "end": "2026-09-13T18:15:00+09:00",
+        "category": {
+          "ko": "종합편집",
+          "en": "Comprehensive Compilation"
+        },
+        "title": {
+          "ko": "대중체육활성화의 열풍을 일으켜",
+          "en": "Raising the Fever of Popular Sports Activation"
+        }
+      },
+      {
+        "id": "prog_03",
+        "start": "2026-09-13T18:15:00+09:00",
+        "end": "2026-09-13T18:22:00+09:00",
+        "category": {
+          "ko": "문답",
+          "en": "Q&A"
+        },
+        "title": {
+          "ko": "학교체육교육을 실효성있게 추진하자면",
+          "en": "To Effectively Promote School Physical Education"
+        }
+      },
+      {
+        "id": "prog_04",
+        "start": "2026-09-13T18:22:00+09:00",
+        "end": "2026-09-13T18:28:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "체육경기상식 -탁구-",
+          "en": "Sports Competition Knowledge - Table Tennis"
+        }
+      },
+      {
+        "id": "prog_05",
+        "start": "2026-09-13T18:28:00+09:00",
+        "end": "2026-09-13T19:20:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "전국소년체육경기대회 - 탁구 단식 결승 -",
+          "en": "National Youth Sports Competition - Table Tennis Singles Finals"
+        }
+      },
+      {
+        "id": "prog_06",
+        "start": "2026-09-13T19:20:00+09:00",
+        "end": "2026-09-13T19:30:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "꿈을 키워가는 체육소조원들 -평양시 모란봉구역 개선초등학교-",
+          "en": "Sports Club Members Nurturing Dreams - Moranbong District Kaeson Primary School in Pyongyang"
+        }
+      },
+      {
+        "id": "prog_07",
+        "start": "2026-09-13T19:30:00+09:00",
+        "end": "2026-09-13T19:35:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "체육상식 -농구기술 기초-",
+          "en": "Sports Knowledge - Fundamentals of Basketball Skills"
+        }
+      },
+      {
+        "id": "prog_08",
+        "start": "2026-09-13T19:35:00+09:00",
+        "end": "2026-09-13T20:00:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "국제체조련맹 세계선수권대회 - 남자 기계체조 결승 -",
+          "en": "FIG World Gymnastics Championships - Men's Artistic Gymnastics Finals"
+        }
+      },
+      {
+        "id": "prog_09",
+        "start": "2026-09-13T20:00:00+09:00",
+        "end": "2026-09-13T20:30:00+09:00",
+        "category": {
+          "ko": "보도",
+          "en": "News"
+        },
+        "title": {
+          "ko": "보도",
+          "en": "News"
+        }
+      },
+      {
+        "id": "prog_10",
+        "start": "2026-09-13T20:30:00+09:00",
+        "end": "2026-09-13T20:35:00+09:00",
+        "category": {
+          "ko": "혁명일화",
+          "en": "Revolutionary Anecdote"
+        },
+        "title": {
+          "ko": "조국의 영예를 조련대에 높이 시투어",
+          "en": "Holding High the Honor of the Motherland on the Podium"
+        }
+      },
+      {
+        "id": "prog_11",
+        "start": "2026-09-13T20:35:00+09:00",
+        "end": "2026-09-13T20:42:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "재미나는 바둑수풀이",
+          "en": "Fun Baduk Problem Solving"
+        }
+      },
+      {
+        "id": "prog_12",
+        "start": "2026-09-13T20:42:00+09:00",
+        "end": "2026-09-13T22:30:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "국제축구련맹 여자월드컵경기대회 - 조별련맹전 -",
+          "en": "FIFA Women's World Cup - Group Stage"
+        }
+      }
+    ]
+  }
+}
