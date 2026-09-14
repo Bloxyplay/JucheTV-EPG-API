@@ -1,0 +1,322 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-14",
+  "programs": [
+    {
+      "id": "ryongnamsan-0914-1",
+      "startTime": "2026-09-14T18:14:00+09:00",
+      "endTime": "2026-09-14T18:19:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Invisible Water",
+        "ko": "보이지 않는 물"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-2",
+      "startTime": "2026-09-14T18:19:00+09:00",
+      "endTime": "2026-09-14T18:21:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Expanded Ping Pong Ball",
+        "ko": "불어난 탁구공"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-3",
+      "startTime": "2026-09-14T18:21:00+09:00",
+      "endTime": "2026-09-14T18:49:00+09:00",
+      "category": {
+        "en": "TV Stage",
+        "ko": "TV무대"
+      },
+      "title": {
+        "en": "The Secret of Intelligence Development - Primary School -",
+        "ko": "지능계발의 묘리 - 소학교 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-4",
+      "startTime": "2026-09-14T18:49:00+09:00",
+      "endTime": "2026-09-14T18:51:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Origin of the Unit of Angle",
+        "ko": "각의 단위의 유래"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-5",
+      "startTime": "2026-09-14T18:51:00+09:00",
+      "endTime": "2026-09-14T18:54:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Conflicting \"Talents\" of Substances",
+        "ko": "물질들의 상반되는 《재간》"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-6",
+      "startTime": "2026-09-14T18:54:00+09:00",
+      "endTime": "2026-09-14T19:00:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Euler's Polyhedron Theorem",
+        "ko": "오일레르다면체정리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-7",
+      "startTime": "2026-09-14T19:00:00+09:00",
+      "endTime": "2026-09-14T19:07:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Conversation: Campus Conversation - During Extracurricular Time -",
+        "ko": "영어회화 교내회화 - 과외시간에 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-8",
+      "startTime": "2026-09-14T19:07:00+09:00",
+      "endTime": "2026-09-14T19:17:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Study Compilation: Luca (16)",
+        "ko": "영어학습편집물 루까 (16)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-9",
+      "startTime": "2026-09-14T19:17:00+09:00",
+      "endTime": "2026-09-14T19:24:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Seawater Desalination Technology (1)",
+        "ko": "바다물담수화기술 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-10",
+      "startTime": "2026-09-14T19:24:00+09:00",
+      "endTime": "2026-09-14T19:32:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Concrete Gravity Dam for Hydroelectric Power Generation - High-Tech Industry Zone -",
+        "ko": "수력발전용콩크리트중력언제 - 첨단기술산업구 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-11",
+      "startTime": "2026-09-14T19:32:00+09:00",
+      "endTime": "2026-09-14T19:37:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "High Voltage Fuse Production",
+        "ko": "고압휴즈제작"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-12",
+      "startTime": "2026-09-14T19:37:00+09:00",
+      "endTime": "2026-09-14T19:45:00+09:00",
+      "category": {
+        "en": "Serial Introduction Compilation",
+        "ko": "련속소개편집물"
+      },
+      "title": {
+        "en": "Our People's Etiquette and Morality Seen Through Proverbs (1)",
+        "ko": "속담을 통해 본 우리 인민의 례의도덕 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-13",
+      "startTime": "2026-09-14T19:45:00+09:00",
+      "endTime": "2026-09-14T19:52:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Standardization and Our Life - National Standard 10901:2026 -",
+        "ko": "규격화와 우리 생활 - 국규 10901:2026 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-14",
+      "startTime": "2026-09-14T19:52:00+09:00",
+      "endTime": "2026-09-14T20:00:00+09:00",
+      "category": {
+        "en": "Revolutionary Anecdote",
+        "ko": "혁명일화"
+      },
+      "title": {
+        "en": "Traces of Love Left in the Educator's House",
+        "ko": "교육자살림집에 남기신 사랑의 자욱"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-15",
+      "startTime": "2026-09-14T20:00:00+09:00",
+      "endTime": "2026-09-14T20:26:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-16",
+      "startTime": "2026-09-14T20:26:00+09:00",
+      "endTime": "2026-09-14T20:45:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Immortal Achievements Promoted as an Outpost of the Education Revolution",
+        "ko": "교육혁명의 전초병으로 내세워주신 불멸의 업적"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-17",
+      "startTime": "2026-09-14T20:45:00+09:00",
+      "endTime": "2026-09-14T20:57:00+09:00",
+      "category": {
+        "en": "Introduction Compilation",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Ph.D.s in their 20s",
+        "ko": "20대청년박사들"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-18",
+      "startTime": "2026-09-14T20:57:00+09:00",
+      "endTime": "2026-09-14T21:02:00+09:00",
+      "category": {
+        "en": "Introduction Compilation",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Etiquette to Follow on Campus",
+        "ko": "교정에서 지켜야 할 례절"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-19",
+      "startTime": "2026-09-14T21:02:00+09:00",
+      "endTime": "2026-09-14T21:09:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Effective Fatigue Relief Exercise",
+        "ko": "효과적인 피로해소운동"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-20",
+      "startTime": "2026-09-14T21:09:00+09:00",
+      "endTime": "2026-09-14T21:21:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "Beer Production Process",
+        "ko": "맥주생산공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-21",
+      "startTime": "2026-09-14T21:21:00+09:00",
+      "endTime": "2026-09-14T21:26:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Deep-Sea Miner",
+        "ko": "심해채광기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-22",
+      "startTime": "2026-09-14T21:26:00+09:00",
+      "endTime": "2026-09-14T21:30:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Vocabulary Study - Age -",
+        "ko": "영어어휘학습 - 나이 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-23",
+      "startTime": "2026-09-14T21:30:00+09:00",
+      "endTime": "2026-09-14T21:44:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "English Study Compilation: Following the Traces of Dinosaurs, Part 6: The End of the Dinosaur Age (1)",
+        "ko": "영어학습편집물 공룡의 자취를 따라서 제6편 공룡시대의 종말 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0914-24",
+      "startTime": "2026-09-14T21:44:00+09:00",
+      "endTime": "2026-09-14T22:30:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Chinese Study Compilation: A Bite of China, Part 1 (7)",
+        "ko": "중국어학습편집물 혀끝으로 본 중국 제1편 (7)"
+      }
+    }
+  ]
+}
