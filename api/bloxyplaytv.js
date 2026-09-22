@@ -50,6 +50,22 @@ const programTranslations = {
     my: "ထုတ်လွှင့်မှုစတင်ခြင်း",
     ru: "Начало вещания",
     ja: "放送開始"
+  },
+  fromNewsTitle: {
+    ko: "오늘의 뉴스로부터",
+    en: "From's Today's News",
+    zh: "来自今日新闻",
+    my: "ယနေ့သတင်းများမှ",
+    ru: "Из сегодняшних новостей",
+    ja: "今日のニュースより"
+  },
+  fromNewsCategory: {
+    ko: "뉴스",
+    en: "News",
+    zh: "新闻",
+    my: "သတင်း",
+    ru: "Новости",
+    ja: "ニュース"
   }
 };
 
@@ -373,6 +389,85 @@ export default async function handler(req, res) {
           { id: 'auto_anthem', startTime: fmtISO(currDay, '09:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
         );
         programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+      }
+    }
+
+    // INSERT "FROM'S TODAY'S NEWS" BEFORE OFF-AIR/CLOSING BLOCKS (KCTV ONLY)
+    if (ch === 'KCTV') {
+      const alreadyHasNews = programsArray.some((p) => {
+        const t = p.title || {};
+        return (
+          t.ko === programTranslations.fromNewsTitle.ko ||
+          p.title_ko === programTranslations.fromNewsTitle.ko
+        );
+      });
+
+      if (!alreadyHasNews) {
+        // Find the first trailing auto-block (off-air / closing) by walking back from the end
+        let insertIdx = programsArray.length;
+        while (insertIdx > 0 && isAutoBlock(programsArray[insertIdx - 1], structureType)) {
+          insertIdx--;
+        }
+
+        if (insertIdx > 0) {
+          const prevProg = programsArray[insertIdx - 1];   // last real program
+          const nextProg = programsArray[insertIdx];       // first trailing auto-block (may be undefined)
+
+          let newsEntry;
+          if (structureType === 'old') {
+            newsEntry = {
+              start: prevProg.end,
+              end: nextProg ? nextProg.start : '23:00',
+              title: programTranslations.fromNewsTitle,
+              category: programTranslations.fromNewsCategory
+            };
+          } else if (structureType === 'lean') {
+            const dateSlug = date.replace(/-/g, '');
+            newsEntry = {
+              program_id: `kctv-${dateSlug}-from-news`,
+              start_time: prevProg.end_time,
+              end_time: nextProg ? nextProg.start_time : fmtISO(currDay, '23:00'),
+              title_ko: programTranslations.fromNewsTitle.ko,
+              title_en: programTranslations.fromNewsTitle.en,
+              title_zh: programTranslations.fromNewsTitle.zh,
+              title_ja: programTranslations.fromNewsTitle.ja,
+              title_ru: programTranslations.fromNewsTitle.ru,
+              title_my: programTranslations.fromNewsTitle.my,
+              program_type_ko: programTranslations.fromNewsCategory.ko,
+              program_type_en: programTranslations.fromNewsCategory.en,
+              genre: 'news',
+              description_ko: '오늘의 주요 뉴스.',
+              description_en: "Today's top news.",
+              is_live: true,
+              is_rerun: false,
+              original_broadcast_date: '',
+              off_air: false,
+              kim_jong_un_featured: false,
+              foreign_origin: false,
+              origin_country: ''
+            };
+          } else if (structureType === 'epgWrapper') {
+            newsEntry = {
+              id: 'auto_from_news',
+              start: prevProg.end,
+              end: nextProg ? nextProg.start : fmtISO(currDay, '23:00'),
+              category: programTranslations.fromNewsCategory,
+              title: programTranslations.fromNewsTitle
+            };
+          } else if (structureType === 'camelISO') {
+            newsEntry = {
+              id: 'auto_from_news',
+              startTime: prevProg.endTime,
+              endTime: nextProg ? nextProg.startTime : fmtISO(currDay, '23:00'),
+              category: programTranslations.fromNewsCategory,
+              title: programTranslations.fromNewsTitle
+            };
+          }
+
+          if (newsEntry) {
+            programsArray.splice(insertIdx, 0, newsEntry);
+          }
+        }
       }
     }
 
