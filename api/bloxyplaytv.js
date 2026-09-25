@@ -53,50 +53,6 @@ const programTranslations = {
   }
 };
 
-// Ryongnamsan TV uses {en, ko} bilingual format
-const ryongnamsanTranslations = {
-  testCardTitle: {
-    en: "Ryongnamsan Television Test Card",
-    ko: "룡남산텔레비죤 시험화면"
-  },
-  testCardCategory: {
-    en: "Television Test Card",
-    ko: "텔레비죤 시험화면"
-  },
-  anthemTitle: {
-    en: "Ryongnamsan TV Startup National Anthem & Today's Programs",
-    ko: "룡남산텔레비죤 애국가 및 오늘의 방송순서"
-  },
-  anthemCategory: {
-    en: "Opening Broadcast",
-    ko: "방송개시"
-  },
-  tomorrowOrderTitle: {
-    en: "Ryongnamsan Television Tomorrow's Order",
-    ko: "룡남산텔레비죤 내일의 방송순서"
-  },
-  tomorrowOrderCategory: {
-    en: "Program Guide",
-    ko: "방송순서 안내"
-  },
-  closingTitle: {
-    en: "Ryongnamsan Television Closing",
-    ko: "룡남산텔레비죤 방송종료"
-  },
-  closingCategory: {
-    en: "Closing Broadcast",
-    ko: "방송종료"
-  },
-  offAirTitle: {
-    en: "Off Air",
-    ko: "방송 종료"
-  },
-  offAirCategory: {
-    en: "Television OFF AIR",
-    ko: "텔레비죤 방송 종료"
-  }
-};
-
 // Helpers for timestamps
 const fmtDate = (d) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -135,55 +91,6 @@ function parsePyongyangISO(isoStr) {
 function buildPyongyangISO(year, month, day, hour, minute, second = 0) {
   const pad = (n) => String(n).padStart(2, '0');
   return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(minute)}:${pad(second)}+09:00`;
-}
-
-// Add minutes to an ISO datetime string (always in +09:00 timezone)
-function addMinutesISO(isoStr, minutes) {
-  const parsed = parsePyongyangISO(isoStr);
-  if (!parsed) {
-    // Fallback: try to parse with Date and convert (shouldn't happen with our data)
-    const d = new Date(isoStr);
-    d.setMinutes(d.getMinutes() + minutes);
-    const pad = (n) => String(n).padStart(2, '0');
-    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}T${pad(d.getUTCHours() + 9)}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}+09:00`;
-  }
-
-  // Convert to total minutes since epoch (in +09:00)
-  // Create a Date object from the components, treating them as +09:00
-  const d = new Date(Date.UTC(parsed.year, parsed.month - 1, parsed.day, parsed.hour - 9, parsed.minute, parsed.second));
-  d.setUTCMinutes(d.getUTCMinutes() + minutes);
-
-  // Extract UTC components and add 9 hours back to get +09:00 time
-  const pad = (n) => String(n).padStart(2, '0');
-  const y = d.getUTCFullYear();
-  const mo = d.getUTCMonth() + 1;
-  const da = d.getUTCDate();
-  const h = d.getUTCHours() + 9;
-  const mi = d.getUTCMinutes();
-  const s = d.getUTCSeconds();
-
-  // Handle hour overflow (e.g., 25 hours → next day 01:00)
-  let finalHour = h;
-  let finalDay = da;
-  let finalMonth = mo;
-  let finalYear = y;
-
-  if (finalHour >= 24) {
-    finalHour -= 24;
-    finalDay += 1;
-    // Handle month/year overflow (simplified - works for our use case)
-    const daysInMonth = new Date(finalYear, finalMonth, 0).getDate();
-    if (finalDay > daysInMonth) {
-      finalDay = 1;
-      finalMonth += 1;
-      if (finalMonth > 12) {
-        finalMonth = 1;
-        finalYear += 1;
-      }
-    }
-  }
-
-  return buildPyongyangISO(finalYear, finalMonth, finalDay, finalHour, mi, s);
 }
 
 // Detect if a program is an auto-injected block depending on the JSON structure
@@ -374,68 +281,6 @@ export default async function handler(req, res) {
         );
         programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
       }
-    }
-
-    // INJECT AUTO-BLOCKS FOR RYONGNAMSAN TV
-    if ((ch === 'ryongnamsan' || ch === 'Ryongnamsan') && !hasAutoBlocks(programsArray, structureType)) {
-
-      if (structureType === 'camelISO') {
-        // ========== RYONGNAMSAN CAMELCASE ISO STRUCTURE ==========
-        // Uses {en, ko} bilingual format for title and category
-        const lastProgram = programsArray[programsArray.length - 1];
-        const lastProgramEndISO = lastProgram ? lastProgram.endTime : fmtISO(currDay, '22:00');
-
-        // Prepend: 17:25-18:00 Test Card, 18:00-18:08 Anthem
-        programsArray.unshift(
-          { 
-            id: 'auto_testcard', 
-            startTime: fmtISO(currDay, '17:25'), 
-            endTime: fmtISO(currDay, '18:00'), 
-            category: ryongnamsanTranslations.testCardCategory, 
-            title: ryongnamsanTranslations.testCardTitle 
-          },
-          { 
-            id: 'auto_anthem', 
-            startTime: fmtISO(currDay, '18:00'), 
-            endTime: fmtISO(currDay, '18:08'), 
-            category: ryongnamsanTranslations.anthemCategory, 
-            title: ryongnamsanTranslations.anthemTitle 
-          }
-        );
-
-        // Append: Tomorrow's Order (5 min), Closing (1 min), Off Air until 17:25 next day
-        const tomorrowOrderStartISO = lastProgramEndISO;
-        const tomorrowOrderEndISO = addMinutesISO(tomorrowOrderStartISO, 5);
-        const closingStartISO = tomorrowOrderEndISO;
-        const closingEndISO = addMinutesISO(closingStartISO, 1);
-        const offAirEndISO = fmtISO(nextDay, '17:25');
-
-        programsArray.push(
-          { 
-            id: 'auto_tomorrow_order', 
-            startTime: tomorrowOrderStartISO, 
-            endTime: tomorrowOrderEndISO, 
-            category: ryongnamsanTranslations.tomorrowOrderCategory, 
-            title: ryongnamsanTranslations.tomorrowOrderTitle 
-          },
-          { 
-            id: 'auto_closing', 
-            startTime: closingStartISO, 
-            endTime: closingEndISO, 
-            category: ryongnamsanTranslations.closingCategory, 
-            title: ryongnamsanTranslations.closingTitle 
-          },
-          { 
-            id: 'auto_offair_end', 
-            startTime: closingEndISO, 
-            endTime: offAirEndISO, 
-            category: ryongnamsanTranslations.offAirCategory, 
-            title: ryongnamsanTranslations.offAirTitle 
-          }
-        );
-      }
-      // Note: Ryongnamsan only uses camelISO structure based on the provided sample.
-      // If other structures are needed in the future, add them here.
     }
 
     res.setHeader('Content-Type', 'application/json');
