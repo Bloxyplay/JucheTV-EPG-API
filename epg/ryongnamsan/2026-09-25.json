@@ -1,0 +1,283 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-25",
+  "programs": [
+    {
+      "id": "ryongnamsan-0925-1",
+      "startTime": "2026-09-25T18:17:00+09:00",
+      "endTime": "2026-09-25T18:21:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Invisible Water",
+        "ko": "보이지 않는 물"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-2",
+      "startTime": "2026-09-25T18:21:00+09:00",
+      "endTime": "2026-09-25T18:27:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Principle of Cylinders Seen Through Side Projections",
+        "ko": "측등을 통해 본 원기둥의 원리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-3",
+      "startTime": "2026-09-25T18:27:00+09:00",
+      "endTime": "2026-09-25T18:32:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Continuous Addition",
+        "ko": "련이어 더하기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-4",
+      "startTime": "2026-09-25T18:32:00+09:00",
+      "endTime": "2026-09-25T18:35:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "The Origin and First Work of Our Country's Novel",
+        "ko": "우리 나라 소설의 발생과 첫 작품"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-5",
+      "startTime": "2026-09-25T18:35:00+09:00",
+      "endTime": "2026-09-25T18:43:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Solubility of Gas",
+        "ko": "기체의 용해도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-6",
+      "startTime": "2026-09-25T18:43:00+09:00",
+      "endTime": "2026-09-25T18:56:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Learning English through Fairy Tales: Ali Baba and the Forty Thieves",
+        "ko": "동화로 배우는 영어 알리바바와 40명의 도적"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-7",
+      "startTime": "2026-09-25T18:56:00+09:00",
+      "endTime": "2026-09-25T19:15:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Frozen Part 2 (1)",
+        "ko": "얼음왕국 제2부 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-8",
+      "startTime": "2026-09-25T19:15:00+09:00",
+      "endTime": "2026-09-25T19:20:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Cold-processed Soap Manufacturing Method",
+        "ko": "랭비누제조방법"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-9",
+      "startTime": "2026-09-25T19:20:00+09:00",
+      "endTime": "2026-09-25T19:26:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "- Flow-type Tile Production Process - Fish Sorting Process",
+        "ko": "-흐름식타일생산공정 -물고기선별공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-10",
+      "startTime": "2026-09-25T19:26:00+09:00",
+      "endTime": "2026-09-25T19:33:00+09:00",
+      "category": {
+        "en": "Requested Reply",
+        "ko": "요청회답"
+      },
+      "title": {
+        "en": "Cement Production Process",
+        "ko": "세멘트생산공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-11",
+      "startTime": "2026-09-25T19:33:00+09:00",
+      "endTime": "2026-09-25T19:44:00+09:00",
+      "category": {
+        "en": "Continuous Documentary",
+        "ko": "련속소개편집물"
+      },
+      "title": {
+        "en": "Our Food Culture Reflected in Proverbs - Noodles -",
+        "ko": "속담에 비낀 우리의 음식문화 - 국수 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-12",
+      "startTime": "2026-09-25T19:44:00+09:00",
+      "endTime": "2026-09-25T19:50:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "National Intangible Cultural Heritage: Chuseok Holiday Customs",
+        "ko": "국가비물질문화유산 추석명절풍습"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-13",
+      "startTime": "2026-09-25T19:50:00+09:00",
+      "endTime": "2026-09-25T20:00:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Newly Established Mobile Treatment Unit",
+        "ko": "새로 생겨난 이동치료교유대"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-14",
+      "startTime": "2026-09-25T20:00:00+09:00",
+      "endTime": "2026-09-25T20:35:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-15",
+      "startTime": "2026-09-25T20:35:00+09:00",
+      "endTime": "2026-09-25T21:01:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Raising Them as Revolutionary Talents with Noble Spirits",
+        "ko": "숭고한 정신을 지닌 혁명인재들로 키워주시여"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-16",
+      "startTime": "2026-09-25T21:01:00+09:00",
+      "endTime": "2026-09-25T21:10:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "A Story Told by an Educator",
+        "ko": "한 교육자가 들려준 이야기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-17",
+      "startTime": "2026-09-25T21:10:00+09:00",
+      "endTime": "2026-09-25T21:14:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "World Tourism Day",
+        "ko": "세계관광의 날"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-18",
+      "startTime": "2026-09-25T21:14:00+09:00",
+      "endTime": "2026-09-25T21:25:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "- Stroke - Concussion",
+        "ko": "- 뇌졸중 - 뇌진탕"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-19",
+      "startTime": "2026-09-25T21:25:00+09:00",
+      "endTime": "2026-09-25T21:29:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Linear Motor",
+        "ko": "직선전동기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-20",
+      "startTime": "2026-09-25T21:29:00+09:00",
+      "endTime": "2026-09-25T21:48:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Artificial Earth Satellite Manufacturing Method (2)",
+        "ko": "인공지구위성제작방법 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0925-21",
+      "startTime": "2026-09-25T21:48:00+09:00",
+      "endTime": "2026-09-25T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "\"Gocheongri\" Alex Part 5 (3)",
+        "ko": "《고청리》 알렉스 제5부 (3)"
+      }
+    }
+  ]
+}
