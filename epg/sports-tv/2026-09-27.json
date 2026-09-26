@@ -1,0 +1,118 @@
+{
+  "epg": {
+    "channel": {
+      "id": "SPORTS TV",
+      "name": {
+        "ko": "체육 텔레비죤",
+        "en": "Sports Television"
+      }
+    },
+    "date": "2026-09-27",
+    "programs": [
+      {
+        "id": "prog_01",
+        "start": "2026-09-27T18:06:00+09:00",
+        "end": "2026-09-27T18:18:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "녀자축구선수들이 받아안은 영광",
+          "en": "The Glory Received by Women's Football Players"
+        }
+      },
+      {
+        "id": "prog_02",
+        "start": "2026-09-27T18:18:00+09:00",
+        "end": "2026-09-27T18:46:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "제20차 대황소상 전국민족씨름경기 -결승단계-",
+          "en": "20th Grand Bull Prize National Ethnic Ssireum Tournament - Final Stage -"
+        }
+      },
+      {
+        "id": "prog_03",
+        "start": "2026-09-27T18:46:00+09:00",
+        "end": "2026-09-27T18:48:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "올림픽경기대회종목들 -지상호케이-",
+          "en": "Olympic Games Events - Field Hockey -"
+        }
+      },
+      {
+        "id": "prog_04",
+        "start": "2026-09-27T18:48:00+09:00",
+        "end": "2026-09-27T20:00:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "홰불컵축구경기 -결승 (남자)- 압록강 : 평양",
+          "en": "Hwaebul Cup Football Match - Finals (Men's) - Amrokgang vs. Pyongyang"
+        }
+      },
+      {
+        "id": "prog_05",
+        "start": "2026-09-27T20:00:00+09:00",
+        "end": "2026-09-27T20:27:00+09:00",
+        "category": {
+          "ko": "보도",
+          "en": "News"
+        },
+        "title": {
+          "ko": "보도",
+          "en": "News"
+        }
+      },
+      {
+        "id": "prog_06",
+        "start": "2026-09-27T20:27:00+09:00",
+        "end": "2026-09-27T20:36:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "비행기로 보내주신 공화국기발",
+          "en": "The Republic Flag Sent by Airplane"
+        }
+      },
+      {
+        "id": "prog_07",
+        "start": "2026-09-27T20:36:00+09:00",
+        "end": "2026-09-27T20:45:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "바둑격언 (15) -바둑구구-",
+          "en": "Baduk Proverbs (15) - Baduk Gugu -"
+        }
+      },
+      {
+        "id": "prog_08",
+        "start": "2026-09-27T20:45:00+09:00",
+        "end": "2026-09-27T22:30:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "국제축구련맹 2026년 월드컵경기대회 -조별련맹전- 오스트리아 : 요르단",
+          "en": "FIFA 2026 World Cup - Group Stage - Austria vs. Jordan"
+        }
+      }
+    ]
+  }
+}
