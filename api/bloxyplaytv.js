@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 
 // Translation dictionaries — ko, en, zh, my, ru, ja
@@ -53,6 +53,12 @@ const programTranslations = {
   }
 };
 
+// Base raw URL for preview images hosted in the same repo
+const PREVIEW_RAW_BASE = (ch, date) =>
+  `https://raw.githubusercontent.com/Bloxyplay/JucheTV-EPG-API/refs/heads/main/epg/${ch}/promotional/previews/images/${date}`;
+
+const IMAGE_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif'];
+
 // Helpers for timestamps
 const fmtDate = (d) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -91,6 +97,85 @@ function parsePyongyangISO(isoStr) {
 function buildPyongyangISO(year, month, day, hour, minute, second = 0) {
   const pad = (n) => String(n).padStart(2, '0');
   return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(minute)}:${pad(second)}+09:00`;
+}
+
+// Normalize any string into a slug usable for matching filenames
+const slugify = (s) =>
+  String(s || '')
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+// Scan epg/<ch>/promotional/previews/images/<date>/ and map filename stems -> raw GitHub URLs
+function loadPreviewImages(ch, date) {
+  const imagesDir = join(process.cwd(), 'epg', ch, 'promotional', 'previews', 'images', date);
+  let files = [];
+  try {
+    files = readdirSync(imagesDir);
+  } catch {
+    // Folder missing (or no previews for this date/channel) — just skip
+    return new Map();
+  }
+  const map = new Map();
+  for (const file of files) {
+    const dotIndex = file.lastIndexOf('.');
+    if (dotIndex <= 0) continue;
+    const ext = file.slice(dotIndex).toLowerCase();
+    if (!IMAGE_EXTENSIONS.includes(ext)) continue;
+    const stem = file.slice(0, dotIndex);
+    const url = `${PREVIEW_RAW_BASE(ch, date)}/${file}`;
+    map.set(stem.toLowerCase(), url);
+    map.set(slugify(stem), url);
+  }
+  return map;
+}
+
+// Attach a "preview-image" field to each program when a matching image is found
+function attachPreviewImages(programs, previewMap) {
+  if (!previewMap || previewMap.size === 0 || !Array.isArray(programs)) return;
+
+  for (const prog of programs) {
+    // Gather every identifier the image could have been named after
+    const keys = [];
+    if (prog.id) keys.push(String(prog.id));
+    if (prog.program_id) keys.push(String(prog.program_id));
+
+    const titleSources = [prog.title, prog.title_ko, prog.title_en];
+    for (const t of titleSources) {
+      if (typeof t === 'string' && t.trim()) {
+        keys.push(t);
+      } else if (t && typeof t === 'object') {
+        for (const lang of Object.keys(t)) {
+          if (t[lang]) keys.push(String(t[lang]));
+        }
+      }
+    }
+
+    let url = null;
+
+    // 1) Exact match on the raw filename stem or its slug form
+    for (const key of keys) {
+      const lower = key.toLowerCase();
+      if (previewMap.has(lower)) { url = previewMap.get(lower); break; }
+      const slug = slugify(key);
+      if (slug && previewMap.has(slug)) { url = previewMap.get(slug); break; }
+    }
+
+    // 2) Fallback: image stem contains the program id slug (or a long title slug)
+    if (!url) {
+      const idSlug = slugify(prog.id || prog.program_id || '');
+      const titleSlug = slugify(
+        (prog.title && (prog.title.en || prog.title.ko)) || prog.title_en || prog.title_ko || ''
+      );
+      for (const [stem, u] of previewMap) {
+        if (idSlug && stem.includes(idSlug)) { url = u; break; }
+        if (titleSlug && titleSlug.length >= 8 && (stem.includes(titleSlug) || titleSlug.includes(stem))) { url = u; break; }
+      }
+    }
+
+    if (url) prog['preview-image'] = url;
+  }
 }
 
 // Detect if a program is an auto-injected block depending on the JSON structure
@@ -191,6 +276,10 @@ export default async function handler(req, res) {
     if (structureType === 'unknown') {
       return res.status(500).json({ error: 'Unrecognized or invalid EPG data structure' });
     }
+
+    // ===== PREVIEW IMAGES: attach raw GitHub URLs to each program =====
+    const previewMap = loadPreviewImages(ch, date);
+    attachPreviewImages(programsArray, previewMap);
 
     const [year, month, day] = date.split('-').map(Number);
     const prevDay = new Date(year, month - 1, day - 1);
