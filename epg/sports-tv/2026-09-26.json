@@ -1,0 +1,144 @@
+{
+  "epg": {
+    "channel": {
+      "id": "SPORTS TV",
+      "name": {
+        "ko": "체육 텔레비죤",
+        "en": "Sports Television"
+      }
+    },
+    "date": "2026-09-26",
+    "programs": [
+      {
+        "id": "prog_01",
+        "start": "2026-09-26T18:09:00+09:00",
+        "end": "2026-09-26T18:21:00+09:00",
+        "category": {
+          "ko": "특집",
+          "en": "Special Feature"
+        },
+        "title": {
+          "ko": "체육강국건설의 위대한 전환기를 펼쳐주시여 (2)",
+          "en": "Unfolding the Great Turning Point of Building a Sports Powerhouse (2)"
+        }
+      },
+      {
+        "id": "prog_02",
+        "start": "2026-09-26T18:21:00+09:00",
+        "end": "2026-09-26T18:31:00+09:00",
+        "category": {
+          "ko": "문답",
+          "en": "Q&A"
+        },
+        "title": {
+          "ko": "청소년들의 키를 크게 하는데서 나서는 몇가지 문제 (1)",
+          "en": "Several Issues Arising in Making Adolescents Taller (1)"
+        }
+      },
+      {
+        "id": "prog_03",
+        "start": "2026-09-26T18:31:00+09:00",
+        "end": "2026-09-26T18:44:00+09:00",
+        "category": {
+          "ko": "문답",
+          "en": "Q&A"
+        },
+        "title": {
+          "ko": "체육선수선발과 나라의 전문체육발전 (3)",
+          "en": "Selection of Athletes and the Country's Specialized Sports Development (3)"
+        }
+      },
+      {
+        "id": "prog_04",
+        "start": "2026-09-26T18:44:00+09:00",
+        "end": "2026-09-26T18:50:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "보링 - 경기장과 기재 -",
+          "en": "Bowling - Stadium and Equipment -"
+        }
+      },
+      {
+        "id": "prog_05",
+        "start": "2026-09-26T18:50:00+09:00",
+        "end": "2026-09-26T19:51:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "제20차 대황소상 전국민족씨름경기 -결승 단계- (조별련맹전)",
+          "en": "20th Grand Bull Prize National Ssireum Tournament - Finals - (Group League)"
+        }
+      },
+      {
+        "id": "prog_06",
+        "start": "2026-09-26T19:51:00+09:00",
+        "end": "2026-09-26T20:00:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "체육훈련은 몇살부터 하는것이 좋은가",
+          "en": "From What Age is it Good to Start Sports Training?"
+        }
+      },
+      {
+        "id": "prog_07",
+        "start": "2026-09-26T20:00:00+09:00",
+        "end": "2026-09-26T20:27:00+09:00",
+        "category": {
+          "ko": "보도",
+          "en": "News"
+        },
+        "title": {
+          "ko": "보도",
+          "en": "News"
+        }
+      },
+      {
+        "id": "prog_08",
+        "start": "2026-09-26T20:27:00+09:00",
+        "end": "2026-09-26T20:34:00+09:00",
+        "category": {
+          "ko": "소개편집물",
+          "en": "Introductory Compilation"
+        },
+        "title": {
+          "ko": "후대들에 대한 사랑은 궁전수영관에도",
+          "en": "Love for the Future Generations Reaches the Palace Swimming Pool"
+        }
+      },
+      {
+        "id": "prog_09",
+        "start": "2026-09-26T20:34:00+09:00",
+        "end": "2026-09-26T20:41:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "재미나는 바둑수풀이 (47)",
+          "en": "Fun Baduk Problem Solving (47)"
+        }
+      },
+      {
+        "id": "prog_10",
+        "start": "2026-09-26T20:41:00+09:00",
+        "end": "2026-09-26T22:30:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "2026년 국제빙상호케이련맹 세계선수권대회 - 결승 - 스위스 : 핀란드",
+          "en": "2026 IIHF World Championship - Final - Switzerland vs. Finland"
+        }
+      }
+    ]
+  }
+}
