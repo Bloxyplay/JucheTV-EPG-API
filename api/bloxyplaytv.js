@@ -53,6 +53,53 @@ const programTranslations = {
   }
 };
 
+
+// Sports TV auto-block labels
+const sportsTvTranslations = {
+  testCardTitle: {
+    ko: "체육텔레비죤 시험화면",
+    en: "Athletic Television Test Pattern"
+  },
+  testCardCategory: {
+    ko: "시험화면",
+    en: "Test Pattern"
+  },
+  openingTitle: {
+    ko: "체육텔레비죤 개국 및 오늘의 방송순서",
+    en: "Athletic Television Opening & Today's Orders"
+  },
+  openingCategory: {
+    ko: "방송개시",
+    en: "Opening Broadcast"
+  },
+  closingTitle: {
+    ko: "체육텔레비죤 내일의 방송순서 및 방송종료",
+    en: "Athletic Television Tomorrow's Order & Closing"
+  },
+  closingSundayTitle: {
+    ko: "체육텔레비죤 방송종료",
+    en: "Athletic Television Closing"
+  },
+  closingCategory: {
+    ko: "방송종료",
+    en: "Closing"
+  }
+};
+
+// Fixed preview images for the Sports TV opening/ending blocks
+const SPORTS_OE_PREVIEW_BASE =
+  'https://raw.githubusercontent.com/Bloxyplay/JucheTV-EPG-API/refs/heads/main/epg/sports-tv/promotional/previews/opening%26ending';
+
+// Add minutes to a +09:00 Pyongyang ISO string, keeping the +09:00 offset
+function addMinutesPyongyangISO(isoStr, minutesToAdd) {
+  const p = parsePyongyangISO(isoStr);
+  if (!p) return isoStr;
+  const ms = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) + minutesToAdd * 60000;
+  const d = new Date(ms);
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}T${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}+09:00`;
+}
+
 // Base raw URL for preview images hosted in the same repo
 const PREVIEW_RAW_BASE = (ch, date) =>
   `https://raw.githubusercontent.com/Bloxyplay/JucheTV-EPG-API/refs/heads/main/epg/${ch}/promotional/previews/images/${date}`;
@@ -218,6 +265,33 @@ function isAutoBlock(prog, structureType) {
   return false;
 }
 
+// Detect if a program is a Sports TV auto-injected block
+function isSportsAutoBlock(prog, structureType) {
+  if (structureType === 'old') {
+    return prog.start === '17:25' || prog.start === '18:00';
+  } else if (structureType === 'lean') {
+    return (
+      (prog.program_id || '').includes('stv-') ||
+      prog.genre === 'sign_on' ||
+      (prog.title_en || '') === 'Athletic Television Test Pattern' ||
+      (prog.title_en || '').includes('Athletic Television')
+    );
+  }
+  const t = (prog && prog.title) || {};
+  return (
+    t.en === 'Athletic Television Test Pattern' ||
+    t.en === "Athletic Television Opening & Today's Orders" ||
+    t.en === "Athletic Television Tomorrow's Order & Closing" ||
+    t.en === 'Athletic Television Closing'
+  );
+}
+
+// Check if Sports TV auto-blocks were already injected
+function hasSportsAutoBlocks(programs, structureType) {
+  if (!programs || programs.length === 0) return false;
+  return isSportsAutoBlock(programs[0], structureType) && isSportsAutoBlock(programs[programs.length - 1], structureType);
+}
+
 // Check if the file already has auto-blocks injected
 function hasAutoBlocks(programs, structureType) {
   if (!programs || programs.length === 0) return false;
@@ -369,6 +443,163 @@ export default async function handler(req, res) {
           { id: 'auto_anthem', startTime: fmtISO(currDay, '09:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
         );
         programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+      }
+    }
+
+
+    // ONLY INJECT AUTO-BLOCKS FOR SPORTS TV
+    if (ch === 'sports-tv' && !hasSportsAutoBlocks(programsArray, structureType)) {
+      const weekday = currDay.getDay(); // 6 = Saturday, 0 = Sunday
+      const dateSlug = date.replace(/-/g, '');
+
+      // ----- Ending block: Saturday = +5 min, Sunday = +1 min 30 sec -----
+      const lastProgram = programsArray[programsArray.length - 1];
+      const endField = structureType === 'camelISO' ? 'endTime' : (structureType === 'lean' ? 'end_time' : 'end');
+      const lastEnd = lastProgram ? lastProgram[endField] : null;
+
+      let endingEntry = null;
+      if (lastEnd && weekday === 6) {
+        // Saturday
+        if (structureType === 'old') {
+          const [eh, em] = lastEnd.split(':').map(Number);
+          const total = eh * 60 + em + 5;
+          endingEntry = { start: lastEnd, end: `${String(Math.floor(total / 60) % 24).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`, title: sportsTvTranslations.closingTitle, category: sportsTvTranslations.closingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-ending.png` };
+        } else if (structureType === 'lean') {
+          endingEntry = {
+            program_id: `stv-${dateSlug}-closing`,
+            start_time: lastEnd,
+            end_time: addMinutesPyongyangISO(lastEnd, 5),
+            title_ko: sportsTvTranslations.closingTitle.ko,
+            title_en: sportsTvTranslations.closingTitle.en,
+            title_zh: sportsTvTranslations.closingTitle.en,
+            title_ja: sportsTvTranslations.closingTitle.en,
+            title_ru: sportsTvTranslations.closingTitle.en,
+            title_my: sportsTvTranslations.closingTitle.en,
+            program_type_ko: sportsTvTranslations.closingCategory.ko,
+            program_type_en: sportsTvTranslations.closingCategory.en,
+            genre: 'sign_off',
+            description_ko: '방송종료.',
+            description_en: 'Closing.',
+            is_live: false,
+            is_rerun: false,
+            original_broadcast_date: '',
+            off_air: true,
+            kim_jong_un_featured: false,
+            foreign_origin: false,
+            origin_country: '',
+            'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-ending.png`
+          };
+        } else {
+          endingEntry = { id: 'auto_stv_closing', [structureType === 'camelISO' ? 'startTime' : 'start']: lastEnd, [endField]: addMinutesPyongyangISO(lastEnd, 5), title: sportsTvTranslations.closingTitle, category: sportsTvTranslations.closingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-ending.png` };
+        }
+      } else if (lastEnd && weekday === 0) {
+        // Sunday (+1 min 30 sec)
+        if (structureType === 'old') {
+          const [eh, em] = lastEnd.split(':').map(Number);
+          const total = eh * 60 + em + 1.5;
+          endingEntry = { start: lastEnd, end: `${String(Math.floor(total / 60) % 24).padStart(2, '0')}:${String(Math.round(total % 60)).padStart(2, '0')}`, title: sportsTvTranslations.closingSundayTitle, category: sportsTvTranslations.closingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-ending2.png` };
+        } else if (structureType === 'lean') {
+          endingEntry = {
+            program_id: `stv-${dateSlug}-closing`,
+            start_time: lastEnd,
+            end_time: addMinutesPyongyangISO(lastEnd, 1.5),
+            title_ko: sportsTvTranslations.closingSundayTitle.ko,
+            title_en: sportsTvTranslations.closingSundayTitle.en,
+            title_zh: sportsTvTranslations.closingSundayTitle.en,
+            title_ja: sportsTvTranslations.closingSundayTitle.en,
+            title_ru: sportsTvTranslations.closingSundayTitle.en,
+            title_my: sportsTvTranslations.closingSundayTitle.en,
+            program_type_ko: sportsTvTranslations.closingCategory.ko,
+            program_type_en: sportsTvTranslations.closingCategory.en,
+            genre: 'sign_off',
+            description_ko: '방송종료.',
+            description_en: 'Closing.',
+            is_live: false,
+            is_rerun: false,
+            original_broadcast_date: '',
+            off_air: true,
+            kim_jong_un_featured: false,
+            foreign_origin: false,
+            origin_country: '',
+            'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-ending2.png`
+          };
+        } else {
+          endingEntry = { id: 'auto_stv_closing', [structureType === 'camelISO' ? 'startTime' : 'start']: lastEnd, [endField]: addMinutesPyongyangISO(lastEnd, 1.5), title: sportsTvTranslations.closingSundayTitle, category: sportsTvTranslations.closingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-ending2.png` };
+        }
+      }
+
+      // ----- Startup blocks: test pattern 17:25-18:00, opening 18:00-18:06 -----
+      if (structureType === 'old') {
+        programsArray.unshift(
+          { start: '17:25', end: '18:00', title: sportsTvTranslations.testCardTitle, category: sportsTvTranslations.testCardCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-testcard.png` },
+          { start: '18:00', end: '18:06', title: sportsTvTranslations.openingTitle, category: sportsTvTranslations.openingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-opening.png` }
+        );
+        if (endingEntry) programsArray.push(endingEntry);
+      } else if (structureType === 'lean') {
+        programsArray.unshift(
+          {
+            program_id: `stv-${dateSlug}-testcard`,
+            start_time: fmtISO(currDay, '17:25'),
+            end_time: fmtISO(currDay, '18:00'),
+            title_ko: sportsTvTranslations.testCardTitle.ko,
+            title_en: sportsTvTranslations.testCardTitle.en,
+            title_zh: sportsTvTranslations.testCardTitle.en,
+            title_ja: sportsTvTranslations.testCardTitle.en,
+            title_ru: sportsTvTranslations.testCardTitle.en,
+            title_my: sportsTvTranslations.testCardTitle.en,
+            program_type_ko: sportsTvTranslations.testCardCategory.ko,
+            program_type_en: sportsTvTranslations.testCardCategory.en,
+            genre: 'test_pattern',
+            description_ko: '시험화면.',
+            description_en: 'Test pattern.',
+            is_live: false,
+            is_rerun: false,
+            original_broadcast_date: '',
+            off_air: true,
+            kim_jong_un_featured: false,
+            foreign_origin: false,
+            origin_country: '',
+            'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-testcard.png`
+          },
+          {
+            program_id: `stv-${dateSlug}-opening`,
+            start_time: fmtISO(currDay, '18:00'),
+            end_time: fmtISO(currDay, '18:06'),
+            title_ko: sportsTvTranslations.openingTitle.ko,
+            title_en: sportsTvTranslations.openingTitle.en,
+            title_zh: sportsTvTranslations.openingTitle.en,
+            title_ja: sportsTvTranslations.openingTitle.en,
+            title_ru: sportsTvTranslations.openingTitle.en,
+            title_my: sportsTvTranslations.openingTitle.en,
+            program_type_ko: sportsTvTranslations.openingCategory.ko,
+            program_type_en: sportsTvTranslations.openingCategory.en,
+            genre: 'sign_on',
+            description_ko: '방송개시.',
+            description_en: 'Opening broadcast.',
+            is_live: false,
+            is_rerun: false,
+            original_broadcast_date: '',
+            off_air: false,
+            kim_jong_un_featured: false,
+            foreign_origin: false,
+            origin_country: '',
+            'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-opening.png`
+          }
+        );
+        if (endingEntry) programsArray.push(endingEntry);
+      } else if (structureType === 'camelISO') {
+        programsArray.unshift(
+          { id: 'auto_stv_testcard', startTime: fmtISO(currDay, '17:25'), endTime: fmtISO(currDay, '18:00'), title: sportsTvTranslations.testCardTitle, category: sportsTvTranslations.testCardCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-testcard.png` },
+          { id: 'auto_stv_opening', startTime: fmtISO(currDay, '18:00'), endTime: fmtISO(currDay, '18:06'), title: sportsTvTranslations.openingTitle, category: sportsTvTranslations.openingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-opening.png` }
+        );
+        if (endingEntry) programsArray.push(endingEntry);
+      } else {
+        // epgWrapper
+        programsArray.unshift(
+          { id: 'auto_stv_testcard', start: fmtISO(currDay, '17:25'), end: fmtISO(currDay, '18:00'), title: sportsTvTranslations.testCardTitle, category: sportsTvTranslations.testCardCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-testcard.png` },
+          { id: 'auto_stv_opening', start: fmtISO(currDay, '18:00'), end: fmtISO(currDay, '18:06'), title: sportsTvTranslations.openingTitle, category: sportsTvTranslations.openingCategory, 'preview-image': `${SPORTS_OE_PREVIEW_BASE}/prog-opening.png` }
+        );
+        if (endingEntry) programsArray.push(endingEntry);
       }
     }
 
