@@ -1,0 +1,257 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-28",
+  "programs": [
+    {
+      "id": "ryongnamsan-0928-1",
+      "startTime": "2026-09-28T18:15:00+09:00",
+      "endTime": "2026-09-28T18:17:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Structure of a Flower",
+        "ko": "꽃의 구조"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-2",
+      "startTime": "2026-09-28T18:17:00+09:00",
+      "endTime": "2026-09-28T18:45:00+09:00",
+      "category": {
+        "en": "TV Stage",
+        "ko": "TV무대"
+      },
+      "title": {
+        "en": "The Secret to Intelligence Development - Primary School -",
+        "ko": "지능계발의 묘리 -소학교-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-3",
+      "startTime": "2026-09-28T18:45:00+09:00",
+      "endTime": "2026-09-28T18:49:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Contrasting 'Talents' of Substances",
+        "ko": "물질들의 상반되는 《재간》"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-4",
+      "startTime": "2026-09-28T18:49:00+09:00",
+      "endTime": "2026-09-28T18:53:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Remade Projector",
+        "ko": "다시 만든 투영기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-5",
+      "startTime": "2026-09-28T18:53:00+09:00",
+      "endTime": "2026-09-28T19:01:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Learning English through Fairy Tales - The Story of a Wise Farmer",
+        "ko": "동화로 배우는 영어 - 현명한 농부의 이야기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-6",
+      "startTime": "2026-09-28T19:01:00+09:00",
+      "endTime": "2026-09-28T19:18:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Frozen Part 2 (2)",
+        "ko": "얼음왕국 제2부 (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-7",
+      "startTime": "2026-09-28T19:18:00+09:00",
+      "endTime": "2026-09-28T19:25:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Wood Fiberboard Production Process",
+        "ko": "목섬유판생산공정"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-8",
+      "startTime": "2026-09-28T19:25:00+09:00",
+      "endTime": "2026-09-28T19:31:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "Cold Rolled Steel Sheet Production",
+        "ko": "랭간압연강판생산"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-9",
+      "startTime": "2026-09-28T19:31:00+09:00",
+      "endTime": "2026-09-28T19:48:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Tunnel Construction Technology (1)",
+        "ko": "차굴건설기술 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-10",
+      "startTime": "2026-09-28T19:48:00+09:00",
+      "endTime": "2026-09-28T19:52:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Our People's Wisdom Reflected in Metal Type",
+        "ko": "금속활자에 비낀 우리 인민의 슬기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-11",
+      "startTime": "2026-09-28T19:52:00+09:00",
+      "endTime": "2026-09-28T20:00:00+09:00",
+      "category": {
+        "en": "Revolutionary Anecdote",
+        "ko": "혁명일화"
+      },
+      "title": {
+        "en": "Traces of Love Left in the Educators' Homes",
+        "ko": "교육자살림집에 남기신 사랑의 자욱"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-12",
+      "startTime": "2026-09-28T20:00:00+09:00",
+      "endTime": "2026-09-28T20:34:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-13",
+      "startTime": "2026-09-28T20:34:00+09:00",
+      "endTime": "2026-09-28T21:00:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Noble Belief, Highly Valued Title",
+        "ko": "숭고한 믿음 값높은 칭호"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-14",
+      "startTime": "2026-09-28T21:00:00+09:00",
+      "endTime": "2026-09-28T21:09:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Respected Old Educators - Jang Chol Gu Pyongyang University of Commerce -",
+        "ko": "존경받는 로교유자들 - 장철구평양상업대학 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-15",
+      "startTime": "2026-09-28T21:09:00+09:00",
+      "endTime": "2026-09-28T21:18:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "The Effect of Iron on the Human Body",
+        "ko": "철이 인체에 미치는 영향"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-16",
+      "startTime": "2026-09-28T21:18:00+09:00",
+      "endTime": "2026-09-28T21:26:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Research on the Characteristics of Butterflies (3)",
+        "ko": "나비의 특성에 대한 연구 (3)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-17",
+      "startTime": "2026-09-28T21:26:00+09:00",
+      "endTime": "2026-09-28T21:30:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English Conversation)",
+        "ko": "외국어학습시간 영어회화"
+      },
+      "title": {
+        "en": "English Vocabulary Study - Age -",
+        "ko": "영어어휘학습 - 나이 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-18",
+      "startTime": "2026-09-28T21:30:00+09:00",
+      "endTime": "2026-09-28T21:51:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "How to Build a Satellite (3)",
+        "ko": "인공지구위성제작방법 (3)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0928-19",
+      "startTime": "2026-09-28T21:51:00+09:00",
+      "endTime": "2026-09-28T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Chinese)",
+        "ko": "외국어학습시간 중국어학습편집물"
+      },
+      "title": {
+        "en": "A Bite of China Part 2 (2)",
+        "ko": "혀끝으로 본 중국 제2편 (2)"
+      }
+    }
+  ]
+}
