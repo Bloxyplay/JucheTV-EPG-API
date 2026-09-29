@@ -1,0 +1,296 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-29",
+  "programs": [
+    {
+      "id": "ryongnamsan-0929-1",
+      "startTime": "2026-09-29T18:14:00+09:00",
+      "endTime": "2026-09-29T18:16:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Dolphins with Outstanding Intelligence",
+        "ko": "뛰어난 지능을 가진 곱등어"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-2",
+      "startTime": "2026-09-29T18:16:00+09:00",
+      "endTime": "2026-09-29T18:21:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Remade Paper Bridge",
+        "ko": "다시 만든 종이다리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-3",
+      "startTime": "2026-09-29T18:21:00+09:00",
+      "endTime": "2026-09-29T18:27:00+09:00",
+      "category": {
+        "en": "Drawing and Craft Class",
+        "ko": "도화공작수업"
+      },
+      "title": {
+        "en": "Drawing Vegetables",
+        "ko": "남새그리기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-4",
+      "startTime": "2026-09-29T18:27:00+09:00",
+      "endTime": "2026-09-29T18:31:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Interesting Reaction of Two Substances",
+        "ko": "두물질의 흥미있는 반응"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-5",
+      "startTime": "2026-09-29T18:31:00+09:00",
+      "endTime": "2026-09-29T18:38:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Mathematical Principles Seen Through Paper Models",
+        "ko": "종이모형을 통해 본 수학적원리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-6",
+      "startTime": "2026-09-29T18:38:00+09:00",
+      "endTime": "2026-09-29T18:50:00+09:00",
+      "category": {
+        "en": "Korean Language Class",
+        "ko": "국어수업"
+      },
+      "title": {
+        "en": "Figurative Expression Through New Feelings",
+        "ko": "새로운 느낌을 통한 형상적표현"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-7",
+      "startTime": "2026-09-29T18:50:00+09:00",
+      "endTime": "2026-09-29T18:55:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian Conversation)",
+        "ko": "외국어학습시간 로어회화"
+      },
+      "title": {
+        "en": "School Conversation - During Break Time -",
+        "ko": "교내회화 -휴식시간에-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-8",
+      "startTime": "2026-09-29T18:55:00+09:00",
+      "endTime": "2026-09-29T19:09:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Masha and the Bear - Jam Making Day -",
+        "ko": "마샤와 곰 -단물집 만드는 날-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-9",
+      "startTime": "2026-09-29T19:09:00+09:00",
+      "endTime": "2026-09-29T19:16:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Perovskite Solar Cell",
+        "ko": "페로브스카이트태양전지"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-10",
+      "startTime": "2026-09-29T19:16:00+09:00",
+      "endTime": "2026-09-29T19:24:00+09:00",
+      "category": {
+        "en": "Science and Technology",
+        "ko": "과학기술"
+      },
+      "title": {
+        "en": "- Laser Cleaning Technology - Agricultural Unmanned Helicopter",
+        "ko": "-레이자세척기술 -농업용무인직승기"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-11",
+      "startTime": "2026-09-29T19:24:00+09:00",
+      "endTime": "2026-09-29T19:30:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "- Modernized Dairy Farm - Quail Factory",
+        "ko": "-현대화된 젖소목장 -메추리공장"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-12",
+      "startTime": "2026-09-29T19:30:00+09:00",
+      "endTime": "2026-09-29T19:44:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Special Feature",
+        "ko": "특집"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-13",
+      "startTime": "2026-09-29T19:44:00+09:00",
+      "endTime": "2026-09-29T19:50:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Practical Education Method CDIO",
+        "ko": "실천교육방식 CDIO"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-14",
+      "startTime": "2026-09-29T19:50:00+09:00",
+      "endTime": "2026-09-29T20:00:00+09:00",
+      "category": {
+        "en": "Memoir",
+        "ko": "수기"
+      },
+      "title": {
+        "en": "In the Bosom of a Great Teacher - Kim Il Sung University Department Head, Doctor, Associate Professor Kim Ji Won -",
+        "ko": "위대한 스승의 품속에서 -김일성종합대학 조장 박사 부교수 김지원-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-15",
+      "startTime": "2026-09-29T20:00:00+09:00",
+      "endTime": "2026-09-29T20:37:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-16",
+      "startTime": "2026-09-29T20:37:00+09:00",
+      "endTime": "2026-09-29T20:57:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Immortal Achievements that Unfolded a New History of Marine Aquaculture",
+        "ko": "바다양식업의 새 력사를 펼쳐주신 불멸의 업적"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-17",
+      "startTime": "2026-09-29T20:57:00+09:00",
+      "endTime": "2026-09-29T21:09:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "The 7th University Student Memory Contest",
+        "ko": "제7차 대학생기억경연"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-18",
+      "startTime": "2026-09-29T21:09:00+09:00",
+      "endTime": "2026-09-29T21:16:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Application of Nanotechnology in the Medical Field",
+        "ko": "의학부문에서 나노기술의 응용"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-19",
+      "startTime": "2026-09-29T21:16:00+09:00",
+      "endTime": "2026-09-29T21:22:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "Greenhouse Coating Agent",
+        "ko": "온실용도포제"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-20",
+      "startTime": "2026-09-29T21:22:00+09:00",
+      "endTime": "2026-09-29T21:27:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Research on the Characteristics of Butterflies (4)",
+        "ko": "나비의 특성에 대한 연구 (4)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-21",
+      "startTime": "2026-09-29T21:27:00+09:00",
+      "endTime": "2026-09-29T21:54:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Star (3)",
+        "ko": "별 (3)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0929-22",
+      "startTime": "2026-09-29T21:54:00+09:00",
+      "endTime": "2026-09-29T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "The Danger of Sepsis (1)",
+        "ko": "패혈증의 위험성 (1)"
+      }
+    }
+  ]
+}
