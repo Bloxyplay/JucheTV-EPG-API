@@ -1,0 +1,270 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-10-01",
+  "programs": [
+    {
+      "id": "ryongnamsan-1001-1",
+      "startTime": "2026-10-01T18:26:00+09:00",
+      "endTime": "2026-10-01T18:30:00+09:00",
+      "category": {
+        "en": "Korean Language Class",
+        "ko": "국어수업"
+      },
+      "title": {
+        "en": "About Breaking Pronunciation",
+        "ko": "끊어내기발음에 대하여"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-2",
+      "startTime": "2026-10-01T18:30:00+09:00",
+      "endTime": "2026-10-01T18:35:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Several Issues in Improving Writing Skills",
+        "ko": "글쓰기능력을 높이는데서 나서는 몇가지 문제"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-3",
+      "startTime": "2026-10-01T18:35:00+09:00",
+      "endTime": "2026-10-01T18:41:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Can a DC Motor be Used as a Generator?",
+        "ko": "직류전동기를 발전기로 쓸수 있는가"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-4",
+      "startTime": "2026-10-01T18:41:00+09:00",
+      "endTime": "2026-10-01T18:54:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Putting Effort into Experiment Classes - Changdok School -",
+        "ko": "실험수업에 힘을 넣어 -창덕학교-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-5",
+      "startTime": "2026-10-01T18:54:00+09:00",
+      "endTime": "2026-10-01T19:09:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Masha and the Bear - Holiday on the Ice - Masha + Bear -",
+        "ko": "마샤와 곰 - 얼음판우의 명절 - 마샤 + 곰 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-6",
+      "startTime": "2026-10-01T19:09:00+09:00",
+      "endTime": "2026-10-01T19:15:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Portable Laboratory Practice Equipment",
+        "ko": "휴대용실험실습기자재들"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-7",
+      "startTime": "2026-10-01T19:15:00+09:00",
+      "endTime": "2026-10-01T19:22:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Arch Structure - Laser Sprayer",
+        "ko": "-아치형 구조 -레이자분사기"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-8",
+      "startTime": "2026-10-01T19:22:00+09:00",
+      "endTime": "2026-10-01T19:28:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "Greenhouse Cucumber Cultivation and Harvest",
+        "ko": "온실오이재배와 수확"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-9",
+      "startTime": "2026-10-01T19:28:00+09:00",
+      "endTime": "2026-10-01T19:43:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "Amundsen, Who Devoted His Life to Adventurous Exploration (1)",
+        "ko": "모험적인 탐험의 길에 한생을 바친 아문쎈 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-10",
+      "startTime": "2026-10-01T19:43:00+09:00",
+      "endTime": "2026-10-01T19:49:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Mountain Tourism",
+        "ko": "산악관광"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-11",
+      "startTime": "2026-10-01T19:49:00+09:00",
+      "endTime": "2026-10-01T20:00:00+09:00",
+      "category": {
+        "en": "Continuous Observation Record",
+        "ko": "련속참관기"
+      },
+      "title": {
+        "en": "The Immortal Achievements, Ryongnamsan Will Pass Down Forever - Visiting Kim Il Sung University Revolution Museum - The People's First University",
+        "ko": "불멸의 그 업적 룡남산은 길이 전하리 -김일성종합대학혁명사적관을 찾아서- 인민의 첫 대학"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-12",
+      "startTime": "2026-10-01T20:00:00+09:00",
+      "endTime": "2026-10-01T20:32:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-13",
+      "startTime": "2026-10-01T20:32:00+09:00",
+      "endTime": "2026-10-01T20:40:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Respected Comrade Kim Jong Un's Immortal Classic Masterpiece \"On the Basic Mission of Kim Il Sung University in the New Era of the Juche Revolution\"",
+        "ko": "경애하는 김정은동지의 불후의 고전적로작 《주체혁명의 새시대 김일성종합대학의 기본임무에 대하여》"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-14",
+      "startTime": "2026-10-01T20:40:00+09:00",
+      "endTime": "2026-10-01T20:52:00+09:00",
+      "category": {
+        "en": "Continuous Observation Record",
+        "ko": "련속참관기"
+      },
+      "title": {
+        "en": "The Immortal Achievements, Ryongnamsan Will Pass Down Forever - Visiting Kim Il Sung University Revolution Museum - Educator's Houses Built in Parental Love",
+        "ko": "불멸의 그 업적 룡남산은 길이 전하리 -김일성종합대학혁명사적관을 찾아서- 어버이의 사랑속에 솟아난 교육자살림집"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-15",
+      "startTime": "2026-10-01T20:52:00+09:00",
+      "endTime": "2026-10-01T21:04:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Our Classmates - Class 1, 6th Year, German Language and Literature Department, Faculty of Foreign Languages and Literature, Kim Il Sung University -",
+        "ko": "우리 학급동무들 -김일성종합대학 외국어문학부 도이취어문학과 6학년 1반-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-16",
+      "startTime": "2026-10-01T21:04:00+09:00",
+      "endTime": "2026-10-01T21:11:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "5 Major Links in the Development of the Livestock Industry",
+        "ko": "축산업발전의 5대고리"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-17",
+      "startTime": "2026-10-01T21:11:00+09:00",
+      "endTime": "2026-10-01T21:21:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-18",
+      "startTime": "2026-10-01T21:21:00+09:00",
+      "endTime": "2026-10-01T21:45:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Titanium Carbide Cermet Cutting Tools - Furfural Ethylene Acetal",
+        "ko": "-탄화티탄금속사기절삭공구 -푸르푸롤에틸렌 아세탈"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-19",
+      "startTime": "2026-10-01T21:45:00+09:00",
+      "endTime": "2026-10-01T21:52:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Learning German in English - Introducing -",
+        "ko": "영어로 배우는 도이취어 -소개하기-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1001-20",
+      "startTime": "2026-10-01T21:52:00+09:00",
+      "endTime": "2026-10-01T22:00:00+09:00",
+      "category": {
+        "en": "German Study Program",
+        "ko": "도이취어학습편집물"
+      },
+      "title": {
+        "en": "Young Doctors - Away from the Group (5)",
+        "ko": "젊은 의사들 집단과 떨어져 (5)"
+      }
+    }
+  ]
+}
