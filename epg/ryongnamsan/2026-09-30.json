@@ -1,0 +1,296 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-09-30",
+  "programs": [
+    {
+      "id": "ryongnamsan-0930-1",
+      "startTime": "2026-09-30T18:14:00+09:00",
+      "endTime": "2026-09-30T18:16:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Let’s Find the Axis of Symmetry",
+        "ko": "대칭축을 찾아보자"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-2",
+      "startTime": "2026-09-30T18:16:00+09:00",
+      "endTime": "2026-09-30T18:22:00+09:00",
+      "category": {
+        "en": "Physics Class",
+        "ko": "물리수업"
+      },
+      "title": {
+        "en": "The Principle of Why Objects Float or Sink in Water",
+        "ko": "물체가 물에 뜨고 가라앉는 원리"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-3",
+      "startTime": "2026-09-30T18:22:00+09:00",
+      "endTime": "2026-09-30T18:30:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Viewing the Calendar — Teacher Tae Ok-jung, Ryonhwa Primary School, Central District",
+        "ko": "달력보기 -중구역 련화소학교 교원 태옥정-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-4",
+      "startTime": "2026-09-30T18:30:00+09:00",
+      "endTime": "2026-09-30T18:43:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time",
+        "ko": "외국어학습시간"
+      },
+      "title": {
+        "en": "Learning English Through Fairy Tales: The Frog Prince",
+        "ko": "동화로 배우는 영어: 개구리왕자"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-5",
+      "startTime": "2026-09-30T18:43:00+09:00",
+      "endTime": "2026-09-30T18:48:00+09:00",
+      "category": {
+        "en": "Physics Class",
+        "ko": "물리수업"
+      },
+      "title": {
+        "en": "Properties of Waves",
+        "ko": "파동의 성질"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-6",
+      "startTime": "2026-09-30T18:48:00+09:00",
+      "endTime": "2026-09-30T18:52:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Mean and Median",
+        "ko": "평균값과 중간값"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-7",
+      "startTime": "2026-09-30T18:52:00+09:00",
+      "endTime": "2026-09-30T18:58:00+09:00",
+      "category": {
+        "en": "Physics Class",
+        "ko": "물리수업"
+      },
+      "title": {
+        "en": "Which One Spins Longer? — Teacher Pak Yu-sun, Kaeson Senior Middle School, Moranbong District",
+        "ko": "어느것이 더 오래 회전하는가 -모란봉구역 개선고급중학교 교원 박유순-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-8",
+      "startTime": "2026-09-30T18:58:00+09:00",
+      "endTime": "2026-09-30T19:02:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Learning Chinese Characters Easily — Animals — (2)",
+        "ko": "한자를 쉽게 배우기 -동물- (2)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-9",
+      "startTime": "2026-09-30T19:02:00+09:00",
+      "endTime": "2026-09-30T19:08:00+09:00",
+      "category": {
+        "en": "Children's Broadcast",
+        "ko": "아동방송"
+      },
+      "title": {
+        "en": "Friends of the Forest (3)",
+        "ko": "숲속의 친구들 (3)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-10",
+      "startTime": "2026-09-30T19:08:00+09:00",
+      "endTime": "2026-09-30T19:14:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Quantum Computer",
+        "ko": "량자컴퓨터"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-11",
+      "startTime": "2026-09-30T19:14:00+09:00",
+      "endTime": "2026-09-30T19:21:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Continuous Flow Layered Reactor — An Engine Using Hydrogen Fuel Cells",
+        "ko": "련속흐름층반응기 -수소연료전지를 리용하는 발동기-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-12",
+      "startTime": "2026-09-30T19:21:00+09:00",
+      "endTime": "2026-09-30T19:26:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Aluminum Brazing Welding",
+        "ko": "알루미니움땜용접"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-13",
+      "startTime": "2026-09-30T19:26:00+09:00",
+      "endTime": "2026-09-30T19:36:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "The World of Interesting Insects",
+        "ko": "흥미있는 곤충세계"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-14",
+      "startTime": "2026-09-30T19:36:00+09:00",
+      "endTime": "2026-09-30T19:40:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Intellectual Property — General Concepts of Intellectual Property",
+        "ko": "지적소유권 -지적소유권의 일반적개념-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-15",
+      "startTime": "2026-09-30T19:40:00+09:00",
+      "endTime": "2026-09-30T19:49:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Our People’s Housing Customs Seen Through Proverbs — Ondol and Chimneys",
+        "ko": "속담을 통하여 보는 우리 인민의 살림집풍습 -온돌과 굴뚝-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-16",
+      "startTime": "2026-09-30T19:49:00+09:00",
+      "endTime": "2026-09-30T20:39:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Embedding the True Meaning of Localization — Song Jong-gu, PhD, Professor, Kim Il-sung University",
+        "ko": "국산화의 참뜻을 새겨주며 -김일성종합대학 교수 박사 송종구-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-17",
+      "startTime": "2026-09-30T20:39:00+09:00",
+      "endTime": "2026-09-30T20:51:00+09:00",
+      "category": {
+        "en": "Special Feature",
+        "ko": "특집"
+      },
+      "title": {
+        "en": "The Noble World of People’s Love Embedded in a Popular Song",
+        "ko": "명곡에 깃든 인민사랑의 숭고한 화폭"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-18",
+      "startTime": "2026-09-30T20:51:00+09:00",
+      "endTime": "2026-09-30T20:57:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Combining Major Lectures with Foreign Language Education — Pyongyang University of Education",
+        "ko": "전공강의와 외국어교육을 결합하여 -평양교원대학-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-19",
+      "startTime": "2026-09-30T20:57:00+09:00",
+      "endTime": "2026-09-30T21:15:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Osteoporosis and Treatment Methods",
+        "ko": "골다공증과 치료방법"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-20",
+      "startTime": "2026-09-30T21:15:00+09:00",
+      "endTime": "2026-09-30T21:21:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Rotational Molding — Screw Connection",
+        "ko": "회전성형 -나사련결-"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-21",
+      "startTime": "2026-09-30T21:21:00+09:00",
+      "endTime": "2026-09-30T21:44:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "How to Make an Artificial Earth Satellite (4)",
+        "ko": "인공지구위성을 어떻게 만드는가 (4)"
+      }
+    },
+    {
+      "id": "ryongnamsan-0930-22",
+      "startTime": "2026-09-30T21:44:00+09:00",
+      "endTime": "2026-09-30T22:00:00+09:00",
+      "category": {
+        "en": "TV Drama",
+        "ko": "텔레비죤연속극"
+      },
+      "title": {
+        "en": "Farewell, Part 11 (3)",
+        "ko": "리별 제11부 (3)"
+      }
+    }
+  ]
+}
