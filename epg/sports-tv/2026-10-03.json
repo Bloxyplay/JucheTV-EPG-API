@@ -1,0 +1,157 @@
+{
+  "epg": {
+    "channel": {
+      "id": "SPORTS TV",
+      "name": {
+        "ko": "체육 텔레비죤",
+        "en": "Sports Television"
+      }
+    },
+    "date": "2026-10-03",
+    "programs": [
+      {
+        "id": "prog_01",
+        "start": "2026-10-03T18:09:00+09:00",
+        "end": "2026-10-03T18:28:00+09:00",
+        "category": {
+          "ko": "특집",
+          "en": "Special Feature"
+        },
+        "title": {
+          "ko": "체육강국건설의 위대한 전환기를 펼쳐주시여 (3)",
+          "en": "Unfolding the Great Turning Point of Building a Sports Powerhouse (3)"
+        }
+      },
+      {
+        "id": "prog_02",
+        "start": "2026-10-03T18:28:00+09:00",
+        "end": "2026-10-03T18:37:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "올림픽경기대회종목들 - 마장마술 -",
+          "en": "Olympic Games Events - Dressage -"
+        }
+      },
+      {
+        "id": "prog_03",
+        "start": "2026-10-03T18:37:00+09:00",
+        "end": "2026-10-03T18:44:00+09:00",
+        "category": {
+          "ko": "문답",
+          "en": "Q&A"
+        },
+        "title": {
+          "ko": "청소년들의 키를 크게 하는데서 나서는 몇가지 문제 (2)",
+          "en": "Some Issues in Making Youth Taller (2)"
+        }
+      },
+      {
+        "id": "prog_04",
+        "start": "2026-10-03T18:44:00+09:00",
+        "end": "2026-10-03T18:46:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "수영을 할 때의 근육경련",
+          "en": "Muscle Cramps While Swimming"
+        }
+      },
+      {
+        "id": "prog_05",
+        "start": "2026-10-03T18:46:00+09:00",
+        "end": "2026-10-03T18:57:00+09:00",
+        "category": {
+          "ko": "문답",
+          "en": "Q&A"
+        },
+        "title": {
+          "ko": "체육을 대중화, 생활화해나가자면",
+          "en": "To Popularize Sports and Make it a Part of Daily Life"
+        }
+      },
+      {
+        "id": "prog_06",
+        "start": "2026-10-03T18:57:00+09:00",
+        "end": "2026-10-03T20:00:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "제20차 대황소상 전국민족씨름경기 - 결승 단계 - (조별련맹전)",
+          "en": "20th Grand Bull Prize National Ethnic Ssirum Competition - Finals Stage - (Group League)"
+        }
+      },
+      {
+        "id": "prog_07",
+        "start": "2026-10-03T20:00:00+09:00",
+        "end": "2026-10-03T20:26:00+09:00",
+        "category": {
+          "ko": "보도",
+          "en": "News"
+        },
+        "title": {
+          "ko": "보도",
+          "en": "News"
+        }
+      },
+      {
+        "id": "prog_08",
+        "start": "2026-10-03T20:26:00+09:00",
+        "end": "2026-10-03T20:31:00+09:00",
+        "category": {
+          "ko": "혁명일화",
+          "en": "Revolutionary Anecdote"
+        },
+        "title": {
+          "ko": "달라진 침실",
+          "en": "The Changed Bedroom"
+        }
+      },
+      {
+        "id": "prog_09",
+        "start": "2026-10-03T20:31:00+09:00",
+        "end": "2026-10-03T20:58:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "2026년 국제탁구련맹 세계컵남자단식 및 녀자단식경기대회 - 녀자단식 준결승 - 중 국 : 뽀르또리꼬",
+          "en": "2026 ITTF Men's and Women's World Cup - Women's Singles Semifinals - China vs. Puerto Rico"
+        }
+      },
+      {
+        "id": "prog_10",
+        "start": "2026-10-03T20:58:00+09:00",
+        "end": "2026-10-03T21:00:00+09:00",
+        "category": {
+          "ko": "상식",
+          "en": "Common Sense"
+        },
+        "title": {
+          "ko": "배구경기회전과 승부",
+          "en": "Volleyball Match Rotation and Victory/Defeat"
+        }
+      },
+      {
+        "id": "prog_11",
+        "start": "2026-10-03T21:00:00+09:00",
+        "end": "2026-10-03T22:30:00+09:00",
+        "category": {
+          "ko": "록화실황",
+          "en": "Recorded Broadcast"
+        },
+        "title": {
+          "ko": "2026년 국제배구련맹 국가녀자배구련맹전 - 예선 단계 - 쓰르비야 : 도미니까",
+          "en": "2026 FIVB Women's Volleyball Nations League - Preliminary Phase - Serbia vs. Dominican Republic"
+        }
+      }
+    ]
+  }
+}
