@@ -1,0 +1,270 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-10-06",
+  "programs": [
+    {
+      "id": "ryongnamsan-1006-1",
+      "startTime": "2026-10-06T18:14:00+09:00",
+      "endTime": "2026-10-06T18:17:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Various Expressions Related to Mountains",
+        "ko": "산과 관련되는 여러가지 표현"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-2",
+      "startTime": "2026-10-06T18:17:00+09:00",
+      "endTime": "2026-10-06T18:24:00+09:00",
+      "category": {
+        "en": "Math Class",
+        "ko": "수학수업"
+      },
+      "title": {
+        "en": "Looking at the Calendar - Central District Ryonhwa Primary School Teacher Thae Ok Gyong -",
+        "ko": "달력보기 -중구역 련화소학교 교원 태옥경-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-3",
+      "startTime": "2026-10-06T18:24:00+09:00",
+      "endTime": "2026-10-06T18:31:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Mysterious Movement of Quail Eggs",
+        "ko": "메추리알의 신기한 운동"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-4",
+      "startTime": "2026-10-06T18:31:00+09:00",
+      "endTime": "2026-10-06T18:56:00+09:00",
+      "category": {
+        "en": "TV Stage",
+        "ko": "TV무대"
+      },
+      "title": {
+        "en": "The Secret to Intelligence Development - Middle School -",
+        "ko": "지능계발의 묘리 - 중학교 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-5",
+      "startTime": "2026-10-06T18:56:00+09:00",
+      "endTime": "2026-10-06T19:10:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Masha and the Bear - Distant Relative - First Day of School -",
+        "ko": "마샤와 곰 - 먼 친척 - 첫 등교하는 날 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-6",
+      "startTime": "2026-10-06T19:10:00+09:00",
+      "endTime": "2026-10-06T19:24:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "From Newtonian Optics to String Theory (1)",
+        "ko": "뉴톤광학으로부터 현리론까지 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-7",
+      "startTime": "2026-10-06T19:24:00+09:00",
+      "endTime": "2026-10-06T19:31:00+09:00",
+      "category": {
+        "en": "Agricultural Technology",
+        "ko": "농업기술"
+      },
+      "title": {
+        "en": "- Rice Drying Process - Fodder Grass Harvester for Dairy Cows",
+        "ko": "-벼건조공정 -젖소용먹이풀수확기"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-8",
+      "startTime": "2026-10-06T19:31:00+09:00",
+      "endTime": "2026-10-06T19:38:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "Effective Use of Electricity (1)",
+        "ko": "전력의 효과적인 리용 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-9",
+      "startTime": "2026-10-06T19:38:00+09:00",
+      "endTime": "2026-10-06T19:43:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Paektusan Geopark",
+        "ko": "백두산지질공원"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-10",
+      "startTime": "2026-10-06T19:43:00+09:00",
+      "endTime": "2026-10-06T20:00:00+09:00",
+      "category": {
+        "en": "Continuous Introduction Documentary",
+        "ko": "련속소개편집물"
+      },
+      "title": {
+        "en": "The Image of the Motherland Captured on Canvas - Oil Painting \"Evening at Rakwon Port\" -",
+        "ko": "화폭에 담는 조국의 모습 - 유화 《락원포의 저녁》 -"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-11",
+      "startTime": "2026-10-06T20:00:00+09:00",
+      "endTime": "2026-10-06T20:30:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-12",
+      "startTime": "2026-10-06T20:30:00+09:00",
+      "endTime": "2026-10-06T20:40:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Establishing a New Tripartite Agreement System",
+        "ko": "새로운 3자합의체계를 세워주시여"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-13",
+      "startTime": "2026-10-06T20:40:00+09:00",
+      "endTime": "2026-10-06T20:51:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "The Sound of the Hammer of Self-Reliance Still Ringing Today",
+        "ko": "오늘도 울리는 자력갱생의 마치소리"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-14",
+      "startTime": "2026-10-06T20:51:00+09:00",
+      "endTime": "2026-10-06T21:00:00+09:00",
+      "category": {
+        "en": "Q&A",
+        "ko": "문답"
+      },
+      "title": {
+        "en": "Characteristics and Effectiveness of Koryo Medicine",
+        "ko": "고려약의 특징과 효과성"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-15",
+      "startTime": "2026-10-06T21:00:00+09:00",
+      "endTime": "2026-10-06T21:23:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "Treatment of Incurable Diseases Using Neurotransmitters",
+        "ko": "정보전달물질을 리용한 난치병치료"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-16",
+      "startTime": "2026-10-06T21:23:00+09:00",
+      "endTime": "2026-10-06T21:30:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Automated Shoe Processing System - Braking Principle of Trains",
+        "ko": "-자동화된 신발가공체계 -렬차의 제동원리"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-17",
+      "startTime": "2026-10-06T21:30:00+09:00",
+      "endTime": "2026-10-06T21:35:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Intelligent Production System Maintenance Technology",
+        "ko": "지능생산체계보양기술"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-18",
+      "startTime": "2026-10-06T21:35:00+09:00",
+      "endTime": "2026-10-06T21:46:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "\"The Executioner\" Alex Part 5 (5)",
+        "ko": "《교형리》 알렉스 제5부 (5)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-19",
+      "startTime": "2026-10-06T21:46:00+09:00",
+      "endTime": "2026-10-06T21:50:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Learning German in English - Interrogative Sentences -",
+        "ko": "영어로 배우는 도이취어 -물음문-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1006-20",
+      "startTime": "2026-10-06T21:50:00+09:00",
+      "endTime": "2026-10-06T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (German)",
+        "ko": "외국어학습시간 도이취어학습편집물"
+      },
+      "title": {
+        "en": "Young Doctors Courage (1)",
+        "ko": "젊은 의사들 용기 (1)"
+      }
+    }
+  ]
+}
