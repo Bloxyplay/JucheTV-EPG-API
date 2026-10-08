@@ -1,0 +1,296 @@
+{
+  "channel": {
+    "id": "ryongnamsan",
+    "name": "Ryongnamsan Television",
+    "nameKo": "룡남산텔레비죤"
+  },
+  "date": "2026-10-09",
+  "programs": [
+    {
+      "id": "ryongnamsan-1009-1",
+      "startTime": "2026-10-09T18:14:00+09:00",
+      "endTime": "2026-10-09T18:18:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Why Paint the Bottom of Trees White?",
+        "ko": "나무밑둥에 왜 회칠을 할가요"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-2",
+      "startTime": "2026-10-09T18:18:00+09:00",
+      "endTime": "2026-10-09T18:24:00+09:00",
+      "category": {
+        "en": "Drawing and Craft Class",
+        "ko": "도화공작수업"
+      },
+      "title": {
+        "en": "Drawing Vegetables",
+        "ko": "남새 그리기"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-3",
+      "startTime": "2026-10-09T18:24:00+09:00",
+      "endTime": "2026-10-09T18:29:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Lift and Drag",
+        "ko": "양력과 끈기힘"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-4",
+      "startTime": "2026-10-09T18:29:00+09:00",
+      "endTime": "2026-10-09T18:33:00+09:00",
+      "category": {
+        "en": "Extracurricular Study",
+        "ko": "과외학습"
+      },
+      "title": {
+        "en": "Mathematics and Cryptography",
+        "ko": "수학과 암호"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-5",
+      "startTime": "2026-10-09T18:33:00+09:00",
+      "endTime": "2026-10-09T18:44:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Learning English through Fairy Tales - Story of the Primeval Forest",
+        "ko": "동화로 배우는 영어 원시림이야기"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-6",
+      "startTime": "2026-10-09T18:44:00+09:00",
+      "endTime": "2026-10-09T19:03:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Frozen Part 2 (5)",
+        "ko": "얼음왕국 제2부 (5)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-7",
+      "startTime": "2026-10-09T19:03:00+09:00",
+      "endTime": "2026-10-09T19:16:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Biodiversity and Water",
+        "ko": "생물다양성과 물"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-8",
+      "startTime": "2026-10-09T19:16:00+09:00",
+      "endTime": "2026-10-09T19:24:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "- Insect Factory - Method of Cattle Rearing Using Stone Powder",
+        "ko": "-곤충공장 -돌가루를 리용한 소사양방법"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-9",
+      "startTime": "2026-10-09T19:24:00+09:00",
+      "endTime": "2026-10-09T19:35:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "Bladeless Turbine Using Fluid Viscosity Effect",
+        "ko": "류체점성효과를 리용한 날개없는 타빈"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-10",
+      "startTime": "2026-10-09T19:35:00+09:00",
+      "endTime": "2026-10-09T19:46:00+09:00",
+      "category": {
+        "en": "Requested Reply",
+        "ko": "요청회답"
+      },
+      "title": {
+        "en": "- Educational Project Expenses - Origin of the Violin",
+        "ko": "-교육사업비 -바이올린의 유래"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-11",
+      "startTime": "2026-10-09T19:46:00+09:00",
+      "endTime": "2026-10-09T19:51:00+09:00",
+      "category": {
+        "en": "Common Sense",
+        "ko": "상식"
+      },
+      "title": {
+        "en": "Standardization and Our Life - Role of Standardization -",
+        "ko": "규격화와 우리 생활 -규격화의 역할-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-12",
+      "startTime": "2026-10-09T19:51:00+09:00",
+      "endTime": "2026-10-09T20:00:00+09:00",
+      "category": {
+        "en": "Revolutionary Anecdote",
+        "ko": "혁명일화"
+      },
+      "title": {
+        "en": "Marks of Love Left in the Educators' Homes",
+        "ko": "교육자살림집에 남기신 사랑의 자욱"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-13",
+      "startTime": "2026-10-09T20:00:00+09:00",
+      "endTime": "2026-10-09T20:34:00+09:00",
+      "category": {
+        "en": "News",
+        "ko": "보도"
+      },
+      "title": {
+        "en": "News",
+        "ko": "보도"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-14",
+      "startTime": "2026-10-09T20:34:00+09:00",
+      "endTime": "2026-10-09T20:49:00+09:00",
+      "category": {
+        "en": "Social Science Lecture",
+        "ko": "사회과학강의"
+      },
+      "title": {
+        "en": "Immortal Achievements that Opened the Golden Age of Strengthening the Whole Party",
+        "ko": "전당강화의 최전성기를 펼쳐주신 불멸의 업적"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-15",
+      "startTime": "2026-10-09T20:49:00+09:00",
+      "endTime": "2026-10-09T20:55:00+09:00",
+      "category": {
+        "en": "Documentary",
+        "ko": "소개편집물"
+      },
+      "title": {
+        "en": "Laying the Solid Foundation for the Founding of Our Party",
+        "ko": "우리 당창건의 튼튼한 기초를 마련하시여"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-16",
+      "startTime": "2026-10-09T20:55:00+09:00",
+      "endTime": "2026-10-09T21:10:00+09:00",
+      "category": {
+        "en": "Observation Record",
+        "ko": "참관기"
+      },
+      "title": {
+        "en": "Intellectual Creations Brought About by Patriotic Hearts",
+        "ko": "애국의 마음이 안아온 지적창조물들"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-17",
+      "startTime": "2026-10-09T21:10:00+09:00",
+      "endTime": "2026-10-09T21:21:00+09:00",
+      "category": {
+        "en": "Medical Science Common Sense",
+        "ko": "의학과학상식"
+      },
+      "title": {
+        "en": "- Hybrid Operating Room - Some Fruits Good for Health",
+        "ko": "-하이브리드수술장 -건강에 좋은 과일 몇가지"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-18",
+      "startTime": "2026-10-09T21:21:00+09:00",
+      "endTime": "2026-10-09T21:26:00+09:00",
+      "category": {
+        "en": "Industrial Technology",
+        "ko": "공업기술"
+      },
+      "title": {
+        "en": "High-Voltage Fuse Manufacturing",
+        "ko": "고압휴즈제작"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-19",
+      "startTime": "2026-10-09T21:26:00+09:00",
+      "endTime": "2026-10-09T21:31:00+09:00",
+      "category": {
+        "en": "Science and Technology Common Sense",
+        "ko": "과학기술상식"
+      },
+      "title": {
+        "en": "Extensive Application of Magnetic Force - Dredger -",
+        "ko": "자력의 광범한 응용 -준설선-"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-20",
+      "startTime": "2026-10-09T21:31:00+09:00",
+      "endTime": "2026-10-09T21:36:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English Lecture)",
+        "ko": "외국어학습시간 영어강의"
+      },
+      "title": {
+        "en": "Easily Learned English Grammar (3)",
+        "ko": "쉽게 배우는 영어문법 (3)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-21",
+      "startTime": "2026-10-09T21:36:00+09:00",
+      "endTime": "2026-10-09T21:51:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (English)",
+        "ko": "외국어학습시간 영어학습편집물"
+      },
+      "title": {
+        "en": "Turbulent History (1)",
+        "ko": "격동의 력사 (1)"
+      }
+    },
+    {
+      "id": "ryongnamsan-1009-22",
+      "startTime": "2026-10-09T21:51:00+09:00",
+      "endTime": "2026-10-09T22:00:00+09:00",
+      "category": {
+        "en": "Foreign Language Study Time (Russian)",
+        "ko": "외국어학습시간 로어학습편집물"
+      },
+      "title": {
+        "en": "Alex Part 6 (2)",
+        "ko": "《고형기》 알렉스 제6부 (2)"
+      }
+    }
+  ]
+}
