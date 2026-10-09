@@ -313,7 +313,7 @@ export default async function handler(req, res) {
   }
 
   // ALLOWED CHANNELS
-  const allowedChannels = ['KCTV', 'MRTV', 'sports-tv', 'Sports TV', 'ryongnamsan', 'Ryongnamsan'];
+  const allowedChannels = ['KCTV', 'MRTV', 'sports-tv', 'Sports TV', 'ryongnamsan', 'Ryongnamsan', 'mansudae'];
   if (!allowedChannels.includes(ch)) {
     return res.status(404).json({
       error: 'Channel not found.'
