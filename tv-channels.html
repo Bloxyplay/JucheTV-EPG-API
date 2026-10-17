@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0d1015">
+  <title>Explore Channels &mdash; Live DPRK Television &middot; Juche TV</title>
+  <meta name="description" content="Watch KCTV, Sports TV and Ryongnamsan TV &mdash; live North Korean state television &mdash; plus browse the archive of recorded broadcasts on Juche TV.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Juche TV">
+  <meta property="og:title" content="Explore Channels &mdash; Live DPRK Television &middot; Juche TV">
+  <meta property="og:description" content="Watch KCTV, Sports TV and Ryongnamsan TV live &mdash; plus browse the archive of recorded broadcasts on Juche TV.">
+  <meta property="og:image" content="https://resources-juchetv.vercel.app/channels/assets/images/Korean-Central-Television.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+
+    /* ══════════════════════════════════════════════
+       KCTV — PROFESSIONAL BROADCASTER THEME
+       Matches the Juche TV index: editorial newsroom
+       layout, light paper surface, broadcast-red accent
+       ══════════════════════════════════════════════ */
+    :root {
+      --paper:      #faf9f6;
+      --card:       #ffffff;
+      --ink:        #16181d;
+      --ink-2:      #2e323b;
+      --muted:      #5d6370;
+      --faint:      #8b91a1;
+      --line:       #e7e3da;
+      --line-dark:  #d9d4c8;
+
+      --red:        #c8102e;
+      --red-dark:   #9d0c25;
+      --red-tint:   #fbeef0;
+      --blue:       #154c79;
+      --blue-tint:  #eaf1f8;
+      --gold:       #b8860b;
+      --gold-tint:  #fbf3e0;
+      --green:      #1e7a3c;
+      --green-tint: #e9f6ee;
+
+      --night:      #0d1015;
+      --night-2:    #161a21;
+      --night-line: #262c36;
+      --night-text: #aab1bf;
+
+      --bg:   var(--paper);
+      --surf: var(--card);
+      --surf2:#f3f1ea;
+      --surf3:#e9e5db;
+      --brd:  var(--line);
+      --brd2: var(--line-dark);
+      --tx:   var(--ink);
+      --tx2:  var(--muted);
+      --tx3:  var(--faint);
+      --acc:  var(--red);
+      --acc2: var(--red-dark);
+      --glow: rgba(200,16,46,.22);
+      --glowgrn: rgba(30,122,60,.28);
+      --grn:  var(--green);
+      --gld:  var(--gold);
+
+      --rsm:9px; --rmd:12px; --rlg:14px; --rxl:16px;
+      --shsm:0 1px 2px rgba(16,18,24,.06), 0 2px 8px rgba(16,18,24,.05);
+      --shmd:0 10px 30px -8px rgba(16,18,24,.18);
+      --shlg:0 10px 30px -8px rgba(16,18,24,.18);
+      --font:'Archivo', system-ui, -apple-system, sans-serif;
+      --mono:ui-monospace,'SF Mono','Roboto Mono',monospace;
+      --wrap:1180px;
+    }
+
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth; overflow-x:hidden;}
+    body{font-family:var(--font);background:var(--paper);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;}
+
+    .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+    a{color:inherit}
+
+    /* ─── TOP UTILITY BAR ─── */
+    .site-header{position:sticky;top:0;z-index:200;backdrop-filter:blur(5px) saturate(140%);-webkit-backdrop-filter:blur(5px) saturate(140%);isolation:isolate;transform:translateZ(0)}
+    @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+      .topbar{background:var(--night) !important}
+      .masthead{background:var(--paper) !important}
+      .site-nav{background:var(--card) !important}
+    }
+    .topbar{background:rgba(13,16,21,.5);color:var(--night-text);font-size:11.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:36px;gap:16px}
+    .topbar-left{display:flex;align-items:center;gap:10px;min-width:0}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(200,16,46,.6);animation:beacon 2s ease-out infinite;flex-shrink:0}
+    @keyframes beacon{0%{box-shadow:0 0 0 0 rgba(200,16,46,.55)}70%{box-shadow:0 0 0 7px rgba(200,16,46,0)}100%{box-shadow:0 0 0 0 rgba(200,16,46,0)}}
+    .topbar-note{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .topbar-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+    .topbar-clock{color:#fff;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:7px}
+    .topbar-clock svg{width:13px;height:13px;color:var(--night-text)}
+
+    /* ─── MASTHEAD ─── */
+    .masthead{background:rgba(250,249,246,.5);border-bottom:1px solid var(--line)}
+    .masthead-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0 20px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .brand-mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(150deg,var(--red),var(--red-dark));display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px -4px rgba(200,16,46,.5);flex-shrink:0}
+    .brand-mark svg{width:20px;height:20px;color:#fff;margin-left:2px}
+    .brand-text{display:flex;flex-direction:column}
+    .brand-word{font-size:30px;font-weight:900;letter-spacing:-.5px;line-height:1;color:var(--ink)}
+    .brand-word em{font-style:normal;color:var(--red)}
+    .brand-tag{font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+    .masthead-meta{text-align:right;font-size:12px;color:var(--muted);line-height:1.7;flex-shrink:0}
+    .masthead-meta b{color:var(--ink-2);font-weight:700}
+    .masthead-meta .mm-flag{display:inline-block;padding:2px 9px;border:1px solid var(--line-dark);border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-2);background:var(--card)}
+
+    /* ─── PRIMARY NAV ─── */
+    .site-nav{background:rgba(255,255,255,.5);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(16,18,24,.02)}
+    .nav-scroll{display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none}
+    .nav-scroll::-webkit-scrollbar{display:none}
+    .nav-link{display:flex;align-items:center;gap:8px;padding:14px 16px 12px;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:color .15s ease,border-color .15s ease}
+    .nav-link svg{width:15px;height:15px}
+    .nav-link:hover{color:var(--ink)}
+    .nav-link.active{color:var(--red);border-bottom-color:var(--red)}
+    .nav-spacer{flex:1}
+    .nav-api{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--blue-tint);border:1px solid #d4e2f0;padding:7px 12px;border-radius:999px;text-decoration:none;margin:8px 0;white-space:nowrap}
+    .nav-api svg{width:13px;height:13px}
+    .nav-api:hover{background:#dfeaf6}
+
+    /* ─── PLAYER (functional) ─── */
+    #dplayer{width:100%!important;aspect-ratio:16/9;position:relative;background:#000;overflow:hidden;outline:none;font-family:var(--font)}
+    #dplayer video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+    #dplayer:fullscreen,#dplayer:-webkit-full-screen{width:100vw!important;height:100vh;aspect-ratio:auto}
+    #dplayer:fullscreen video,#dplayer:-webkit-full-screen video{width:100%;height:100%}
+    /* fullscreen blurred backdrop (mobile, opt-in via settings) */
+    #dplayer .kj-blur{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(22px) brightness(.6) saturate(1.3);transform:scale(1.3);pointer-events:none;z-index:0}
+    #dplayer.kj-fsblur[data-fullscreen="true"] .kj-blur{display:block}
+    #dplayer.kj-fsblur[data-fullscreen="true"] video{background:transparent;position:relative;z-index:1}
+
+    /* ─── PLAYER CONTROLS (Koryo layout, blue theme) ─── */
+    #dplayer.kj{--kj:#2f7cf6;--kj-2:#1d5fd1}
+    #dplayer.kj .kj-overlay{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;opacity:0;pointer-events:none;transition:opacity .25s ease}
+    #dplayer.kj .kj-overlay[data-show="true"]{opacity:1;pointer-events:auto}
+    #dplayer.kj.kj-idle{cursor:none}
+    .kj-centerwrap{position:absolute;inset:0;display:none;align-items:center;justify-content:center;pointer-events:none}
+    .kj-centerwrap.show{display:flex}
+    .kj-centerbtn{pointer-events:auto;width:76px;height:76px;border-radius:50%;border:none;background:rgba(47,124,246,.92);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 30px -6px rgba(47,124,246,.6);transition:transform .15s,background .15s}
+    .kj-centerbtn:hover{background:#4b91ff;transform:scale(1.06)}
+    .kj-bottom{position:relative;padding:44px 14px 10px;background:linear-gradient(to top,rgba(4,10,24,.92),rgba(4,10,24,.5) 60%,transparent)}
+    .kj-buttons{display:flex;align-items:center;gap:4px}
+    .kj-icon{position:relative;width:38px;height:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:none;border:none;color:#fff;border-radius:8px;cursor:pointer;padding:0;transition:background .15s}
+    .kj-icon:hover{background:rgba(80,140,255,.22)}
+    .kj-icon:focus-visible,.kj-q:focus-visible{outline:2px solid var(--kj);outline-offset:1px}
+    .kj-icon[aria-disabled="true"]{opacity:.55;cursor:progress}
+    .kj-share[data-copied]::after{content:'Copied';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:6px;padding:3px 8px;border-radius:6px;background:rgba(10,18,36,.95);border:1px solid rgba(80,140,255,.35);font:700 11px var(--font);white-space:nowrap;pointer-events:none}
+    .kj-spacer{flex:1}
+    .kj-volwrap{display:flex;align-items:center;gap:8px}
+    .kj-volume{-webkit-appearance:none;appearance:none;width:80px;height:4px;border-radius:2px;outline:none;cursor:pointer;background:linear-gradient(to right,var(--kj) var(--kv,50%),rgba(255,255,255,.3) var(--kv,50%))}
+    .kj-volume::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:#fff;cursor:pointer}
+    .kj-volume::-moz-range-thumb{width:12px;height:12px;border:none;border-radius:50%;background:#fff;cursor:pointer}
+    .kj-livepill{display:flex;align-items:center;gap:6px;margin-left:8px;padding:4px 11px 4px 9px;border-radius:999px;background:rgba(47,124,246,.22);border:1px solid rgba(80,140,255,.5);color:#e6efff;font-size:11px;font-weight:800;letter-spacing:.7px;pointer-events:none}
+    .kj-livedot{width:7px;height:7px;border-radius:50%;background:#4b91ff;box-shadow:0 0 8px rgba(75,145,255,.9);animation:blink 1.4s ease infinite}
+    .kj-q{height:28px;margin-right:4px;padding:0 12px;border:none;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font:800 11.5px var(--font);cursor:pointer;transition:background .15s}
+    .kj-q:hover{background:rgba(80,140,255,.35)}
+    .kj-menu{position:absolute;right:14px;bottom:54px;min-width:120px;padding:4px;border-radius:10px;background:rgba(10,18,36,.96);border:1px solid rgba(80,140,255,.3);box-shadow:0 12px 30px -8px rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .kj-menu button{display:block;width:100%;text-align:left;padding:8px 11px;border:none;border-radius:6px;background:none;color:#b8c6e0;font:600 12.5px var(--font);cursor:pointer}
+    .kj-menu button:hover{background:rgba(80,140,255,.2);color:#fff}
+    .kj-menu button.on{color:#6cb0ff;font-weight:800}
+    .kj-hint{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;pointer-events:none;display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(10,18,36,.82);border:1px solid rgba(80,140,255,.35);color:#fff;font:700 14px var(--font);animation:kjHint .65s ease forwards}
+    .kj-hint svg{width:22px;height:22px}
+    @keyframes kjHint{0%{opacity:0}12%,75%{opacity:1}100%{opacity:0}}
+    .kj-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    /* subtitles: CC pill toggle + caption box (sits above the control bar) */
+    .kj-cc{height:28px;margin-right:6px;padding:0 11px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.1);color:#e6efff;font:800 11.5px/1 var(--font);letter-spacing:.5px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .kj-cc{display:inline-flex;align-items:center;gap:6px;touch-action:manipulation;flex-shrink:0}
+    .kj-ccdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35)}
+    .kj-cc[aria-pressed="true"] .kj-ccdot{background:#7dffb0;box-shadow:0 0 6px #7dffb0}
+    @media (pointer:coarse){.kj-cc{height:34px;padding:0 14px}}
+    .kj-cc:hover{background:rgba(80,140,255,.3)}
+    .kj-cc:focus-visible{outline:2px solid var(--kj);outline-offset:1px}
+    .kj-cc[aria-pressed="true"]{background:var(--kj);border-color:var(--kj);color:#fff;box-shadow:0 0 0 3px rgba(47,124,246,.25)}
+    .kj-cc[aria-disabled="true"]{opacity:.45}
+    .kj-subs{position:absolute;left:0;right:0;bottom:calc(max(36px,10%) + env(safe-area-inset-bottom,0px));z-index:4;display:flex;flex-direction:column;align-items:center;gap:5px;padding:0 5%;pointer-events:none;text-align:center;transition:bottom .25s ease}
+    #dplayer.kj .kj-overlay[data-show="true"]~.kj-subs{bottom:calc(max(78px,20%) + env(safe-area-inset-bottom,0px))}
+    #dplayer.kj-cinema .kj-overlay[data-show="true"]~.kj-subs{bottom:calc(max(90px,22%) + env(safe-area-inset-bottom,0px))}
+    .kj-subline{max-width:92%;animation:kjSubIn .18s ease-out}
+    .kj-subline span{display:inline-block;padding:3px 10px 4px;border-radius:7px;background:rgba(8,10,16,.78);border:1px solid rgba(255,255,255,.07);box-shadow:0 6px 20px -8px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font:600 clamp(12px,1.45vw,19px)/1.35 var(--font);letter-spacing:.1px;white-space:pre-line;text-wrap:balance;text-shadow:0 1px 2px rgba(0,0,0,.55)}
+    .kj-subline span i{font-style:italic;color:#dbe8ff}
+    .kj-subnote span{background:rgba(8,10,16,.66);color:#c3cbdb;font-weight:500;font-style:italic;font-size:.88em}
+    @keyframes kjSubIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+    #dplayer[data-fullscreen="true"] .kj-subs{bottom:calc(max(48px,12%) + env(safe-area-inset-bottom,0px))}
+    #dplayer[data-fullscreen="true"] .kj-subline span{font-size:clamp(15px,1.9vw,30px);border-radius:9px;padding:4px 14px 5px}
+    #dplayer.kj[data-compact="true"] .kj-subline span{font-size:11.5px;padding:2px 8px}
+    #dplayer.kj-cinema:focus-visible{outline:2px solid var(--kj);outline-offset:-2px}
+    #dplayer.kj-cinema .kj-icon{width:42px;height:42px}
+    #dplayer.kj-cinema .kj-bottom{padding:52px 18px 14px}
+    #dplayer.kj[data-compact="true"] .kj-volume{display:none}
+    #dplayer.kj[data-compact="true"] .kj-bottom{padding-left:10px;padding-right:10px}
+    #dplayer.kj[data-compact="true"] .kj-livepill{margin-left:2px;padding:3px 8px 3px 7px}
+    #dplayer.kj[data-compact="true"] .kj-cc{margin-right:2px;padding:0 11px}
+    @media (max-width:430px){#dplayer.kj .kj-pip{display:none}}
+    #dplayer.kj[data-compact="true"] .kj-centerbtn{width:60px;height:60px}
+
+    /* ─── UNAVAILABLE CHANNEL (weekday/weekend gated) ─── */
+    #dplayer.kp-unavailable{display:flex;align-items:center;justify-content:center}
+    .kp-unavail-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(26px) brightness(.5) saturate(1.05);transform:scale(1.15)}
+    .kp-unavail-scrim{position:absolute;inset:0;background:rgba(13,16,21,.4)}
+    .kp-unavail-msg{position:relative;z-index:2;max-width:400px;text-align:center;padding:28px;color:#fff}
+    .kp-unavail-msg svg{width:32px;height:32px;margin-bottom:14px;opacity:.85;color:#fff}
+    .kp-unavail-msg p{font-size:14.5px;font-weight:700;line-height:1.55;letter-spacing:-.1px;margin:0}
+    .kp-unavail-opens{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:16px}
+    .kp-unavail-cd{display:flex;align-items:flex-end;justify-content:center;gap:10px;margin-top:10px}
+    .kp-unavail-cd-seg{display:flex;flex-direction:column;align-items:center;gap:4px}
+    .kp-unavail-cd-num{font-family:var(--mono);font-size:26px;font-weight:700;color:#fff;letter-spacing:.5px;font-variant-numeric:tabular-nums;line-height:1}
+    .kp-unavail-cd-num.ms{font-size:16px;color:rgba(255,255,255,.55)}
+    .kp-unavail-cd-lbl{font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+    .kp-unavail-cd-sep{font-family:var(--mono);font-size:22px;font-weight:700;color:rgba(255,255,255,.35);padding-bottom:16px}
+
+    .kst-clk{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+    .kst-clk svg{width:12px;height:12px;flex-shrink:0}
+    .kst-t{font-variant-numeric:tabular-nums}
+
+    /* ─── EPG OVERLAY ─── */
+    .epg-ov{display:none;position:fixed;inset:0;background:rgba(13,16,21,.72);z-index:9999;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s}
+    .epg-ov.show{display:flex;opacity:1}
+    .epg-ov-inn{display:flex;flex-direction:column;width:100%;max-width:760px;max-height:92vh;background:var(--card);border:1px solid var(--line-dark);border-radius:var(--rxl);overflow:hidden;box-shadow:var(--shmd);transform:translateY(20px) scale(.96);transition:transform .35s cubic-bezier(.32,.72,0,1)}
+    .epg-ov.show .epg-ov-inn{transform:none}
+    .epg-ov-hdr{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 16px;border-bottom:1px solid var(--line);flex-shrink:0}
+    .epg-ov-ttl{font-size:16px;font-weight:800;letter-spacing:-.4px;display:flex;align-items:center;gap:10px}
+    .epg-ov-meta{display:flex;align-items:center;gap:10px}
+    .epg-ov-close{width:30px;height:30px;border-radius:50%;background:var(--surf2);border:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .15s}
+    .epg-ov-close:hover{background:var(--surf3)}
+    .epg-ov-close svg{width:14px;height:14px}
+    .epg-ov-body{overflow-y:auto;flex:1}
+    .epg-ov-body::-webkit-scrollbar{width:5px}
+    .epg-ov-body::-webkit-scrollbar-thumb{background:var(--line-dark);border-radius:4px}
+
+    /* ─── SCREENSHOT OVERLAY ─── */
+    .shot-ov{display:none;position:fixed;inset:0;background:rgba(13,16,21,.72);z-index:9999;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s}
+    .shot-ov.show{display:flex;opacity:1}
+    .shot-ov-inn{display:flex;flex-direction:column;width:100%;max-width:640px;max-height:92vh;background:var(--card);border:1px solid var(--line-dark);border-radius:var(--rxl);overflow:hidden;box-shadow:var(--shmd);transform:translateY(20px) scale(.96);transition:transform .35s cubic-bezier(.32,.72,0,1)}
+    .shot-ov.show .shot-ov-inn{transform:none}
+    .shot-ov-hdr{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);flex-shrink:0}
+    .shot-ov-ttl{font-size:15px;font-weight:800;letter-spacing:-.3px}
+    .shot-ov-close{width:30px;height:30px;border-radius:50%;background:var(--surf2);border:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .15s;flex-shrink:0}
+    .shot-ov-close:hover{background:var(--surf3)}
+    .shot-ov-close svg{width:14px;height:14px}
+    .shot-ov-body{padding:18px 20px 20px;overflow-y:auto}
+    .shot-ov-img-wrap{width:100%;border-radius:var(--rmd);overflow:hidden;background:#000;border:1px solid var(--line);margin-bottom:16px;display:flex;align-items:center;justify-content:center;min-height:80px}
+    .shot-ov-img-wrap img{width:100%;display:block}
+    .shot-ov-label{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--faint);margin-bottom:7px}
+    .shot-ov-src-row{display:flex;gap:8px}
+    .shot-ov-src{flex:1;min-width:0;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);background:var(--surf2);border:1px solid var(--line);border-radius:var(--rsm);padding:9px 11px}
+    .shot-ov-copy{flex-shrink:0;display:flex;align-items:center;gap:6px;padding:0 14px;border-radius:var(--rsm);border:1px solid var(--line-dark);background:var(--card);font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;color:var(--ink-2);transition:all .15s}
+    .shot-ov-copy:hover{border-color:var(--red);color:var(--red)}
+    .shot-ov-copy.copied{color:var(--grn);border-color:var(--grn)}
+    .shot-ov-actions{display:flex;justify-content:flex-end;margin-top:14px}
+    .shot-ov-dl{font-size:12px;font-weight:700;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:var(--rsm);border:1px solid var(--line-dark);transition:all .15s}
+    .shot-ov-dl:hover{border-color:var(--red);color:var(--red)}
+    .shot-ov-err{font-size:13px;line-height:1.5;color:var(--red-dark);background:var(--red-tint);border:1px solid #f0c6cc;border-radius:var(--rmd);padding:14px}
+    .shot-ov-toggle{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;color:var(--ink-2);margin-bottom:12px;cursor:pointer;user-select:none}
+    .shot-ov-toggle input{width:16px;height:16px;accent-color:var(--red);cursor:pointer}
+    .shot-ov-prog-row{margin-bottom:16px}
+    .shot-ov-prog-row .shot-ov-label{margin-bottom:6px}
+    .shot-ov-prog,.shot-ov-prog-select{width:100%;font-family:var(--font);font-size:13px;color:var(--ink);background:var(--surf2);border:1px solid var(--line);border-radius:var(--rsm);padding:9px 11px}
+    .shot-ov-prog-select{cursor:pointer;margin-bottom:8px}
+    .shot-ov-prog:focus,.shot-ov-prog-select:focus{outline:none;border-color:var(--red)}
+    .shot-ov-prog:disabled,.shot-ov-prog-select:disabled{color:var(--faint);cursor:not-allowed}
+    .epg-fr{display:flex;align-items:flex-start;gap:14px;padding:13px 22px;border-bottom:1px solid var(--line);transition:background .15s;cursor:pointer;position:relative}
+    .epg-fr:last-child{border-bottom:none}
+    .epg-fr.epg-past{opacity:.4}
+    .epg-fr.epg-cur{background:linear-gradient(90deg,rgba(30,122,60,.07) 0%,transparent 100%)}
+    .epg-fr:hover{background:var(--paper)}
+    .epg-ft{flex-shrink:0;width:52px;font-size:12px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums;padding-top:2px}
+    .epg-fr.epg-cur .epg-ft{color:var(--green)}
+    .epg-fd{flex-shrink:0;margin-top:7px;width:8px;height:8px;border-radius:50%;background:var(--line-dark)}
+    .epg-fr.epg-cur .epg-fd{background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 2s ease infinite}
+    .epg-fb{flex:1;min-width:0}
+    .epg-ftitle{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:3px}
+    .epg-fr.epg-past .epg-ftitle{color:var(--muted)}
+    .epg-ftags{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .epg-fcat{font-size:11px;font-weight:600;color:var(--blue);background:var(--blue-tint);padding:2px 8px;border-radius:999px}
+    .epg-fsub{font-size:12px;color:var(--faint);line-height:1.4;margin-top:2px;margin-bottom:5px}
+    .epg-fsub:empty{display:none;margin:0}
+    .epg-fend{flex-shrink:0;font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;padding-top:2px;text-align:right}
+    .epg-fdur{font-size:10px;color:var(--faint);margin-top:2px}
+    .epg-kbd{padding:10px 22px;border-top:1px solid var(--line);text-align:center;flex-shrink:0}
+    .kbd-hint{font-size:11px;color:var(--faint);display:inline-flex;align-items:center;gap:4px}
+    .kbd{display:inline-block;padding:1px 6px;font-size:10px;font-weight:700;font-family:var(--font);color:var(--muted);background:var(--paper);border:1px solid var(--line-dark);border-radius:4px;box-shadow:0 1px 0 var(--line-dark)}
+    #dplayer:fullscreen .epg-ov,#dplayer:-webkit-full-screen .epg-ov{position:fixed;inset:0;z-index:999999}
+    #dplayer:fullscreen .shot-ov,#dplayer:-webkit-full-screen .shot-ov{position:fixed;inset:0;z-index:999999}
+
+    /* ─── FOOTER (ink-dark, matches index) ─── */
+    .footer{background:var(--night);color:var(--night-text);margin-top:56px}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding:46px 0 36px}
+    .f-brand .brand-word{color:#fff;font-size:24px}
+    .f-brand .brand-word em{color:var(--red)}
+    .f-mission{font-size:13px;line-height:1.7;margin:14px 0 18px;max-width:300px}
+    .f-badges{display:flex;gap:8px;flex-wrap:wrap}
+    .f-badge{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--night-line);color:var(--night-text);padding:5px 11px;border-radius:999px}
+    .f-col h5{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#fff;margin-bottom:16px}
+    .f-col a{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--night-text);text-decoration:none;padding:5px 0;transition:color .15s ease}
+    .f-col a:hover{color:#fff}
+    .f-col a svg{width:13px;height:13px;opacity:.5}
+    .f-bottom{border-top:1px solid var(--night-line);padding:20px 0 26px;font-size:11.5px;line-height:1.8;color:#78808f;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+
+    /* ═══════════════════════════════════════════════════════════
+       OTT PAGE — rebuilt from scratch (top nav + footer unchanged)
+       Layout: cinema band (player + now-playing) → channel deck →
+       horizontal programme rail → about / stream info
+       ═══════════════════════════════════════════════════════════ */
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+    .canvas{background:#0b0d11;flex:1;margin-bottom:-56px;padding-bottom:56px;color:var(--ink)}
+    .canvas,.epg-ov,.shot-ov{
+      color-scheme:dark;
+      --paper:#0b0d11;--card:#13161c;--surf2:#1a1e26;--surf3:#232833;
+      --ink:#f3f4f7;--ink-2:#d2d6df;--muted:#9aa2b2;--faint:#7a8292;
+      --line:rgba(255,255,255,.08);--line-dark:rgba(255,255,255,.16);
+      --red:#e4142f;--red-dark:#ff6577;--red-tint:rgba(228,20,47,.14);
+      --blue:#8ec1ff;--blue-tint:rgba(142,193,255,.12);
+      --green:#3ddc84;--gold:#f0b429;--gold-tint:rgba(240,180,41,.12);
+      --rsm:8px;--rmd:10px;--rlg:12px;--rxl:14px;--shmd:0 30px 60px -30px rgba(0,0,0,.85);
+      --head:'Bricolage Grotesque','Archivo',sans-serif;
+      --tx:var(--ink);--tx2:var(--muted);--tx3:var(--faint);--brd:var(--line);--brd2:var(--line-dark);--acc:var(--red);--surf:var(--card);--bg:var(--paper);
+    }
+    .canvas :is(a,button,select):focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+    .inner{max-width:1360px;margin:0 auto;padding:0 28px}
+
+    /* ── 1. cinema band ── */
+    .theatre{--tw:max(560px,calc((100vh - 360px) * 1.7778));background:#05070a;border-bottom:1px solid var(--line)}
+    .theatre .inner{padding-top:18px;padding-bottom:30px}
+    .crumb{width:min(100%,var(--tw));margin:0 auto 14px}
+    .back{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 10px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;transition:color .15s,border-color .15s,background .15s}
+    .back svg{width:15px;height:15px}
+    .back:hover{color:var(--ink);border-color:var(--line-dark);background:rgba(255,255,255,.05)}
+    .player-wrap{position:relative;width:min(100%,var(--tw));margin:0 auto;background:#000;border-radius:16px 16px 0 0;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 50px 100px -40px #000}
+
+    .now-bar{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(100%,var(--tw));margin:0 auto;padding:18px 22px 16px;background:#101319;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px}
+    .now-prog{position:absolute;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.1);opacity:0;transition:opacity .2s}
+    .now-bar.has-prog .now-prog{opacity:1}
+    .now-prog i{display:block;height:100%;width:0;background:var(--red);transition:width .6s ease}
+    .now-main{display:flex;align-items:center;gap:14px;min-width:0}
+    .now-live{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;padding:5px 11px 5px 9px;border-radius:6px;background:var(--red);color:#fff;font-size:12px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+    .now-live i{width:7px;height:7px;border-radius:50%;background:#fff;animation:blink 1.6s ease infinite}
+    .now-bar.is-off .now-live{background:var(--surf3);color:var(--muted)}
+    .now-bar.is-off .now-live i{background:var(--faint);animation:none}
+    .now-text{min-width:0}
+    .now-title{font-family:var(--head);font-size:20px;font-weight:700;letter-spacing:-.3px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .now-meta{display:flex;flex-wrap:wrap;margin-top:3px;font-size:13px;color:var(--muted)}
+    .now-meta span+span{margin-left:10px;padding-left:10px;border-left:1px solid var(--line-dark)}
+    .now-next{flex-shrink:0;max-width:32%;min-width:0;text-align:right}
+    .now-next[hidden]{display:none}
+    .now-next-lbl{display:block;font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums}
+    .now-next b{display:block;margin-top:2px;font-size:14px;font-weight:600;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    /* ── 2. channel deck ── */
+    .deck{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 0 30px;border-bottom:1px solid var(--line)}
+    .ident{display:flex;align-items:center;gap:20px;min-width:0}
+    .ch-logo{flex-shrink:0;width:76px;height:76px;padding:11px;border-radius:20px;background:#eceef2;display:flex;align-items:center;justify-content:center}
+    .ch-logo img{width:100%;height:100%;object-fit:contain}
+    .ch-info{min-width:0}
+    .ch-name{font-family:var(--head);font-size:clamp(26px,3vw,40px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--ink)}
+    .ch-sub{margin-top:8px;max-width:58ch;font-size:14px;font-weight:500;line-height:1.5;color:var(--muted)}
+    .chan-picker{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0}
+    .chan-picker-lbl{font-size:12.5px;font-weight:600;color:var(--faint)}
+    .chan-strip{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+    .chan-item{display:flex;align-items:center;gap:10px;padding:6px 18px 6px 6px;border:1px solid var(--line-dark);border-radius:999px;background:var(--surf2);color:var(--ink-2);font:600 14px var(--font);cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+    .chan-item:hover{border-color:rgba(255,255,255,.4);color:#fff}
+    .chan-item.active{border-color:var(--red);background:var(--red-tint);color:#fff}
+    .chan-avatar{position:relative;flex-shrink:0;width:40px;height:40px;border-radius:50%;background:#eceef2;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .chan-avatar img{width:100%;height:100%;object-fit:contain;padding:6px}
+    .chan-live-dot{position:absolute;top:1px;right:1px;width:10px;height:10px;border-radius:50%;background:#b9bfcb;border:2px solid #fff}
+    .chan-item.active .chan-live-dot{background:var(--red);animation:beacon 2s ease-out infinite}
+    .chan-label{white-space:nowrap}
+
+    /* ── 3. programme guide (horizontal rail) ── */
+    .guide{padding:40px 0 10px}
+    .guide-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:22px}
+    .guide-title h2{font-family:var(--head);font-size:28px;font-weight:800;letter-spacing:-.7px;line-height:1.1}
+    .guide-sub{margin-top:6px;font-size:13.5px;color:var(--muted)}
+    .guide-tools{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+    .tool{display:flex;flex-direction:column;gap:6px}
+    .tool-lbl{font-size:12px;font-weight:600;color:var(--muted)}
+    .epg-select-wrap{position:relative}
+    .epg-select-wrap::after{content:'';position:absolute;right:14px;top:50%;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-65%) rotate(45deg);pointer-events:none}
+    .epg-select{appearance:none;-webkit-appearance:none;min-width:200px;padding:11px 36px 11px 14px;background:var(--surf2);border:1px solid var(--line-dark);border-radius:10px;color:var(--ink);font:600 13.5px var(--font);cursor:pointer;transition:border-color .15s}
+    .epg-select:hover{border-color:rgba(255,255,255,.34)}
+    .epg-select option{background:#1a1e26;color:#f3f4f7}
+    .epg-date-nav{display:flex;align-items:center;gap:6px;height:43px;padding:4px;background:var(--surf2);border:1px solid var(--line-dark);border-radius:10px}
+    .epg-dnav-btn{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--surf3);border:1px solid var(--line);border-radius:8px;color:var(--ink);cursor:pointer;transition:all .15s}
+    .epg-dnav-btn svg{width:15px;height:15px}
+    .epg-dnav-btn:hover:not(:disabled){border-color:var(--red);color:var(--red-dark);background:var(--red-tint)}
+    .epg-dnav-btn:disabled{opacity:.35;cursor:not-allowed}
+    .epg-dnav-date{min-width:150px;padding:0 6px;text-align:center;font-size:13.5px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+    .epg-dnav-today{height:34px;padding:0 14px;background:var(--surf3);border:1px solid var(--line);border-radius:8px;color:var(--red-dark);font:700 12.5px var(--font);cursor:pointer}
+    .epg-dnav-today:hover{background:var(--red-tint);border-color:var(--red)}
+
+    .rail-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+    .rail-clock{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+    .rail-clock-lbl{font-size:13px;font-weight:600;color:var(--muted)}
+    #epgHeroClock{font-family:var(--mono);font-size:26px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+    .rail-clock-tz{font-size:12.5px;color:var(--faint)}
+    .rail-date{font-size:13px;color:var(--faint)}
+    .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .rail-actions{display:flex;align-items:center;gap:8px}
+    .rail-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:var(--surf2);border:1px solid var(--line-dark);border-radius:50%;color:var(--ink);cursor:pointer;transition:all .15s}
+    .rail-btn svg{width:16px;height:16px}
+    .rail-btn:hover:not(:disabled){border-color:var(--red);color:var(--red-dark)}
+    .rail-btn:disabled{opacity:.3;cursor:default}
+    .sched-foot{display:flex;align-items:center;gap:8px;height:38px;margin-left:6px;padding:0 16px;background:transparent;border:1px solid var(--line-dark);border-radius:999px;color:var(--ink);font:600 13px var(--font);cursor:pointer;transition:all .15s}
+    .sched-foot:hover{background:rgba(255,255,255,.07);color:#fff}
+    .sched-foot svg{width:13px;height:13px}
+
+    .sched-list{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 2px 18px;scrollbar-width:thin;scrollbar-color:#2b303b transparent}
+    .sched-list::-webkit-scrollbar{height:6px}
+    .sched-list::-webkit-scrollbar-thumb{background:#2b303b;border-radius:4px;border:0}
+    .sched-row{position:relative;flex:0 0 276px;scroll-snap-align:start;display:flex;flex-direction:column;gap:12px;min-height:188px;padding:18px 20px 20px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .15s,background .15s}
+    .sched-row:hover{border-color:var(--line-dark);background:#171b22}
+    .sched-row.past{opacity:.4}
+    .sched-time-col{display:flex}
+    .sched-time{font-family:var(--head);font-size:24px;font-weight:800;letter-spacing:-.5px;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+    .sched-body{display:flex;flex-direction:column;flex:1;min-width:0}
+    .sched-cat{align-self:flex-start;margin-bottom:8px;padding:3px 10px;border-radius:999px;background:var(--surf3);font-size:11.5px;font-weight:600;color:var(--muted)}
+    .sched-cat:empty{display:none}
+    .sched-ttl{font-size:16px;font-weight:700;line-height:1.35;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .sched-sub{margin-top:4px;font-size:12.5px;line-height:1.4;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .sched-rem{margin-top:auto;padding-top:14px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+    .sched-prog{height:4px;margin-top:8px;border-radius:2px;background:rgba(255,255,255,.14);overflow:hidden}
+    .sched-prog i{display:block;height:100%;background:var(--red)}
+    .onair-badge{display:inline-flex;align-items:center;gap:7px;margin-bottom:8px;font-size:12px;font-weight:700;color:var(--red-dark)}
+    .onair-dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:blink 1.6s ease infinite}
+    .sched-row.onair{border-color:rgba(228,20,47,.6);background:linear-gradient(165deg,rgba(228,20,47,.2) 0%,var(--card) 62%)}
+    .sched-row.onair .sched-time{color:#fff}
+    .sched-row.kju:not(.onair){border-color:rgba(228,20,47,.35)}
+    .kju-badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-bottom:8px;padding:3px 10px 3px 8px;border-radius:999px;background:var(--red);color:#fff;font-size:11px;font-weight:700}
+    .kju-badge svg{width:11px;height:11px;flex-shrink:0}
+
+    .skel-block{border-radius:6px;background:linear-gradient(90deg,#1a1e26 25%,#262b36 37%,#1a1e26 63%);background-size:420px 100%;background-repeat:no-repeat;animation:skelShimmer 1.6s ease-in-out infinite}
+    @keyframes skelShimmer{0%{background-position:-260px 0}100%{background-position:calc(260px + 100%) 0}}
+    .sched-row.skel-row{pointer-events:none}
+    .skel-cat{width:74px;height:20px;margin-bottom:10px;border-radius:999px}
+    .skel-ttl{height:15px;margin-bottom:8px}
+    .skel-sub{height:11px}
+
+    .epg-sw{display:flex;flex-direction:column;align-items:center;gap:12px;padding:44px 20px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:16px}
+    .epg-si{position:relative;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+    .epg-si svg{position:relative;z-index:2;width:26px;height:26px}
+    .epg-si-warn{color:var(--red-dark)}
+    .epg-si-tv{color:var(--faint)}
+    .epg-si-off{color:var(--gold)}
+    .epg-si-ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--gold);opacity:0;animation:epgPulse 2.6s cubic-bezier(.2,.6,.4,1) infinite}
+    .epg-si-ring.d2{animation-delay:.9s}
+    @keyframes epgPulse{0%{transform:scale(.55);opacity:.5}100%{transform:scale(1.75);opacity:0}}
+    .epg-sm{font-size:14px;line-height:1.5;color:var(--muted);max-width:52ch}
+    .epg-retry{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:var(--red-tint);border:1px solid rgba(228,20,47,.4);border-radius:999px;color:var(--red-dark);font:700 12.5px var(--font);cursor:pointer}
+    .epg-retry:hover{background:rgba(228,20,47,.24)}
+    .epg-src-note{margin-top:18px;max-width:84ch;font-size:12.5px;line-height:1.65;color:var(--faint)}
+    .epg-src-note strong{color:var(--ink-2);font-weight:600}
+
+    /* ── 4. about + stream server ── */
+    .info{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;padding:36px 0 8px}
+    .about,.srv{padding:26px 28px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+    .about h3,.srv h3{margin-bottom:12px;font-family:var(--head);font-size:20px;font-weight:700;letter-spacing:-.3px}
+    .about p{max-width:62ch;font-size:15px;line-height:1.7;color:var(--ink-2)}
+    .srv-item{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+    .srv-item span{font-size:13px;color:var(--muted)}
+    .srv-item b{font-size:13.5px;font-weight:600;text-align:right;overflow-wrap:anywhere}
+    .srv-note{margin-top:12px;font-size:12px;line-height:1.6;color:var(--faint)}
+
+    /* ── player skin (brand red) ── */
+    #dplayer.kj{--kj:#e4142f;--kj-2:#b80f26}
+    .kj-bottom{background:linear-gradient(to top,rgba(4,6,10,.94),rgba(4,6,10,.5) 60%,transparent)}
+    .kj-centerbtn{background:rgba(228,20,47,.95);box-shadow:0 10px 34px -8px rgba(228,20,47,.6)}
+    .kj-centerbtn:hover{background:#f0233e}
+    .kj-icon:hover{background:rgba(255,255,255,.14)}
+    .kj-livepill{background:rgba(228,20,47,.2);border-color:rgba(228,20,47,.55);color:#ffd9de}
+    .kj-livedot{background:#ff3b52;box-shadow:0 0 8px rgba(255,59,82,.9)}
+    .kj-q:hover{background:rgba(255,255,255,.22)}
+    .kj-menu,.kj-hint,.kj-share[data-copied]::after{background:rgba(10,12,16,.96);border-color:rgba(255,255,255,.14)}
+    .kj-menu button{color:#c4cad6}
+    .kj-menu button:hover{background:rgba(255,255,255,.1);color:#fff}
+    .kj-menu button.on{color:#ff6577}
+
+    /* ── overlays (full schedule + screenshot) ── */
+    .epg-pill{padding:4px 11px;border-radius:999px;background:var(--red);color:#fff;font-size:11px;font-weight:700}
+    .epg-fr:hover{background:rgba(255,255,255,.04)}
+    .epg-fr.epg-cur{background:linear-gradient(90deg,rgba(228,20,47,.12) 0%,transparent 100%)}
+    .epg-fr.epg-cur .epg-ft{color:var(--red-dark)}
+    .epg-fr.epg-cur .epg-fd{background:var(--red);box-shadow:0 0 8px var(--red)}
+    .epg-fr.kju{background:linear-gradient(90deg,rgba(228,20,47,.12),transparent 70%)}
+    .shot-ov-err{border-color:rgba(228,20,47,.4)}
+
+    /* ── scrollbar + footer/header responsive (unchanged rules) + reduced motion ── */
+    ::-webkit-scrollbar{width:9px}
+    ::-webkit-scrollbar-track{background:#0b0d11}
+    ::-webkit-scrollbar-thumb{background:#2b303b;border-radius:6px;border:2px solid #0b0d11}
+    @media(max-width:980px){.footer-grid{grid-template-columns:1fr 1fr}.masthead-meta{display:none}}
+    /* reduced motion handled in the Apple-design block below */
+
+    /* ── responsive ── */
+    @media(max-width:900px){
+      .deck{flex-direction:column;align-items:flex-start;gap:22px}
+      .chan-picker{align-items:flex-start;width:100%}
+      .chan-strip{justify-content:flex-start}
+      .info{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .wrap{padding:0 16px}
+      .footer-grid{grid-template-columns:1fr;gap:26px}
+      .brand-word{font-size:24px}
+      .brand-tag{font-size:9.5px}
+      .topbar-note{display:none}
+      .inner{padding:0 16px}
+      .theatre .inner{padding:12px 0 20px}
+      .crumb{margin-left:16px;margin-bottom:12px}
+      .player-wrap{width:100%;border-radius:0}
+      .now-bar{width:100%;padding:16px;border-radius:0;border-left:0;border-right:0}
+      .now-next{display:none}
+      .now-title{font-size:17px}
+      .ch-logo{width:56px;height:56px;border-radius:14px;padding:8px}
+      .deck{padding:24px 0 22px}
+      .guide{padding-top:30px}
+      .guide-tools,.tool,.epg-select{width:100%}
+      .epg-date-nav{width:100%}
+      .epg-dnav-date{flex:1;min-width:0}
+      .sched-row{flex-basis:236px}
+      .rail-actions .rail-btn{display:none}
+      .sched-foot{margin-left:0}
+      .about,.srv{padding:20px}
+    }
+
+
+    /* ═══════════ APPLE-DESIGN PASS (spring motion · materials · type · a11y) ═══════════ */
+    :root{
+      --font:system-ui,-apple-system,'SF Pro Text','Segoe UI',Roboto,sans-serif;
+      --sp:linear(0,0.043,0.139,0.256,0.375,0.485,0.582,0.665,0.735,0.791,0.837,0.873,0.902,0.925,0.942,0.956,0.966,0.974,0.981,0.985,0.989,0.992,0.994,0.995,0.996,0.997,1);      /* spring: damping 1.0, response .4 (~0.54s) */
+      --sp-b:linear(0,0.041,0.138,0.262,0.393,0.518,0.631,0.727,0.806,0.869,0.917,0.953,0.978,0.995,1.006,1.012,1.015,1.015,1.014,1.013,1.011,1.009,1.007,1.005,1.004,1.003,1);   /* spring: damping .8, response .3 (~0.39s) — momentum only */
+    }
+    .canvas,.epg-ov,.shot-ov{--head:system-ui,-apple-system,'SF Pro Display','Segoe UI',Roboto,sans-serif}
+    html{-webkit-text-size-adjust:100%}
+    body{line-height:1.5;font-optical-sizing:auto;text-rendering:optimizeLegibility}
+
+    /* §15 size-specific tracking + inverse leading */
+    .brand-word{letter-spacing:-.02em}
+    .ch-name{font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.05;letter-spacing:-.025em}
+    .guide-title h2{line-height:1.1;letter-spacing:-.02em}
+    .now-title{letter-spacing:-.015em}
+    .sched-time{letter-spacing:-.02em}
+    .about h3,.srv h3{letter-spacing:-.01em}
+    .sched-ttl{line-height:1.3}
+    .about p{line-height:1.65}
+
+    /* §12 one translucent material for the header, solid topbar, scroll-edge fade instead of a divider */
+    .site-header{top:calc(var(--stick,0px) * -1);background:rgba(250,249,246,.72);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%)}
+    .topbar{background:var(--night)}
+    .masthead,.site-nav{background:transparent}
+    .site-nav{border-bottom:0;box-shadow:none}
+    .site-header::after{content:'';position:absolute;left:0;right:0;top:100%;height:22px;background:linear-gradient(to bottom,rgba(10,12,16,.22),transparent);pointer-events:none}
+    .nav-link{color:var(--ink-2);letter-spacing:1.1px}
+    .kj-menu{backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);transform-origin:bottom right}
+
+    /* §1 instant press feedback (down = 100ms, release = spring) */
+    :is(.chan-item,.rail-btn,.sched-foot,.back,.nav-link,.nav-api,.kj-icon,.kj-q,.kj-cc,.kj-centerbtn,.epg-dnav-btn,.epg-dnav-today,.epg-ov-close,.shot-ov-close,.shot-ov-copy,.shot-ov-dl,.epg-retry){
+      touch-action:manipulation;
+      transition:transform .5s var(--sp),background-color .15s,border-color .15s,color .15s,opacity .15s,box-shadow .15s}
+    :is(.chan-item,.rail-btn,.sched-foot,.back,.nav-link,.nav-api,.kj-icon,.kj-q,.kj-cc,.kj-centerbtn,.epg-dnav-btn,.epg-dnav-today,.epg-ov-close,.shot-ov-close,.shot-ov-copy,.shot-ov-dl,.epg-retry):active:not(:disabled){
+      transform:scale(.97);transition:transform .1s ease-out,background-color .15s,border-color .15s,color .15s}
+    .kj-centerbtn:active{transform:scale(.94)}
+
+    /* §4/§12 overlays: materialize (blur + scale together), spring sheet, no display toggle so it can animate */
+    .epg-ov,.shot-ov{display:flex;visibility:hidden;pointer-events:none;opacity:0;backdrop-filter:blur(0) saturate(100%);-webkit-backdrop-filter:blur(0) saturate(100%);
+      transition:opacity .3s ease,backdrop-filter .4s ease,-webkit-backdrop-filter .4s ease,visibility 0s .4s}
+    .epg-ov.show,.shot-ov.show{visibility:visible;pointer-events:auto;opacity:1;backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
+      transition:opacity .25s ease,backdrop-filter .4s ease,-webkit-backdrop-filter .4s ease,visibility 0s}
+    .epg-ov-inn,.shot-ov-inn{transform:translateY(24px) scale(.96);transition:transform .35s var(--sp)}
+    .epg-ov.show .epg-ov-inn,.shot-ov.show .shot-ov-inn{transform:none;transition:transform .45s var(--sp-b);will-change:transform}
+    .epg-ov-inn,.shot-ov-inn{touch-action:pan-y;overscroll-behavior:contain}
+    .epg-ov-hdr,.shot-ov-hdr{cursor:grab;touch-action:none}
+    .epg-ov-hdr::before,.shot-ov-hdr::before{content:'';position:absolute;top:6px;left:50%;width:36px;height:4px;margin-left:-18px;border-radius:2px;background:var(--line-dark)}
+    .epg-ov-hdr,.shot-ov-hdr{position:relative}
+
+    /* §6 rail: native momentum, contained so a flick never triggers browser back */
+    .sched-list{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+
+    /* §14 accessibility: gentler, not absent */
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+      :is(.chan-item,.rail-btn,.sched-foot,.back,.kj-icon,.kj-centerbtn):active{transform:none}
+      .epg-ov-inn,.shot-ov-inn,.epg-ov.show .epg-ov-inn,.shot-ov.show .shot-ov-inn{transform:none;transition:opacity .2s ease}
+      .epg-ov,.shot-ov{transition:opacity .2s ease,visibility 0s .2s}
+      .epg-ov.show,.shot-ov.show{transition:opacity .2s ease,visibility 0s}
+    }
+    @media(prefers-reduced-transparency:reduce){
+      .site-header{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}
+      .epg-ov,.shot-ov,.epg-ov.show,.shot-ov.show{background:rgba(13,16,21,.94);backdrop-filter:none;-webkit-backdrop-filter:none}
+      .kj-menu,.kj-subline span{background:#0a0c10;backdrop-filter:none;-webkit-backdrop-filter:none}
+    }
+    @media(prefers-contrast:more){
+      .site-header{background:var(--paper);border-bottom:1px solid var(--ink)}
+      .sched-row,.about,.srv,.epg-sw{border-color:rgba(255,255,255,.4)}
+      .chan-item,.rail-btn,.sched-foot{border-color:rgba(255,255,255,.55)}
+    }
+
+    /* ═══════════ REDESIGN · "Midnight Signal" — new layout, palette, shapes (header + footer untouched) ═══════════ */
+    .canvas,.epg-ov,.shot-ov{
+      --paper:#07080f;--card:#0f1119;--surf2:#161926;--surf3:#1f2335;
+      --ink:#f4f5fb;--ink-2:#d5d8e8;--muted:#a0a5bd;--faint:#7c8199;
+      --line:rgba(255,255,255,.07);--line-dark:rgba(255,255,255,.14);
+      --red:#6c47ff;--red-dark:#b7a6ff;--red-tint:rgba(108,71,255,.16);
+      --rsm:12px;--rmd:16px;--rlg:20px;--rxl:28px;--shmd:0 40px 90px -30px rgba(0,0,0,.9)}
+    .canvas{background:radial-gradient(900px 520px at 78% -8%,rgba(108,71,255,.24),transparent 62%),radial-gradient(700px 400px at 0% 30%,rgba(59,130,246,.08),transparent 60%),#07080f}
+    .canvas :is(a,button,select):focus-visible{outline-color:#b7a6ff}
+    ::-webkit-scrollbar-track{background:#07080f}::-webkit-scrollbar-thumb{background:#262a3d;border-color:#07080f}
+
+    /* layout: cinema (left) + channel sidebar (right), guide full width below */
+    .stage{padding:26px 0 8px}
+    .stage-grid{display:grid;grid-template-columns:minmax(0,1fr) 372px;gap:28px;align-items:start}
+    .stage .crumb,.stage .player-wrap,.stage .now-bar{width:100%;margin-left:0;margin-right:0}
+    .stage .crumb{margin-bottom:16px}
+    .stage .player-wrap{border-radius:28px;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 50px 120px -40px rgba(108,71,255,.55)}
+    .stage .now-bar{margin-top:14px;padding:18px 22px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:22px;overflow:hidden;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+    .stage .now-title{font-size:1.35rem;letter-spacing:-.02em}
+    .stage-side{display:flex;flex-direction:column;gap:16px}
+    .stage-side :is(.deck,.about,.srv){padding:22px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:24px}
+    .stage-side .deck{flex-direction:column;align-items:stretch;gap:20px}
+    .stage-side .ident{flex-direction:column;align-items:flex-start;gap:14px}
+    .stage-side .ch-logo{width:64px;height:64px;border-radius:18px;padding:9px}
+    .stage-side .ch-name{font-size:1.6rem}
+    .stage-side .ch-sub{margin-top:6px;font-size:.88rem}
+    .stage-side .chan-picker{align-items:stretch;gap:10px}
+    .chan-picker-lbl{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .stage-side .chan-strip{flex-direction:column;flex-wrap:nowrap;gap:8px}
+    .stage-side .chan-item{width:100%;border-radius:18px;padding:8px 14px 8px 8px;background:rgba(255,255,255,.04);border-color:var(--line)}
+    .stage-side .chan-item:hover{border-color:var(--line-dark);background:rgba(255,255,255,.08)}
+    .stage-side .chan-item.active{border-color:rgba(183,166,255,.7);background:linear-gradient(90deg,rgba(108,71,255,.32),rgba(108,71,255,.08));box-shadow:0 10px 30px -14px rgba(108,71,255,.8)}
+    .stage-side .chan-avatar{width:44px;height:44px;border-radius:14px}
+    .stage-side .info{display:contents}
+    .stage-side :is(.about,.srv){padding:22px}
+    .stage-side .about h3,.stage-side .srv h3{font-size:1rem;letter-spacing:-.01em}
+    .stage-side .about p{font-size:.9rem;line-height:1.65}
+
+    /* guide: card grid instead of a horizontal rail */
+    .guide{padding:48px 0 10px}
+    .guide-title h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-.025em}
+    .guide-title h2::before{content:'';display:inline-block;width:10px;height:.78em;margin-right:14px;border-radius:5px;background:linear-gradient(#b7a6ff,#6c47ff);vertical-align:-.04em}
+    .epg-select,.epg-date-nav{border-radius:14px;background:rgba(255,255,255,.05)}
+    .rail-bar{padding:16px 20px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:22px;margin-bottom:18px}
+    #epgHeroClock{font-size:1.6rem}
+    .rail-actions .rail-btn{display:none}
+    .sched-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;overflow:visible;max-height:none;padding:2px 0 8px}
+    .sched-row{flex:none;min-height:176px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));transition:transform .5s var(--sp),border-color .15s,background .15s}
+    .sched-row:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
+    .sched-row.onair{grid-column:1/-1;min-height:0;flex-direction:row;align-items:center;gap:22px;border-color:rgba(183,166,255,.6);background:linear-gradient(120deg,rgba(108,71,255,.34),rgba(108,71,255,.06) 70%)}
+    .sched-row.onair .sched-body{flex:1}
+    .sched-row.onair .sched-time{font-size:2.2rem}
+    .sched-row.onair .sched-ttl{font-size:1.3rem;-webkit-line-clamp:2}
+    .sched-row.kju:not(.onair){border-color:rgba(108,71,255,.45)}
+    .sched-prog{background:rgba(255,255,255,.12)}
+    .skel-block{background:linear-gradient(90deg,#161926 25%,#222740 37%,#161926 63%);background-size:420px 100%;background-repeat:no-repeat}
+    .epg-sw{border-radius:24px}
+    .epg-retry{background:rgba(108,71,255,.16);border-color:rgba(108,71,255,.5)}
+    .epg-retry:hover{background:rgba(108,71,255,.3)}
+
+    /* player skin + overlays follow the new accent */
+    #dplayer.kj{--kj:#6c47ff;--kj-2:#5434d6}
+    .kj-centerbtn{background:rgba(108,71,255,.95);box-shadow:0 10px 34px -8px rgba(108,71,255,.7)}
+    .kj-centerbtn:hover{background:#7f5dff}
+    .kj-livepill{background:rgba(108,71,255,.24);border-color:rgba(183,166,255,.55);color:#ece7ff}
+    .kj-livedot{background:#b7a6ff;box-shadow:0 0 8px rgba(183,166,255,.9)}
+    .kj-menu button.on{color:#b7a6ff}
+    .epg-fr.epg-cur,.epg-fr.kju{background:linear-gradient(90deg,rgba(108,71,255,.18),transparent 75%)}
+    .shot-ov-err{border-color:rgba(108,71,255,.45)}
+    .epg-ov-inn,.shot-ov-inn{background:#0f1119}
+
+    .canvas{overflow-x:clip}
+    .stage-main,.stage-side,.stage-side>*,.stage .now-bar>div,.stage .chan-picker,.stage .chan-strip{min-width:0;max-width:100%}
+    .stage .now-bar{flex-wrap:wrap}
+    .stage-side .srv *,.stage-side .about p{overflow-wrap:anywhere}
+    @media(max-width:1040px){
+      .stage-grid{grid-template-columns:minmax(0,1fr)}
+      .stage-side .chan-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr))}
+    }
+    @media(max-width:640px){
+      .stage{padding-top:14px}
+      .stage .player-wrap{border-radius:20px}
+      .stage .now-bar{padding:14px 16px;border-radius:18px}
+      .sched-list{grid-template-columns:1fr}
+      .sched-row.onair{flex-direction:column;align-items:flex-start;gap:12px}
+      .rail-bar{padding:14px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ TOP UTILITY BAR ═══ -->
+<!-- ═══ TOP NAV GROUP (sticky, blurred) ═══ -->
+  <div class="site-header">
+  <div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="topbar-left">
+      <span class="live-dot"></span>
+      <span class="topbar-note" id="topbarNote">Korean Central Television — broadcasting live from Pyongyang, DPRK</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-clock">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Pyongyang&nbsp;<span id="clock">--:--</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MASTHEAD ═══ -->
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-word">JUCHE&nbsp;<em>TV</em></span>
+        <span class="brand-tag">Preserving North Korean media</span>
+      </span>
+    </a>
+    <div class="masthead-meta">
+      <span class="mm-flag">Streams by KoryoFront</span><br>
+      Operated by <b>Juche TV</b> — Myanmar &nbsp;·&nbsp; Content partner <b>KoryoFront</b> — South Africa
+    </div>
+  </div>
+</header>
+
+<!-- ═══ PRIMARY NAV ═══ -->
+<nav class="site-nav">
+  <div class="wrap nav-scroll">
+    <a href="index.html" class="nav-link active">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      Live TV
+    </a>
+    <a href="/DPRK.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Explore DPRK
+    </a>
+    <a href="/schedules" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Schedule
+    </a>
+    <a href="/Magazine" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Publications
+    </a>
+    <a href="/VOD.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l1.2-3.6a1.5 1.5 0 0 1 1.9-.95l13.4 4.55"/><path d="M3 8.5V19a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 19V9.5A1.5 1.5 0 0 0 19.5 8H4.5A1.5 1.5 0 0 0 3 8.5z"/><path d="M7 5l3 3.5"/><path d="M12 3.8l3 3.5"/><path d="M3 8.5h18"/></svg>
+      VOD
+    </a>
+    <a href="about.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      About
+    </a>
+    <span class="nav-spacer"></span>
+    <a class="nav-api" href="https://juche-tv-epg-api.vercel.app/api/bloxyplaytv?ch=KCTV&amp;date=2026-08-17" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      EPG API
+    </a>
+  </div>
+</nav>
+  </div>
+  <!-- ═══ END TOP NAV GROUP ═══ -->
+
+
+<!-- PAGE -->
+<div class="canvas">
+<main>
+
+  <!-- 1 · CINEMA BAND -->
+  <section class="stage"><div class="inner stage-grid">
+<div class="stage-main">
+      <div class="crumb">
+        <a href="index.html" class="back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span data-i18n="backToChannels">Back to Channels</span>
+        </a>
+      </div>
+
+      <div class="player-wrap" id="playerWrap">
+        <div id="dplayer"></div>
+      </div>
+
+      <div class="now-bar" id="nowBar" role="group" aria-label="Now playing">
+        <div class="now-prog" aria-hidden="true"><i id="nowProgBar"></i></div>
+        <div class="now-main">
+          <span class="now-live"><i></i><span id="nowLiveTxt">Live</span></span>
+          <div class="now-text">
+            <div class="now-title" id="nowTitle">Korean Central Television</div>
+            <div class="now-meta" id="nowMeta"><span>Live broadcast</span></div>
+          </div>
+        </div>
+        <div class="now-next" id="nowNext" hidden>
+          <span class="now-next-lbl">Up next at <span id="nowNextT"></span></span>
+          <b id="nowNextN"></b>
+        </div>
+      </div>
+    </div>
+<aside class="stage-side"><section class="deck">
+      <div class="ident">
+        <div class="ch-logo" id="chLogoWrap"><img id="chLogoImg" src="https://resources-juchetv.vercel.app/channels/assets/images/Korean-Central-Television.png" alt="KCTV"></div>
+        <div class="ch-info">
+          <div class="ch-name" id="chNameWrap"><img src="https://i.postimg.cc/X7LgvSqS/KCTV-title-svg.png" alt="Korean Central Television" style="height:1.15em;width:auto;vertical-align:middle;display:inline-block;max-width:100%"></div>
+          <div class="ch-sub" id="chSub">Live from Pyongyang, DPRK &middot; Korean Central Television.</div>
+        </div>
+      </div>
+      <div class="chan-picker">
+        <span class="chan-picker-lbl">Switch channel</span>
+        <div class="chan-strip" id="chanStrip">
+          <button class="chan-item active" data-ch="kctv" type="button">
+            <span class="chan-avatar"><img src="https://resources-juchetv.vercel.app/channels/assets/images/Korean-Central-Television.png" alt="KCTV logo"><span class="chan-live-dot"></span></span>
+            <span class="chan-label">KCTV</span>
+          </button>
+          <button class="chan-item" data-ch="sports" type="button">
+            <span class="chan-avatar"><img src="https://resources-juchetv.vercel.app/channels/assets/images/Sports-TV.png" alt="Sports TV logo"><span class="chan-live-dot"></span></span>
+            <span class="chan-label">Sports TV</span>
+          </button>
+          <button class="chan-item" data-ch="ryongnamsan" type="button">
+            <span class="chan-avatar"><img src="https://resources-juchetv.vercel.app/channels/assets/images/Ryongnamsan-tv.png" alt="Ryongnamsan TV logo"><span class="chan-live-dot"></span></span>
+            <span class="chan-label">Ryongnamsan TV</span>
+          </button>
+        </div>
+      </div>
+    </section>
+<section class="info">
+      <div class="about">
+        <h3 id="aboutTitle">About KCTV</h3>
+        <p id="aboutDesc">Korean Central Television (KCTV) is the state television broadcaster of the Democratic People's Republic of Korea. It broadcasts news, cultural programs, documentaries, and entertainment content from Pyongyang.</p>
+      </div>
+      <div class="srv" id="srvInfo">
+        <h3>Stream server</h3>
+        <div class="srv-grid">
+          <div class="srv-item"><span>Edge data centre</span><b id="srvColo">&mdash;</b></div>
+          <div class="srv-item"><span>Country (as seen by CDN)</span><b id="srvCountry">&mdash;</b></div>
+          <div class="srv-item"><span>HTTP / TLS</span><b id="srvProto">&mdash;</b></div>
+          <div class="srv-item"><span>Provider</span><b id="srvProv">&mdash;</b></div>
+        </div>
+        <p class="srv-note" id="srvNote">Loading server information&hellip;</p>
+      </div>
+    </section></aside>
+</div></section>
+
+  <div class="inner">
+
+    <!-- 2 · CHANNEL DECK -->
+    
+
+    <!-- 3 · PROGRAMME GUIDE -->
+    <section class="guide" id="epgSection">
+      <div class="guide-head">
+        <div class="guide-title">
+          <h2>Programme guide</h2>
+          <p class="guide-sub">Everything on air today, in Pyongyang Time.</p>
+        </div>
+        <div class="guide-tools">
+          <div class="tool">
+            <label class="tool-lbl" for="epgLangSelect">Language</label>
+            <div class="epg-select-wrap"><select class="epg-select" id="epgLangSelect"></select></div>
+          </div>
+          <div class="tool">
+            <span class="tool-lbl">Date</span>
+            <div class="epg-date-nav">
+              <button class="epg-dnav-btn" id="epgPrevDay" title="Previous day" aria-label="Previous day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+              <div class="epg-dnav-date" id="epgDateLabel">&mdash;</div>
+              <button class="epg-dnav-btn" id="epgNextDay" title="Next day" aria-label="Next day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+              <button class="epg-dnav-today" id="epgTodayBtn" style="display:none">Today</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div id="epgLoading">
+        <div class="sched-list">
+          <div class="sched-row skel-row"><div class="skel-block" style="width:70px;height:24px"></div><div class="sched-body"><div class="skel-block skel-cat"></div><div class="skel-block skel-ttl" style="width:82%"></div><div class="skel-block skel-ttl" style="width:56%"></div><div class="skel-block skel-sub" style="width:40%"></div></div></div>
+          <div class="sched-row skel-row"><div class="skel-block" style="width:70px;height:24px"></div><div class="sched-body"><div class="skel-block skel-cat" style="width:90px"></div><div class="skel-block skel-ttl" style="width:70%"></div><div class="skel-block skel-ttl" style="width:48%"></div></div></div>
+          <div class="sched-row skel-row"><div class="skel-block" style="width:70px;height:24px"></div><div class="sched-body"><div class="skel-block skel-cat" style="width:64px"></div><div class="skel-block skel-ttl" style="width:78%"></div><div class="skel-block skel-ttl" style="width:52%"></div></div></div>
+          <div class="sched-row skel-row"><div class="skel-block" style="width:70px;height:24px"></div><div class="sched-body"><div class="skel-block skel-cat"></div><div class="skel-block skel-ttl" style="width:66%"></div><div class="skel-block skel-ttl" style="width:44%"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div id="epgError" style="display:none">
+        <div class="epg-sw">
+          <div class="epg-si epg-si-warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="epg-sm" id="epgErrorMsg">Failed to load programme guide.</div>
+          <button class="epg-retry" id="epgRetryBtn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Retry
+          </button>
+        </div>
+      </div>
+
+      <!-- No EPG for this channel yet -->
+      <div id="epgNoData" style="display:none">
+        <div class="epg-sw">
+          <div class="epg-si epg-si-tv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+          <div class="epg-sm">A programme guide for this channel isn't available yet. Check back soon &mdash; the live stream still works as normal.</div>
+        </div>
+      </div>
+
+      <!-- Channel outside its broadcast window -->
+      <div id="epgUnavailable" style="display:none">
+        <div class="epg-sw">
+          <div class="epg-si epg-si-off">
+            <span class="epg-si-ring"></span><span class="epg-si-ring d2"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="epg-sm" id="epgUnavailableMsg">This channel isn't broadcasting today.</div>
+        </div>
+      </div>
+
+      <!-- Live content -->
+      <div id="epgContent" style="display:none">
+        <div class="rail-bar">
+          <div class="rail-clock">
+            <span class="rail-clock-lbl">Pyongyang Time</span>
+            <b id="epgHeroClock">--:--:--</b>
+            <span class="rail-clock-tz">UTC+9</span>
+            <span class="rail-date"><span id="epgDateVal">&mdash;</span><span class="vh"> <span id="epgClockVal">--:--:--</span> KST</span></span>
+          </div>
+          <div class="rail-actions">
+            <button class="rail-btn" id="railPrev" type="button" aria-label="Scroll earlier" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="rail-btn" id="railNext" type="button" aria-label="Scroll later"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+            <button class="sched-foot" id="epgViewAllBtn" type="button">
+              Open full schedule
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="sched-list" id="epgSchedule"></div>
+      </div>
+
+      <p class="epg-src-note" id="epgSrcNote">The Electronic Programme Guide (EPG) displays the scheduled broadcast lineup for Korean Central Television (KCTV), the state television broadcaster of the Democratic People's Republic of Korea. It shows what programmes are on air now, what is coming up, and what has already aired. All times are shown in Pyongyang Time (UTC+9). Guide data is provided by <strong id="epgSourceTag">Juche TV</strong>. Available in <strong>English</strong> and <strong>Korean</strong>.</p>
+    </section>
+
+    <!-- 4 · ABOUT + STREAM -->
+    
+
+  </div>
+</main>
+</div>
+
+<!-- EPG FULL OVERLAY -->
+<div class="epg-ov" id="epgOverlay">
+  <div class="epg-ov-inn">
+    <div class="epg-ov-hdr">
+      <div class="epg-ov-ttl">
+        <span class="epg-pill">EPG</span>
+        &#xC870;&#xC120;&#xC911;&#xC559;&#xD154;&#xB808;&#xBE44;&#xC998;
+      </div>
+      <div class="epg-ov-meta">
+        <div class="kst-clk" style="font-size:11px;padding:4px 10px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="epgOverlayDateVal">&mdash;</span>
+          <span style="color:var(--brd2)">&middot;</span>
+          <span class="kst-t" id="epgOverlayClock">--:--:--</span>
+          <span style="color:var(--tx3);font-weight:600">KST</span>
+        </div>
+        <button class="epg-ov-close" id="epgOverlayClose" title="Close (Esc)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="epg-ov-body" id="epgOverlayBody">
+      <div style="padding:40px 20px;text-align:center;color:var(--tx2);font-size:13px">Loading&hellip;</div>
+    </div>
+    <div class="epg-kbd">
+      <span class="kbd-hint"><span class="kbd">Esc</span> to close &nbsp;&middot;&nbsp; <span class="kbd">E</span> to open</span>
+    </div>
+  </div>
+</div>
+
+<!-- SCREENSHOT OVERLAY -->
+<div class="shot-ov" id="shotOverlay">
+  <div class="shot-ov-inn">
+    <div class="shot-ov-hdr">
+      <div class="shot-ov-ttl">Screenshot</div>
+      <button class="shot-ov-close" id="shotOverlayClose" title="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="shot-ov-body" id="shotOverlayBody">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <span class="brand-word">JUCHE&nbsp;<em>TV</em></span>
+      <p class="f-mission">An independent preservation project dedicated to North Korean media — live television and radio, recorded broadcasts, and publications kept as published.</p>
+      <div class="f-badges">
+        <span class="f-badge">Juche TV — Myanmar</span>
+        <span class="f-badge">KoryoFront — South Africa</span>
+      </div>
+    </div>
+    <div class="f-col">
+      <h5>Channels</h5>
+      <a href="/kctv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Korean Central Television</a>
+      <a href="/KCBS"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>KCBS Radio</a>
+      <a href="/VOK"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Voice of Korea</a>
+      <a href="/Magazine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Publications</a>
+      <a href="/VOD.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Video on Demand</a>
+    </div>
+    <div class="f-col">
+      <h5>Service</h5>
+      <a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>About the Service</a>
+      <a href="/schedules"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Schedule &amp; EPG</a>
+      <a href="https://juche-tv-epg-api.vercel.app/api/bloxyplaytv?ch=KCTV&amp;date=2026-08-17" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>EPG API</a>
+    </div>
+    <div class="f-col">
+      <h5>Legal</h5>
+      <a href="terms.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Terms of Service</a>
+      <a href="privacy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>Privacy Policy</a>
+      <a href="eula.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>EULA</a>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <span>&copy; 2026 Juche TV — Not affiliated with any broadcasting entity.<br>Streams owned by Juche TV / Bloxy Play Comprehensive Channel and KoryoFront.</span>
+    <span>Broadcast content remains the property of its respective owners.<br>All channels &amp; radio provided by KoryoFront (South Africa).</span>
+  </div>
+</footer>
+
+<!-- Pyongyang clock -->
+<script>
+  function updateTime() {
+    const el = document.getElementById('clock');
+    if (!el) return;
+    try {
+      el.textContent = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Pyongyang', hour: '2-digit', minute: '2-digit', hour12: false
+      }).format(new Date());
+    } catch (e) {
+      el.textContent = new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+    }
+  }
+  updateTime();
+  setInterval(updateTime, 10000);
+</script>
+
+<script>
+/* ?subsdebug — on-page log of stream (HLS), EPG and subtitle activity.
+   Add ?subsdebug to the page URL. kjLog() is a no-op without it. */
+(function(){
+  var on=false;try{on=new URLSearchParams(location.search).has('subsdebug');}catch(e){}
+  window.kjDebug=on;
+  if(!on){window.kjLog=function(){};return;}
+  var LINES=[],MAX=800,filter='ALL',panel=null,body=null,stat=null,pinned=true;
+  function p(n,l){n=''+n;while(n.length<l)n='0'+n;return n;}
+  function stamp(t){var d=new Date(t);return p(d.getHours(),2)+':'+p(d.getMinutes(),2)+':'+p(d.getSeconds(),2)+'.'+p(d.getMilliseconds(),3);}
+  function visible(l){return filter==='ALL'||(filter==='ERR'?(l.lvl==='e'||l.lvl==='w'):l.tag===filter);}
+  function lineEl(l){
+    var d=document.createElement('div'),t=document.createElement('span'),g=document.createElement('b'),m=document.createElement('span');
+    d.className='kjd-l kjd-'+l.tag.toLowerCase()+(l.lvl?' kjd-'+l.lvl:'');
+    t.className='kjd-t';t.textContent=stamp(l.t);g.textContent=l.tag;m.textContent=l.msg;
+    d.appendChild(t);d.appendChild(g);d.appendChild(m);return d;
+  }
+  function repaint(){
+    if(!body)return;body.textContent='';
+    var f=document.createDocumentFragment();
+    LINES.forEach(function(l){if(visible(l))f.appendChild(lineEl(l));});
+    body.appendChild(f);body.scrollTop=body.scrollHeight;pinned=true;
+  }
+  window.kjLog=function(tag,msg,lvl){
+    var l={t:Date.now(),tag:tag,msg:String(msg),lvl:lvl||''};
+    LINES.push(l);if(LINES.length>MAX)LINES.shift();
+    try{console.log('['+tag+']',l.msg);}catch(e){}
+    if(body&&visible(l)){
+      body.appendChild(lineEl(l));
+      while(body.childNodes.length>MAX)body.removeChild(body.firstChild);
+      if(pinned)body.scrollTop=body.scrollHeight;
+    }
+  };
+  function css(){
+    var s=document.createElement('style');
+    s.textContent=
+      '#kjd{position:fixed;left:8px;right:8px;bottom:8px;max-width:840px;height:44vh;min-height:190px;z-index:2147483000;display:flex;flex-direction:column;background:rgba(8,10,14,.96);border:1px solid #2a3140;border-radius:12px;box-shadow:0 20px 60px -10px #000;font:11.5px/1.45 ui-monospace,"SF Mono",Menlo,Consolas,monospace;color:#c9d1e0;text-align:left}'+
+      '#kjd.top{top:8px;bottom:auto}'+
+      '#kjd.min{height:auto;min-height:0}#kjd.min .kjd-body,#kjd.min .kjd-stat{display:none}'+
+      '.kjd-hd{display:flex;align-items:center;gap:6px;padding:7px 9px;border-bottom:1px solid #232a37;flex-wrap:wrap}'+
+      '.kjd-hd strong{color:#fff;font-size:12px;margin-right:4px;letter-spacing:.3px}'+
+      '.kjd-hd .sp{flex:1}'+
+      '#kjd.min .kjd-test{display:none}'+
+      '.kjd-test{display:flex;align-items:center;gap:6px;padding:6px 9px;border-bottom:1px solid #232a37;flex-wrap:wrap}'+
+      '.kjd-test input[type=text]{flex:1 1 220px;min-width:0;font:12px/1.2 inherit;font-family:inherit;padding:6px 9px;border-radius:7px;border:1px solid #2f3748;background:#0e131b;color:#e6ebf5;outline:none}'+
+      '.kjd-test input[type=text]:focus{border-color:#2f7cf6}'+
+      '.kjd-test select{font-family:inherit;font-size:11px;padding:5px 6px;border-radius:7px;border:1px solid #2f3748;background:#0e131b;color:#c9d1e0}'+
+      '.kjd-test button{font:700 10.5px/1 inherit;font-family:inherit;padding:6px 10px;border-radius:999px;border:1px solid #2f3748;background:#161b24;color:#aab1bf;cursor:pointer}'+
+      '.kjd-test button.go{background:#2f7cf6;border-color:#2f7cf6;color:#fff}'+
+      '.kjd-hd button{font:700 10.5px/1 inherit;font-family:inherit;padding:5px 9px;border-radius:999px;border:1px solid #2f3748;background:#161b24;color:#aab1bf;cursor:pointer}'+
+      '.kjd-hd button:hover{color:#fff;border-color:#47516a}'+
+      '.kjd-hd button.on{background:#2f7cf6;border-color:#2f7cf6;color:#fff}'+
+      '.kjd-stat{padding:6px 10px;border-bottom:1px solid #232a37;color:#8ec1ff;white-space:pre-wrap;word-break:break-all;font-size:11px}'+
+      '.kjd-body{flex:1;overflow-y:auto;padding:4px 0;-webkit-overflow-scrolling:touch}'+
+      '.kjd-l{display:flex;gap:8px;padding:1px 10px;align-items:baseline}'+
+      '.kjd-l .kjd-t{color:#5d667a;flex-shrink:0}'+
+      '.kjd-l b{flex-shrink:0;width:34px;font-weight:800}'+
+      '.kjd-l span:last-child{word-break:break-all;white-space:pre-wrap;min-width:0}'+
+      '.kjd-hls b{color:#6cb0ff}.kjd-epg b{color:#f0b429}.kjd-subs b{color:#3ddc84}.kjd-sys b{color:#9aa2b2}'+
+      '.kjd-w span:last-child{color:#f0b429}.kjd-e{background:rgba(228,20,47,.12)}.kjd-e span:last-child{color:#ff7b8c}';
+    document.head.appendChild(s);
+  }
+  function build(){
+    if(panel)return;css();
+    panel=document.createElement('div');panel.id='kjd';
+    var hd=document.createElement('div');hd.className='kjd-hd';
+    var ttl=document.createElement('strong');ttl.textContent='subsdebug';hd.appendChild(ttl);
+    var chips=['ALL','HLS','EPG','SUBS','SYS','ERR'],chipEls={};
+    chips.forEach(function(c){
+      var b=document.createElement('button');b.type='button';b.textContent=c;if(c===filter)b.className='on';
+      b.addEventListener('click',function(){filter=c;chips.forEach(function(k){chipEls[k].className=k===c?'on':'';});repaint();});
+      chipEls[c]=b;hd.appendChild(b);
+    });
+    var sp=document.createElement('span');sp.className='sp';hd.appendChild(sp);
+    function btn(label,fn){var b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',fn);hd.appendChild(b);return b;}
+    btn('Clear',function(){LINES.length=0;repaint();});
+    var cb=btn('Copy',function(){
+      var txt=(stat.textContent?stat.textContent+'\n\n':'')+LINES.filter(visible).map(function(l){return stamp(l.t)+' ['+l.tag+'] '+l.msg;}).join('\n');
+      var done=function(){cb.textContent='Copied';setTimeout(function(){cb.textContent='Copy';},1500);};
+      if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(done,function(){});
+      else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(e){}ta.remove();}
+    });
+    var dockB=btn('Top',function(){var t=panel.classList.toggle('top');dockB.textContent=t?'Bottom':'Top';});
+    btn('Min',function(){panel.classList.toggle('min');});
+    var tr=document.createElement('div');tr.className='kjd-test';
+    var inp=document.createElement('input');inp.type='text';inp.setAttribute('aria-label','Test caption text');
+    inp.placeholder='Test caption \u2014 "|" = new line, <i>italic</i>';
+    inp.value='This is a test caption | with a second line to check wrapping and size';
+    var dur=document.createElement('select');
+    [['5 s',5000],['15 s',15000],['60 s',60000],['Hold',0]].forEach(function(o){var op=document.createElement('option');op.textContent=o[0];op.value=o[1];dur.appendChild(op);});
+    dur.value='15000';
+    function showTest(txt){if(window.kjTestSub)window.kjTestSub(txt==null?inp.value:txt,parseInt(dur.value,10)||0);}
+    ['keydown','keyup','keypress'].forEach(function(ev){inp.addEventListener(ev,function(e){e.stopPropagation();if(ev==='keydown'&&e.key==='Enter'){e.preventDefault();showTest();}});});
+    function tb(label,cls,fn){var b=document.createElement('button');b.type='button';b.textContent=label;if(cls)b.className=cls;b.addEventListener('click',fn);return b;}
+    tr.appendChild(inp);tr.appendChild(dur);
+    tr.appendChild(tb('Show','go',function(){showTest();}));
+    tr.appendChild(tb('Long','',function(){showTest('The quick brown fox jumps over the lazy dog while the broadcaster reads out a deliberately long caption line to test wrapping on narrow screens and in fullscreen');}));
+    tr.appendChild(tb('Italic','',function(){showTest('<i>(narrator, off screen)</i> | Welcome back to the evening news');}));
+    tr.appendChild(tb('Probe subs','',function(){if(window.kjProbeSubs)window.kjProbeSubs();}));
+    tr.appendChild(tb('Clear','',function(){if(window.kjTestSubClear)window.kjTestSubClear();}));
+    stat=document.createElement('div');stat.className='kjd-stat';
+    body=document.createElement('div');body.className='kjd-body';
+    body.addEventListener('scroll',function(){pinned=body.scrollHeight-body.scrollTop-body.clientHeight<24;},{passive:true});
+    panel.appendChild(hd);panel.appendChild(tr);panel.appendChild(stat);panel.appendChild(body);
+    document.body.appendChild(panel);
+    repaint();
+    setInterval(function(){try{stat.textContent=window.kjStatus?window.kjStatus():'';}catch(e){}},1000);
+  }
+  window.addEventListener('error',function(e){window.kjLog('SYS','JS error: '+e.message+(e.filename?' @ '+e.filename.split('/').pop()+':'+e.lineno:''),'e');});
+  window.addEventListener('unhandledrejection',function(e){window.kjLog('SYS','unhandled rejection: '+(e.reason&&e.reason.message||e.reason),'e');});
+  window.kjLog('SYS','subsdebug on · '+location.pathname+location.search+' · '+navigator.userAgent);
+  if(document.body)build();else document.addEventListener('DOMContentLoaded',build);
+  document.addEventListener('DOMContentLoaded',function(){
+    if(window.Hls)window.kjLog('SYS','hls.js '+Hls.version+' · supported='+Hls.isSupported());
+    else window.kjLog('SYS','hls.js failed to load','e');
+  });
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.7/dist/hls.min.js"></script>
+<script>
+(function(){'use strict';
+
+  /* ─── CHANNELS ───────────────────────────────────────────────
+     Everything channel-specific (stream URL, logo, EPG source)
+     lives here. Adding a channel = adding an entry to this map
+     plus a matching .chan-item button in the channel strip. */
+  var CHANNELS={
+    kctv:{
+      id:'kctv',
+      name:'Korean Central Television',
+      shortName:'KCTV',
+      logo:'https://resources-juchetv.vercel.app/channels/assets/images/Korean-Central-Television.png',
+      titleImg:'https://i.postimg.cc/X7LgvSqS/KCTV-title-svg.png',
+      sub:'Live from Pyongyang, DPRK \u00B7 Korean Central Television.',
+      about:'Korean Central Television (KCTV) is the state television broadcaster of the Democratic People\u2019s Republic of Korea. It broadcasts news, cultural programs, documentaries, and entertainment content from Pyongyang.',
+      stream:'https://live.koryocdn.org/kctv/index.m3u8',
+      subs:'https://live.koryocdn.org/kctv/subs/en.m3u8',
+      hasEpg:true,
+      epgPrimary:function(ds){return 'https://juche-tv-epg-api.vercel.app/api/bloxyplaytv?ch=KCTV&date='+ds;},
+      epgFallback:function(ds){return 'https://juche-tv.vercel.app/api/KoryoFront?date='+ds;},
+      urlCode:'KCTV'
+    },
+    sports:{
+      id:'sports',
+      name:'Sports TV',
+      shortName:'Sports TV',
+      logo:'https://resources-juchetv.vercel.app/channels/assets/images/Sports-TV.png',
+      poster:'https://resources-juchetv.vercel.app/channels/assets/promotional-images/Athletic-Television.png',
+      about:'Athletic Television (Korean: \uCCB4\uC721 \uD154\uB808\uBE44\uC8E4), also known as Sport Television, is a state-owned sports television channel in North Korea. It started broadcasting on 15 August 2015, coinciding with the seventieth anniversary of the National Liberation Day of Korea. The channel broadcasts only on Saturdays and Sundays since its inception.',
+      stream:'https://live.koryocdn.org/sports/index.m3u8',
+      subs:'https://live.koryocdn.org/sports/subs/en.m3u8',
+      hasEpg:true,
+      epgPrimary:function(ds){return 'https://juche-tv-epg-api.vercel.app/api/bloxyplaytv?ch=sports-tv&date='+ds;},
+      epgFallback:null,
+      urlCode:'Sports-tv',
+      availability:{activeOn:'weekend',message:'The stream is currently closed. Sports TV only broadcasts on weekends, from 18:00 Pyongyang Time.'}
+    },
+    ryongnamsan:{
+      id:'ryongnamsan',
+      name:'Ryongnamsan TV',
+      shortName:'Ryongnamsan TV',
+      logo:'https://resources-juchetv.vercel.app/channels/assets/images/Ryongnamsan-tv.png',
+      poster:'https://resources-juchetv.vercel.app/channels/assets/promotional-images/Ryongnamsan-Television.png',
+      about:'Ryongnamsan Television (Korean: \uB8E1\uB0A8\uC0B0\uD154\uB808\uBE44\uC8E4) is a North Korean television channel that focuses on education. It is operated by the University Student TV Department of the Korean Central Broadcasting Committee. The channel schedule includes science documentaries in English, television lectures and educational programs for learning foreign languages including in English, Russian and Chinese.',
+      stream:'https://live.koryocdn.org/ryongnamsan/index.m3u8',
+      subs:'https://live.koryocdn.org/ryongnamsan/subs/en.m3u8',
+      hasEpg:true,
+      epgPrimary:function(ds){return 'https://juche-tv-epg-api.vercel.app/api/bloxyplaytv?ch=ryongnamsan&date='+ds;},
+      epgFallback:null,
+      urlCode:'Ryongnamsan',
+      availability:{activeOn:'weekday',message:'Ryongnamsan TV only broadcasts on weekdays, from 18:00 Pyongyang Time.'}
+    }
+  };
+  var CHANNEL_ORDER=['kctv','sports','ryongnamsan'];
+
+  /* Preload logos with crossOrigin so they can be drawn onto the
+     screenshot canvas without tainting it. If a host doesn't send
+     CORS headers the image simply fails to load here and the
+     banner falls back to text initials \u2014 no crash either way. */
+  var _logoImgCache={};
+  (function preloadChannelLogos(){
+    CHANNEL_ORDER.forEach(function(id){
+      var ch=CHANNELS[id];if(!ch||!ch.logo)return;
+      var img=new Image();
+      img.crossOrigin='anonymous';
+      img.onload=function(){_logoImgCache[id]=img;};
+      img.onerror=function(){};
+      img.src=ch.logo;
+    });
+  })();
+  var CHANNEL_BY_URL_CODE=(function(){
+    var m={};
+    CHANNEL_ORDER.forEach(function(id){
+      var code=CHANNELS[id].urlCode;
+      if(code)m[code.toLowerCase()]=id;
+    });
+    return m;
+  })();
+  function channelIdFromUrl(){
+    try{
+      var v=new URLSearchParams(window.location.search).get('channel');
+      if(!v)return null;
+      return CHANNEL_BY_URL_CODE[v.toLowerCase()]||null;
+    }catch(e){return null;}
+  }
+  function setUrlChannel(chId){
+    try{
+      var ch=CHANNELS[chId];if(!ch||!ch.urlCode)return;
+      var url=new URL(window.location.href);
+      url.searchParams.set('channel',ch.urlCode);
+      window.history.replaceState(null,'',url.toString());
+    }catch(e){}
+  }
+  function pyongyangNow(){
+    var n=new Date();
+    return new Date(n.getTime()+n.getTimezoneOffset()*60000+9*3600000);
+  }
+  function isChannelAvailable(ch){
+    if(!ch||!ch.availability)return true;
+    var day=pyongyangNow().getDay(); /* 0=Sun ... 6=Sat */
+    var isWeekend=(day===0||day===6);
+    return ch.availability.activeOn==='weekend'?isWeekend:!isWeekend;
+  }
+  /* Next moment (in Pyongyang time) a currently-closed channel opens.
+     Matches isChannelAvailable's day-only check: the channel flips
+     open at midnight PT on the next matching weekend/weekday. */
+  function nextOpenPT(ch){
+    if(!ch||!ch.availability)return null;
+    var activeOn=ch.availability.activeOn;
+    var now=pyongyangNow();
+    var target=new Date(now.getTime());
+    target.setHours(24,0,0,0);
+    for(var i=0;i<8;i++){
+      var day=target.getDay();
+      var isWeekend=(day===0||day===6);
+      var matches=activeOn==='weekend'?isWeekend:!isWeekend;
+      if(matches&&target.getTime()>now.getTime())return target;
+      target.setDate(target.getDate()+1);
+      target.setHours(0,0,0,0);
+    }
+    return null;
+  }
+  var activeChannel='kctv',hlsInstance=null,unavailCdTimer=null,subsBlobUrl=null;
+  var subsOn=false;try{subsOn=localStorage.getItem('juchetv-subs')==='on';}catch(e){}
+  function dbg(t,m,l){if(window.kjLog)window.kjLog(t,m,l);}
+  function hookHlsDebug(h,video,hasSubs){
+    var E=Hls.Events;
+    function on(name,fn){if(E[name])h.on(E[name],function(ev,d){try{fn(d||{});}catch(e){dbg('SYS','hook '+name+': '+e.message,'e');}});}
+    dbg('HLS','new Hls instance \u00B7 hls.js '+Hls.version+' \u00B7 source='+(hasSubs?'blob manifest (EN subs injected)':'direct'));
+    on('MEDIA_ATTACHED',function(){dbg('HLS','media attached');});
+    on('MANIFEST_LOADING',function(d){dbg('HLS','manifest loading '+d.url);});
+    on('MANIFEST_LOADED',function(d){dbg('HLS','manifest loaded \u00B7 levels='+(d.levels||[]).length+' subtitleTracks='+(d.subtitleTracks||[]).length+' audioTracks='+(d.audioTracks||[]).length);});
+    on('MANIFEST_PARSED',function(d){dbg('HLS','manifest parsed \u00B7 '+(d.levels||[]).map(function(l){return (l.height?l.height+'p':'?')+'@'+Math.round((l.bitrate||0)/1000)+'k';}).join(', '));});
+    on('LEVEL_LOADED',function(d){var t=d.details||{};dbg('HLS','level '+d.level+' loaded \u00B7 sn '+t.startSN+'-'+t.endSN+' \u00B7 '+(t.fragments||[]).length+' frags \u00B7 '+(t.live?'live':'vod'));});
+    on('LEVEL_SWITCHED',function(d){dbg('HLS','level switched \u2192 '+d.level);});
+    on('FRAG_CHANGED',function(d){dbg('HLS','playing frag sn='+(d.frag&&d.frag.sn)+' lvl='+(d.frag&&d.frag.level));});
+    on('ERROR',function(d){
+      var where=d.url||(d.frag&&d.frag.url)||(d.context&&d.context.url)||'';
+      dbg(/SUBTITLE/i.test(d.details||'')?'SUBS':'HLS',(d.fatal?'FATAL ':'')+d.type+' / '+d.details+(d.response&&d.response.code?' \u00B7 HTTP '+d.response.code:'')+(where?' \u00B7 '+where:''),d.fatal?'e':'w');
+    });
+    on('SUBTITLE_TRACKS_UPDATED',function(d){var t=d.subtitleTracks||[];dbg('SUBS','tracks updated \u00B7 '+t.length+(t.length?' \u2192 '+t.map(function(x,i){return '#'+i+' '+(x.lang||'?')+' "'+(x.name||'')+'" '+x.url;}).join(' | '):''));});
+    on('SUBTITLE_TRACK_SWITCH',function(d){dbg('SUBS','track switch \u2192 '+d.id);});
+    on('SUBTITLE_TRACK_LOADING',function(d){dbg('SUBS','playlist loading '+d.url);});
+    on('SUBTITLE_TRACK_LOADED',function(d){var t=d.details||{};dbg('SUBS','playlist loaded \u00B7 id='+d.id+' \u00B7 sn '+t.startSN+'-'+t.endSN+' \u00B7 '+(t.fragments||[]).length+' segs \u00B7 '+(t.live?'live':'vod'));});
+    on('SUBTITLE_FRAG_PROCESSED',function(d){dbg('SUBS','segment '+(d.frag&&d.frag.sn)+(d.success?' processed':' FAILED'),d.success?'':'e');});
+    on('CUES_PARSED',function(d){var c=d.cues||[];dbg('SUBS','cues parsed \u00B7 '+c.length+(c.length&&c[0].startTime!=null?' \u00B7 '+c[0].startTime.toFixed(1)+'s\u2013'+c[c.length-1].endTime.toFixed(1)+'s':''));});
+    ['waiting','stalled','playing','error'].forEach(function(n){
+      video.addEventListener(n,function(){dbg('HLS','video '+n+(n==='error'&&video.error?' code='+video.error.code+' '+(video.error.message||''):'')+' @'+video.currentTime.toFixed(1)+'s',n==='error'?'e':(n==='playing'?'':'w'));});
+    });
+  }
+
+  /* ─── SUBTITLES ──────────────────────────────────────────────
+     The EN subtitle playlists are separate HLS/WebVTT playlists, which
+     hls.js can only load when they are declared in the master playlist.
+     So we fetch the channel's index.m3u8, add an EXT-X-MEDIA
+     SUBTITLES entry pointing at the subs playlist, and hand hls.js
+     that as a blob URL. If anything fails the plain stream is used. */
+  function buildSubsManifest(streamUrl,subsUrl){
+    dbg('SUBS','fetching '+streamUrl+' to inject '+subsUrl);
+    return fetch(streamUrl,{cache:'no-store'}).then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);return r.text();
+    }).then(function(txt){
+      if(txt.indexOf('#EXTM3U')<0)throw new Error('not a playlist');
+      if(/#EXT-X-MEDIA:[^\n]*TYPE=SUBTITLES/.test(txt)){dbg('SUBS','master already declares subtitle tracks \u2014 using stream as-is');return null;}
+      var base=new URL(streamUrl,location.href);
+      function abs(u){try{return new URL(u,base).href;}catch(e){return u;}}
+      var media='#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="kj-subs",NAME="English",LANGUAGE="en",DEFAULT=NO,AUTOSELECT=NO,URI="'+abs(subsUrl)+'"';
+      if(txt.indexOf('#EXT-X-STREAM-INF')<0){ /* plain media playlist: wrap it */
+        dbg('SUBS','index.m3u8 is a media playlist \u2014 wrapping in a master with EN subs');
+        return ['#EXTM3U',media,'#EXT-X-STREAM-INF:BANDWIDTH=2500000,SUBTITLES="kj-subs"',base.href,''].join('\n');
+      }
+      var lines=txt.split(/\r?\n/).map(function(l){
+        if(!l.trim())return l;
+        if(l.charAt(0)!=='#')return abs(l.trim());
+        l=l.replace(/URI="([^"]*)"/g,function(m,u){return 'URI="'+abs(u)+'"';});
+        if(l.indexOf('#EXT-X-STREAM-INF')===0)l+=',SUBTITLES="kj-subs"';
+        return l;
+      });
+      lines.splice(1,0,media);
+      dbg('SUBS','index.m3u8 is a master ('+(txt.match(/#EXT-X-STREAM-INF/g)||[]).length+' variants) \u2014 injected EN subs group');
+      return lines.join('\n');
+    });
+  }
+  function pickSubTrack(){
+    var tr=(hlsInstance&&hlsInstance.subtitleTracks)||[];
+    for(var i=0;i<tr.length;i++){if(/^en/i.test(tr[i].lang||'')||/english/i.test(tr[i].name||''))return i;}
+    return tr.length?0:-1;
+  }
+  /* hls.js loads/parses the cues; we keep them 'hidden' and draw them ourselves */
+  function applySubs(){
+    if(!hlsInstance)return;
+    try{hlsInstance.subtitleDisplay=false;}catch(e){}
+    var want=subsOn?pickSubTrack():-1;
+    dbg('SUBS','apply \u00B7 want='+want+' \u00B7 tracks='+(hlsInstance.subtitleTracks||[]).length+' \u00B7 current='+hlsInstance.subtitleTrack);
+    try{if(hlsInstance.subtitleTrack!==want)hlsInstance.subtitleTrack=want;}catch(e){}
+    var mv=hlsInstance.media;
+    if(mv&&mv.textTracks){for(var i=0;i<mv.textTracks.length;i++){var tt=mv.textTracks[i];if(tt.kind!=='subtitles')continue;var wm=(subsOn&&want>-1)?'hidden':'disabled';if(tt.mode!==wm)tt.mode=wm;}}
+  }
+  function setSubs(on){
+    subsOn=!!on;
+    dbg('SUBS','subtitles '+(subsOn?'ON':'OFF'));
+    try{localStorage.setItem('juchetv-subs',subsOn?'on':'off');}catch(e){}
+    applySubs();
+  }
+  var subsTest=[];
+  function createSubsRenderer(video,wrap){
+    subsTest.length=0;
+    var box=document.createElement('div');box.className='kj-subs';box.setAttribute('aria-hidden','true');
+    wrap.appendChild(box);
+    var tracks=video.textTracks,bound=[],last='';
+    var NOTE={text:'No captions available at the moment',startTime:'N',endTime:0,_kjNote:true},noteUntil=0,noteTimer=null,startedChecked=false;
+    function hasCues(){
+      for(var i=0;i<tracks.length;i++){var t=tracks[i];if(t.kind==='subtitles'&&t.cues&&t.cues.length>0)return true;}
+      return false;
+    }
+    /* the CDN may only be sending empty.vtt placeholders: tell the viewer for 10s instead of showing nothing */
+    function showNote(){
+      if(!subsOn||hasCues())return;
+      noteUntil=Date.now()+10000;clearTimeout(noteTimer);noteTimer=setTimeout(render,10050);
+      dbg('SUBS','notice: no captions available at the moment (shown for 10s)');
+      render();
+    }
+    /* The browser must never draw these itself (that is what kept captions on screen
+       after toggling): subtitle tracks are 'hidden' while on, 'disabled' while off. */
+    function fix(){
+      var want=subsOn?'hidden':'disabled';
+      for(var i=0;i<tracks.length;i++){
+        var t=tracks[i];
+        if(t.kind!=='subtitles'||t.mode===want)continue;
+        t.mode=want;
+        if(!t._kjFix){t._kjFix=1;dbg('SUBS','forced subtitle track mode \u2192 '+want+' (custom renderer draws captions)');}
+      }
+    }
+    function collect(){
+      var out=[];if(!subsOn)return out;
+      for(var i=0;i<tracks.length;i++){
+        var t=tracks[i];
+        if(t.kind!=='subtitles'||t.mode==='disabled'||!t.activeCues)continue;
+        for(var j=0;j<t.activeCues.length;j++)out.push(t.activeCues[j]);
+      }
+      return out;
+    }
+    function render(){
+      fix();
+      if(!subsOn)noteUntil=0;
+      var real=collect(),cues=real.concat(subsTest);
+      if(noteUntil>Date.now()&&!real.length&&!hasCues())cues.push(NOTE);
+      var key=cues.map(function(c){return (c._kjTest?'T':'')+c.startTime+'|'+c.text;}).join('\n');
+      if(key===last)return;last=key;
+      if(window.kjDebug)cues.forEach(function(c){if(c._kjTest||c._kjNote)return;dbg('SUBS','cue ['+c.startTime.toFixed(1)+'\u2013'+c.endTime.toFixed(1)+'] @'+video.currentTime.toFixed(1)+' "'+(c.text||'').replace(/\s+/g,' ')+'"');});
+      box.textContent='';
+      cues.forEach(function(c){
+        var line=document.createElement('div'),span=document.createElement('span');
+        line.className='kj-subline'+(c._kjNote?' kj-subnote':'');
+        if(typeof c.getCueAsHTML==='function'){try{span.appendChild(c.getCueAsHTML());}catch(e){span.textContent=c.text||'';}}
+        else span.textContent=c.text||'';
+        line.appendChild(span);box.appendChild(line);
+      });
+    }
+    function scan(){
+      for(var i=0;i<tracks.length;i++){if(bound.indexOf(tracks[i])<0){bound.push(tracks[i]);tracks[i].addEventListener('cuechange',render);dbg('SUBS','text track added \u00B7 '+tracks[i].kind+' '+(tracks[i].language||'?')+' "'+(tracks[i].label||'')+'" mode='+tracks[i].mode);}}
+      render();
+    }
+    tracks.addEventListener('addtrack',scan);tracks.addEventListener('change',render);
+    video.addEventListener('timeupdate',render);
+    scan();
+    /* first time the stream plays: if still no captions a few seconds in, show the notice */
+    function onPlaying(){
+      if(startedChecked)return;startedChecked=true;
+      setTimeout(function(){if(subsOn&&!hasCues())showNote();},4000);
+    }
+    video.addEventListener('playing',onPlaying);
+    if(!video.paused&&video.readyState>=3)onPlaying();
+    var api={
+      refresh:render,
+      checkSoon:function(){setTimeout(function(){if(subsOn&&!hasCues())showNote();},2500);},
+      destroy:function(){
+        if(window._kjSubsR===api)window._kjSubsR=null;
+        tracks.removeEventListener('addtrack',scan);tracks.removeEventListener('change',render);
+        video.removeEventListener('timeupdate',render);video.removeEventListener('playing',onPlaying);clearTimeout(noteTimer);
+        bound.forEach(function(t){t.removeEventListener('cuechange',render);});
+        box.remove();
+      }
+    };
+    window._kjSubsR=api;
+    return api;
+  }
+  /* ?subsdebug helper: show temporary client-side captions to test the style (ms=0 holds) */
+  window.kjTestSub=function(text,ms){
+    var r=window._kjSubsR;
+    if(!r){dbg('SUBS','test caption: no subtitle renderer on this player (channel has no subs / not started)','w');return false;}
+    text=String(text||'').replace(/\s*\|\s*/g,'\n').trim();
+    if(!text)return false;
+    var c;try{c=new VTTCue(0,1,text);}catch(e){c={text:text,startTime:0,endTime:1};}
+    c._kjTest=true;subsTest.push(c);
+    if(ms>0)setTimeout(function(){var i=subsTest.indexOf(c);if(i>-1){subsTest.splice(i,1);r.refresh();}},ms);
+    r.refresh();
+    dbg('SUBS','test caption shown'+(ms>0?' for '+(ms/1000)+'s':' (held)')+': "'+text.replace(/\n/g,' / ')+'"');
+    return true;
+  };
+  window.kjTestSubClear=function(){subsTest.length=0;if(window._kjSubsR)window._kjSubsR.refresh();dbg('SUBS','test captions cleared');};
+  var isLiveMode=true;
+  var TV_COVER_IMG='https://raw.githubusercontent.com/Bloxyplay/JucheTV-EPG-API/refs/heads/main/tv_cover.png';
+  var isIOS=(function(){
+    var ua=navigator.userAgent||'';
+    if(/iPad|iPhone|iPod/.test(ua))return true;
+    if(/Macintosh/.test(ua)&&navigator.maxTouchPoints&&navigator.maxTouchPoints>1)return true;
+    return false;
+  })();
+
+  function destroyPlayer(){
+    if(window._dpInstance){try{window._dpInstance.destroy();}catch(e){}window._dpInstance=null;}
+    if(hlsInstance){try{hlsInstance.destroy();}catch(e){}hlsInstance=null;}
+    if(subsBlobUrl){try{URL.revokeObjectURL(subsBlobUrl);}catch(e){}subsBlobUrl=null;}
+    if(unavailCdTimer){clearInterval(unavailCdTimer);unavailCdTimer=null;}
+    var c=document.getElementById('dplayer');
+    if(c){c.innerHTML='';c.className='';['tabindex','role','aria-label','aria-keyshortcuts','data-fullscreen','data-compact'].forEach(function(a){c.removeAttribute(a);});}
+  }
+
+  function buildVideoEl(poster){
+    var v=document.createElement('video');
+    v.id='dplayerVideo';
+    v.className='hls-player';
+    v.playsInline=true;
+    v.setAttribute('webkit-playsinline','');
+    v.setAttribute('x-webkit-airplay','allow');
+    v.setAttribute('x5-video-player-type','h5');
+    v.setAttribute('poster',poster||'');
+    v.controls=false;
+    v.autoplay=true;
+    v.muted=true;
+    v.volume=0.5;
+    v.crossOrigin=null;
+    return v;
+  }
+
+  /* Disable long-press speed-up / hold-to-fast-forward on mobile */
+  function disableLongPress(){
+    var wrap=document.getElementById('dplayer');
+    if(!wrap)return;
+    wrap.addEventListener('contextmenu',function(e){e.preventDefault();},{passive:false});
+    var video=wrap.querySelector('video');
+    if(video)video.addEventListener('contextmenu',function(e){e.stopPropagation();e.preventDefault();},{passive:false,capture:true});
+  }
+
+  /* ─── KORYO PLAYER (live, no DVR) ────────────────────────────
+     Same controls, key hints and keyboard map as the Koryo player,
+     minus the seek bar. member=true is the 2.0 "cinema" layout. */
+  var KSPEEDS=[0.25,0.5,0.75,1,1.25,1.5,1.75,2];
+  var KP={
+    play:'M8 5v14l11-7z',
+    pause:'M6 4h4v16H6V4zm8 0h4v16h-4V4z',
+    speaker:'M3 9v6h4l5 5V4L7 9H3z',
+    unmuted:'M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z',
+    muted:'M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z',
+    fs:'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z',
+    fsx:'M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z',
+    pip:'M19 11h-8v6h8v-6zm4 8V4.98C23 3.88 22.1 3 21 3H3c-1.1 0-2 .88-2 1.98V19c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2zm-2 .02H3V4.97h18v14.05z',
+    cc:'M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 7H9.5v-.5h-2v3h2V13H11v1c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v1zm7 0h-1.5v-.5h-2v3h2V13H18v1c0 .55-.45 1-1 1h-3c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v1z',
+    share:'M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92 0-1.61-1.31-2.92-2.92-2.92z'
+  };
+  function kSvg(d,size,style,margin){return '<svg width="'+size+'" height="'+size+'" fill="currentColor" viewBox="0 0 24 24"'+(style?' style="'+style+'"':'')+'><path d="'+d+'"/></svg>';}
+  function getPlayerVersion(){try{return localStorage.getItem('juchetv-player-version')==='member'?'member':'normal';}catch(e){return 'normal';}}
+
+  function createKoryoPlayer(video,isLive,qualityCfg,member,subsAvail,subsOk){
+    var wrap=document.getElementById('dplayer');
+    wrap.classList.add('kj');
+    if(member){
+      wrap.classList.add('kj-cinema');wrap.tabIndex=0;wrap.setAttribute('role','group');
+      wrap.setAttribute('aria-label','Juche TV Player 2.0');
+      wrap.setAttribute('aria-keyshortcuts','Space K M F C ArrowUp ArrowDown');
+    }
+    var pipOk=!!document.pictureInPictureEnabled&&typeof video.requestPictureInPicture==='function';
+
+    var status=null;
+    if(member){status=document.createElement('span');status.className='kj-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');status.setAttribute('aria-atomic','true');wrap.appendChild(status);}
+
+    var overlay=document.createElement('div');overlay.className='kj-overlay';overlay.setAttribute('data-show','true');
+    overlay.innerHTML=
+      '<div class="kj-centerwrap show"><button type="button" class="kj-centerbtn" aria-label="Play">'+kSvg(KP.play,40,'margin-left:4px')+'</button></div>'+
+      '<div class="kj-bottom"><div class="kj-buttons">'+
+        '<button type="button" class="kj-icon kj-play" aria-label="Play" title="Play">'+kSvg(KP.play,20)+'</button>'+
+        '<div class="kj-volwrap"><button type="button" class="kj-icon kj-mute"></button>'+
+          '<input class="kj-volume" type="range" min="0" max="1" step="0.01" aria-label="Volume"></div>'+
+        (isLive?'<div class="kj-livepill"><span class="kj-livedot"></span>LIVE</div>':'')+
+        '<div class="kj-spacer"></div>'+
+        (subsAvail?'<button type="button" class="kj-cc" aria-label="Subtitles" aria-pressed="false" title="Subtitles (C)">CC<i class="kj-ccdot"></i></button>':'')+
+        (qualityCfg?'<button type="button" class="kj-q" title="Quality" aria-label="Quality">Auto</button>':'')+
+        (pipOk?'<button type="button" class="kj-icon kj-pip" aria-label="Picture-in-Picture" title="Picture-in-Picture">'+kSvg(KP.pip,18)+'</button>':'')+
+        '<button type="button" class="kj-icon kj-share" aria-label="Share" title="Share">'+kSvg(KP.share,18)+'</button>'+
+        '<button type="button" class="kj-icon kj-fs" aria-label="Fullscreen" title="Fullscreen">'+kSvg(KP.fs,20)+'</button>'+
+      '</div></div>';
+    wrap.appendChild(overlay);
+    var subsR=subsAvail?createSubsRenderer(video,wrap):null;
+
+    function q(s){return overlay.querySelector(s);}
+    var centerWrap=q('.kj-centerwrap'),centerBtn=q('.kj-centerbtn'),playBtn=q('.kj-play'),muteBtn=q('.kj-mute'),
+        volSlider=q('.kj-volume'),qBtn=q('.kj-q'),pipBtn=q('.kj-pip'),shareBtn=q('.kj-share'),fsBtn=q('.kj-fs'),bottom=q('.kj-bottom'),ccBtn=q('.kj-cc');
+    var openMenu=null,hintEl=null,hintTimer=null,idleTimer=null,lastVol=0.5,ro=null;
+    var busy={};
+    /* blurred fullscreen backdrop: tiny canvas fed from the video, blurred via CSS */
+    var blurCv=null,blurCtx=null,blurTimer=0;
+    function blurWanted(){try{return localStorage.getItem('juchetv-fs-blur')==='on'&&!!window.matchMedia&&matchMedia('(pointer:coarse)').matches;}catch(e){return false;}}
+    function blurDraw(){if(blurCtx&&video.readyState>=2&&video.videoWidth){try{blurCtx.drawImage(video,0,0,blurCv.width,blurCv.height);}catch(e){}}}
+    function startBlur(){
+      if(blurCv||!blurWanted())return;
+      blurCv=document.createElement('canvas');blurCv.className='kj-blur';blurCv.width=96;blurCv.height=54;blurCv.setAttribute('aria-hidden','true');
+      blurCtx=blurCv.getContext('2d');
+      wrap.insertBefore(blurCv,wrap.firstChild);wrap.classList.add('kj-fsblur');
+      blurDraw();blurTimer=setInterval(blurDraw,80);
+    }
+    function stopBlur(){
+      clearInterval(blurTimer);blurTimer=0;
+      if(blurCv){blurCv.remove();blurCv=null;blurCtx=null;}
+      wrap.classList.remove('kj-fsblur');
+    }
+
+    function clamp(v,a,b){return Math.min(b,Math.max(a,v));}
+    function isPlaying(){return !video.paused;}
+
+    /* key-hint toast */
+    function hint(text,iconKey,ms){
+      if(hintEl)hintEl.remove();clearTimeout(hintTimer);
+      var ic=iconKey==='play'?KP.play:iconKey==='pause'?KP.pause:iconKey?KP.speaker:null;
+      hintEl=document.createElement('div');hintEl.className='kj-hint';
+      hintEl.setAttribute('aria-hidden','true');
+      hintEl.innerHTML=(ic?kSvg(ic,22):'')+(text?'<span></span>':'');
+      if(text)hintEl.lastChild.textContent=text;
+      wrap.appendChild(hintEl);
+      hintTimer=setTimeout(function(){if(hintEl){hintEl.remove();hintEl=null;}},ms||650);
+      if(status){status.textContent='';status.textContent=text||(iconKey==='play'?'Play':iconKey==='pause'?'Pause':'');}
+    }
+
+    /* controls visibility: shown on activity, hidden 3s after playback starts */
+    function showControls(){
+      overlay.setAttribute('data-show','true');wrap.classList.remove('kj-idle');
+      clearTimeout(idleTimer);
+      idleTimer=setTimeout(function(){
+        if(video.paused)return;
+        if(member&&wrap.contains(document.activeElement))return;
+        overlay.setAttribute('data-show','false');wrap.classList.add('kj-idle');closeMenu();
+      },3000);
+    }
+    function syncPaused(){
+      var playing=isPlaying();
+      playBtn.innerHTML=kSvg(playing?KP.pause:KP.play,20);
+      playBtn.setAttribute('aria-label',playing?'Pause':'Play');playBtn.title=playing?'Pause':'Play';
+      centerWrap.classList.toggle('show',!playing);
+      if(!playing)overlay.setAttribute('data-show','true');
+    }
+    function syncVolume(){
+      var m=video.muted||video.volume===0;
+      if(video.volume>0)lastVol=video.volume;
+      muteBtn.innerHTML=m?kSvg(KP.muted,20,member?'':'color:#ef4444'):kSvg(KP.unmuted,20);
+      muteBtn.setAttribute('aria-label',m?'Unmute':'Mute');muteBtn.title=m?'Unmute':'Mute';
+      var shown=member&&video.muted?0:video.volume;
+      volSlider.value=shown;volSlider.style.setProperty('--kv',Math.round(shown*100)+'%');
+      volSlider.setAttribute('aria-valuetext',Math.round((video.muted?0:video.volume)*100)+'%');
+    }
+
+    /* actions */
+    function togglePlay(){
+      if(member){
+        if(busy.play)return;busy.play=true;playBtn.setAttribute('aria-busy','true');
+        var will=video.paused;
+        Promise.resolve(will?video.play():video.pause()).then(function(){hint(will?'Play':'Pause',will?'play':'pause',1000);}).catch(function(){hint('That action could not be completed. Please try again.',null,4000);}).then(function(){busy.play=false;playBtn.removeAttribute('aria-busy');});
+        return;
+      }
+      video.paused?video.play().catch(function(){}):video.pause();
+    }
+    function toggleMute(){
+      if(member){
+        var was=video.muted||video.volume===0;
+        if(was&&video.volume===0)video.volume=lastVol||0.5;
+        video.muted=!was;hint(was?'Unmute':'Mute',was?'unmute':'mute',1000);return;
+      }
+      video.muted=!video.muted;
+    }
+    function stepVol(d){
+      var v=clamp(video.volume+d,0,1);
+      video.volume=v;if(v>0&&video.muted)video.muted=false;if(v===0)video.muted=true;
+      hint(Math.round(v*100)+'%','vol');
+    }
+    function stepRate(d){
+      var i=KSPEEDS.indexOf(video.playbackRate);if(i<0)i=KSPEEDS.indexOf(1);
+      i=clamp(i+d,0,KSPEEDS.length-1);video.playbackRate=KSPEEDS[i];hint(KSPEEDS[i]+'\u00D7');
+    }
+    function isFs(){var e=document.fullscreenElement||document.webkitFullscreenElement;return member?!!(e&&e.contains(wrap)):!!e;}
+    function toggleFs(){
+      var e=document.fullscreenElement||document.webkitFullscreenElement;
+      if(e){if(document.exitFullscreen)document.exitFullscreen();else if(document.webkitExitFullscreen)document.webkitExitFullscreen();}
+      else if(wrap.requestFullscreen)wrap.requestFullscreen().catch(function(){});
+      else if(wrap.webkitRequestFullscreen)wrap.webkitRequestFullscreen();
+      else if(isIOS&&video.webkitEnterFullscreen)video.webkitEnterFullscreen();
+    }
+    function onFsChange(){
+      var on=isFs();
+      fsBtn.innerHTML=kSvg(on?KP.fsx:KP.fs,20);
+      if(on)wrap.setAttribute('data-fullscreen','true');else wrap.removeAttribute('data-fullscreen');
+      if(on)startBlur();else stopBlur();
+    }
+    function togglePip(){
+      if(document.pictureInPictureElement)document.exitPictureInPicture().catch(function(){});
+      else video.requestPictureInPicture().catch(function(){});
+    }
+    function share(){
+      var u=location.href,t='Juche TV';
+      if(navigator.share){navigator.share({title:t,text:'Watch live \u00B7 '+t,url:u}).catch(function(){});return;}
+      if(!(navigator.clipboard&&navigator.clipboard.writeText)){if(member)hint('That action could not be completed. Please try again.',null,4000);return;}
+      navigator.clipboard.writeText(u).then(function(){
+        if(member){hint('Copied',null,2500);return;}
+        shareBtn.setAttribute('data-copied','true');setTimeout(function(){shareBtn.removeAttribute('data-copied');},2000);
+      }).catch(function(){if(member)hint('That action could not be completed. Please try again.',null,4000);});
+    }
+
+    /* quality menu (Auto + every level in the master playlist) */
+    function closeMenu(){if(openMenu){openMenu.remove();openMenu=null;}}
+    function levelById(idx){var f=null;if(qualityCfg)qualityCfg.levels.forEach(function(l){if(l.idx===idx)f=l;});return f;}
+    function qLabel(){
+      if(!qBtn)return;
+      var auto=qualityCfg.current===-1,l=levelById(auto?qualityCfg.playing:qualityCfg.current);
+      qBtn.textContent=auto?(l?'Auto \u00B7 '+l.label:'Auto'):(l?l.label:'Auto');
+    }
+    function pickLevel(idx){qualityCfg.current=idx;qualityCfg.onChange(idx);qLabel();closeMenu();}
+    if(qBtn){
+      qBtn.addEventListener('click',function(e){
+        e.stopPropagation();
+        if(openMenu){closeMenu();return;}
+        var m=document.createElement('div');m.className='kj-menu';
+        var items=[{label:'Auto',idx:-1}].concat(qualityCfg.levels.map(function(l){return {label:l.label,idx:l.idx};}));
+        items.forEach(function(it){
+          var b=document.createElement('button');b.type='button';b.textContent=it.label;
+          if(qualityCfg.current===it.idx)b.className='on';
+          b.addEventListener('click',function(ev){ev.stopPropagation();pickLevel(it.idx);});
+          m.appendChild(b);
+        });
+        bottom.appendChild(m);openMenu=m;
+      });
+      if(hlsInstance&&window.Hls)hlsInstance.on(Hls.Events.LEVEL_SWITCHED,function(ev,d){qualityCfg.playing=d.level;qLabel();});
+    }
+
+    /* subtitles toggle */
+    function subsReady(){return !!subsOk||!!(hlsInstance&&hlsInstance.subtitleTracks&&hlsInstance.subtitleTracks.length);}
+    function syncCc(){
+      if(!ccBtn)return;
+      var ready=subsReady(),on=subsOn&&ready;
+      ccBtn.setAttribute('aria-pressed',on?'true':'false');
+      if(!ready){ccBtn.setAttribute('aria-disabled','true');ccBtn.title='Subtitles unavailable for this stream';ccBtn.setAttribute('aria-label','Subtitles unavailable');return;}
+      ccBtn.removeAttribute('aria-disabled');
+      ccBtn.setAttribute('aria-label',on?'Turn subtitles off':'Turn subtitles on');
+      ccBtn.title=on?'Subtitles: on (C)':'Subtitles: off (C)';
+    }
+    function toggleSubs(){
+      if(!ccBtn)return;
+      if(!subsReady()){hint('Subtitles unavailable',null,1800);dbg('SUBS','toggle ignored \u2014 stream has no subtitle track (see earlier SUBS lines)','w');return;}
+      setSubs(!subsOn);syncCc();if(subsR){subsR.refresh();if(subsOn)subsR.checkSoon();}
+      hint(subsOn?'Subtitles on':'Subtitles off',null,1200);
+    }
+    document.addEventListener('dplayer:subs',syncCc);
+    if(ccBtn){
+      ccBtn.addEventListener('click',function(e){e.stopPropagation();toggleSubs();});
+      syncCc();if(subsReady())applySubs();
+    }
+
+    /* wiring */
+    playBtn.addEventListener('click',togglePlay);
+    centerBtn.addEventListener('click',function(){togglePlay();});
+    muteBtn.addEventListener('click',toggleMute);
+    volSlider.addEventListener('input',function(){
+      var n=parseFloat(this.value);
+      try{video.volume=n;if(n>0&&video.muted)video.muted=false;}catch(e){}
+    });
+    if(pipBtn)pipBtn.addEventListener('click',togglePip);
+    shareBtn.addEventListener('click',function(e){e.stopPropagation();share();});
+    fsBtn.addEventListener('click',toggleFs);
+    video.addEventListener('play',syncPaused);
+    video.addEventListener('pause',syncPaused);
+    video.addEventListener('volumechange',syncVolume);
+    document.addEventListener('fullscreenchange',onFsChange);
+    document.addEventListener('webkitfullscreenchange',onFsChange);
+    wrap.addEventListener('mousemove',showControls);
+    wrap.addEventListener('click',function(e){if(openMenu&&!e.target.closest('.kj-menu,.kj-q'))closeMenu();});
+    if(member){
+      ['focusin','focusout','touchstart'].forEach(function(ev){wrap.addEventListener(ev,showControls,{passive:true,capture:true});});
+      wrap.addEventListener('pointerdown',function(e){
+        showControls();
+        var t=e.target.closest&&e.target.closest('button,a[href],input,select,[tabindex]');
+        if(!t||t===wrap)wrap.focus({preventScroll:true});
+      },true);
+    }
+    if(typeof ResizeObserver!=='undefined'){
+      ro=new ResizeObserver(function(){var r=wrap.getBoundingClientRect();wrap.setAttribute('data-compact',String(r.width<=600||r.height<300));});
+      ro.observe(wrap);
+    }
+
+    /* keyboard: Space/K, Up/Down volume, M, F, < > speed */
+    function onKey(e){
+      if(!wrap.isConnected){detach();return;}
+      if(e.target&&/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)&&!e.target.classList.contains('kj-volume'))return;
+      if(e.defaultPrevented||e.isComposing||e.metaKey||e.ctrlKey||e.altKey)return;
+      var t=e.target;
+      if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT'||t.isContentEditable))return;
+      if(member){
+        if(!wrap.contains(document.activeElement))return;
+        var inCtl=t&&t.closest&&t.closest('button,a[href],summary,[role="button"]');
+        if(inCtl)return;
+      }
+      var k=e.key,lk=k.toLowerCase(),handled=true;
+      if(lk===' '||lk==='k'){
+        if(e.repeat){e.preventDefault();return;}
+        e.preventDefault();togglePlay();
+        if(!member)hint('',video.paused?'play':'pause');
+      }
+      else if(k==='ArrowUp'){e.preventDefault();stepVol(0.05);}
+      else if(k==='ArrowDown'){e.preventDefault();stepVol(-0.05);}
+      else if(lk==='c'&&ccBtn){if(e.repeat){e.preventDefault();return;}e.preventDefault();toggleSubs();}
+      else if(lk==='m'){if(e.repeat){e.preventDefault();return;}e.preventDefault();toggleMute();if(!member)hint('',video.muted?'mute':'unmute');}
+      else if(lk==='f'){if(e.repeat){e.preventDefault();return;}e.preventDefault();toggleFs();}
+      else if(k==='>'||k==='.'){e.preventDefault();stepRate(1);}
+      else if(k==='<'||k===','){e.preventDefault();stepRate(-1);}
+      else handled=false;
+      if(handled)showControls();
+    }
+    var keyTarget=member?wrap:document;
+    keyTarget.addEventListener('keydown',onKey);
+    function detach(){keyTarget.removeEventListener('keydown',onKey);}
+
+    syncVolume();syncPaused();showControls();
+
+    return {
+      destroy:function(){
+        detach();stopBlur();if(subsR)subsR.destroy();document.removeEventListener('dplayer:subs',syncCc);
+        document.removeEventListener('fullscreenchange',onFsChange);
+        document.removeEventListener('webkitfullscreenchange',onFsChange);
+        if(ro)ro.disconnect();
+        clearTimeout(idleTimer);clearTimeout(hintTimer);
+      }
+    };
+  }
+
+  function loadLiveSource(video,url,onReady,subsUrl,srcOverride){
+    if(window.Hls&&Hls.isSupported()){
+      if(subsUrl&&!srcOverride){
+        buildSubsManifest(url,subsUrl).catch(function(e){console.warn('[subs]',e&&e.message);dbg('SUBS','manifest injection failed: '+(e&&e.message)+' \u2014 playing plain stream, subtitles unavailable','e');return null;}).then(function(txt){
+          if(!video.isConnected)return;
+          var src=url;
+          if(txt){
+            if(subsBlobUrl){try{URL.revokeObjectURL(subsBlobUrl);}catch(e){}}
+            subsBlobUrl=URL.createObjectURL(new Blob([txt],{type:'application/vnd.apple.mpegurl'}));
+            src=subsBlobUrl;dbg('SUBS','handing blob manifest to hls.js');
+          }
+          loadLiveSource(video,url,onReady,subsUrl,src);
+        });
+        return;
+      }
+      var hasSubs=!!subsUrl&&!!srcOverride&&srcOverride!==url;
+      hlsInstance=new Hls({
+        enableWorker:true,lowLatencyMode:false,backBufferLength:90,highBufferWatchdogPeriod:3,
+        liveSyncDuration:(function(){var m=/[?&]livesync=(\d+)/.exec(location.search);return m?parseInt(m[1],10):45;})(),liveMaxLatencyDuration:Infinity,maxLiveSyncPlaybackRate:1,
+        maxBufferLength:90,maxMaxBufferLength:180,
+        manifestLoadingTimeOut:20000,manifestLoadingMaxRetry:6,
+        levelLoadingTimeOut:20000,levelLoadingMaxRetry:6,
+        fragLoadingTimeOut:30000,fragLoadingMaxRetry:8,fragLoadingMaxRetryTimeout:64000
+      });
+      hlsInstance.loadSource(srcOverride||url);
+      hlsInstance.attachMedia(video);
+      hlsInstance.on(Hls.Events.SUBTITLE_TRACKS_UPDATED,function(){applySubs();document.dispatchEvent(new CustomEvent('dplayer:subs'));});
+      if(window.kjDebug)hookHlsDebug(hlsInstance,video,hasSubs);
+      hlsInstance.on(Hls.Events.MANIFEST_PARSED,function(ev,data){
+        var qualityCfg=null;
+        if(data&&data.levels&&data.levels.length>1){
+          var lv=data.levels.map(function(l,i){
+            var h=l.height||0,b=l.bitrate||0;
+            return {idx:i,height:h,bitrate:b,label:h?h+'p':(b?Math.round(b/1000)+' kbps':'Level '+(i+1))};
+          }).sort(function(a,b){return (b.height-a.height)||(b.bitrate-a.bitrate);});
+          qualityCfg={levels:lv,current:-1,playing:-1,onChange:function(idx){if(hlsInstance)hlsInstance.currentLevel=idx;}};
+        }
+        if(onReady)onReady(qualityCfg,hasSubs||!!(hlsInstance&&hlsInstance.subtitleTracks&&hlsInstance.subtitleTracks.length));
+        video.play().catch(function(){});
+      });
+      hlsInstance.on(Hls.Events.ERROR,function(ev,data){
+        console.warn('[HLS]',url,data.type,data.details,data.response&&data.response.code,data.fatal?'FATAL':'');
+        if(data.fatal){switch(data.type){
+          case Hls.ErrorTypes.NETWORK_ERROR:hlsInstance.startLoad();break;
+          case Hls.ErrorTypes.MEDIA_ERROR:hlsInstance.recoverMediaError();break;
+          default:
+            hlsInstance.destroy();hlsInstance=null;
+            setTimeout(function(){if(video&&video.isConnected)loadLiveSource(video,url,function(){},subsUrl);},5000);
+        }}
+      });
+    }else if(video.canPlayType('application/vnd.apple.mpegurl')){
+      /* Native HLS (Safari/iOS) */
+      video.src=url;
+      video.addEventListener('loadedmetadata',function(){video.play().catch(function(){});},{once:true});
+      if(onReady)onReady(null);
+    }
+  }
+
+  function initPlayer(chId){
+    var ch=CHANNELS[chId];if(!ch||!ch.stream)return;
+    activeChannel=chId;
+    destroyPlayer();
+    isLiveMode=true;
+    dbg('HLS','init channel='+chId+' \u00B7 stream='+ch.stream);
+    var wrap=document.getElementById('dplayer');
+    if(!isChannelAvailable(ch)){
+      dbg('HLS','channel off air (availability window) \u2014 no stream started','w');
+      renderChannelUnavailable(wrap,ch);
+      document.dispatchEvent(new CustomEvent('dplayer:reinit'));
+      return;
+    }
+    var video=buildVideoEl(ch.poster||TV_COVER_IMG);
+    wrap.appendChild(video);
+    disableLongPress();
+    loadLiveSource(video,ch.stream,function(qualityCfg,hasSubs){
+      window._dpInstance=createKoryoPlayer(video,true,qualityCfg,getPlayerVersion()==='member',!!ch.subs,hasSubs);
+    },ch.subs);
+    document.dispatchEvent(new CustomEvent('dplayer:reinit'));
+  }
+
+  /* Blurred placeholder shown instead of the player when a channel is
+     outside its broadcast window (e.g. Sports TV on weekdays). No
+     video element, no Hls/DPlayer JS is instantiated in this state. */
+  function fmt2d(n){return n<10?'0'+n:''+n;}
+  function fmt3d(n){return n<10?'00'+n:n<100?'0'+n:''+n;}
+  function cdSeg(id,val,lbl,isMs){
+    return '<div class="kp-unavail-cd-seg"><span class="kp-unavail-cd-num'+(isMs?' ms':'')+'" id="'+id+'">'+val+'</span><span class="kp-unavail-cd-lbl">'+lbl+'</span></div>';
+  }
+  function renderChannelUnavailable(wrap,ch){
+    wrap.classList.add('kp-unavailable');
+    var bg=ch.poster||ch.logo||TV_COVER_IMG;
+    var msg=(ch.availability&&ch.availability.message)||'This channel is currently off air.';
+    var openAt=nextOpenPT(ch);
+    var cdHtml='';
+    if(openAt){
+      var DOW_FULL=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      var openLbl=DOW_FULL[openAt.getDay()];
+      cdHtml=
+        '<div class="kp-unavail-opens">Opens '+openLbl+'</div>'+
+        '<div class="kp-unavail-cd">'+
+          cdSeg('kpCdD','00','Days')+
+          '<span class="kp-unavail-cd-sep">:</span>'+cdSeg('kpCdH','00','Hrs')+
+          '<span class="kp-unavail-cd-sep">:</span>'+cdSeg('kpCdM','00','Min')+
+          '<span class="kp-unavail-cd-sep">:</span>'+cdSeg('kpCdS','00','Sec')+
+          '<span class="kp-unavail-cd-sep">:</span>'+cdSeg('kpCdMs','000','Ms',true)+
+        '</div>';
+    }
+    wrap.innerHTML=
+      '<div class="kp-unavail-bg" style="background-image:url(\''+bg+'\')"></div>'+
+      '<div class="kp-unavail-scrim"></div>'+
+      '<div class="kp-unavail-msg">'+
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 7 12 12 15.5 14"/></svg>'+
+        '<p>'+msg+'</p>'+
+        cdHtml+
+      '</div>';
+    if(unavailCdTimer){clearInterval(unavailCdTimer);unavailCdTimer=null;}
+    if(openAt){
+      var dEl=document.getElementById('kpCdD'),hEl=document.getElementById('kpCdH'),
+          mEl=document.getElementById('kpCdM'),sEl=document.getElementById('kpCdS'),
+          msEl=document.getElementById('kpCdMs');
+      var tickCd=function(){
+        var diff=openAt.getTime()-pyongyangNow().getTime();
+        if(diff<=0){
+          clearInterval(unavailCdTimer);unavailCdTimer=null;
+          initPlayer(activeChannel);
+          return;
+        }
+        var ms=diff%1000;diff=(diff-ms)/1000;
+        var s=diff%60;diff=(diff-s)/60;
+        var m=diff%60;diff=(diff-m)/60;
+        var h=diff%24;diff=(diff-h)/24;
+        var d=diff;
+        if(dEl)dEl.textContent=d;
+        if(hEl)hEl.textContent=fmt2d(h);
+        if(mEl)mEl.textContent=fmt2d(m);
+        if(sEl)sEl.textContent=fmt2d(s);
+        if(msEl)msEl.textContent=fmt3d(ms);
+      };
+      tickCd();
+      unavailCdTimer=setInterval(tickCd,47);
+    }
+  }
+
+  window._kctvIsLive=function(){return isLiveMode;};
+  window._kctvIsIOS=isIOS;
+  window.CHANNELS=CHANNELS;
+  window.CHANNEL_ORDER=CHANNEL_ORDER;
+
+  /* Updates the channel header, About section, topbar note and strip
+     highlight to match the given channel. Does not touch the player
+     or the EPG — those are switched separately by switchChannel(). */
+  function updateChannelChrome(chId){
+    var ch=CHANNELS[chId];if(!ch)return;
+    var logoWrap=document.getElementById('chLogoWrap');
+    var nameWrap=document.getElementById('chNameWrap');
+    var sub=document.getElementById('chSub');
+    var aboutTitle=document.getElementById('aboutTitle');
+    var aboutDesc=document.getElementById('aboutDesc');
+    var topbarNote=document.getElementById('topbarNote');
+    if(logoWrap)logoWrap.innerHTML=ch.logo?'<img src="'+ch.logo+'" alt="'+ch.shortName+'">':'<span style="font-size:11px;font-weight:900;color:var(--red-dark)">'+ch.shortName.slice(0,4).toUpperCase()+'</span>';
+    if(nameWrap)nameWrap.innerHTML=ch.titleImg?'<img src="'+ch.titleImg+'" alt="'+ch.name+'" style="height:1.15em;width:auto;vertical-align:middle;display:inline-block;max-width:100%">':ch.name;
+    if(sub)sub.textContent=ch.sub;
+    if(aboutTitle)aboutTitle.textContent='About '+ch.shortName;
+    if(aboutDesc)aboutDesc.textContent=ch.about;
+    if(topbarNote)topbarNote.textContent=ch.name+' — broadcasting live from the DPRK';
+    document.title=ch.name+' \u2014 Explore Channels \u00B7 Juche TV';
+    document.querySelectorAll('.chan-item').forEach(function(btn){
+      btn.classList.toggle('active',btn.getAttribute('data-ch')===chId);
+    });
+  }
+  window._kctvUpdateChannelChrome=updateChannelChrome;
+
+  /* Full channel switch: player + header/about + EPG, driven by a click
+     on the channel strip. Defined here (rather than in the EPG script)
+     so it has access to CHANNELS/initPlayer, and exposed on window so
+     the EPG script can call it without a load-order dependency. */
+  function switchChannel(chId){
+    if(!CHANNELS[chId]||chId===activeChannel&&window._dpInstance)return;
+    initPlayer(chId);
+    updateChannelChrome(chId);
+    setUrlChannel(chId);
+    if(window._kctvSetEpgChannel)window._kctvSetEpgChannel(chId);
+  }
+  window._kctvSwitchChannel=switchChannel;
+
+  function bindChanStrip(){
+    var strip=document.getElementById('chanStrip');
+    if(!strip)return;
+    strip.addEventListener('click',function(e){
+      var btn=e.target.closest('.chan-item');
+      if(!btn)return;
+      var chId=btn.getAttribute('data-ch');
+      if(chId)switchChannel(chId);
+    });
+  }
+
+  function _init(){
+    var startCh=channelIdFromUrl()||'kctv';
+    initPlayer(startCh);
+    updateChannelChrome(startCh);
+    setUrlChannel(startCh);
+    bindChanStrip();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_init);else _init();
+  window._kctvInitPlayer=initPlayer;window._kctvActiveServer=function(){return activeChannel;};window._kctvHls=function(){return hlsInstance;};
+  /* ?subsdebug "Probe subs": ask the CDN directly what it is serving, bypassing hls.js */
+  window.kjProbeSubs=function(){
+    var ch=CHANNELS[activeChannel],h=hlsInstance,tr=h&&h.subtitleTracks&&h.subtitleTracks[0];
+    var url=(tr&&/^https?:/.test(tr.url||'')&&tr.url)||(ch&&ch.subs),t0=Date.now();
+    if(!url){dbg('SUBS','probe: no subtitle URL known for this channel','w');return;}
+    var vt=document.getElementById('dplayerVideo');
+    dbg('SUBS','probe: GET '+url+(vt?' \u00B7 video t='+vt.currentTime.toFixed(1)+'s':''));
+    fetch(url,{cache:'no-store'}).then(function(r){
+      dbg('SUBS','probe: playlist HTTP '+r.status+' \u00B7 '+(Date.now()-t0)+'ms',r.ok?'':'e');
+      if(!r.ok)throw new Error('HTTP '+r.status);return r.text();
+    }).then(function(txt){
+      var segs=[],seq='?',target='?',ended=false,win=0;
+      txt.split(/\r?\n/).forEach(function(l){
+        l=l.trim();if(!l)return;
+        if(l.indexOf('#EXT-X-MEDIA-SEQUENCE:')===0)seq=l.split(':')[1];
+        else if(l.indexOf('#EXT-X-TARGETDURATION:')===0)target=l.split(':')[1];
+        else if(l.indexOf('#EXT-X-ENDLIST')===0)ended=true;
+        else if(l.indexOf('#EXTINF:')===0)win+=parseFloat(l.slice(8))||0;
+        else if(l.charAt(0)!=='#')segs.push(l);
+      });
+      dbg('SUBS','probe: playlist has '+segs.length+' segment(s) \u00B7 media-sequence='+seq+' \u00B7 target='+target+'s \u00B7 '+(ended?'ENDED':'live'),segs.length?'':'e');
+      var lat=NaN;try{lat=h&&h.latency;}catch(e){}
+      dbg('SUBS','probe: playlist covers \u2248'+win.toFixed(1)+'s of captions'+(isFinite(lat)&&lat?' \u00B7 video is '+lat.toFixed(1)+'s behind live':''),(isFinite(lat)&&lat&&win&&win<lat)?'w':'');
+      if(isFinite(lat)&&lat&&win&&win<lat)dbg('SUBS','probe: the caption playlist is SHORTER than the video latency \u2014 captions for what is on screen have already left the playlist. Try ?livesync='+Math.max(8,Math.floor(win-8))+' (seconds behind live)','w');
+      if(!segs.length){dbg('SUBS','probe: playlist is empty \u2014 the CDN is not publishing captions right now (nothing hls.js could show)','e');return;}
+      var base=new URL(url,location.href),last=segs.slice(-3);
+      return Promise.all(last.map(function(sg){
+        var su=new URL(sg,base).href;
+        return fetch(su,{cache:'no-store'}).then(function(r){
+          return r.text().then(function(body){return {name:sg,status:r.status,body:body};});
+        }).catch(function(e){return {name:sg,status:0,err:e.message,body:''};});
+      })).then(function(res){
+        res.forEach(function(x){
+          if(!x.status){dbg('SUBS','probe: segment '+x.name+' failed \u00B7 '+x.err,'e');return;}
+          var cues=x.body.split(/\r?\n/).filter(function(l){return l.indexOf('-->')>-1;});
+          var map=(x.body.match(/X-TIMESTAMP-MAP=[^\r\n]*/)||[''])[0];
+          var firstTxt='';
+          var m=x.body.split(/\r?\n/);for(var i=0;i<m.length;i++){if(m[i].indexOf('-->')>-1){firstTxt=(m[i+1]||'').slice(0,70);break;}}
+          dbg('SUBS','probe: '+x.name+' \u00B7 HTTP '+x.status+' \u00B7 '+x.body.length+' bytes \u00B7 '+cues.length+' cue(s)'+(map?' \u00B7 '+map:' \u00B7 no X-TIMESTAMP-MAP')+(cues.length?' \u00B7 first: '+cues[0].trim()+' "'+firstTxt+'"':''),(x.status!==200)?'e':(cues.length?'':'w'));
+        });
+        if(res.every(function(x){return x.status===200&&!/-->/.test(x.body);}))dbg('SUBS','probe: last segments are valid but contain no cues \u2014 likely silence / no captioned speech at the moment','w');
+      });
+    }).catch(function(e){dbg('SUBS','probe failed: '+(e&&e.message)+' (HTTP error or CORS blocked)','e');});
+  };
+  window.kjStatus=function(){
+    var v=document.getElementById('dplayerVideo'),h=hlsInstance;
+    if(!v)return 'channel='+activeChannel+' \u00B7 no player (off air / not started)';
+    var buf=0;try{for(var i=0;i<v.buffered.length;i++){if(v.currentTime>=v.buffered.start(i)&&v.currentTime<=v.buffered.end(i)){buf=v.buffered.end(i)-v.currentTime;break;}}}catch(e){}
+    var out=['channel='+activeChannel+' \u00B7 '+(v.paused?'paused':'playing')+' \u00B7 t='+v.currentTime.toFixed(1)+'s \u00B7 buffer=+'+buf.toFixed(1)+'s \u00B7 '+v.videoWidth+'x'+v.videoHeight+' \u00B7 readyState='+v.readyState];
+    if(h){var lat='';try{if(isFinite(h.latency)&&h.latency)lat=' \u00B7 latency='+h.latency.toFixed(1)+'s';}catch(e){}
+      out.push('hls level='+h.currentLevel+'/'+(h.levels?h.levels.length:0)+lat+' \u00B7 subTrack='+h.subtitleTrack+'/'+(h.subtitleTracks?h.subtitleTracks.length:0)+' \u00B7 subs='+(subsOn?'on':'off'));}
+    else out.push('hls: none (native playback or not started) \u00B7 subs='+(subsOn?'on':'off'));
+    var tt=[];for(var j=0;j<v.textTracks.length;j++){var t=v.textTracks[j];tt.push(t.kind+'/'+(t.language||'?')+' '+t.mode+' cues='+(t.cues?t.cues.length:0)+' active='+(t.activeCues?t.activeCues.length:0));}
+    out.push('textTracks: '+(tt.length?tt.join(' | '):'none'));
+    return out.join('\n');
+  };
+
+  /* ─── SCREENSHOT ───────────────────────────────────────────
+     Grabs the current video frame onto a canvas, shows it in an
+     overlay alongside a copyable source citation. */
+  function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function channelPageUrl(chId){
+    var ch=CHANNELS[chId];
+    try{
+      var url=new URL(window.location.href);
+      if(ch&&ch.urlCode)url.searchParams.set('channel',ch.urlCode);
+      return url.toString();
+    }catch(e){return window.location.href;}
+  }
+  function sourceCitation(chId){
+    var ch=CHANNELS[chId];
+    var name=ch?ch.name:'Juche TV';
+    return "Source: '"+name+' '+ymd(new Date())+' via '+channelPageUrl(chId)+"'";
+  }
+  /* ---- Banner watermark (phone-camera-style caption bar) ---- */
+  function truncateToWidth(ctx,text,maxW){
+    if(ctx.measureText(text).width<=maxW)return text;
+    var t=text;
+    while(t.length>1&&ctx.measureText(t+'\u2026').width>maxW)t=t.slice(0,-1);
+    return t+'\u2026';
+  }
+  function drawShotBanner(ctx,w,h,chId,programText){
+    var ch=CHANNELS[chId];
+    var barH=Math.max(56,Math.round(h*.15));
+    var pad=Math.round(barH*.26);
+    var grad=ctx.createLinearGradient(0,h-barH,0,h);
+    grad.addColorStop(0,'rgba(10,12,16,0)');
+    grad.addColorStop(.55,'rgba(10,12,16,.62)');
+    grad.addColorStop(1,'rgba(10,12,16,.82)');
+    ctx.fillStyle=grad;
+    ctx.fillRect(0,h-barH,w,barH);
+
+    var logoSize=barH-pad*2;
+    var logoX=pad,logoY=h-barH+pad;
+    var img=_logoImgCache[chId];
+    ctx.shadowColor='rgba(0,0,0,.5)';ctx.shadowBlur=6;
+    if(img){
+      var iw=img.naturalWidth||img.width,ih=img.naturalHeight||img.height;
+      var scale=Math.min(logoSize/iw,logoSize/ih);
+      var dw=iw*scale,dh=ih*scale;
+      ctx.drawImage(img,logoX+(logoSize-dw)/2,logoY+(logoSize-dh)/2,dw,dh);
+    }else{
+      ctx.fillStyle='#fff';
+      ctx.font='700 '+Math.round(logoSize*.4)+'px Archivo,sans-serif';
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      ctx.fillText(((ch&&ch.shortName)||'JTV').slice(0,3).toUpperCase(),logoX+logoSize/2,logoY+logoSize/2+1);
+    }
+    ctx.shadowBlur=0;
+
+    var textX=logoX+logoSize+pad*.85;
+    var nameSize=Math.max(12,Math.round(barH*.27));
+    var subSize=Math.max(10,Math.round(barH*.19));
+    var rightColW=Math.max(w*.32,125);
+    var leftMaxW=w-textX-rightColW-pad;
+    var midY=h-barH/2;
+
+    ctx.shadowColor='rgba(0,0,0,.55)';ctx.shadowBlur=4;
+    ctx.textAlign='left';ctx.textBaseline='alphabetic';
+    ctx.fillStyle='#fff';
+    ctx.font='800 '+nameSize+'px Archivo,sans-serif';
+    ctx.fillText(truncateToWidth(ctx,((ch&&ch.name)||'Juche TV').toUpperCase(),leftMaxW),textX,midY-subSize*.15);
+
+    var program=(programText&&programText.trim())||'Live broadcast';
+    ctx.fillStyle='rgba(255,255,255,.8)';
+    ctx.font='500 '+subSize+'px Archivo,sans-serif';
+    ctx.fillText(truncateToWidth(ctx,'On air \u00b7 '+program,leftMaxW),textX,midY+subSize*1.15);
+
+    // JUCHE TV wordmark, two-tone like the site's own brand mark
+    var brandSize=Math.max(12,Math.round(barH*.24));
+    ctx.font='900 '+brandSize+'px Archivo,sans-serif';
+    var wJuche=ctx.measureText('JUCHE ').width,wTv=ctx.measureText('TV').width;
+    var brandRight=w-pad,brandY=midY-subSize*.15;
+    ctx.textAlign='left';
+    ctx.fillStyle='#fff';
+    ctx.fillText('JUCHE ',brandRight-wJuche-wTv,brandY);
+    ctx.fillStyle='#e8384f';
+    ctx.fillText('TV',brandRight-wTv,brandY);
+    ctx.textAlign='right';
+    ctx.fillStyle='rgba(255,255,255,.68)';
+    ctx.font='600 '+Math.max(9,Math.round(subSize*.82))+'px Archivo,sans-serif';
+    try{ctx.letterSpacing='.6px';}catch(e){}
+    ctx.fillText(truncateToWidth(ctx,'PRESERVING NORTH KOREAN MEDIA',rightColW),w-pad,midY+subSize*1.15);
+    try{ctx.letterSpacing='0px';}catch(e){}
+    ctx.shadowBlur=0;
+  }
+  /* Draws the raw captured frame onto a fresh canvas, optionally
+     adding the banner, and returns a PNG data URL. Kept separate
+     from capture so the on/off toggle can re-render instantly
+     without re-grabbing the video frame. */
+  function composeShot(rawCanvas,chId,includeBanner,programText){
+    var out=document.createElement('canvas');
+    out.width=rawCanvas.width;out.height=rawCanvas.height;
+    var ctx=out.getContext('2d');
+    ctx.drawImage(rawCanvas,0,0);
+    if(includeBanner){
+      try{drawShotBanner(ctx,out.width,out.height,chId,programText);}catch(e){}
+    }
+    try{return out.toDataURL('image/png');}
+    catch(e){
+      // Canvas got tainted (a cross-origin logo without CORS headers
+      // slipped through) \u2014 fall back to the plain frame, no banner.
+      var plain=document.createElement('canvas');
+      plain.width=rawCanvas.width;plain.height=rawCanvas.height;
+      plain.getContext('2d').drawImage(rawCanvas,0,0);
+      return plain.toDataURL('image/png');
+    }
+  }
+  var shotOv=document.getElementById('shotOverlay'),shotOrigParent=shotOv.parentNode;
+  var shotBody=document.getElementById('shotOverlayBody');
+  function getPlayerContainerForShot(){return document.getElementById('dplayer');}
+  function openShotOv(){
+    var dp=getPlayerContainerForShot();
+    var inFS=dp&&(document.fullscreenElement===dp||document.webkitFullscreenElement===dp);
+    if(inFS&&dp)dp.appendChild(shotOv);else if(shotOv.parentNode!==shotOrigParent)shotOrigParent.appendChild(shotOv);
+    shotOv.classList.add('show');
+  }
+  function closeShotOv(){
+    shotOv.classList.remove('show');
+    setTimeout(function(){if(shotOv.parentNode!==shotOrigParent)shotOrigParent.appendChild(shotOv);},350);
+  }
+  document.getElementById('shotOverlayClose').addEventListener('click',closeShotOv);
+  shotOv.addEventListener('click',function(e){if(e.target===shotOv)closeShotOv();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&shotOv.classList.contains('show'))closeShotOv();});
+  function onShotFsChange(){
+    if(!shotOv.classList.contains('show'))return;
+    var dp=getPlayerContainerForShot();
+    var inFS=dp&&(document.fullscreenElement===dp||document.webkitFullscreenElement===dp);
+    if(inFS&&dp){if(shotOv.parentNode!==dp)dp.appendChild(shotOv);}
+    else{if(shotOv.parentNode!==shotOrigParent)shotOrigParent.appendChild(shotOv);}
+  }
+  document.addEventListener('fullscreenchange',onShotFsChange);
+  document.addEventListener('webkitfullscreenchange',onShotFsChange);
+
+  function renderShotError(msg){
+    shotBody.innerHTML='<div class="shot-ov-err">'+msg+'</div>';
+  }
+  function renderShot(rawCanvas,chId){
+    var citation=sourceCitation(chId);
+    var todayProgs=(window._kctvGetTodayPrograms&&window._kctvGetTodayPrograms(chId))||[];
+    var CUSTOM='__custom__';
+    var progRowHtml='<div class="shot-ov-prog-row"><div class="shot-ov-label">Program shown on banner</div>';
+    if(todayProgs.length){
+      progRowHtml+='<select class="shot-ov-prog-select" id="shotProgramSelect">'+
+        todayProgs.map(function(p,i){
+          var label=p.time+' \u2014 '+esc(p.title)+(p.current?' (on air)':'');
+          return'<option value="'+i+'">'+label+'</option>';
+        }).join('')+
+        '<option value="'+CUSTOM+'">Custom \u2014 type your own\u2026</option>'+
+      '</select>';
+    }
+    progRowHtml+='<input type="text" class="shot-ov-prog" id="shotProgramInput" placeholder="Live broadcast" maxlength="80"'+(todayProgs.length?' style="display:none"':'')+'>';
+    progRowHtml+='</div>';
+    function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+    shotBody.innerHTML=
+      '<div class="shot-ov-img-wrap"><img id="shotImg" alt="Stream screenshot"></div>'+
+      '<label class="shot-ov-toggle" for="shotBannerToggle"><input type="checkbox" id="shotBannerToggle" checked> Add Juche TV banner</label>'+
+      progRowHtml+
+      '<div class="shot-ov-label">Source citation</div>'+
+      '<div class="shot-ov-src-row">'+
+        '<input type="text" class="shot-ov-src" id="shotSrcText" readonly>'+
+        '<button class="shot-ov-copy" id="shotCopyBtn" type="button">Copy</button>'+
+      '</div>'+
+      '<div class="shot-ov-actions"><a class="shot-ov-dl" id="shotDlBtn" download="screenshot.png">Download image</a></div>';
+    var img=document.getElementById('shotImg');
+    var dlBtn=document.getElementById('shotDlBtn');
+    var toggle=document.getElementById('shotBannerToggle');
+    var progSelect=document.getElementById('shotProgramSelect');
+    var progInput=document.getElementById('shotProgramInput');
+    var curIdx=-1;
+    todayProgs.forEach(function(p,i){if(p.current)curIdx=i;});
+    if(progSelect)progSelect.value=curIdx>=0?String(curIdx):CUSTOM;
+    if(!progSelect||progSelect.value===CUSTOM)progInput.value=(window._kctvGetCurrentProgram&&window._kctvGetCurrentProgram())||'';
+    function currentProgramText(){
+      if(progSelect&&progSelect.value!==CUSTOM)return todayProgs[+progSelect.value].title;
+      return progInput.value;
+    }
+    function refresh(){
+      var disabled=!toggle.checked;
+      if(progSelect)progSelect.disabled=disabled;
+      progInput.disabled=disabled;
+      var dataUrl=composeShot(rawCanvas,chId,toggle.checked,currentProgramText());
+      img.src=dataUrl;
+      dlBtn.href=dataUrl;
+    }
+    if(progSelect)progSelect.addEventListener('change',function(){
+      progInput.style.display=progSelect.value===CUSTOM?'':'none';
+      if(progSelect.value===CUSTOM&&!progInput.value)progInput.value=(window._kctvGetCurrentProgram&&window._kctvGetCurrentProgram())||'';
+      refresh();
+    });
+    toggle.addEventListener('change',refresh);
+    progInput.addEventListener('input',refresh);
+    refresh();
+    var srcInput=document.getElementById('shotSrcText');srcInput.value=citation;
+    var copyBtn=document.getElementById('shotCopyBtn');
+    copyBtn.addEventListener('click',function(){
+      var done=function(){
+        copyBtn.textContent='Copied';copyBtn.classList.add('copied');
+        setTimeout(function(){copyBtn.textContent='Copy';copyBtn.classList.remove('copied');},1600);
+      };
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(citation).then(done).catch(function(){
+          srcInput.select();try{document.execCommand('copy');done();}catch(e){}
+        });
+      }else{
+        srcInput.select();try{document.execCommand('copy');done();}catch(e){}
+      }
+    });
+  }
+  function takeScreenshot(video){
+    if(!video||!video.videoWidth){
+      openShotOv();
+      renderShotError('The stream isn\u2019t ready to capture yet \u2014 wait for playback to start and try again.');
+      return;
+    }
+    openShotOv();
+    shotBody.innerHTML='<div style="padding:30px 0;text-align:center;color:var(--tx2);font-size:13px">Capturing frame\u2026</div>';
+    setTimeout(function(){
+      try{
+        var canvas=document.createElement('canvas');
+        canvas.width=video.videoWidth;canvas.height=video.videoHeight;
+        var ctx=canvas.getContext('2d');
+        ctx.drawImage(video,0,0,canvas.width,canvas.height);
+        renderShot(canvas,activeChannel);
+      }catch(err){
+        renderShotError('Couldn\u2019t capture this stream\u2019s video frame \u2014 the source doesn\u2019t allow it in this browser.');
+      }
+    },10);
+  }
+  window._kctvTakeScreenshot=takeScreenshot;
+  window._kctvChannelIdFromUrl=channelIdFromUrl;
+  window._kctvIsChannelAvailable=isChannelAvailable;
+
+})();
+</script>
+
+<script>
+/* EPG SYSTEM — date-navigable programme guide under the player.
+   Primary source: Juche TV (bloxyplaytv) API. If a date is unavailable there,
+   the KoryoFront EPG API is used automatically. English & Korean only. */
+(function(){
+  function getPT(){var n=new Date();return new Date(n.getTime()+n.getTimezoneOffset()*60000+9*3600000);}
+  function fmt2(n){return String(n).padStart(2,'0');}
+  function fmtTime(d){return fmt2(d.getHours())+':'+fmt2(d.getMinutes())+':'+fmt2(d.getSeconds());}
+  var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDate(d){return DOW[d.getDay()]+', '+d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear();}
+  function dsOf(d){return d.getFullYear()+'-'+fmt2(d.getMonth()+1)+'-'+fmt2(d.getDate());}
+  function dsToDate(ds){var p=ds.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+
+  var epgChannel=(window._kctvChannelIdFromUrl&&window._kctvChannelIdFromUrl())||'kctv';
+  function PRIMARY_API(ds){var ch=window.CHANNELS&&window.CHANNELS[epgChannel];return ch&&ch.epgPrimary?ch.epgPrimary(ds):null;}
+  function FALLBACK_API(ds){var ch=window.CHANNELS&&window.CHANNELS[epgChannel];return ch&&ch.epgFallback?ch.epgFallback(ds):null;}
+  function channelHasEpg(){var ch=window.CHANNELS&&window.CHANNELS[epgChannel];return !!(ch&&ch.hasEpg);}
+
+  var epgData=null,epgSourceName='',lastDS='';
+  var currentDate=dsOf(getPT());
+  var currentLang='en';
+  try{currentLang=sessionStorage.getItem('kctvEpgLang')||'en';}catch(e){}
+  if(currentLang!=='en'&&currentLang!=='ko')currentLang='en';
+
+  /* ---- Language: English & Korean only ---- */
+  var langSelectEl=document.getElementById('epgLangSelect');
+  (function buildLangSelect(){
+    if(!langSelectEl)return;
+    langSelectEl.innerHTML='';
+    [['en','\uD83C\uDDEC\uD83C\uDDE7 English'],['ko','\uD83C\uDDF0\uD83C\uDDF5 \uD55C\uAD6D\uC5B4 \u00B7 Korean']].forEach(function(pair){
+      var opt=document.createElement('option');opt.value=pair[0];opt.textContent=pair[1];langSelectEl.appendChild(opt);
+    });
+    langSelectEl.value=currentLang;
+  })();
+
+  /* ---- Clocks (Pyongyang time) ---- */
+  function tick(){
+    var now=getPT(),t=fmtTime(now);
+    ['epgClockVal','epgOverlayClock','epgHeroClock'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent=t;});
+    var ds=dsOf(now);
+    if(ds!==lastDS){lastDS=ds;updateDateUI();}
+  }
+  setInterval(tick,1000);
+
+  /* ---- Normalizers: unify Juche TV v2, KoryoFront v1, and the
+     nested "epg.programs" shape (e.g. Sports TV) into one shape ---- */
+  function isoHHMM(iso){if(!iso)return null;var m=/T(\d{2}):(\d{2})/.exec(iso);return m?m[1]+':'+m[2]:null;}
+  function normalizeJuche(raw){
+    return (raw.programs||[]).map(function(p){
+      return {
+        start:isoHHMM(p.start_time),
+        end:isoHHMM(p.end_time),
+        title:{en:p.title_en||'',ko:p.title_ko||''},
+        category:{en:p.program_type_en||p.genre||'',ko:p.program_type_ko||''},
+        kju:!!p.kim_jong_un_featured
+      };
+    }).filter(function(p){return p.start;});
+  }
+  function normalizeKoryofront(raw){
+    return (raw.programs||[]).map(function(p){
+      var cat=p.category||'';
+      var t=p.title;
+      return {
+        start:p.start||null,
+        end:p.end||null,
+        title:{en:(t&&typeof t==='object'?t.en:(typeof t==='string'?t:''))||'',ko:(t&&typeof t==='object'?t.ko:'')||''},
+        category:{en:typeof cat==='string'?cat:(cat.en||''),ko:typeof cat==='string'?cat:(cat.ko||'')},
+        kju:!!p['kim-jong-un-activities']
+      };
+    }).filter(function(p){return p.start;});
+  }
+  /* Nested "epg.programs" shape — full ISO start/end with a timezone
+     offset (e.g. "2026-08-31T18:08:00+09:00"), title/category as
+     {ko,en} objects. Used by the Sports TV EPG response. */
+  function normalizeEpgWrapped(raw){
+    var progs=(raw.epg&&raw.epg.programs)||[];
+    return progs.map(function(p){
+      var t=p.title||{},c=p.category||{};
+      return {
+        start:isoHHMM(p.start),
+        end:isoHHMM(p.end),
+        title:{en:t.en||'',ko:t.ko||''},
+        category:{en:c.en||'',ko:c.ko||''},
+        kju:false
+      };
+    }).filter(function(p){return p.start;});
+  }
+  /* Flat "programs[]" shape with startTime/endTime full ISO strings
+     (timezone offset included) and title/category as {ko,en} objects.
+     Used by the Ryongnamsan TV EPG response. */
+  function normalizeFlatIso(raw){
+    return (raw.programs||[]).map(function(p){
+      var t=p.title||{},c=p.category||{};
+      return {
+        start:isoHHMM(p.startTime),
+        end:isoHHMM(p.endTime),
+        title:{en:t.en||'',ko:t.ko||''},
+        category:{en:c.en||'',ko:c.ko||''},
+        kju:false
+      };
+    }).filter(function(p){return p.start;});
+  }
+  /* Auto-detects which shape the primary API returned, so each
+     channel's EPG source doesn't need to be hardcoded to a parser. */
+  function normalizePrimary(raw){
+    if(raw&&raw.epg&&Array.isArray(raw.epg.programs))return normalizeEpgWrapped(raw);
+    if(raw&&Array.isArray(raw.programs)&&raw.programs.length&&raw.programs[0]&&raw.programs[0].startTime)return normalizeFlatIso(raw);
+    return normalizeJuche(raw);
+  }
+  function sortByStart(progs){return progs.slice().sort(function(a,b){return a.start<b.start?-1:(a.start>b.start?1:0);});}
+  function withEnds(progs){
+    for(var i=0;i<progs.length;i++){if(!progs[i].end)progs[i].end=progs[i+1]?progs[i+1].start:'24:00';}
+    return progs;
+  }
+
+  /* ---- Time helpers (wrap-aware for overnight programmes, e.g. Off Air 23:00→08:25) ---- */
+  function parseKST(hhmm){var p=hhmm.split(':'),d=new Date(getPT());d.setHours(+p[0],+p[1],0,0);return d;}
+  function endOf(p){var e=parseKST(p.end);if(e<=parseKST(p.start))e=new Date(e.getTime()+86400000);return e;}
+  function getDur(p){return Math.round((endOf(p)-parseKST(p.start))/60000);}
+  function getMinsLeft(p){return Math.max(0,Math.round((endOf(p)-getPT())/60000));}
+  function getPct(p){var st=parseKST(p.start),en=endOf(p),nw=getPT();if(nw<st){st=new Date(st.getTime()-86400000);en=new Date(en.getTime()-86400000);}return Math.max(0,Math.min(100,Math.round((nw-st)/(en-st)*100)));}
+  function isPast(p){return getPT()>endOf(p);}
+  function isCur(p){var n=getPT(),s=parseKST(p.start),e=endOf(p),d=86400000;return(n>=s&&n<e)||(n>=new Date(s.getTime()-d)&&n<new Date(e.getTime()-d));}
+  function viewingToday(){return currentDate===dsOf(getPT());}
+
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function titleFor(p){
+    if(!p||!p.title)return'';
+    if(typeof p.title!=='object')return p.title;
+    return p.title[currentLang]||p.title.en||p.title.ko||'';
+  }
+  function titleSubFor(p){
+    if(!p||!p.title||typeof p.title!=='object')return'';
+    return currentLang==='ko'?(p.title.en||''):(p.title.ko||'');
+  }
+  function categoryFor(p){
+    if(!p||!p.category)return'';
+    if(typeof p.category!=='object')return p.category;
+    return p.category[currentLang]||p.category.en||p.category.ko||'';
+  }
+  window._kctvTitleFor=titleFor;
+  window._kctvCategoryFor=categoryFor;
+
+  var KJU_BADGE='<div class="kju-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.3 7-6.3-3.5L5.7 21.2 7 14.2l-5-4.9 7.1-.7z"/></svg>Kim Jong Un Activities</div>';
+
+  /* ---- Rendering ---- */
+  function renderEPG(){
+    if(!epgData)return;
+    var progs=epgData.programs,today=viewingToday(),curIdx=-1;
+    if(today)progs.forEach(function(p,i){if(isCur(p))curIdx=i;});
+
+    var list=document.getElementById('epgSchedule'),_sl=list.scrollLeft;list.innerHTML='';
+    var from=today?Math.max(0,curIdx-2):0;
+    progs.slice(from).forEach(function(p){
+      var past=today&&isPast(p),curr=today&&isCur(p),kju=!!p.kju;
+      var row=document.createElement('div');
+      row.className='sched-row'+(past?' past':'')+(curr?' onair':'')+(kju?' kju':'');
+      var badgeHtml=curr?'<div class="onair-badge"><span class="onair-dot"></span>On Air</div>':'';
+      var subHtml=titleSubFor(p)?'<div class="sched-sub">'+esc(titleSubFor(p))+'</div>':'';
+      var remHtml=curr?'<div class="sched-rem">'+getMinsLeft(p)+' min left</div><div class="sched-prog"><i style="width:'+getPct(p)+'%"></i></div>':'';
+      row.innerHTML=
+        '<div class="sched-time-col"><div class="sched-time">'+esc(p.start)+'</div></div>'+
+        '<div class="sched-body">'+(kju?KJU_BADGE:'')+badgeHtml+'<div class="sched-cat">'+esc(categoryFor(p))+'</div>'+
+        '<div class="sched-ttl">'+esc(titleFor(p))+'</div>'+subHtml+remHtml+'</div>';
+      list.appendChild(row);
+    });
+    list.scrollLeft=_sl;
+    document.getElementById('epgLoading').style.display='none';
+    document.getElementById('epgError').style.display='none';
+    document.getElementById('epgContent').style.display='';
+  }
+
+  function renderOv(){
+    if(!epgData)return;
+    var progs=epgData.programs,today=viewingToday(),body=document.getElementById('epgOverlayBody');body.innerHTML='';
+    progs.forEach(function(p){
+      var past=today&&isPast(p),curr=today&&isCur(p),dur=getDur(p),kju=!!p.kju;
+      var row=document.createElement('div');
+      row.className='epg-fr'+(past?' epg-past':'')+(curr?' epg-cur':'')+(kju?' kju':'');
+      row.innerHTML='<div class="epg-ft">'+esc(p.start)+'</div><div class="epg-fd"></div><div class="epg-fb">'+(kju?KJU_BADGE:'')+'<div class="epg-ftitle">'+esc(titleFor(p))+'</div><div class="epg-fsub">'+esc(titleSubFor(p))+'</div><div class="epg-ftags"><span class="epg-fcat">'+esc(categoryFor(p))+'</span></div></div><div class="epg-fend">'+esc(p.end)+'<div class="epg-fdur">'+dur+' min</div></div>';
+      body.appendChild(row);
+    });
+    var od=document.getElementById('epgOverlayDateVal');if(od)od.textContent=fmtDate(dsToDate(currentDate));
+  }
+
+  /* ---- Loading / error / no-data states ---- */
+  function showLoading(){document.getElementById('epgLoading').style.display='';document.getElementById('epgError').style.display='none';document.getElementById('epgNoData').style.display='none';document.getElementById('epgUnavailable').style.display='none';document.getElementById('epgContent').style.display='none';}
+  function showErr(msg){document.getElementById('epgLoading').style.display='none';document.getElementById('epgErrorMsg').textContent=msg;document.getElementById('epgError').style.display='';document.getElementById('epgNoData').style.display='none';document.getElementById('epgUnavailable').style.display='none';document.getElementById('epgContent').style.display='none';}
+  function showNoData(){document.getElementById('epgLoading').style.display='none';document.getElementById('epgError').style.display='none';document.getElementById('epgNoData').style.display='';document.getElementById('epgUnavailable').style.display='none';document.getElementById('epgContent').style.display='none';}
+  function showUnavailable(msg){
+    document.getElementById('epgLoading').style.display='none';
+    document.getElementById('epgError').style.display='none';
+    document.getElementById('epgNoData').style.display='none';
+    document.getElementById('epgUnavailableMsg').textContent=msg;
+    document.getElementById('epgUnavailable').style.display='';
+    document.getElementById('epgContent').style.display='none';
+  }
+  document.getElementById('epgRetryBtn').addEventListener('click',loadEPG);
+
+  function elog(m,l){if(window.kjLog)window.kjLog('EPG',m,l);}
+  function fetchJSON(url,timeoutMs){
+    return new Promise(function(resolve,reject){
+      var t0=Date.now(),xhr=new XMLHttpRequest();elog('GET '+url);
+      xhr.open('GET',url,true);xhr.timeout=timeoutMs||10000;
+      xhr.onload=function(){var ms=Date.now()-t0;if(xhr.status===200){try{var j=JSON.parse(xhr.responseText);elog('200 OK \u00B7 '+ms+'ms \u00B7 '+xhr.responseText.length+' bytes');resolve(j);}catch(e){elog('bad JSON \u00B7 '+e.message,'e');reject(e);}}else{elog('HTTP '+xhr.status+' \u00B7 '+ms+'ms','e');reject(new Error('HTTP '+xhr.status));}};
+      xhr.onerror=function(){elog('network error \u00B7 '+(Date.now()-t0)+'ms','e');reject(new Error('Network error'));};
+      xhr.ontimeout=function(){elog('timeout after '+(timeoutMs||10000)+'ms','e');reject(new Error('Timeout'));};
+      xhr.send();
+    });
+  }
+
+  /* ---- Load: primary EPG source first, fallback (if any) second.
+     Channels without an EPG source (hasEpg:false) skip straight to
+     the "no guide yet" state instead of hitting the network. ---- */
+  var epgReq=0;
+  function loadEPG(){
+    /* new request id: any response from an earlier channel/date is ignored; drop the old channel's data + rows right away */
+    var req=++epgReq;
+    epgData=null;
+    var _sl=document.getElementById('epgSchedule'),_ob=document.getElementById('epgOverlayBody');
+    if(_sl)_sl.innerHTML='';if(_ob)_ob.innerHTML='';
+    var ch=window.CHANNELS&&window.CHANNELS[epgChannel];
+    elog('load \u00B7 channel='+epgChannel+' \u00B7 date='+currentDate);
+    if(ch&&ch.availability&&window._kctvIsChannelAvailable&&!window._kctvIsChannelAvailable(ch)){
+      epgData=null;elog('channel off air today (availability window)','w');
+      showUnavailable((ch.availability&&ch.availability.message)||'This channel isn\u2019t broadcasting today.');
+      return;
+    }
+    if(!channelHasEpg()){epgData=null;showNoData();return;}
+    showLoading();
+    var primaryUrl=PRIMARY_API(currentDate);
+    if(!primaryUrl){epgData=null;showNoData();return;}
+    fetchJSON(primaryUrl).then(function(raw){
+      if(req!==epgReq)return;
+      var progs=withEnds(sortByStart(normalizePrimary(raw)));
+      if(!progs.length)throw new Error('empty');
+      epgSourceName='Juche TV';elog('primary OK \u00B7 '+progs.length+' programmes');
+      epgData={programs:progs};
+      afterLoad();
+    }).catch(function(e){
+      if(req!==epgReq)return;
+      var fallbackUrl=FALLBACK_API(currentDate);
+      elog('primary failed: '+(e&&e.message)+(fallbackUrl?' \u2192 trying fallback':' \u2192 no fallback'),'w');
+      if(!fallbackUrl){
+        epgData=null;
+        elog('no programme data available','e');showErr('No programme data available for '+fmtDate(dsToDate(currentDate))+'.');
+        return;
+      }
+      fetchJSON(fallbackUrl).then(function(raw){
+        if(req!==epgReq)return;
+        var progs=withEnds(sortByStart(normalizeKoryofront(raw)));
+        if(!progs.length)throw new Error('empty');
+        epgSourceName='KoryoFront';elog('fallback OK \u00B7 '+progs.length+' programmes');
+        epgData={programs:progs};
+        afterLoad();
+      }).catch(function(){
+        if(req!==epgReq)return;
+        epgData=null;
+        elog('no programme data available','e');showErr('No programme data available for '+fmtDate(dsToDate(currentDate))+'.');
+      });
+    });
+  }
+
+  /* Called by the channel strip (via switchChannel in the player script)
+     whenever the active channel changes. Resets to today and reloads. */
+  function updateEpgSrcNote(chId){
+    var note=document.getElementById('epgSrcNote');
+    var ch=window.CHANNELS&&window.CHANNELS[chId];
+    if(note&&ch)note.innerHTML='The Electronic Programme Guide (EPG) displays the scheduled broadcast lineup for <strong>'+ch.name+'</strong>. It shows what programmes are on air now, what is coming up, and what has already aired. All times are shown in Pyongyang Time (UTC+9). Guide data is provided by <strong id="epgSourceTag">Juche TV</strong>. Available in <strong>English</strong> and <strong>Korean</strong>.';
+  }
+  function setEpgChannel(chId){
+    epgChannel=chId;
+    currentDate=dsOf(getPT());
+    updateDateUI();
+    updateEpgSrcNote(chId);
+    loadEPG();
+  }
+  window._kctvSetEpgChannel=setEpgChannel;
+  function afterLoad(){
+    var tag=document.getElementById('epgSourceTag');if(tag)tag.textContent=epgSourceName;
+    renderEPG();
+    elog('rendered \u00B7 source='+epgSourceName+' \u00B7 on air: '+((window._kctvGetCurrentProgram&&window._kctvGetCurrentProgram())||'\u2014'));
+    if(isOvOpen)renderOv();
+  }
+
+  /* ---- Date navigation (back / forward, capped at today) ---- */
+  var prevBtn=document.getElementById('epgPrevDay'),nextBtn=document.getElementById('epgNextDay'),
+      todayBtn=document.getElementById('epgTodayBtn'),dateLabel=document.getElementById('epgDateLabel');
+  function updateDateUI(){
+    var todayDS=dsOf(getPT());
+    if(dateLabel)dateLabel.textContent=fmtDate(dsToDate(currentDate))+(currentDate===todayDS?' \u2014 Today':'');
+    if(nextBtn)nextBtn.disabled=currentDate>=todayDS;
+    if(todayBtn)todayBtn.style.display=currentDate===todayDS?'none':'';
+    var hd=document.getElementById('epgDateVal');if(hd)hd.textContent=fmtDate(dsToDate(currentDate));
+  }
+  function shiftDate(delta){
+    var d=dsToDate(currentDate);d.setDate(d.getDate()+delta);
+    var nds=dsOf(d),todayDS=dsOf(getPT());
+    if(nds>todayDS||nds===currentDate)return;
+    currentDate=nds;updateDateUI();loadEPG();
+  }
+  if(prevBtn)prevBtn.addEventListener('click',function(){shiftDate(-1);});
+  if(nextBtn)nextBtn.addEventListener('click',function(){shiftDate(1);});
+  if(todayBtn)todayBtn.addEventListener('click',function(){
+    var todayDS=dsOf(getPT());
+    if(currentDate!==todayDS){currentDate=todayDS;updateDateUI();loadEPG();}
+  });
+
+  /* ---- Language switching ---- */
+  if(langSelectEl)langSelectEl.addEventListener('change',function(){
+    currentLang=this.value==='ko'?'ko':'en';
+    try{sessionStorage.setItem('kctvEpgLang',currentLang);}catch(e){}
+    renderEPG();if(isOvOpen)renderOv();
+  });
+
+  /* ---- Full-schedule overlay ---- */
+  var ov=document.getElementById('epgOverlay'),origP=ov.parentNode,isOvOpen=false;
+  function getPlayerContainer(){return document.getElementById('dplayer');}
+  function openOv(){isOvOpen=true;var dp=getPlayerContainer(),inFS=dp&&(document.fullscreenElement===dp||document.webkitFullscreenElement===dp);if(inFS&&dp)dp.appendChild(ov);else if(ov.parentNode!==origP)origP.appendChild(ov);ov.classList.add('show');renderOv();}
+  function closeOv(){isOvOpen=false;ov.classList.remove('show');setTimeout(function(){if(ov.parentNode!==origP)origP.appendChild(ov);},350);}
+  document.getElementById('epgOverlayClose').addEventListener('click',closeOv);
+  ov.addEventListener('click',function(e){if(e.target===this)closeOv();});
+  document.getElementById('epgViewAllBtn').addEventListener('click',openOv);
+  document.addEventListener('keydown',function(e){
+    var tag=e.target.tagName;
+    if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT')return;
+    if(e.key==='Escape'&&isOvOpen)closeOv();
+    if((e.key==='e'||e.key==='E')&&!isOvOpen)openOv();
+  });
+  function onFSC(){if(!isOvOpen)return;var dp=getPlayerContainer(),inFS=dp&&(document.fullscreenElement===dp||document.webkitFullscreenElement===dp);if(inFS&&dp){if(ov.parentNode!==dp)dp.appendChild(ov);}else{if(ov.parentNode!==origP)origP.appendChild(ov);}}
+  document.addEventListener('fullscreenchange',onFSC);document.addEventListener('webkitfullscreenchange',onFSC);
+  window._epgOpenOverlay=openOv;
+
+  window._kctvGetCurrentProgram=function(){if(!epgData||!viewingToday())return null;for(var i=0;i<epgData.programs.length;i++){var p=epgData.programs[i];if(isCur(p))return titleFor(p);}return null;};
+  /* Full list of today's programmes for the given channel, as
+     {time,title,current} entries \u2014 used by the screenshot banner's
+     "choose from EPG" picker. Falls back to [] when no guide data
+     is loaded (e.g. weekend-only channels, or a load in progress). */
+  window._kctvGetTodayPrograms=function(chId){
+    if(!epgData||!viewingToday()||epgChannel!==chId)return[];
+    return epgData.programs.map(function(p){
+      return{time:p.start,title:titleFor(p),current:isCur(p)};
+    }).filter(function(e){return e.title;});
+  };
+
+  /* Keep on-air states fresh while viewing today */
+  setInterval(function(){if(epgData&&viewingToday())renderEPG();},60000);
+
+  updateDateUI();
+  updateEpgSrcNote(epgChannel);
+  tick();
+  loadEPG();
+})();
+</script>
+
+
+<script>
+(function(){
+  var URL_TRACE='https://live.koryocdn.org/cdn-cgi/trace';
+  function $(id){return document.getElementById(id);}
+  function set(id,v){var e=$(id);if(e)e.textContent=v||'\u2014';}
+  fetch(URL_TRACE,{cache:'no-store'}).then(function(r){
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    return r.text();
+  }).then(function(t){
+    var d={};
+    t.trim().split('\n').forEach(function(l){var i=l.indexOf('=');if(i>0)d[l.slice(0,i)]=l.slice(i+1);});
+    var country=d.loc;
+    try{if(d.loc&&window.Intl&&Intl.DisplayNames)country=new Intl.DisplayNames(['en'],{type:'region'}).of(d.loc)+' ('+d.loc+')';}catch(e){}
+    set('srvColo',d.colo);
+    set('srvCountry',country);
+    set('srvProto',(d.http||'')+(d.tls?' / '+d.tls:''));
+    set('srvProv','Cloudflare');
+    var n=$('srvNote');if(n)n.textContent='Data centre is the Cloudflare edge node serving you; country is your connection as seen by that node.';
+  }).catch(function(){
+    var n=$('srvNote');if(n)n.textContent='Server information is currently unavailable.';
+  });
+})();
+</script>
+
+<script>
+/* Now-playing bar: mirrors the on-air card of the guide and the active channel. */
+(function(){
+  var bar=document.getElementById('nowBar');if(!bar)return;
+  function $(id){return document.getElementById(id);}
+  function q(sel,root){var e=(root||document).querySelector(sel);return e?e.textContent.trim():'';}
+  var liveTxt=$('nowLiveTxt'),title=$('nowTitle'),meta=$('nowMeta'),next=$('nowNext'),
+      nextT=$('nowNextT'),nextN=$('nowNextN'),prog=$('nowProgBar'),raf=0;
+  function setMeta(parts){
+    meta.innerHTML='';
+    parts.filter(Boolean).forEach(function(t){var s=document.createElement('span');s.textContent=t;meta.appendChild(s);});
+  }
+  function sync(){
+    raf=0;
+    var act=document.querySelector('.chan-item.active');
+    var ch=act&&window.CHANNELS?window.CHANNELS[act.getAttribute('data-ch')]:null;
+    var chName=ch?ch.name:'Live';
+    var dp=$('dplayer'),off=!!(dp&&dp.classList.contains('kp-unavailable'));
+    var row=off?null:document.querySelector('#epgSchedule .sched-row.onair');
+    var pe=row?row.querySelector('.sched-prog i'):null;
+    var nx=row?row.nextElementSibling:null;
+    bar.classList.toggle('is-off',off);
+    bar.classList.toggle('has-prog',!!pe);
+    liveTxt.textContent=off?'Off air':'Live';
+    if(off){
+      title.textContent=chName;
+      setMeta([q('#epgUnavailableMsg')||'Not broadcasting right now.']);
+    }else if(row){
+      title.textContent=q('.sched-ttl',row)||chName;
+      setMeta([chName,q('.sched-cat',row),q('.sched-rem',row)]);
+    }else{
+      title.textContent=chName;
+      setMeta([ch&&ch.sub?ch.sub:'Live broadcast']);
+    }
+    prog.style.width=pe?pe.style.width:'0%';
+    if(nx&&nx.classList.contains('sched-row')){
+      nextT.textContent=q('.sched-time',nx);nextN.textContent=q('.sched-ttl',nx);next.hidden=false;
+    }else{next.hidden=true;}
+  }
+  function queue(){if(!raf)raf=requestAnimationFrame(sync);}
+  var mo=new MutationObserver(queue);
+  var sec=$('epgSection'),strip=$('chanStrip'),dp=$('dplayer');
+  if(sec)mo.observe(sec,{childList:true,subtree:true,attributes:true,attributeFilter:['style','class']});
+  if(strip)mo.observe(strip,{attributes:true,subtree:true,attributeFilter:['class']});
+  if(dp)mo.observe(dp,{attributes:true,attributeFilter:['class']});
+  sync();
+  window.addEventListener('load',sync);
+})();
+
+/* Programme rail: arrow buttons + end-stop state. */
+(function(){
+  var list=document.getElementById('epgSchedule'),p=document.getElementById('railPrev'),n=document.getElementById('railNext');
+  if(!list||!p||!n)return;
+  function upd(){p.disabled=list.scrollLeft<4;n.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-4;}
+  function go(d){list.scrollBy({left:d*Math.max(240,list.clientWidth*.8),behavior:'smooth'});}
+  p.addEventListener('click',function(){go(-1);});
+  n.addEventListener('click',function(){go(1);});
+  list.addEventListener('scroll',upd,{passive:true});
+  new MutationObserver(function(){requestAnimationFrame(upd);}).observe(list,{childList:true});
+  window.addEventListener('resize',upd);
+  upd();
+})();
+</script>
+
+
+<script>
+/* Apple-design behaviours: compact sticky nav, 1:1 sheet drag with momentum projection + rubber-band (§2,§6,§9) */
+(function(){
+  var h=document.querySelector('.site-header');
+  function m(){var t=h.querySelector('.topbar'),s=h.querySelector('.masthead');document.documentElement.style.setProperty('--stick',(t.offsetHeight+s.offsetHeight)+'px');}
+  m();addEventListener('resize',m);addEventListener('load',m);
+
+  var DR=.998;
+  function project(v){return(v/1000)*DR/(1-DR);}                         /* px/s -> px travelled */
+  function rubber(o,d,c){c=c||.55;return(o*d*c)/(d+c*Math.abs(o));}        /* progressive resistance */
+  function sheet(inn,hdr,closeBtn){
+    var y0=0,startY=0,hist=[],on=false,id=null;
+    hdr.addEventListener('pointerdown',function(e){
+      if(e.target.closest('button'))return;
+      on=true;id=e.pointerId;hdr.setPointerCapture(id);
+      y0=new DOMMatrix(getComputedStyle(inn).transform).m42;           /* presentation value, not target */
+      startY=e.clientY;hist=[{y:y0,t:e.timeStamp}];
+      inn.style.transition='none';
+    });
+    hdr.addEventListener('pointermove',function(e){
+      if(!on)return;
+      var d=y0+(e.clientY-startY),y=d<0?-rubber(-d,inn.offsetHeight):d;
+      inn.style.transform='translateY('+y+'px)';
+      hist.push({y:d,t:e.timeStamp});if(hist.length>6)hist.shift();
+    });
+    function end(e){
+      if(!on)return;on=false;
+      var a=hist[0],b=hist[hist.length-1],dt=Math.max(1,b.t-a.t),v=(b.y-a.y)/dt*1000;
+      var cur=b.y,proj=cur+project(v);
+      inn.style.transition='';inn.style.transform='';                  /* hand back to the CSS springs, from the live value */
+      if(proj>inn.offsetHeight*.4&&v>=0)closeBtn.click();
+    }
+    hdr.addEventListener('pointerup',end);hdr.addEventListener('pointercancel',end);
+  }
+  var e1=document.querySelector('.epg-ov-inn'),s1=document.querySelector('.shot-ov-inn');
+  if(e1)sheet(e1,e1.querySelector('.epg-ov-hdr'),document.getElementById('epgOverlayClose'));
+  if(s1)sheet(s1,s1.querySelector('.shot-ov-hdr'),document.getElementById('shotOverlayClose'));
+})();
+</script>
+
+</body>
+</html>
