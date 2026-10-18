@@ -292,12 +292,16 @@ function hasSportsAutoBlocks(programs, structureType) {
   return isSportsAutoBlock(programs[0], structureType) && isSportsAutoBlock(programs[programs.length - 1], structureType);
 }
 
-// Check if the file already has auto-blocks injected
-function hasAutoBlocks(programs, structureType) {
+// Check if the file already has the START auto-blocks (test card / anthem)
+function hasStartAutoBlock(programs, structureType) {
   if (!programs || programs.length === 0) return false;
-  const first = programs[0];
-  const last = programs[programs.length - 1];
-  return isAutoBlock(first, structureType) && isAutoBlock(last, structureType);
+  return isAutoBlock(programs[0], structureType);
+}
+
+// Check if the file already has the END auto-block (off-air closing)
+function hasEndAutoBlock(programs, structureType) {
+  if (!programs || programs.length === 0) return false;
+  return isAutoBlock(programs[programs.length - 1], structureType);
 }
 
 export default async function handler(req, res) {
@@ -361,7 +365,11 @@ export default async function handler(req, res) {
     const nextDay = new Date(year, month - 1, day + 1);
 
     // ONLY INJECT AUTO-BLOCKS FOR KCTV
-    if (ch === 'KCTV' && !hasAutoBlocks(programsArray, structureType)) {
+    if (ch === 'KCTV') {
+      // Inject the morning startup blocks and the closing off-air block
+      // independently — a file may already contain one but not the other.
+      const needStartBlocks = !hasStartAutoBlock(programsArray, structureType);
+      const needEndBlock = !hasEndAutoBlock(programsArray, structureType);
 
       if (structureType === 'old') {
         // ========== OLD STRUCTURE ==========
@@ -369,12 +377,12 @@ export default async function handler(req, res) {
         const lastProgram = programsArray[programsArray.length - 1];
         const dynamicEndStart = lastProgram ? lastProgram.end : '22:00';
 
-        programsArray.unshift(
+        if (needStartBlocks) programsArray.unshift(
           { start: '23:00', end: '08:25', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory },
           { start: '08:25', end: '09:00', title: programTranslations.testCardTitle, category: programTranslations.testCardCategory },
           { start: '09:00', end: firstProgramStart, title: programTranslations.anthemTitle, category: programTranslations.anthemCategory }
         );
-        programsArray.push({ start: dynamicEndStart, end: '23:00', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory });
+        if (needEndBlock) programsArray.push({ start: dynamicEndStart, end: '23:00', title: programTranslations.offAirTitle, category: programTranslations.offAirCategory });
 
       } else if (structureType === 'lean') {
         // ========== NEW LEAN STRUCTURE ==========
@@ -409,13 +417,12 @@ export default async function handler(req, res) {
           };
         };
 
-        programsArray.unshift(
-          buildLeanEntry('offair-start', fmtISO(prevDay, '23:00'), fmtISO(currDay, '08:25'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my }),
+        if (needStartBlocks) programsArray.unshift(
           buildLeanEntry('testcard', fmtISO(currDay, '08:25'), fmtISO(currDay, '09:00'), programTranslations.testCardTitle.ko, programTranslations.testCardTitle.en, programTranslations.testCardCategory.ko, programTranslations.testCardCategory.en, 'test_pattern', '시험화면.', 'Test card.', { title_zh: programTranslations.testCardTitle.zh, title_ja: programTranslations.testCardTitle.ja, title_ru: programTranslations.testCardTitle.ru, title_my: programTranslations.testCardTitle.my }),
           buildLeanEntry('anthem', fmtISO(currDay, '09:00'), firstProgramStartISO, programTranslations.anthemTitle.ko, programTranslations.anthemTitle.en, programTranslations.anthemCategory.ko, programTranslations.anthemCategory.en, 'sign_on', '애국가.', 'National anthem.', { title_zh: programTranslations.anthemTitle.zh, title_ja: programTranslations.anthemTitle.ja, title_ru: programTranslations.anthemTitle.ru, title_my: programTranslations.anthemTitle.my })
         );
-        programsArray.push(
-          buildLeanEntry('offair-end', dynamicEndStartISO, fmtISO(currDay, '23:00'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my })
+        if (needEndBlock) programsArray.push(
+          buildLeanEntry('offair-end', dynamicEndStartISO, fmtISO(nextDay, '08:25'), programTranslations.offAirTitle.ko, programTranslations.offAirTitle.en, programTranslations.offAirCategory.ko, programTranslations.offAirCategory.en, 'test_pattern', '방송 중단.', 'Off-air.', { off_air: true, title_zh: programTranslations.offAirTitle.zh, title_ja: programTranslations.offAirTitle.ja, title_ru: programTranslations.offAirTitle.ru, title_my: programTranslations.offAirTitle.my })
         );
 
       } else if (structureType === 'epgWrapper') {
@@ -424,12 +431,11 @@ export default async function handler(req, res) {
         const lastProgram = programsArray[programsArray.length - 1];
         const dynamicEndStartISO = lastProgram ? lastProgram.end : fmtISO(currDay, '22:00');
 
-        programsArray.unshift(
-          { id: 'auto_offair_start', start: fmtISO(prevDay, '23:00'), end: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
+        if (needStartBlocks) programsArray.unshift(
           { id: 'auto_testcard', start: fmtISO(currDay, '08:25'), end: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
           { id: 'auto_anthem', start: fmtISO(currDay, '09:00'), end: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
         );
-        programsArray.push({ id: 'auto_offair_end', start: dynamicEndStartISO, end: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+        if (needEndBlock) programsArray.push({ id: 'auto_offair_end', start: dynamicEndStartISO, end: fmtISO(nextDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
 
       } else if (structureType === 'camelISO') {
         // ========== CAMELCASE ISO STRUCTURE ==========
@@ -437,12 +443,12 @@ export default async function handler(req, res) {
         const lastProgram = programsArray[programsArray.length - 1];
         const dynamicEndStartISO = lastProgram ? lastProgram.endTime : fmtISO(currDay, '22:00');
 
-        programsArray.unshift(
+        if (needStartBlocks) programsArray.unshift(
           { id: 'auto_offair_start', startTime: fmtISO(prevDay, '23:00'), endTime: fmtISO(currDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle },
           { id: 'auto_testcard', startTime: fmtISO(currDay, '08:25'), endTime: fmtISO(currDay, '09:00'), category: programTranslations.testCardCategory, title: programTranslations.testCardTitle },
           { id: 'auto_anthem', startTime: fmtISO(currDay, '09:00'), endTime: firstProgramStartISO, category: programTranslations.anthemCategory, title: programTranslations.anthemTitle }
         );
-        programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(currDay, '23:00'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
+        if (needEndBlock) programsArray.push({ id: 'auto_offair_end', startTime: dynamicEndStartISO, endTime: fmtISO(nextDay, '08:25'), category: programTranslations.offAirCategory, title: programTranslations.offAirTitle });
       }
     }
 
