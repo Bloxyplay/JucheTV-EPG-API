@@ -326,9 +326,46 @@ export default async function handler(req, res) {
 
   const filePath = join(process.cwd(), 'epg', ch, `${date}.json`);
 
+  // KoryoFront fallback endpoints (used only when the local file is missing)
+  const koryoFrontApi = {
+    'sports-tv': 'https://koryofront.org/api/epg/sports',
+    'Sports TV': 'https://koryofront.org/api/epg/sports',
+    'ryongnamsan': 'https://koryofront.org/api/epg/ryongnamsan',
+    'Ryongnamsan': 'https://koryofront.org/api/epg/ryongnamsan'
+  }[ch];
+
+  let json = null;
+  let fileMissing = false;
+
   try {
     const data = readFileSync(filePath, 'utf8');
-    const json = JSON.parse(data);
+    json = JSON.parse(data);
+  } catch {
+    fileMissing = true;
+  }
+
+  // Local file missing -> try fetching from the KoryoFront API (Sports TV / Ryongnamsan TV)
+  if (fileMissing && koryoFrontApi) {
+    try {
+      const resp = await fetch(`${koryoFrontApi}?date=${encodeURIComponent(date)}`);
+      if (resp.ok) {
+        json = await resp.json();
+        fileMissing = false;
+      }
+    } catch {
+      // network / API error -> keep fileMissing = true so we 404 below
+    }
+  }
+
+  if (fileMissing || !json) {
+    return res.status(404).json({
+      error: 'There is no EPG data here!',
+      channel: ch,
+      date: date
+    });
+  }
+
+  try {
 
     let structureType = 'unknown';
     let programsArray = [];
@@ -613,10 +650,11 @@ export default async function handler(req, res) {
     res.status(200).json(json);
 
   } catch (error) {
-    res.status(404).json({
-      error: 'There is no EPG data here!',
+    res.status(500).json({
+      error: 'Failed to process EPG data.',
       channel: ch,
-      date: date
+      date: date,
+      details: String(error && error.message ? error.message : error)
     });
   }
 }
