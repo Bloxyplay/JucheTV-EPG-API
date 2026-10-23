@@ -60,6 +60,7 @@ jobs:
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
               <uses-permission android:name="android.permission.INTERNET" />
+              <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
               <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
               <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -266,13 +267,18 @@ jobs:
           import android.content.ActivityNotFoundException;
           import android.content.Context;
           import android.content.Intent;
+          import android.graphics.Bitmap;
           import android.graphics.Color;
+          import android.net.ConnectivityManager;
+          import android.net.Network;
           import android.net.Uri;
+          import android.net.http.SslError;
           import android.os.Build;
           import android.net.wifi.WifiManager;
           import android.os.Bundle;
           import android.os.Handler;
           import android.os.Looper;
+          import android.view.Gravity;
           import android.view.View;
           import android.view.Window;
           import android.view.WindowInsets;
@@ -280,24 +286,37 @@ jobs:
           import android.view.WindowManager;
           import android.webkit.CookieManager;
           import android.webkit.JavascriptInterface;
+          import android.webkit.SslErrorHandler;
           import android.webkit.WebChromeClient;
           import android.webkit.WebResourceError;
           import android.webkit.WebResourceRequest;
+          import android.webkit.WebResourceResponse;
           import android.webkit.WebSettings;
           import android.webkit.WebView;
           import android.webkit.WebViewClient;
+          import android.widget.Button;
           import android.widget.FrameLayout;
+          import android.widget.LinearLayout;
+          import android.widget.TextView;
 
           public class MainActivity extends Activity {
 
               private static final String START_URL = "https://manbang.xyz/";
               private static final String HOST = "manbang.xyz";
               private static final int TEXT_ZOOM = 85; // % of normal text size; lower = smaller
+              private static final long[] RETRY_DELAYS_MS = {2000, 5000}; // automatic retries before waiting for the button
 
               private FrameLayout root;
               private WebView web;
               private WebView splash;
               private boolean splashDone;
+              private LinearLayout errorView;
+              private TextView errorText;
+              private boolean loadFailed;
+              private int autoRetries;
+              private String failedUrl = START_URL;
+              private ConnectivityManager.NetworkCallback netCallback;
+              private final Runnable retryRunnable = this::retryNow;
               private WifiManager.WifiLock wifiLock;
               private final Handler ui = new Handler(Looper.getMainLooper());
               private View customView;
@@ -333,6 +352,7 @@ jobs:
                   s.setSupportZoom(false);
                   s.setBuiltInZoomControls(false);
                   s.setTextZoom(TEXT_ZOOM);
+                  s.setBlockNetworkImage(true); // page first, images right after it finishes
                   if (Build.VERSION.SDK_INT >= 26) {
                       s.setSafeBrowsingEnabled(false); // skips the per-navigation lookup
                       web.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, true);
@@ -357,16 +377,40 @@ jobs:
                       }
 
                       @Override
+                      public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                          loadFailed = false;
+                      }
+
+                      @Override
                       public void onPageFinished(WebView view, String url) {
-                          finishSplash();
+                          if (!loadFailed) {
+                              hideError();
+                              unblockImages();
+                              finishSplash();
+                          }
                       }
 
                       @Override
                       public void onReceivedError(WebView view, WebResourceRequest request,
                                                   WebResourceError error) {
                           if (request.isForMainFrame()) {
-                              finishSplash();
+                              onLoadFailed(request.getUrl().toString(), error.getDescription().toString());
                           }
+                      }
+
+                      @Override
+                      public void onReceivedHttpError(WebView view, WebResourceRequest request,
+                                                      WebResourceResponse errorResponse) {
+                          if (request.isForMainFrame() && errorResponse.getStatusCode() >= 500) {
+                              onLoadFailed(request.getUrl().toString(),
+                                      "Server error " + errorResponse.getStatusCode());
+                          }
+                      }
+
+                      @Override
+                      public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                          handler.cancel();
+                          onLoadFailed(error.getUrl(), "Secure connection failed");
                       }
                   });
 
@@ -395,6 +439,7 @@ jobs:
                       web.loadUrl(START_URL);
                   }
 
+                  buildErrorView();
                   showSplash();
               }
 
@@ -412,7 +457,126 @@ jobs:
                           FrameLayout.LayoutParams.MATCH_PARENT,
                           FrameLayout.LayoutParams.MATCH_PARENT));
                   splash.loadUrl("file:///android_asset/loading.html");
-                  ui.postDelayed(this::finishSplash, 20000); // never get stuck on the splash
+                  ui.postDelayed(this::onSplashTimeout, 20000); // never get stuck on the splash
+              }
+
+              private void onSplashTimeout() {
+                  unblockImages();
+                  finishSplash();
+              }
+
+              private void unblockImages() {
+                  web.getSettings().setBlockNetworkImage(false);
+              }
+
+              private void buildErrorView() {
+                  float d = getResources().getDisplayMetrics().density;
+                  int pad = (int) (24 * d);
+
+                  errorView = new LinearLayout(this);
+                  errorView.setOrientation(LinearLayout.VERTICAL);
+                  errorView.setGravity(Gravity.CENTER);
+                  errorView.setBackgroundColor(0xFF0D1015);
+                  errorView.setPadding(pad, pad, pad, pad);
+                  errorView.setClickable(true);
+                  errorView.setVisibility(View.GONE);
+
+                  TextView title = new TextView(this);
+                  title.setText("Can\u2019t load Manbang");
+                  title.setTextColor(Color.WHITE);
+                  title.setTextSize(20);
+                  title.setGravity(Gravity.CENTER);
+
+                  errorText = new TextView(this);
+                  errorText.setTextColor(0xFFAAB1BF);
+                  errorText.setTextSize(14);
+                  errorText.setGravity(Gravity.CENTER);
+                  errorText.setPadding(0, (int) (12 * d), 0, (int) (24 * d));
+
+                  Button retry = new Button(this);
+                  retry.setText("Retry");
+                  retry.setOnClickListener(v -> {
+                      autoRetries = 0;
+                      retryNow();
+                  });
+
+                  errorView.addView(title);
+                  errorView.addView(errorText);
+                  errorView.addView(retry);
+                  root.addView(errorView, new FrameLayout.LayoutParams(
+                          FrameLayout.LayoutParams.MATCH_PARENT,
+                          FrameLayout.LayoutParams.MATCH_PARENT));
+              }
+
+              private void onLoadFailed(String url, String reason) {
+                  loadFailed = true;
+                  if (url != null && url.startsWith("http")) {
+                      failedUrl = url;
+                  }
+                  unblockImages();
+                  if (splash != null) {
+                      splashDone = true;
+                      removeSplash();
+                  }
+                  errorText.setText("Check your connection and try again.\n(" + reason + ")");
+                  errorView.setVisibility(View.VISIBLE);
+                  ui.removeCallbacks(retryRunnable);
+                  if (autoRetries < RETRY_DELAYS_MS.length) {
+                      ui.postDelayed(retryRunnable, RETRY_DELAYS_MS[autoRetries++]);
+                  }
+              }
+
+              private void retryNow() {
+                  ui.removeCallbacks(retryRunnable);
+                  errorText.setText("Retrying\u2026");
+                  web.loadUrl(failedUrl);
+              }
+
+              private void hideError() {
+                  ui.removeCallbacks(retryRunnable);
+                  autoRetries = 0;
+                  errorView.setVisibility(View.GONE);
+              }
+
+              private void registerNetworkCallback() {
+                  if (netCallback != null) {
+                      return;
+                  }
+                  try {
+                      ConnectivityManager cm =
+                              (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                      if (cm == null) {
+                          return;
+                      }
+                      netCallback = new ConnectivityManager.NetworkCallback() {
+                          @Override
+                          public void onAvailable(Network network) {
+                              ui.post(() -> {
+                                  if (errorView.getVisibility() == View.VISIBLE) {
+                                      retryNow();
+                                  }
+                              });
+                          }
+                      };
+                      cm.registerDefaultNetworkCallback(netCallback);
+                  } catch (RuntimeException e) {
+                      netCallback = null;
+                  }
+              }
+
+              private void unregisterNetworkCallback() {
+                  if (netCallback == null) {
+                      return;
+                  }
+                  try {
+                      ConnectivityManager cm =
+                              (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                      if (cm != null) {
+                          cm.unregisterNetworkCallback(netCallback);
+                      }
+                  } catch (RuntimeException ignored) {
+                  }
+                  netCallback = null;
               }
 
               private void finishSplash() {
@@ -538,6 +702,7 @@ jobs:
               @Override
               protected void onPause() {
                   releaseWifiLock();
+                  unregisterNetworkCallback();
                   web.onPause();
                   super.onPause();
               }
@@ -547,6 +712,7 @@ jobs:
                   super.onResume();
                   web.onResume();
                   acquireWifiLock();
+                  registerNetworkCallback();
               }
 
               @Override
