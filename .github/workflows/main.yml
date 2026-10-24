@@ -25,7 +25,7 @@ jobs:
         run: |
           set -e
           P=ManbangWebView
-          mkdir -p $P/app/src/main/java/xyz/manbang/app $P/app/src/main/res/values $P/app/src/main/res/mipmap-nodpi $P/app/src/main/assets
+          mkdir -p $P/app/src/main/java/xyz/manbang/app $P/app/src/main/res/values $P/app/src/main/res/mipmap-nodpi $P/app/src/main/assets $P/app/src/main/res/drawable-nodpi
           cat > $P/app/build.gradle.kts <<'EOF'
           plugins {
               id("com.android.application")
@@ -36,7 +36,7 @@ jobs:
               compileSdk = 34
 
               defaultConfig {
-                  applicationId = "xyz.manbang.app"
+                  applicationId = "com.juche_tv.manbang"
                   minSdk = 24
                   targetSdk = 34
                   versionCode = 1
@@ -59,6 +59,16 @@ jobs:
           <?xml version="1.0" encoding="utf-8"?>
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+              <uses-feature
+                  android:name="android.software.leanback"
+                  android:required="false" />
+              <uses-feature
+                  android:name="android.hardware.touchscreen"
+                  android:required="false" />
+              <uses-feature
+                  android:name="android.hardware.wifi"
+                  android:required="false" />
+
               <uses-permission android:name="android.permission.INTERNET" />
               <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
               <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -66,6 +76,7 @@ jobs:
 
               <application
                   android:allowBackup="false"
+                  android:banner="@drawable/banner"
                   android:icon="@mipmap/ic_launcher"
                   android:label="@string/app_name"
                   android:supportsRtl="true"
@@ -80,10 +91,183 @@ jobs:
                       <intent-filter>
                           <action android:name="android.intent.action.MAIN" />
                           <category android:name="android.intent.category.LAUNCHER" />
+                          <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
                       </intent-filter>
                   </activity>
               </application>
           </manifest>
+          EOF
+          cat > $P/app/src/main/assets/error.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+          <meta name="color-scheme" content="dark light">
+          <title>Manbang IPTV</title>
+          <style>
+            :root{
+              --bg:#0b0d11; --bg-2:#10131a; --ink:#eef0f4; --muted:#8b93a3; --faint:#565e6e;
+              --red:#d21f3c; --red-hi:#ff4d66; --line:rgba(255,255,255,.09); --chip:rgba(255,255,255,.05);
+              --ease-spring:cubic-bezier(.22,1.4,.36,1); --ease-out:cubic-bezier(.16,1,.3,1);
+            }
+            @media (prefers-color-scheme: light){
+              :root{ --bg:#f4f2ec; --bg-2:#eae7de; --ink:#16181d; --muted:#5d6370; --faint:#9aa0ab;
+                     --line:rgba(0,0,0,.09); --chip:rgba(0,0,0,.05); }
+            }
+            *,*::before,*::after{ margin:0; padding:0; box-sizing:border-box; }
+            html{ -webkit-tap-highlight-color:transparent; -webkit-text-size-adjust:100%; overscroll-behavior:none; background:var(--bg); }
+            body{
+              min-height:100vh; min-height:100dvh; display:flex; flex-direction:column;
+              padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);
+              background:radial-gradient(120% 90% at 50% -10%, var(--bg-2), var(--bg) 60%);
+              color:var(--ink); font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+              -webkit-font-smoothing:antialiased; overflow:hidden; cursor:default;
+              -webkit-user-select:none; user-select:none; -webkit-touch-callout:none;
+            }
+
+            .stage{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+                    gap:26px; padding:24px; text-align:center; position:relative; }
+            .bloom{ position:absolute; width:340px; height:340px; border-radius:50%;
+                    background:radial-gradient(circle, rgba(210,31,60,.20), transparent 65%); filter:blur(10px);
+                    opacity:.7; pointer-events:none; }
+
+            /* icon: app logo with a status badge */
+            .icon{ position:relative; z-index:1; width:96px; height:96px; flex:none;
+                   animation:land .55s var(--ease-spring) both; }
+            .icon .logo{ width:100%; height:100%; border-radius:24%; overflow:hidden;
+                         box-shadow:0 20px 40px -16px rgba(0,0,0,.55), 0 4px 12px rgba(0,0,0,.3);
+                         filter:saturate(.55) brightness(.9); }
+            .icon .logo img{ display:block; width:100%; height:100%; object-fit:cover; }
+            .badge{ position:absolute; right:-10px; bottom:-10px; width:38px; height:38px; border-radius:50%;
+                    background:linear-gradient(160deg, var(--red-hi), var(--red) 55%, #8f1128);
+                    border:3px solid var(--bg); color:#fff; display:flex; align-items:center; justify-content:center;
+                    box-shadow:0 6px 14px -4px rgba(210,31,60,.6); }
+            .badge svg{ width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+            .g-wifi, .g-alert{ display:none; }
+            body.offline .g-wifi{ display:block; }
+            body:not(.offline) .g-alert{ display:block; }
+
+            .copy{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:10px; max-width:420px;
+                   animation:fadeup .5s var(--ease-out) .12s both; }
+            h1{ font-size:22px; font-weight:800; letter-spacing:-.02em; line-height:1.2; }
+            .msg{ font-size:14px; line-height:1.5; color:var(--muted); }
+            .reason{ margin-top:4px; max-width:100%; padding:5px 11px; border-radius:999px; background:var(--chip);
+                     border:1px solid var(--line); font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+                     font-size:11px; letter-spacing:.03em; color:var(--faint); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+            .reason:empty{ display:none; }
+
+            .actions{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:12px;
+                      animation:fadeup .5s var(--ease-out) .2s both; }
+            button{ font:inherit; font-size:15px; font-weight:700; letter-spacing:.01em; color:#fff; border:0; cursor:pointer;
+                    min-width:168px; height:48px; padding:0 28px; border-radius:14px;
+                    background:linear-gradient(160deg, var(--red-hi) -10%, var(--red) 50%, #9d1229 110%);
+                    box-shadow:0 14px 28px -12px rgba(210,31,60,.7), inset 0 1px 1px rgba(255,255,255,.3);
+                    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+                    transition:transform .16s var(--ease-out), opacity .2s ease; }
+            button:active{ transform:scale(.97); }
+            button:focus, button:focus-visible{ outline:3px solid var(--ink); outline-offset:4px; }
+            button[disabled]{ opacity:.75; cursor:default; transform:none; }
+            .spin{ display:none; width:16px; height:16px; border-radius:50%; border:2px solid rgba(255,255,255,.4);
+                   border-top-color:#fff; animation:spin .8s linear infinite; }
+            body.busy .spin{ display:block; }
+
+            .hint{ min-height:18px; font-size:12px; color:var(--faint); display:flex; align-items:center; gap:7px; }
+            .hint .dot{ width:6px; height:6px; border-radius:50%; background:var(--red); animation:pulse 1.2s ease-in-out infinite; }
+            .hint .dot[hidden]{ display:none; }
+
+            @keyframes land{ from{ opacity:0; transform:scale(.6) translateY(14px); } to{ opacity:1; transform:none; } }
+            @keyframes fadeup{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+            @keyframes spin{ to{ transform:rotate(360deg); } }
+            @keyframes pulse{ 0%,100%{ opacity:.25; } 50%{ opacity:1; } }
+
+            /* phones held sideways (the app is landscape): side-by-side layout */
+            @media (orientation:landscape) and (max-height:520px){
+              .stage{ flex-direction:row; gap:40px; padding:16px 32px; text-align:left; }
+              .copy{ align-items:flex-start; }
+              .stack{ display:flex; flex-direction:column; gap:16px; align-items:flex-start; }
+              .actions{ align-items:flex-start; }
+              .bloom{ left:6%; }
+            }
+            .stack{ display:contents; }
+            @media (orientation:landscape) and (max-height:520px){ .stack{ display:flex; } }
+
+            @media (prefers-reduced-motion: reduce){
+              .icon, .copy, .actions{ animation:none; }
+              .spin, .hint .dot{ animation:none; }
+            }
+          </style>
+          </head>
+          <body class="offline" role="alert" aria-live="assertive">
+            <main class="stage">
+              <div class="bloom" aria-hidden="true"></div>
+
+              <div class="icon" aria-hidden="true">
+                <div class="logo"><img src="logo.png" alt=""></div>
+                <div class="badge">
+                  <svg class="g-wifi" viewBox="0 0 24 24"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                  <svg class="g-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+              </div>
+
+              <div class="stack">
+                <div class="copy">
+                  <h1 id="title">No internet connection</h1>
+                  <p class="msg" id="msg">Check your Wi-Fi or mobile data.</p>
+                  <div class="reason" id="reason"></div>
+                </div>
+
+                <div class="actions">
+                  <button id="retry" type="button"><span class="spin"></span><span id="label">Retry</span></button>
+                  <div class="hint"><span class="dot" id="dot" hidden></span><span id="hint"></span></div>
+                </div>
+              </div>
+            </main>
+
+          <script>
+            (function () {
+              var body = document.body;
+              var $ = function (id) { return document.getElementById(id); };
+              var state = { offline: true, auto: false, reason: '', busy: false };
+
+              function render() {
+                body.classList.toggle('offline', state.offline);
+                body.classList.toggle('busy', state.busy);
+                $('title').textContent = state.offline ? 'No internet connection' : 'Can\u2019t reach Manbang';
+                $('msg').textContent = state.offline
+                  ? 'Check your Wi-Fi or mobile data. We\u2019ll reconnect as soon as you\u2019re back online.'
+                  : 'The page didn\u2019t load. This is usually temporary \u2014 try again in a moment.';
+                $('reason').textContent = state.reason || '';
+                $('retry').disabled = state.busy;
+                $('label').textContent = state.busy ? 'Retrying\u2026' : 'Retry';
+                $('dot').hidden = !(state.busy || state.auto);
+                $('hint').textContent = state.busy ? 'Reconnecting\u2026'
+                                      : state.auto ? 'Retrying automatically\u2026'
+                                      : 'Press OK or tap Retry to try again';
+                if (!state.busy) { try { $('retry').focus(); } catch (e) {} }
+              }
+
+              /* called by the app */
+              window.showError = function (reason, offline, auto) {
+                state.reason = reason || ''; state.offline = !!offline; state.auto = !!auto; state.busy = false;
+                render();
+              };
+              window.setRetrying = function () { state.busy = true; render(); };
+
+              $('retry').addEventListener('click', function () {
+                if (state.busy) return;
+                state.busy = true; render();
+                if (window.Android) Android.retry();
+              });
+
+              window.addEventListener('offline', function () { state.offline = true; render(); });
+              window.addEventListener('online',  function () { state.offline = false; render(); });
+
+              render();
+            })();
+          </script>
+          </body>
+          </html>
           EOF
           cat > $P/app/src/main/assets/loading.html <<'EOF'
           <!DOCTYPE html>
@@ -91,155 +275,240 @@ jobs:
           <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-          <meta name="color-scheme" content="light dark">
-          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f6">
-          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1015">
-          <title>Launching Manbang IPTV</title>
+          <meta name="color-scheme" content="dark light">
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0d11">
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f2ec">
+          <title>Manbang IPTV</title>
           <style>
-            :root {
-              --bg:        #faf9f6;
-              --ink:       #16181d;
-              --muted:     #5d6370;
-              --track:     #e7e3da;
-              --red:       #c8102e;
-              --red-dark:  #9d0c25;
-              --ease-out:  cubic-bezier(0.23, 1, 0.32, 1);
-              --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
-              --beat:      2.8s;   /* ring + sheen fire together; bar loops twice per beat */
+            :root{
+              --bg:      #0b0d11;
+              --bg-2:    #10131a;
+              --ink:     #eef0f4;
+              --muted:   #8b93a3;
+              --faint:   #565e6e;
+              --red:     #d21f3c;
+              --red-hi:  #ff4d66;
+              --line:    rgba(255,255,255,.08);
+              --ease-spring: cubic-bezier(.22,1.4,.36,1);
+              --ease-out:    cubic-bezier(.16,1,.3,1);
             }
-            @media (prefers-color-scheme: dark) {
-              :root { --bg:#0d1015; --ink:#ffffff; --muted:#aab1bf; --track:#262c36; }
-            }
-
-            *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
-            html {
-              -webkit-tap-highlight-color: transparent;
-              -webkit-text-size-adjust: 100%;
-              overscroll-behavior: none;
-              background: var(--bg);
+            @media (prefers-color-scheme: light){
+              :root{
+                --bg:#f4f2ec; --bg-2:#eae7de; --ink:#16181d; --muted:#5d6370;
+                --faint:#9aa0ab; --line:rgba(0,0,0,.08);
+              }
             }
 
-            body {
-              min-height: 100vh;
-              min-height: 100dvh;
-              display: flex; flex-direction: column; align-items: center; justify-content: center;
-              padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
-                       env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-              background: var(--bg);
-              color: var(--ink);
-              font-family: 'Archivo', system-ui, -apple-system, sans-serif;
-              -webkit-font-smoothing: antialiased;
-              cursor: default;
-              -webkit-user-select: none; user-select: none;
-              -webkit-touch-callout: none;
-              overflow: hidden;
+            *,*::before,*::after{ margin:0; padding:0; box-sizing:border-box; }
+
+            html{
+              -webkit-tap-highlight-color:transparent;
+              -webkit-text-size-adjust:100%;
+              overscroll-behavior:none;
+              background:var(--bg);
             }
+
+            body{
+              min-height:100vh; min-height:100dvh;
+              display:flex; flex-direction:column;
+              padding: env(safe-area-inset-top,0px) env(safe-area-inset-right,0px)
+                       env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);
+              background:
+                radial-gradient(120% 90% at 50% -10%, var(--bg-2), var(--bg) 60%);
+              color:var(--ink);
+              font-family:'Archivo', system-ui, -apple-system, sans-serif;
+              -webkit-font-smoothing:antialiased;
+              cursor:default; overflow:hidden;
+              -webkit-user-select:none; user-select:none; -webkit-touch-callout:none;
+            }
+
+            /* ── Stage ── */
+            .stage{
+              flex:1; display:flex; flex-direction:column;
+              align-items:center; justify-content:center;
+              position:relative;
+            }
+
+            /* Ambient bloom behind the icon — one soft breath, not a disco */
+            .bloom{
+              position:absolute; width:340px; height:340px;
+              border-radius:50%;
+              background:radial-gradient(circle, rgba(210,31,60,.22), transparent 65%);
+              filter:blur(10px);
+              animation:bloom 6s ease-in-out 1.1s infinite;
+              opacity:0;
+            }
+            @keyframes bloom{ 0%{opacity:0; transform:scale(.9);} 25%{opacity:1;} 70%,100%{opacity:.55; transform:scale(1);} }
 
             /* ── App icon ── */
-            .icon {
-              position: relative;
-              width: 96px; height: 96px;
-              margin-bottom: 36px;
-              animation: pop .4s var(--ease-out) both;
+            .icon{
+              position:relative; z-index:1;
+              width:104px; height:104px;
+              border-radius:24%;
+              background:linear-gradient(160deg, var(--red-hi) -10%, var(--red) 45%, #8f1128 110%);
+              box-shadow:
+                0 24px 48px -16px rgba(210,31,60,.45),
+                0 4px 12px rgba(0,0,0,.35),
+                inset 0 1px 1px rgba(255,255,255,.35),
+                inset 0 -8px 18px rgba(0,0,0,.25);
+              display:flex; align-items:center; justify-content:center;
+              overflow:hidden;
+              opacity:0;
+              transform:scale(.55);
+              animation:land .55s var(--ease-spring) .15s forwards;
             }
-            .icon-body {
-              position: relative; z-index: 1;
-              width: 100%; height: 100%;
-              border-radius: 22.5%;                       /* iOS-style squircle proportion */
-              background: linear-gradient(150deg, var(--red), var(--red-dark));
-              box-shadow: 0 14px 30px -10px rgba(0,0,0,.45),
-                          inset 0 1px 0 rgba(255,255,255,.28);  /* light catching the top edge */
-              display: flex; align-items: center; justify-content: center;
-              overflow: hidden;
+            .icon img{ display:block; width:100%; height:100%; border-radius:24%; object-fit:cover; }
+            /* faint top-glass edge */
+            .icon::after{
+              content:""; position:absolute; inset:0; border-radius:24%;
+              background:linear-gradient(180deg, rgba(255,255,255,.22), transparent 28%);
+              pointer-events:none;
             }
-            .icon-body img { display: block; width: 100%; height: 100%; border-radius: 22.5%; }
-
-            /* Sheen: a soft highlight sweeping across the glass, once per beat */
-            .icon-body::after {
-              content: ""; position: absolute; top: -20%; bottom: -20%; left: 0; width: 60%;
-              background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,.34) 50%, transparent 80%);
-              transform: translateX(-120%) skewX(-12deg);
-              pointer-events: none;
-              animation: sheen var(--beat) var(--ease-in-out) .9s infinite;
-            }
-
-            /* Soft beacon ring, same idea as the live dot on the site */
-            .icon::before {
-              content: ""; position: absolute; inset: 0;
-              border-radius: 22.5%;
-              background: var(--red);
-              opacity: 0;
-              animation: ring var(--beat) var(--ease-out) .9s infinite;
+            @keyframes land{
+              0%  { opacity:0; transform:scale(.55) translateY(14px); }
+              60% { opacity:1; }
+              100%{ opacity:1; transform:scale(1) translateY(0); }
             }
 
-            /* ── Label ── */
-            .label {
-              font-size: 19px; font-weight: 600;
-              letter-spacing: -0.01em; line-height: 1.2;
-              text-align: center;
-              animation: rise .4s var(--ease-out) .08s both;
+            /* ── Wordmark ── */
+            .brand{
+              margin-top:34px;
+              font-size:22px; font-weight:800;
+              letter-spacing:-.02em;
+              opacity:0; transform:translateY(10px);
+              animation:fadeup .5s var(--ease-out) .45s forwards;
+              display:flex; align-items:baseline; gap:8px;
             }
-            .label em { font-style: normal; font-weight: 900; color: var(--red); }
+            .brand .mark{ color:var(--red); font-weight:900; }
+            .brand .sub{ font-size:11px; font-weight:600; letter-spacing:.22em; color:var(--muted); text-transform:uppercase; }
+
+            /* ── Status line: believable launcher chatter ── */
+            .status{
+              margin-top:14px;
+              font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+              font-size:11.5px; letter-spacing:.04em;
+              color:var(--muted);
+              min-height:16px;
+              opacity:0;
+              animation:fadein .4s ease .7s forwards;
+              transition:opacity .18s ease;
+            }
+            .status.swap{ opacity:0; }
+            @keyframes fadein{ to{opacity:1;} }
 
             /* ── Progress ── */
-            .track {
-              width: 120px; height: 4px; margin-top: 22px;
-              border-radius: 2px; background: var(--track);
-              overflow: hidden;
-              animation: rise .4s var(--ease-out) .16s both;
+            .track{
+              margin-top:26px;
+              width:148px; height:3px;
+              border-radius:2px;
+              background:var(--line);
+              overflow:hidden;
+              opacity:0;
+              animation:fadeup .5s var(--ease-out) .55s forwards;
             }
-            .bar {
-              width: 45%; height: 100%;
-              border-radius: 2px; background: var(--red);
-              animation: slide 1.4s var(--ease-in-out) .16s infinite backwards;
-              will-change: transform;
-            }
-
-            @keyframes pop   { from { opacity:0; transform: scale(.92); } to { opacity:1; transform: none; } }
-            @keyframes rise  { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: none; } }
-            @keyframes ring  { 0% { opacity:.32; transform: scale(1); } 100% { opacity:0; transform: scale(1.5); } }
-            @keyframes sheen { 0% { transform: translateX(-120%) skewX(-12deg); } 40%, 100% { transform: translateX(260%) skewX(-12deg); } }
-            @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(222%); } }
-
-            /* Exit: launch zoom. Icon swells and fades, text drops out first. */
-            .leaving .icon {
-              animation: none;
-              opacity: 0; transform: scale(1.06);
-              transition: opacity .22s var(--ease-out), transform .22s var(--ease-out);
-            }
-            .leaving .label, .leaving .track {
-              animation: none; opacity: 0;
-              transition: opacity .16s var(--ease-out);
+            .bar{
+              height:100%; width:0%;
+              border-radius:2px;
+              background:linear-gradient(90deg, var(--red), var(--red-hi));
+              transition:width .45s var(--ease-out);
             }
 
-            /* Reduced motion: keep the fades, drop movement */
-            @media (prefers-reduced-motion: reduce) {
-              .icon, .label, .track { animation: fade .3s ease both; }
-              .icon::before, .icon-body::after { animation: none; }
-              .leaving .icon { transform: none; }
-              .bar { width: 100%; animation: breathe 1.6s ease-in-out infinite; will-change: auto; }
-              @keyframes fade    { from { opacity:0; } to { opacity:1; } }
-              @keyframes breathe { 0%,100% { opacity:.35; } 50% { opacity:1; } }
+            @keyframes fadeup{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
+
+            /* ── Credits footer ── */
+            .credits{
+              padding:26px 24px calc(18px + env(safe-area-inset-bottom,0px));
+              text-align:center;
+              font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+              font-size:10.5px;
+              line-height:2.05;
+              letter-spacing:.06em;
+              color:var(--faint);
+              opacity:0;
+              animation:fadein .6s ease .9s forwards;
+            }
+            .credits .row{ white-space:nowrap; }
+            .credits b{ font-weight:600; color:var(--muted); }
+            .credits a, .credits .url{ color:var(--muted); text-decoration:none; }
+            .credits .sep{ color:var(--faint); opacity:.6; padding:0 .35em; }
+
+            /* ── Exit: launcher hand-off zoom ── */
+            .leaving .bloom{ animation:none; opacity:0; transition:opacity .2s ease; }
+            .leaving .icon{
+              animation:none;
+              transform:scale(1.12);
+              opacity:0;
+              transition:transform .26s var(--ease-out), opacity .22s ease;
+            }
+            .leaving .brand, .leaving .status, .leaving .track, .leaving .credits{
+              animation:none; opacity:0;
+              transition:opacity .15s ease;
+            }
+
+            /* Reduced motion: keep it calm, keep the meaning */
+            @media (prefers-reduced-motion: reduce){
+              .icon{ animation:fadein .3s ease .1s forwards; transform:none; }
+              .bloom{ animation:none; opacity:.4; }
+              .bar{ transition:width .8s ease; }
             }
           </style>
           </head>
           <body role="status" aria-live="polite">
 
-            <div class="icon" aria-hidden="true">
-              <div class="icon-body">
+            <main class="stage">
+              <div class="bloom" aria-hidden="true"></div>
+
+              <div class="icon" aria-hidden="true">
                 <img src="logo.png" alt="">
               </div>
-            </div>
 
-            <h1 class="label">Launching <em>Manbang IPTV</em></h1>
+              <h1 class="brand">
+                <span class="mark">Manbang</span><span>IPTV</span>
+                <span class="sub">TV&nbsp;Launcher</span>
+              </h1>
 
-            <div class="track" aria-hidden="true"><div class="bar"></div></div>
+              <div class="status" id="status">Initializing&hellip;</div>
+
+              <div class="track" aria-hidden="true"><div class="bar" id="bar"></div></div>
+            </main>
+
+            <footer class="credits">
+              <div class="row">COMPILED BY <b>KoryoFront</b> <span class="sep">&amp;</span> <b>JULY</b></div>
+              <div class="row">REPACKAGED TO LIGHTWEIGHT APK VERSION BY <b>Juche TV</b></div>
+              <div class="row url">juche-tv.vercel.app</div>
+            </footer>
 
           <script>
-            /* Hand-off: call launchDone() when the real page is ready. It waits out the
-               intro so a fast load never cuts the pop mid-flight, then plays the exit and
-               fires a 'launchdone' event (or runs the optional callback). */
+            /* ── Status chatter: short, believable boot messages ── */
+            (function () {
+              var el = document.getElementById('status');
+              var bar = document.getElementById('bar');
+              var steps = [
+                ['Loading core modules',        18, 260],
+                ['Fetching channel list',       44, 520],
+                ['Parsing EPG data',            68, 430],
+                ['Optimizing playback engine',  88, 380],
+                ['Ready',                      100, 240]
+              ];
+              var i = 0;
+              function next() {
+                if (i >= steps.length) return;
+                var text = steps[i][0], pct = steps[i][1], wait = steps[i][2];
+                el.classList.add('swap');
+                setTimeout(function () {
+                  el.textContent = text + (pct < 100 ? '…' : '');
+                  el.classList.remove('swap');
+                  bar.style.width = pct + '%';
+                  i++;
+                  setTimeout(next, wait);
+                }, 180);
+              }
+              setTimeout(next, 900);
+            })();
+
+            /* ── Hand-off: call launchDone() when the real page is ready. Waits out the
+               intro so a fast load never cuts the landing animation short, then plays
+               the exit zoom and fires 'launchdone' (or runs the optional callback). ── */
             (function () {
               var called = false;
               window.launchDone = function (cb) {
@@ -249,8 +518,8 @@ jobs:
                   setTimeout(function () {
                     document.dispatchEvent(new Event('launchdone'));
                     if (typeof cb === 'function') cb();
-                  }, 240);
-                }, Math.max(0, 700 - performance.now()));
+                  }, 260);
+                }, Math.max(0, 750 - performance.now()));
               };
             })();
             document.addEventListener('launchdone', function () {
@@ -260,17 +529,371 @@ jobs:
           </body>
           </html>
           EOF
+          cat > $P/app/src/main/assets/tvnav.js <<'EOF'
+          /* D-pad / remote navigation for Android TV. Injected after each page load.
+             Polite by design: runs in the bubble phase and backs off if the page already handled the key. */
+          (function () {
+            if (window.__tvnav) return;
+
+            var SEL = [
+              'a[href]', 'button', 'input:not([type=hidden])', 'select', 'textarea', 'summary',
+              '[tabindex]:not([tabindex="-1"])', '[role=button]', '[role=link]', '[role=tab]',
+              '[role=menuitem]', '[role=option]', '[role=switch]', '[onclick]', '[data-href]'
+            ].join(',');
+            var POINTER_TAGS = 'div,li,span,img,figure,article,section,label';
+            var MARK = 'data-tvfocus';
+            var DIRS = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' };
+
+            var cache = null, cacheAt = 0, last = null, stampN = 0;
+
+            var style = document.createElement('style');
+            style.textContent = '[' + MARK + ']{outline:3px solid #ff4d66!important;outline-offset:2px!important;' +
+                                'box-shadow:0 0 0 6px rgba(255,77,102,.25)!important;border-radius:6px}';
+            (document.head || document.documentElement).appendChild(style);
+
+            function rectOf(el) { return el.getBoundingClientRect(); }
+            function center(r) { return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; }
+            function overlap(a1, a2, b1, b2) { return Math.max(0, Math.min(a2, b2) - Math.max(a1, b1)); }
+
+            function isShown(el) {
+              var r = rectOf(el);
+              if (r.width < 6 || r.height < 6) return false;
+              var cs = getComputedStyle(el);
+              if (cs.visibility === 'hidden' || cs.display === 'none' || cs.pointerEvents === 'none') return false;
+              if (parseFloat(cs.opacity) === 0) return false;
+              if (el.disabled) return false;
+              return true;
+            }
+
+            function collect() {
+              var now = Date.now();
+              if (cache && now - cacheAt < 600) return cache;
+              var stamp = ++stampN, out = [], i;
+              function add(el) { if (el.__tvs !== stamp) { el.__tvs = stamp; out.push(el); } }
+
+              var list = document.querySelectorAll(SEL);
+              for (i = 0; i < list.length; i++) if (isShown(list[i])) add(list[i]);
+
+              // clickable <div>/<li>/... : the outermost element showing a pointer cursor
+              var nodes = document.body ? document.body.querySelectorAll(POINTER_TAGS) : [];
+              var limit = Math.min(nodes.length, 4000), vw = innerWidth, vh = innerHeight;
+              for (i = 0; i < limit; i++) {
+                var el = nodes[i];
+                if (el.__tvs === stamp) continue;
+                if (getComputedStyle(el).cursor !== 'pointer') continue;
+                var p = el.parentElement;
+                if (p && getComputedStyle(p).cursor === 'pointer') continue;
+                if (!isShown(el)) continue;
+                var r = rectOf(el);
+                if (r.width > vw * 0.9 && r.height > vh * 0.9) continue;
+                add(el);
+              }
+              cache = out; cacheAt = now;
+              return out;
+            }
+
+            function currentEl(list) {
+              var a = document.activeElement;
+              if (a && a !== document.body && a !== document.documentElement) {
+                if (list.indexOf(a) >= 0) return a;
+                for (var i = 0; i < list.length; i++) if (list[i].contains(a)) return list[i];
+              }
+              if (last && document.documentElement.contains(last)) return last;
+              return null;
+            }
+
+            function startElement(list) {
+              var best = null, bestScore = Infinity;
+              for (var i = 0; i < list.length; i++) {
+                var r = rectOf(list[i]);
+                if (r.bottom < 0 || r.top > innerHeight || r.right < 0 || r.left > innerWidth) continue;
+                var s = Math.max(r.top, 0) * 2 + Math.max(r.left, 0);
+                if (s < bestScore) { bestScore = s; best = list[i]; }
+              }
+              return best || list[0] || null;
+            }
+
+            function pick(from, dir, list) {
+              var fr = rectOf(from), fc = center(fr), best = null, bestScore = Infinity;
+              var horiz = dir === 'left' || dir === 'right';
+              for (var i = 0; i < list.length; i++) {
+                var el = list[i];
+                if (el === from || from.contains(el) || el.contains(from)) continue;
+                var r = rectOf(el), c = center(r), dx = c.x - fc.x, dy = c.y - fc.y;
+                if (dir === 'right' && dx <= 2) continue;
+                if (dir === 'left'  && dx >= -2) continue;
+                if (dir === 'down'  && dy <= 2) continue;
+                if (dir === 'up'    && dy >= -2) continue;
+                var prim = Math.abs(horiz ? dx : dy);
+                var sec  = Math.abs(horiz ? dy : dx);
+                var ov   = horiz ? overlap(fr.top, fr.bottom, r.top, r.bottom)
+                                 : overlap(fr.left, fr.right, r.left, r.right);
+                var score = prim + sec * 2 - Math.min(ov, 300) * 0.6;
+                if (score < bestScore) { bestScore = score; best = el; }
+              }
+              return best;
+            }
+
+            function isNative(el) { return /^(A|BUTTON|SUMMARY|SELECT|TEXTAREA)$/.test(el.tagName); }
+
+            function focusEl(el) {
+              if (last && last !== el) last.removeAttribute(MARK);
+              last = el;
+              el.setAttribute(MARK, '');
+              if (!el.hasAttribute('tabindex') && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA|SUMMARY)$/.test(el.tagName)) {
+                el.setAttribute('tabindex', '-1');
+              }
+              try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); }
+              var r = rectOf(el), m = 90;
+              if (r.top < m || r.bottom > innerHeight - m || r.left < 0 || r.right > innerWidth) {
+                try { el.scrollIntoView({ block: 'center', inline: 'center' }); } catch (e) { el.scrollIntoView(); }
+              }
+            }
+
+            function clearMark() {
+              if (last) last.removeAttribute(MARK);
+            }
+
+            function typingIn(a, dir) {
+              if (!a) return false;
+              var tag = a.tagName;
+              var textual = tag === 'TEXTAREA' || a.isContentEditable ||
+                (tag === 'INPUT' && /^(text|search|url|tel|email|password|number)$/i.test(a.type || 'text'));
+              if (!textual) return false;
+              if (dir === 'up' || dir === 'down') return tag === 'TEXTAREA' || a.isContentEditable;
+              try {
+                var s = a.selectionStart, e = a.selectionEnd;
+                if (s === null || s === undefined) return false;
+                if (dir === 'left')  return !(s === 0 && e === 0);
+                if (dir === 'right') return !(s === a.value.length && e === a.value.length);
+              } catch (x) {}
+              return false;
+            }
+
+            function mediaEl() {
+              var v = document.querySelectorAll('video,audio'), best = null;
+              for (var i = 0; i < v.length; i++) {
+                if (!v[i].paused && !v[i].ended) return v[i];
+                if (!best && v[i].readyState > 0) best = v[i];
+              }
+              return best || v[0] || null;
+            }
+
+            function seek(v, d) {
+              var t = v.currentTime + d;
+              try {
+                if (v.seekable && v.seekable.length) {
+                  t = Math.min(Math.max(t, v.seekable.start(0)), v.seekable.end(v.seekable.length - 1));
+                } else if (isFinite(v.duration)) {
+                  t = Math.min(Math.max(t, 0), v.duration);
+                }
+              } catch (e) {}
+              v.currentTime = t;
+            }
+
+            window.addEventListener('keydown', function (e) {
+              if (e.defaultPrevented || e.ctrlKey || e.altKey || e.metaKey) return;
+              var a = document.activeElement, dir = DIRS[e.key];
+
+              if (dir) {
+                if (typingIn(a, dir)) return;
+                if (a && a.tagName === 'INPUT' && a.type === 'range' && (dir === 'left' || dir === 'right')) return;
+                if (a && (a.tagName === 'VIDEO' || a.tagName === 'AUDIO') && (dir === 'left' || dir === 'right')) {
+                  seek(a, dir === 'right' ? 10 : -10);
+                  e.preventDefault();
+                  return;
+                }
+                var list = collect(), cur = currentEl(list);
+                var next = cur ? pick(cur, dir, list) : startElement(list);
+                if (next) focusEl(next);
+                else if (dir === 'up' || dir === 'down') window.scrollBy(0, (dir === 'down' ? 1 : -1) * innerHeight * 0.6);
+                e.preventDefault();
+                return;
+              }
+
+              if (e.key === 'Enter' && !e.repeat && a) {
+                var t = a.tagName, type = (a.type || '').toLowerCase();
+                var manual = !isNative(a) && t !== 'INPUT' && a.hasAttribute && a.hasAttribute(MARK);
+                var toggle = t === 'INPUT' && /^(checkbox|radio|button|submit|reset)$/.test(type);
+                if (manual || toggle) { e.preventDefault(); a.click(); }
+              }
+            });
+
+            document.addEventListener('touchstart', clearMark, true);
+            document.addEventListener('mousedown', clearMark, true);
+
+            try {
+              new MutationObserver(function () { cache = null; })
+                .observe(document.documentElement, { childList: true, subtree: true });
+            } catch (e) {}
+
+            window.__tvnav = {
+              media: function (cmd) {
+                var v = mediaEl();
+                if (!v) return 'no media element';
+                if (cmd === 'toggle') cmd = v.paused ? 'play' : 'pause';
+                if (cmd === 'play') { var p = v.play(); if (p && p.catch) p.catch(function () {}); return 'play'; }
+                if (cmd === 'pause') { v.pause(); return 'pause'; }
+                if (cmd === 'ff') { seek(v, 10); return 'seek +10s'; }
+                if (cmd === 'rw') { seek(v, -10); return 'seek -10s'; }
+                return 'unknown command';
+              }
+            };
+          })();
+          EOF
+          cat > $P/app/src/main/java/xyz/manbang/app/AppLog.java <<'EOF'
+          package xyz.manbang.app;
+
+          import android.util.Log;
+
+          import java.util.ArrayDeque;
+          import java.util.ArrayList;
+          import java.util.List;
+          import java.util.regex.Matcher;
+          import java.util.regex.Pattern;
+
+          /**
+           * One place for all app logging (system logcat + the on-screen overlay).
+           * Every message is scrubbed here, so no call site can leak the site name:
+           * URLs lose their host and query (only the path is kept) and the site name itself is masked.
+           */
+          final class AppLog {
+
+              static final class Entry {
+                  final long time;
+                  final char level;
+                  final String tag;
+                  final String msg;
+
+                  Entry(long time, char level, String tag, String msg) {
+                      this.time = time;
+                      this.level = level;
+                      this.tag = tag;
+                      this.msg = msg;
+                  }
+              }
+
+              interface Listener {
+                  void onLog();
+              }
+
+              private static final String TAG = "Manbang";
+              private static final int MAX_ENTRIES = 300;
+              private static final int MAX_PATH = 46;
+
+              // scheme://host[/path][?query][#fragment]  ->  keeps only /path
+              private static final Pattern URL = Pattern.compile(
+                      "(?i)\\b[a-z][a-z0-9+.\\-]*://[^/\\s\"'<>()]*([^\\s\"'<>()?#]*)(?:[?#][^\\s\"'<>()]*)?");
+              private static final Pattern SITE = Pattern.compile(
+                      "(?i)(?:[a-z0-9-]+\\.)*" + Pattern.quote(Site.HOST));
+
+              private static final ArrayDeque<Entry> BUFFER = new ArrayDeque<>();
+              private static volatile Listener listener;
+
+              private AppLog() {
+              }
+
+              static void setListener(Listener l) {
+                  listener = l;
+              }
+
+              static void d(String tag, String msg) {
+                  add('D', tag, msg);
+              }
+
+              static void i(String tag, String msg) {
+                  add('I', tag, msg);
+              }
+
+              static void w(String tag, String msg) {
+                  add('W', tag, msg);
+              }
+
+              static void e(String tag, String msg) {
+                  add('E', tag, msg);
+              }
+
+              /** Last n entries, oldest first. */
+              static List<Entry> last(int n) {
+                  synchronized (BUFFER) {
+                      List<Entry> all = new ArrayList<>(BUFFER);
+                      int from = Math.max(0, all.size() - n);
+                      return new ArrayList<>(all.subList(from, all.size()));
+                  }
+              }
+
+              static String redact(String raw) {
+                  if (raw == null) {
+                      return "";
+                  }
+                  Matcher m = URL.matcher(raw);
+                  StringBuffer sb = new StringBuffer();
+                  while (m.find()) {
+                      String path = m.group(1);
+                      if (path == null || path.isEmpty()) {
+                          path = "/";
+                      }
+                      m.appendReplacement(sb, Matcher.quoteReplacement(shorten(path)));
+                  }
+                  m.appendTail(sb);
+                  String out = SITE.matcher(sb.toString()).replaceAll("\u2022\u2022\u2022");
+                  return out.length() > 160 ? out.substring(0, 160) + "\u2026" : out;
+              }
+
+              private static String shorten(String path) {
+                  if (path.length() <= MAX_PATH) {
+                      return path;
+                  }
+                  return path.substring(0, 18) + "\u2026" + path.substring(path.length() - 26);
+              }
+
+              private static void add(char level, String tag, String raw) {
+                  String msg = redact(raw);
+                  String logTag = TAG + "/" + tag;
+                  switch (level) {
+                      case 'E':
+                          Log.e(logTag, msg);
+                          break;
+                      case 'W':
+                          Log.w(logTag, msg);
+                          break;
+                      case 'I':
+                          Log.i(logTag, msg);
+                          break;
+                      default:
+                          Log.d(logTag, msg);
+                          break;
+                  }
+                  synchronized (BUFFER) {
+                      BUFFER.addLast(new Entry(System.currentTimeMillis(), level, tag, msg));
+                      while (BUFFER.size() > MAX_ENTRIES) {
+                          BUFFER.removeFirst();
+                      }
+                  }
+                  Listener l = listener;
+                  if (l != null) {
+                      l.onLog();
+                  }
+              }
+          }
+          EOF
           cat > $P/app/src/main/java/xyz/manbang/app/MainActivity.java <<'EOF'
           package xyz.manbang.app;
 
           import android.app.Activity;
+          import android.app.UiModeManager;
           import android.content.ActivityNotFoundException;
           import android.content.Context;
           import android.content.Intent;
+          import android.content.pm.PackageInfo;
+          import android.content.res.Configuration;
           import android.graphics.Bitmap;
           import android.graphics.Color;
+          import android.graphics.Typeface;
+          import android.graphics.drawable.GradientDrawable;
           import android.net.ConnectivityManager;
           import android.net.Network;
+          import android.net.NetworkCapabilities;
           import android.net.Uri;
           import android.net.http.SslError;
           import android.os.Build;
@@ -278,12 +901,19 @@ jobs:
           import android.os.Bundle;
           import android.os.Handler;
           import android.os.Looper;
+          import android.os.SystemClock;
+          import android.text.SpannableStringBuilder;
+          import android.text.Spanned;
+          import android.text.style.ForegroundColorSpan;
+          import android.util.TypedValue;
           import android.view.Gravity;
+          import android.view.KeyEvent;
           import android.view.View;
           import android.view.Window;
           import android.view.WindowInsets;
           import android.view.WindowInsetsController;
           import android.view.WindowManager;
+          import android.webkit.ConsoleMessage;
           import android.webkit.CookieManager;
           import android.webkit.JavascriptInterface;
           import android.webkit.SslErrorHandler;
@@ -294,24 +924,36 @@ jobs:
           import android.webkit.WebSettings;
           import android.webkit.WebView;
           import android.webkit.WebViewClient;
-          import android.widget.Button;
           import android.widget.FrameLayout;
-          import android.widget.LinearLayout;
           import android.widget.TextView;
+
+          import org.json.JSONObject;
+
+          import java.io.ByteArrayOutputStream;
+          import java.io.IOException;
+          import java.io.InputStream;
+          import java.text.SimpleDateFormat;
+          import java.util.Date;
+          import java.util.List;
+          import java.util.Locale;
 
           public class MainActivity extends Activity {
 
-              private static final String START_URL = "https://manbang.xyz/";
-              private static final String HOST = "manbang.xyz";
+              private static final String START_URL = Site.START_URL;
+              private static final String HOST = Site.HOST;
               private static final int TEXT_ZOOM = 85; // % of normal text size; lower = smaller
               private static final long[] RETRY_DELAYS_MS = {2000, 5000}; // automatic retries before waiting for the button
+              private static final int LOG_LINES = 8;                      // lines in the on-screen log
 
               private FrameLayout root;
               private WebView web;
               private WebView splash;
               private boolean splashDone;
-              private LinearLayout errorView;
-              private TextView errorText;
+              private WebView errorWeb;
+              private boolean errorReady;
+              private String pendingReason = "";
+              private boolean pendingOffline;
+              private boolean pendingAuto;
               private boolean loadFailed;
               private int autoRetries;
               private String failedUrl = START_URL;
@@ -321,10 +963,22 @@ jobs:
               private final Handler ui = new Handler(Looper.getMainLooper());
               private View customView;
               private WebChromeClient.CustomViewCallback customViewCallback;
+              private boolean isTv;
+              private String navJs;
+              private TextView logView;
+              private boolean logVisible = true; // Menu / Info key on the remote toggles it
+              private boolean logRefreshPending;
+              private final Runnable refreshLogRunnable = this::refreshLog;
+              private final SimpleDateFormat timeFmt = new SimpleDateFormat("HH:mm:ss", Locale.US);
+              private long pageStartMs;
+              private long splashShownMs;
+              private int lastProgressBucket;
+              private String lastTransport = "";
 
               @Override
               protected void onCreate(Bundle savedInstanceState) {
                   super.onCreate(savedInstanceState);
+                  isTv = detectTv();
 
                   if (Build.VERSION.SDK_INT >= 28) {
                       WindowManager.LayoutParams lp = getWindow().getAttributes();
@@ -342,6 +996,9 @@ jobs:
                           FrameLayout.LayoutParams.MATCH_PARENT,
                           FrameLayout.LayoutParams.MATCH_PARENT));
                   setContentView(root);
+                  buildLogView();
+                  AppLog.setListener(this::scheduleLogRefresh);
+                  logStartup();
 
                   WebSettings s = web.getSettings();
                   s.setJavaScriptEnabled(true);
@@ -362,13 +1019,19 @@ jobs:
                   cm.setAcceptCookie(true);
                   cm.setAcceptThirdPartyCookies(web, true);
 
+                  web.setFocusable(true);
+                  web.setFocusableInTouchMode(true);
+                  web.requestFocus();
+
                   web.setWebViewClient(new WebViewClient() {
                       @Override
                       public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                           Uri uri = request.getUrl();
                           if (isInternal(uri)) {
+                              AppLog.d("nav", "go " + uri);
                               return false;
                           }
+                          AppLog.i("nav", "external link, opening outside the app " + uri);
                           try {
                               startActivity(new Intent(Intent.ACTION_VIEW, uri));
                           } catch (ActivityNotFoundException ignored) {
@@ -377,16 +1040,29 @@ jobs:
                       }
 
                       @Override
+                      public WebResourceResponse shouldInterceptRequest(WebView view,
+                                                                        WebResourceRequest request) {
+                          AppLog.d("res", request.getMethod() + " " + request.getUrl());
+                          return null; // log only, load normally
+                      }
+
+                      @Override
                       public void onPageStarted(WebView view, String url, Bitmap favicon) {
                           loadFailed = false;
+                          pageStartMs = SystemClock.elapsedRealtime();
+                          lastProgressBucket = 0;
+                          AppLog.i("page", "start " + url);
                       }
 
                       @Override
                       public void onPageFinished(WebView view, String url) {
+                          AppLog.i("page", "done " + url + " in "
+                                  + (SystemClock.elapsedRealtime() - pageStartMs) + " ms");
                           if (!loadFailed) {
                               hideError();
                               unblockImages();
                               finishSplash();
+                              injectTvNav();
                           }
                       }
 
@@ -394,13 +1070,17 @@ jobs:
                       public void onReceivedError(WebView view, WebResourceRequest request,
                                                   WebResourceError error) {
                           if (request.isForMainFrame()) {
+                              AppLog.e("err", "page failed: " + error.getDescription());
                               onLoadFailed(request.getUrl().toString(), error.getDescription().toString());
+                          } else {
+                              AppLog.w("res", "failed " + error.getDescription() + " " + request.getUrl());
                           }
                       }
 
                       @Override
                       public void onReceivedHttpError(WebView view, WebResourceRequest request,
                                                       WebResourceResponse errorResponse) {
+                          AppLog.w("http", errorResponse.getStatusCode() + " " + request.getUrl());
                           if (request.isForMainFrame() && errorResponse.getStatusCode() >= 500) {
                               onLoadFailed(request.getUrl().toString(),
                                       "Server error " + errorResponse.getStatusCode());
@@ -410,6 +1090,7 @@ jobs:
                       @Override
                       public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                           handler.cancel();
+                          AppLog.e("ssl", "certificate rejected " + error.getUrl());
                           onLoadFailed(error.getUrl(), "Secure connection failed");
                       }
                   });
@@ -427,11 +1108,39 @@ jobs:
                           root.addView(view, new FrameLayout.LayoutParams(
                                   FrameLayout.LayoutParams.MATCH_PARENT,
                                   FrameLayout.LayoutParams.MATCH_PARENT));
+                          keepLogOnTop();
+                          AppLog.i("ui", "video fullscreen on");
                       }
 
                       @Override
                       public void onHideCustomView() {
                           hideCustomView();
+                      }
+
+                      @Override
+                      public void onProgressChanged(WebView view, int progress) {
+                          int bucket = progress / 25;
+                          if (bucket > lastProgressBucket) {
+                              lastProgressBucket = bucket;
+                              AppLog.d("page", "progress " + Math.min(100, bucket * 25) + "%");
+                          }
+                      }
+
+                      @Override
+                      public boolean onConsoleMessage(ConsoleMessage m) {
+                          String text = m.message() + " (" + m.sourceId() + ":" + m.lineNumber() + ")";
+                          switch (m.messageLevel()) {
+                              case ERROR:
+                                  AppLog.e("js", text);
+                                  break;
+                              case WARNING:
+                                  AppLog.w("js", text);
+                                  break;
+                              default:
+                                  AppLog.d("js", text);
+                                  break;
+                          }
+                          return true; // handled here, so the system log doesn't get the unscrubbed copy
                       }
                   });
 
@@ -439,7 +1148,6 @@ jobs:
                       web.loadUrl(START_URL);
                   }
 
-                  buildErrorView();
                   showSplash();
               }
 
@@ -457,6 +1165,9 @@ jobs:
                           FrameLayout.LayoutParams.MATCH_PARENT,
                           FrameLayout.LayoutParams.MATCH_PARENT));
                   splash.loadUrl("file:///android_asset/loading.html");
+                  keepLogOnTop();
+                  splashShownMs = SystemClock.elapsedRealtime();
+                  AppLog.d("ui", "splash shown");
                   ui.postDelayed(this::onSplashTimeout, 20000); // never get stuck on the splash
               }
 
@@ -469,45 +1180,6 @@ jobs:
                   web.getSettings().setBlockNetworkImage(false);
               }
 
-              private void buildErrorView() {
-                  float d = getResources().getDisplayMetrics().density;
-                  int pad = (int) (24 * d);
-
-                  errorView = new LinearLayout(this);
-                  errorView.setOrientation(LinearLayout.VERTICAL);
-                  errorView.setGravity(Gravity.CENTER);
-                  errorView.setBackgroundColor(0xFF0D1015);
-                  errorView.setPadding(pad, pad, pad, pad);
-                  errorView.setClickable(true);
-                  errorView.setVisibility(View.GONE);
-
-                  TextView title = new TextView(this);
-                  title.setText("Can\u2019t load Manbang");
-                  title.setTextColor(Color.WHITE);
-                  title.setTextSize(20);
-                  title.setGravity(Gravity.CENTER);
-
-                  errorText = new TextView(this);
-                  errorText.setTextColor(0xFFAAB1BF);
-                  errorText.setTextSize(14);
-                  errorText.setGravity(Gravity.CENTER);
-                  errorText.setPadding(0, (int) (12 * d), 0, (int) (24 * d));
-
-                  Button retry = new Button(this);
-                  retry.setText("Retry");
-                  retry.setOnClickListener(v -> {
-                      autoRetries = 0;
-                      retryNow();
-                  });
-
-                  errorView.addView(title);
-                  errorView.addView(errorText);
-                  errorView.addView(retry);
-                  root.addView(errorView, new FrameLayout.LayoutParams(
-                          FrameLayout.LayoutParams.MATCH_PARENT,
-                          FrameLayout.LayoutParams.MATCH_PARENT));
-              }
-
               private void onLoadFailed(String url, String reason) {
                   loadFailed = true;
                   if (url != null && url.startsWith("http")) {
@@ -518,24 +1190,98 @@ jobs:
                       splashDone = true;
                       removeSplash();
                   }
-                  errorText.setText("Check your connection and try again.\n(" + reason + ")");
-                  errorView.setVisibility(View.VISIBLE);
+                  showErrorPage(reason);
                   ui.removeCallbacks(retryRunnable);
                   if (autoRetries < RETRY_DELAYS_MS.length) {
-                      ui.postDelayed(retryRunnable, RETRY_DELAYS_MS[autoRetries++]);
+                      long delay = RETRY_DELAYS_MS[autoRetries++];
+                      AppLog.d("net", "auto retry " + autoRetries + "/" + RETRY_DELAYS_MS.length
+                              + " in " + delay + " ms");
+                      ui.postDelayed(retryRunnable, delay);
                   }
+              }
+
+              private boolean isOnline() {
+                  try {
+                      ConnectivityManager cm =
+                              (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                      if (cm == null || cm.getActiveNetwork() == null) {
+                          return false;
+                      }
+                      NetworkCapabilities nc = cm.getNetworkCapabilities(cm.getActiveNetwork());
+                      return nc != null
+                              && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                              && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED);
+                  } catch (RuntimeException e) {
+                      return true;
+                  }
+              }
+
+              private void showErrorPage(String reason) {
+                  pendingReason = reason == null ? "" : reason;
+                  pendingOffline = !isOnline();
+                  pendingAuto = autoRetries < RETRY_DELAYS_MS.length;
+                  AppLog.w("err", (pendingOffline ? "offline: " : "unreachable: ") + pendingReason);
+                  if (errorWeb == null) {
+                      errorWeb = new WebView(this);
+                      errorWeb.setBackgroundColor(0xFF0D1015);
+                      errorWeb.getSettings().setJavaScriptEnabled(true);
+                      errorWeb.addJavascriptInterface(new Object() {
+                          @JavascriptInterface
+                          public void retry() {
+                              ui.post(() -> {
+                                  autoRetries = 0;
+                                  retryNow();
+                              });
+                          }
+                      }, "Android");
+                      errorWeb.setWebViewClient(new WebViewClient() {
+                          @Override
+                          public void onPageFinished(WebView view, String url) {
+                              errorReady = true;
+                              pushError();
+                          }
+
+                          @Override
+                          public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                              return true; // the error page never navigates anywhere
+                          }
+                      });
+                      root.addView(errorWeb, new FrameLayout.LayoutParams(
+                              FrameLayout.LayoutParams.MATCH_PARENT,
+                              FrameLayout.LayoutParams.MATCH_PARENT));
+                      errorWeb.loadUrl("file:///android_asset/error.html");
+                  } else {
+                      errorWeb.setVisibility(View.VISIBLE);
+                      if (errorReady) {
+                          pushError();
+                      }
+                  }
+                  errorWeb.requestFocus();
+                  keepLogOnTop();
+              }
+
+              private void pushError() {
+                  errorWeb.evaluateJavascript("showError(" + JSONObject.quote(pendingReason) + ","
+                          + pendingOffline + "," + pendingAuto + ")", null);
               }
 
               private void retryNow() {
                   ui.removeCallbacks(retryRunnable);
-                  errorText.setText("Retrying\u2026");
+                  if (errorWeb != null && errorReady) {
+                      errorWeb.evaluateJavascript("setRetrying()", null);
+                  }
+                  AppLog.i("net", "retry " + failedUrl);
                   web.loadUrl(failedUrl);
               }
 
               private void hideError() {
                   ui.removeCallbacks(retryRunnable);
                   autoRetries = 0;
-                  errorView.setVisibility(View.GONE);
+                  if (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE) {
+                      errorWeb.setVisibility(View.GONE);
+                      web.requestFocus();
+                      AppLog.i("ui", "back online, error page hidden");
+                  }
               }
 
               private void registerNetworkCallback() {
@@ -550,9 +1296,27 @@ jobs:
                       }
                       netCallback = new ConnectivityManager.NetworkCallback() {
                           @Override
+                          public void onLost(Network network) {
+                              AppLog.w("net", "network lost");
+                          }
+
+                          @Override
+                          public void onCapabilitiesChanged(Network network, NetworkCapabilities nc) {
+                              String t = nc.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ? "wifi"
+                                      : nc.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) ? "ethernet"
+                                      : nc.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ? "cellular"
+                                      : "other";
+                              if (!t.equals(lastTransport)) {
+                                  lastTransport = t;
+                                  AppLog.i("net", "link " + t);
+                              }
+                          }
+
+                          @Override
                           public void onAvailable(Network network) {
+                              AppLog.i("net", "network available");
                               ui.post(() -> {
-                                  if (errorView.getVisibility() == View.VISIBLE) {
+                                  if (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE) {
                                       retryNow();
                                   }
                               });
@@ -584,6 +1348,7 @@ jobs:
                       return;
                   }
                   splashDone = true;
+                  AppLog.i("ui", "ready after " + (SystemClock.elapsedRealtime() - splashShownMs) + " ms");
                   splash.evaluateJavascript("launchDone()", null);
                   ui.postDelayed(this::removeSplash, 1500); // fallback if the exit event never arrives
               }
@@ -595,6 +1360,9 @@ jobs:
                   root.removeView(splash);
                   splash.destroy();
                   splash = null;
+                  if (errorWeb == null || errorWeb.getVisibility() != View.VISIBLE) {
+                      web.requestFocus();
+                  }
               }
 
               private void acquireWifiLock() {
@@ -613,6 +1381,7 @@ jobs:
                       wifiLock = wm.createWifiLock(mode, "manbang");
                       wifiLock.setReferenceCounted(false);
                       wifiLock.acquire();
+                      AppLog.d("net", "wifi lock held");
                   } catch (RuntimeException ignored) {
                       wifiLock = null;
                   }
@@ -623,11 +1392,209 @@ jobs:
                       try {
                           if (wifiLock.isHeld()) {
                               wifiLock.release();
+                              AppLog.d("net", "wifi lock released");
                           }
                       } catch (RuntimeException ignored) {
                       }
                       wifiLock = null;
                   }
+              }
+
+              // ---------- Android TV remote ----------
+
+              private boolean detectTv() {
+                  UiModeManager um = (UiModeManager) getSystemService(Context.UI_MODE_SERVICE);
+                  return um != null && um.getCurrentModeType() == Configuration.UI_MODE_TYPE_TELEVISION;
+              }
+
+              private void injectTvNav() {
+                  if (navJs == null) {
+                      try (InputStream in = getAssets().open("tvnav.js")) {
+                          ByteArrayOutputStream out = new ByteArrayOutputStream();
+                          byte[] buf = new byte[4096];
+                          int n;
+                          while ((n = in.read(buf)) > 0) {
+                              out.write(buf, 0, n);
+                          }
+                          navJs = out.toString("UTF-8");
+                      } catch (IOException e) {
+                          navJs = "";
+                          AppLog.e("tv", "remote navigation script missing");
+                      }
+                  }
+                  if (!navJs.isEmpty()) {
+                      web.evaluateJavascript(navJs, null);
+                  }
+              }
+
+              private void media(String cmd) {
+                  web.evaluateJavascript(
+                          "window.__tvnav ? __tvnav.media('" + cmd + "') : 'navigation script not ready'",
+                          value -> AppLog.d("media", cmd + ": "
+                                  + (value == null ? "?" : value.replace("\"", ""))));
+              }
+
+              @Override
+              public boolean dispatchKeyEvent(KeyEvent ev) {
+                  int code = ev.getKeyCode();
+                  boolean down = ev.getAction() == KeyEvent.ACTION_DOWN;
+                  boolean first = down && ev.getRepeatCount() == 0;
+                  if (first) {
+                      AppLog.d("key", KeyEvent.keyCodeToString(code).replace("KEYCODE_", ""));
+                  }
+                  switch (code) {
+                      case KeyEvent.KEYCODE_MENU:
+                      case KeyEvent.KEYCODE_INFO:
+                          if (first) {
+                              toggleLog();
+                          }
+                          return true;
+                      case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
+                          if (first) {
+                              media("toggle");
+                          }
+                          return true;
+                      case KeyEvent.KEYCODE_MEDIA_PLAY:
+                          if (first) {
+                              media("play");
+                          }
+                          return true;
+                      case KeyEvent.KEYCODE_MEDIA_PAUSE:
+                          if (first) {
+                              media("pause");
+                          }
+                          return true;
+                      case KeyEvent.KEYCODE_MEDIA_FAST_FORWARD:
+                          if (down) {
+                              media("ff");
+                          }
+                          return true;
+                      case KeyEvent.KEYCODE_MEDIA_REWIND:
+                          if (down) {
+                              media("rw");
+                          }
+                          return true;
+                      default:
+                          break;
+                  }
+                  if (customView != null) { // fullscreen video: OK = play/pause, left/right = seek
+                      switch (code) {
+                          case KeyEvent.KEYCODE_DPAD_CENTER:
+                          case KeyEvent.KEYCODE_ENTER:
+                              if (first) {
+                                  media("toggle");
+                              }
+                              return true;
+                          case KeyEvent.KEYCODE_DPAD_LEFT:
+                              if (down) {
+                                  media("rw");
+                              }
+                              return true;
+                          case KeyEvent.KEYCODE_DPAD_RIGHT:
+                              if (down) {
+                                  media("ff");
+                              }
+                              return true;
+                          default:
+                              break;
+                      }
+                  }
+                  return super.dispatchKeyEvent(ev);
+              }
+
+              // ---------- on-screen log (corner overlay) ----------
+
+              private void buildLogView() {
+                  float d = getResources().getDisplayMetrics().density;
+                  logView = new TextView(this);
+                  logView.setTypeface(Typeface.MONOSPACE);
+                  logView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
+                  logView.setTextColor(0xFFCBD1DC);
+                  logView.setPadding((int) (6 * d), (int) (4 * d), (int) (6 * d), (int) (4 * d));
+                  GradientDrawable bg = new GradientDrawable();
+                  bg.setColor(0xB30B0D11);
+                  bg.setCornerRadius(6 * d);
+                  logView.setBackground(bg);
+                  logView.setClickable(false);
+                  logView.setFocusable(false);
+                  logView.setMaxLines(LOG_LINES);
+                  logView.setMaxWidth((int) (getResources().getDisplayMetrics().widthPixels * 0.6f));
+                  logView.setVisibility(logVisible ? View.VISIBLE : View.GONE);
+                  FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+                          FrameLayout.LayoutParams.WRAP_CONTENT,
+                          FrameLayout.LayoutParams.WRAP_CONTENT,
+                          Gravity.BOTTOM | Gravity.START);
+                  int m = (int) (10 * d);
+                  lp.setMargins(m, m, m, m);
+                  root.addView(logView, lp);
+              }
+
+              private void keepLogOnTop() {
+                  if (logView != null) {
+                      logView.bringToFront();
+                  }
+              }
+
+              private void toggleLog() {
+                  logVisible = !logVisible;
+                  logView.setVisibility(logVisible ? View.VISIBLE : View.GONE);
+                  if (logVisible) {
+                      scheduleLogRefresh();
+                  }
+              }
+
+              private void scheduleLogRefresh() {
+                  if (!logRefreshPending) {
+                      logRefreshPending = true;
+                      ui.postDelayed(refreshLogRunnable, 120);
+                  }
+              }
+
+              private void refreshLog() {
+                  logRefreshPending = false;
+                  if (logView == null || !logVisible) {
+                      return;
+                  }
+                  List<AppLog.Entry> entries = AppLog.last(LOG_LINES);
+                  SpannableStringBuilder sb = new SpannableStringBuilder();
+                  for (int i = 0; i < entries.size(); i++) {
+                      AppLog.Entry e = entries.get(i);
+                      String msg = e.msg.length() > 56 ? e.msg.substring(0, 55) + "\u2026" : e.msg;
+                      int start = sb.length();
+                      sb.append(String.format(Locale.US, "%s %c %-5s %s",
+                              timeFmt.format(new Date(e.time)), e.level, e.tag, msg));
+                      sb.setSpan(new ForegroundColorSpan(colorFor(e.level)), start, sb.length(),
+                              Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                      if (i < entries.size() - 1) {
+                          sb.append('\n');
+                      }
+                  }
+                  logView.setText(sb);
+              }
+
+              private static int colorFor(char level) {
+                  switch (level) {
+                      case 'E':
+                          return 0xFFFF6B7D;
+                      case 'W':
+                          return 0xFFFFC857;
+                      case 'I':
+                          return 0xFF7EE0A1;
+                      default:
+                          return 0xFF8B93A3;
+                  }
+              }
+
+              private void logStartup() {
+                  AppLog.i("app", "start, device=" + (isTv ? "tv" : "phone/tablet")
+                          + ", android api " + Build.VERSION.SDK_INT);
+                  if (Build.VERSION.SDK_INT >= 26) {
+                      PackageInfo pi = WebView.getCurrentWebViewPackage();
+                      if (pi != null) {
+                          AppLog.i("app", "webview " + pi.versionName);
+                      }
+                  }
+                  AppLog.d("app", "text zoom " + TEXT_ZOOM + "%, remote navigation on");
               }
 
               private static boolean isInternal(Uri uri) {
@@ -647,6 +1614,8 @@ jobs:
                   customViewCallback = null;
                   root.removeView(v);
                   web.setVisibility(View.VISIBLE);
+                  web.requestFocus();
+                  AppLog.i("ui", "video fullscreen off");
                   if (cb != null) {
                       cb.onCustomViewHidden();
                   }
@@ -686,6 +1655,8 @@ jobs:
               public void onBackPressed() {
                   if (customView != null) {
                       hideCustomView();
+                  } else if (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE) {
+                      super.onBackPressed();
                   } else if (web.canGoBack()) {
                       web.goBack();
                   } else {
@@ -701,6 +1672,7 @@ jobs:
 
               @Override
               protected void onPause() {
+                  AppLog.d("app", "pause");
                   releaseWifiLock();
                   unregisterNetworkCallback();
                   web.onPause();
@@ -710,6 +1682,7 @@ jobs:
               @Override
               protected void onResume() {
                   super.onResume();
+                  AppLog.d("app", "resume");
                   web.onResume();
                   acquireWifiLock();
                   registerNetworkCallback();
@@ -717,11 +1690,16 @@ jobs:
 
               @Override
               protected void onDestroy() {
+                  AppLog.setListener(null);
                   ui.removeCallbacksAndMessages(null);
                   root.removeAllViews();
                   if (splash != null) {
                       splash.destroy();
                       splash = null;
+                  }
+                  if (errorWeb != null) {
+                      errorWeb.destroy();
+                      errorWeb = null;
                   }
                   web.destroy();
                   super.onDestroy();
@@ -1036,6 +2014,425 @@ jobs:
           rkJggg==
           EOF
           cp $P/app/src/main/res/mipmap-nodpi/ic_launcher.png $P/app/src/main/assets/logo.png
+          cat <<'EOF' | base64 -d > $P/app/src/main/res/drawable-nodpi/banner.png
+          iVBORw0KGgoAAAANSUhEUgAAAoAAAAFoCAMAAADw7LpjAAABIFBMVEX////9/v/w8/iOzfFixe9U
+          xPA5w/FFvO0ru+9vqN9BoOIvouQuf9UipOUhg9kkedMbeNN4JDc8Eh07ERs5W+Q6ERs5ERs4ERs2
+          IkI3ERs3ERo2ERo1ERohcM8ab88ZaM4RP8o0ERs0ERozERozERkyERkyERcsERpnEBoxEBoxEBkx
+          EBgwEBkwEBgvEBkvEBcuEBktEBgtEBcsEBgsEBYrEBgrEBcqEBgpEBopEBgpEBcoEBkoEBcnEBkn
+          EBdmDxomDxcmDxYlDxckDxYjDxYiDxYhDxYgDxYfDxUeDxUdDxUcDxX3AQIbDhUbDhQaDhQZDhQY
+          DhQXDhQWDhMVDhMUDhMTDhMSDhMRDhIQDRIPDRIODRINDRINDREMDRELDRFCMoC0AABXTUlEQVR4
+          2u2dC3dTR/LtZcuysCTLAgyYBFkGwmQlk5AwJMPEf24WwzswEMCA3+b7f4t7uvs8urseXd3nHNkk
+          9LoPYiyLCb/sXbuq+qjzKfKcIOcYPUfVOSzOQXX23bOnzq4+H4vzoTzvs7NjzrvqvH379o06f2bn
+          tT6v9HmZnRfZ+SM7z6vzLDtPi/OkOI/1eaTPw/I8wM/vkkO8tvrh5s3MG5d/jvJPpv6Y1p9a/Y9Q
+          /2PU/yjzP8/8T1X/o/X/+uzfgvXvJP+3pP6FVf/6yn+j5l+w/nft/fu3/mbKvy3rbxD/K8ZgiOSp
+          0wB/QQAx/g4Q/kgAK/wsAN/a/FkAviT4swB88sTlz8evZQAdBK0/CwqgQ+BLF8CSwLc+gBpBFsA9
+          EkCMQDmAJ/MH8FgK4AEJ4B4GIKZ/FYAFfj6ANn5AAJ95+Nn8PeL4+z3+cAQ+wgl8UgDoS6Ajgj6A
+          jgjaAEICbQD3SAAPpAAezx3ACP6OeQE8QPhzAXT4e0/qn+XAhfxhAKL4oQDyunc/dHgtDACIIegC
+          WCHoAvgWM2FAoAPgXhDAwxCA9QnstGXAFYA4fwcIfzaAHz5gANr42QA69osBiOMH+Qu47n3J+V3A
+          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
+          LAzgCDiOg7EAAAAASUVORK5CYII=
+          EOF
+
+      - name: Decrypt protected sources
+        env:
+          SITE_KEY: ${{ secrets.SITE_KEY }}
+        run: |
+          set -e
+          if [ -z "$SITE_KEY" ]; then
+            echo "::error::Repo secret SITE_KEY is missing (Settings > Secrets and variables > Actions)"
+            exit 1
+          fi
+          P=ManbangWebView
+          base64 -d <<'EOF' | gpg --batch --quiet --pinentry-mode loopback --passphrase-fd 3 --decrypt 3<<<"$SITE_KEY" > $P/app/src/main/java/xyz/manbang/app/Site.java
+          jA0ECQMK3ufoOo/+QPf/0rgB33UZ3wlzqzK1Iq2yKcUiPZ9T1Lgr6W9nnsWrEwUx8MaejzNR9pw6
+          aV9oBjy35aT4TjIf4ZOCCNT93DUfV6OC2RW0er+cl+ZvnVCgq2+6qvbwkSGMZH8QueXORuxJ8N6t
+          a0wFUG8/nzap/beUH2FI02BLysXrtN6c0T5fhhVto6fbNRZ3q23d4WQ/CGj/hZv+k3n0ZsG5qya4
+          veW/Tj7h8tcrI6OR3dgLnUiK35wXEg4jMlXP37Gv
+          EOF
+          test -s $P/app/src/main/java/xyz/manbang/app/Site.java
 
       - name: Build
         working-directory: ManbangWebView
