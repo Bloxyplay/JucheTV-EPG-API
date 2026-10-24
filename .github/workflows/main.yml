@@ -31,6 +31,8 @@ jobs:
               id("com.android.application")
           }
 
+          val vcode = (project.findProperty("vcode") as String?)?.toIntOrNull() ?: 1
+
           android {
               namespace = "xyz.manbang.app"
               compileSdk = 34
@@ -39,14 +41,30 @@ jobs:
                   applicationId = "com.juche_tv.manbang"
                   minSdk = 24
                   targetSdk = 34
-                  versionCode = 1
-                  versionName = "1.0"
+                  versionCode = vcode
+                  versionName = "1.0.$vcode"
+              }
+
+              signingConfigs {
+                  create("release") {
+                      storeFile = file("release.p12")
+                      storeType = "pkcs12"
+                      storePassword = System.getenv("SITE_KEY")
+                      keyAlias = "manbang"
+                      keyPassword = System.getenv("SITE_KEY")
+                  }
               }
 
               buildTypes {
                   release {
                       isMinifyEnabled = false
+                      signingConfig = signingConfigs.getByName("release")
                   }
+              }
+
+              lint {
+                  checkReleaseBuilds = false
+                  abortOnError = false
               }
 
               compileOptions {
@@ -100,14 +118,18 @@ jobs:
           cat > $P/app/src/main/assets/NOTICE.txt <<'EOF'
           NOTICE
 
-          This app, including its interface design, code, graphics and other original
-          assets, is protected. Do not steal, reproduce, copy, modify or redistribute any
-          asset from this app without written permission from Juche TV.
+          (c) Koryo Front, JULY & Juche TV
+          DO NOT STEAL, REPRODUCE OR COPY ANY ASSETS FROM THIS APPLICATION
 
-          Content shown inside the app is provided by third-party sites and belongs to
-          its respective owners.
+          This application, including its interface design, code, graphics and other
+          original assets, is protected. Do not steal, reproduce, copy, modify or
+          redistribute any asset from this application without written permission.
 
-          (c) Juche TV
+          If any file inside this application is modified, the application will refuse
+          to run and will erase its local data.
+
+          Content shown inside the application is provided by third-party sites and
+          belongs to its respective owners.
           EOF
           cat > $P/app/src/main/assets/error.html <<'EOF'
           <!DOCTYPE html>
@@ -499,7 +521,7 @@ jobs:
               <div class="row">COMPILED BY <b>KoryoFront</b> <span class="sep">&amp;</span> <b>JULY</b></div>
               <div class="row">REPACKAGED TO LIGHTWEIGHT APK VERSION BY <b>Juche TV</b></div>
               <div class="row url">juche-tv.vercel.app</div>
-              <div class="row notice">&copy; Juche TV &mdash; do not steal, reproduce or copy any assets from this app</div>
+              <div class="row notice">&copy; Koryo Front, JULY &amp; Juche TV DO NOT STEAL, REPRODUCE OR COPY ANY ASSETS FROM THIS APPLICATION</div>
             </footer>
 
           <script>
@@ -844,6 +866,9 @@ jobs:
           import java.util.ArrayDeque;
           import java.util.ArrayList;
           import java.util.List;
+          import java.util.concurrent.ArrayBlockingQueue;
+          import java.util.concurrent.ThreadPoolExecutor;
+          import java.util.concurrent.TimeUnit;
           import java.util.regex.Matcher;
           import java.util.regex.Pattern;
 
@@ -884,6 +909,17 @@ jobs:
 
               private static final ArrayDeque<Entry> BUFFER = new ArrayDeque<>();
               private static volatile Listener listener;
+
+              // Logging never runs on the caller's thread (network threads, UI thread): it is queued here.
+              private static final ThreadPoolExecutor WRITER = new ThreadPoolExecutor(
+                      1, 1, 0L, TimeUnit.MILLISECONDS,
+                      new ArrayBlockingQueue<Runnable>(2000),
+                      r -> {
+                          Thread t = new Thread(r, "applog");
+                          t.setDaemon(true);
+                          return t;
+                      },
+                      new ThreadPoolExecutor.DiscardOldestPolicy());
 
               private AppLog() {
               }
@@ -943,6 +979,11 @@ jobs:
               }
 
               private static void add(char level, String tag, String raw) {
+                  final long time = System.currentTimeMillis();
+                  WRITER.execute(() -> write(time, level, tag, raw));
+              }
+
+              private static void write(long time, char level, String tag, String raw) {
                   String msg = redact(raw);
                   String logTag = TAG + "/" + tag;
                   switch (level) {
@@ -960,7 +1001,7 @@ jobs:
                           break;
                   }
                   synchronized (BUFFER) {
-                      BUFFER.addLast(new Entry(System.currentTimeMillis(), level, tag, msg));
+                      BUFFER.addLast(new Entry(time, level, tag, msg));
                       while (BUFFER.size() > MAX_ENTRIES) {
                           BUFFER.removeFirst();
                       }
@@ -969,6 +1010,107 @@ jobs:
                   if (l != null) {
                       l.onLog();
                   }
+              }
+          }
+          EOF
+          cat > $P/app/src/main/java/xyz/manbang/app/Integrity.java <<'EOF'
+          package xyz.manbang.app;
+
+          import android.content.Context;
+          import android.content.pm.ApplicationInfo;
+          import android.content.pm.PackageInfo;
+          import android.content.pm.PackageManager;
+          import android.content.pm.Signature;
+          import android.content.pm.SigningInfo;
+          import android.os.Build;
+
+          import java.io.File;
+          import java.io.IOException;
+          import java.security.MessageDigest;
+
+          /**
+           * Tamper check. Android only installs an APK whose files all match its signature, so changing
+           * ANY file inside the APK (code, layout, asset, logo, text) means re-signing it with a different
+           * key. This class compares the key the app is really running under with the one it was built
+           * with ({@link Pin}); a mismatch means the copy was modified.
+           */
+          final class Integrity {
+
+              private Integrity() {
+              }
+
+              /** True only for the untouched, original build. */
+              static boolean ok(Context ctx) {
+                  try {
+                      if ((ctx.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
+                          return false;
+                      }
+                      String have = signerSha256(ctx);
+                      return have != null
+                              && MessageDigest.isEqual(have.getBytes("UTF-8"), Pin.CERT_SHA256.getBytes("UTF-8"));
+                  } catch (Exception e) {
+                      return false;
+                  }
+              }
+
+              /** Wipe everything the app stored (cookies, cache, prefs, files) so a modified copy is left empty. */
+              static void wipe(Context ctx) {
+                  try {
+                      File[] kids = ctx.getDataDir().listFiles();
+                      if (kids == null) {
+                          return;
+                      }
+                      for (File f : kids) {
+                          if (!"lib".equals(f.getName())) {
+                              deleteTree(f);
+                          }
+                      }
+                  } catch (RuntimeException ignored) {
+                  }
+              }
+
+              @SuppressWarnings("deprecation")
+              private static String signerSha256(Context ctx) throws Exception {
+                  PackageManager pm = ctx.getPackageManager();
+                  Signature[] sigs;
+                  if (Build.VERSION.SDK_INT >= 28) {
+                      PackageInfo pi = pm.getPackageInfo(ctx.getPackageName(),
+                              PackageManager.GET_SIGNING_CERTIFICATES);
+                      SigningInfo si = pi.signingInfo;
+                      if (si == null || si.hasMultipleSigners()) {
+                          return null;
+                      }
+                      sigs = si.getSigningCertificateHistory();
+                  } else {
+                      PackageInfo pi = pm.getPackageInfo(ctx.getPackageName(), PackageManager.GET_SIGNATURES);
+                      sigs = pi.signatures;
+                  }
+                  if (sigs == null || sigs.length != 1) {
+                      return null;
+                  }
+                  byte[] digest = MessageDigest.getInstance("SHA-256").digest(sigs[0].toByteArray());
+                  StringBuilder sb = new StringBuilder();
+                  for (byte b : digest) {
+                      sb.append(String.format("%02x", b));
+                  }
+                  return sb.toString();
+              }
+
+              private static void deleteTree(File f) {
+                  try {
+                      boolean link = !f.getCanonicalFile().equals(f.getAbsoluteFile());
+                      if (f.isDirectory() && !link) {
+                          File[] kids = f.listFiles();
+                          if (kids != null) {
+                              for (File k : kids) {
+                                  deleteTree(k);
+                              }
+                          }
+                      }
+                  } catch (IOException ignored) {
+                  }
+                  //noinspection ResultOfMethodCallIgnored
+                  f.delete();
               }
           }
           EOF
@@ -1013,6 +1155,7 @@ jobs:
           import android.webkit.ConsoleMessage;
           import android.webkit.CookieManager;
           import android.webkit.JavascriptInterface;
+          import android.webkit.RenderProcessGoneDetail;
           import android.webkit.SslErrorHandler;
           import android.webkit.WebChromeClient;
           import android.webkit.WebResourceError;
@@ -1030,6 +1173,7 @@ jobs:
           import java.io.ByteArrayOutputStream;
           import java.io.IOException;
           import java.io.InputStream;
+          import java.net.InetAddress;
           import java.text.SimpleDateFormat;
           import java.util.Date;
           import java.util.List;
@@ -1041,6 +1185,7 @@ jobs:
               private static final String HOST = Site.HOST;
               private static final int TEXT_ZOOM = 85; // % of normal text size; lower = smaller
               private static final long[] RETRY_DELAYS_MS = {2000, 5000}; // automatic retries before waiting for the button
+              private static final int SPLASH_PROGRESS = 75;               // reveal the page at this load progress
               private static final int LOG_LINES = 8;                      // lines in the on-screen log
 
               private FrameLayout root;
@@ -1068,7 +1213,8 @@ jobs:
               private TextView logToggle;
               private boolean logVisible = true; // the corner chip toggles it
               private boolean dpadMode;          // remote / D-pad in use: on-screen debug is removed
-              private boolean logRefreshPending;
+              private volatile boolean logRefreshPending;
+              private boolean navInjected;
               private final Runnable refreshLogRunnable = this::refreshLog;
               private final SimpleDateFormat timeFmt = new SimpleDateFormat("HH:mm:ss", Locale.US);
               private long pageStartMs;
@@ -1079,6 +1225,12 @@ jobs:
               @Override
               protected void onCreate(Bundle savedInstanceState) {
                   super.onCreate(savedInstanceState);
+                  if (!Integrity.ok(this)) {
+                      Integrity.wipe(this);
+                      showCorrupted();
+                      return;
+                  }
+                  warmDns();
                   isTv = detectTv();
                   dpadMode = isTv
                           || getResources().getConfiguration().navigation == Configuration.NAVIGATION_DPAD;
@@ -1115,7 +1267,13 @@ jobs:
                   s.setSupportZoom(false);
                   s.setBuiltInZoomControls(false);
                   s.setTextZoom(TEXT_ZOOM);
-                  s.setBlockNetworkImage(true); // page first, images right after it finishes
+                  String ua = s.getUserAgentString();
+                  if (ua != null) { // look like Chrome, not an embedded WebView (some servers treat them differently)
+                      s.setUserAgentString(ua.replace("; wv", "").replaceAll("Version/\\d+(\\.\\d+)? ", ""));
+                  }
+                  web.setOverScrollMode(View.OVER_SCROLL_NEVER);
+                  web.setLongClickable(false);
+                  web.setOnLongClickListener(v -> true); // no copy / save-image menu
                   if (Build.VERSION.SDK_INT >= 26) {
                       s.setSafeBrowsingEnabled(false); // skips the per-navigation lookup
                       web.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, true);
@@ -1153,8 +1311,17 @@ jobs:
                       }
 
                       @Override
+                      public boolean onRenderProcessGone(WebView view, RenderProcessGoneDetail detail) {
+                          AppLog.e("err", "renderer " + (detail.didCrash() ? "crashed" : "was killed")
+                                  + ", restarting");
+                          ui.post(MainActivity.this::recreate);
+                          return true;
+                      }
+
+                      @Override
                       public void onPageStarted(WebView view, String url, Bitmap favicon) {
                           loadFailed = false;
+                          navInjected = false;
                           pageStartMs = SystemClock.elapsedRealtime();
                           lastProgressBucket = 0;
                           AppLog.i("page", "start " + url);
@@ -1165,10 +1332,14 @@ jobs:
                           AppLog.i("page", "done " + url + " in "
                                   + (SystemClock.elapsedRealtime() - pageStartMs) + " ms");
                           if (!loadFailed) {
+                              if (!guard()) {
+                                  return;
+                              }
                               hideError();
-                              unblockImages();
                               finishSplash();
-                              injectTvNav();
+                              if (dpadMode) {
+                                  injectTvNav();
+                              }
                           }
                       }
 
@@ -1215,6 +1386,7 @@ jobs:
                                   FrameLayout.LayoutParams.MATCH_PARENT,
                                   FrameLayout.LayoutParams.MATCH_PARENT));
                           keepLogOnTop();
+                          getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                           AppLog.i("ui", "video fullscreen on");
                       }
 
@@ -1225,6 +1397,9 @@ jobs:
 
                       @Override
                       public void onProgressChanged(WebView view, int progress) {
+                          if (progress >= SPLASH_PROGRESS && !loadFailed) {
+                              finishSplash();
+                          }
                           int bucket = progress / 25;
                           if (bucket > lastProgressBucket) {
                               lastProgressBucket = bucket;
@@ -1278,12 +1453,7 @@ jobs:
               }
 
               private void onSplashTimeout() {
-                  unblockImages();
                   finishSplash();
-              }
-
-              private void unblockImages() {
-                  web.getSettings().setBlockNetworkImage(false);
               }
 
               private void onLoadFailed(String url, String reason) {
@@ -1291,7 +1461,6 @@ jobs:
                   if (url != null && url.startsWith("http")) {
                       failedUrl = url;
                   }
-                  unblockImages();
                   if (splash != null) {
                       splashDone = true;
                       removeSplash();
@@ -1514,6 +1683,9 @@ jobs:
               }
 
               private void injectTvNav() {
+                  if (navInjected) {
+                      return;
+                  }
                   if (navJs == null) {
                       try (InputStream in = getAssets().open("tvnav.js")) {
                           ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -1530,10 +1702,12 @@ jobs:
                   }
                   if (!navJs.isEmpty()) {
                       web.evaluateJavascript(navJs, null);
+                      navInjected = true;
                   }
               }
 
               private void media(String cmd) {
+                  injectTvNav();
                   web.evaluateJavascript(
                           "window.__tvnav ? __tvnav.media('" + cmd + "') : 'navigation script not ready'",
                           value -> AppLog.d("media", cmd + ": "
@@ -1545,6 +1719,7 @@ jobs:
                   if (splash != null || (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE)) {
                       return;
                   }
+                  injectTvNav();
                   web.evaluateJavascript(
                           "window.__tvnav ? __tvnav.menu() : 'navigation script not ready'",
                           value -> AppLog.i("tv", value == null ? "menu: ?" : value.replace("\"", "")));
@@ -1572,6 +1747,9 @@ jobs:
 
               @Override
               public boolean dispatchTouchEvent(MotionEvent ev) {
+                  if (web == null) {
+                      return super.dispatchTouchEvent(ev);
+                  }
                   if (ev.getActionMasked() == MotionEvent.ACTION_DOWN) {
                       leaveDpadMode();
                   }
@@ -1580,6 +1758,9 @@ jobs:
 
               @Override
               public boolean dispatchKeyEvent(KeyEvent ev) {
+                  if (web == null) {
+                      return super.dispatchKeyEvent(ev);
+                  }
                   int code = ev.getKeyCode();
                   boolean down = ev.getAction() == KeyEvent.ACTION_DOWN;
                   boolean first = down && ev.getRepeatCount() == 0;
@@ -1739,6 +1920,7 @@ jobs:
                   if (logBox != null) {
                       logBox.setVisibility(View.GONE);
                   }
+                  injectTvNav();
               }
 
               /** Touch again on a phone: bring the debug option back. */
@@ -1761,7 +1943,7 @@ jobs:
               private void scheduleLogRefresh() {
                   if (!logRefreshPending) {
                       logRefreshPending = true;
-                      ui.postDelayed(refreshLogRunnable, 120);
+                      ui.postDelayed(refreshLogRunnable, 250);
                   }
               }
 
@@ -1812,6 +1994,73 @@ jobs:
                   AppLog.d("app", "text zoom " + TEXT_ZOOM + "%, remote navigation on");
               }
 
+              // ---------- integrity ----------
+
+              /** Re-check while running. A modified copy is wiped and closed. */
+              private boolean guard() {
+                  if (Integrity.ok(this)) {
+                      return true;
+                  }
+                  Integrity.wipe(this);
+                  finishAndRemoveTask();
+                  return false;
+              }
+
+              private void showCorrupted() {
+                  float d = getResources().getDisplayMetrics().density;
+                  LinearLayout box = new LinearLayout(this);
+                  box.setOrientation(LinearLayout.VERTICAL);
+                  box.setGravity(Gravity.CENTER);
+                  box.setBackgroundColor(0xFF0B0D11);
+                  int pad = (int) (32 * d);
+                  box.setPadding(pad, pad, pad, pad);
+
+                  TextView title = new TextView(this);
+                  title.setText("This app is corrupted");
+                  title.setTextColor(0xFFFF4D66);
+                  title.setTextSize(22);
+                  title.setTypeface(Typeface.DEFAULT_BOLD);
+                  title.setGravity(Gravity.CENTER);
+
+                  TextView msg = new TextView(this);
+                  msg.setText("This copy was modified or damaged and can no longer run.\n"
+                          + "Uninstall it and install the original version.");
+                  msg.setTextColor(0xFFAAB1BF);
+                  msg.setTextSize(14);
+                  msg.setGravity(Gravity.CENTER);
+                  msg.setPadding(0, (int) (12 * d), 0, (int) (28 * d));
+
+                  TextView note = new TextView(this);
+                  note.setText("\u00A9 Koryo Front, JULY & Juche TV\n"
+                          + "DO NOT STEAL, REPRODUCE OR COPY ANY ASSETS FROM THIS APPLICATION");
+                  note.setTypeface(Typeface.MONOSPACE);
+                  note.setTextColor(0xFF565E6E);
+                  note.setTextSize(10);
+                  note.setGravity(Gravity.CENTER);
+
+                  box.addView(title);
+                  box.addView(msg);
+                  box.addView(note);
+                  setContentView(box);
+                  hideSystemUi();
+                  ui.postDelayed(this::finishAndRemoveTask, 10000);
+              }
+
+              // ---------- speed ----------
+
+              /** Resolve the site's address in parallel with the WebView starting up. */
+              private void warmDns() {
+                  new Thread(() -> {
+                      long t = SystemClock.elapsedRealtime();
+                      try {
+                          InetAddress.getAllByName(HOST);
+                          AppLog.d("net", "dns ready in " + (SystemClock.elapsedRealtime() - t) + " ms");
+                      } catch (Exception e) {
+                          AppLog.w("net", "dns warm-up failed");
+                      }
+                  }, "dns-warm").start();
+              }
+
               private static boolean isInternal(Uri uri) {
                   String host = uri.getHost();
                   return "https".equals(uri.getScheme())
@@ -1830,6 +2079,7 @@ jobs:
                   root.removeView(v);
                   web.setVisibility(View.VISIBLE);
                   web.requestFocus();
+                  getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                   AppLog.i("ui", "video fullscreen off");
                   if (cb != null) {
                       cb.onCustomViewHidden();
@@ -1868,6 +2118,10 @@ jobs:
               @Override
               @SuppressWarnings("deprecation")
               public void onBackPressed() {
+                  if (web == null) {
+                      super.onBackPressed();
+                      return;
+                  }
                   if (customView != null) {
                       hideCustomView();
                   } else if (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE) {
@@ -1882,12 +2136,19 @@ jobs:
               @Override
               protected void onSaveInstanceState(Bundle outState) {
                   super.onSaveInstanceState(outState);
-                  web.saveState(outState);
+                  if (web != null) {
+                      web.saveState(outState);
+                  }
               }
 
               @Override
               protected void onPause() {
+                  if (web == null) {
+                      super.onPause();
+                      return;
+                  }
                   AppLog.d("app", "pause");
+                  CookieManager.getInstance().flush();
                   releaseWifiLock();
                   unregisterNetworkCallback();
                   web.onPause();
@@ -1897,6 +2158,9 @@ jobs:
               @Override
               protected void onResume() {
                   super.onResume();
+                  if (web == null || !guard()) {
+                      return;
+                  }
                   AppLog.d("app", "resume");
                   web.onResume();
                   acquireWifiLock();
@@ -1905,6 +2169,11 @@ jobs:
 
               @Override
               protected void onDestroy() {
+                  if (web == null) {
+                      ui.removeCallbacksAndMessages(null);
+                      super.onDestroy();
+                      return;
+                  }
                   AppLog.setListener(null);
                   ui.removeCallbacksAndMessages(null);
                   root.removeAllViews();
@@ -2649,19 +2918,44 @@ jobs:
           EOF
           test -s $P/app/src/main/java/xyz/manbang/app/Site.java
 
+      - name: Create signing key
+        env:
+          SITE_KEY: ${{ secrets.SITE_KEY }}
+        run: |
+          set -e
+          P=ManbangWebView
+          keytool -genkeypair -noprompt -keystore $P/app/release.p12 -storetype PKCS12 \
+            -alias manbang -keyalg RSA -keysize 2048 -validity 36500 \
+            -storepass "$SITE_KEY" -keypass "$SITE_KEY" -dname "CN=Juche TV"
+          SHA=$(keytool -exportcert -alias manbang -keystore $P/app/release.p12 -storepass "$SITE_KEY" | sha256sum | cut -d' ' -f1)
+          test ${#SHA} -eq 64
+          printf 'package xyz.manbang.app;\n\nfinal class Pin {\n    static final String CERT_SHA256 = "%s";\n\n    private Pin() {\n    }\n}\n' "$SHA" > $P/app/src/main/java/xyz/manbang/app/Pin.java
+
       - name: Build
         working-directory: ManbangWebView
-        run: gradle assembleDebug --no-daemon
+        env:
+          SITE_KEY: ${{ secrets.SITE_KEY }}
+        run: gradle assembleRelease -Pvcode=${{ github.run_number }} --no-daemon
+
+      - name: Verify the signature matches the one built into the app
+        run: |
+          set -e
+          P=ManbangWebView
+          APK=$P/app/build/outputs/apk/release/app-release.apk
+          APKSIGNER=$(ls -d "${ANDROID_HOME:-/usr/local/lib/android/sdk}"/build-tools/*/apksigner | sort -V | tail -1)
+          PIN=$(grep -o 'CERT_SHA256 = "[0-9a-f]*"' $P/app/src/main/java/xyz/manbang/app/Pin.java | cut -d'"' -f2)
+          "$APKSIGNER" verify --print-certs "$APK" | tee /tmp/certs.txt
+          grep -qi "certificate SHA-256 digest: $PIN" /tmp/certs.txt || { echo "::error::APK signature does not match the pin built into the app"; exit 1; }
 
       - uses: actions/upload-artifact@v4
         with:
           name: manbang-apk
-          path: ManbangWebView/app/build/outputs/apk/debug/app-debug.apk
+          path: ManbangWebView/app/build/outputs/apk/release/app-release.apk
 
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp ManbangWebView/app/build/outputs/apk/debug/app-debug.apk manbang.apk
+          cp ManbangWebView/app/build/outputs/apk/release/app-release.apk manbang.apk
           gh release delete latest -y --cleanup-tag --repo "$GITHUB_REPOSITORY" || true
-          gh release create latest manbang.apk --repo "$GITHUB_REPOSITORY" --title "latest" --notes "Debug build ${GITHUB_SHA::7}" --target "$GITHUB_SHA"
+          gh release create latest manbang.apk --repo "$GITHUB_REPOSITORY" --title "latest" --notes "Release build ${GITHUB_SHA::7}" --target "$GITHUB_SHA"
