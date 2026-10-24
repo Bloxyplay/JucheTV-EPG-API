@@ -967,6 +967,7 @@ jobs:
               private boolean isTv;
               private String navJs;
               private TextView logView;
+              private TextView dbgBtn;
               private boolean logVisible = false; // hidden by default; Menu / Info / Guide key on the remote toggles it
               private boolean logRefreshPending;
               private final Runnable refreshLogRunnable = this::refreshLog;
@@ -998,6 +999,7 @@ jobs:
                           FrameLayout.LayoutParams.MATCH_PARENT));
                   setContentView(root);
                   buildLogView();
+                  buildDbgButton();
                   AppLog.setListener(this::scheduleLogRefresh);
                   logStartup();
 
@@ -1504,6 +1506,32 @@ jobs:
                   return super.dispatchKeyEvent(ev);
               }
 
+              // ---------- debug log toggle button (on-screen; phones have no MENU key) ----------
+
+              private void buildDbgButton() {
+                  float d = getResources().getDisplayMetrics().density;
+                  dbgBtn = new TextView(this);
+                  dbgBtn.setText("DBG");
+                  dbgBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11);
+                  dbgBtn.setTextColor(0xFFFFFFFF);
+                  dbgBtn.setGravity(Gravity.CENTER);
+                  dbgBtn.setTypeface(Typeface.MONOSPACE, Typeface.BOLD);
+                  GradientDrawable bg = new GradientDrawable();
+                  bg.setShape(GradientDrawable.OVAL);
+                  bg.setColor(0x66000000);
+                  bg.setStroke(Math.max(1, (int) (1 * d)), 0x66FFFFFF);
+                  dbgBtn.setBackground(bg);
+                  int size = (int) (44 * d);
+                  FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(size, size, Gravity.TOP | Gravity.END);
+                  int m = (int) (12 * d);
+                  lp.setMargins(m, m, m, m);
+                  dbgBtn.setLayoutParams(lp);
+                  dbgBtn.setAlpha(0.55f);
+                  dbgBtn.setOnClickListener(v -> toggleLog());
+                  root.addView(dbgBtn, lp);
+                  keepLogOnTop();
+              }
+
               // ---------- on-screen log (corner overlay) ----------
 
               private void buildLogView() {
@@ -1537,11 +1565,17 @@ jobs:
                   if (logView != null) {
                       logView.bringToFront();
                   }
+                  if (dbgBtn != null) {
+                      dbgBtn.bringToFront();
+                  }
               }
 
               private void toggleLog() {
                   logVisible = !logVisible;
                   float d = getResources().getDisplayMetrics().density;
+                  if (dbgBtn != null) {
+                      dbgBtn.setAlpha(logVisible ? 0.95f : 0.55f);
+                  }
                   logView.animate().cancel();
                   if (logVisible) {
                       logView.setVisibility(View.VISIBLE);
