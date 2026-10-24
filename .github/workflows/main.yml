@@ -904,6 +904,7 @@ jobs:
           import android.os.SystemClock;
           import android.text.SpannableStringBuilder;
           import android.text.Spanned;
+          import android.text.method.ScrollingMovementMethod;
           import android.text.style.ForegroundColorSpan;
           import android.util.TypedValue;
           import android.view.Gravity;
@@ -943,7 +944,7 @@ jobs:
               private static final String HOST = Site.HOST;
               private static final int TEXT_ZOOM = 85; // % of normal text size; lower = smaller
               private static final long[] RETRY_DELAYS_MS = {2000, 5000}; // automatic retries before waiting for the button
-              private static final int LOG_LINES = 8;                      // lines in the on-screen log
+              private static final int LOG_LINES = 12;                      // lines in the on-screen log
 
               private FrameLayout root;
               private WebView web;
@@ -966,7 +967,7 @@ jobs:
               private boolean isTv;
               private String navJs;
               private TextView logView;
-              private boolean logVisible = true; // Menu / Info key on the remote toggles it
+              private boolean logVisible = false; // hidden by default; Menu / Info / Guide key on the remote toggles it
               private boolean logRefreshPending;
               private final Runnable refreshLogRunnable = this::refreshLog;
               private final SimpleDateFormat timeFmt = new SimpleDateFormat("HH:mm:ss", Locale.US);
@@ -1445,6 +1446,7 @@ jobs:
                   switch (code) {
                       case KeyEvent.KEYCODE_MENU:
                       case KeyEvent.KEYCODE_INFO:
+                      case KeyEvent.KEYCODE_GUIDE:
                           if (first) {
                               toggleLog();
                           }
@@ -1517,8 +1519,10 @@ jobs:
                   logView.setBackground(bg);
                   logView.setClickable(false);
                   logView.setFocusable(false);
+                  logView.setMovementMethod(new ScrollingMovementMethod());
                   logView.setMaxLines(LOG_LINES);
-                  logView.setMaxWidth((int) (getResources().getDisplayMetrics().widthPixels * 0.6f));
+                  logView.setEllipsize(null);
+                  logView.setMaxWidth((int) (getResources().getDisplayMetrics().widthPixels * 0.62f));
                   logView.setVisibility(logVisible ? View.VISIBLE : View.GONE);
                   FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
                           FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -1537,9 +1541,31 @@ jobs:
 
               private void toggleLog() {
                   logVisible = !logVisible;
-                  logView.setVisibility(logVisible ? View.VISIBLE : View.GONE);
+                  float d = getResources().getDisplayMetrics().density;
+                  logView.animate().cancel();
                   if (logVisible) {
+                      logView.setVisibility(View.VISIBLE);
+                      logView.setAlpha(0f);
+                      logView.setTranslationY(16 * d);
+                      logView.animate()
+                              .alpha(1f)
+                              .translationY(0f)
+                              .setDuration(220)
+                              .setInterpolator(new android.view.animation.DecelerateInterpolator())
+                              .start();
                       scheduleLogRefresh();
+                  } else {
+                      logView.animate()
+                              .alpha(0f)
+                              .translationY(16 * d)
+                              .setDuration(180)
+                              .setInterpolator(new android.view.animation.AccelerateInterpolator())
+                              .withEndAction(() -> {
+                                  if (!logVisible) {
+                                      logView.setVisibility(View.GONE);
+                                  }
+                              })
+                              .start();
                   }
               }
 
@@ -1570,6 +1596,12 @@ jobs:
                       }
                   }
                   logView.setText(sb);
+                  logView.post(() -> {
+                      android.text.Layout layout = logView.getLayout();
+                      if (layout != null) {
+                          logView.scrollTo(0, layout.getLineTop(logView.getLineCount()) - logView.getHeight());
+                      }
+                  });
               }
 
               private static int colorFor(char level) {
@@ -1594,7 +1626,7 @@ jobs:
                           AppLog.i("app", "webview " + pi.versionName);
                       }
                   }
-                  AppLog.d("app", "text zoom " + TEXT_ZOOM + "%, remote navigation on");
+                  AppLog.d("app", "text zoom " + TEXT_ZOOM + "%, remote navigation on, log hidden (MENU to show)");
               }
 
               private static boolean isInternal(Uri uri) {
