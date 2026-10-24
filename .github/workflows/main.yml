@@ -97,6 +97,18 @@ jobs:
               </application>
           </manifest>
           EOF
+          cat > $P/app/src/main/assets/NOTICE.txt <<'EOF'
+          NOTICE
+
+          This app, including its interface design, code, graphics and other original
+          assets, is protected. Do not steal, reproduce, copy, modify or redistribute any
+          asset from this app without written permission from Juche TV.
+
+          Content shown inside the app is provided by third-party sites and belongs to
+          its respective owners.
+
+          (c) Juche TV
+          EOF
           cat > $P/app/src/main/assets/error.html <<'EOF'
           <!DOCTYPE html>
           <html lang="en">
@@ -431,6 +443,8 @@ jobs:
             .credits b{ font-weight:600; color:var(--muted); }
             .credits a, .credits .url{ color:var(--muted); text-decoration:none; }
             .credits .sep{ color:var(--faint); opacity:.6; padding:0 .35em; }
+            .credits .notice{ white-space:normal; max-width:560px; margin:8px auto 0; font-size:9.5px;
+                              letter-spacing:.05em; line-height:1.6; text-transform:uppercase; color:var(--faint); }
 
             /* ── Exit: launcher hand-off zoom ── */
             .leaving .bloom{ animation:none; opacity:0; transition:opacity .2s ease; }
@@ -443,6 +457,15 @@ jobs:
             .leaving .brand, .leaving .status, .leaving .track, .leaving .credits{
               animation:none; opacity:0;
               transition:opacity .15s ease;
+            }
+
+            /* Short landscape screens: keep the footer on screen */
+            @media (max-height:400px){
+              .icon{ width:84px; height:84px; }
+              .brand{ margin-top:20px; }
+              .status{ margin-top:10px; }
+              .track{ margin-top:16px; }
+              .credits{ padding-top:12px; line-height:1.8; }
             }
 
             /* Reduced motion: keep it calm, keep the meaning */
@@ -476,6 +499,7 @@ jobs:
               <div class="row">COMPILED BY <b>KoryoFront</b> <span class="sep">&amp;</span> <b>JULY</b></div>
               <div class="row">REPACKAGED TO LIGHTWEIGHT APK VERSION BY <b>Juche TV</b></div>
               <div class="row url">juche-tv.vercel.app</div>
+              <div class="row notice">&copy; Juche TV &mdash; do not steal, reproduce or copy any assets from this app</div>
             </footer>
 
           <script>
@@ -691,6 +715,69 @@ jobs:
               v.currentTime = t;
             }
 
+            /* ---- the page's own hamburger ("sandwich") menu button ---- */
+            var MENU_SELECTORS = [
+              '[aria-label*="menu" i]', '[title*="menu" i]', '[aria-controls*="menu" i]', '[aria-controls*="nav" i]',
+              '[aria-controls*="sidebar" i]', '[aria-controls*="drawer" i]',
+              '[id*="hamburger" i]', '[class*="hamburger" i]', '[id*="burger" i]', '[class*="burger" i]', '[class*="sandwich" i]',
+              '[id*="menu-btn" i]', '[id*="menu-toggle" i]', '[id*="menubtn" i]', '[class*="menu-btn" i]',
+              '[class*="menu-toggle" i]', '[class*="menutoggle" i]', '[class*="menubtn" i]', '[class*="nav-toggle" i]',
+              '[class*="navbar-toggler" i]', '[class*="drawer-toggle" i]', '[class*="sidebar-toggle" i]',
+              '[data-toggle="collapse"]', '[data-bs-toggle="collapse"]', '[data-bs-toggle="offcanvas"]', '[data-toggle="offcanvas"]'
+            ];
+
+            function clickable(el) {
+              if (/^(BUTTON|A|SUMMARY|LABEL)$/.test(el.tagName)) return true;
+              if (el.getAttribute('role') === 'button' || el.hasAttribute('onclick') || el.hasAttribute('tabindex')) return true;
+              return getComputedStyle(el).cursor === 'pointer';
+            }
+
+            function looksLikeBars(el) {
+              var kids = el.children, i;
+              if (kids.length === 3) {
+                var ok = true;
+                for (i = 0; i < 3; i++) {
+                  var kr = rectOf(kids[i]);
+                  if (kr.height > 6 || kr.width < 10) ok = false;
+                }
+                if (ok) return true;
+              }
+              var svg = el.querySelector && el.querySelector('svg');
+              if (svg) {
+                if (svg.querySelectorAll('line,rect').length === 3) return true;
+                var paths = svg.querySelectorAll('path');
+                if (paths.length === 1) {
+                  var d = paths[0].getAttribute('d') || '';
+                  if ((d.match(/[Mm]/g) || []).length >= 3) return true;   // three separate strokes
+                }
+              }
+              return false;
+            }
+
+            function findMenuButton() {
+              var i, j, list, el;
+              for (i = 0; i < MENU_SELECTORS.length; i++) {
+                try { list = document.querySelectorAll(MENU_SELECTORS[i]); } catch (e) { continue; }
+                for (j = 0; j < list.length; j++) {
+                  el = list[j];
+                  if (isShown(el) && clickable(el)) return el;
+                }
+              }
+              // icon-only buttons near the top edge: the \u2630 glyph, three bars, or a three-line svg
+              var nodes = document.querySelectorAll('button,[role=button],a,div,span,i,label');
+              var limit = Math.min(nodes.length, 1500);
+              for (i = 0; i < limit; i++) {
+                el = nodes[i];
+                var r = rectOf(el);
+                if (r.top > 140 || r.width > 72 || r.height > 72 || r.width < 14 || r.height < 14) continue;
+                if (!isShown(el) || !clickable(el)) continue;
+                var txt = (el.textContent || '').trim();
+                if (txt === '\u2630' || txt === '\u2261' || txt === '\u2263') return el;
+                if (looksLikeBars(el)) return el;
+              }
+              return null;
+            }
+
             window.addEventListener('keydown', function (e) {
               if (e.defaultPrevented || e.ctrlKey || e.altKey || e.metaKey) return;
               var a = document.activeElement, dir = DIRS[e.key];
@@ -728,6 +815,14 @@ jobs:
             } catch (e) {}
 
             window.__tvnav = {
+              menu: function () {
+                var b = findMenuButton();
+                if (!b) return 'menu button not found on this page';
+                focusEl(b);
+                b.click();
+                cache = null;
+                return 'menu button pressed (<' + b.tagName.toLowerCase() + '>)';
+              },
               media: function (cmd) {
                 var v = mediaEl();
                 if (!v) return 'no media element';
@@ -904,11 +999,12 @@ jobs:
           import android.os.SystemClock;
           import android.text.SpannableStringBuilder;
           import android.text.Spanned;
-          import android.text.method.ScrollingMovementMethod;
           import android.text.style.ForegroundColorSpan;
           import android.util.TypedValue;
           import android.view.Gravity;
           import android.view.KeyEvent;
+          import android.view.MotionEvent;
+          import android.view.inputmethod.InputMethodManager;
           import android.view.View;
           import android.view.Window;
           import android.view.WindowInsets;
@@ -926,6 +1022,7 @@ jobs:
           import android.webkit.WebView;
           import android.webkit.WebViewClient;
           import android.widget.FrameLayout;
+          import android.widget.LinearLayout;
           import android.widget.TextView;
 
           import org.json.JSONObject;
@@ -944,7 +1041,7 @@ jobs:
               private static final String HOST = Site.HOST;
               private static final int TEXT_ZOOM = 85; // % of normal text size; lower = smaller
               private static final long[] RETRY_DELAYS_MS = {2000, 5000}; // automatic retries before waiting for the button
-              private static final int LOG_LINES = 12;                      // lines in the on-screen log
+              private static final int LOG_LINES = 8;                      // lines in the on-screen log
 
               private FrameLayout root;
               private WebView web;
@@ -966,9 +1063,11 @@ jobs:
               private WebChromeClient.CustomViewCallback customViewCallback;
               private boolean isTv;
               private String navJs;
+              private LinearLayout logBox;
               private TextView logView;
-              private TextView dbgBtn;
-              private boolean logVisible = false; // hidden by default; Menu / Info / Guide key on the remote toggles it
+              private TextView logToggle;
+              private boolean logVisible = true; // the corner chip toggles it
+              private boolean dpadMode;          // remote / D-pad in use: on-screen debug is removed
               private boolean logRefreshPending;
               private final Runnable refreshLogRunnable = this::refreshLog;
               private final SimpleDateFormat timeFmt = new SimpleDateFormat("HH:mm:ss", Locale.US);
@@ -981,6 +1080,9 @@ jobs:
               protected void onCreate(Bundle savedInstanceState) {
                   super.onCreate(savedInstanceState);
                   isTv = detectTv();
+                  dpadMode = isTv
+                          || getResources().getConfiguration().navigation == Configuration.NAVIGATION_DPAD;
+                  logVisible = getSharedPreferences("ui", MODE_PRIVATE).getBoolean("log", true);
 
                   if (Build.VERSION.SDK_INT >= 28) {
                       WindowManager.LayoutParams lp = getWindow().getAttributes();
@@ -999,8 +1101,9 @@ jobs:
                           FrameLayout.LayoutParams.MATCH_PARENT));
                   setContentView(root);
                   buildLogView();
-                  buildDbgButton();
-                  AppLog.setListener(this::scheduleLogRefresh);
+                  if (!dpadMode) {
+                      AppLog.setListener(this::scheduleLogRefresh);
+                  }
                   logStartup();
 
                   WebSettings s = web.getSettings();
@@ -1437,20 +1540,64 @@ jobs:
                                   + (value == null ? "?" : value.replace("\"", ""))));
               }
 
+              /** Remote MENU key: press the page's own hamburger (sandwich) button. */
+              private void pageMenu() {
+                  if (splash != null || (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE)) {
+                      return;
+                  }
+                  web.evaluateJavascript(
+                          "window.__tvnav ? __tvnav.menu() : 'navigation script not ready'",
+                          value -> AppLog.i("tv", value == null ? "menu: ?" : value.replace("\"", "")));
+              }
+
+              /** OK on a text field with a remote: bring up the on-screen keyboard. */
+              private void maybeShowKeyboard() {
+                  if (splash != null || (errorWeb != null && errorWeb.getVisibility() == View.VISIBLE)) {
+                      return;
+                  }
+                  web.evaluateJavascript("(function(){var a=document.activeElement;return !!(a&&"
+                          + "(a.isContentEditable||a.tagName==='TEXTAREA'||(a.tagName==='INPUT'&&"
+                          + "/^(text|search|url|tel|email|password|number)$/i.test(a.type||'text'))));})()",
+                          value -> {
+                              if ("true".equals(value)) {
+                                  InputMethodManager imm =
+                                          (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                                  if (imm != null) {
+                                      imm.showSoftInput(web, InputMethodManager.SHOW_IMPLICIT);
+                                      AppLog.d("tv", "on-screen keyboard shown");
+                                  }
+                              }
+                          });
+              }
+
+              @Override
+              public boolean dispatchTouchEvent(MotionEvent ev) {
+                  if (ev.getActionMasked() == MotionEvent.ACTION_DOWN) {
+                      leaveDpadMode();
+                  }
+                  return super.dispatchTouchEvent(ev);
+              }
+
               @Override
               public boolean dispatchKeyEvent(KeyEvent ev) {
                   int code = ev.getKeyCode();
                   boolean down = ev.getAction() == KeyEvent.ACTION_DOWN;
                   boolean first = down && ev.getRepeatCount() == 0;
+                  if (down && isDpadKey(code)) {
+                      enterDpadMode();
+                  }
                   if (first) {
                       AppLog.d("key", KeyEvent.keyCodeToString(code).replace("KEYCODE_", ""));
                   }
+                  if (first && dpadMode && customView == null
+                          && (code == KeyEvent.KEYCODE_DPAD_CENTER || code == KeyEvent.KEYCODE_ENTER)) {
+                      maybeShowKeyboard();
+                  }
                   switch (code) {
                       case KeyEvent.KEYCODE_MENU:
-                      case KeyEvent.KEYCODE_INFO:
-                      case KeyEvent.KEYCODE_GUIDE:
+                      case KeyEvent.KEYCODE_TV_CONTENTS_MENU:
                           if (first) {
-                              toggleLog();
+                              pageMenu();
                           }
                           return true;
                       case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
@@ -1506,32 +1653,6 @@ jobs:
                   return super.dispatchKeyEvent(ev);
               }
 
-              // ---------- debug log toggle button (on-screen; phones have no MENU key) ----------
-
-              private void buildDbgButton() {
-                  float d = getResources().getDisplayMetrics().density;
-                  dbgBtn = new TextView(this);
-                  dbgBtn.setText("DBG");
-                  dbgBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11);
-                  dbgBtn.setTextColor(0xFFFFFFFF);
-                  dbgBtn.setGravity(Gravity.CENTER);
-                  dbgBtn.setTypeface(Typeface.MONOSPACE, Typeface.BOLD);
-                  GradientDrawable bg = new GradientDrawable();
-                  bg.setShape(GradientDrawable.OVAL);
-                  bg.setColor(0x66000000);
-                  bg.setStroke(Math.max(1, (int) (1 * d)), 0x66FFFFFF);
-                  dbgBtn.setBackground(bg);
-                  int size = (int) (44 * d);
-                  FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(size, size, Gravity.TOP | Gravity.END);
-                  int m = (int) (12 * d);
-                  lp.setMargins(m, m, m, m);
-                  dbgBtn.setLayoutParams(lp);
-                  dbgBtn.setAlpha(0.55f);
-                  dbgBtn.setOnClickListener(v -> toggleLog());
-                  root.addView(dbgBtn, lp);
-                  keepLogOnTop();
-              }
-
               // ---------- on-screen log (corner overlay) ----------
 
               private void buildLogView() {
@@ -1547,60 +1668,94 @@ jobs:
                   logView.setBackground(bg);
                   logView.setClickable(false);
                   logView.setFocusable(false);
-                  logView.setMovementMethod(new ScrollingMovementMethod());
                   logView.setMaxLines(LOG_LINES);
-                  logView.setEllipsize(null);
-                  logView.setMaxWidth((int) (getResources().getDisplayMetrics().widthPixels * 0.62f));
+                  logView.setMaxWidth((int) (getResources().getDisplayMetrics().widthPixels * 0.6f));
                   logView.setVisibility(logVisible ? View.VISIBLE : View.GONE);
+
+                  // tap target that hides / shows the log
+                  logToggle = new TextView(this);
+                  logToggle.setTypeface(Typeface.DEFAULT_BOLD);
+                  logToggle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 9);
+                  logToggle.setTextColor(0xFFEEF0F4);
+                  logToggle.setPadding((int) (8 * d), (int) (4 * d), (int) (8 * d), (int) (4 * d));
+                  GradientDrawable chip = new GradientDrawable();
+                  chip.setColor(0xB30B0D11);
+                  chip.setCornerRadius(10 * d);
+                  logToggle.setBackground(chip);
+                  logToggle.setFocusable(false); // keep the D-pad on the page
+                  logToggle.setOnClickListener(v -> toggleLog());
+                  updateLogToggle();
+
+                  logBox = new LinearLayout(this);
+                  logBox.setOrientation(LinearLayout.VERTICAL);
+                  LinearLayout.LayoutParams chipLp = new LinearLayout.LayoutParams(
+                          LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                  chipLp.topMargin = (int) (4 * d);
+                  logBox.addView(logView, new LinearLayout.LayoutParams(
+                          LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                  logBox.addView(logToggle, chipLp);
+
                   FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
                           FrameLayout.LayoutParams.WRAP_CONTENT,
                           FrameLayout.LayoutParams.WRAP_CONTENT,
                           Gravity.BOTTOM | Gravity.START);
                   int m = (int) (10 * d);
                   lp.setMargins(m, m, m, m);
-                  root.addView(logView, lp);
+                  root.addView(logBox, lp);
+                  logBox.setVisibility(dpadMode ? View.GONE : View.VISIBLE);
+              }
+
+              private void updateLogToggle() {
+                  logToggle.setText(logVisible ? "Hide log" : "Show log");
+                  logToggle.setAlpha(logVisible ? 0.85f : 0.6f);
               }
 
               private void keepLogOnTop() {
-                  if (logView != null) {
-                      logView.bringToFront();
-                  }
-                  if (dbgBtn != null) {
-                      dbgBtn.bringToFront();
+                  if (logBox != null) {
+                      logBox.bringToFront();
                   }
               }
 
               private void toggleLog() {
                   logVisible = !logVisible;
-                  float d = getResources().getDisplayMetrics().density;
-                  if (dbgBtn != null) {
-                      dbgBtn.setAlpha(logVisible ? 0.95f : 0.55f);
-                  }
-                  logView.animate().cancel();
+                  logView.setVisibility(logVisible ? View.VISIBLE : View.GONE);
+                  updateLogToggle();
+                  getSharedPreferences("ui", MODE_PRIVATE).edit().putBoolean("log", logVisible).apply();
                   if (logVisible) {
-                      logView.setVisibility(View.VISIBLE);
-                      logView.setAlpha(0f);
-                      logView.setTranslationY(16 * d);
-                      logView.animate()
-                              .alpha(1f)
-                              .translationY(0f)
-                              .setDuration(220)
-                              .setInterpolator(new android.view.animation.DecelerateInterpolator())
-                              .start();
                       scheduleLogRefresh();
-                  } else {
-                      logView.animate()
-                              .alpha(0f)
-                              .translationY(16 * d)
-                              .setDuration(180)
-                              .setInterpolator(new android.view.animation.AccelerateInterpolator())
-                              .withEndAction(() -> {
-                                  if (!logVisible) {
-                                      logView.setVisibility(View.GONE);
-                                  }
-                              })
-                              .start();
                   }
+              }
+
+              /** A remote / D-pad is in use: take the on-screen debug out (system logcat is unaffected). */
+              private void enterDpadMode() {
+                  if (dpadMode) {
+                      return;
+                  }
+                  dpadMode = true;
+                  AppLog.i("ui", "remote detected, on-screen debug removed");
+                  AppLog.setListener(null);
+                  ui.removeCallbacks(refreshLogRunnable);
+                  logRefreshPending = false;
+                  if (logBox != null) {
+                      logBox.setVisibility(View.GONE);
+                  }
+              }
+
+              /** Touch again on a phone: bring the debug option back. */
+              private void leaveDpadMode() {
+                  if (!dpadMode || isTv) {
+                      return;
+                  }
+                  dpadMode = false;
+                  AppLog.setListener(this::scheduleLogRefresh);
+                  logBox.setVisibility(View.VISIBLE);
+                  scheduleLogRefresh();
+              }
+
+              private static boolean isDpadKey(int code) {
+                  return code == KeyEvent.KEYCODE_DPAD_UP || code == KeyEvent.KEYCODE_DPAD_DOWN
+                          || code == KeyEvent.KEYCODE_DPAD_LEFT || code == KeyEvent.KEYCODE_DPAD_RIGHT
+                          || code == KeyEvent.KEYCODE_DPAD_CENTER;
               }
 
               private void scheduleLogRefresh() {
@@ -1612,7 +1767,7 @@ jobs:
 
               private void refreshLog() {
                   logRefreshPending = false;
-                  if (logView == null || !logVisible) {
+                  if (logView == null || !logVisible || dpadMode) {
                       return;
                   }
                   List<AppLog.Entry> entries = AppLog.last(LOG_LINES);
@@ -1630,12 +1785,6 @@ jobs:
                       }
                   }
                   logView.setText(sb);
-                  logView.post(() -> {
-                      android.text.Layout layout = logView.getLayout();
-                      if (layout != null) {
-                          logView.scrollTo(0, layout.getLineTop(logView.getLineCount()) - logView.getHeight());
-                      }
-                  });
               }
 
               private static int colorFor(char level) {
@@ -1660,7 +1809,7 @@ jobs:
                           AppLog.i("app", "webview " + pi.versionName);
                       }
                   }
-                  AppLog.d("app", "text zoom " + TEXT_ZOOM + "%, remote navigation on, log hidden (MENU to show)");
+                  AppLog.d("app", "text zoom " + TEXT_ZOOM + "%, remote navigation on");
               }
 
               private static boolean isInternal(Uri uri) {
