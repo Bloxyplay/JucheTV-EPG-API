@@ -19,7 +19,7 @@ jobs:
         run: |
           timeout 21300 ffmpeg -hide_banner -loglevel info \
             -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5 \
-            -i "http://60.12.124.166:1935/live/myStream1/playlist.m3u8" \
+            -i "https://live.koryocdn.org/kctv/video.m3u8" \
             -c:v copy \
             -c:a aac -b:a 128k -ar 44100 \
             -f flv "rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_STREAM_KEY}" \
