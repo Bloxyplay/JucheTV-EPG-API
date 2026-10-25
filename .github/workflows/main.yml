@@ -45,7 +45,7 @@ jobs:
   stream:
     name: 🎬 Stream to YouTube Live
     runs-on: ubuntu-latest
-    timeout-minutes: 360  # 6 hours max (GitHub limit)
+    timeout-minutes: 360
 
     steps:
       - name: 📋 Show Stream Configuration
@@ -53,12 +53,12 @@ jobs:
           echo "╔══════════════════════════════════════════════════════════════╗"
           echo "║           📡 HLS → YouTube Live Streamer                    ║"
           echo "╠══════════════════════════════════════════════════════════════╣"
-          echo "║  🎥 Source:    ${{ env.STREAM_URL }}"
-          echo "║  📹 Bitrate:   ${{ env.VIDEO_BITRATE }}"
-          echo "║  🎵 Bitrate:   ${{ env.AUDIO_BITRATE }}"
-          echo "║  📐 Resolution: ${{ env.RESOLUTION }}"
-          echo "║  🎞️  FPS:       ${{ env.FPS }}"
-          echo "║  ⏱️  Max Time:  6 hours"
+          echo "║  🎥 Source:     ${{ env.STREAM_URL }}"
+          echo "║  📹 Bitrate:    ${{ env.VIDEO_BITRATE }}"
+          echo "║  🎵 Bitrate:    ${{ env.AUDIO_BITRATE }}"
+          echo "║  📐 Resolution:  ${{ env.RESOLUTION }}"
+          echo "║  🎞️  FPS:        ${{ env.FPS }}"
+          echo "║  ⏱️  Max Time:   6 hours"
           echo "╚══════════════════════════════════════════════════════════════╝"
 
       - name: 🔧 Install FFmpeg & Dependencies
@@ -109,8 +109,6 @@ jobs:
       - name: 🎬 Start Streaming with Auto-Recovery
         run: |
           #!/bin/bash
-          set -e
-
           STREAM_URL="${{ env.STREAM_URL }}"
           YT_KEY="${{ steps.streamkey.outputs.key }}"
           YT_URL="rtmp://a.rtmp.youtube.com/live2/${YT_KEY}"
@@ -118,7 +116,7 @@ jobs:
           RETRY_DELAY=5
           RETRY_COUNT=0
           TOTAL_START=$(date +%s)
-          MAX_DURATION=21600  # 6 hours in seconds
+          MAX_DURATION=21600
 
           echo "╔══════════════════════════════════════════════════════════════╗"
           echo "║              🚀 Starting Live Stream                         ║"
@@ -145,7 +143,6 @@ jobs:
               echo "🔄 Waiting ${RETRY_DELAY}s before reconnect..."
               echo "🔄 ════════════════════════════════════════════"
               sleep $RETRY_DELAY
-              # Exponential backoff (cap at 60s)
               RETRY_DELAY=$((RETRY_DELAY * 2))
               if [ $RETRY_DELAY -gt 60 ]; then
                 RETRY_DELAY=60
@@ -156,47 +153,8 @@ jobs:
             echo ""
             echo "📡 [$CURRENT_TIME] Connecting to stream... (attempt $RETRY_COUNT/$MAX_RETRIES)"
 
-            # Run FFmpeg with auto-reconnect flags
-            ffmpeg \
-              -hide_banner \
-              -loglevel info \
-              -stats \
-              \
-              # === INPUT: HLS with aggressive reconnect ===
-              -reconnect 1 \
-              -reconnect_at_eof 1 \
-              -reconnect_streamed 1 \
-              -reconnect_delay_max 10 \
-              -timeout 15000000 \
-              -i "$STREAM_URL" \
-              \
-              # === VIDEO PROCESSING ===
-              -vf "scale=${{ env.RESOLUTION }}:force_original_aspect_ratio=decrease,pad=${{ env.RESOLUTION }}:(ow-iw)/2:(oh-ih)/2,setsar=1" \
-              -c:v libx264 \
-              -preset veryfast \
-              -tune zerolatency \
-              -b:v ${{ env.VIDEO_BITRATE }} \
-              -maxrate ${{ env.VIDEO_BITRATE }} \
-              -bufsize 5000k \
-              -pix_fmt yuv420p \
-              -g $(( ${{ env.FPS }} * 2 )) \
-              -keyint_min $(( ${{ env.FPS }} * 2 )) \
-              -sc_threshold 0 \
-              -r ${{ env.FPS }} \
-              \
-              # === AUDIO PROCESSING ===
-              -c:a aac \
-              -b:a ${{ env.AUDIO_BITRATE }} \
-              -ar 44100 \
-              -ac 2 \
-              \
-              # === OUTPUT: YouTube RTMP ===
-              -f flv \
-              -flvflags no_duration_filesize \
-              "$YT_URL" \
-              2>&1 | while IFS= read -r line; do
+            ffmpeg -hide_banner -loglevel info -stats               -reconnect 1               -reconnect_at_eof 1               -reconnect_streamed 1               -reconnect_delay_max 10               -timeout 15000000               -i "$STREAM_URL"               -vf "scale=${{ env.RESOLUTION }}:force_original_aspect_ratio=decrease,pad=${{ env.RESOLUTION }}:(ow-iw)/2:(oh-ih)/2,setsar=1"               -c:v libx264               -preset veryfast               -tune zerolatency               -b:v ${{ env.VIDEO_BITRATE }}               -maxrate ${{ env.VIDEO_BITRATE }}               -bufsize 5000k               -pix_fmt yuv420p               -g $(( ${{ env.FPS }} * 2 ))               -keyint_min $(( ${{ env.FPS }} * 2 ))               -sc_threshold 0               -r ${{ env.FPS }}               -c:a aac               -b:a ${{ env.AUDIO_BITRATE }}               -ar 44100               -ac 2               -f flv               -flvflags no_duration_filesize               "$YT_URL"               2>&1 | while IFS= read -r line; do
                 echo "$line"
-                # Show periodic status
                 if echo "$line" | grep -q "frame="; then
                   ELAPSED_NOW=$(($(date +%s) - TOTAL_START))
                   MINS=$((ELAPSED_NOW / 60))
@@ -205,7 +163,7 @@ jobs:
                 fi
               done
 
-            EXIT_CODE=$?
+            EXIT_CODE=${PIPESTATUS[0]}
             echo ""
             echo "⚠️  FFmpeg exited with code $EXIT_CODE"
 
