@@ -1,0 +1,26 @@
+name: Stream to YouTube
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stream:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Stream (single run, max 5h55m)
+        env:
+          YOUTUBE_STREAM_KEY: ${{ secrets.YOUTUBE_STREAM_KEY }}
+        run: |
+          timeout 21300 ffmpeg -hide_banner -loglevel info \
+            -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5 \
+            -i "http://60.12.124.166:1935/live/myStream1/playlist.m3u8" \
+            -c:v copy \
+            -c:a aac -b:a 128k -ar 44100 \
+            -f flv "rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_STREAM_KEY}" \
+            || [ $? -eq 124 ]
