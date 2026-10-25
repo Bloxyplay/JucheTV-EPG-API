@@ -2,6 +2,12 @@ name: Stream to YouTube
 
 on:
   workflow_dispatch:
+    inputs:
+      stream_url:
+        description: "HLS .m3u8 link"
+        required: true
+        type: string
+        default: "http://60.12.124.166:1935/live/myStream1/playlist.m3u8"
 
 jobs:
   stream:
@@ -13,14 +19,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Stream (single run, max 5h55m)
+      - name: Stream with auto-recovery (max 5h55m)
         env:
           YOUTUBE_STREAM_KEY: ${{ secrets.YOUTUBE_STREAM_KEY }}
+          STREAM_URL: ${{ inputs.stream_url }}
         run: |
-          timeout 21300 ffmpeg -hide_banner -loglevel info \
-            -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5 \
-            -i "https://live.koryocdn.org/kctv/video.m3u8" \
-            -c:v copy \
-            -c:a aac -b:a 128k -ar 44100 \
-            -f flv "rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_STREAM_KEY}" \
-            || [ $? -eq 124 ]
+          END=$((SECONDS + 21300))
+
+          while [ $SECONDS -lt $END ]; do
+            REMAIN=$((END - SECONDS))
+            echo "Starting ffmpeg, ${REMAIN}s left"
+
+            timeout "$REMAIN" ffmpeg -hide_banner -loglevel info \
+              -fflags +genpts+discardcorrupt \
+              -reconnect 1 -reconnect_streamed 1 -reconnect_at_eof 1 \
+              -reconnect_delay_max 10 -rw_timeout 15000000 \
+              -i "$STREAM_URL" \
+              -c:v copy \
+              -c:a aac -b:a 128k -ar 44100 \
+              -f flv "rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_STREAM_KEY}" \
+              && code=0 || code=$?
+
+            [ "$code" -eq 124 ] && { echo "Time limit reached"; break; }
+
+            echo "ffmpeg exited (code $code), reconnecting in 5s..."
+            sleep 5
+          done
+
+          exit 0
