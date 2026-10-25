@@ -904,8 +904,7 @@ jobs:
               // scheme://host[/path][?query][#fragment]  ->  keeps only /path
               private static final Pattern URL = Pattern.compile(
                       "(?i)\\b[a-z][a-z0-9+.\\-]*://[^/\\s\"'<>()]*([^\\s\"'<>()?#]*)(?:[?#][^\\s\"'<>()]*)?");
-              private static final Pattern SITE = Pattern.compile(
-                      "(?i)(?:[a-z0-9-]+\\.)*" + Pattern.quote(Site.HOST));
+              private static volatile Pattern sitePattern; // set once the sealed address is opened
 
               private static final ArrayDeque<Entry> BUFFER = new ArrayDeque<>();
               private static volatile Listener listener;
@@ -922,6 +921,10 @@ jobs:
                       new ThreadPoolExecutor.DiscardOldestPolicy());
 
               private AppLog() {
+              }
+
+              static void setSiteHost(String host) {
+                  sitePattern = Pattern.compile("(?i)(?:[a-z0-9-]+\\.)*" + Pattern.quote(host));
               }
 
               static void setListener(Listener l) {
@@ -967,7 +970,10 @@ jobs:
                       m.appendReplacement(sb, Matcher.quoteReplacement(shorten(path)));
                   }
                   m.appendTail(sb);
-                  String out = SITE.matcher(sb.toString()).replaceAll("\u2022\u2022\u2022");
+                  Pattern site = sitePattern;
+                  String out = site == null
+                          ? sb.toString()
+                          : site.matcher(sb.toString()).replaceAll("\u2022\u2022\u2022");
                   return out.length() > 160 ? out.substring(0, 160) + "\u2026" : out;
               }
 
@@ -1045,7 +1051,7 @@ jobs:
                       if ((ctx.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
                           return false;
                       }
-                      String have = signerSha256(ctx);
+                      String have = signer(ctx);
                       return have != null
                               && MessageDigest.isEqual(have.getBytes("UTF-8"), Pin.CERT_SHA256.getBytes("UTF-8"));
                   } catch (Exception e) {
@@ -1069,8 +1075,9 @@ jobs:
                   }
               }
 
+              /** SHA-256 (hex) of the certificate this app is really signed with, or null. */
               @SuppressWarnings("deprecation")
-              private static String signerSha256(Context ctx) throws Exception {
+              static String signer(Context ctx) throws Exception {
                   PackageManager pm = ctx.getPackageManager();
                   Signature[] sigs;
                   if (Build.VERSION.SDK_INT >= 28) {
@@ -1181,8 +1188,6 @@ jobs:
 
           public class MainActivity extends Activity {
 
-              private static final String START_URL = Site.START_URL;
-              private static final String HOST = Site.HOST;
               private static final int TEXT_ZOOM = 85; // % of normal text size; lower = smaller
               private static final long[] RETRY_DELAYS_MS = {2000, 5000}; // automatic retries before waiting for the button
               private static final int SPLASH_PROGRESS = 75;               // reveal the page at this load progress
@@ -1199,7 +1204,7 @@ jobs:
               private boolean pendingAuto;
               private boolean loadFailed;
               private int autoRetries;
-              private String failedUrl = START_URL;
+              private String failedUrl = "";
               private ConnectivityManager.NetworkCallback netCallback;
               private final Runnable retryRunnable = this::retryNow;
               private WifiManager.WifiLock wifiLock;
@@ -1225,11 +1230,12 @@ jobs:
               @Override
               protected void onCreate(Bundle savedInstanceState) {
                   super.onCreate(savedInstanceState);
-                  if (!Integrity.ok(this)) {
+                  if (!Integrity.ok(this) || !Site.init(this)) {
                       Integrity.wipe(this);
                       showCorrupted();
                       return;
                   }
+                  failedUrl = Site.url();
                   warmDns();
                   isTv = detectTv();
                   dpadMode = isTv
@@ -1426,7 +1432,7 @@ jobs:
                   });
 
                   if (savedInstanceState == null || web.restoreState(savedInstanceState) == null) {
-                      web.loadUrl(START_URL);
+                      web.loadUrl(Site.url());
                   }
 
                   showSplash();
@@ -2050,10 +2056,11 @@ jobs:
 
               /** Resolve the site's address in parallel with the WebView starting up. */
               private void warmDns() {
+                  final String host = Site.host();
                   new Thread(() -> {
                       long t = SystemClock.elapsedRealtime();
                       try {
-                          InetAddress.getAllByName(HOST);
+                          InetAddress.getAllByName(host);
                           AppLog.d("net", "dns ready in " + (SystemClock.elapsedRealtime() - t) + " ms");
                       } catch (Exception e) {
                           AppLog.w("net", "dns warm-up failed");
@@ -2063,9 +2070,10 @@ jobs:
 
               private static boolean isInternal(Uri uri) {
                   String host = uri.getHost();
+                  String site = Site.host();
                   return "https".equals(uri.getScheme())
                           && host != null
-                          && (host.equals(HOST) || host.endsWith("." + HOST));
+                          && (host.equals(site) || host.endsWith("." + site));
               }
 
               private void hideCustomView() {
@@ -2187,6 +2195,87 @@ jobs:
                   }
                   web.destroy();
                   super.onDestroy();
+              }
+          }
+          EOF
+          cat > $P/app/src/main/java/xyz/manbang/app/Site.java <<'EOF'
+          package xyz.manbang.app;
+
+          import android.content.Context;
+          import android.util.Base64;
+
+          import java.security.MessageDigest;
+          import java.util.Arrays;
+
+          import javax.crypto.Cipher;
+          import javax.crypto.Mac;
+          import javax.crypto.spec.IvParameterSpec;
+          import javax.crypto.spec.SecretKeySpec;
+
+          /**
+           * The site address is not stored as text anywhere in the app. It is sealed at build time with keys
+           * derived from this app's own signing certificate, so only the genuine build can open it, and it
+           * does not show up in a plain string search of the APK.
+           */
+          final class Site {
+
+              private static final String BLOB = "@@BLOB@@";
+
+              private static volatile String url = "";
+              private static volatile String host = "";
+
+              private Site() {
+              }
+
+              static String url() {
+                  return url;
+              }
+
+              static String host() {
+                  return host;
+              }
+
+              /** Opens the sealed address. Returns false when this is not the original build. */
+              static boolean init(Context ctx) {
+                  try {
+                      String cert = Integrity.signer(ctx);
+                      if (cert == null) {
+                          return false;
+                      }
+                      byte[] all = Base64.decode(BLOB, Base64.DEFAULT);
+                      if (all.length < 16 + 32 + 16) {
+                          return false;
+                      }
+                      byte[] iv = Arrays.copyOfRange(all, 0, 16);
+                      byte[] tag = Arrays.copyOfRange(all, 16, 48);
+                      byte[] ct = Arrays.copyOfRange(all, 48, all.length);
+
+                      Mac mac = Mac.getInstance("HmacSHA256");
+                      mac.init(new SecretKeySpec(sha256("juche-tv|mac|" + cert), "HmacSHA256"));
+                      mac.update(iv);
+                      if (!MessageDigest.isEqual(mac.doFinal(ct), tag)) {
+                          return false;
+                      }
+
+                      Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+                      cipher.init(Cipher.DECRYPT_MODE,
+                              new SecretKeySpec(sha256("juche-tv|enc|" + cert), "AES"),
+                              new IvParameterSpec(iv));
+                      String[] parts = new String(cipher.doFinal(ct), "UTF-8").split("\n");
+                      if (parts.length != 2 || parts[0].isEmpty() || parts[1].isEmpty()) {
+                          return false;
+                      }
+                      url = parts[0];
+                      host = parts[1];
+                      AppLog.setSiteHost(host);
+                      return true;
+                  } catch (Exception e) {
+                      return false;
+                  }
+              }
+
+              private static byte[] sha256(String s) throws Exception {
+                  return MessageDigest.getInstance("SHA-256").digest(s.getBytes("UTF-8"));
               }
           }
           EOF
@@ -2910,13 +2999,13 @@ jobs:
             exit 1
           fi
           P=ManbangWebView
-          base64 -d <<'EOF' | gpg --batch --quiet --pinentry-mode loopback --passphrase-fd 3 --decrypt 3<<<"$SITE_KEY" > $P/app/src/main/java/xyz/manbang/app/Site.java
+          base64 -d <<'EOF' | gpg --batch --quiet --pinentry-mode loopback --passphrase-fd 3 --decrypt 3<<<"$SITE_KEY" > $P/site.plain
           jA0ECQMK3ufoOo/+QPf/0rgB33UZ3wlzqzK1Iq2yKcUiPZ9T1Lgr6W9nnsWrEwUx8MaejzNR9pw6
           aV9oBjy35aT4TjIf4ZOCCNT93DUfV6OC2RW0er+cl+ZvnVCgq2+6qvbwkSGMZH8QueXORuxJ8N6t
           a0wFUG8/nzap/beUH2FI02BLysXrtN6c0T5fhhVto6fbNRZ3q23d4WQ/CGj/hZv+k3n0ZsG5qya4
           veW/Tj7h8tcrI6OR3dgLnUiK35wXEg4jMlXP37Gv
           EOF
-          test -s $P/app/src/main/java/xyz/manbang/app/Site.java
+          test -s $P/site.plain
 
       - name: Create signing key
         env:
@@ -2930,6 +3019,28 @@ jobs:
           SHA=$(keytool -exportcert -alias manbang -keystore $P/app/release.p12 -storepass "$SITE_KEY" | sha256sum | cut -d' ' -f1)
           test ${#SHA} -eq 64
           printf 'package xyz.manbang.app;\n\nfinal class Pin {\n    static final String CERT_SHA256 = "%s";\n\n    private Pin() {\n    }\n}\n' "$SHA" > $P/app/src/main/java/xyz/manbang/app/Pin.java
+
+
+      - name: Seal the site address into the app
+        run: |
+          set -e
+          P=ManbangWebView
+          SITE=$P/app/src/main/java/xyz/manbang/app/Site.java
+          PIN=$(grep -o 'CERT_SHA256 = "[0-9a-f]*"' $P/app/src/main/java/xyz/manbang/app/Pin.java | cut -d'"' -f2)
+          URL=$(sed -n 's/.*START_URL = "\(.*\)";/\1/p' $P/site.plain)
+          HOST=$(sed -n 's/.*HOST = "\(.*\)";/\1/p' $P/site.plain)
+          test ${#PIN} -eq 64 && test -n "$URL" && test -n "$HOST"
+          KENC=$(printf '%s' "juche-tv|enc|$PIN" | sha256sum | cut -d' ' -f1)
+          KMAC=$(printf '%s' "juche-tv|mac|$PIN" | sha256sum | cut -d' ' -f1)
+          IVHEX=$(openssl rand -hex 16)
+          printf '%s\n%s' "$URL" "$HOST" > /tmp/site.txt
+          openssl enc -aes-256-cbc -K "$KENC" -iv "$IVHEX" -in /tmp/site.txt -out /tmp/site.ct
+          python3 -c 'import sys,binascii;sys.stdout.buffer.write(binascii.unhexlify(sys.argv[1]))' "$IVHEX" > /tmp/site.iv
+          cat /tmp/site.iv /tmp/site.ct | openssl dgst -sha256 -mac HMAC -macopt hexkey:"$KMAC" -binary > /tmp/site.mac
+          BLOB=$(cat /tmp/site.iv /tmp/site.mac /tmp/site.ct | base64 -w0)
+          sed -i "s|@@BLOB@@|$BLOB|" $SITE
+          if grep -q '@@BLOB@@' $SITE; then echo "::error::site address was not sealed"; exit 1; fi
+          rm -f $P/site.plain /tmp/site.txt /tmp/site.ct /tmp/site.iv /tmp/site.mac
 
       - name: Build
         working-directory: ManbangWebView
