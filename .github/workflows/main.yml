@@ -1,12 +1,32 @@
-name: 📡 HLS to YouTube Live Streamer
+name: 📡 HLS to YouTube Live Streamer Pro
 
 on:
   workflow_dispatch:
     inputs:
+      channel:
+        description: '📺 Channel (pick "custom" to use the URL below)'
+        required: false
+        default: 'custom'
+        type: choice
+        options:
+          - 'custom'
+          - 'North Korea - Korean Central Television'
+          - 'North Korea - Ryongnamsan Television'
+          - 'North Korea - Athletic Television'
+          - 'Myanmar - MWD Variety HD (Nay Pyi Taw)'
+          - 'Myanmar - MWD HD (Yangon)'
+          - 'Myanmar - MRTV HD'
+          - 'Myanmar - MRTV News'
+          - 'Myanmar - MITV'
+          - 'Myanmar - MRTV Parliament (Hluttaw)'
+          - 'Myanmar - MRTV NRC'
+          - 'Myanmar - MRTV Entertainment'
+          - 'Myanmar - MRTV Farmer'
+          - 'Myanmar - MRTV Sports HD'
       m3u8_url:
-        description: '🔗 HLS M3U8 Stream URL'
-        required: true
-        default: 'http://60.12.124.166:1935/live/myStream1/playlist.m3u8'
+        description: '🔗 Custom HLS M3U8 URL (overrides channel if filled)'
+        required: false
+        default: ''
         type: string
       stream_key:
         description: '🔑 YouTube Stream Key (leave empty to use secret)'
@@ -24,14 +44,136 @@ on:
         default: '128k'
         type: string
       resolution:
-        description: '📐 Resolution (e.g., 1280x720)'
+        description: '📐 Resolution (e.g., 1280x720, 1920x1080)'
         required: false
         default: '1280x720'
         type: string
       fps:
-        description: '🎞️ FPS (e.g., 30)'
+        description: '🎞️ FPS (e.g., 30, 60)'
         required: false
         default: '30'
+        type: string
+      aspect_ratio:
+        description: '📐 Aspect Ratio (16:9, 4:3, 1:1, 9:16, original)'
+        required: false
+        default: '16:9'
+        type: choice
+        options:
+          - '16:9'
+          - '4:3'
+          - '1:1'
+          - '9:16'
+          - '16:10'
+          - '21:9'
+          - 'original'
+      preset:
+        description: '⚡ Encoding Preset (ultrafast to veryslow)'
+        required: false
+        default: 'veryfast'
+        type: choice
+        options:
+          - 'ultrafast'
+          - 'superfast'
+          - 'veryfast'
+          - 'faster'
+          - 'fast'
+          - 'medium'
+          - 'slow'
+          - 'slower'
+          - 'veryslow'
+      video_codec:
+        description: '🎬 Video Codec'
+        required: false
+        default: 'libx264'
+        type: choice
+        options:
+          - 'libx264'
+          - 'libx265'
+          - 'copy'
+      audio_codec:
+        description: '🎵 Audio Codec'
+        required: false
+        default: 'aac'
+        type: choice
+        options:
+          - 'aac'
+          - 'libmp3lame'
+          - 'copy'
+      volume_boost:
+        description: '🔊 Volume Boost (dB, e.g., 0, 3, 6, -3)'
+        required: false
+        default: '0'
+        type: string
+      denoise:
+        description: '🧹 Enable Denoising'
+        required: false
+        default: false
+        type: boolean
+      deinterlace:
+        description: '🔄 Enable Deinterlacing'
+        required: false
+        default: false
+        type: boolean
+      overlay_text:
+        description: '📝 Overlay Text (leave empty for none)'
+        required: false
+        default: ''
+        type: string
+      overlay_position:
+        description: '📍 Overlay Position'
+        required: false
+        default: 'top-left'
+        type: choice
+        options:
+          - 'top-left'
+          - 'top-right'
+          - 'bottom-left'
+          - 'bottom-right'
+          - 'center'
+      show_timestamp:
+        description: '🕐 Show Timestamp Overlay'
+        required: false
+        default: false
+        type: boolean
+      logo_url:
+        description: '🖼️ Logo/Watermark URL (optional)'
+        required: false
+        default: ''
+        type: string
+      background_music:
+        description: '🎵 Background Music URL (optional, mixed with stream audio)'
+        required: false
+        default: ''
+        type: string
+      music_volume:
+        description: '🎵 Background Music Volume (0.0 to 1.0)'
+        required: false
+        default: '0.3'
+        type: string
+      max_duration:
+        description: '⏱️ Max Duration (minutes, 0 = until manually stopped)'
+        required: false
+        default: '360'
+        type: string
+      reconnect_attempts:
+        description: '🔄 Max Reconnect Attempts'
+        required: false
+        default: '50'
+        type: string
+      extra_options:
+        description: '⚙️ Extra FFmpeg Options (advanced users)'
+        required: false
+        default: ''
+        type: string
+      dry_run:
+        description: '🧪 Dry Run (test without actually streaming)'
+        required: false
+        default: false
+        type: boolean
+      notify_webhook:
+        description: '🔗 Discord/Slack Webhook URL for notifications'
+        required: false
+        default: ''
         type: string
 
 env:
@@ -40,6 +182,39 @@ env:
   AUDIO_BITRATE: ${{ inputs.audio_bitrate }}
   RESOLUTION: ${{ inputs.resolution }}
   FPS: ${{ inputs.fps }}
+  ASPECT_RATIO: ${{ inputs.aspect_ratio }}
+  PRESET: ${{ inputs.preset }}
+  VIDEO_CODEC: ${{ inputs.video_codec }}
+  AUDIO_CODEC: ${{ inputs.audio_codec }}
+  AUDIO_SAMPLE_RATE: '44100'
+  AUDIO_CHANNELS: '2'
+  VOLUME_BOOST: ${{ inputs.volume_boost }}
+  DENOISE: ${{ inputs.denoise }}
+  SHARPEN: 'false'
+  DEINTERLACE: ${{ inputs.deinterlace }}
+  BRIGHTNESS: '0'
+  CONTRAST: '0'
+  SATURATION: '0'
+  GAMMA: '1.0'
+  OVERLAY_TEXT: ${{ inputs.overlay_text }}
+  OVERLAY_POSITION: ${{ inputs.overlay_position }}
+  OVERLAY_FONT_SIZE: '24'
+  OVERLAY_COLOR: 'white'
+  SHOW_TIMESTAMP: ${{ inputs.show_timestamp }}
+  LOGO_URL: ${{ inputs.logo_url }}
+  LOGO_POSITION: 'top-right'
+  LOGO_OPACITY: '0.8'
+  LOGO_SCALE: '150'
+  BACKGROUND_MUSIC: ${{ inputs.background_music }}
+  MUSIC_VOLUME: ${{ inputs.music_volume }}
+  MAX_DURATION: ${{ inputs.max_duration }}
+  RECONNECT_ATTEMPTS: ${{ inputs.reconnect_attempts }}
+  BUFFER_SIZE: '5000k'
+  THREADS: '0'
+  EXTRA_OPTIONS: ${{ inputs.extra_options }}
+  DRY_RUN: ${{ inputs.dry_run }}
+  NOTIFY_ON_START: 'false'
+  NOTIFY_WEBHOOK: ${{ inputs.notify_webhook }}
 
 jobs:
   stream:
@@ -48,26 +223,76 @@ jobs:
     timeout-minutes: 360
 
     steps:
+      - name: 📺 Resolve Channel
+        env:
+          IN_CHANNEL: ${{ inputs.channel }}
+          IN_URL: ${{ inputs.m3u8_url }}
+        run: |
+          if [ -n "$IN_URL" ]; then
+            URL="$IN_URL"
+          else
+            case "$IN_CHANNEL" in
+            "North Korea - Korean Central Television") URL="live.koryocdn.org/kctv/index.m3u8" ;;
+            "North Korea - Ryongnamsan Television") URL="live.koryocdn.org/ryongnamsan/video.m3u8" ;;
+            "North Korea - Athletic Television") URL="live.koryocdn.org/sports/video.m3u8" ;;
+            "Myanmar - MWD Variety HD (Nay Pyi Taw)") URL="http://203.81.84.130/hls/mwd_variety/index.m3u8" ;;
+            "Myanmar - MWD HD (Yangon)") URL="http://203.81.84.130/hls/mwd/index.m3u8" ;;
+            "Myanmar - MRTV HD") URL="https://mrtvott.com/cache/MRTV-HD/master.m3u8" ;;
+            "Myanmar - MRTV News") URL="mrtvott.com/cache/MRTV-NEWS-HD/master.m3u8" ;;
+            "Myanmar - MITV") URL="https://mrtvott.com/cache/MITV/master.m3u8" ;;
+            "Myanmar - MRTV Parliament (Hluttaw)") URL="https://mrtvott.com/cache/MRTV-HLUTTAW/master.m3u8" ;;
+            "Myanmar - MRTV NRC") URL="https://mrtvott.com/cache/MRTV-NRC-HD/master.m3u8" ;;
+            "Myanmar - MRTV Entertainment") URL="https://mrtvott.com/cache/MRTV-Ent-HD/master.m3u8" ;;
+            "Myanmar - MRTV Farmer") URL="https://mrtvott.com/cache/MRTV-FARMER/master.m3u8" ;;
+            "Myanmar - MRTV Sports HD") URL="https://mrtvott.com/cache/MRTV-SPORT/master.m3u8" ;;
+              *) URL="" ;;
+            esac
+          fi
+
+          if [ -z "$URL" ]; then
+            echo "❌ ERROR: No channel selected and no custom URL given."
+            exit 1
+          fi
+
+          # Add a scheme if missing: try https first, fall back to http
+          if ! echo "$URL" | grep -qE '^https?://'; then
+            if curl -s -o /dev/null --connect-timeout 8 --max-time 12 "https://$URL"; then
+              URL="https://$URL"
+            else
+              URL="http://$URL"
+            fi
+          fi
+
+          echo "📺 Channel: $IN_CHANNEL"
+          echo "🔗 Resolved URL: $URL"
+          echo "STREAM_URL=$URL" >> "$GITHUB_ENV"
+
       - name: 📋 Show Stream Configuration
         run: |
-          echo "╔══════════════════════════════════════════════════════════════╗"
-          echo "║           📡 HLS → YouTube Live Streamer                    ║"
-          echo "╠══════════════════════════════════════════════════════════════╣"
-          echo "║  🎥 Source:     ${{ env.STREAM_URL }}"
-          echo "║  📹 Bitrate:    ${{ env.VIDEO_BITRATE }}"
-          echo "║  🎵 Bitrate:    ${{ env.AUDIO_BITRATE }}"
-          echo "║  📐 Resolution:  ${{ env.RESOLUTION }}"
-          echo "║  🎞️  FPS:        ${{ env.FPS }}"
-          echo "║  ⏱️  Max Time:   6 hours"
-          echo "╚══════════════════════════════════════════════════════════════╝"
+          echo "╔══════════════════════════════════════════════════════════════════════╗"
+          echo "║              📡 HLS → YouTube Live Streamer Pro                     ║"
+          echo "╠══════════════════════════════════════════════════════════════════════╣"
+          echo "║  🎥 Source:        ${{ env.STREAM_URL }}"
+          echo "║  📹 Bitrate:       ${{ env.VIDEO_BITRATE }}"
+          echo "║  🎵 Bitrate:       ${{ env.AUDIO_BITRATE }}"
+          echo "║  📐 Resolution:    ${{ env.RESOLUTION }}"
+          echo "║  📐 Aspect Ratio:  ${{ env.ASPECT_RATIO }}"
+          echo "║  🎞️  FPS:           ${{ env.FPS }}"
+          echo "║  ⚡ Preset:         ${{ env.PRESET }}"
+          echo "║  🎬 Video Codec:   ${{ env.VIDEO_CODEC }}"
+          echo "║  🎵 Audio Codec:   ${{ env.AUDIO_CODEC }}"
+          echo "║  ⏱️  Max Duration:  ${{ env.MAX_DURATION }} minutes"
+          echo "║  🔄 Max Retries:   ${{ env.RECONNECT_ATTEMPTS }}"
+          echo "╚══════════════════════════════════════════════════════════════════════╝"
 
       - name: 🔧 Install FFmpeg & Dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg curl bc > /dev/null 2>&1
+          sudo apt-get install -y -qq ffmpeg curl bc fonts-dejavu-core > /dev/null 2>&1
           echo "✅ FFmpeg version:"
           ffmpeg -version | head -1
-          echo "✅ All dependencies installed"
+          echo "✅ Fonts installed:"
+          fc-list | grep -i dejavu | head -3
 
       - name: 🔑 Resolve YouTube Stream Key
         id: streamkey
@@ -106,47 +331,305 @@ jobs:
             echo "   Will attempt to stream anyway..."
           fi
 
+      - name: 🖼️ Download Logo/Watermark
+        if: ${{ env.LOGO_URL != '' }}
+        run: |
+          echo "🖼️ Downloading logo from ${{ env.LOGO_URL }}..."
+          curl -s -o /tmp/logo.png "${{ env.LOGO_URL }}" || curl -s -o /tmp/logo.jpg "${{ env.LOGO_URL }}"
+          if [ -f /tmp/logo.png ]; then
+            echo "✅ Logo downloaded: /tmp/logo.png"
+            file /tmp/logo.png
+          elif [ -f /tmp/logo.jpg ]; then
+            echo "✅ Logo downloaded: /tmp/logo.jpg"
+            file /tmp/logo.jpg
+          else
+            echo "⚠️ Failed to download logo, continuing without it..."
+          fi
+
+      - name: 🎵 Download Background Music
+        if: ${{ env.BACKGROUND_MUSIC != '' }}
+        run: |
+          echo "🎵 Downloading background music..."
+          curl -s -o /tmp/bgmusic.mp3 "${{ env.BACKGROUND_MUSIC }}" || curl -s -o /tmp/bgmusic.mp3 "${{ env.BACKGROUND_MUSIC }}"
+          if [ -f /tmp/bgmusic.mp3 ]; then
+            echo "✅ Background music downloaded"
+            ffprobe -v quiet -show_format -show_streams /tmp/bgmusic.mp3 2>&1 | head -10
+          else
+            echo "⚠️ Failed to download background music, continuing without it..."
+          fi
+
+      - name: 🔔 Send Start Notification
+        if: ${{ env.NOTIFY_ON_START == 'true' && env.NOTIFY_WEBHOOK != '' }}
+        run: |
+          echo "🔔 Sending start notification..."
+          MESSAGE="🎬 Stream Started\n📡 Source: ${{ env.STREAM_URL }}\n📐 Resolution: ${{ env.RESOLUTION }}\n⏱️ Started at: $(date '+%Y-%m-%d %H:%M:%S')"
+          curl -s -X POST "${{ env.NOTIFY_WEBHOOK }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"$MESSAGE\"}" \
+            || echo "⚠️ Failed to send notification"
+
       - name: 🎬 Start Streaming with Auto-Recovery
         run: |
           #!/bin/bash
+
+          # ============================================
+          # CONFIGURATION
+          # ============================================
           STREAM_URL="${{ env.STREAM_URL }}"
           YT_KEY="${{ steps.streamkey.outputs.key }}"
           YT_URL="rtmp://a.rtmp.youtube.com/live2/${YT_KEY}"
-          MAX_RETRIES=50
+          MAX_RETRIES=${{ env.RECONNECT_ATTEMPTS }}
           RETRY_DELAY=5
           RETRY_COUNT=0
           TOTAL_START=$(date +%s)
-          MAX_DURATION=21600
+          MAX_DURATION=$((${{ env.MAX_DURATION }} * 60))
 
-          # Parse resolution into width and height
+          # Parse resolution
           WIDTH=$(echo "${{ env.RESOLUTION }}" | cut -d'x' -f1)
           HEIGHT=$(echo "${{ env.RESOLUTION }}" | cut -d'x' -f2)
-          echo "📐 Parsed resolution: ${WIDTH}x${HEIGHT}"
 
-          echo "╔══════════════════════════════════════════════════════════════╗"
-          echo "║              🚀 Starting Live Stream                         ║"
-          echo "╠══════════════════════════════════════════════════════════════╣"
-          echo "║  Source:  $STREAM_URL"
-          echo "║  Target:  YouTube Live (RTMP)"
+          # Parse aspect ratio
+          ASPECT_W=16
+          ASPECT_H=9
+          if [ "${{ env.ASPECT_RATIO }}" != "original" ]; then
+            ASPECT_W=$(echo "${{ env.ASPECT_RATIO }}" | cut -d':' -f1)
+            ASPECT_H=$(echo "${{ env.ASPECT_RATIO }}" | cut -d':' -f2)
+          fi
+
+          echo "╔══════════════════════════════════════════════════════════════════════╗"
+          echo "║                    🚀 Starting Live Stream                           ║"
+          echo "╠══════════════════════════════════════════════════════════════════════╣"
+          echo "║  Source:        $STREAM_URL"
+          echo "║  Target:        YouTube Live (RTMP)"
+          echo "║  Resolution:    ${WIDTH}x${HEIGHT}"
+          echo "║  Aspect Ratio:  ${ASPECT_W}:${ASPECT_H}"
           echo "║  Auto-recovery: Enabled (max $MAX_RETRIES retries)"
-          echo "╚══════════════════════════════════════════════════════════════╝"
+          echo "╚══════════════════════════════════════════════════════════════════════╝"
           echo ""
 
+          # ============================================
+          # BUILD VIDEO FILTER CHAIN
+          # ============================================
+          VF_CHAIN=""
+
+          # 1. Deinterlace (yadif)
+          if [ "${{ env.DEINTERLACE }}" = "true" ]; then
+            VF_CHAIN="yadif,"
+            echo "🔄 Deinterlacing: enabled"
+          fi
+
+          # 2. Denoise (hqdn3d)
+          if [ "${{ env.DENOISE }}" = "true" ]; then
+            VF_CHAIN="${VF_CHAIN}hqdn3d=1.5:1.5:6:6,"
+            echo "🧹 Denoising: enabled"
+          fi
+
+          # 3. Scale with aspect ratio adjustment
+          if [ "${{ env.ASPECT_RATIO }}" = "original" ]; then
+            VF_CHAIN="${VF_CHAIN}scale=w=${WIDTH}:h=${HEIGHT}:force_original_aspect_ratio=decrease,"
+          else
+            # Calculate target dimensions maintaining aspect ratio
+            VF_CHAIN="${VF_CHAIN}scale=w=${WIDTH}:h=${HEIGHT}:force_original_aspect_ratio=increase:force_divisible_by=2,crop=w=${WIDTH}:h=${HEIGHT},"
+          fi
+          echo "📐 Aspect ratio adjustment: ${{ env.ASPECT_RATIO }}"
+
+          # 4. Pad to exact resolution
+          VF_CHAIN="${VF_CHAIN}pad=w=${WIDTH}:h=${HEIGHT}:x=(ow-iw)/2:y=(oh-ih)/2:color=black,"
+
+          # 5. Sharpen
+          if [ "${{ env.SHARPEN }}" = "true" ]; then
+            VF_CHAIN="${VF_CHAIN}unsharp=5:5:1.0:5:5:0.0,"
+            echo "✨ Sharpening: enabled"
+          fi
+
+          # 6. Color adjustments
+          COLOR_ADJUST=""
+          if [ "${{ env.BRIGHTNESS }}" != "0" ] || [ "${{ env.CONTRAST }}" != "0" ] || [ "${{ env.SATURATION }}" != "0" ] || [ "${{ env.GAMMA }}" != "1.0" ]; then
+            COLOR_ADJUST="eq="
+            if [ "${{ env.BRIGHTNESS }}" != "0" ]; then
+              COLOR_ADJUST="${COLOR_ADJUST}brightness=${{ env.BRIGHTNESS }}:"
+            fi
+            if [ "${{ env.CONTRAST }}" != "0" ]; then
+              COLOR_ADJUST="${COLOR_ADJUST}contrast=${{ env.CONTRAST }}:"
+            fi
+            if [ "${{ env.SATURATION }}" != "0" ]; then
+              COLOR_ADJUST="${COLOR_ADJUST}saturation=${{ env.SATURATION }}:"
+            fi
+            if [ "${{ env.GAMMA }}" != "1.0" ]; then
+              COLOR_ADJUST="${COLOR_ADJUST}gamma=${{ env.GAMMA }}:"
+            fi
+            # Remove trailing colon
+            COLOR_ADJUST=$(echo "$COLOR_ADJUST" | sed 's/:$//')
+            VF_CHAIN="${VF_CHAIN}${COLOR_ADJUST},"
+            echo "🎨 Color adjustments: brightness=${{ env.BRIGHTNESS }}, contrast=${{ env.CONTRAST }}, saturation=${{ env.SATURATION }}, gamma=${{ env.GAMMA }}"
+          fi
+
+          # 7. Volume boost
+          AUDIO_FILTER=""
+          if [ "${{ env.VOLUME_BOOST }}" != "0" ]; then
+            AUDIO_FILTER="volume=${{ env.VOLUME_BOOST }}dB"
+            echo "🔊 Volume boost: ${{ env.VOLUME_BOOST }}dB"
+          fi
+
+          # 8. Text overlay
+          if [ -n "${{ env.OVERLAY_TEXT }}" ]; then
+            # Get position coordinates
+            case "${{ env.OVERLAY_POSITION }}" in
+              "top-left") POS_X="20" POS_Y="20" ;;
+              "top-right") POS_X="w-tw-20" POS_Y="20" ;;
+              "bottom-left") POS_X="20" POS_Y="h-th-20" ;;
+              "bottom-right") POS_X="w-tw-20" POS_Y="h-th-20" ;;
+              "center") POS_X="(w-tw)/2" POS_Y="(h-th)/2" ;;
+            esac
+
+            TEXT="${{ env.OVERLAY_TEXT }}"
+            # Escape special characters
+            TEXT=$(echo "$TEXT" | sed "s/:/\\:/g" | sed "s/'/\\'/g")
+
+            VF_CHAIN="${VF_CHAIN}drawtext=text='${TEXT}':fontsize=${{ env.OVERLAY_FONT_SIZE }}:fontcolor=${{ env.OVERLAY_COLOR }}:x=${POS_X}:y=${POS_Y}:box=1:boxcolor=black@0.5:boxborderw=10,"
+            echo "📝 Text overlay: '${{ env.OVERLAY_TEXT }}' at ${{ env.OVERLAY_POSITION }}"
+          fi
+
+          # 9. Timestamp overlay
+          if [ "${{ env.SHOW_TIMESTAMP }}" = "true" ]; then
+            case "${{ env.OVERLAY_POSITION }}" in
+              "top-left") TS_X="20" TS_Y="50" ;;
+              "top-right") TS_X="w-tw-20" TS_Y="50" ;;
+              "bottom-left") TS_X="20" TS_Y="h-th-50" ;;
+              "bottom-right") TS_X="w-tw-20" TS_Y="h-th-50" ;;
+              "center") TS_X="(w-tw)/2" TS_Y="(h-th)/2+30" ;;
+            esac
+            VF_CHAIN="${VF_CHAIN}drawtext=text='%{localtime}':fontsize=20:fontcolor=yellow:x=${TS_X}:y=${TS_Y}:box=1:boxcolor=black@0.5:boxborderw=8,"
+            echo "🕐 Timestamp overlay: enabled"
+          fi
+
+          # 10. Logo overlay
+          if [ -f /tmp/logo.png ] || [ -f /tmp/logo.jpg ]; then
+            LOGO_FILE="/tmp/logo.png"
+            [ ! -f "$LOGO_FILE" ] && LOGO_FILE="/tmp/logo.jpg"
+
+            case "${{ env.LOGO_POSITION }}" in
+              "top-left") LOGO_X="20" LOGO_Y="20" ;;
+              "top-right") LOGO_X="W-w-20" LOGO_Y="20" ;;
+              "bottom-left") LOGO_X="20" LOGO_Y="H-h-20" ;;
+              "bottom-right") LOGO_X="W-w-20" LOGO_Y="H-h-20" ;;
+            esac
+
+            VF_CHAIN="${VF_CHAIN}movie=${LOGO_FILE}[logo];[in][logo]overlay=${LOGO_X}:${LOGO_Y}:eval=init[watermarked];[watermarked]"
+            echo "🖼️ Logo overlay: enabled at ${{ env.LOGO_POSITION }}"
+          fi
+
+          # 11. Set SAR to 1
+          VF_CHAIN="${VF_CHAIN}setsar=1"
+
+          # Clean up leading/trailing commas
+          VF_CHAIN=$(echo "$VF_CHAIN" | sed 's/^,//' | sed 's/,$//')
+
+          echo ""
+          echo "🎬 Video filter chain: $VF_CHAIN"
+          echo ""
+
+          # ============================================
+          # BUILD FFMPEG COMMAND (using array to avoid eval)
+          # ============================================
+
+          # Base command
+          FFMPEG_CMD=(ffmpeg -hide_banner -loglevel info -stats)
+
+          # Input options
+          FFMPEG_CMD+=(-reconnect 1 -reconnect_at_eof 1 -reconnect_streamed 1 -reconnect_delay_max 10 -timeout 15000000)
+
+          # Add background music input if available
+          if [ -f /tmp/bgmusic.mp3 ]; then
+            echo "🎵 Mixing background music at volume ${{ env.MUSIC_VOLUME }}"
+            FFMPEG_CMD+=(-i "$STREAM_URL" -i /tmp/bgmusic.mp3)
+            FFMPEG_CMD+=(-filter_complex "[0:a][1:a]amix=inputs=2:duration=first:weights='1 ${{ env.MUSIC_VOLUME }}'[aout]")
+            FFMPEG_CMD+=(-map 0:v -map "[aout]")
+          else
+            FFMPEG_CMD+=(-i "$STREAM_URL")
+          fi
+
+          # Video filter
+          if [ -n "$VF_CHAIN" ]; then
+            FFMPEG_CMD+=(-vf "$VF_CHAIN")
+          fi
+
+          # Audio filter
+          if [ -n "$AUDIO_FILTER" ]; then
+            FFMPEG_CMD+=(-af "$AUDIO_FILTER")
+          fi
+
+          # Video codec options
+          if [ "${{ env.VIDEO_CODEC }}" = "copy" ]; then
+            FFMPEG_CMD+=(-c:v copy)
+          elif [ "${{ env.VIDEO_CODEC }}" = "libx265" ]; then
+            FFMPEG_CMD+=(-c:v libx265 -preset ${{ env.PRESET }} -tune zerolatency -b:v ${{ env.VIDEO_BITRATE }} -maxrate ${{ env.VIDEO_BITRATE }} -bufsize ${{ env.BUFFER_SIZE }} -pix_fmt yuv420p -g $(( ${{ env.FPS }} * 2 )) -keyint_min $(( ${{ env.FPS }} * 2 )) -sc_threshold 0 -r ${{ env.FPS }} -tag:v hvc1)
+          else
+            FFMPEG_CMD+=(-c:v libx264 -preset ${{ env.PRESET }} -tune zerolatency -b:v ${{ env.VIDEO_BITRATE }} -maxrate ${{ env.VIDEO_BITRATE }} -bufsize ${{ env.BUFFER_SIZE }} -pix_fmt yuv420p -g $(( ${{ env.FPS }} * 2 )) -keyint_min $(( ${{ env.FPS }} * 2 )) -sc_threshold 0 -r ${{ env.FPS }})
+          fi
+
+          # Audio codec options
+          if [ "${{ env.AUDIO_CODEC }}" = "copy" ]; then
+            FFMPEG_CMD+=(-c:a copy)
+          elif [ "${{ env.AUDIO_CODEC }}" = "libmp3lame" ]; then
+            FFMPEG_CMD+=(-c:a libmp3lame -b:a ${{ env.AUDIO_BITRATE }} -ar ${{ env.AUDIO_SAMPLE_RATE }} -ac ${{ env.AUDIO_CHANNELS }})
+          else
+            FFMPEG_CMD+=(-c:a aac -b:a ${{ env.AUDIO_BITRATE }} -ar ${{ env.AUDIO_SAMPLE_RATE }} -ac ${{ env.AUDIO_CHANNELS }})
+          fi
+
+          # Threads
+          if [ "${{ env.THREADS }}" != "0" ]; then
+            FFMPEG_CMD+=(-threads ${{ env.THREADS }})
+          fi
+
+          # Extra options (split by space)
+          if [ -n "${{ env.EXTRA_OPTIONS }}" ]; then
+            # Read into array without eval
+            read -ra EXTRA_OPTS <<< "${{ env.EXTRA_OPTIONS }}"
+            FFMPEG_CMD+=("${EXTRA_OPTS[@]}")
+          fi
+
+          # Output options
+          FFMPEG_CMD+=(-f flv -flvflags no_duration_filesize "$YT_URL")
+
+          echo "🔧 FFmpeg command prepared (${#FFMPEG_CMD[@]} arguments)"
+          echo ""
+
+          # ============================================
+          # DRY RUN MODE
+          # ============================================
+          if [ "${{ env.DRY_RUN }}" = "true" ]; then
+            echo "╔══════════════════════════════════════════════════════════════════════╗"
+            echo "║                    🧪 DRY RUN MODE                                   ║"
+            echo "╠══════════════════════════════════════════════════════════════════════╣"
+            echo "║  Command that would be executed:                                     ║"
+            echo "╚══════════════════════════════════════════════════════════════════════╝"
+            echo ""
+            printf '%q ' "${FFMPEG_CMD[@]}"
+            echo ""
+            echo ""
+            echo "✅ Dry run complete. Set 'dry_run' to false to actually stream."
+            exit 0
+          fi
+
+          # ============================================
+          # STREAMING LOOP WITH AUTO-RECOVERY
+          # ============================================
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             ELAPSED=$(($(date +%s) - TOTAL_START))
-            if [ $ELAPSED -ge $MAX_DURATION ]; then
+            if [ $ELAPSED -ge $MAX_DURATION ] && [ ${{ env.MAX_DURATION }} -gt 0 ]; then
               echo ""
-              echo "⏰ Maximum streaming duration (6 hours) reached. Stopping."
+              echo "⏰ Maximum streaming duration (${{ env.MAX_DURATION }} minutes) reached. Stopping."
               break
             fi
 
             RETRY_COUNT=$((RETRY_COUNT + 1))
             if [ $RETRY_COUNT -gt 1 ]; then
               echo ""
-              echo "🔄 ════════════════════════════════════════════"
+              echo "🔄 ════════════════════════════════════════════════════════════════"
               echo "🔄 Recovery Attempt #$RETRY_COUNT"
               echo "🔄 Waiting ${RETRY_DELAY}s before reconnect..."
-              echo "🔄 ════════════════════════════════════════════"
+              echo "🔄 ════════════════════════════════════════════════════════════════"
               sleep $RETRY_DELAY
               RETRY_DELAY=$((RETRY_DELAY * 2))
               if [ $RETRY_DELAY -gt 60 ]; then
@@ -158,15 +641,16 @@ jobs:
             echo ""
             echo "📡 [$CURRENT_TIME] Connecting to stream... (attempt $RETRY_COUNT/$MAX_RETRIES)"
 
-            ffmpeg -hide_banner -loglevel info -stats               -reconnect 1               -reconnect_at_eof 1               -reconnect_streamed 1               -reconnect_delay_max 10               -timeout 15000000               -i "$STREAM_URL"               -vf "scale=w=${WIDTH}:h=${HEIGHT}:force_original_aspect_ratio=decrease,pad=w=${WIDTH}:h=${HEIGHT}:x=(ow-iw)/2:y=(oh-ih)/2:color=black,setsar=1"               -c:v libx264               -preset veryfast               -tune zerolatency               -b:v ${{ env.VIDEO_BITRATE }}               -maxrate ${{ env.VIDEO_BITRATE }}               -bufsize 5000k               -pix_fmt yuv420p               -g $(( ${{ env.FPS }} * 2 ))               -keyint_min $(( ${{ env.FPS }} * 2 ))               -sc_threshold 0               -r ${{ env.FPS }}               -c:a aac               -b:a ${{ env.AUDIO_BITRATE }}               -ar 44100               -ac 2               -f flv               -flvflags no_duration_filesize               "$YT_URL"               2>&1 | while IFS= read -r line; do
-                echo "$line"
-                if echo "$line" | grep -q "frame="; then
-                  ELAPSED_NOW=$(($(date +%s) - TOTAL_START))
-                  MINS=$((ELAPSED_NOW / 60))
-                  SECS=$((ELAPSED_NOW % 60))
-                  echo "  📊 Status: Streaming for ${MINS}m ${SECS}s | Attempt #$RETRY_COUNT"
-                fi
-              done
+            # Execute FFmpeg (no eval, direct array execution)
+            "${FFMPEG_CMD[@]}" 2>&1 | while IFS= read -r line; do
+              echo "$line"
+              if echo "$line" | grep -q "frame="; then
+                ELAPSED_NOW=$(($(date +%s) - TOTAL_START))
+                MINS=$((ELAPSED_NOW / 60))
+                SECS=$((ELAPSED_NOW % 60))
+                echo "  📊 Status: Streaming for ${MINS}m ${SECS}s | Attempt #$RETRY_COUNT"
+              fi
+            done
 
             EXIT_CODE=${PIPESTATUS[0]}
             echo ""
@@ -183,20 +667,30 @@ jobs:
           TOTAL_ELAPSED=$(($(date +%s) - TOTAL_START))
           TOTAL_MINS=$((TOTAL_ELAPSED / 60))
           echo ""
-          echo "╔══════════════════════════════════════════════════════════════╗"
-          echo "║              📊 Streaming Session Summary                    ║"
-          echo "╠══════════════════════════════════════════════════════════════╣"
+          echo "╔══════════════════════════════════════════════════════════════════════╗"
+          echo "║                  📊 Streaming Session Summary                        ║"
+          echo "╠══════════════════════════════════════════════════════════════════════╣"
           echo "║  ⏱️  Total time: ${TOTAL_MINS} minutes"
           echo "║  🔄 Reconnects:  $((RETRY_COUNT - 1))"
           echo "║  📡 Source:       $STREAM_URL"
-          echo "╚══════════════════════════════════════════════════════════════╝"
+          echo "╚══════════════════════════════════════════════════════════════════════╝"
+
+      - name: 🔔 Send End Notification
+        if: ${{ always() && env.NOTIFY_WEBHOOK != '' }}
+        run: |
+          echo "🔔 Sending end notification..."
+          MESSAGE="🏁 Stream Ended\n📡 Source: ${{ env.STREAM_URL }}\n⏱️ Ended at: $(date '+%Y-%m-%d %H:%M:%S')"
+          curl -s -X POST "${{ env.NOTIFY_WEBHOOK }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"$MESSAGE\"}" \
+            || echo "⚠️ Failed to send notification"
 
       - name: 🏁 Stream Ended
         if: always()
         run: |
-          echo "╔══════════════════════════════════════════════════════════════╗"
-          echo "║           🏁 Stream Session Complete                         ║"
-          echo "╠══════════════════════════════════════════════════════════════╣"
-          echo "║  Check your YouTube Live Dashboard for stream status.        ║"
-          echo "║  If the stream dropped, check logs above for errors.         ║"
-          echo "╚══════════════════════════════════════════════════════════════╝"
+          echo "╔══════════════════════════════════════════════════════════════════════╗"
+          echo "║                    🏁 Stream Session Complete                        ║"
+          echo "╠══════════════════════════════════════════════════════════════════════╣"
+          echo "║  Check your YouTube Live Dashboard for stream status.                ║"
+          echo "║  If the stream dropped, check logs above for errors.                 ║"
+          echo "╚══════════════════════════════════════════════════════════════════════╝"
