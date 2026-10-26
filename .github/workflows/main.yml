@@ -118,6 +118,11 @@ jobs:
           TOTAL_START=$(date +%s)
           MAX_DURATION=21600
 
+          # Parse resolution into width and height
+          WIDTH=$(echo "${{ env.RESOLUTION }}" | cut -d'x' -f1)
+          HEIGHT=$(echo "${{ env.RESOLUTION }}" | cut -d'x' -f2)
+          echo "📐 Parsed resolution: ${WIDTH}x${HEIGHT}"
+
           echo "╔══════════════════════════════════════════════════════════════╗"
           echo "║              🚀 Starting Live Stream                         ║"
           echo "╠══════════════════════════════════════════════════════════════╣"
@@ -153,7 +158,7 @@ jobs:
             echo ""
             echo "📡 [$CURRENT_TIME] Connecting to stream... (attempt $RETRY_COUNT/$MAX_RETRIES)"
 
-            ffmpeg -hide_banner -loglevel info -stats               -reconnect 1               -reconnect_at_eof 1               -reconnect_streamed 1               -reconnect_delay_max 10               -timeout 15000000               -i "$STREAM_URL"               -vf "scale=${{ env.RESOLUTION }}:force_original_aspect_ratio=decrease,pad=${{ env.RESOLUTION }}:(ow-iw)/2:(oh-ih)/2,setsar=1"               -c:v libx264               -preset veryfast               -tune zerolatency               -b:v ${{ env.VIDEO_BITRATE }}               -maxrate ${{ env.VIDEO_BITRATE }}               -bufsize 5000k               -pix_fmt yuv420p               -g $(( ${{ env.FPS }} * 2 ))               -keyint_min $(( ${{ env.FPS }} * 2 ))               -sc_threshold 0               -r ${{ env.FPS }}               -c:a aac               -b:a ${{ env.AUDIO_BITRATE }}               -ar 44100               -ac 2               -f flv               -flvflags no_duration_filesize               "$YT_URL"               2>&1 | while IFS= read -r line; do
+            ffmpeg -hide_banner -loglevel info -stats               -reconnect 1               -reconnect_at_eof 1               -reconnect_streamed 1               -reconnect_delay_max 10               -timeout 15000000               -i "$STREAM_URL"               -vf "scale=w=${WIDTH}:h=${HEIGHT}:force_original_aspect_ratio=decrease,pad=w=${WIDTH}:h=${HEIGHT}:x=(ow-iw)/2:y=(oh-ih)/2:color=black,setsar=1"               -c:v libx264               -preset veryfast               -tune zerolatency               -b:v ${{ env.VIDEO_BITRATE }}               -maxrate ${{ env.VIDEO_BITRATE }}               -bufsize 5000k               -pix_fmt yuv420p               -g $(( ${{ env.FPS }} * 2 ))               -keyint_min $(( ${{ env.FPS }} * 2 ))               -sc_threshold 0               -r ${{ env.FPS }}               -c:a aac               -b:a ${{ env.AUDIO_BITRATE }}               -ar 44100               -ac 2               -f flv               -flvflags no_duration_filesize               "$YT_URL"               2>&1 | while IFS= read -r line; do
                 echo "$line"
                 if echo "$line" | grep -q "frame="; then
                   ELAPSED_NOW=$(($(date +%s) - TOTAL_START))
