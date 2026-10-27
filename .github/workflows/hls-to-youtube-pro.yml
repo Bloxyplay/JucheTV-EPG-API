@@ -12,42 +12,94 @@ on:
         description: "YouTube stream key (empty = use secret)"
         required: false
         type: string
+      deinterlace:
+        description: "Deinterlace (re-encodes video)"
+        required: false
+        type: boolean
+        default: false
+      quality:
+        description: "Output resolution (source = keep original size)"
+        required: true
+        type: choice
+        default: "source"
+        options:
+          - "source"
+          - "1080p"
+          - "720p"
+          - "480p"
+          - "360p"
+      bitrate:
+        description: "Video bitrate (only used when re-encoding)"
+        required: true
+        type: choice
+        default: "3000k"
+        options:
+          - "1500k"
+          - "2500k"
+          - "3000k"
+          - "4500k"
+          - "6000k"
+          - "8000k"
 
 jobs:
   stream:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
-      - uses: actions/checkout@v4
-
       - name: Install ffmpeg
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Stream with relay + auto-recovery (max 5h55m)
+      - name: Stream with auto-recovery (max 5h55m)
         env:
           YOUTUBE_STREAM_KEY: ${{ inputs.youtube_key || secrets.YOUTUBE_STREAM_KEY }}
           STREAM_URL: ${{ inputs.stream_url }}
+          DEINTERLACE: ${{ inputs.deinterlace }}
+          QUALITY: ${{ inputs.quality }}
+          BITRATE: ${{ inputs.bitrate }}
         run: |
           echo "::add-mask::$YOUTUBE_STREAM_KEY"
+
+          # Build video filter chain
+          VF_CHAIN=""
+          if [ "$DEINTERLACE" = "true" ]; then
+            VF_CHAIN="yadif=0:-1:0"
+          fi
+          if [ "$QUALITY" != "source" ]; then
+            H="${QUALITY%p}"
+            VF_CHAIN="${VF_CHAIN:+$VF_CHAIN,}scale=-2:min(ih\\,${H})"
+          fi
+
+          # Copy if no filters needed, otherwise re-encode
+          if [ -z "$VF_CHAIN" ]; then
+            VIDEO_ARGS=(-c:v copy)
+            echo "Video: copy (no re-encode)"
+          else
+            BR="${BITRATE%k}"
+            VIDEO_ARGS=(-vf "$VF_CHAIN" -c:v libx264 -preset ultrafast -b:v "$BITRATE" -maxrate "$BITRATE" -bufsize "$((BR * 2))k" -g 60 -pix_fmt yuv420p)
+            echo "Video: re-encode ultrafast, $BITRATE, filters: $VF_CHAIN"
+          fi
+
           END=$((SECONDS + 21300))
 
           while [ $SECONDS -lt $END ]; do
             REMAIN=$((END - SECONDS))
-            echo "Starting relay + ffmpeg, ${REMAIN}s left"
+            echo "Starting ffmpeg, ${REMAIN}s left"
 
-            timeout -k 5 "$REMAIN" bash -c '
-              node hls-relay.js "$STREAM_URL" | ffmpeg -hide_banner -loglevel info \
-                -fflags +genpts+discardcorrupt -i pipe:0 \
-                -c:v copy \
-                -c:a aac -b:a 128k -ar 44100 \
-                -f flv "rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_STREAM_KEY}"
-            ' && code=0 || code=$?
+            timeout "$REMAIN" ffmpeg -hide_banner -loglevel info \
+              -fflags +genpts+discardcorrupt \
+              -reconnect 1 -reconnect_streamed 1 -reconnect_at_eof 1 \
+              -reconnect_delay_max 10 -rw_timeout 15000000 \
+              -i "$STREAM_URL" \
+              "${VIDEO_ARGS[@]}" \
+              -c:a aac -b:a 128k -ar 44100 \
+              -f flv "rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_STREAM_KEY}" \
+              && code=0 || code=$?
 
             [ "$code" -eq 124 ] && { echo "Time limit reached"; break; }
 
-            echo "exited (code $code), restarting in 5s..."
+            echo "ffmpeg exited (code $code), reconnecting in 5s..."
             sleep 5
           done
 
