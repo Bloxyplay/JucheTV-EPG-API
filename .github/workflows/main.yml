@@ -1,12 +1,8 @@
-name: Stream to YouTube
+name: Stream to YouTube + Twitch + OK.ru
 
 on:
   workflow_dispatch:
     inputs:
-      youtube_key:
-        description: 'YouTube stream key'
-        required: true
-        type: string
       m3u8_url:
         description: 'M3U8 stream URL'
         required: true
@@ -29,17 +25,21 @@ jobs:
       - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
-      - name: Stream to YouTube
+      - name: Stream to all platforms
         run: |
-          echo "::add-mask::${{ inputs.youtube_key }}"
+          echo "::add-mask::${{ secrets.YOUTUBE_STREAM_KEY }}"
+          echo "::add-mask::${{ secrets.TWITCH_STREAM_KEY }}"
+          echo "::add-mask::${{ secrets.OKRU_STREAM_URL }}"
 
           case "${{ inputs.quality }}" in
-            1080p) SCALE="1920:1080"; VBR="6000k"; BUFR="12000k"; ABR="192k"; ;;
+            1080p) SCALE="1920:1080"; VBR="6000k"; BUFR="12000k"; ABR="160k"; ;;
             720p)  SCALE="1280:720";  VBR="4500k"; BUFR="9000k";  ABR="160k"; ;;
-            480p)  SCALE="854:480";   VBR="2500k"; BUFR="5000k";  ABR="128k"; ;;
+            480p)  SCALE="854:480";   VBR="2000k"; BUFR="4000k";  ABR="128k"; ;;
           esac
 
-          STREAM_URL="rtmp://a.rtmp.youtube.com/live2/${{ inputs.youtube_key }}"
+          YT_URL="rtmp://a.rtmp.youtube.com/live2/${{ secrets.YOUTUBE_STREAM_KEY }}"
+          TW_URL="rtmp://live.twitch.tv/app/${{ secrets.TWITCH_STREAM_KEY }}"
+          OK_URL="${{ secrets.OKRU_STREAM_URL }}"
           INPUT="${{ inputs.m3u8_url }}"
 
           attempt=0
@@ -55,9 +55,11 @@ jobs:
               -i "$INPUT" \
               -vf "scale=${SCALE}:force_original_aspect_ratio=decrease,pad=${SCALE}:(ow-iw)/2:(oh-ih)/2" \
               -c:v libx264 -preset veryfast -b:v "${VBR}" -maxrate "${VBR}" -bufsize "${BUFR}" \
-              -g 60 -keyint_min 60 -pix_fmt yuv420p \
+              -g 60 -keyint_min 60 -sc_threshold 0 -pix_fmt yuv420p \
               -c:a aac -b:a "${ABR}" -ac 2 -ar 44100 \
-              -f flv "$STREAM_URL" \
+              -f flv "$YT_URL" \
+              -f flv "$TW_URL" \
+              -f flv "$OK_URL" \
               && break
 
             echo "Stream dropped. Reconnecting in 5 seconds..."
