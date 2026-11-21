@@ -31,6 +31,8 @@ jobs:
 
       - name: Stream to YouTube
         run: |
+          echo "::add-mask::${{ inputs.youtube_key }}"
+
           case "${{ inputs.quality }}" in
             1080p) SCALE="1920:1080"; VBR="6000k"; ABR="192k"; ;;
             720p)  SCALE="1280:720";  VBR="4500k"; ABR="160k"; ;;
@@ -46,11 +48,11 @@ jobs:
             echo "=== Stream attempt #${attempt} ==="
 
             ffmpeg -hide_banner -loglevel warning \
+              -re \
               -reconnect 1 -reconnect_at_eof 1 -reconnect_streamed 1 \
               -reconnect_delay_max 10 -rw_timeout 30000000 \
               -user_agent "Mozilla/5.0" \
               -i "$INPUT" \
-              -re \
               -vf "scale=${SCALE}:force_original_aspect_ratio=decrease,pad=${SCALE}:(ow-iw)/2:(oh-ih)/2" \
               -c:v libx264 -preset veryfast -b:v "${VBR}" -maxrate "${VBR}" -bufsize 2x \
               -g 60 -keyint_min 60 -pix_fmt yuv420p \
