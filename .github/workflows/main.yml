@@ -9,7 +9,7 @@ on:
         type: string
 
       okru_stream_key:
-        description: 'OK.ru Stream Key / RTMP URL'
+        description: 'OK.ru Broadcast Key'
         required: true
         type: string
 
@@ -29,40 +29,73 @@ jobs:
     timeout-minutes: 360
 
     steps:
-      - name: Install ffmpeg
+      - name: Install FFmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Stream to OK.ru
+        env:
+          INPUT_URL: ${{ inputs.m3u8_url }}
+          OKRU_KEY: ${{ inputs.okru_stream_key }}
+          QUALITY: ${{ inputs.quality }}
         run: |
-          echo "::add-mask::${{ inputs.okru_stream_key }}"
+          echo "::add-mask::$OKRU_KEY"
 
-          case "${{ inputs.quality }}" in
-            1080p) SCALE="1920:1080"; VBR="6000k"; BUFR="12000k"; ABR="160k" ;;
-            720p)  SCALE="1280:720";  VBR="4500k"; BUFR="9000k";  ABR="160k" ;;
-            480p)  SCALE="854:480";   VBR="2000k"; BUFR="4000k";  ABR="128k" ;;
+          SERVER="rtmp://vsu.okcdn.ru/input/"
+          OK_URL="${SERVER}${OKRU_KEY}"
+
+          case "$QUALITY" in
+            1080p)
+              SCALE="1920:1080"
+              VBR="6000k"
+              BUFR="12000k"
+              ABR="160k"
+              ;;
+            720p)
+              SCALE="1280:720"
+              VBR="4500k"
+              BUFR="9000k"
+              ABR="160k"
+              ;;
+            480p)
+              SCALE="854:480"
+              VBR="2000k"
+              BUFR="4000k"
+              ABR="128k"
+              ;;
           esac
 
-          OK_URL="${{ inputs.okru_stream_key }}"
-          INPUT="${{ inputs.m3u8_url }}"
-
           attempt=0
+
           while true; do
             attempt=$((attempt + 1))
             echo "=== Stream attempt #${attempt} ==="
 
             ffmpeg -hide_banner -loglevel warning \
               -re \
-              -reconnect 1 -reconnect_at_eof 1 -reconnect_streamed 1 \
-              -reconnect_delay_max 10 -rw_timeout 30000000 \
+              -reconnect 1 \
+              -reconnect_at_eof 1 \
+              -reconnect_streamed 1 \
+              -reconnect_delay_max 10 \
+              -rw_timeout 30000000 \
               -user_agent "Mozilla/5.0" \
-              -i "$INPUT" \
+              -i "$INPUT_URL" \
               -vf "scale=${SCALE}:force_original_aspect_ratio=decrease,pad=${SCALE}:(ow-iw)/2:(oh-ih)/2" \
-              -c:v libx264 -preset veryfast -b:v "${VBR}" -maxrate "${VBR}" -bufsize "${BUFR}" \
-              -g 60 -keyint_min 60 -sc_threshold 0 -pix_fmt yuv420p \
-              -c:a aac -b:a "${ABR}" -ac 2 -ar 44100 \
+              -c:v libx264 \
+              -preset veryfast \
+              -b:v "$VBR" \
+              -maxrate "$VBR" \
+              -bufsize "$BUFR" \
+              -g 60 \
+              -keyint_min 60 \
+              -sc_threshold 0 \
+              -pix_fmt yuv420p \
+              -c:a aac \
+              -b:a "$ABR" \
+              -ac 2 \
+              -ar 44100 \
               -f flv "$OK_URL" \
               && break
 
-            echo "Stream dropped. Reconnecting in 5 seconds..."
+            echo "Stream disconnected. Reconnecting in 5 seconds..."
             sleep 5
           done
