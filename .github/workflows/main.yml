@@ -34,9 +34,9 @@ jobs:
           echo "::add-mask::${{ inputs.youtube_key }}"
 
           case "${{ inputs.quality }}" in
-            1080p) SCALE="1920:1080"; VBR="6000k"; ABR="192k"; ;;
-            720p)  SCALE="1280:720";  VBR="4500k"; ABR="160k"; ;;
-            480p)  SCALE="854:480";   VBR="2500k"; ABR="128k"; ;;
+            1080p) SCALE="1920:1080"; VBR="6000k"; BUFR="12000k"; ABR="192k"; ;;
+            720p)  SCALE="1280:720";  VBR="4500k"; BUFR="9000k";  ABR="160k"; ;;
+            480p)  SCALE="854:480";   VBR="2500k"; BUFR="5000k";  ABR="128k"; ;;
           esac
 
           STREAM_URL="rtmp://a.rtmp.youtube.com/live2/${{ inputs.youtube_key }}"
@@ -54,7 +54,7 @@ jobs:
               -user_agent "Mozilla/5.0" \
               -i "$INPUT" \
               -vf "scale=${SCALE}:force_original_aspect_ratio=decrease,pad=${SCALE}:(ow-iw)/2:(oh-ih)/2" \
-              -c:v libx264 -preset veryfast -b:v "${VBR}" -maxrate "${VBR}" -bufsize 2x \
+              -c:v libx264 -preset veryfast -b:v "${VBR}" -maxrate "${VBR}" -bufsize "${BUFR}" \
               -g 60 -keyint_min 60 -pix_fmt yuv420p \
               -c:a aac -b:a "${ABR}" -ac 2 -ar 44100 \
               -f flv "$STREAM_URL" \
