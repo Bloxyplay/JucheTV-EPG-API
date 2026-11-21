@@ -1,10 +1,10 @@
-name: Stream to OK.ru
+name: Download & Restream to OK.ru
 
 on:
   workflow_dispatch:
     inputs:
-      m3u8_url:
-        description: 'M3U8 stream URL'
+      download_url:
+        description: 'Direct video download URL'
         required: true
         type: string
 
@@ -32,9 +32,27 @@ jobs:
       - name: Install FFmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
+      - name: Download Video
+        env:
+          DOWNLOAD_URL: ${{ inputs.download_url }}
+        run: |
+          echo "::add-mask::$DOWNLOAD_URL"
+
+          curl -fL --retry 5 --retry-delay 3 \
+            --connect-timeout 30 \
+            --max-time 0 \
+            -o video.mp4 "$DOWNLOAD_URL"
+
+          if [ ! -s video.mp4 ]; then
+            echo "Download failed or file is empty."
+            exit 1
+          fi
+
+          ffprobe -v error -show_entries format=duration \
+            -of default=noprint_wrappers=1 video.mp4
+
       - name: Stream to OK.ru
         env:
-          INPUT_URL: ${{ inputs.m3u8_url }}
           OKRU_KEY: ${{ inputs.okru_stream_key }}
           QUALITY: ${{ inputs.quality }}
         run: |
@@ -71,14 +89,9 @@ jobs:
             echo "=== Stream attempt #${attempt} ==="
 
             ffmpeg -hide_banner -loglevel warning \
+              -stream_loop -1 \
               -re \
-              -reconnect 1 \
-              -reconnect_at_eof 1 \
-              -reconnect_streamed 1 \
-              -reconnect_delay_max 10 \
-              -rw_timeout 30000000 \
-              -user_agent "Mozilla/5.0" \
-              -i "$INPUT_URL" \
+              -i video.mp4 \
               -vf "scale=${SCALE}:force_original_aspect_ratio=decrease,pad=${SCALE}:(ow-iw)/2:(oh-ih)/2" \
               -c:v libx264 \
               -preset veryfast \
@@ -93,9 +106,11 @@ jobs:
               -b:a "$ABR" \
               -ac 2 \
               -ar 44100 \
+              -map 0:v:0 \
+              -map 0:a:0? \
               -f flv "$OK_URL" \
               && break
 
-            echo "Stream disconnected. Reconnecting in 5 seconds..."
+            echo "Stream disconnected. Restarting in 5 seconds..."
             sleep 5
           done
